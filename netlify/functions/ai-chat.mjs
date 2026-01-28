@@ -46,8 +46,9 @@ export default async function handler(req) {
     const message = body.message;
     console.log("Received message:", message ? message.substring(0, 50) + "..." : "(empty)");
 
+    console.log("About to call OpenAI API...");
     const completion = await client.chat.completions.create({
-      model: "gpt-4.1-mini",
+      model: "gpt-4o-mini",
       messages: [
         {
           role: "system",
@@ -250,7 +251,9 @@ export default async function handler(req) {
       max_tokens: 800,
     });
 
+    console.log("OpenAI API response received successfully");
     const reply = completion.choices[0]?.message?.content || "";
+    console.log("Reply extracted, length:", reply.length);
 
     // Dynamic partner link suggestion based on conversation topic
     let affiliateSuggestion = "";
