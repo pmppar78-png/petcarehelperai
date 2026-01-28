@@ -1,0 +1,6 @@
+# robots.txt for petcarehelperai.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://petcarehelperai.netlify.app/sitemap.xml
