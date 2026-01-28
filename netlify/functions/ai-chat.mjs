@@ -1,7 +1,79 @@
 import OpenAI from "openai";
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-const affiliates = require("../../affiliates.json");
+
+// Affiliate data embedded directly to avoid JSON import issues in Netlify Functions
+const affiliates = {
+  "foodAndNutrition": [
+    { "name": "Chewy Autoship", "url": "https://www.chewy.com/app/autoship" },
+    { "name": "The Farmer's Dog", "url": "https://www.thefarmersdog.com" },
+    { "name": "Nom Nom", "url": "https://www.nomnomnow.com" },
+    { "name": "Ollie", "url": "https://www.myollie.com" },
+    { "name": "PetPlate", "url": "https://www.petplate.com" },
+    { "name": "Petco", "url": "https://www.petco.com" },
+    { "name": "PetSmart", "url": "https://www.petsmart.com" }
+  ],
+  "insuranceAndWellness": [
+    { "name": "Spot Pet Insurance", "url": "https://www.spotpetins.com" },
+    { "name": "Lemonade Pet", "url": "https://www.lemonade.com/pet" },
+    { "name": "Trupanion", "url": "https://trupanion.com" },
+    { "name": "Pumpkin Pet Insurance", "url": "https://www.pumpkin.care" },
+    { "name": "Figo Pet Insurance", "url": "https://www.figoinsurance.com" },
+    { "name": "Healthy Paws", "url": "https://www.healthypawspetinsurance.com" },
+    { "name": "Pets Best", "url": "https://www.petsbest.com" },
+    { "name": "ManyPets", "url": "https://www.manypets.com" },
+    { "name": "Nationwide Pet Insurance", "url": "https://www.petinsurance.com" }
+  ],
+  "teleVetsAndClinics": [
+    { "name": "Pawp Vet", "url": "https://www.pawp.com" },
+    { "name": "Airvet", "url": "https://www.airvet.com" }
+  ],
+  "pharmacyAndMedical": [
+    { "name": "1-800-PetMeds", "url": "https://www.1800petmeds.com" },
+    { "name": "PetCareRx", "url": "https://www.petcarerx.com" },
+    { "name": "Allivet", "url": "https://www.allivet.com" },
+    { "name": "CanadaPetCare", "url": "https://www.canadapetcare.com" },
+    { "name": "BudgetPetCare", "url": "https://www.budgetpetcare.com" }
+  ],
+  "dnaAndTesting": [
+    { "name": "Embark DNA", "url": "https://embarkvet.com" },
+    { "name": "Wisdom Panel DNA", "url": "https://www.wisdompanel.com" },
+    { "name": "Basepaws", "url": "https://basepaws.com" }
+  ],
+  "trainingAndBehavior": [
+    { "name": "K9 Training Institute", "url": "https://k9traininginstitute.com" },
+    { "name": "SpiritDog Training", "url": "https://spiritdogtraining.com" },
+    { "name": "Dunbar Academy", "url": "https://www.dunbaracademy.com" },
+    { "name": "Pupford", "url": "https://pupford.com" }
+  ],
+  "walkingSittingBoarding": [
+    { "name": "Rover", "url": "https://www.rover.com" },
+    { "name": "Wag! Walkers", "url": "https://wagwalking.com" },
+    { "name": "TrustedHousesitters", "url": "https://www.trustedhousesitters.com" },
+    { "name": "Camp Bow Wow", "url": "https://www.campbowwow.com" },
+    { "name": "Dogtopia", "url": "https://www.dogtopia.com" }
+  ],
+  "devicesGpsAndTech": [
+    { "name": "Fi GPS Collars", "url": "https://tryfi.com" },
+    { "name": "Whistle GPS & Health", "url": "https://www.whistle.com" },
+    { "name": "Furbo Dog Camera", "url": "https://shopus.furbo.com" },
+    { "name": "Petcube", "url": "https://petcube.com" },
+    { "name": "Tractive GPS", "url": "https://tractive.com" }
+  ],
+  "birdReptileExotic": [
+    { "name": "ZooMed", "url": "https://zoomed.com" },
+    { "name": "ExoTerra", "url": "https://www.exo-terra.com" },
+    { "name": "Lafeber", "url": "https://lafeber.com" },
+    { "name": "Kaytee", "url": "https://www.kaytee.com" },
+    { "name": "Oxbow", "url": "https://www.oxbowanimalhealth.com" }
+  ],
+  "groomingAndSupplements": [
+    { "name": "Zesty Paws", "url": "https://zestypaws.com" },
+    { "name": "PetHonesty", "url": "https://www.pethonesty.com" },
+    { "name": "Honest Paws", "url": "https://www.honestpaws.com" },
+    { "name": "PetLab Co.", "url": "https://thepetlabco.com" },
+    { "name": "FURminator", "url": "https://www.furminator.com" },
+    { "name": "Wahl grooming tools", "url": "https://www.wahlpetproducts.com" }
+  ]
+};
 
 // Category color mapping for partner links
 const categoryColors = {
