@@ -1,0 +1,9 @@
+{
+  "name": "ai-pet-medical-vet-help",
+  "version": "1.0.0",
+  "description": "AI Pet Medical & Vet Help Finder",
+  "type": "module",
+  "dependencies": {
+    "openai": "^4.20.0"
+  }
+}

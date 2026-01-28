@@ -1,0 +1,7 @@
+[build]
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/ai"
+  to = "/chat.html"
+  status = 301

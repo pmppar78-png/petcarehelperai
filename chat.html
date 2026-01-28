@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Pet Help Chat</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #0F172A 0%, #164E63 50%, #083344 100%);
+      color: #E0F2FE;
+    }
+    .chat-shell {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .chat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      background: rgba(20, 184, 166, 0.1);
+      padding: 12px 16px;
+      border-radius: 14px;
+      backdrop-filter: blur(10px);
+    }
+    .chat-header h1 {
+      font-size: 1.3rem;
+      margin: 0;
+      background: linear-gradient(135deg, #5EEAD4, #06B6D4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+    }
+    .chat-header a {
+      font-size: 0.85rem;
+      color: #5EEAD4;
+      transition: color 0.2s;
+    }
+    .chat-header a:hover {
+      color: #2DD4BF;
+    }
+    .chat-window {
+      flex: 1;
+      background: rgba(15, 23, 42, 0.6);
+      border-radius: 18px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      overflow-y: auto;
+      border: 1px solid rgba(94, 234, 212, 0.2);
+      backdrop-filter: blur(10px);
+    }
+    .msg {
+      max-width: 90%;
+      padding: 8px 10px;
+      border-radius: 14px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    .msg-user {
+      align-self: flex-end;
+      background: linear-gradient(135deg, #14B8A6, #0D9488);
+      color: #F0FDFA;
+      box-shadow: 0 2px 8px rgba(20, 184, 166, 0.3);
+    }
+    .msg-ai {
+      align-self: flex-start;
+      background: rgba(30, 41, 59, 0.8);
+      color: #E0F2FE;
+      border: 1px solid rgba(94, 234, 212, 0.2);
+    }
+    .chat-input-row {
+      margin-top: 10px;
+      display: flex;
+      gap: 8px;
+    }
+    .chat-input-row textarea {
+      flex: 1;
+      border-radius: 14px;
+      border: 1px solid #5EEAD4;
+      padding: 8px 10px;
+      font-size: 0.9rem;
+      resize: none;
+      min-height: 52px;
+      background: rgba(15, 23, 42, 0.6);
+      color: #E0F2FE;
+      backdrop-filter: blur(10px);
+    }
+    .chat-input-row textarea:focus {
+      outline: none;
+      border-color: #2DD4BF;
+      box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
+    }
+    .chat-input-row button {
+      padding: 0 16px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #14B8A6, #0D9488);
+      color: #F0FDFA;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(20, 184, 166, 0.3);
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .chat-input-row button:hover {
+      background: linear-gradient(135deg, #0D9488, #0F766E);
+      box-shadow: 0 4px 12px rgba(20, 184, 166, 0.4);
+    }
+    .helper-text {
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: #A5F3FC;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-shell">
+    <p style="font-size: 0.85rem; color: #A5F3FC; margin-bottom: 12px; text-align: center;">
+      Some suggestions may include sponsored partners. This does not affect guidance.
+    </p>
+    <header class="chat-header">
+      <h1>AI Pet Help &amp; Vet Help</h1>
+      <a href="index.html">&larr; Back to site</a>
+    </header>
+    <div id="chatWindow" class="chat-window" aria-live="polite">
+      <div class="msg msg-ai">
+        Hi, I'm your AI pet help helper. Tell me your pet's species, age, and what's going on.
+        I'll highlight red flags, suggest next steps, and surface helpful resources like
+        tele‑vets, local clinics, insurance, food, DNA kits, GPS collars, and more.
+      </div>
+    </div>
+    <form id="chatForm" class="chat-input-row">
+      <textarea
+        id="userInput"
+        placeholder="Describe your pet’s symptoms, timeline, and any meds or diagnoses so far..."
+      ></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p class="helper-text">
+      Educational only, not a substitute for in‑person veterinary care. For poisoning, trauma,
+      or fast‑worsening symptoms, contact an emergency vet or poison control right away.
+    </p>
+  </div>
+
+  <script>
+    const form = document.getElementById('chatForm');
+    const input = document.getElementById('userInput');
+    const chatWindow = document.getElementById('chatWindow');
+
+    function addMessage(text, isUser = false) {
+      const div = document.createElement('div');
+      div.className = 'msg ' + (isUser ? 'msg-user' : 'msg-ai');
+      div.innerHTML = text;
+      chatWindow.appendChild(div);
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+      addMessage(text, true);
+      input.value = '';
+
+      try {
+        const res = await fetch('/.netlify/functions/ai-chat', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ message: text })
+        });
+        const data = await res.json();
+        addMessage(data.reply || 'Sorry, something went wrong. Please try again.');
+      } catch (err) {
+        console.error(err);
+        addMessage('Sorry, something went wrong reaching the AI.');
+      }
+    });
+  </script>
+</body>
+</html>

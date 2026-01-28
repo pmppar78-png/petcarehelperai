@@ -1,0 +1,328 @@
+{
+  "foodAndNutrition": [
+    {
+      "name": "Chewy Autoship",
+      "url": "https://www.chewy.com/app/autoship",
+      "category": "Food & Nutrition",
+      "hook": "Save up to 35% with Autoship on food, treats, and supplies delivered to your door"
+    },
+    {
+      "name": "The Farmer's Dog",
+      "url": "https://www.thefarmersdog.com",
+      "category": "Food & Nutrition",
+      "hook": "Fresh, human-grade meals personalized for your dog's needs"
+    },
+    {
+      "name": "Nom Nom",
+      "url": "https://www.nomnomnow.com",
+      "category": "Food & Nutrition",
+      "hook": "Fresh pet food delivery with vet-formulated recipes tailored to your pet"
+    },
+    {
+      "name": "Ollie",
+      "url": "https://www.myollie.com",
+      "category": "Food & Nutrition",
+      "hook": "Custom fresh dog food made with whole ingredients and delivered fresh"
+    },
+    {
+      "name": "PetPlate",
+      "url": "https://www.petplate.com",
+      "category": "Food & Nutrition",
+      "hook": "Vet-designed, human-grade meals cooked fresh and portioned for your dog"
+    },
+    {
+      "name": "Petco",
+      "url": "https://www.petco.com",
+      "category": "Food & Nutrition",
+      "hook": "Trusted pet retailer for food, supplies, and wellness products"
+    },
+    {
+      "name": "PetSmart",
+      "url": "https://www.petsmart.com",
+      "category": "Food & Nutrition",
+      "hook": "Complete pet supplies, food, grooming, and training services"
+    }
+  ],
+  "insuranceAndWellness": [
+    {
+      "name": "Spot Pet Insurance",
+      "url": "https://www.spotpetins.com",
+      "category": "Insurance & Wellness",
+      "hook": "Comprehensive pet insurance with flexible coverage for accidents and illnesses"
+    },
+    {
+      "name": "Lemonade Pet",
+      "url": "https://www.lemonade.com/pet",
+      "category": "Insurance & Wellness",
+      "hook": "Fast, digital pet insurance with instant claims and affordable plans"
+    },
+    {
+      "name": "Trupanion",
+      "url": "https://trupanion.com",
+      "category": "Insurance & Wellness",
+      "hook": "Pet insurance with direct vet payment and 90% coverage on eligible bills"
+    },
+    {
+      "name": "Pumpkin Pet Insurance",
+      "url": "https://www.pumpkin.care",
+      "category": "Insurance & Wellness",
+      "hook": "Pet insurance and preventive care plans to keep your pet healthy"
+    },
+    {
+      "name": "Figo Pet Insurance",
+      "url": "https://www.figoinsurance.com",
+      "category": "Insurance & Wellness",
+      "hook": "Customizable pet insurance with cloud-based claims and virtual vet access"
+    },
+    {
+      "name": "Healthy Paws",
+      "url": "https://www.healthypawspetinsurance.com",
+      "category": "Insurance & Wellness",
+      "hook": "Comprehensive pet insurance with unlimited lifetime benefits and fast claims"
+    },
+    {
+      "name": "Pets Best",
+      "url": "https://www.petsbest.com",
+      "category": "Insurance & Wellness",
+      "hook": "Flexible pet insurance plans with routine care options and quick reimbursement"
+    },
+    {
+      "name": "ManyPets",
+      "url": "https://www.manypets.com",
+      "category": "Insurance & Wellness",
+      "hook": "Pet insurance that covers accidents, illnesses, and optional wellness care"
+    },
+    {
+      "name": "Nationwide Pet Insurance",
+      "url": "https://www.petinsurance.com",
+      "category": "Insurance & Wellness",
+      "hook": "America's first pet insurance provider with comprehensive coverage options"
+    }
+  ],
+  "teleVetsAndClinics": [
+    {
+      "name": "Pawp Vet",
+      "url": "https://www.pawp.com",
+      "category": "Tele-Vets & Clinics",
+      "hook": "24/7 virtual vet care with unlimited video consultations for peace of mind"
+    },
+    {
+      "name": "Airvet",
+      "url": "https://www.airvet.com",
+      "category": "Tele-Vets & Clinics",
+      "hook": "Connect with licensed vets instantly via video, chat, or phone consultation"
+    }
+  ],
+  "pharmacyAndMedical": [
+    {
+      "name": "1-800-PetMeds",
+      "url": "https://www.1800petmeds.com",
+      "category": "Pharmacy & Medical",
+      "hook": "America's largest pet pharmacy with affordable medications and fast delivery"
+    },
+    {
+      "name": "PetCareRx",
+      "url": "https://www.petcarerx.com",
+      "category": "Pharmacy & Medical",
+      "hook": "Prescription medications and pet supplies with expert pharmacy support"
+    },
+    {
+      "name": "Allivet",
+      "url": "https://www.allivet.com",
+      "category": "Pharmacy & Medical",
+      "hook": "Discount pet medications and supplies with free shipping on orders over $49"
+    },
+    {
+      "name": "CanadaPetCare",
+      "url": "https://www.canadapetcare.com",
+      "category": "Pharmacy & Medical",
+      "hook": "Affordable pet medications and supplies with worldwide shipping options"
+    },
+    {
+      "name": "BudgetPetCare",
+      "url": "https://www.budgetpetcare.com",
+      "category": "Pharmacy & Medical",
+      "hook": "Budget-friendly pet medications and flea, tick, and heartworm treatments"
+    }
+  ],
+  "dnaAndTesting": [
+    {
+      "name": "Embark DNA",
+      "url": "https://embarkvet.com",
+      "category": "DNA & Testing",
+      "hook": "Most accurate dog DNA test with breed identification and health screening"
+    },
+    {
+      "name": "Wisdom Panel DNA",
+      "url": "https://www.wisdompanel.com",
+      "category": "DNA & Testing",
+      "hook": "Comprehensive dog DNA testing for breed, traits, and health insights"
+    },
+    {
+      "name": "Basepaws",
+      "url": "https://basepaws.com",
+      "category": "DNA & Testing",
+      "hook": "Cat DNA testing to discover breed, health markers, and genetic traits"
+    }
+  ],
+  "trainingAndBehavior": [
+    {
+      "name": "K9 Training Institute",
+      "url": "https://k9traininginstitute.com",
+      "category": "Training & Behavior",
+      "hook": "Professional dog training programs with proven methods for all breeds"
+    },
+    {
+      "name": "SpiritDog Training",
+      "url": "https://spiritdogtraining.com",
+      "category": "Training & Behavior",
+      "hook": "Online dog training courses with lifetime access and expert guidance"
+    },
+    {
+      "name": "Dunbar Academy",
+      "url": "https://www.dunbaracademy.com",
+      "category": "Training & Behavior",
+      "hook": "World-renowned dog training programs from Dr. Ian Dunbar"
+    },
+    {
+      "name": "Pupford",
+      "url": "https://pupford.com",
+      "category": "Training & Behavior",
+      "hook": "Positive reinforcement training courses, treats, and resources for dogs"
+    }
+  ],
+  "walkingSittingBoarding": [
+    {
+      "name": "Rover",
+      "url": "https://www.rover.com",
+      "category": "Walking / Sitting / Boarding",
+      "hook": "Trusted pet sitters, dog walkers, and boarding services in your neighborhood"
+    },
+    {
+      "name": "Wag! Walkers",
+      "url": "https://wagwalking.com",
+      "category": "Walking / Sitting / Boarding",
+      "hook": "On-demand dog walking, sitting, and boarding services nationwide"
+    },
+    {
+      "name": "TrustedHousesitters",
+      "url": "https://www.trustedhousesitters.com",
+      "category": "Walking / Sitting / Boarding",
+      "hook": "Global network of verified pet sitters for in-home pet care"
+    },
+    {
+      "name": "Camp Bow Wow",
+      "url": "https://www.campbowwow.com",
+      "category": "Walking / Sitting / Boarding",
+      "hook": "Premier dog daycare, boarding, and overnight care facilities nationwide"
+    },
+    {
+      "name": "Dogtopia",
+      "url": "https://www.dogtopia.com",
+      "category": "Walking / Sitting / Boarding",
+      "hook": "Open-play dog daycare, boarding, and spa services for social dogs"
+    }
+  ],
+  "devicesGpsAndTech": [
+    {
+      "name": "Fi GPS Collars",
+      "url": "https://tryfi.com",
+      "category": "Devices, GPS & Tech",
+      "hook": "Smart dog collar with GPS tracking, activity monitoring, and escape alerts"
+    },
+    {
+      "name": "Whistle GPS & Health",
+      "url": "https://www.whistle.com",
+      "category": "Devices, GPS & Tech",
+      "hook": "GPS pet tracker with health monitoring and behavior insights"
+    },
+    {
+      "name": "Furbo Dog Camera",
+      "url": "https://shopus.furbo.com",
+      "category": "Devices, GPS & Tech",
+      "hook": "Interactive dog camera with treat tossing and barking alerts"
+    },
+    {
+      "name": "Petcube",
+      "url": "https://petcube.com",
+      "category": "Devices, GPS & Tech",
+      "hook": "Pet cameras with two-way audio, video, and treat dispensing features"
+    },
+    {
+      "name": "Tractive GPS",
+      "url": "https://tractive.com",
+      "category": "Devices, GPS & Tech",
+      "hook": "Real-time GPS pet tracker with unlimited range and activity monitoring"
+    }
+  ],
+  "birdReptileExotic": [
+    {
+      "name": "ZooMed",
+      "url": "https://zoomed.com",
+      "category": "Bird / Reptile / Exotic Support",
+      "hook": "Premium reptile, bird, and exotic pet habitats and care products"
+    },
+    {
+      "name": "ExoTerra",
+      "url": "https://www.exo-terra.com",
+      "category": "Bird / Reptile / Exotic Support",
+      "hook": "Innovative terrariums and habitats for reptiles and amphibians"
+    },
+    {
+      "name": "Lafeber",
+      "url": "https://lafeber.com",
+      "category": "Bird / Reptile / Exotic Support",
+      "hook": "Premium bird food and nutrition products backed by avian research"
+    },
+    {
+      "name": "Kaytee",
+      "url": "https://www.kaytee.com",
+      "category": "Bird / Reptile / Exotic Support",
+      "hook": "Complete nutrition and habitats for birds, small animals, and reptiles"
+    },
+    {
+      "name": "Oxbow",
+      "url": "https://www.oxbowanimalhealth.com",
+      "category": "Bird / Reptile / Exotic Support",
+      "hook": "Science-backed nutrition for small pets, rabbits, and exotic animals"
+    }
+  ],
+  "groomingAndSupplements": [
+    {
+      "name": "Zesty Paws",
+      "url": "https://zestypaws.com",
+      "category": "Grooming & Supplements",
+      "hook": "Premium pet supplements for joint health, skin, digestion, and wellness"
+    },
+    {
+      "name": "PetHonesty",
+      "url": "https://www.pethonesty.com",
+      "category": "Grooming & Supplements",
+      "hook": "Natural pet supplements and grooming products with vet-approved formulas"
+    },
+    {
+      "name": "Honest Paws",
+      "url": "https://www.honestpaws.com",
+      "category": "Grooming & Supplements",
+      "hook": "CBD and wellness products designed specifically for dogs and cats"
+    },
+    {
+      "name": "PetLab Co.",
+      "url": "https://thepetlabco.com",
+      "category": "Grooming & Supplements",
+      "hook": "Veterinarian-formulated supplements for dog health and vitality"
+    },
+    {
+      "name": "FURminator",
+      "url": "https://www.furminator.com",
+      "category": "Grooming & Supplements",
+      "hook": "Professional-grade deshedding tools and grooming solutions for pets"
+    },
+    {
+      "name": "Wahl grooming tools",
+      "url": "https://www.wahlpetproducts.com",
+      "category": "Grooming & Supplements",
+      "hook": "Professional pet grooming clippers, trimmers, and grooming supplies"
+    }
+  ]
+}
