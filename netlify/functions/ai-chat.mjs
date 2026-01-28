@@ -1,5 +1,7 @@
 import OpenAI from "openai";
-import affiliates from "../../config/affiliates.json" with { type: "json" };
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const affiliates = require("../../affiliates.json");
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
@@ -30,6 +32,8 @@ function getAffiliatesFromCategory(categoryKey, maxCount = 4) {
 }
 
 export default async function handler(req) {
+  console.log("ai-chat function invoked, method:", req.method);
+
   if (req.method !== "POST") {
     return new Response(JSON.stringify({ error: "Method not allowed" }), {
       status: 405,
@@ -38,7 +42,9 @@ export default async function handler(req) {
   }
 
   try {
-    const { message } = await req.json();
+    const body = await req.json();
+    const message = body.message;
+    console.log("Received message:", message ? message.substring(0, 50) + "..." : "(empty)");
 
     const completion = await client.chat.completions.create({
       model: "gpt-4.1-mini",
@@ -340,9 +346,10 @@ export default async function handler(req) {
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error(error);
+    console.error("ai-chat function error:", error);
     return new Response(
       JSON.stringify({
+        error: "Failed to process request",
         reply: "Sorry, I'm having trouble reaching the pet help engine right now. Please try again in a moment.",
       }),
       {

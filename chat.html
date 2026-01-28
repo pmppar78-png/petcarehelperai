@@ -177,10 +177,12 @@
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({ message: text })
         });
+        console.log('AI chat response status:', res.status);
         const data = await res.json();
+        console.log('AI chat response data:', data);
         addMessage(data.reply || 'Sorry, something went wrong. Please try again.');
       } catch (err) {
-        console.error(err);
+        console.error('AI chat error:', err);
         addMessage('Sorry, something went wrong reaching the AI.');
       }
     });
