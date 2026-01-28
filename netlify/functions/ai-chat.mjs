@@ -3,8 +3,6 @@ import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const affiliates = require("../../affiliates.json");
 
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
 // Category color mapping for partner links
 const categoryColors = {
   foodAndNutrition: "#22c55e", // green
@@ -32,7 +30,7 @@ function getAffiliatesFromCategory(categoryKey, maxCount = 4) {
 }
 
 export default async function handler(req) {
-  console.log("ai-chat function invoked, method:", req.method);
+  console.log("ai-chat function hit");
 
   if (req.method !== "POST") {
     return new Response(JSON.stringify({ error: "Method not allowed" }), {
@@ -42,11 +40,30 @@ export default async function handler(req) {
   }
 
   try {
+    // Get API key at runtime using Netlify.env
+    const apiKey = Netlify.env.get("OPENAI_API_KEY");
+    if (!apiKey) {
+      console.error("OPENAI_API_KEY environment variable is not set");
+      return new Response(
+        JSON.stringify({
+          error: "Configuration error",
+          reply: "Sorry, the AI service is not configured correctly. Please contact support.",
+        }),
+        {
+          status: 500,
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+    }
+
+    // Create OpenAI client inside handler to ensure env var is available
+    const client = new OpenAI({ apiKey });
+
     const body = await req.json();
     const message = body.message;
     console.log("Received message:", message ? message.substring(0, 50) + "..." : "(empty)");
 
-    console.log("About to call OpenAI API...");
+    console.log("calling OpenAI");
     const completion = await client.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
@@ -251,7 +268,7 @@ export default async function handler(req) {
       max_tokens: 800,
     });
 
-    console.log("OpenAI API response received successfully");
+    console.log("OpenAI response received");
     const reply = completion.choices[0]?.message?.content || "";
     console.log("Reply extracted, length:", reply.length);
 
@@ -349,7 +366,7 @@ export default async function handler(req) {
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error("ai-chat function error:", error);
+    console.error("error occurred:", error.message || error);
     return new Response(
       JSON.stringify({
         error: "Failed to process request",
