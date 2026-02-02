@@ -7,10 +7,29 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6484141649562994" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK0N7BD82Q"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FK0N7BD82Q');</script>
-  <meta name="description" content="Complete cat breed directory with 20+ breeds. Compare personality, health issues, grooming needs, and care requirements. Find the perfect cat breed.">
+  <meta name="description" content="Complete A-Z cat breed directory with 50+ breeds. Compare personality, health issues, grooming needs, activity levels, and care requirements. Find the perfect cat breed for your lifestyle.">
   <link rel="canonical" href="https://petcarehelperai.netlify.app/breeds/cat-breeds.html">
   <title>Cat Breeds A-Z: Complete Breed Directory | Pet Care Helper AI</title>
   <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Cat Breeds A-Z Directory",
+    "description": "Complete directory of cat breeds with detailed information on personality, health, grooming, and care requirements.",
+    "publisher": {"@type": "Organization", "name": "Pet Care Helper AI"},
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Maine Coon", "url": "https://petcarehelperai.netlify.app/breeds/cats/maine-coon.html"},
+        {"@type": "ListItem", "position": 2, "name": "Persian", "url": "https://petcarehelperai.netlify.app/breeds/cats/persian.html"},
+        {"@type": "ListItem", "position": 3, "name": "Siamese", "url": "https://petcarehelperai.netlify.app/breeds/cats/siamese.html"},
+        {"@type": "ListItem", "position": 4, "name": "Ragdoll", "url": "https://petcarehelperai.netlify.app/breeds/cats/ragdoll.html"},
+        {"@type": "ListItem", "position": 5, "name": "Bengal", "url": "https://petcarehelperai.netlify.app/breeds/cats/bengal.html"}
+      ]
+    }
+  }
+  </script>
   <style>
     .breed-grid {
       display: grid;
@@ -91,6 +110,9 @@
       flex-wrap: wrap;
       gap: 8px;
       margin: 20px 0;
+      padding: 16px;
+      background: linear-gradient(135deg, rgba(240,253,250,0.9), rgba(224,242,254,0.9));
+      border-radius: 12px;
     }
     .alpha-link {
       width: 32px;
@@ -98,16 +120,27 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #E0F2FE;
+      background: white;
       border-radius: 6px;
       text-decoration: none;
       color: #0D9488;
       font-weight: 600;
       transition: all 0.2s;
+      border: 1px solid rgba(94,234,212,0.3);
     }
     .alpha-link:hover {
       background: #14B8A6;
       color: white;
+    }
+    .letter-section {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 2px solid rgba(94,234,212,0.3);
+    }
+    .letter-section h2 {
+      color: #0D9488;
+      font-size: 1.8rem;
+      margin-bottom: 16px;
     }
   </style>
 </head>
@@ -143,8 +176,8 @@
     </div>
 
     <section class="hero" style="padding: 30px 20px;">
-      <h1>Cat Breeds A-Z</h1>
-      <p>Explore our comprehensive directory of cat breeds. Each breed page includes personality traits, health information, grooming needs, and care requirements to help you find the perfect feline companion.</p>
+      <h1>Cat Breeds A-Z: Complete Directory</h1>
+      <p>Explore our comprehensive directory of 50+ cat breeds. Each breed page includes detailed information on personality traits, health issues, grooming needs, activity levels, and care requirements to help you find the perfect feline companion.</p>
     </section>
 
     <div class="filter-section">
@@ -160,160 +193,423 @@
     <div class="alpha-nav">
       <a href="#A" class="alpha-link">A</a>
       <a href="#B" class="alpha-link">B</a>
+      <a href="#C" class="alpha-link">C</a>
       <a href="#D" class="alpha-link">D</a>
       <a href="#E" class="alpha-link">E</a>
       <a href="#H" class="alpha-link">H</a>
+      <a href="#J" class="alpha-link">J</a>
+      <a href="#K" class="alpha-link">K</a>
+      <a href="#L" class="alpha-link">L</a>
       <a href="#M" class="alpha-link">M</a>
       <a href="#N" class="alpha-link">N</a>
       <a href="#O" class="alpha-link">O</a>
       <a href="#P" class="alpha-link">P</a>
       <a href="#R" class="alpha-link">R</a>
       <a href="#S" class="alpha-link">S</a>
+      <a href="#T" class="alpha-link">T</a>
     </div>
 
-    <h2 id="A">A</h2>
-    <div class="breed-grid">
-      <a href="cats/abyssinian.html" class="breed-card" data-coat="short">
-        <h3>Abyssinian</h3>
-        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Active</span></div>
-        <p>Elegant, active, and curious. One of the oldest known cat breeds.</p>
-      </a>
-      <a href="cats/american-shorthair.html" class="breed-card" data-coat="short">
-        <h3>American Shorthair</h3>
-        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Easy-Going</span></div>
-        <p>Friendly, adaptable, and low-maintenance. Classic American cats.</p>
-      </a>
-    </div>
+    <!-- A Section -->
+    <section class="letter-section" id="A">
+      <h2>A</h2>
+      <div class="breed-grid">
+        <a href="cats/abyssinian.html" class="breed-card" data-coat="short">
+          <h3>Abyssinian</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Active</span></div>
+          <p>Elegant, active, and curious. One of the oldest known cat breeds with a ticked coat.</p>
+        </a>
+        <a href="cats/american-bobtail.html" class="breed-card" data-coat="short">
+          <h3>American Bobtail</h3>
+          <div class="breed-meta"><span class="breed-tag">Short-Long Hair</span><span class="breed-tag">Playful</span></div>
+          <p>Friendly, intelligent, and adaptable. Distinctive bobbed tail with dog-like personality.</p>
+        </a>
+        <a href="cats/american-curl.html" class="breed-card" data-coat="short">
+          <h3>American Curl</h3>
+          <div class="breed-meta"><span class="breed-tag">Short-Long Hair</span><span class="breed-tag">Affectionate</span></div>
+          <p>Sweet, playful, and people-oriented. Unique curled-back ears give them an alert expression.</p>
+        </a>
+        <a href="cats/american-shorthair.html" class="breed-card" data-coat="short">
+          <h3>American Shorthair</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Easy-Going</span></div>
+          <p>Friendly, adaptable, and low-maintenance. Classic American cats with robust health.</p>
+        </a>
+        <a href="cats/american-wirehair.html" class="breed-card" data-coat="short">
+          <h3>American Wirehair</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Calm</span></div>
+          <p>Quiet, gentle, and easy-going. Unique wiry coat texture sets them apart.</p>
+        </a>
+      </div>
+    </section>
 
-    <h2 id="B">B</h2>
-    <div class="breed-grid">
-      <a href="cats/bengal.html" class="breed-card" data-coat="short">
-        <h3>Bengal</h3>
-        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Athletic</span></div>
-        <p>Wild appearance with a domestic temperament. Active and playful.</p>
-      </a>
-      <a href="cats/birman.html" class="breed-card" data-coat="long">
-        <h3>Birman</h3>
-        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Gentle</span></div>
-        <p>Gentle, affectionate, and social. Beautiful blue eyes and silky coat.</p>
-      </a>
-      <a href="cats/british-shorthair.html" class="breed-card" data-coat="short">
-        <h3>British Shorthair</h3>
-        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Calm</span></div>
-        <p>Calm, dignified, and easygoing. The teddy bear of cat breeds.</p>
-      </a>
-      <a href="cats/burmese.html" class="breed-card" data-coat="short">
-        <h3>Burmese</h3>
-        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Social</span></div>
-        <p>Affectionate, people-oriented cats. Known for their silky coats.</p>
-      </a>
-    </div>
+    <!-- B Section -->
+    <section class="letter-section" id="B">
+      <h2>B</h2>
+      <div class="breed-grid">
+        <a href="cats/balinese.html" class="breed-card" data-coat="long">
+          <h3>Balinese</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Vocal</span></div>
+          <p>Graceful, intelligent, and talkative. Long-haired Siamese with silky flowing coat.</p>
+        </a>
+        <a href="cats/bengal.html" class="breed-card" data-coat="short">
+          <h3>Bengal</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Athletic</span></div>
+          <p>Wild appearance with a domestic temperament. Active, playful, and highly intelligent.</p>
+        </a>
+        <a href="cats/birman.html" class="breed-card" data-coat="long">
+          <h3>Birman</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Gentle</span></div>
+          <p>Gentle, affectionate, and social. Beautiful blue eyes with white-gloved paws.</p>
+        </a>
+        <a href="cats/bombay.html" class="breed-card" data-coat="short">
+          <h3>Bombay</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Affectionate</span></div>
+          <p>Mini black panther with a loving personality. Playful, social, and adaptable.</p>
+        </a>
+        <a href="cats/british-longhair.html" class="breed-card" data-coat="long">
+          <h3>British Longhair</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Calm</span></div>
+          <p>Gentle, easygoing, and affectionate. The fluffy version of the British Shorthair.</p>
+        </a>
+        <a href="cats/british-shorthair.html" class="breed-card" data-coat="short">
+          <h3>British Shorthair</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Calm</span></div>
+          <p>Calm, dignified, and easygoing. The teddy bear of cat breeds with plush coats.</p>
+        </a>
+        <a href="cats/burmese.html" class="breed-card" data-coat="short">
+          <h3>Burmese</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Social</span></div>
+          <p>Affectionate, people-oriented cats. Known for their silky coats and golden eyes.</p>
+        </a>
+        <a href="cats/burmilla.html" class="breed-card" data-coat="short">
+          <h3>Burmilla</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Sweet</span></div>
+          <p>Gentle, sociable, and playful. Beautiful silver-shaded coat with outlined features.</p>
+        </a>
+      </div>
+    </section>
 
-    <h2 id="D">D</h2>
-    <div class="breed-grid">
-      <a href="cats/devon-rex.html" class="breed-card" data-coat="hairless">
-        <h3>Devon Rex</h3>
-        <div class="breed-meta"><span class="breed-tag">Low-Shedding</span><span class="breed-tag">Playful</span></div>
-        <p>Pixie-like appearance with wavy coat. Mischievous and affectionate.</p>
-      </a>
-    </div>
+    <!-- C Section -->
+    <section class="letter-section" id="C">
+      <h2>C</h2>
+      <div class="breed-grid">
+        <a href="cats/chartreux.html" class="breed-card" data-coat="short">
+          <h3>Chartreux</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Quiet</span></div>
+          <p>Quiet, observant, and loyal. French blue cats with copper or gold eyes.</p>
+        </a>
+        <a href="cats/chausie.html" class="breed-card" data-coat="short">
+          <h3>Chausie</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Active</span></div>
+          <p>Athletic, intelligent, and loyal. Wild hybrid with jungle cat ancestry.</p>
+        </a>
+        <a href="cats/cornish-rex.html" class="breed-card" data-coat="hairless">
+          <h3>Cornish Rex</h3>
+          <div class="breed-meta"><span class="breed-tag">Low-Shedding</span><span class="breed-tag">Playful</span></div>
+          <p>Energetic, playful, and affectionate. Distinctive wavy coat and slender build.</p>
+        </a>
+        <a href="cats/cymric.html" class="breed-card" data-coat="long">
+          <h3>Cymric</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Gentle</span></div>
+          <p>Gentle, playful, and intelligent. Long-haired version of the Manx with no tail.</p>
+        </a>
+      </div>
+    </section>
 
-    <h2 id="E">E</h2>
-    <div class="breed-grid">
-      <a href="cats/exotic-shorthair.html" class="breed-card" data-coat="short">
-        <h3>Exotic Shorthair</h3>
-        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Gentle</span></div>
-        <p>Persian personality with easier grooming. Sweet and calm.</p>
-      </a>
-    </div>
+    <!-- D Section -->
+    <section class="letter-section" id="D">
+      <h2>D</h2>
+      <div class="breed-grid">
+        <a href="cats/devon-rex.html" class="breed-card" data-coat="hairless">
+          <h3>Devon Rex</h3>
+          <div class="breed-meta"><span class="breed-tag">Low-Shedding</span><span class="breed-tag">Playful</span></div>
+          <p>Pixie-like appearance with wavy coat. Mischievous, affectionate, and highly social.</p>
+        </a>
+        <a href="cats/domestic-longhair.html" class="breed-card" data-coat="long">
+          <h3>Domestic Longhair</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Variable</span></div>
+          <p>Mixed breed cats with long coats. Personalities vary widely, often great companions.</p>
+        </a>
+        <a href="cats/domestic-shorthair.html" class="breed-card" data-coat="short">
+          <h3>Domestic Shorthair</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Variable</span></div>
+          <p>The most common cat type. Diverse appearances and personalities, often very healthy.</p>
+        </a>
+      </div>
+    </section>
 
-    <h2 id="H">H</h2>
-    <div class="breed-grid">
-      <a href="cats/himalayan.html" class="breed-card" data-coat="long">
-        <h3>Himalayan</h3>
-        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Sweet</span></div>
-        <p>Persian-Siamese mix with beautiful color points. Gentle and calm.</p>
-      </a>
-    </div>
+    <!-- E Section -->
+    <section class="letter-section" id="E">
+      <h2>E</h2>
+      <div class="breed-grid">
+        <a href="cats/egyptian-mau.html" class="breed-card" data-coat="short">
+          <h3>Egyptian Mau</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Active</span></div>
+          <p>Naturally spotted coat and fastest domestic cat. Loyal, playful, and athletic.</p>
+        </a>
+        <a href="cats/exotic-shorthair.html" class="breed-card" data-coat="short">
+          <h3>Exotic Shorthair</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Gentle</span></div>
+          <p>Persian personality with easier grooming. Sweet, calm, and affectionate.</p>
+        </a>
+      </div>
+    </section>
 
-    <h2 id="M">M</h2>
-    <div class="breed-grid">
-      <a href="cats/maine-coon.html" class="breed-card" data-coat="long">
-        <h3>Maine Coon</h3>
-        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Gentle Giant</span></div>
-        <p>Largest domestic cat breed. Friendly, playful, and dog-like.</p>
-      </a>
-    </div>
+    <!-- H Section -->
+    <section class="letter-section" id="H">
+      <h2>H</h2>
+      <div class="breed-grid">
+        <a href="cats/havana-brown.html" class="breed-card" data-coat="short">
+          <h3>Havana Brown</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Affectionate</span></div>
+          <p>Rare and distinctive chocolate-brown coat. Playful, curious, and people-oriented.</p>
+        </a>
+        <a href="cats/himalayan.html" class="breed-card" data-coat="long">
+          <h3>Himalayan</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Sweet</span></div>
+          <p>Persian-Siamese mix with beautiful color points. Gentle, calm, and devoted.</p>
+        </a>
+      </div>
+    </section>
 
-    <h2 id="N">N</h2>
-    <div class="breed-grid">
-      <a href="cats/norwegian-forest-cat.html" class="breed-card" data-coat="long">
-        <h3>Norwegian Forest Cat</h3>
-        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Independent</span></div>
-        <p>Hardy, independent cats with luxurious waterproof coats.</p>
-      </a>
-    </div>
+    <!-- J Section -->
+    <section class="letter-section" id="J">
+      <h2>J</h2>
+      <div class="breed-grid">
+        <a href="cats/japanese-bobtail.html" class="breed-card" data-coat="short">
+          <h3>Japanese Bobtail</h3>
+          <div class="breed-meta"><span class="breed-tag">Short-Long Hair</span><span class="breed-tag">Active</span></div>
+          <p>Symbol of good luck in Japan. Playful, intelligent, and loves to talk.</p>
+        </a>
+        <a href="cats/javanese.html" class="breed-card" data-coat="long">
+          <h3>Javanese</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Vocal</span></div>
+          <p>Colorpoint longhair with Siamese heritage. Intelligent, active, and talkative.</p>
+        </a>
+      </div>
+    </section>
 
-    <h2 id="O">O</h2>
-    <div class="breed-grid">
-      <a href="cats/oriental-shorthair.html" class="breed-card" data-coat="short">
-        <h3>Oriental Shorthair</h3>
-        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Vocal</span></div>
-        <p>Elegant, vocal, and highly intelligent. Siamese relative with many colors.</p>
-      </a>
-    </div>
+    <!-- K Section -->
+    <section class="letter-section" id="K">
+      <h2>K</h2>
+      <div class="breed-grid">
+        <a href="cats/khao-manee.html" class="breed-card" data-coat="short">
+          <h3>Khao Manee</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Playful</span></div>
+          <p>Rare Thai breed with all-white coat. Often has odd-colored eyes, very social.</p>
+        </a>
+        <a href="cats/korat.html" class="breed-card" data-coat="short">
+          <h3>Korat</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Loyal</span></div>
+          <p>Ancient Thai breed with silver-blue coat. Gentle, intelligent, and bonds deeply.</p>
+        </a>
+      </div>
+    </section>
 
-    <h2 id="P">P</h2>
-    <div class="breed-grid">
-      <a href="cats/persian.html" class="breed-card" data-coat="long">
-        <h3>Persian</h3>
-        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Quiet</span></div>
-        <p>Quiet, sweet, and dignified. Requires daily grooming.</p>
-      </a>
-    </div>
+    <!-- L Section -->
+    <section class="letter-section" id="L">
+      <h2>L</h2>
+      <div class="breed-grid">
+        <a href="cats/laperm.html" class="breed-card" data-coat="hairless">
+          <h3>LaPerm</h3>
+          <div class="breed-meta"><span class="breed-tag">Curly Coat</span><span class="breed-tag">Affectionate</span></div>
+          <p>Unique curly coat that can be tight ringlets or waves. Gentle, curious, and loving.</p>
+        </a>
+        <a href="cats/lykoi.html" class="breed-card" data-coat="short">
+          <h3>Lykoi</h3>
+          <div class="breed-meta"><span class="breed-tag">Partial Hair</span><span class="breed-tag">Playful</span></div>
+          <p>The "werewolf cat" with a unique partially hairless coat. Friendly and intelligent.</p>
+        </a>
+      </div>
+    </section>
 
-    <h2 id="R">R</h2>
-    <div class="breed-grid">
-      <a href="cats/ragdoll.html" class="breed-card" data-coat="long">
-        <h3>Ragdoll</h3>
-        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Docile</span></div>
-        <p>Go limp when picked up. Gentle, calm, and affectionate.</p>
-      </a>
-      <a href="cats/ragamuffin.html" class="breed-card" data-coat="long">
-        <h3>Ragamuffin</h3>
-        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Sweet</span></div>
-        <p>Large, friendly cats with plush coats. Patient and docile.</p>
-      </a>
-      <a href="cats/russian-blue.html" class="breed-card" data-coat="short">
-        <h3>Russian Blue</h3>
-        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Shy</span></div>
-        <p>Elegant, reserved, and loyal. Stunning blue-grey coat.</p>
-      </a>
-    </div>
+    <!-- M Section -->
+    <section class="letter-section" id="M">
+      <h2>M</h2>
+      <div class="breed-grid">
+        <a href="cats/maine-coon.html" class="breed-card" data-coat="long">
+          <h3>Maine Coon</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Gentle Giant</span></div>
+          <p>Largest domestic cat breed. Friendly, playful, and dog-like personality.</p>
+        </a>
+        <a href="cats/manx.html" class="breed-card" data-coat="short">
+          <h3>Manx</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Playful</span></div>
+          <p>Tailless cats from the Isle of Man. Playful, loyal, and great hunters.</p>
+        </a>
+        <a href="cats/munchkin.html" class="breed-card" data-coat="short">
+          <h3>Munchkin</h3>
+          <div class="breed-meta"><span class="breed-tag">Short-Long Hair</span><span class="breed-tag">Playful</span></div>
+          <p>Short-legged cats with normal-sized bodies. Curious, friendly, and confident.</p>
+        </a>
+      </div>
+    </section>
 
-    <h2 id="S">S</h2>
-    <div class="breed-grid">
-      <a href="cats/scottish-fold.html" class="breed-card" data-coat="short">
-        <h3>Scottish Fold</h3>
-        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Sweet</span></div>
-        <p>Known for folded ears. Sweet-tempered and adaptable.</p>
-      </a>
-      <a href="cats/siamese.html" class="breed-card" data-coat="short">
-        <h3>Siamese</h3>
-        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Vocal</span></div>
-        <p>Striking blue eyes and vocal personality. Social and intelligent.</p>
-      </a>
-      <a href="cats/siberian.html" class="breed-card" data-coat="long">
-        <h3>Siberian</h3>
-        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Hypoallergenic</span></div>
-        <p>May produce fewer allergens. Affectionate, playful, and adventurous.</p>
-      </a>
-      <a href="cats/sphynx.html" class="breed-card" data-coat="hairless">
-        <h3>Sphynx</h3>
-        <div class="breed-meta"><span class="breed-tag">Hairless</span><span class="breed-tag">Affectionate</span></div>
-        <p>Hairless and loving attention. Warm to the touch and loyal.</p>
-      </a>
-    </div>
+    <!-- N Section -->
+    <section class="letter-section" id="N">
+      <h2>N</h2>
+      <div class="breed-grid">
+        <a href="cats/nebelung.html" class="breed-card" data-coat="long">
+          <h3>Nebelung</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Shy</span></div>
+          <p>Long-haired Russian Blue with silvery-blue coat. Reserved, gentle, and loyal.</p>
+        </a>
+        <a href="cats/norwegian-forest-cat.html" class="breed-card" data-coat="long">
+          <h3>Norwegian Forest Cat</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Independent</span></div>
+          <p>Hardy, independent cats with luxurious waterproof coats. Gentle and patient.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- O Section -->
+    <section class="letter-section" id="O">
+      <h2>O</h2>
+      <div class="breed-grid">
+        <a href="cats/ocicat.html" class="breed-card" data-coat="short">
+          <h3>Ocicat</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Social</span></div>
+          <p>Wild-looking spotted cat with no wild DNA. Confident, social, and dog-like.</p>
+        </a>
+        <a href="cats/oriental-longhair.html" class="breed-card" data-coat="long">
+          <h3>Oriental Longhair</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Vocal</span></div>
+          <p>Elegant, talkative, and intelligent. Siamese body type with flowing coat.</p>
+        </a>
+        <a href="cats/oriental-shorthair.html" class="breed-card" data-coat="short">
+          <h3>Oriental Shorthair</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Vocal</span></div>
+          <p>Elegant, vocal, and highly intelligent. Siamese relative with 300+ color combinations.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- P Section -->
+    <section class="letter-section" id="P">
+      <h2>P</h2>
+      <div class="breed-grid">
+        <a href="cats/persian.html" class="breed-card" data-coat="long">
+          <h3>Persian</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Quiet</span></div>
+          <p>Quiet, sweet, and dignified. Requires daily grooming but very gentle companions.</p>
+        </a>
+        <a href="cats/peterbald.html" class="breed-card" data-coat="hairless">
+          <h3>Peterbald</h3>
+          <div class="breed-meta"><span class="breed-tag">Hairless</span><span class="breed-tag">Affectionate</span></div>
+          <p>Elegant hairless breed from Russia. Affectionate, athletic, and intelligent.</p>
+        </a>
+        <a href="cats/pixie-bob.html" class="breed-card" data-coat="short">
+          <h3>Pixie-Bob</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Loyal</span></div>
+          <p>Resembles wild bobcat but fully domestic. Loyal, social, and dog-like personality.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- R Section -->
+    <section class="letter-section" id="R">
+      <h2>R</h2>
+      <div class="breed-grid">
+        <a href="cats/ragamuffin.html" class="breed-card" data-coat="long">
+          <h3>Ragamuffin</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Sweet</span></div>
+          <p>Large, friendly cats with plush coats. Patient, docile, and loves being held.</p>
+        </a>
+        <a href="cats/ragdoll.html" class="breed-card" data-coat="long">
+          <h3>Ragdoll</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Docile</span></div>
+          <p>Go limp when picked up. Gentle, calm, and extremely affectionate.</p>
+        </a>
+        <a href="cats/russian-blue.html" class="breed-card" data-coat="short">
+          <h3>Russian Blue</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Shy</span></div>
+          <p>Elegant, reserved, and loyal. Stunning blue-grey coat with emerald green eyes.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- S Section -->
+    <section class="letter-section" id="S">
+      <h2>S</h2>
+      <div class="breed-grid">
+        <a href="cats/savannah.html" class="breed-card" data-coat="short">
+          <h3>Savannah</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Active</span></div>
+          <p>Tall, exotic hybrid with serval ancestry. Extremely active, loyal, and intelligent.</p>
+        </a>
+        <a href="cats/scottish-fold.html" class="breed-card" data-coat="short">
+          <h3>Scottish Fold</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Sweet</span></div>
+          <p>Known for folded ears. Sweet-tempered, adaptable, and loves companionship.</p>
+        </a>
+        <a href="cats/selkirk-rex.html" class="breed-card" data-coat="hairless">
+          <h3>Selkirk Rex</h3>
+          <div class="breed-meta"><span class="breed-tag">Curly Coat</span><span class="breed-tag">Patient</span></div>
+          <p>Sheep-like curly coat. Patient, tolerant, and loves being with people.</p>
+        </a>
+        <a href="cats/siamese.html" class="breed-card" data-coat="short">
+          <h3>Siamese</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Vocal</span></div>
+          <p>Striking blue eyes and vocal personality. Social, intelligent, and demanding.</p>
+        </a>
+        <a href="cats/siberian.html" class="breed-card" data-coat="long">
+          <h3>Siberian</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Hypoallergenic</span></div>
+          <p>May produce fewer allergens. Affectionate, playful, and adventurous.</p>
+        </a>
+        <a href="cats/singapura.html" class="breed-card" data-coat="short">
+          <h3>Singapura</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Curious</span></div>
+          <p>Smallest domestic cat breed. Extremely curious, playful, and people-oriented.</p>
+        </a>
+        <a href="cats/snowshoe.html" class="breed-card" data-coat="short">
+          <h3>Snowshoe</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Sweet</span></div>
+          <p>Siamese heritage with white "snowshoe" feet. Sweet-natured, vocal, and affectionate.</p>
+        </a>
+        <a href="cats/somali.html" class="breed-card" data-coat="long">
+          <h3>Somali</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Active</span></div>
+          <p>Long-haired Abyssinian with fox-like appearance. Active, playful, and intelligent.</p>
+        </a>
+        <a href="cats/sphynx.html" class="breed-card" data-coat="hairless">
+          <h3>Sphynx</h3>
+          <div class="breed-meta"><span class="breed-tag">Hairless</span><span class="breed-tag">Affectionate</span></div>
+          <p>Hairless and loving attention. Warm to the touch, loyal, and extroverted.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- T Section -->
+    <section class="letter-section" id="T">
+      <h2>T</h2>
+      <div class="breed-grid">
+        <a href="cats/thai.html" class="breed-card" data-coat="short">
+          <h3>Thai (Old-Style Siamese)</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Social</span></div>
+          <p>Traditional Siamese appearance. Intelligent, social, and less extreme features.</p>
+        </a>
+        <a href="cats/tonkinese.html" class="breed-card" data-coat="short">
+          <h3>Tonkinese</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Active</span></div>
+          <p>Burmese-Siamese cross with aqua eyes. Active, social, and loves to play.</p>
+        </a>
+        <a href="cats/toyger.html" class="breed-card" data-coat="short">
+          <h3>Toyger</h3>
+          <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Friendly</span></div>
+          <p>Tiger-striped domestic cat. Intelligent, outgoing, and easy to train.</p>
+        </a>
+        <a href="cats/turkish-angora.html" class="breed-card" data-coat="long">
+          <h3>Turkish Angora</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Playful</span></div>
+          <p>Elegant, athletic, and intelligent. Silky coat with graceful movement.</p>
+        </a>
+        <a href="cats/turkish-van.html" class="breed-card" data-coat="long">
+          <h3>Turkish Van</h3>
+          <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Active</span></div>
+          <p>Known as the "swimming cat." Active, loving, and distinctively marked.</p>
+        </a>
+      </div>
+    </section>
 
     <div class="affiliate-callout">
       <h4>Discover Your Cat's Genetics</h4>
@@ -324,8 +620,8 @@
     </div>
 
     <section class="info-card">
-      <h3>Need Help Choosing?</h3>
-      <p>Our AI assistant can answer detailed questions about any cat breed and help you find the perfect match.</p>
+      <h3>Need Help Choosing a Cat Breed?</h3>
+      <p>Our AI assistant can answer detailed questions about any cat breed and help you find the perfect feline match for your lifestyle, living situation, and preferences.</p>
       <div class="hero-actions">
         <a href="../chat.html" class="primary-btn">Ask the AI About Cat Breeds</a>
       </div>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-6484141649562994">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6484141649562994" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK0N7BD82Q"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FK0N7BD82Q');</script>
+  <meta name="description" content="Complete pet bird species directory. Parrots, finches, canaries, and more with care guides, diet requirements, housing needs, and health information.">
+  <link rel="canonical" href="https://petcarehelperai.netlify.app/breeds/bird-breeds.html">
+  <title>Pet Bird Species Guide: Parrots, Finches &amp; More | Pet Care Helper AI</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Pet Bird Species Directory",
+    "description": "Complete directory of pet bird species with care guides, diet requirements, and housing information.",
+    "publisher": {"@type": "Organization", "name": "Pet Care Helper AI"},
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Budgerigar (Parakeet)", "url": "https://petcarehelperai.netlify.app/breeds/birds/budgie.html"},
+        {"@type": "ListItem", "position": 2, "name": "Cockatiel", "url": "https://petcarehelperai.netlify.app/breeds/birds/cockatiel.html"},
+        {"@type": "ListItem", "position": 3, "name": "African Grey Parrot", "url": "https://petcarehelperai.netlify.app/breeds/birds/african-grey.html"},
+        {"@type": "ListItem", "position": 4, "name": "Canary", "url": "https://petcarehelperai.netlify.app/breeds/birds/canary.html"},
+        {"@type": "ListItem", "position": 5, "name": "Cockatoo", "url": "https://petcarehelperai.netlify.app/breeds/birds/cockatoo.html"}
+      ]
+    }
+  }
+  </script>
+  <style>
+    .breed-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .breed-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,253,250,0.9));
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid rgba(94,234,212,0.3);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .breed-card:hover {
+      border-color: #14B8A6;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(20,184,166,0.15);
+    }
+    .breed-card h3 {
+      color: #0F172A;
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+    .breed-card .breed-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .breed-tag {
+      background: #E0F2FE;
+      color: #0D9488;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+    }
+    .breed-tag.parrot {
+      background: #FEF3C7;
+      color: #D97706;
+    }
+    .breed-tag.finch {
+      background: #DBEAFE;
+      color: #1D4ED8;
+    }
+    .breed-tag.other {
+      background: #F3E8FF;
+      color: #7C3AED;
+    }
+    .breed-card p {
+      color: #64748b;
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .filter-section {
+      background: linear-gradient(135deg, rgba(240,253,250,0.9), rgba(224,242,254,0.9));
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .filter-label {
+      font-weight: 600;
+      color: #0F172A;
+    }
+    .filter-btn {
+      padding: 8px 16px;
+      border: 1px solid #A7F3D0;
+      border-radius: 999px;
+      background: white;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #334155;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: #14B8A6;
+      color: white;
+      border-color: #14B8A6;
+    }
+    .category-section {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 2px solid rgba(94,234,212,0.3);
+    }
+    .category-section h2 {
+      color: #0D9488;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    .category-section .category-desc {
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+    .subcategory {
+      margin-top: 24px;
+    }
+    .subcategory h3 {
+      color: #0F172A;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(94,234,212,0.3);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-title">
+      <div class="logo-pill"></div>
+      <div>
+        <h1>Pet Care Helper AI</h1>
+        <p class="subtitle">Dogs &bull; Cats &bull; Birds &bull; Reptiles &bull; Fish</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../chat.html" class="nav-link">AI Pet Help</a></li>
+        <li><a href="../dogs.html" class="nav-link">Dogs</a></li>
+        <li><a href="../cats.html" class="nav-link">Cats</a></li>
+        <li><a href="../birds.html" class="nav-link active">Birds</a></li>
+        <li><a href="../reptiles.html" class="nav-link">Reptiles</a></li>
+        <li><a href="../fish.html" class="nav-link">Fish</a></li>
+        <li><a href="../guides.html" class="nav-link">Guides</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a> <span>&rsaquo;</span>
+      <a href="../birds.html">Birds</a> <span>&rsaquo;</span>
+      All Bird Species
+    </div>
+
+    <section class="hero" style="padding: 30px 20px;">
+      <h1>Pet Bird Species Guide</h1>
+      <p>Explore our comprehensive directory of pet bird species. From small finches to large parrots, each species page includes care requirements, diet information, housing needs, lifespan, and personality traits to help you find the perfect feathered companion.</p>
+    </section>
+
+    <div class="filter-section">
+      <div class="filter-row">
+        <span class="filter-label">Filter by type:</span>
+        <button class="filter-btn active" data-filter="all">All Birds</button>
+        <button class="filter-btn" data-filter="parrot">Parrots</button>
+        <button class="filter-btn" data-filter="finch">Finches &amp; Canaries</button>
+        <button class="filter-btn" data-filter="other">Other Birds</button>
+      </div>
+    </div>
+
+    <!-- Parrots Section -->
+    <section class="category-section" id="parrots">
+      <h2>Parrots &amp; Parakeets</h2>
+      <p class="category-desc">Parrots are intelligent, social birds known for their ability to mimic speech and form strong bonds with their owners. They range from small parakeets to large macaws and require significant mental stimulation.</p>
+
+      <!-- Small Parrots -->
+      <div class="subcategory">
+        <h3>Small Parrots &amp; Parakeets</h3>
+        <div class="breed-grid">
+          <a href="birds/budgie.html" class="breed-card" data-type="parrot">
+            <h3>Budgerigar (Parakeet)</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Beginner</span></div>
+            <p>Most popular pet bird worldwide. Intelligent, playful, and can learn to talk. Lifespan 5-10 years.</p>
+          </a>
+          <a href="birds/cockatiel.html" class="breed-card" data-type="parrot">
+            <h3>Cockatiel</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Beginner</span></div>
+            <p>Gentle, affectionate birds with distinctive crests. Great whistlers. Lifespan 15-25 years.</p>
+          </a>
+          <a href="birds/lovebird.html" class="breed-card" data-type="parrot">
+            <h3>Lovebird</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Spirited</span></div>
+            <p>Small but feisty with big personalities. Bond strongly with owners. Lifespan 10-15 years.</p>
+          </a>
+          <a href="birds/parrotlet.html" class="breed-card" data-type="parrot">
+            <h3>Parrotlet</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Bold</span></div>
+            <p>Tiny parrots with huge personalities. Can learn tricks and some words. Lifespan 15-20 years.</p>
+          </a>
+          <a href="birds/lineolated-parakeet.html" class="breed-card" data-type="parrot">
+            <h3>Lineolated Parakeet</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Quiet</span></div>
+            <p>Calm, quiet parakeets perfect for apartments. Enjoy climbing more than flying. Lifespan 10-15 years.</p>
+          </a>
+          <a href="birds/bourkes-parakeet.html" class="breed-card" data-type="parrot">
+            <h3>Bourke's Parakeet</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Gentle</span></div>
+            <p>Gentle, quiet grass parakeets with rosy coloring. Great for calm households. Lifespan 8-15 years.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Medium Parrots -->
+      <div class="subcategory">
+        <h3>Medium Parrots</h3>
+        <div class="breed-grid">
+          <a href="birds/conure.html" class="breed-card" data-type="parrot">
+            <h3>Conure</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Playful</span></div>
+            <p>Playful, affectionate clowns. Various species from Green-Cheeked to Sun Conures. Lifespan 20-30 years.</p>
+          </a>
+          <a href="birds/green-cheek-conure.html" class="breed-card" data-type="parrot">
+            <h3>Green-Cheeked Conure</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Cuddly</span></div>
+            <p>Quieter than other conures, very cuddly. Great apartment parrots. Lifespan 20-30 years.</p>
+          </a>
+          <a href="birds/sun-conure.html" class="breed-card" data-type="parrot">
+            <h3>Sun Conure</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Vibrant</span></div>
+            <p>Stunning yellow and orange plumage. Beautiful but loud. Lifespan 25-30 years.</p>
+          </a>
+          <a href="birds/quaker-parrot.html" class="breed-card" data-type="parrot">
+            <h3>Quaker Parrot (Monk Parakeet)</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Talkative</span></div>
+            <p>Excellent talkers with charming personalities. Illegal in some states. Lifespan 20-30 years.</p>
+          </a>
+          <a href="birds/caique.html" class="breed-card" data-type="parrot">
+            <h3>Caique</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Energetic</span></div>
+            <p>High-energy clowns of the parrot world. Playful, bouncy, and entertaining. Lifespan 25-30 years.</p>
+          </a>
+          <a href="birds/senegal-parrot.html" class="breed-card" data-type="parrot">
+            <h3>Senegal Parrot</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Calm</span></div>
+            <p>Quieter Poicephalus parrots with calm demeanor. Bond closely with one person. Lifespan 25-30 years.</p>
+          </a>
+          <a href="birds/pionus.html" class="breed-card" data-type="parrot">
+            <h3>Pionus Parrot</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Easy-going</span></div>
+            <p>Quieter, easier-going medium parrots. Less demanding than many species. Lifespan 25-40 years.</p>
+          </a>
+          <a href="birds/ringneck-parakeet.html" class="breed-card" data-type="parrot">
+            <h3>Indian Ringneck Parakeet</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Intelligent</span></div>
+            <p>Excellent talkers with clear voices. Need experienced owners. Lifespan 25-30 years.</p>
+          </a>
+          <a href="birds/lorikeet.html" class="breed-card" data-type="parrot">
+            <h3>Rainbow Lorikeet</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Specialized Diet</span></div>
+            <p>Stunning colors but require nectar-based diet. Very active and playful. Lifespan 20-30 years.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Large Parrots -->
+      <div class="subcategory">
+        <h3>Large Parrots</h3>
+        <div class="breed-grid">
+          <a href="birds/african-grey.html" class="breed-card" data-type="parrot">
+            <h3>African Grey Parrot</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Most Intelligent</span></div>
+            <p>Considered the most intelligent parrot species. Exceptional talkers. Lifespan 40-60 years.</p>
+          </a>
+          <a href="birds/amazon-parrot.html" class="breed-card" data-type="parrot">
+            <h3>Amazon Parrot</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Vocal</span></div>
+            <p>Colorful, vocal, and entertaining. Can be feisty. Multiple species available. Lifespan 40-70 years.</p>
+          </a>
+          <a href="birds/eclectus.html" class="breed-card" data-type="parrot">
+            <h3>Eclectus Parrot</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Unique</span></div>
+            <p>Males green, females red - extreme sexual dimorphism. Calm and gentle. Lifespan 30-50 years.</p>
+          </a>
+          <a href="birds/cockatoo.html" class="breed-card" data-type="parrot">
+            <h3>Cockatoo</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Demanding</span></div>
+            <p>Affectionate but extremely demanding. Need experienced owners. Lifespan 40-70 years.</p>
+          </a>
+          <a href="birds/umbrella-cockatoo.html" class="breed-card" data-type="parrot">
+            <h3>Umbrella Cockatoo</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Cuddly</span></div>
+            <p>Very cuddly but prone to behavioral issues. Require significant time investment. Lifespan 40-60 years.</p>
+          </a>
+          <a href="birds/moluccan-cockatoo.html" class="breed-card" data-type="parrot">
+            <h3>Moluccan Cockatoo</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Advanced</span></div>
+            <p>Largest cockatoo with salmon-pink coloring. Extremely loud and needy. Lifespan 65-80 years.</p>
+          </a>
+          <a href="birds/macaw.html" class="breed-card" data-type="parrot">
+            <h3>Macaw</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Large</span></div>
+            <p>Largest parrots with stunning colors. Need huge enclosures. Lifespan 50-80+ years.</p>
+          </a>
+          <a href="birds/blue-gold-macaw.html" class="breed-card" data-type="parrot">
+            <h3>Blue &amp; Gold Macaw</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Social</span></div>
+            <p>Most common large macaw. Social and trainable. Lifespan 50-60 years.</p>
+          </a>
+          <a href="birds/scarlet-macaw.html" class="breed-card" data-type="parrot">
+            <h3>Scarlet Macaw</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Striking</span></div>
+            <p>Brilliant red, yellow, and blue plumage. Can be nippy. Lifespan 50-75 years.</p>
+          </a>
+          <a href="birds/hyacinth-macaw.html" class="breed-card" data-type="parrot">
+            <h3>Hyacinth Macaw</h3>
+            <div class="breed-meta"><span class="breed-tag parrot">Parrot</span><span class="breed-tag">Rare</span></div>
+            <p>Largest flying parrot, stunning cobalt blue. Endangered and extremely expensive. Lifespan 60+ years.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Finches Section -->
+    <section class="category-section" id="finches">
+      <h2>Finches &amp; Canaries</h2>
+      <p class="category-desc">Finches and canaries are small, active birds that are generally hands-off pets. They're valued for their beautiful songs and colorful plumage. Best kept in pairs or small flocks.</p>
+
+      <div class="subcategory">
+        <h3>Finches</h3>
+        <div class="breed-grid">
+          <a href="birds/zebra-finch.html" class="breed-card" data-type="finch">
+            <h3>Zebra Finch</h3>
+            <div class="breed-meta"><span class="breed-tag finch">Finch</span><span class="breed-tag">Beginner</span></div>
+            <p>Hardy, active finches with cheerful chirps. Easy to breed. Keep in pairs. Lifespan 5-10 years.</p>
+          </a>
+          <a href="birds/society-finch.html" class="breed-card" data-type="finch">
+            <h3>Society Finch (Bengalese)</h3>
+            <div class="breed-meta"><span class="breed-tag finch">Finch</span><span class="breed-tag">Social</span></div>
+            <p>Extremely social, often used as foster parents. Peaceful community birds. Lifespan 6-12 years.</p>
+          </a>
+          <a href="birds/gouldian-finch.html" class="breed-card" data-type="finch">
+            <h3>Gouldian Finch</h3>
+            <div class="breed-meta"><span class="breed-tag finch">Finch</span><span class="breed-tag">Stunning</span></div>
+            <p>Rainbow-colored Australian finches. More delicate, need experienced care. Lifespan 6-8 years.</p>
+          </a>
+          <a href="birds/java-finch.html" class="breed-card" data-type="finch">
+            <h3>Java Finch (Java Sparrow)</h3>
+            <div class="breed-meta"><span class="breed-tag finch">Finch</span><span class="breed-tag">Gentle</span></div>
+            <p>Larger finches with pink beaks. Can become tame. Illegal in some states. Lifespan 5-10 years.</p>
+          </a>
+          <a href="birds/owl-finch.html" class="breed-card" data-type="finch">
+            <h3>Owl Finch (Bicheno Finch)</h3>
+            <div class="breed-meta"><span class="breed-tag finch">Finch</span><span class="breed-tag">Active</span></div>
+            <p>Distinctive owl-like face markings. Active and entertaining. Lifespan 5-10 years.</p>
+          </a>
+          <a href="birds/star-finch.html" class="breed-card" data-type="finch">
+            <h3>Star Finch</h3>
+            <div class="breed-meta"><span class="breed-tag finch">Finch</span><span class="breed-tag">Peaceful</span></div>
+            <p>Attractive red faces with white-spotted bodies. Very peaceful community finches. Lifespan 6-8 years.</p>
+          </a>
+          <a href="birds/cordon-bleu.html" class="breed-card" data-type="finch">
+            <h3>Cordon Bleu</h3>
+            <div class="breed-meta"><span class="breed-tag finch">Finch</span><span class="breed-tag">Delicate</span></div>
+            <p>Beautiful blue African finches. Need warm temperatures and experienced care. Lifespan 5-8 years.</p>
+          </a>
+          <a href="birds/spice-finch.html" class="breed-card" data-type="finch">
+            <h3>Spice Finch (Nutmeg Mannikin)</h3>
+            <div class="breed-meta"><span class="breed-tag finch">Finch</span><span class="breed-tag">Hardy</span></div>
+            <p>Brown scalloped pattern, very hardy. Easy to keep in mixed finch aviaries. Lifespan 6-10 years.</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="subcategory">
+        <h3>Canaries</h3>
+        <div class="breed-grid">
+          <a href="birds/canary.html" class="breed-card" data-type="finch">
+            <h3>Canary (General)</h3>
+            <div class="breed-meta"><span class="breed-tag finch">Finch</span><span class="breed-tag">Singing</span></div>
+            <p>Famous for beautiful songs (males). Many varieties available. Prefer to be kept alone or in pairs. Lifespan 10-15 years.</p>
+          </a>
+          <a href="birds/american-singer-canary.html" class="breed-card" data-type="finch">
+            <h3>American Singer Canary</h3>
+            <div class="breed-meta"><span class="breed-tag finch">Finch</span><span class="breed-tag">Song</span></div>
+            <p>Bred for beautiful singing voice. Combination of Roller and Border canaries. Lifespan 10-15 years.</p>
+          </a>
+          <a href="birds/roller-canary.html" class="breed-card" data-type="finch">
+            <h3>Roller Canary</h3>
+            <div class="breed-meta"><span class="breed-tag finch">Finch</span><span class="breed-tag">Song</span></div>
+            <p>German song canary with unique rolling notes. Valued for song quality. Lifespan 10-15 years.</p>
+          </a>
+          <a href="birds/red-factor-canary.html" class="breed-card" data-type="finch">
+            <h3>Red Factor Canary</h3>
+            <div class="breed-meta"><span class="breed-tag finch">Finch</span><span class="breed-tag">Color</span></div>
+            <p>Bred for orange-red coloring. Require color-fed diet to maintain plumage. Lifespan 10-15 years.</p>
+          </a>
+          <a href="birds/gloster-canary.html" class="breed-card" data-type="finch">
+            <h3>Gloster Canary</h3>
+            <div class="breed-meta"><span class="breed-tag finch">Finch</span><span class="breed-tag">Type</span></div>
+            <p>Small canary with distinctive "Beatles-like" corona (crest). Bred for appearance. Lifespan 10-15 years.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Birds Section -->
+    <section class="category-section" id="other">
+      <h2>Other Pet Birds</h2>
+      <p class="category-desc">Beyond parrots and finches, several other bird species make wonderful pets, each with their own unique characteristics and care requirements.</p>
+
+      <div class="breed-grid">
+        <a href="birds/dove.html" class="breed-card" data-type="other">
+          <h3>Ringneck Dove</h3>
+          <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Gentle</span></div>
+          <p>Gentle, quiet birds with soothing cooing sounds. Easy to tame. Lifespan 12-15 years.</p>
+        </a>
+        <a href="birds/diamond-dove.html" class="breed-card" data-type="other">
+          <h3>Diamond Dove</h3>
+          <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Small</span></div>
+          <p>Tiny Australian doves with red eye rings. Peaceful, soft cooing. Lifespan 10-12 years.</p>
+        </a>
+        <a href="birds/pigeon.html" class="breed-card" data-type="other">
+          <h3>Fancy Pigeon</h3>
+          <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Variable</span></div>
+          <p>Many fancy breeds with unique features. Intelligent and can be very tame. Lifespan 15-20 years.</p>
+        </a>
+        <a href="birds/button-quail.html" class="breed-card" data-type="other">
+          <h3>Button Quail</h3>
+          <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Ground Dweller</span></div>
+          <p>Tiny ground birds often kept in aviaries. Clean up fallen seeds. Lifespan 3-5 years.</p>
+        </a>
+        <a href="birds/coturnix-quail.html" class="breed-card" data-type="other">
+          <h3>Coturnix Quail</h3>
+          <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Dual Purpose</span></div>
+          <p>Hardy quail kept as pets or for eggs. Easy to care for. Lifespan 2-5 years.</p>
+        </a>
+        <a href="birds/chicken.html" class="breed-card" data-type="other">
+          <h3>Backyard Chickens</h3>
+          <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Productive</span></div>
+          <p>Many breeds for eggs, meat, or pets. Social and entertaining. Lifespan 5-10 years.</p>
+        </a>
+        <a href="birds/toucan.html" class="breed-card" data-type="other">
+          <h3>Toucan</h3>
+          <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Exotic</span></div>
+          <p>Iconic large-billed birds. Require specialized diet and large enclosures. Lifespan 20-25 years.</p>
+        </a>
+        <a href="birds/mynah.html" class="breed-card" data-type="other">
+          <h3>Mynah Bird</h3>
+          <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Talkative</span></div>
+          <p>Excellent mimics rivaling parrots. Active and entertaining. Lifespan 12-25 years.</p>
+        </a>
+      </div>
+    </section>
+
+    <div class="affiliate-callout">
+      <h4>Everything for Your Pet Bird</h4>
+      <p>
+        <a href="https://www.chewy.com/b/bird-905" target="_blank" rel="sponsored noopener">Chewy Bird Supplies</a> - Cages, food, toys, and more.<br><br>
+        Quality seed mixes and pellets from <a href="https://www.harrisonsbirdfoods.com" target="_blank" rel="sponsored noopener">Harrison's Bird Foods</a> and <a href="https://www.zupreem.com" target="_blank" rel="sponsored noopener">ZuPreem</a>.
+      </p>
+    </div>
+
+    <section class="info-card">
+      <h3>Need Help With Your Pet Bird?</h3>
+      <p>Our AI assistant can answer questions about bird nutrition, behavior, cage setup, training, health concerns, and species-specific care for any pet bird.</p>
+      <div class="hero-actions">
+        <a href="../chat.html" class="primary-btn">Ask the AI About Bird Care</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI Pet Medical &amp; Vet Help Finder &mdash; educational guidance, real-world vet options, and curated resources.</p>
+    <p style="font-size: 0.85rem; margin-top: 8px;">Some suggestions may include sponsored partners.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      if (navToggle) {
+        navToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          navToggle.classList.toggle('active');
+        });
+      }
+
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const breedCards = document.querySelectorAll('.breed-card');
+      const categorySections = document.querySelectorAll('.category-section');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const filter = this.dataset.filter;
+
+          if (filter === 'all') {
+            breedCards.forEach(card => card.style.display = 'block');
+            categorySections.forEach(section => section.style.display = 'block');
+          } else {
+            breedCards.forEach(card => {
+              if (card.dataset.type === filter) {
+                card.style.display = 'block';
+              } else {
+                card.style.display = 'none';
+              }
+            });
+            categorySections.forEach(section => {
+              const hasVisibleCards = section.querySelectorAll(`.breed-card[data-type="${filter}"]`).length > 0;
+              section.style.display = hasVisibleCards ? 'block' : 'none';
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
