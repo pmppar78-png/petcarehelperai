@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-6484141649562994">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6484141649562994" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK0N7BD82Q"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FK0N7BD82Q');</script>
+  <meta name="description" content="Complete small animal and pocket pet species directory. Rabbits, guinea pigs, hamsters, ferrets, and more with care guides, diet, housing, and health information.">
+  <link rel="canonical" href="https://petcarehelperai.netlify.app/breeds/small-animal-breeds.html">
+  <title>Small Animal &amp; Pocket Pet Species Guide | Pet Care Helper AI</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Small Animal and Pocket Pet Directory",
+    "description": "Complete directory of small animal and pocket pet species with care guides, diet requirements, and housing information.",
+    "publisher": {"@type": "Organization", "name": "Pet Care Helper AI"},
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Holland Lop Rabbit", "url": "https://petcarehelperai.netlify.app/breeds/small-animals/holland-lop.html"},
+        {"@type": "ListItem", "position": 2, "name": "Syrian Hamster", "url": "https://petcarehelperai.netlify.app/breeds/small-animals/syrian-hamster.html"},
+        {"@type": "ListItem", "position": 3, "name": "Guinea Pig", "url": "https://petcarehelperai.netlify.app/breeds/small-animals/guinea-pig.html"},
+        {"@type": "ListItem", "position": 4, "name": "Ferret", "url": "https://petcarehelperai.netlify.app/breeds/small-animals/ferret.html"},
+        {"@type": "ListItem", "position": 5, "name": "Chinchilla", "url": "https://petcarehelperai.netlify.app/breeds/small-animals/chinchilla.html"}
+      ]
+    }
+  }
+  </script>
+  <style>
+    .breed-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .breed-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,253,250,0.9));
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid rgba(94,234,212,0.3);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .breed-card:hover {
+      border-color: #14B8A6;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(20,184,166,0.15);
+    }
+    .breed-card h3 {
+      color: #0F172A;
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+    .breed-card .breed-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .breed-tag {
+      background: #E0F2FE;
+      color: #0D9488;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+    }
+    .breed-tag.rabbit {
+      background: #FEE2E2;
+      color: #DC2626;
+    }
+    .breed-tag.guinea-pig {
+      background: #FEF3C7;
+      color: #D97706;
+    }
+    .breed-tag.hamster {
+      background: #DBEAFE;
+      color: #1D4ED8;
+    }
+    .breed-tag.other {
+      background: #F3E8FF;
+      color: #7C3AED;
+    }
+    .breed-card p {
+      color: #64748b;
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .filter-section {
+      background: linear-gradient(135deg, rgba(240,253,250,0.9), rgba(224,242,254,0.9));
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .filter-label {
+      font-weight: 600;
+      color: #0F172A;
+    }
+    .filter-btn {
+      padding: 8px 16px;
+      border: 1px solid #A7F3D0;
+      border-radius: 999px;
+      background: white;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #334155;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: #14B8A6;
+      color: white;
+      border-color: #14B8A6;
+    }
+    .category-section {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 2px solid rgba(94,234,212,0.3);
+    }
+    .category-section h2 {
+      color: #0D9488;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    .category-section .category-desc {
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+    .subcategory {
+      margin-top: 24px;
+    }
+    .subcategory h3 {
+      color: #0F172A;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(94,234,212,0.3);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-title">
+      <div class="logo-pill"></div>
+      <div>
+        <h1>Pet Care Helper AI</h1>
+        <p class="subtitle">Dogs &bull; Cats &bull; Birds &bull; Reptiles &bull; Fish</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../chat.html" class="nav-link">AI Pet Help</a></li>
+        <li><a href="../dogs.html" class="nav-link">Dogs</a></li>
+        <li><a href="../cats.html" class="nav-link">Cats</a></li>
+        <li><a href="../birds.html" class="nav-link">Birds</a></li>
+        <li><a href="../reptiles.html" class="nav-link">Reptiles</a></li>
+        <li><a href="../fish.html" class="nav-link">Fish</a></li>
+        <li><a href="../guides.html" class="nav-link active">Guides</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a> <span>&rsaquo;</span>
+      <a href="../guides.html">Guides</a> <span>&rsaquo;</span>
+      Small Animals &amp; Pocket Pets
+    </div>
+
+    <section class="hero" style="padding: 30px 20px;">
+      <h1>Small Animal &amp; Pocket Pet Guide</h1>
+      <p>Explore our comprehensive directory of small animals and pocket pets. From rabbits and guinea pigs to hamsters and ferrets, each species page includes housing requirements, diet information, socialization needs, and care tips to help you provide the best life for your small companion.</p>
+    </section>
+
+    <div class="filter-section">
+      <div class="filter-row">
+        <span class="filter-label">Filter by type:</span>
+        <button class="filter-btn active" data-filter="all">All Pets</button>
+        <button class="filter-btn" data-filter="rabbit">Rabbits</button>
+        <button class="filter-btn" data-filter="guinea-pig">Guinea Pigs</button>
+        <button class="filter-btn" data-filter="hamster">Hamsters</button>
+        <button class="filter-btn" data-filter="other">Other Pocket Pets</button>
+      </div>
+    </div>
+
+    <!-- Rabbits Section -->
+    <section class="category-section" id="rabbits">
+      <h2>Rabbits</h2>
+      <p class="category-desc">Rabbits are intelligent, social animals that can be litter-trained and form strong bonds with their owners. They need spacious enclosures, unlimited hay, and daily exercise time outside their cage.</p>
+
+      <!-- Small Rabbit Breeds -->
+      <div class="subcategory">
+        <h3>Small Rabbit Breeds (Under 5 lbs)</h3>
+        <div class="breed-grid">
+          <a href="small-animals/holland-lop.html" class="breed-card" data-type="rabbit">
+            <h3>Holland Lop</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Popular</span></div>
+            <p>Most popular rabbit breed. Sweet, friendly, and compact. Distinctive floppy ears. Lifespan 7-12 years.</p>
+          </a>
+          <a href="small-animals/netherland-dwarf.html" class="breed-card" data-type="rabbit">
+            <h3>Netherland Dwarf</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Tiny</span></div>
+            <p>One of the smallest breeds (2-2.5 lbs). Spunky personality, can be skittish. Lifespan 10-12 years.</p>
+          </a>
+          <a href="small-animals/mini-rex.html" class="breed-card" data-type="rabbit">
+            <h3>Mini Rex</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Velvety</span></div>
+            <p>Plush, velvety fur that's irresistible to touch. Calm and friendly. Lifespan 7-10 years.</p>
+          </a>
+          <a href="small-animals/mini-lop.html" class="breed-card" data-type="rabbit">
+            <h3>Mini Lop</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Playful</span></div>
+            <p>Larger than Holland Lops (4.5-6 lbs). Playful and affectionate. Lifespan 7-14 years.</p>
+          </a>
+          <a href="small-animals/lionhead.html" class="breed-card" data-type="rabbit">
+            <h3>Lionhead</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Unique</span></div>
+            <p>Distinctive mane of fur around the head. Friendly and good with children. Lifespan 7-10 years.</p>
+          </a>
+          <a href="small-animals/polish-rabbit.html" class="breed-card" data-type="rabbit">
+            <h3>Polish</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Compact</span></div>
+            <p>Small, compact body with short ears. Calm temperament. Lifespan 5-6 years.</p>
+          </a>
+          <a href="small-animals/dwarf-hotot.html" class="breed-card" data-type="rabbit">
+            <h3>Dwarf Hotot</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Striking</span></div>
+            <p>White with distinctive black eye bands. Small and active. Lifespan 7-10 years.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Medium Rabbit Breeds -->
+      <div class="subcategory">
+        <h3>Medium Rabbit Breeds (5-8 lbs)</h3>
+        <div class="breed-grid">
+          <a href="small-animals/dutch-rabbit.html" class="breed-card" data-type="rabbit">
+            <h3>Dutch</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Classic</span></div>
+            <p>Classic two-tone pattern. Gentle, easy-going, and great for families. Lifespan 5-8 years.</p>
+          </a>
+          <a href="small-animals/english-lop.html" class="breed-card" data-type="rabbit">
+            <h3>English Lop</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Large Ears</span></div>
+            <p>Longest ears of any rabbit breed. Gentle giants needing extra ear care. Lifespan 5-7 years.</p>
+          </a>
+          <a href="small-animals/rex-rabbit.html" class="breed-card" data-type="rabbit">
+            <h3>Rex</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Velvet Fur</span></div>
+            <p>Velvety plush coat, intelligent and curious. Many color varieties. Lifespan 5-6 years.</p>
+          </a>
+          <a href="small-animals/harlequin-rabbit.html" class="breed-card" data-type="rabbit">
+            <h3>Harlequin</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Colorful</span></div>
+            <p>Distinctive alternating color pattern. Playful and entertaining. Lifespan 5-8 years.</p>
+          </a>
+          <a href="small-animals/american-rabbit.html" class="breed-card" data-type="rabbit">
+            <h3>American</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Rare</span></div>
+            <p>Rare heritage breed in blue or white. Docile and sweet-natured. Lifespan 8-12 years.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Large Rabbit Breeds -->
+      <div class="subcategory">
+        <h3>Large Rabbit Breeds (8+ lbs)</h3>
+        <div class="breed-grid">
+          <a href="small-animals/flemish-giant.html" class="breed-card" data-type="rabbit">
+            <h3>Flemish Giant</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Giant</span></div>
+            <p>Largest rabbit breed (14-22+ lbs). Gentle giants, need lots of space. Lifespan 8-10 years.</p>
+          </a>
+          <a href="small-animals/french-lop.html" class="breed-card" data-type="rabbit">
+            <h3>French Lop</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Large</span></div>
+            <p>Large lop-eared breed (10-15 lbs). Friendly and calm. Lifespan 5-7 years.</p>
+          </a>
+          <a href="small-animals/english-angora.html" class="breed-card" data-type="rabbit">
+            <h3>English Angora</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Wool</span></div>
+            <p>Long, silky wool requiring daily grooming. Gentle temperament. Lifespan 7-12 years.</p>
+          </a>
+          <a href="small-animals/new-zealand-white.html" class="breed-card" data-type="rabbit">
+            <h3>New Zealand White</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Friendly</span></div>
+            <p>Popular white breed, calm and friendly. Commonly seen as pet rabbits. Lifespan 5-8 years.</p>
+          </a>
+          <a href="small-animals/californian-rabbit.html" class="breed-card" data-type="rabbit">
+            <h3>Californian</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Distinctive</span></div>
+            <p>White with dark points like a Siamese cat. Calm and easy to handle. Lifespan 5-10 years.</p>
+          </a>
+          <a href="small-animals/continental-giant.html" class="breed-card" data-type="rabbit">
+            <h3>Continental Giant</h3>
+            <div class="breed-meta"><span class="breed-tag rabbit">Rabbit</span><span class="breed-tag">Massive</span></div>
+            <p>European giant breed, can exceed 20 lbs. Need very large living spaces. Lifespan 4-7 years.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guinea Pigs Section -->
+    <section class="category-section" id="guinea-pigs">
+      <h2>Guinea Pigs</h2>
+      <p class="category-desc">Guinea pigs are social, vocal animals that thrive in pairs or groups. They require vitamin C supplementation, unlimited hay, and spacious enclosures. Known for their "wheeks" and popcorning.</p>
+
+      <div class="breed-grid">
+        <a href="small-animals/american-guinea-pig.html" class="breed-card" data-type="guinea-pig">
+          <h3>American (Short-Haired)</h3>
+          <div class="breed-meta"><span class="breed-tag guinea-pig">Guinea Pig</span><span class="breed-tag">Beginner</span></div>
+          <p>Most common breed with smooth, short coat. Easy to care for, great for beginners. Lifespan 5-7 years.</p>
+        </a>
+        <a href="small-animals/abyssinian-guinea-pig.html" class="breed-card" data-type="guinea-pig">
+          <h3>Abyssinian</h3>
+          <div class="breed-meta"><span class="breed-tag guinea-pig">Guinea Pig</span><span class="breed-tag">Rosettes</span></div>
+          <p>Distinctive rosettes (swirls) in coat. Playful, curious, and energetic. Lifespan 5-7 years.</p>
+        </a>
+        <a href="small-animals/peruvian-guinea-pig.html" class="breed-card" data-type="guinea-pig">
+          <h3>Peruvian</h3>
+          <div class="breed-meta"><span class="breed-tag guinea-pig">Guinea Pig</span><span class="breed-tag">Long Hair</span></div>
+          <p>Longest hair of any guinea pig. Need daily grooming and haircuts. Lifespan 5-7 years.</p>
+        </a>
+        <a href="small-animals/silkie-guinea-pig.html" class="breed-card" data-type="guinea-pig">
+          <h3>Silkie (Sheltie)</h3>
+          <div class="breed-meta"><span class="breed-tag guinea-pig">Guinea Pig</span><span class="breed-tag">Flowing</span></div>
+          <p>Long, flowing hair that sweeps back. Gentle temperament, needs regular grooming. Lifespan 5-7 years.</p>
+        </a>
+        <a href="small-animals/texel-guinea-pig.html" class="breed-card" data-type="guinea-pig">
+          <h3>Texel</h3>
+          <div class="breed-meta"><span class="breed-tag guinea-pig">Guinea Pig</span><span class="breed-tag">Curly</span></div>
+          <p>Long, curly coat throughout body. High maintenance but stunning. Lifespan 5-7 years.</p>
+        </a>
+        <a href="small-animals/teddy-guinea-pig.html" class="breed-card" data-type="guinea-pig">
+          <h3>Teddy</h3>
+          <div class="breed-meta"><span class="breed-tag guinea-pig">Guinea Pig</span><span class="breed-tag">Plush</span></div>
+          <p>Dense, plush coat that stands up. Low maintenance, resembles a stuffed animal. Lifespan 5-7 years.</p>
+        </a>
+        <a href="small-animals/skinny-pig.html" class="breed-card" data-type="guinea-pig">
+          <h3>Skinny Pig</h3>
+          <div class="breed-meta"><span class="breed-tag guinea-pig">Guinea Pig</span><span class="breed-tag">Hairless</span></div>
+          <p>Nearly hairless breed. Need warmer environment and skin care. Lifespan 5-8 years.</p>
+        </a>
+        <a href="small-animals/baldwin-guinea-pig.html" class="breed-card" data-type="guinea-pig">
+          <h3>Baldwin</h3>
+          <div class="breed-meta"><span class="breed-tag guinea-pig">Guinea Pig</span><span class="breed-tag">Hairless</span></div>
+          <p>Born with hair that falls out. Need special skin and temperature care. Lifespan 5-7 years.</p>
+        </a>
+        <a href="small-animals/coronet-guinea-pig.html" class="breed-card" data-type="guinea-pig">
+          <h3>Coronet</h3>
+          <div class="breed-meta"><span class="breed-tag guinea-pig">Guinea Pig</span><span class="breed-tag">Crested</span></div>
+          <p>Long-haired with single crest on head. Beautiful but high grooming needs. Lifespan 5-7 years.</p>
+        </a>
+        <a href="small-animals/white-crested-guinea-pig.html" class="breed-card" data-type="guinea-pig">
+          <h3>White Crested</h3>
+          <div class="breed-meta"><span class="breed-tag guinea-pig">Guinea Pig</span><span class="breed-tag">Distinctive</span></div>
+          <p>Short hair with white rosette on forehead. Easy to care for. Lifespan 5-7 years.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Hamsters Section -->
+    <section class="category-section" id="hamsters">
+      <h2>Hamsters</h2>
+      <p class="category-desc">Hamsters are solitary, nocturnal animals perfect for quiet households. Most species should be housed alone. They need large enclosures with deep bedding for burrowing.</p>
+
+      <div class="breed-grid">
+        <a href="small-animals/syrian-hamster.html" class="breed-card" data-type="hamster">
+          <h3>Syrian (Golden) Hamster</h3>
+          <div class="breed-meta"><span class="breed-tag hamster">Hamster</span><span class="breed-tag">Solitary</span></div>
+          <p>Largest pet hamster, must be housed alone. Friendly, handleable. Many coat varieties. Lifespan 2-3 years.</p>
+        </a>
+        <a href="small-animals/dwarf-campbell.html" class="breed-card" data-type="hamster">
+          <h3>Campbell's Dwarf</h3>
+          <div class="breed-meta"><span class="breed-tag hamster">Hamster</span><span class="breed-tag">Social</span></div>
+          <p>Small dwarf hamster, can sometimes live in pairs. Fast and nippy. Lifespan 1.5-2 years.</p>
+        </a>
+        <a href="small-animals/winter-white.html" class="breed-card" data-type="hamster">
+          <h3>Winter White Dwarf</h3>
+          <div class="breed-meta"><span class="breed-tag hamster">Hamster</span><span class="breed-tag">Color-Changing</span></div>
+          <p>Can turn white in winter. Gentle temperament for a dwarf. Lifespan 1.5-2 years.</p>
+        </a>
+        <a href="small-animals/roborovski-hamster.html" class="breed-card" data-type="hamster">
+          <h3>Roborovski Dwarf</h3>
+          <div class="breed-meta"><span class="breed-tag hamster">Hamster</span><span class="breed-tag">Tiny</span></div>
+          <p>Smallest and fastest hamster. Better for watching than handling. Lifespan 3-3.5 years.</p>
+        </a>
+        <a href="small-animals/chinese-hamster.html" class="breed-card" data-type="hamster">
+          <h3>Chinese Hamster</h3>
+          <div class="breed-meta"><span class="breed-tag hamster">Hamster</span><span class="breed-tag">Mouse-Like</span></div>
+          <p>Long tail, mouse-like appearance. Can be skittish but handleable. Lifespan 2-3 years.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Other Pocket Pets Section -->
+    <section class="category-section" id="other-pocket-pets">
+      <h2>Other Pocket Pets</h2>
+      <p class="category-desc">Beyond the most common small pets, many other species make wonderful companions with their own unique care requirements and personalities.</p>
+
+      <!-- Ferrets -->
+      <div class="subcategory">
+        <h3>Ferrets</h3>
+        <div class="breed-grid">
+          <a href="small-animals/ferret.html" class="breed-card" data-type="other">
+            <h3>Ferret</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Playful</span></div>
+            <p>Playful, mischievous, and social. Need lots of playtime and ferret-proofed space. Lifespan 5-10 years.</p>
+          </a>
+          <a href="small-animals/ferret-sable.html" class="breed-card" data-type="other">
+            <h3>Sable Ferret</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Common</span></div>
+            <p>Most common color variety with dark guard hairs. Classic ferret appearance. Lifespan 5-10 years.</p>
+          </a>
+          <a href="small-animals/ferret-albino.html" class="breed-card" data-type="other">
+            <h3>Albino Ferret</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">White</span></div>
+            <p>White coat with red eyes. Same temperament as other colors. Lifespan 5-10 years.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Chinchillas -->
+      <div class="subcategory">
+        <h3>Chinchillas</h3>
+        <div class="breed-grid">
+          <a href="small-animals/chinchilla.html" class="breed-card" data-type="other">
+            <h3>Chinchilla</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Soft</span></div>
+            <p>Incredibly soft fur, need dust baths. Crepuscular, active at dawn and dusk. Lifespan 10-20 years.</p>
+          </a>
+          <a href="small-animals/chinchilla-standard-gray.html" class="breed-card" data-type="other">
+            <h3>Standard Gray Chinchilla</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Classic</span></div>
+            <p>Original wild color, most common. Hardy and beautiful. Lifespan 10-20 years.</p>
+          </a>
+          <a href="small-animals/chinchilla-mutations.html" class="breed-card" data-type="other">
+            <h3>Mutation Chinchillas</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Varied</span></div>
+            <p>White, black velvet, beige, and more. Same care as standard. Lifespan 10-20 years.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Rats & Mice -->
+      <div class="subcategory">
+        <h3>Rats &amp; Mice</h3>
+        <div class="breed-grid">
+          <a href="small-animals/fancy-rat.html" class="breed-card" data-type="other">
+            <h3>Fancy Rat</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Intelligent</span></div>
+            <p>Highly intelligent and social. Need same-sex pairs. Many varieties available. Lifespan 2-3 years.</p>
+          </a>
+          <a href="small-animals/dumbo-rat.html" class="breed-card" data-type="other">
+            <h3>Dumbo Rat</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Cute</span></div>
+            <p>Low-set, round ears. Same care as standard fancy rats. Lifespan 2-3 years.</p>
+          </a>
+          <a href="small-animals/hairless-rat.html" class="breed-card" data-type="other">
+            <h3>Hairless Rat</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Unique</span></div>
+            <p>Naked variety needing warmer environments. Extra skin care needed. Lifespan 2-3 years.</p>
+          </a>
+          <a href="small-animals/fancy-mouse.html" class="breed-card" data-type="other">
+            <h3>Fancy Mouse</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Small</span></div>
+            <p>Smaller than rats, females can live in groups. Males must be solitary. Lifespan 1-3 years.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Gerbils & Degus -->
+      <div class="subcategory">
+        <h3>Gerbils &amp; Degus</h3>
+        <div class="breed-grid">
+          <a href="small-animals/mongolian-gerbil.html" class="breed-card" data-type="other">
+            <h3>Mongolian Gerbil</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Active</span></div>
+            <p>Social, active, and love to dig. Keep in same-sex pairs. Many colors. Lifespan 3-5 years.</p>
+          </a>
+          <a href="small-animals/degu.html" class="breed-card" data-type="other">
+            <h3>Degu</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Social</span></div>
+            <p>Highly social Chilean rodents. Need groups and large cages. Prone to diabetes. Lifespan 6-9 years.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Exotic Pocket Pets -->
+      <div class="subcategory">
+        <h3>Exotic Pocket Pets</h3>
+        <div class="breed-grid">
+          <a href="small-animals/sugar-glider.html" class="breed-card" data-type="other">
+            <h3>Sugar Glider</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Exotic</span></div>
+            <p>Gliding marsupials needing specialized diet and lots of attention. Nocturnal. Lifespan 10-15 years.</p>
+          </a>
+          <a href="small-animals/hedgehog.html" class="breed-card" data-type="other">
+            <h3>African Pygmy Hedgehog</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Unique</span></div>
+            <p>Solitary, nocturnal insectivores. Need warm environments. Illegal in some areas. Lifespan 4-7 years.</p>
+          </a>
+          <a href="small-animals/prairie-dog.html" class="breed-card" data-type="other">
+            <h3>Prairie Dog</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Social</span></div>
+            <p>Highly social rodents needing large enclosures. Very interactive pets. Lifespan 8-10 years.</p>
+          </a>
+          <a href="small-animals/flying-squirrel.html" class="breed-card" data-type="other">
+            <h3>Flying Squirrel</h3>
+            <div class="breed-meta"><span class="breed-tag other">Other</span><span class="breed-tag">Nocturnal</span></div>
+            <p>Small, nocturnal, and can form bonds. Need tall cages. Lifespan 10-15 years.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="affiliate-callout">
+      <h4>Everything for Your Small Pet</h4>
+      <p>
+        <a href="https://www.chewy.com/b/small-pet-902" target="_blank" rel="sponsored noopener">Chewy Small Pet Supplies</a> - Cages, food, bedding, and more.<br><br>
+        Quality hay from <a href="https://www.smallpetselect.com" target="_blank" rel="sponsored noopener">Small Pet Select</a> and <a href="https://www.oxbowanimalhealth.com" target="_blank" rel="sponsored noopener">Oxbow</a>.
+      </p>
+    </div>
+
+    <section class="info-card">
+      <h3>Need Help With Your Small Pet?</h3>
+      <p>Our AI assistant can answer questions about housing, nutrition, health concerns, behavior, and species-specific care for any small animal or pocket pet.</p>
+      <div class="hero-actions">
+        <a href="../chat.html" class="primary-btn">Ask the AI About Small Pet Care</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI Pet Medical &amp; Vet Help Finder &mdash; educational guidance, real-world vet options, and curated resources.</p>
+    <p style="font-size: 0.85rem; margin-top: 8px;">Some suggestions may include sponsored partners.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      if (navToggle) {
+        navToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          navToggle.classList.toggle('active');
+        });
+      }
+
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const breedCards = document.querySelectorAll('.breed-card');
+      const categorySections = document.querySelectorAll('.category-section');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const filter = this.dataset.filter;
+
+          if (filter === 'all') {
+            breedCards.forEach(card => card.style.display = 'block');
+            categorySections.forEach(section => section.style.display = 'block');
+          } else {
+            breedCards.forEach(card => {
+              if (card.dataset.type === filter) {
+                card.style.display = 'block';
+              } else {
+                card.style.display = 'none';
+              }
+            });
+            categorySections.forEach(section => {
+              const hasVisibleCards = section.querySelectorAll(`.breed-card[data-type="${filter}"]`).length > 0;
+              section.style.display = hasVisibleCards ? 'block' : 'none';
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

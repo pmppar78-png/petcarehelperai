@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-6484141649562994">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6484141649562994" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK0N7BD82Q"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FK0N7BD82Q');</script>
+  <meta name="description" content="Complete aquarium fish species directory. Freshwater and saltwater fish care guides with tank requirements, compatibility, diet, and health information.">
+  <link rel="canonical" href="https://petcarehelperai.netlify.app/breeds/fish-breeds.html">
+  <title>Aquarium Fish Species Guide: Freshwater &amp; Saltwater | Pet Care Helper AI</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Aquarium Fish Species Directory",
+    "description": "Complete directory of aquarium fish species with care guides, tank requirements, and compatibility information.",
+    "publisher": {"@type": "Organization", "name": "Pet Care Helper AI"},
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Betta Fish", "url": "https://petcarehelperai.netlify.app/breeds/fish/betta.html"},
+        {"@type": "ListItem", "position": 2, "name": "Goldfish", "url": "https://petcarehelperai.netlify.app/breeds/fish/goldfish.html"},
+        {"@type": "ListItem", "position": 3, "name": "Neon Tetra", "url": "https://petcarehelperai.netlify.app/breeds/fish/neon-tetra.html"},
+        {"@type": "ListItem", "position": 4, "name": "Clownfish", "url": "https://petcarehelperai.netlify.app/breeds/fish/clownfish.html"},
+        {"@type": "ListItem", "position": 5, "name": "Guppy", "url": "https://petcarehelperai.netlify.app/breeds/fish/guppy.html"}
+      ]
+    }
+  }
+  </script>
+  <style>
+    .breed-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .breed-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,253,250,0.9));
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid rgba(94,234,212,0.3);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .breed-card:hover {
+      border-color: #14B8A6;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(20,184,166,0.15);
+    }
+    .breed-card h3 {
+      color: #0F172A;
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+    .breed-card .breed-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .breed-tag {
+      background: #E0F2FE;
+      color: #0D9488;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+    }
+    .breed-tag.freshwater {
+      background: #DBEAFE;
+      color: #1D4ED8;
+    }
+    .breed-tag.saltwater {
+      background: #FEE2E2;
+      color: #DC2626;
+    }
+    .breed-card p {
+      color: #64748b;
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .filter-section {
+      background: linear-gradient(135deg, rgba(240,253,250,0.9), rgba(224,242,254,0.9));
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .filter-label {
+      font-weight: 600;
+      color: #0F172A;
+    }
+    .filter-btn {
+      padding: 8px 16px;
+      border: 1px solid #A7F3D0;
+      border-radius: 999px;
+      background: white;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #334155;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: #14B8A6;
+      color: white;
+      border-color: #14B8A6;
+    }
+    .category-section {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 2px solid rgba(94,234,212,0.3);
+    }
+    .category-section h2 {
+      color: #0D9488;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    .category-section .category-desc {
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+    .subcategory {
+      margin-top: 24px;
+    }
+    .subcategory h3 {
+      color: #0F172A;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(94,234,212,0.3);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-title">
+      <div class="logo-pill"></div>
+      <div>
+        <h1>Pet Care Helper AI</h1>
+        <p class="subtitle">Dogs &bull; Cats &bull; Birds &bull; Reptiles &bull; Fish</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../chat.html" class="nav-link">AI Pet Help</a></li>
+        <li><a href="../dogs.html" class="nav-link">Dogs</a></li>
+        <li><a href="../cats.html" class="nav-link">Cats</a></li>
+        <li><a href="../birds.html" class="nav-link">Birds</a></li>
+        <li><a href="../reptiles.html" class="nav-link">Reptiles</a></li>
+        <li><a href="../fish.html" class="nav-link active">Fish</a></li>
+        <li><a href="../guides.html" class="nav-link">Guides</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a> <span>&rsaquo;</span>
+      <a href="../fish.html">Fish</a> <span>&rsaquo;</span>
+      All Fish Species
+    </div>
+
+    <section class="hero" style="padding: 30px 20px;">
+      <h1>Aquarium Fish Species Guide</h1>
+      <p>Explore our comprehensive directory of freshwater and saltwater aquarium fish. Each species page includes tank requirements, water parameters, diet, compatibility, and care tips to help you create a thriving aquatic environment.</p>
+    </section>
+
+    <div class="filter-section">
+      <div class="filter-row">
+        <span class="filter-label">Filter by type:</span>
+        <button class="filter-btn active" data-filter="all">All Fish</button>
+        <button class="filter-btn" data-filter="freshwater">Freshwater</button>
+        <button class="filter-btn" data-filter="saltwater">Saltwater</button>
+      </div>
+    </div>
+
+    <!-- Freshwater Section -->
+    <section class="category-section" id="freshwater">
+      <h2>Freshwater Fish</h2>
+      <p class="category-desc">Freshwater aquarium fish are popular for beginners and experienced aquarists alike. They require less equipment than saltwater setups and offer incredible variety.</p>
+
+      <!-- Community Fish -->
+      <div class="subcategory">
+        <h3>Community Fish</h3>
+        <div class="breed-grid">
+          <a href="fish/guppy.html" class="breed-card" data-type="freshwater">
+            <h3>Guppy</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Beginner</span></div>
+            <p>Colorful, hardy, and prolific breeders. Perfect for beginners with minimal tank requirements.</p>
+          </a>
+          <a href="fish/neon-tetra.html" class="breed-card" data-type="freshwater">
+            <h3>Neon Tetra</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Schooling</span></div>
+            <p>Iconic iridescent blue and red stripes. Best kept in schools of 6+ for stunning displays.</p>
+          </a>
+          <a href="fish/cardinal-tetra.html" class="breed-card" data-type="freshwater">
+            <h3>Cardinal Tetra</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Schooling</span></div>
+            <p>Similar to neons but with fuller red coloring. Slightly more demanding but stunning in groups.</p>
+          </a>
+          <a href="fish/molly.html" class="breed-card" data-type="freshwater">
+            <h3>Molly</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Peaceful</span></div>
+            <p>Adaptable livebearers available in many colors. Tolerant of various water conditions.</p>
+          </a>
+          <a href="fish/platy.html" class="breed-card" data-type="freshwater">
+            <h3>Platy</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Beginner</span></div>
+            <p>Hardy, colorful livebearers. Easy to breed and great for community tanks.</p>
+          </a>
+          <a href="fish/swordtail.html" class="breed-card" data-type="freshwater">
+            <h3>Swordtail</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Active</span></div>
+            <p>Males have distinctive sword-like tail extension. Active swimmers needing longer tanks.</p>
+          </a>
+          <a href="fish/rasbora.html" class="breed-card" data-type="freshwater">
+            <h3>Harlequin Rasbora</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Peaceful</span></div>
+            <p>Copper-colored schooling fish with distinctive black triangle. Hardy and peaceful.</p>
+          </a>
+          <a href="fish/danio.html" class="breed-card" data-type="freshwater">
+            <h3>Zebra Danio</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Active</span></div>
+            <p>Fast-swimming striped fish. Extremely hardy and great for cycling new tanks.</p>
+          </a>
+          <a href="fish/white-cloud.html" class="breed-card" data-type="freshwater">
+            <h3>White Cloud Mountain Minnow</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Cold Water</span></div>
+            <p>Tolerates cool water temperatures. Perfect for unheated tanks and outdoor ponds.</p>
+          </a>
+          <a href="fish/corydoras.html" class="breed-card" data-type="freshwater">
+            <h3>Corydoras Catfish</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Bottom Dweller</span></div>
+            <p>Armored catfish that clean the substrate. Social fish best kept in groups of 6+.</p>
+          </a>
+          <a href="fish/otocinclus.html" class="breed-card" data-type="freshwater">
+            <h3>Otocinclus</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Algae Eater</span></div>
+            <p>Small algae-eating catfish. Excellent for planted tanks, keep in groups.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Betta & Gouramis -->
+      <div class="subcategory">
+        <h3>Bettas &amp; Gouramis</h3>
+        <div class="breed-grid">
+          <a href="fish/betta.html" class="breed-card" data-type="freshwater">
+            <h3>Betta Fish</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Solitary</span></div>
+            <p>Stunning fins and colors. Males must be kept alone; can live in smaller tanks with proper care.</p>
+          </a>
+          <a href="fish/dwarf-gourami.html" class="breed-card" data-type="freshwater">
+            <h3>Dwarf Gourami</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Peaceful</span></div>
+            <p>Colorful labyrinth fish with peaceful temperament. Keep one male per tank.</p>
+          </a>
+          <a href="fish/pearl-gourami.html" class="breed-card" data-type="freshwater">
+            <h3>Pearl Gourami</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Elegant</span></div>
+            <p>Beautiful pearl-like spots with lace-like fins. Peaceful community fish.</p>
+          </a>
+          <a href="fish/honey-gourami.html" class="breed-card" data-type="freshwater">
+            <h3>Honey Gourami</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Shy</span></div>
+            <p>Smaller and more peaceful than dwarf gouramis. Golden-honey coloration.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Goldfish & Koi -->
+      <div class="subcategory">
+        <h3>Goldfish &amp; Koi</h3>
+        <div class="breed-grid">
+          <a href="fish/goldfish.html" class="breed-card" data-type="freshwater">
+            <h3>Common Goldfish</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Cold Water</span></div>
+            <p>Classic pet fish requiring larger tanks than expected. Can live 10-15+ years with proper care.</p>
+          </a>
+          <a href="fish/fancy-goldfish.html" class="breed-card" data-type="freshwater">
+            <h3>Fancy Goldfish</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Variety</span></div>
+            <p>Includes Orandas, Ryukins, and Ranchus. Slower swimmers needing specialized care.</p>
+          </a>
+          <a href="fish/koi.html" class="breed-card" data-type="freshwater">
+            <h3>Koi</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Pond</span></div>
+            <p>Large ornamental carp for outdoor ponds. Can live 25-35 years and grow over 2 feet.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Cichlids -->
+      <div class="subcategory">
+        <h3>Cichlids</h3>
+        <div class="breed-grid">
+          <a href="fish/angelfish.html" class="breed-card" data-type="freshwater">
+            <h3>Angelfish</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Semi-Aggressive</span></div>
+            <p>Elegant triangular shape with long fins. Can be territorial, need tall tanks.</p>
+          </a>
+          <a href="fish/discus.html" class="breed-card" data-type="freshwater">
+            <h3>Discus</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Advanced</span></div>
+            <p>King of the aquarium with stunning patterns. Demanding water quality requirements.</p>
+          </a>
+          <a href="fish/ram-cichlid.html" class="breed-card" data-type="freshwater">
+            <h3>German Blue Ram</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Peaceful</span></div>
+            <p>Colorful dwarf cichlid suitable for community tanks. Prefers warmer water.</p>
+          </a>
+          <a href="fish/apistogramma.html" class="breed-card" data-type="freshwater">
+            <h3>Apistogramma</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Dwarf</span></div>
+            <p>Diverse genus of colorful dwarf cichlids. Many species available for planted tanks.</p>
+          </a>
+          <a href="fish/african-cichlid.html" class="breed-card" data-type="freshwater">
+            <h3>African Cichlids</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Aggressive</span></div>
+            <p>Vibrant colors rivaling saltwater fish. Require specific water conditions and tank setup.</p>
+          </a>
+          <a href="fish/oscar.html" class="breed-card" data-type="freshwater">
+            <h3>Oscar</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Large</span></div>
+            <p>Intelligent and personable. Grows large (12-14 inches) and needs 75+ gallon tanks.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Plecos & Catfish -->
+      <div class="subcategory">
+        <h3>Plecos &amp; Catfish</h3>
+        <div class="breed-grid">
+          <a href="fish/bristlenose-pleco.html" class="breed-card" data-type="freshwater">
+            <h3>Bristlenose Pleco</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Algae Eater</span></div>
+            <p>Stays smaller than common plecos (4-6 inches). Excellent algae control for most tanks.</p>
+          </a>
+          <a href="fish/common-pleco.html" class="breed-card" data-type="freshwater">
+            <h3>Common Pleco</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Large</span></div>
+            <p>Grows very large (12-24 inches). Often outgrows home aquariums - consider carefully.</p>
+          </a>
+          <a href="fish/clown-pleco.html" class="breed-card" data-type="freshwater">
+            <h3>Clown Pleco</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Small</span></div>
+            <p>Stays small (3-4 inches) with attractive striped pattern. Needs driftwood in tank.</p>
+          </a>
+          <a href="fish/pictus-catfish.html" class="breed-card" data-type="freshwater">
+            <h3>Pictus Catfish</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Active</span></div>
+            <p>Spotted catfish with long barbels. Active swimmers, may eat small tankmates.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Shrimp & Invertebrates -->
+      <div class="subcategory">
+        <h3>Shrimp &amp; Invertebrates</h3>
+        <div class="breed-grid">
+          <a href="fish/cherry-shrimp.html" class="breed-card" data-type="freshwater">
+            <h3>Cherry Shrimp</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Invertebrate</span></div>
+            <p>Hardy red dwarf shrimp. Excellent algae cleaners and easy to breed.</p>
+          </a>
+          <a href="fish/amano-shrimp.html" class="breed-card" data-type="freshwater">
+            <h3>Amano Shrimp</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Algae Eater</span></div>
+            <p>Best algae-eating shrimp available. Larger and more visible than cherry shrimp.</p>
+          </a>
+          <a href="fish/mystery-snail.html" class="breed-card" data-type="freshwater">
+            <h3>Mystery Snail</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Invertebrate</span></div>
+            <p>Colorful apple snails that won't overpopulate. Great algae and debris cleaners.</p>
+          </a>
+          <a href="fish/nerite-snail.html" class="breed-card" data-type="freshwater">
+            <h3>Nerite Snail</h3>
+            <div class="breed-meta"><span class="breed-tag freshwater">Freshwater</span><span class="breed-tag">Algae Eater</span></div>
+            <p>Best snail for algae control. Won't breed in freshwater, many shell patterns available.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Saltwater Section -->
+    <section class="category-section" id="saltwater">
+      <h2>Saltwater Fish</h2>
+      <p class="category-desc">Marine aquariums require more equipment and expertise but offer access to some of the world's most spectacular fish. Many species also require live rock and proper reef conditions.</p>
+
+      <!-- Clownfish & Damsels -->
+      <div class="subcategory">
+        <h3>Clownfish &amp; Damsels</h3>
+        <div class="breed-grid">
+          <a href="fish/clownfish.html" class="breed-card" data-type="saltwater">
+            <h3>Ocellaris Clownfish</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Beginner</span></div>
+            <p>The famous "Nemo" fish. Hardy, captive-bred specimens available. Host to anemones.</p>
+          </a>
+          <a href="fish/maroon-clownfish.html" class="breed-card" data-type="saltwater">
+            <h3>Maroon Clownfish</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Aggressive</span></div>
+            <p>Largest clownfish species with deep maroon color. Can be territorial and aggressive.</p>
+          </a>
+          <a href="fish/blue-damsel.html" class="breed-card" data-type="saltwater">
+            <h3>Blue Damselfish</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Hardy</span></div>
+            <p>Brilliant blue coloring and extremely hardy. Can be aggressive toward tankmates.</p>
+          </a>
+          <a href="fish/chromis.html" class="breed-card" data-type="saltwater">
+            <h3>Green Chromis</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Schooling</span></div>
+            <p>Peaceful schooling damsel with iridescent green color. Great for reef tanks.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tangs & Surgeonfish -->
+      <div class="subcategory">
+        <h3>Tangs &amp; Surgeonfish</h3>
+        <div class="breed-grid">
+          <a href="fish/blue-tang.html" class="breed-card" data-type="saltwater">
+            <h3>Blue Tang</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Large Tank</span></div>
+            <p>The famous "Dory" fish. Requires large tanks (100+ gallons) and pristine water quality.</p>
+          </a>
+          <a href="fish/yellow-tang.html" class="breed-card" data-type="saltwater">
+            <h3>Yellow Tang</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Popular</span></div>
+            <p>Bright yellow coloring, excellent algae grazer. Needs 75+ gallon tank minimum.</p>
+          </a>
+          <a href="fish/kole-tang.html" class="breed-card" data-type="saltwater">
+            <h3>Kole Tang</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Algae Eater</span></div>
+            <p>Brown with gold spots, excellent hair algae eater. More peaceful than other tangs.</p>
+          </a>
+          <a href="fish/powder-blue-tang.html" class="breed-card" data-type="saltwater">
+            <h3>Powder Blue Tang</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Advanced</span></div>
+            <p>Stunning but challenging. Prone to ich and requires experienced care.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Angelfish (Marine) -->
+      <div class="subcategory">
+        <h3>Marine Angelfish</h3>
+        <div class="breed-grid">
+          <a href="fish/flame-angelfish.html" class="breed-card" data-type="saltwater">
+            <h3>Flame Angelfish</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Dwarf</span></div>
+            <p>Vibrant red-orange dwarf angel. May nip at corals, semi-reef safe.</p>
+          </a>
+          <a href="fish/coral-beauty.html" class="breed-card" data-type="saltwater">
+            <h3>Coral Beauty Angelfish</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Hardy</span></div>
+            <p>Purple and orange coloring. One of the hardier dwarf angels for beginners.</p>
+          </a>
+          <a href="fish/emperor-angelfish.html" class="breed-card" data-type="saltwater">
+            <h3>Emperor Angelfish</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Large</span></div>
+            <p>Stunning blue and yellow stripes. Large species needing 200+ gallon tanks.</p>
+          </a>
+          <a href="fish/french-angelfish.html" class="breed-card" data-type="saltwater">
+            <h3>French Angelfish</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Large</span></div>
+            <p>Dramatic color change from juvenile to adult. Requires very large aquariums.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Wrasses -->
+      <div class="subcategory">
+        <h3>Wrasses</h3>
+        <div class="breed-grid">
+          <a href="fish/six-line-wrasse.html" class="breed-card" data-type="saltwater">
+            <h3>Six Line Wrasse</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Active</span></div>
+            <p>Colorful and active pest controller. Eats flatworms and small parasites.</p>
+          </a>
+          <a href="fish/fairy-wrasse.html" class="breed-card" data-type="saltwater">
+            <h3>Fairy Wrasse</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Peaceful</span></div>
+            <p>Brilliant colors and reef safe. Many species available, all peaceful.</p>
+          </a>
+          <a href="fish/cleaner-wrasse.html" class="breed-card" data-type="saltwater">
+            <h3>Cleaner Wrasse</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Specialized</span></div>
+            <p>Removes parasites from other fish. Difficult to keep, requires varied diet.</p>
+          </a>
+          <a href="fish/melanurus-wrasse.html" class="breed-card" data-type="saltwater">
+            <h3>Melanurus Wrasse</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Hardy</span></div>
+            <p>Excellent pest controller for pyramidellid snails. Hardy and colorful.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Gobies & Blennies -->
+      <div class="subcategory">
+        <h3>Gobies &amp; Blennies</h3>
+        <div class="breed-grid">
+          <a href="fish/watchman-goby.html" class="breed-card" data-type="saltwater">
+            <h3>Watchman Goby</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Sand Sifter</span></div>
+            <p>Forms symbiotic relationships with pistol shrimp. Great sand-sifting behavior.</p>
+          </a>
+          <a href="fish/firefish.html" class="breed-card" data-type="saltwater">
+            <h3>Firefish</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Peaceful</span></div>
+            <p>Elegant long dorsal fin with fire-like coloring. Timid, needs hiding places.</p>
+          </a>
+          <a href="fish/mandarin-goby.html" class="breed-card" data-type="saltwater">
+            <h3>Mandarin Dragonet</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Advanced</span></div>
+            <p>Psychedelic colors but difficult to feed. Requires established tanks with copepods.</p>
+          </a>
+          <a href="fish/blenny.html" class="breed-card" data-type="saltwater">
+            <h3>Tailspot Blenny</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Algae Eater</span></div>
+            <p>Great personality and algae grazer. Perches on rocks and corals.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Corals & Invertebrates -->
+      <div class="subcategory">
+        <h3>Corals &amp; Invertebrates</h3>
+        <div class="breed-grid">
+          <a href="fish/cleaner-shrimp.html" class="breed-card" data-type="saltwater">
+            <h3>Cleaner Shrimp</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Invertebrate</span></div>
+            <p>Removes parasites from fish. Active and visible, great reef tank addition.</p>
+          </a>
+          <a href="fish/peppermint-shrimp.html" class="breed-card" data-type="saltwater">
+            <h3>Peppermint Shrimp</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Pest Control</span></div>
+            <p>Eats aiptasia anemones. Useful pest controller for reef tanks.</p>
+          </a>
+          <a href="fish/hermit-crab.html" class="breed-card" data-type="saltwater">
+            <h3>Hermit Crabs</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Cleanup Crew</span></div>
+            <p>Essential cleanup crew members. Various species for different tank sizes.</p>
+          </a>
+          <a href="fish/turbo-snail.html" class="breed-card" data-type="saltwater">
+            <h3>Turbo Snails</h3>
+            <div class="breed-meta"><span class="breed-tag saltwater">Saltwater</span><span class="breed-tag">Algae Eater</span></div>
+            <p>Voracious algae eaters for saltwater tanks. Part of essential cleanup crew.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="affiliate-callout">
+      <h4>Set Up Your Perfect Aquarium</h4>
+      <p>
+        <a href="https://www.chewy.com/b/aquarium-fish-supplies-702" target="_blank" rel="sponsored noopener">Chewy Aquarium Supplies</a> - Everything for freshwater and saltwater tanks.<br><br>
+        <a href="https://www.bulkreefsupply.com" target="_blank" rel="sponsored noopener">Bulk Reef Supply</a> - Premium equipment for serious aquarists.
+      </p>
+    </div>
+
+    <section class="info-card">
+      <h3>Need Help With Your Aquarium?</h3>
+      <p>Our AI assistant can answer questions about fish compatibility, tank setup, water parameters, disease diagnosis, and feeding schedules for any species.</p>
+      <div class="hero-actions">
+        <a href="../chat.html" class="primary-btn">Ask the AI About Fish Care</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI Pet Medical &amp; Vet Help Finder &mdash; educational guidance, real-world vet options, and curated resources.</p>
+    <p style="font-size: 0.85rem; margin-top: 8px;">Some suggestions may include sponsored partners.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      if (navToggle) {
+        navToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          navToggle.classList.toggle('active');
+        });
+      }
+
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const breedCards = document.querySelectorAll('.breed-card');
+      const categorySections = document.querySelectorAll('.category-section');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const filter = this.dataset.filter;
+
+          if (filter === 'all') {
+            breedCards.forEach(card => card.style.display = 'block');
+            categorySections.forEach(section => section.style.display = 'block');
+          } else {
+            breedCards.forEach(card => {
+              if (card.dataset.type === filter) {
+                card.style.display = 'block';
+              } else {
+                card.style.display = 'none';
+              }
+            });
+            categorySections.forEach(section => {
+              if (section.id === filter) {
+                section.style.display = 'block';
+              } else {
+                section.style.display = 'none';
+              }
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
