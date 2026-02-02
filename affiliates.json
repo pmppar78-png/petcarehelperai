@@ -41,6 +41,42 @@
       "url": "https://www.petsmart.com",
       "category": "Food & Nutrition",
       "hook": "Complete pet supplies, food, grooming, and training services"
+    },
+    {
+      "name": "Smalls Cat Food",
+      "url": "https://www.smalls.com",
+      "category": "Food & Nutrition",
+      "hook": "Human-grade fresh cat food delivered to your door, personalized for your cat"
+    },
+    {
+      "name": "Open Farm",
+      "url": "https://openfarmpet.com",
+      "category": "Food & Nutrition",
+      "hook": "Ethically sourced, humanely raised pet food with transparent ingredient sourcing"
+    },
+    {
+      "name": "JustFoodForDogs",
+      "url": "https://www.justfoodfordogs.com",
+      "category": "Food & Nutrition",
+      "hook": "Whole-food, vet-developed meals made fresh in open kitchens"
+    },
+    {
+      "name": "Hill's Science Diet",
+      "url": "https://www.hillspet.com",
+      "category": "Food & Nutrition",
+      "hook": "Vet-recommended nutrition backed by science for dogs and cats"
+    },
+    {
+      "name": "Royal Canin",
+      "url": "https://www.royalcanin.com",
+      "category": "Food & Nutrition",
+      "hook": "Breed-specific and health-targeted nutrition for dogs and cats"
+    },
+    {
+      "name": "Purina Pro Plan",
+      "url": "https://www.purina.com/pro-plan",
+      "category": "Food & Nutrition",
+      "hook": "Advanced nutrition with specialized formulas backed by Purina research"
     }
   ],
   "insuranceAndWellness": [
@@ -97,6 +133,24 @@
       "url": "https://www.petinsurance.com",
       "category": "Insurance & Wellness",
       "hook": "America's first pet insurance provider with comprehensive coverage options"
+    },
+    {
+      "name": "Embrace Pet Insurance",
+      "url": "https://www.embracepetinsurance.com",
+      "category": "Insurance & Wellness",
+      "hook": "Personalized pet insurance with wellness rewards and diminishing deductible"
+    },
+    {
+      "name": "ASPCA Pet Insurance",
+      "url": "https://www.aspcapetinsurance.com",
+      "category": "Insurance & Wellness",
+      "hook": "Complete coverage options for accidents, illnesses, and preventive care"
+    },
+    {
+      "name": "Fetch Pet Insurance",
+      "url": "https://fetchpet.com",
+      "category": "Insurance & Wellness",
+      "hook": "Comprehensive pet insurance covering accidents, illnesses, and dental disease"
     }
   ],
   "teleVetsAndClinics": [
@@ -111,6 +165,30 @@
       "url": "https://www.airvet.com",
       "category": "Tele-Vets & Clinics",
       "hook": "Connect with licensed vets instantly via video, chat, or phone consultation"
+    },
+    {
+      "name": "Vetster",
+      "url": "https://vetster.com",
+      "category": "Tele-Vets & Clinics",
+      "hook": "Online vet appointments with licensed veterinarians available 24/7"
+    },
+    {
+      "name": "Chewy Vet Care (Connect with a Vet)",
+      "url": "https://www.chewy.com/app/content/connect-with-a-vet",
+      "category": "Tele-Vets & Clinics",
+      "hook": "Free vet chat for Chewy customers with licensed veterinary professionals"
+    },
+    {
+      "name": "Dutch Pet",
+      "url": "https://www.dutch.com",
+      "category": "Tele-Vets & Clinics",
+      "hook": "Veterinary telehealth for dogs and cats with prescription delivery"
+    },
+    {
+      "name": "JustAnswer Veterinary",
+      "url": "https://www.justanswer.com/veterinary",
+      "category": "Tele-Vets & Clinics",
+      "hook": "Ask verified veterinarians questions online anytime, day or night"
     }
   ],
   "pharmacyAndMedical": [
@@ -143,6 +221,18 @@
       "url": "https://www.budgetpetcare.com",
       "category": "Pharmacy & Medical",
       "hook": "Budget-friendly pet medications and flea, tick, and heartworm treatments"
+    },
+    {
+      "name": "VetRxDirect",
+      "url": "https://www.vetrxdirect.com",
+      "category": "Pharmacy & Medical",
+      "hook": "Trusted pet pharmacy with vet-verified prescriptions and compounding services"
+    },
+    {
+      "name": "Chewy Pharmacy",
+      "url": "https://www.chewy.com/pharmacy",
+      "category": "Pharmacy & Medical",
+      "hook": "Convenient pet pharmacy with prescription delivery and autoship savings"
     }
   ],
   "dnaAndTesting": [
@@ -163,6 +253,12 @@
       "url": "https://basepaws.com",
       "category": "DNA & Testing",
       "hook": "Cat DNA testing to discover breed, health markers, and genetic traits"
+    },
+    {
+      "name": "Orivet",
+      "url": "https://www.orivet.com",
+      "category": "DNA & Testing",
+      "hook": "Genetic testing and personalized life plans for dogs"
     }
   ],
   "trainingAndBehavior": [
@@ -189,6 +285,24 @@
       "url": "https://pupford.com",
       "category": "Training & Behavior",
       "hook": "Positive reinforcement training courses, treats, and resources for dogs"
+    },
+    {
+      "name": "Brain Training for Dogs",
+      "url": "https://braintrainingfordogs.com",
+      "category": "Training & Behavior",
+      "hook": "Science-based brain games and mental stimulation training for dogs"
+    },
+    {
+      "name": "Calm Canine Academy",
+      "url": "https://www.calmcanineacademy.com",
+      "category": "Training & Behavior",
+      "hook": "Specialized training for reactive and anxious dogs"
+    },
+    {
+      "name": "GoodPup",
+      "url": "https://www.goodpup.com",
+      "category": "Training & Behavior",
+      "hook": "1-on-1 virtual dog training with certified professional trainers"
     }
   ],
   "walkingSittingBoarding": [
@@ -221,6 +335,18 @@
       "url": "https://www.dogtopia.com",
       "category": "Walking / Sitting / Boarding",
       "hook": "Open-play dog daycare, boarding, and spa services for social dogs"
+    },
+    {
+      "name": "PetBacker",
+      "url": "https://www.petbacker.com",
+      "category": "Walking / Sitting / Boarding",
+      "hook": "Find local pet sitters, dog walkers, and pet taxi services"
+    },
+    {
+      "name": "Care.com Pet Care",
+      "url": "https://www.care.com/pet-care",
+      "category": "Walking / Sitting / Boarding",
+      "hook": "Trusted caregivers for dog walking, pet sitting, and daily pet care"
     }
   ],
   "devicesGpsAndTech": [
@@ -253,6 +379,30 @@
       "url": "https://tractive.com",
       "category": "Devices, GPS & Tech",
       "hook": "Real-time GPS pet tracker with unlimited range and activity monitoring"
+    },
+    {
+      "name": "Halo Collar",
+      "url": "https://www.halocollar.com",
+      "category": "Devices, GPS & Tech",
+      "hook": "Smart collar with GPS fence, training, and location tracking"
+    },
+    {
+      "name": "Apple AirTag (for pets)",
+      "url": "https://www.apple.com/shop/buy-airtag",
+      "category": "Devices, GPS & Tech",
+      "hook": "Affordable Bluetooth tracker for pet collar attachment"
+    },
+    {
+      "name": "Wyze Cam",
+      "url": "https://www.wyze.com",
+      "category": "Devices, GPS & Tech",
+      "hook": "Affordable smart home cameras for monitoring pets"
+    },
+    {
+      "name": "PetSafe",
+      "url": "https://www.petsafe.com",
+      "category": "Devices, GPS & Tech",
+      "hook": "Pet containment systems, doors, feeders, and training solutions"
     }
   ],
   "birdReptileExotic": [
@@ -285,6 +435,30 @@
       "url": "https://www.oxbowanimalhealth.com",
       "category": "Bird / Reptile / Exotic Support",
       "hook": "Science-backed nutrition for small pets, rabbits, and exotic animals"
+    },
+    {
+      "name": "Fluker's",
+      "url": "https://www.flukerfarms.com",
+      "category": "Bird / Reptile / Exotic Support",
+      "hook": "Premium reptile food, supplements, and habitat products"
+    },
+    {
+      "name": "Repashy",
+      "url": "https://www.repashy.com",
+      "category": "Bird / Reptile / Exotic Support",
+      "hook": "Specialized reptile and amphibian diets and supplements"
+    },
+    {
+      "name": "Mazuri",
+      "url": "https://www.mazuri.com",
+      "category": "Bird / Reptile / Exotic Support",
+      "hook": "Zoo-quality nutrition for exotic pets, reptiles, and birds"
+    },
+    {
+      "name": "Harrison's Bird Foods",
+      "url": "https://harrisonsbirdfoods.com",
+      "category": "Bird / Reptile / Exotic Support",
+      "hook": "Certified organic bird food formulated by avian veterinarians"
     }
   ],
   "groomingAndSupplements": [
@@ -323,6 +497,112 @@
       "url": "https://www.wahlpetproducts.com",
       "category": "Grooming & Supplements",
       "hook": "Professional pet grooming clippers, trimmers, and grooming supplies"
+    },
+    {
+      "name": "Nutramax Cosequin",
+      "url": "https://www.nutramaxlabs.com",
+      "category": "Grooming & Supplements",
+      "hook": "Veterinarian-recommended joint health supplements for dogs and cats"
+    },
+    {
+      "name": "VetriScience",
+      "url": "https://vetriscience.com",
+      "category": "Grooming & Supplements",
+      "hook": "Science-based pet supplements for joints, digestion, and overall health"
+    },
+    {
+      "name": "Nordic Naturals Pets",
+      "url": "https://www.nordicnaturals.com/pets",
+      "category": "Grooming & Supplements",
+      "hook": "Premium omega-3 fish oil supplements for pet skin, coat, and joint health"
+    },
+    {
+      "name": "Grizzly Salmon Oil",
+      "url": "https://grizzlypetproducts.com",
+      "category": "Grooming & Supplements",
+      "hook": "Wild Alaskan salmon oil for healthy skin, coat, and immune support"
+    }
+  ],
+  "anxietyAndCalming": [
+    {
+      "name": "ThunderShirt",
+      "url": "https://www.thundershirt.com",
+      "category": "Anxiety & Calming",
+      "hook": "Patented pressure wrap that calms anxiety in dogs and cats"
+    },
+    {
+      "name": "Adaptil",
+      "url": "https://www.adaptil.com",
+      "category": "Anxiety & Calming",
+      "hook": "Clinically proven dog appeasing pheromone for calming and comfort"
+    },
+    {
+      "name": "Feliway",
+      "url": "https://www.feliway.com",
+      "category": "Anxiety & Calming",
+      "hook": "Feline pheromone diffusers and sprays to reduce cat stress and anxiety"
+    },
+    {
+      "name": "Rescue Remedy Pet",
+      "url": "https://www.bachflower.com",
+      "category": "Anxiety & Calming",
+      "hook": "Natural stress relief drops for dogs, cats, and other pets"
+    },
+    {
+      "name": "VetriScience Composure",
+      "url": "https://vetriscience.com",
+      "category": "Anxiety & Calming",
+      "hook": "Calming support chews with colostrum and L-theanine"
+    },
+    {
+      "name": "Solliquin",
+      "url": "https://www.nutramaxlabs.com",
+      "category": "Anxiety & Calming",
+      "hook": "Veterinary behavioral health supplement for dogs and cats"
+    }
+  ],
+  "aquariumAndFish": [
+    {
+      "name": "Aquarium Co-Op",
+      "url": "https://www.aquariumcoop.com",
+      "category": "Aquarium & Fish",
+      "hook": "Quality aquarium supplies, plants, and fish care education"
+    },
+    {
+      "name": "Marine Depot",
+      "url": "https://www.marinedepot.com",
+      "category": "Aquarium & Fish",
+      "hook": "Premium saltwater and reef aquarium supplies and equipment"
+    },
+    {
+      "name": "BulkReefSupply",
+      "url": "https://www.bulkreefsupply.com",
+      "category": "Aquarium & Fish",
+      "hook": "Reef aquarium supplies, equipment, and expert guidance"
+    },
+    {
+      "name": "API Aquarium",
+      "url": "https://www.apifishcare.com",
+      "category": "Aquarium & Fish",
+      "hook": "Water conditioners, test kits, and fish medications"
+    },
+    {
+      "name": "Seachem",
+      "url": "https://www.seachem.com",
+      "category": "Aquarium & Fish",
+      "hook": "Premium aquarium supplements, filtration, and water treatment"
+    },
+    {
+      "name": "Fluval",
+      "url": "https://fluvalaquatics.com",
+      "category": "Aquarium & Fish",
+      "hook": "Innovative aquarium systems, filters, and accessories"
+    },
+    {
+      "name": "LiveAquaria",
+      "url": "https://www.liveaquaria.com",
+      "category": "Aquarium & Fish",
+      "hook": "Quality live fish, corals, and aquatic plants delivered to your door"
     }
   ]
 }
