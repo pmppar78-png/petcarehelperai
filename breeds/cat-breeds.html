@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-6484141649562994">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6484141649562994" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK0N7BD82Q"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FK0N7BD82Q');</script>
+  <meta name="description" content="Complete cat breed directory with 20+ breeds. Compare personality, health issues, grooming needs, and care requirements. Find the perfect cat breed.">
+  <link rel="canonical" href="https://petcarehelperai.netlify.app/breeds/cat-breeds.html">
+  <title>Cat Breeds A-Z: Complete Breed Directory | Pet Care Helper AI</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .breed-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .breed-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,253,250,0.9));
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid rgba(94,234,212,0.3);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .breed-card:hover {
+      border-color: #14B8A6;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(20,184,166,0.15);
+    }
+    .breed-card h3 {
+      color: #0F172A;
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+    .breed-card .breed-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .breed-tag {
+      background: #E0F2FE;
+      color: #0D9488;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+    }
+    .breed-card p {
+      color: #64748b;
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .filter-section {
+      background: linear-gradient(135deg, rgba(240,253,250,0.9), rgba(224,242,254,0.9));
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .filter-label {
+      font-weight: 600;
+      color: #0F172A;
+    }
+    .filter-btn {
+      padding: 8px 16px;
+      border: 1px solid #A7F3D0;
+      border-radius: 999px;
+      background: white;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #334155;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: #14B8A6;
+      color: white;
+      border-color: #14B8A6;
+    }
+    .alpha-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0;
+    }
+    .alpha-link {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #E0F2FE;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #0D9488;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .alpha-link:hover {
+      background: #14B8A6;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-title">
+      <div class="logo-pill"></div>
+      <div>
+        <h1>Pet Care Helper AI</h1>
+        <p class="subtitle">Dogs &bull; Cats &bull; Birds &bull; Reptiles &bull; Fish</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../chat.html" class="nav-link">AI Pet Help</a></li>
+        <li><a href="../dogs.html" class="nav-link">Dogs</a></li>
+        <li><a href="../cats.html" class="nav-link active">Cats</a></li>
+        <li><a href="../birds.html" class="nav-link">Birds</a></li>
+        <li><a href="../reptiles.html" class="nav-link">Reptiles</a></li>
+        <li><a href="../fish.html" class="nav-link">Fish</a></li>
+        <li><a href="../guides.html" class="nav-link">Guides</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a> <span>&rsaquo;</span>
+      <a href="../cats.html">Cats</a> <span>&rsaquo;</span>
+      All Cat Breeds
+    </div>
+
+    <section class="hero" style="padding: 30px 20px;">
+      <h1>Cat Breeds A-Z</h1>
+      <p>Explore our comprehensive directory of cat breeds. Each breed page includes personality traits, health information, grooming needs, and care requirements to help you find the perfect feline companion.</p>
+    </section>
+
+    <div class="filter-section">
+      <div class="filter-row">
+        <span class="filter-label">Filter by coat:</span>
+        <button class="filter-btn active" data-filter="all">All Coats</button>
+        <button class="filter-btn" data-filter="short">Short Hair</button>
+        <button class="filter-btn" data-filter="long">Long Hair</button>
+        <button class="filter-btn" data-filter="hairless">Hairless/Low-Shedding</button>
+      </div>
+    </div>
+
+    <div class="alpha-nav">
+      <a href="#A" class="alpha-link">A</a>
+      <a href="#B" class="alpha-link">B</a>
+      <a href="#D" class="alpha-link">D</a>
+      <a href="#E" class="alpha-link">E</a>
+      <a href="#H" class="alpha-link">H</a>
+      <a href="#M" class="alpha-link">M</a>
+      <a href="#N" class="alpha-link">N</a>
+      <a href="#O" class="alpha-link">O</a>
+      <a href="#P" class="alpha-link">P</a>
+      <a href="#R" class="alpha-link">R</a>
+      <a href="#S" class="alpha-link">S</a>
+    </div>
+
+    <h2 id="A">A</h2>
+    <div class="breed-grid">
+      <a href="cats/abyssinian.html" class="breed-card" data-coat="short">
+        <h3>Abyssinian</h3>
+        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Active</span></div>
+        <p>Elegant, active, and curious. One of the oldest known cat breeds.</p>
+      </a>
+      <a href="cats/american-shorthair.html" class="breed-card" data-coat="short">
+        <h3>American Shorthair</h3>
+        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Easy-Going</span></div>
+        <p>Friendly, adaptable, and low-maintenance. Classic American cats.</p>
+      </a>
+    </div>
+
+    <h2 id="B">B</h2>
+    <div class="breed-grid">
+      <a href="cats/bengal.html" class="breed-card" data-coat="short">
+        <h3>Bengal</h3>
+        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Athletic</span></div>
+        <p>Wild appearance with a domestic temperament. Active and playful.</p>
+      </a>
+      <a href="cats/birman.html" class="breed-card" data-coat="long">
+        <h3>Birman</h3>
+        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Gentle</span></div>
+        <p>Gentle, affectionate, and social. Beautiful blue eyes and silky coat.</p>
+      </a>
+      <a href="cats/british-shorthair.html" class="breed-card" data-coat="short">
+        <h3>British Shorthair</h3>
+        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Calm</span></div>
+        <p>Calm, dignified, and easygoing. The teddy bear of cat breeds.</p>
+      </a>
+      <a href="cats/burmese.html" class="breed-card" data-coat="short">
+        <h3>Burmese</h3>
+        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Social</span></div>
+        <p>Affectionate, people-oriented cats. Known for their silky coats.</p>
+      </a>
+    </div>
+
+    <h2 id="D">D</h2>
+    <div class="breed-grid">
+      <a href="cats/devon-rex.html" class="breed-card" data-coat="hairless">
+        <h3>Devon Rex</h3>
+        <div class="breed-meta"><span class="breed-tag">Low-Shedding</span><span class="breed-tag">Playful</span></div>
+        <p>Pixie-like appearance with wavy coat. Mischievous and affectionate.</p>
+      </a>
+    </div>
+
+    <h2 id="E">E</h2>
+    <div class="breed-grid">
+      <a href="cats/exotic-shorthair.html" class="breed-card" data-coat="short">
+        <h3>Exotic Shorthair</h3>
+        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Gentle</span></div>
+        <p>Persian personality with easier grooming. Sweet and calm.</p>
+      </a>
+    </div>
+
+    <h2 id="H">H</h2>
+    <div class="breed-grid">
+      <a href="cats/himalayan.html" class="breed-card" data-coat="long">
+        <h3>Himalayan</h3>
+        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Sweet</span></div>
+        <p>Persian-Siamese mix with beautiful color points. Gentle and calm.</p>
+      </a>
+    </div>
+
+    <h2 id="M">M</h2>
+    <div class="breed-grid">
+      <a href="cats/maine-coon.html" class="breed-card" data-coat="long">
+        <h3>Maine Coon</h3>
+        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Gentle Giant</span></div>
+        <p>Largest domestic cat breed. Friendly, playful, and dog-like.</p>
+      </a>
+    </div>
+
+    <h2 id="N">N</h2>
+    <div class="breed-grid">
+      <a href="cats/norwegian-forest-cat.html" class="breed-card" data-coat="long">
+        <h3>Norwegian Forest Cat</h3>
+        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Independent</span></div>
+        <p>Hardy, independent cats with luxurious waterproof coats.</p>
+      </a>
+    </div>
+
+    <h2 id="O">O</h2>
+    <div class="breed-grid">
+      <a href="cats/oriental-shorthair.html" class="breed-card" data-coat="short">
+        <h3>Oriental Shorthair</h3>
+        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Vocal</span></div>
+        <p>Elegant, vocal, and highly intelligent. Siamese relative with many colors.</p>
+      </a>
+    </div>
+
+    <h2 id="P">P</h2>
+    <div class="breed-grid">
+      <a href="cats/persian.html" class="breed-card" data-coat="long">
+        <h3>Persian</h3>
+        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Quiet</span></div>
+        <p>Quiet, sweet, and dignified. Requires daily grooming.</p>
+      </a>
+    </div>
+
+    <h2 id="R">R</h2>
+    <div class="breed-grid">
+      <a href="cats/ragdoll.html" class="breed-card" data-coat="long">
+        <h3>Ragdoll</h3>
+        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Docile</span></div>
+        <p>Go limp when picked up. Gentle, calm, and affectionate.</p>
+      </a>
+      <a href="cats/ragamuffin.html" class="breed-card" data-coat="long">
+        <h3>Ragamuffin</h3>
+        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Sweet</span></div>
+        <p>Large, friendly cats with plush coats. Patient and docile.</p>
+      </a>
+      <a href="cats/russian-blue.html" class="breed-card" data-coat="short">
+        <h3>Russian Blue</h3>
+        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Shy</span></div>
+        <p>Elegant, reserved, and loyal. Stunning blue-grey coat.</p>
+      </a>
+    </div>
+
+    <h2 id="S">S</h2>
+    <div class="breed-grid">
+      <a href="cats/scottish-fold.html" class="breed-card" data-coat="short">
+        <h3>Scottish Fold</h3>
+        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Sweet</span></div>
+        <p>Known for folded ears. Sweet-tempered and adaptable.</p>
+      </a>
+      <a href="cats/siamese.html" class="breed-card" data-coat="short">
+        <h3>Siamese</h3>
+        <div class="breed-meta"><span class="breed-tag">Short Hair</span><span class="breed-tag">Vocal</span></div>
+        <p>Striking blue eyes and vocal personality. Social and intelligent.</p>
+      </a>
+      <a href="cats/siberian.html" class="breed-card" data-coat="long">
+        <h3>Siberian</h3>
+        <div class="breed-meta"><span class="breed-tag">Long Hair</span><span class="breed-tag">Hypoallergenic</span></div>
+        <p>May produce fewer allergens. Affectionate, playful, and adventurous.</p>
+      </a>
+      <a href="cats/sphynx.html" class="breed-card" data-coat="hairless">
+        <h3>Sphynx</h3>
+        <div class="breed-meta"><span class="breed-tag">Hairless</span><span class="breed-tag">Affectionate</span></div>
+        <p>Hairless and loving attention. Warm to the touch and loyal.</p>
+      </a>
+    </div>
+
+    <div class="affiliate-callout">
+      <h4>Discover Your Cat's Genetics</h4>
+      <p>
+        <a href="https://basepaws.com" target="_blank" rel="sponsored noopener">Basepaws Cat DNA Test</a> - Learn your cat's breed makeup and health markers.<br><br>
+        Protect your cat with <a href="https://www.lemonade.com/pet" target="_blank" rel="sponsored noopener">Lemonade Pet Insurance</a> or <a href="https://www.spotpetins.com" target="_blank" rel="sponsored noopener">Spot Pet Insurance</a>.
+      </p>
+    </div>
+
+    <section class="info-card">
+      <h3>Need Help Choosing?</h3>
+      <p>Our AI assistant can answer detailed questions about any cat breed and help you find the perfect match.</p>
+      <div class="hero-actions">
+        <a href="../chat.html" class="primary-btn">Ask the AI About Cat Breeds</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI Pet Medical &amp; Vet Help Finder &mdash; educational guidance, real-world vet options, and curated resources.</p>
+    <p style="font-size: 0.85rem; margin-top: 8px;">Some suggestions may include sponsored partners.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      if (navToggle) {
+        navToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          navToggle.classList.toggle('active');
+        });
+      }
+
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const breedCards = document.querySelectorAll('.breed-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const filter = this.dataset.filter;
+
+          breedCards.forEach(card => {
+            if (filter === 'all' || card.dataset.coat === filter) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

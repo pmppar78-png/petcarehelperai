@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-6484141649562994">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6484141649562994" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK0N7BD82Q"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FK0N7BD82Q');</script>
+  <meta name="description" content="Check your pet's symptoms to understand potential causes and urgency level. Know when to see a vet immediately vs. when to monitor at home.">
+  <link rel="canonical" href="https://petcarehelperai.netlify.app/tools/symptom-checker.html">
+  <title>Pet Symptom Checker - Is My Dog or Cat Sick? | Pet Care Helper AI</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .checker-container {
+      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,253,250,0.9));
+      border-radius: 20px;
+      padding: 28px;
+      margin: 24px 0;
+      box-shadow: 0 8px 24px rgba(20,184,166,0.12);
+      border: 1px solid rgba(94,234,212,0.4);
+    }
+    .pet-select {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .pet-btn {
+      padding: 16px 32px;
+      border: 2px solid #A7F3D0;
+      border-radius: 12px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #334155;
+      transition: all 0.2s;
+    }
+    .pet-btn:hover {
+      border-color: #14B8A6;
+    }
+    .pet-btn.active {
+      border-color: #14B8A6;
+      background: linear-gradient(135deg, rgba(20,184,166,0.1), rgba(6,182,212,0.1));
+      color: #0D9488;
+    }
+    .symptom-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .symptom-category {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid #E0F2FE;
+    }
+    .category-title {
+      font-weight: 600;
+      color: #0F172A;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #5EEAD4;
+    }
+    .symptom-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .symptom-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .symptom-item:hover {
+      background: rgba(94,234,212,0.15);
+    }
+    .symptom-item input {
+      width: 18px;
+      height: 18px;
+      accent-color: #14B8A6;
+    }
+    .symptom-label {
+      font-size: 0.95rem;
+      color: #334155;
+    }
+    .check-btn {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 24px auto 0;
+      padding: 16px;
+      background: linear-gradient(135deg, #14B8A6, #0D9488);
+      border: none;
+      border-radius: 999px;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(20,184,166,0.3);
+      transition: all 0.2s;
+    }
+    .check-btn:hover {
+      background: linear-gradient(135deg, #0D9488, #0F766E);
+    }
+    .check-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .results-area {
+      display: none;
+      margin-top: 24px;
+    }
+    .results-area.visible {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+    .urgency-card {
+      padding: 24px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+    }
+    .urgency-emergency {
+      background: linear-gradient(135deg, #FEE2E2, #FECACA);
+      border: 2px solid #EF4444;
+    }
+    .urgency-emergency .urgency-title {
+      color: #DC2626;
+    }
+    .urgency-urgent {
+      background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+      border: 2px solid #F59E0B;
+    }
+    .urgency-urgent .urgency-title {
+      color: #D97706;
+    }
+    .urgency-monitor {
+      background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
+      border: 2px solid #3B82F6;
+    }
+    .urgency-monitor .urgency-title {
+      color: #2563EB;
+    }
+    .urgency-low {
+      background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+      border: 2px solid #10B981;
+    }
+    .urgency-low .urgency-title {
+      color: #059669;
+    }
+    .urgency-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .urgency-desc {
+      color: #334155;
+      line-height: 1.6;
+    }
+    .possible-causes {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 16px;
+    }
+    .possible-causes h4 {
+      margin: 0 0 12px;
+      color: #0F172A;
+    }
+    .possible-causes ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .possible-causes li {
+      margin-bottom: 6px;
+      color: #334155;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-title">
+      <div class="logo-pill"></div>
+      <div>
+        <h1>Pet Care Helper AI</h1>
+        <p class="subtitle">Dogs &bull; Cats &bull; Birds &bull; Reptiles &bull; Fish</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../chat.html" class="nav-link">AI Pet Help</a></li>
+        <li><a href="../dogs.html" class="nav-link">Dogs</a></li>
+        <li><a href="../cats.html" class="nav-link">Cats</a></li>
+        <li><a href="../birds.html" class="nav-link">Birds</a></li>
+        <li><a href="../reptiles.html" class="nav-link">Reptiles</a></li>
+        <li><a href="../fish.html" class="nav-link">Fish</a></li>
+        <li><a href="../guides.html" class="nav-link">Guides</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a> <span>&rsaquo;</span>
+      <a href="index.html">Tools</a> <span>&rsaquo;</span>
+      Symptom Checker
+    </div>
+
+    <article class="guide-content">
+      <h1>Pet Symptom Checker</h1>
+      <p>Select your pet's symptoms to understand potential causes and urgency level. This tool helps you know when to seek immediate veterinary care vs. when monitoring at home may be appropriate.</p>
+
+      <div class="warning-box">
+        <h4>Important Disclaimer</h4>
+        <p>This symptom checker is for educational purposes only and does not replace professional veterinary diagnosis. When in doubt, always contact your veterinarian. For emergencies, seek immediate care.</p>
+      </div>
+
+      <div class="checker-container">
+        <div class="pet-select">
+          <button class="pet-btn active" data-pet="dog">Dog</button>
+          <button class="pet-btn" data-pet="cat">Cat</button>
+        </div>
+
+        <h3 style="text-align: center; color: #0F172A; margin-bottom: 16px;">Select all symptoms your pet is showing:</h3>
+
+        <div class="symptom-categories">
+          <div class="symptom-category">
+            <div class="category-title">Digestive</div>
+            <div class="symptom-list">
+              <label class="symptom-item"><input type="checkbox" data-symptom="vomiting" data-severity="moderate"><span class="symptom-label">Vomiting (1-2 times)</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="vomiting-repeated" data-severity="urgent"><span class="symptom-label">Repeated vomiting (3+ times)</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="diarrhea" data-severity="moderate"><span class="symptom-label">Diarrhea</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="bloody-stool" data-severity="urgent"><span class="symptom-label">Blood in stool</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="not-eating" data-severity="moderate"><span class="symptom-label">Not eating (12-24 hrs)</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="not-eating-long" data-severity="urgent"><span class="symptom-label">Not eating (24+ hrs)</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="bloated" data-severity="emergency"><span class="symptom-label">Bloated/distended abdomen</span></label>
+            </div>
+          </div>
+
+          <div class="symptom-category">
+            <div class="category-title">Respiratory</div>
+            <div class="symptom-list">
+              <label class="symptom-item"><input type="checkbox" data-symptom="coughing" data-severity="low"><span class="symptom-label">Occasional coughing</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="coughing-persistent" data-severity="moderate"><span class="symptom-label">Persistent coughing</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="breathing-fast" data-severity="urgent"><span class="symptom-label">Rapid breathing at rest</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="breathing-difficult" data-severity="emergency"><span class="symptom-label">Difficulty breathing</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="sneezing" data-severity="low"><span class="symptom-label">Sneezing</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="nasal-discharge" data-severity="moderate"><span class="symptom-label">Nasal discharge</span></label>
+            </div>
+          </div>
+
+          <div class="symptom-category">
+            <div class="category-title">Urinary</div>
+            <div class="symptom-list">
+              <label class="symptom-item"><input type="checkbox" data-symptom="frequent-urination" data-severity="moderate"><span class="symptom-label">Frequent urination</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="straining" data-severity="urgent"><span class="symptom-label">Straining to urinate</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="no-urine" data-severity="emergency"><span class="symptom-label">Unable to urinate</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="blood-urine" data-severity="urgent"><span class="symptom-label">Blood in urine</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="accidents" data-severity="low"><span class="symptom-label">House accidents</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="excessive-thirst" data-severity="moderate"><span class="symptom-label">Excessive thirst</span></label>
+            </div>
+          </div>
+
+          <div class="symptom-category">
+            <div class="category-title">Behavior/Energy</div>
+            <div class="symptom-list">
+              <label class="symptom-item"><input type="checkbox" data-symptom="lethargy" data-severity="moderate"><span class="symptom-label">Lethargy/less active</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="collapse" data-severity="emergency"><span class="symptom-label">Collapse/unable to stand</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="hiding" data-severity="moderate"><span class="symptom-label">Hiding/withdrawn</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="restless" data-severity="moderate"><span class="symptom-label">Restlessness/pacing</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="disoriented" data-severity="urgent"><span class="symptom-label">Disoriented/confused</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="seizure" data-severity="emergency"><span class="symptom-label">Seizures</span></label>
+            </div>
+          </div>
+
+          <div class="symptom-category">
+            <div class="category-title">Physical/Skin</div>
+            <div class="symptom-list">
+              <label class="symptom-item"><input type="checkbox" data-symptom="limping" data-severity="moderate"><span class="symptom-label">Limping</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="not-walking" data-severity="urgent"><span class="symptom-label">Can't walk/use legs</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="scratching" data-severity="low"><span class="symptom-label">Excessive scratching</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="hair-loss" data-severity="low"><span class="symptom-label">Hair loss</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="wound" data-severity="moderate"><span class="symptom-label">Wound/cut</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="bleeding" data-severity="emergency"><span class="symptom-label">Severe bleeding</span></label>
+            </div>
+          </div>
+
+          <div class="symptom-category">
+            <div class="category-title">Other Concerns</div>
+            <div class="symptom-list">
+              <label class="symptom-item"><input type="checkbox" data-symptom="pale-gums" data-severity="emergency"><span class="symptom-label">Pale/white gums</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="eye-issues" data-severity="urgent"><span class="symptom-label">Eye injury/closed eye</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="ear-issues" data-severity="low"><span class="symptom-label">Ear scratching/head shaking</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="ate-something" data-severity="urgent"><span class="symptom-label">Ate something toxic/foreign</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="trauma" data-severity="emergency"><span class="symptom-label">Hit by car/major trauma</span></label>
+              <label class="symptom-item"><input type="checkbox" data-symptom="fever" data-severity="urgent"><span class="symptom-label">Fever (warm ears, nose)</span></label>
+            </div>
+          </div>
+        </div>
+
+        <button class="check-btn" id="checkBtn" disabled>Check Symptoms</button>
+
+        <div class="results-area" id="results">
+          <div class="urgency-card" id="urgencyCard">
+            <div class="urgency-title" id="urgencyTitle"></div>
+            <div class="urgency-desc" id="urgencyDesc"></div>
+          </div>
+
+          <div class="possible-causes" id="causesSection">
+            <h4>Possible Causes to Discuss with Your Vet</h4>
+            <ul id="causesList"></ul>
+          </div>
+
+          <div class="affiliate-callout" style="margin-top: 20px;">
+            <h4>Get Professional Help</h4>
+            <p id="helpLinks"></p>
+          </div>
+        </div>
+      </div>
+
+      <h2>When to Seek Emergency Care</h2>
+      <p>Go to an emergency vet immediately if your pet shows:</p>
+      <ul>
+        <li>Difficulty breathing or blue/pale gums</li>
+        <li>Inability to urinate (especially male cats)</li>
+        <li>Bloated abdomen (dogs) - may indicate GDV/bloat</li>
+        <li>Seizures lasting more than 2-3 minutes or multiple seizures</li>
+        <li>Collapse or inability to stand</li>
+        <li>Severe bleeding that won't stop</li>
+        <li>Known toxin ingestion</li>
+        <li>Major trauma (hit by car, fall from height)</li>
+      </ul>
+
+      <div class="affiliate-callout">
+        <h4>24/7 Veterinary Help</h4>
+        <p>
+          <strong>Poison Control:</strong> ASPCA: (888) 426-4435 | Pet Poison Helpline: (855) 764-7661<br><br>
+          <strong>Tele-Vet Services:</strong>
+          <a href="https://www.pawp.com" target="_blank" rel="sponsored noopener">Pawp</a> |
+          <a href="https://www.airvet.com" target="_blank" rel="sponsored noopener">Airvet</a> |
+          <a href="https://vetster.com" target="_blank" rel="sponsored noopener">Vetster</a> |
+          <a href="https://www.justanswer.com/veterinary" target="_blank" rel="sponsored noopener">JustAnswer Vet</a>
+        </p>
+      </div>
+
+      <section class="info-card">
+        <h3>Describe Your Pet's Symptoms to Our AI</h3>
+        <p>Get more detailed guidance by describing your pet's symptoms to our AI assistant.</p>
+        <div class="hero-actions">
+          <a href="../chat.html" class="primary-btn">Ask the AI Now</a>
+        </div>
+      </section>
+    </article>
+
+    <section class="transparency">
+      <h3>Disclaimer</h3>
+      <p>This symptom checker is for educational purposes only and is not a substitute for professional veterinary advice, diagnosis, or treatment. Always consult a qualified veterinarian for any health concerns about your pet.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI Pet Medical &amp; Vet Help Finder &mdash; educational guidance, real-world vet options, and curated resources.</p>
+    <p style="font-size: 0.85rem; margin-top: 8px;">Some suggestions may include sponsored partners.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      if (navToggle) {
+        navToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          navToggle.classList.toggle('active');
+        });
+      }
+
+      const petBtns = document.querySelectorAll('.pet-btn');
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      const checkBtn = document.getElementById('checkBtn');
+      const results = document.getElementById('results');
+      let selectedPet = 'dog';
+
+      petBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          petBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          selectedPet = this.dataset.pet;
+        });
+      });
+
+      checkboxes.forEach(cb => {
+        cb.addEventListener('change', function() {
+          const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+          checkBtn.disabled = checked.length === 0;
+        });
+      });
+
+      checkBtn.addEventListener('click', function() {
+        const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+        let maxSeverity = 'low';
+        const symptoms = [];
+
+        checked.forEach(cb => {
+          symptoms.push(cb.dataset.symptom);
+          const sev = cb.dataset.severity;
+          if (sev === 'emergency') maxSeverity = 'emergency';
+          else if (sev === 'urgent' && maxSeverity !== 'emergency') maxSeverity = 'urgent';
+          else if (sev === 'moderate' && maxSeverity !== 'emergency' && maxSeverity !== 'urgent') maxSeverity = 'moderate';
+        });
+
+        // Special rule: male cat + straining/no urine = emergency
+        if (selectedPet === 'cat' && (symptoms.includes('straining') || symptoms.includes('no-urine'))) {
+          maxSeverity = 'emergency';
+        }
+
+        const urgencyCard = document.getElementById('urgencyCard');
+        const urgencyTitle = document.getElementById('urgencyTitle');
+        const urgencyDesc = document.getElementById('urgencyDesc');
+
+        urgencyCard.className = 'urgency-card';
+
+        if (maxSeverity === 'emergency') {
+          urgencyCard.classList.add('urgency-emergency');
+          urgencyTitle.textContent = 'EMERGENCY - Seek Immediate Care';
+          urgencyDesc.textContent = 'Based on the symptoms you selected, your pet may need immediate emergency veterinary care. Do not wait - contact an emergency vet or animal hospital right away. Time is critical.';
+        } else if (maxSeverity === 'urgent') {
+          urgencyCard.classList.add('urgency-urgent');
+          urgencyTitle.textContent = 'URGENT - See a Vet Today';
+          urgencyDesc.textContent = 'These symptoms warrant veterinary attention within the next few hours. Call your vet immediately for an urgent appointment, or visit an emergency clinic if your regular vet is unavailable.';
+        } else if (maxSeverity === 'moderate') {
+          urgencyCard.classList.add('urgency-monitor');
+          urgencyTitle.textContent = 'CONCERNING - Schedule a Vet Visit';
+          urgencyDesc.textContent = 'These symptoms should be evaluated by a veterinarian soon. Schedule an appointment within 24-48 hours. Monitor closely for any worsening, which would require more urgent care.';
+        } else {
+          urgencyCard.classList.add('urgency-low');
+          urgencyTitle.textContent = 'MONITOR - May Not Be Urgent';
+          urgencyDesc.textContent = 'These symptoms alone may not require immediate veterinary attention. Monitor your pet closely. If symptoms persist for more than a few days, worsen, or new symptoms appear, schedule a vet visit.';
+        }
+
+        // Possible causes
+        const causes = [];
+        if (symptoms.some(s => s.includes('vomiting') || s.includes('diarrhea'))) {
+          causes.push('Dietary indiscretion (ate something they shouldn\'t)');
+          causes.push('Gastrointestinal infection or parasites');
+          causes.push('Pancreatitis');
+          causes.push('Food intolerance or allergy');
+        }
+        if (symptoms.includes('bloated')) {
+          causes.push('Gastric Dilatation-Volvulus (GDV/Bloat) - EMERGENCY in dogs');
+        }
+        if (symptoms.some(s => s.includes('urin'))) {
+          causes.push('Urinary tract infection (UTI)');
+          causes.push('Bladder stones');
+          if (selectedPet === 'cat') causes.push('Feline Lower Urinary Tract Disease (FLUTD)');
+          causes.push('Urinary blockage - EMERGENCY especially in male cats');
+        }
+        if (symptoms.some(s => s.includes('breathing') || s.includes('cough'))) {
+          causes.push('Respiratory infection');
+          causes.push('Kennel cough (dogs) or Upper Respiratory Infection (cats)');
+          causes.push('Heart disease');
+          causes.push('Allergies');
+        }
+        if (symptoms.includes('lethargy') || symptoms.includes('not-eating') || symptoms.includes('not-eating-long')) {
+          causes.push('Infection or illness');
+          causes.push('Pain');
+          causes.push('Metabolic disorder');
+        }
+        if (symptoms.some(s => s.includes('limp') || s.includes('walk'))) {
+          causes.push('Injury or trauma');
+          causes.push('Arthritis');
+          causes.push('Intervertebral Disc Disease (IVDD)');
+        }
+        if (symptoms.some(s => s.includes('scratch') || s.includes('hair'))) {
+          causes.push('Allergies (food or environmental)');
+          causes.push('Fleas or parasites');
+          causes.push('Skin infection');
+        }
+
+        if (causes.length === 0) {
+          causes.push('Various conditions possible - vet evaluation recommended for proper diagnosis');
+        }
+
+        document.getElementById('causesList').innerHTML = causes.slice(0, 6).map(c => `<li>${c}</li>`).join('');
+
+        // Help links
+        let helpHTML = '';
+        if (maxSeverity === 'emergency') {
+          helpHTML = `
+            <strong>Emergency:</strong> Search for "emergency vet near me" or "24-hour animal hospital"<br><br>
+            <strong>Poison Control:</strong> ASPCA: (888) 426-4435 | Pet Poison Helpline: (855) 764-7661
+          `;
+        } else if (maxSeverity === 'urgent') {
+          helpHTML = `
+            Call your regular vet for an urgent appointment, or try tele-vet for immediate guidance:
+            <a href="https://www.pawp.com" target="_blank" rel="sponsored noopener">Pawp</a> |
+            <a href="https://www.airvet.com" target="_blank" rel="sponsored noopener">Airvet</a> |
+            <a href="https://vetster.com" target="_blank" rel="sponsored noopener">Vetster</a>
+          `;
+        } else {
+          helpHTML = `
+            Schedule a vet appointment or get guidance online:
+            <a href="https://www.pawp.com" target="_blank" rel="sponsored noopener">Pawp</a> |
+            <a href="https://www.airvet.com" target="_blank" rel="sponsored noopener">Airvet</a> |
+            <a href="https://vetster.com" target="_blank" rel="sponsored noopener">Vetster</a> |
+            <a href="https://www.justanswer.com/veterinary" target="_blank" rel="sponsored noopener">JustAnswer</a>
+          `;
+        }
+        document.getElementById('helpLinks').innerHTML = helpHTML;
+
+        results.classList.add('visible');
+        results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+</body>
+</html>

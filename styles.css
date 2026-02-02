@@ -1003,3 +1003,170 @@ main {
     padding: 8px 10px;
   }
 }
+
+/* Quick Links Section */
+.quick-links-section {
+  margin: 30px 0;
+}
+
+.quick-links-section .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.quick-links-section .info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links-section .info-card li {
+  margin-bottom: 10px;
+}
+
+.quick-links-section .info-card a {
+  color: #0D9488;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.quick-links-section .info-card a:hover {
+  color: #0F766E;
+  text-decoration: underline;
+}
+
+/* Expert Section */
+.expert-section {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 253, 250, 0.9) 100%);
+  border-radius: 20px;
+  padding: 28px 24px;
+  margin: 24px 0;
+  box-shadow: 0 8px 24px rgba(20, 184, 166, 0.12);
+  border: 1px solid rgba(94, 234, 212, 0.4);
+}
+
+/* Content Section for Guides */
+.content-section {
+  margin: 30px 0;
+  padding: 0 16px;
+}
+
+.content-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #0F172A;
+  border-bottom: 2px solid #5EEAD4;
+  padding-bottom: 8px;
+}
+
+/* Breed Stats Card */
+.breed-stats-card {
+  background: linear-gradient(135deg, rgba(240, 253, 250, 0.9), rgba(224, 242, 254, 0.9));
+  border-radius: 16px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #A7F3D0;
+}
+
+.breed-stats-card h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #0F172A;
+}
+
+/* Enhanced Affiliate Callout */
+.affiliate-callout {
+  background: linear-gradient(135deg, #F0FDFA, #E0F2FE);
+  border-left: 4px solid #14B8A6;
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+
+.affiliate-callout h4 {
+  margin: 0 0 8px;
+  color: #0F172A;
+  font-size: 1rem;
+}
+
+.affiliate-callout p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.affiliate-callout a {
+  color: #0D9488;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.affiliate-callout a:hover {
+  color: #0F766E;
+  text-decoration: underline;
+}
+
+/* Warning Box */
+.warning-box {
+  background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+  border-left: 4px solid #F59E0B;
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+
+.warning-box h4 {
+  margin: 0 0 8px;
+  color: #92400E;
+  font-size: 1rem;
+}
+
+.warning-box p {
+  margin: 0;
+  color: #78350F;
+  font-size: 0.95rem;
+}
+
+.warning-box a {
+  color: #D97706;
+  font-weight: 600;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.breadcrumb a {
+  color: #0D9488;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: #0F766E;
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  margin: 0 6px;
+  color: #94a3b8;
+}
+
+/* Sticky CTA Sidebar (for desktop) */
+@media (min-width: 1200px) {
+  .sticky-sidebar {
+    position: sticky;
+    top: 100px;
+    max-width: 280px;
+    float: right;
+    margin-left: 24px;
+    margin-bottom: 24px;
+  }
+
+  .sticky-sidebar .affiliate-callout {
+    margin: 0 0 16px;
+  }
+}

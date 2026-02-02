@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-6484141649562994">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6484141649562994" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK0N7BD82Q"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FK0N7BD82Q');</script>
+  <meta name="description" content="Complete dog breed directory with 50+ breeds. Compare temperament, health issues, exercise needs, and costs. Find the perfect dog breed for your lifestyle.">
+  <link rel="canonical" href="https://petcarehelperai.netlify.app/breeds/dog-breeds.html">
+  <title>Dog Breeds A-Z: Complete Breed Directory | Pet Care Helper AI</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .breed-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .breed-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,253,250,0.9));
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid rgba(94,234,212,0.3);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .breed-card:hover {
+      border-color: #14B8A6;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(20,184,166,0.15);
+    }
+    .breed-card h3 {
+      color: #0F172A;
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+    .breed-card .breed-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .breed-tag {
+      background: #E0F2FE;
+      color: #0D9488;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+    }
+    .breed-card p {
+      color: #64748b;
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .filter-section {
+      background: linear-gradient(135deg, rgba(240,253,250,0.9), rgba(224,242,254,0.9));
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .filter-label {
+      font-weight: 600;
+      color: #0F172A;
+    }
+    .filter-btn {
+      padding: 8px 16px;
+      border: 1px solid #A7F3D0;
+      border-radius: 999px;
+      background: white;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #334155;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: #14B8A6;
+      color: white;
+      border-color: #14B8A6;
+    }
+    .alpha-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0;
+    }
+    .alpha-link {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #E0F2FE;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #0D9488;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .alpha-link:hover {
+      background: #14B8A6;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-title">
+      <div class="logo-pill"></div>
+      <div>
+        <h1>Pet Care Helper AI</h1>
+        <p class="subtitle">Dogs &bull; Cats &bull; Birds &bull; Reptiles &bull; Fish</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../chat.html" class="nav-link">AI Pet Help</a></li>
+        <li><a href="../dogs.html" class="nav-link active">Dogs</a></li>
+        <li><a href="../cats.html" class="nav-link">Cats</a></li>
+        <li><a href="../birds.html" class="nav-link">Birds</a></li>
+        <li><a href="../reptiles.html" class="nav-link">Reptiles</a></li>
+        <li><a href="../fish.html" class="nav-link">Fish</a></li>
+        <li><a href="../guides.html" class="nav-link">Guides</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a> <span>&rsaquo;</span>
+      <a href="../dogs.html">Dogs</a> <span>&rsaquo;</span>
+      All Dog Breeds
+    </div>
+
+    <section class="hero" style="padding: 30px 20px;">
+      <h1>Dog Breeds A-Z</h1>
+      <p>Explore our comprehensive directory of dog breeds. Each breed page includes temperament, health information, care requirements, and cost estimates to help you find the perfect match.</p>
+    </section>
+
+    <div class="filter-section">
+      <div class="filter-row">
+        <span class="filter-label">Filter by size:</span>
+        <button class="filter-btn active" data-filter="all">All Sizes</button>
+        <button class="filter-btn" data-filter="small">Small</button>
+        <button class="filter-btn" data-filter="medium">Medium</button>
+        <button class="filter-btn" data-filter="large">Large</button>
+        <button class="filter-btn" data-filter="giant">Giant</button>
+      </div>
+    </div>
+
+    <div class="alpha-nav">
+      <a href="#A" class="alpha-link">A</a>
+      <a href="#B" class="alpha-link">B</a>
+      <a href="#C" class="alpha-link">C</a>
+      <a href="#D" class="alpha-link">D</a>
+      <a href="#E" class="alpha-link">E</a>
+      <a href="#F" class="alpha-link">F</a>
+      <a href="#G" class="alpha-link">G</a>
+      <a href="#H" class="alpha-link">H</a>
+      <a href="#L" class="alpha-link">L</a>
+      <a href="#M" class="alpha-link">M</a>
+      <a href="#P" class="alpha-link">P</a>
+      <a href="#R" class="alpha-link">R</a>
+      <a href="#S" class="alpha-link">S</a>
+      <a href="#V" class="alpha-link">V</a>
+      <a href="#W" class="alpha-link">W</a>
+      <a href="#Y" class="alpha-link">Y</a>
+    </div>
+
+    <h2 id="A">A</h2>
+    <div class="breed-grid">
+      <a href="dogs/australian-shepherd.html" class="breed-card" data-size="medium">
+        <h3>Australian Shepherd</h3>
+        <div class="breed-meta"><span class="breed-tag">Medium</span><span class="breed-tag">High Energy</span></div>
+        <p>Brilliant herding dogs with boundless energy. Excellent for active owners and dog sports.</p>
+      </a>
+    </div>
+
+    <h2 id="B">B</h2>
+    <div class="breed-grid">
+      <a href="dogs/beagle.html" class="breed-card" data-size="small">
+        <h3>Beagle</h3>
+        <div class="breed-meta"><span class="breed-tag">Small-Medium</span><span class="breed-tag">Friendly</span></div>
+        <p>Merry and curious hounds. Great with families but follow their nose everywhere.</p>
+      </a>
+      <a href="dogs/border-collie.html" class="breed-card" data-size="medium">
+        <h3>Border Collie</h3>
+        <div class="breed-meta"><span class="breed-tag">Medium</span><span class="breed-tag">Most Intelligent</span></div>
+        <p>The most intelligent breed. Needs extensive mental and physical stimulation.</p>
+      </a>
+      <a href="dogs/boston-terrier.html" class="breed-card" data-size="small">
+        <h3>Boston Terrier</h3>
+        <div class="breed-meta"><span class="breed-tag">Small</span><span class="breed-tag">Adaptable</span></div>
+        <p>The "American Gentleman" - friendly, bright, and great apartment dogs.</p>
+      </a>
+      <a href="dogs/boxer.html" class="breed-card" data-size="large">
+        <h3>Boxer</h3>
+        <div class="breed-meta"><span class="breed-tag">Large</span><span class="breed-tag">Playful</span></div>
+        <p>Playful and patient with children. Stay puppy-like for years.</p>
+      </a>
+      <a href="dogs/brittany.html" class="breed-card" data-size="medium">
+        <h3>Brittany</h3>
+        <div class="breed-meta"><span class="breed-tag">Medium</span><span class="breed-tag">Athletic</span></div>
+        <p>Versatile sporting dogs with gentle temperament. Great for active families.</p>
+      </a>
+      <a href="dogs/bulldog.html" class="breed-card" data-size="medium">
+        <h3>Bulldog</h3>
+        <div class="breed-meta"><span class="breed-tag">Medium</span><span class="breed-tag">Low Energy</span></div>
+        <p>Calm, courageous, and friendly. Perfect couch companions.</p>
+      </a>
+    </div>
+
+    <h2 id="C">C</h2>
+    <div class="breed-grid">
+      <a href="dogs/cavalier-king-charles.html" class="breed-card" data-size="small">
+        <h3>Cavalier King Charles Spaniel</h3>
+        <div class="breed-meta"><span class="breed-tag">Small</span><span class="breed-tag">Affectionate</span></div>
+        <p>Sweet-natured companions that adapt to any lifestyle. Great for first-time owners.</p>
+      </a>
+      <a href="dogs/chihuahua.html" class="breed-card" data-size="small">
+        <h3>Chihuahua</h3>
+        <div class="breed-meta"><span class="breed-tag">Small</span><span class="breed-tag">Bold</span></div>
+        <p>Tiny but confident personalities. Devoted to their owners.</p>
+      </a>
+      <a href="dogs/cocker-spaniel.html" class="breed-card" data-size="medium">
+        <h3>Cocker Spaniel</h3>
+        <div class="breed-meta"><span class="breed-tag">Medium</span><span class="breed-tag">Merry</span></div>
+        <p>Happy, gentle family dogs with beautiful coats.</p>
+      </a>
+    </div>
+
+    <h2 id="D">D</h2>
+    <div class="breed-grid">
+      <a href="dogs/dachshund.html" class="breed-card" data-size="small">
+        <h3>Dachshund</h3>
+        <div class="breed-meta"><span class="breed-tag">Small</span><span class="breed-tag">Clever</span></div>
+        <p>Bold personalities in small bodies. Can be stubborn but devoted.</p>
+      </a>
+      <a href="dogs/doberman-pinscher.html" class="breed-card" data-size="large">
+        <h3>Doberman Pinscher</h3>
+        <div class="breed-meta"><span class="breed-tag">Large</span><span class="breed-tag">Loyal</span></div>
+        <p>Intelligent, loyal, and athletic. Excellent family protectors.</p>
+      </a>
+    </div>
+
+    <h2 id="E">E</h2>
+    <div class="breed-grid">
+      <a href="dogs/english-springer-spaniel.html" class="breed-card" data-size="medium">
+        <h3>English Springer Spaniel</h3>
+        <div class="breed-meta"><span class="breed-tag">Medium</span><span class="breed-tag">Friendly</span></div>
+        <p>Versatile sporting dogs, equally at home in the field or family room.</p>
+      </a>
+    </div>
+
+    <h2 id="F">F</h2>
+    <div class="breed-grid">
+      <a href="dogs/french-bulldog.html" class="breed-card" data-size="small">
+        <h3>French Bulldog</h3>
+        <div class="breed-meta"><span class="breed-tag">Small</span><span class="breed-tag">Adaptable</span></div>
+        <p>Perfect apartment dogs. Playful but not hyperactive.</p>
+      </a>
+    </div>
+
+    <h2 id="G">G</h2>
+    <div class="breed-grid">
+      <a href="dogs/german-shepherd.html" class="breed-card" data-size="large">
+        <h3>German Shepherd</h3>
+        <div class="breed-meta"><span class="breed-tag">Large</span><span class="breed-tag">Versatile</span></div>
+        <p>Loyal, confident, and courageous. Versatile working dogs.</p>
+      </a>
+      <a href="dogs/golden-retriever.html" class="breed-card" data-size="large">
+        <h3>Golden Retriever</h3>
+        <div class="breed-meta"><span class="breed-tag">Large</span><span class="breed-tag">Gentle</span></div>
+        <p>Gentle, intelligent, and devoted. Excellent family dogs.</p>
+      </a>
+      <a href="dogs/great-dane.html" class="breed-card" data-size="giant">
+        <h3>Great Dane</h3>
+        <div class="breed-meta"><span class="breed-tag">Giant</span><span class="breed-tag">Gentle Giant</span></div>
+        <p>Friendly, patient, and dependable. Surprisingly good apartment dogs.</p>
+      </a>
+    </div>
+
+    <h2 id="H">H</h2>
+    <div class="breed-grid">
+      <a href="dogs/havanese.html" class="breed-card" data-size="small">
+        <h3>Havanese</h3>
+        <div class="breed-meta"><span class="breed-tag">Small</span><span class="breed-tag">Outgoing</span></div>
+        <p>Cuba's national dog - cheerful, intelligent, and hypoallergenic.</p>
+      </a>
+    </div>
+
+    <h2 id="L">L</h2>
+    <div class="breed-grid">
+      <a href="dogs/labrador-retriever.html" class="breed-card" data-size="large">
+        <h3>Labrador Retriever</h3>
+        <div class="breed-meta"><span class="breed-tag">Large</span><span class="breed-tag">#1 Most Popular</span></div>
+        <p>America's most popular breed. Friendly, outgoing, and highly trainable.</p>
+      </a>
+    </div>
+
+    <h2 id="M">M</h2>
+    <div class="breed-grid">
+      <a href="dogs/maltese.html" class="breed-card" data-size="small">
+        <h3>Maltese</h3>
+        <div class="breed-meta"><span class="breed-tag">Small</span><span class="breed-tag">Gentle</span></div>
+        <p>Gentle, playful, and charming. Low-shedding lap dogs.</p>
+      </a>
+      <a href="dogs/miniature-schnauzer.html" class="breed-card" data-size="small">
+        <h3>Miniature Schnauzer</h3>
+        <div class="breed-meta"><span class="breed-tag">Small</span><span class="breed-tag">Smart</span></div>
+        <p>Friendly, smart, and trainable. Great family dogs.</p>
+      </a>
+    </div>
+
+    <h2 id="P">P</h2>
+    <div class="breed-grid">
+      <a href="dogs/pomeranian.html" class="breed-card" data-size="small">
+        <h3>Pomeranian</h3>
+        <div class="breed-meta"><span class="breed-tag">Small</span><span class="breed-tag">Lively</span></div>
+        <p>Bold and inquisitive with a big personality in a tiny package.</p>
+      </a>
+      <a href="dogs/poodle.html" class="breed-card" data-size="medium">
+        <h3>Poodle (Standard)</h3>
+        <div class="breed-meta"><span class="breed-tag">Medium-Large</span><span class="breed-tag">Hypoallergenic</span></div>
+        <p>Extremely intelligent and athletic. Low-shedding coat.</p>
+      </a>
+      <a href="dogs/pug.html" class="breed-card" data-size="small">
+        <h3>Pug</h3>
+        <div class="breed-meta"><span class="breed-tag">Small</span><span class="breed-tag">Charming</span></div>
+        <p>Charming, mischievous, and loving. Great companion dogs.</p>
+      </a>
+    </div>
+
+    <h2 id="R">R</h2>
+    <div class="breed-grid">
+      <a href="dogs/rottweiler.html" class="breed-card" data-size="large">
+        <h3>Rottweiler</h3>
+        <div class="breed-meta"><span class="breed-tag">Large</span><span class="breed-tag">Confident</span></div>
+        <p>Confident, calm, and courageous. Devoted family guardians.</p>
+      </a>
+    </div>
+
+    <h2 id="S">S</h2>
+    <div class="breed-grid">
+      <a href="dogs/shetland-sheepdog.html" class="breed-card" data-size="small">
+        <h3>Shetland Sheepdog</h3>
+        <div class="breed-meta"><span class="breed-tag">Small</span><span class="breed-tag">Bright</span></div>
+        <p>Bright, playful, and energetic. Miniature Collie look-alikes.</p>
+      </a>
+      <a href="dogs/shih-tzu.html" class="breed-card" data-size="small">
+        <h3>Shih Tzu</h3>
+        <div class="breed-meta"><span class="breed-tag">Small</span><span class="breed-tag">Affectionate</span></div>
+        <p>Bred for companionship. Happy in apartments, great with families.</p>
+      </a>
+      <a href="dogs/siberian-husky.html" class="breed-card" data-size="medium">
+        <h3>Siberian Husky</h3>
+        <div class="breed-meta"><span class="breed-tag">Medium</span><span class="breed-tag">Athletic</span></div>
+        <p>Stunning but challenging. Need extensive exercise and secure fencing.</p>
+      </a>
+    </div>
+
+    <h2 id="V">V</h2>
+    <div class="breed-grid">
+      <a href="dogs/vizsla.html" class="breed-card" data-size="medium">
+        <h3>Vizsla</h3>
+        <div class="breed-meta"><span class="breed-tag">Medium</span><span class="breed-tag">Affectionate</span></div>
+        <p>Gentle, affectionate, and athletic. "Velcro dogs" that love being close.</p>
+      </a>
+    </div>
+
+    <h2 id="W">W</h2>
+    <div class="breed-grid">
+      <a href="dogs/weimaraner.html" class="breed-card" data-size="large">
+        <h3>Weimaraner</h3>
+        <div class="breed-meta"><span class="breed-tag">Large</span><span class="breed-tag">Athletic</span></div>
+        <p>Graceful, athletic, and intelligent. Need lots of exercise.</p>
+      </a>
+    </div>
+
+    <h2 id="Y">Y</h2>
+    <div class="breed-grid">
+      <a href="dogs/yorkshire-terrier.html" class="breed-card" data-size="small">
+        <h3>Yorkshire Terrier</h3>
+        <div class="breed-meta"><span class="breed-tag">Small</span><span class="breed-tag">Spirited</span></div>
+        <p>Spirited and affectionate. Big personality, hypoallergenic coat.</p>
+      </a>
+    </div>
+
+    <div class="affiliate-callout">
+      <h4>Find Your Perfect Breed</h4>
+      <p>
+        <a href="../tools/breed-finder.html">Take Our Breed Finder Quiz</a> to get personalized recommendations based on your lifestyle.<br><br>
+        Consider <a href="https://embarkvet.com" target="_blank" rel="sponsored noopener">Embark DNA</a> or <a href="https://www.wisdompanel.com" target="_blank" rel="sponsored noopener">Wisdom Panel</a> to discover your dog's breed makeup.
+      </p>
+    </div>
+
+    <section class="info-card">
+      <h3>Need Help Choosing?</h3>
+      <p>Our AI assistant can answer detailed questions about any breed and help you find the perfect match.</p>
+      <div class="hero-actions">
+        <a href="../chat.html" class="primary-btn">Ask the AI About Dog Breeds</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI Pet Medical &amp; Vet Help Finder &mdash; educational guidance, real-world vet options, and curated resources.</p>
+    <p style="font-size: 0.85rem; margin-top: 8px;">Some suggestions may include sponsored partners.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      if (navToggle) {
+        navToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          navToggle.classList.toggle('active');
+        });
+      }
+
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const breedCards = document.querySelectorAll('.breed-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const filter = this.dataset.filter;
+
+          breedCards.forEach(card => {
+            if (filter === 'all' || card.dataset.size === filter ||
+                (filter === 'small' && card.dataset.size === 'small') ||
+                (filter === 'large' && (card.dataset.size === 'large' || card.dataset.size === 'giant'))) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
