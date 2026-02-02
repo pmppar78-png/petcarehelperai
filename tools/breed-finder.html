@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-6484141649562994">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6484141649562994" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK0N7BD82Q"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FK0N7BD82Q');</script>
+  <meta name="description" content="Find your perfect dog breed with our interactive quiz. Answer questions about your lifestyle, living space, activity level, and preferences to get personalized breed recommendations.">
+  <link rel="canonical" href="https://petcarehelperai.netlify.app/tools/breed-finder.html">
+  <title>Dog Breed Finder Quiz - What Dog Breed Is Right for Me? | Pet Care Helper AI</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .quiz-container {
+      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,253,250,0.9));
+      border-radius: 20px;
+      padding: 28px;
+      margin: 24px 0;
+      box-shadow: 0 8px 24px rgba(20,184,166,0.12);
+      border: 1px solid rgba(94,234,212,0.4);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .quiz-progress {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .quiz-progress::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: #E0F2FE;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+    .progress-step {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #E0F2FE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #64748b;
+      position: relative;
+      z-index: 2;
+      transition: all 0.3s;
+    }
+    .progress-step.active {
+      background: linear-gradient(135deg, #14B8A6, #0D9488);
+      color: white;
+      transform: scale(1.1);
+    }
+    .progress-step.completed {
+      background: #5EEAD4;
+      color: #0F766E;
+    }
+    .question-container {
+      display: none;
+    }
+    .question-container.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+    .question-text {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #0F172A;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .options-grid {
+      display: grid;
+      gap: 12px;
+    }
+    .option-btn {
+      padding: 16px 20px;
+      border: 2px solid #A7F3D0;
+      border-radius: 12px;
+      background: #fff;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.2s;
+      font-size: 1rem;
+    }
+    .option-btn:hover {
+      border-color: #14B8A6;
+      background: rgba(20,184,166,0.05);
+    }
+    .option-btn.selected {
+      border-color: #14B8A6;
+      background: linear-gradient(135deg, rgba(20,184,166,0.1), rgba(6,182,212,0.1));
+    }
+    .option-title {
+      font-weight: 600;
+      color: #0F172A;
+      margin-bottom: 4px;
+    }
+    .option-desc {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+    .quiz-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 24px;
+    }
+    .nav-btn {
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .nav-btn.back {
+      background: transparent;
+      border: 2px solid #5EEAD4;
+      color: #0F766E;
+    }
+    .nav-btn.back:hover {
+      background: rgba(94,234,212,0.2);
+    }
+    .nav-btn.next {
+      background: linear-gradient(135deg, #14B8A6, #0D9488);
+      border: none;
+      color: white;
+      box-shadow: 0 4px 12px rgba(20,184,166,0.3);
+    }
+    .nav-btn.next:hover {
+      background: linear-gradient(135deg, #0D9488, #0F766E);
+    }
+    .nav-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .results-container {
+      display: none;
+    }
+    .results-container.visible {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+    .results-title {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #0F172A;
+      margin-bottom: 24px;
+    }
+    .breed-result {
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 16px;
+      border: 2px solid #A7F3D0;
+      transition: all 0.2s;
+    }
+    .breed-result:hover {
+      border-color: #5EEAD4;
+      box-shadow: 0 4px 12px rgba(20,184,166,0.15);
+    }
+    .breed-result.top-match {
+      border-color: #14B8A6;
+      background: linear-gradient(135deg, rgba(20,184,166,0.05), rgba(6,182,212,0.05));
+    }
+    .match-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #14B8A6, #0D9488);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .breed-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 8px;
+    }
+    .breed-traits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .trait-tag {
+      background: #E0F2FE;
+      color: #0D9488;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+    }
+    .breed-desc {
+      color: #334155;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .breed-link {
+      display: inline-block;
+      color: #0D9488;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .breed-link:hover {
+      text-decoration: underline;
+    }
+    .restart-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin-top: 24px;
+      border: 2px solid #14B8A6;
+      background: transparent;
+      color: #0D9488;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .restart-btn:hover {
+      background: rgba(20,184,166,0.1);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-title">
+      <div class="logo-pill"></div>
+      <div>
+        <h1>Pet Care Helper AI</h1>
+        <p class="subtitle">Dogs &bull; Cats &bull; Birds &bull; Reptiles &bull; Fish</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../chat.html" class="nav-link">AI Pet Help</a></li>
+        <li><a href="../dogs.html" class="nav-link">Dogs</a></li>
+        <li><a href="../cats.html" class="nav-link">Cats</a></li>
+        <li><a href="../birds.html" class="nav-link">Birds</a></li>
+        <li><a href="../reptiles.html" class="nav-link">Reptiles</a></li>
+        <li><a href="../fish.html" class="nav-link">Fish</a></li>
+        <li><a href="../guides.html" class="nav-link">Guides</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a> <span>&rsaquo;</span>
+      <a href="index.html">Tools</a> <span>&rsaquo;</span>
+      Breed Finder Quiz
+    </div>
+
+    <article class="guide-content">
+      <h1>Dog Breed Finder Quiz</h1>
+      <p>Answer a few questions about your lifestyle and preferences to discover which dog breeds are the best match for you. Our quiz considers living space, activity level, experience, family situation, and more.</p>
+
+      <div class="quiz-container">
+        <div class="quiz-progress" id="progress">
+          <div class="progress-step active">1</div>
+          <div class="progress-step">2</div>
+          <div class="progress-step">3</div>
+          <div class="progress-step">4</div>
+          <div class="progress-step">5</div>
+          <div class="progress-step">6</div>
+          <div class="progress-step">7</div>
+        </div>
+
+        <div id="quizContent">
+          <!-- Question 1: Living Space -->
+          <div class="question-container active" data-question="1">
+            <p class="question-text">What type of home do you live in?</p>
+            <div class="options-grid">
+              <button class="option-btn" data-value="apartment">
+                <div class="option-title">Apartment / Condo</div>
+                <div class="option-desc">Limited space, possibly no yard, may have breed restrictions</div>
+              </button>
+              <button class="option-btn" data-value="house-small">
+                <div class="option-title">House with Small Yard</div>
+                <div class="option-desc">Some outdoor space but not extensive</div>
+              </button>
+              <button class="option-btn" data-value="house-large">
+                <div class="option-title">House with Large Yard</div>
+                <div class="option-desc">Plenty of outdoor space for a dog to run</div>
+              </button>
+              <button class="option-btn" data-value="rural">
+                <div class="option-title">Rural / Farm Property</div>
+                <div class="option-desc">Extensive land, possibly working dog needs</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Question 2: Activity Level -->
+          <div class="question-container" data-question="2">
+            <p class="question-text">How active is your lifestyle?</p>
+            <div class="options-grid">
+              <button class="option-btn" data-value="low">
+                <div class="option-title">Low Activity</div>
+                <div class="option-desc">Prefer relaxing at home, short walks are fine</div>
+              </button>
+              <button class="option-btn" data-value="moderate">
+                <div class="option-title">Moderately Active</div>
+                <div class="option-desc">Daily walks, occasional outdoor activities</div>
+              </button>
+              <button class="option-btn" data-value="high">
+                <div class="option-title">Very Active</div>
+                <div class="option-desc">Regular running, hiking, outdoor adventures</div>
+              </button>
+              <button class="option-btn" data-value="athletic">
+                <div class="option-title">Athletic / Outdoorsy</div>
+                <div class="option-desc">Want a dog for running, hiking, or dog sports</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Question 3: Experience -->
+          <div class="question-container" data-question="3">
+            <p class="question-text">What's your experience with dogs?</p>
+            <div class="options-grid">
+              <button class="option-btn" data-value="first">
+                <div class="option-title">First-Time Dog Owner</div>
+                <div class="option-desc">Never owned a dog before</div>
+              </button>
+              <button class="option-btn" data-value="some">
+                <div class="option-title">Some Experience</div>
+                <div class="option-desc">Grew up with dogs or had one before</div>
+              </button>
+              <button class="option-btn" data-value="experienced">
+                <div class="option-title">Experienced Owner</div>
+                <div class="option-desc">Have owned multiple dogs, comfortable with training</div>
+              </button>
+              <button class="option-btn" data-value="expert">
+                <div class="option-title">Expert / Professional</div>
+                <div class="option-desc">Professional experience or can handle any breed</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Question 4: Family -->
+          <div class="question-container" data-question="4">
+            <p class="question-text">Who lives in your household?</p>
+            <div class="options-grid">
+              <button class="option-btn" data-value="single">
+                <div class="option-title">Just Me</div>
+                <div class="option-desc">Single adult household</div>
+              </button>
+              <button class="option-btn" data-value="couple">
+                <div class="option-title">Adults Only</div>
+                <div class="option-desc">Couple or roommates, no children</div>
+              </button>
+              <button class="option-btn" data-value="young-kids">
+                <div class="option-title">Family with Young Children</div>
+                <div class="option-desc">Children under 10 years old</div>
+              </button>
+              <button class="option-btn" data-value="older-kids">
+                <div class="option-title">Family with Older Children</div>
+                <div class="option-desc">Children 10 and older</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Question 5: Time -->
+          <div class="question-container" data-question="5">
+            <p class="question-text">How much time can you dedicate to your dog daily?</p>
+            <div class="options-grid">
+              <button class="option-btn" data-value="limited">
+                <div class="option-title">Limited Time</div>
+                <div class="option-desc">Work long hours, 1-2 hours of direct attention</div>
+              </button>
+              <button class="option-btn" data-value="moderate">
+                <div class="option-title">Moderate Time</div>
+                <div class="option-desc">Can provide 2-3 hours of walks, play, and training</div>
+              </button>
+              <button class="option-btn" data-value="plenty">
+                <div class="option-title">Plenty of Time</div>
+                <div class="option-desc">Work from home or flexible schedule, 3+ hours</div>
+              </button>
+              <button class="option-btn" data-value="full">
+                <div class="option-title">Full-Time Availability</div>
+                <div class="option-desc">Home most of the day, can devote significant time</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Question 6: Size Preference -->
+          <div class="question-container" data-question="6">
+            <p class="question-text">What size dog do you prefer?</p>
+            <div class="options-grid">
+              <button class="option-btn" data-value="small">
+                <div class="option-title">Small (under 25 lbs)</div>
+                <div class="option-desc">Portable, apartment-friendly, less food cost</div>
+              </button>
+              <button class="option-btn" data-value="medium">
+                <div class="option-title">Medium (25-60 lbs)</div>
+                <div class="option-desc">Versatile size, good for most activities</div>
+              </button>
+              <button class="option-btn" data-value="large">
+                <div class="option-title">Large (60-100 lbs)</div>
+                <div class="option-desc">Imposing presence, great for active owners</div>
+              </button>
+              <button class="option-btn" data-value="any">
+                <div class="option-title">No Preference</div>
+                <div class="option-desc">Open to any size based on other factors</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Question 7: Grooming -->
+          <div class="question-container" data-question="7">
+            <p class="question-text">How much grooming are you willing to do?</p>
+            <div class="options-grid">
+              <button class="option-btn" data-value="minimal">
+                <div class="option-title">Minimal Grooming</div>
+                <div class="option-desc">Low-maintenance coat, occasional brushing</div>
+              </button>
+              <button class="option-btn" data-value="moderate">
+                <div class="option-title">Moderate Grooming</div>
+                <div class="option-desc">Weekly brushing, occasional professional grooming</div>
+              </button>
+              <button class="option-btn" data-value="high">
+                <div class="option-title">High Maintenance is OK</div>
+                <div class="option-desc">Willing to do daily brushing, regular grooming visits</div>
+              </button>
+              <button class="option-btn" data-value="hypo">
+                <div class="option-title">Need Low-Shedding / Hypoallergenic</div>
+                <div class="option-desc">Allergies or strong preference for minimal shedding</div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-nav">
+          <button class="nav-btn back" id="backBtn" disabled>Back</button>
+          <button class="nav-btn next" id="nextBtn" disabled>Next</button>
+        </div>
+
+        <div class="results-container" id="results">
+          <h2 class="results-title">Your Top Breed Matches</h2>
+          <div id="breedResults"></div>
+          <div class="affiliate-callout">
+            <h4>Prepare for Your New Dog</h4>
+            <p>
+              <a href="https://embarkvet.com" target="_blank" rel="sponsored noopener">Embark DNA</a> - Test your dog's genetics |
+              <a href="https://www.spotpetins.com" target="_blank" rel="sponsored noopener">Spot Insurance</a> - Protect your pup |
+              <a href="https://www.thefarmersdog.com" target="_blank" rel="sponsored noopener">The Farmer's Dog</a> - Fresh food delivery |
+              <a href="https://k9traininginstitute.com" target="_blank" rel="sponsored noopener">K9 Training</a> - Professional training
+            </p>
+          </div>
+          <button class="restart-btn" id="restartBtn">Take Quiz Again</button>
+        </div>
+      </div>
+
+      <h2>How Our Breed Matcher Works</h2>
+      <p>Our algorithm considers multiple factors to find breeds that match your lifestyle:</p>
+      <ul>
+        <li><strong>Living Space:</strong> Some breeds need room to run, others thrive in apartments</li>
+        <li><strong>Activity Level:</strong> Matching dog energy with owner energy prevents frustration</li>
+        <li><strong>Experience:</strong> Some breeds need experienced handlers for their strong personalities</li>
+        <li><strong>Family Situation:</strong> Child-friendly breeds are essential for families</li>
+        <li><strong>Time Availability:</strong> Some breeds need constant companionship</li>
+        <li><strong>Grooming Needs:</strong> Coat maintenance varies dramatically between breeds</li>
+      </ul>
+
+      <section class="info-card">
+        <h3>Want More Personalized Advice?</h3>
+        <p>Our AI assistant can provide detailed guidance about specific breeds and help you make the right choice.</p>
+        <div class="hero-actions">
+          <a href="../chat.html" class="primary-btn">Ask the AI About Dog Breeds</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI Pet Medical &amp; Vet Help Finder &mdash; educational guidance, real-world vet options, and curated resources.</p>
+    <p style="font-size: 0.85rem; margin-top: 8px;">Some suggestions may include sponsored partners.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      if (navToggle) {
+        navToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          navToggle.classList.toggle('active');
+        });
+      }
+
+      const questions = document.querySelectorAll('.question-container');
+      const progressSteps = document.querySelectorAll('.progress-step');
+      const backBtn = document.getElementById('backBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const results = document.getElementById('results');
+      const quizContent = document.getElementById('quizContent');
+
+      let currentQuestion = 1;
+      const answers = {};
+
+      const breeds = [
+        { name: 'Labrador Retriever', size: ['medium', 'large'], activity: ['moderate', 'high', 'athletic'], experience: ['first', 'some', 'experienced'], family: ['single', 'couple', 'young-kids', 'older-kids'], space: ['house-small', 'house-large', 'rural'], grooming: ['minimal', 'moderate'], traits: ['Friendly', 'Active', 'Family-Friendly'], desc: 'America\'s most popular breed. Friendly, outgoing, and great with families. High energy but highly trainable.' },
+        { name: 'Golden Retriever', size: ['medium', 'large'], activity: ['moderate', 'high'], experience: ['first', 'some', 'experienced'], family: ['single', 'couple', 'young-kids', 'older-kids'], space: ['house-small', 'house-large', 'rural'], grooming: ['moderate', 'high'], traits: ['Gentle', 'Intelligent', 'Devoted'], desc: 'Gentle, patient, and devoted. Excellent family dogs that are eager to please and easy to train.' },
+        { name: 'French Bulldog', size: ['small'], activity: ['low', 'moderate'], experience: ['first', 'some'], family: ['single', 'couple', 'young-kids', 'older-kids'], space: ['apartment', 'house-small', 'house-large'], grooming: ['minimal'], traits: ['Adaptable', 'Playful', 'Low-Energy'], desc: 'Perfect apartment dogs. Playful but not hyperactive, great companions for city living.' },
+        { name: 'Cavalier King Charles Spaniel', size: ['small'], activity: ['low', 'moderate'], experience: ['first', 'some'], family: ['single', 'couple', 'young-kids', 'older-kids'], space: ['apartment', 'house-small', 'house-large'], grooming: ['moderate'], traits: ['Affectionate', 'Gentle', 'Adaptable'], desc: 'Sweet-natured companions that adapt to any lifestyle. Great for first-time owners and families.' },
+        { name: 'Poodle (Standard)', size: ['medium', 'large'], activity: ['moderate', 'high'], experience: ['some', 'experienced'], family: ['single', 'couple', 'older-kids'], space: ['house-small', 'house-large'], grooming: ['high', 'hypo'], traits: ['Intelligent', 'Hypoallergenic', 'Athletic'], desc: 'Extremely intelligent and athletic. Low-shedding coat perfect for allergy sufferers.' },
+        { name: 'Border Collie', size: ['medium'], activity: ['high', 'athletic'], experience: ['experienced', 'expert'], family: ['single', 'couple', 'older-kids'], space: ['house-large', 'rural'], grooming: ['moderate'], traits: ['Brilliant', 'Energetic', 'Workaholic'], desc: 'The most intelligent breed. Needs extensive mental and physical stimulation. Not for novice owners.' },
+        { name: 'Beagle', size: ['small', 'medium'], activity: ['moderate', 'high'], experience: ['first', 'some'], family: ['single', 'couple', 'young-kids', 'older-kids'], space: ['house-small', 'house-large'], grooming: ['minimal'], traits: ['Curious', 'Merry', 'Friendly'], desc: 'Merry and curious hounds. Great with kids but can be stubborn. Follow their nose everywhere.' },
+        { name: 'Australian Shepherd', size: ['medium'], activity: ['high', 'athletic'], experience: ['some', 'experienced'], family: ['couple', 'older-kids'], space: ['house-large', 'rural'], grooming: ['moderate', 'high'], traits: ['Smart', 'Work-Oriented', 'Energetic'], desc: 'Brilliant herding dogs that need a job. Excellent for active owners who want a dog sport partner.' },
+        { name: 'Shih Tzu', size: ['small'], activity: ['low', 'moderate'], experience: ['first', 'some'], family: ['single', 'couple', 'young-kids', 'older-kids'], space: ['apartment', 'house-small'], grooming: ['high'], traits: ['Affectionate', 'Playful', 'Adaptable'], desc: 'Bred solely for companionship. Happy in apartments, great with families, but needs regular grooming.' },
+        { name: 'German Shepherd', size: ['large'], activity: ['high', 'athletic'], experience: ['some', 'experienced', 'expert'], family: ['couple', 'older-kids'], space: ['house-large', 'rural'], grooming: ['moderate'], traits: ['Loyal', 'Confident', 'Courageous'], desc: 'Versatile working dogs. Loyal and protective but need early socialization and experienced handling.' },
+        { name: 'Siberian Husky', size: ['medium', 'large'], activity: ['high', 'athletic'], experience: ['experienced', 'expert'], family: ['couple', 'older-kids'], space: ['house-large', 'rural'], grooming: ['high'], traits: ['Independent', 'Energetic', 'Friendly'], desc: 'Stunning but challenging. Need extensive exercise and have strong escape artist tendencies.' },
+        { name: 'Bulldog', size: ['medium'], activity: ['low'], experience: ['first', 'some'], family: ['single', 'couple', 'young-kids', 'older-kids'], space: ['apartment', 'house-small'], grooming: ['minimal'], traits: ['Calm', 'Courageous', 'Friendly'], desc: 'Gentle, dignified, and calm. Perfect couch companions but watch for breathing issues.' },
+        { name: 'Boxer', size: ['medium', 'large'], activity: ['moderate', 'high'], experience: ['some', 'experienced'], family: ['couple', 'young-kids', 'older-kids'], space: ['house-small', 'house-large'], grooming: ['minimal'], traits: ['Playful', 'Patient', 'Protective'], desc: 'Playful and patient with children. Stay puppy-like for years. Great family protectors.' },
+        { name: 'Dachshund', size: ['small'], activity: ['moderate'], experience: ['first', 'some'], family: ['single', 'couple', 'older-kids'], space: ['apartment', 'house-small'], grooming: ['minimal', 'moderate'], traits: ['Clever', 'Stubborn', 'Courageous'], desc: 'Bold personalities in small bodies. Can be stubborn but devoted companions.' },
+        { name: 'Great Dane', size: ['large'], activity: ['moderate'], experience: ['some', 'experienced'], family: ['couple', 'older-kids'], space: ['house-large'], grooming: ['minimal'], traits: ['Friendly', 'Patient', 'Gentle Giant'], desc: 'Gentle giants that are surprisingly good apartment dogs (if you have space). Calm and friendly.' }
+      ];
+
+      function updateProgress() {
+        progressSteps.forEach((step, index) => {
+          step.classList.remove('active', 'completed');
+          if (index + 1 < currentQuestion) {
+            step.classList.add('completed');
+          } else if (index + 1 === currentQuestion) {
+            step.classList.add('active');
+          }
+        });
+      }
+
+      function showQuestion(num) {
+        questions.forEach(q => q.classList.remove('active'));
+        document.querySelector(`[data-question="${num}"]`).classList.add('active');
+        backBtn.disabled = num === 1;
+        nextBtn.textContent = num === 7 ? 'See Results' : 'Next';
+        updateProgress();
+      }
+
+      document.querySelectorAll('.option-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const container = this.closest('.question-container');
+          container.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+          this.classList.add('selected');
+          answers[currentQuestion] = this.dataset.value;
+          nextBtn.disabled = false;
+        });
+      });
+
+      backBtn.addEventListener('click', function() {
+        if (currentQuestion > 1) {
+          currentQuestion--;
+          showQuestion(currentQuestion);
+          nextBtn.disabled = !answers[currentQuestion];
+        }
+      });
+
+      nextBtn.addEventListener('click', function() {
+        if (currentQuestion < 7) {
+          currentQuestion++;
+          showQuestion(currentQuestion);
+          nextBtn.disabled = !answers[currentQuestion];
+        } else {
+          showResults();
+        }
+      });
+
+      function showResults() {
+        quizContent.style.display = 'none';
+        document.querySelector('.quiz-nav').style.display = 'none';
+        document.getElementById('progress').style.display = 'none';
+
+        const scored = breeds.map(breed => {
+          let score = 0;
+          if (breed.space.includes(answers[1])) score += 20;
+          if (breed.activity.includes(answers[2])) score += 25;
+          if (breed.experience.includes(answers[3])) score += 15;
+          if (breed.family.includes(answers[4])) score += 15;
+          if (answers[5] === 'full' || answers[5] === 'plenty') score += 10;
+          else if (answers[5] === 'limited' && breed.activity.includes('low')) score += 10;
+          if (answers[6] === 'any' || breed.size.includes(answers[6])) score += 10;
+          if (breed.grooming.includes(answers[7])) score += 15;
+          return { ...breed, score };
+        });
+
+        scored.sort((a, b) => b.score - a.score);
+        const top5 = scored.slice(0, 5);
+
+        let html = '';
+        top5.forEach((breed, i) => {
+          const isTop = i === 0;
+          html += `
+            <div class="breed-result ${isTop ? 'top-match' : ''}">
+              ${isTop ? '<span class="match-badge">Best Match</span>' : ''}
+              <div class="breed-name">${breed.name}</div>
+              <div class="breed-traits">
+                ${breed.traits.map(t => `<span class="trait-tag">${t}</span>`).join('')}
+              </div>
+              <p class="breed-desc">${breed.desc}</p>
+              <a href="../breeds/dogs/${breed.name.toLowerCase().replace(/ /g, '-').replace(/[()]/g, '')}.html" class="breed-link">Learn more about ${breed.name} &rarr;</a>
+            </div>
+          `;
+        });
+
+        document.getElementById('breedResults').innerHTML = html;
+        results.classList.add('visible');
+      }
+
+      document.getElementById('restartBtn').addEventListener('click', function() {
+        currentQuestion = 1;
+        Object.keys(answers).forEach(k => delete answers[k]);
+        document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+        quizContent.style.display = 'block';
+        document.querySelector('.quiz-nav').style.display = 'flex';
+        document.getElementById('progress').style.display = 'flex';
+        results.classList.remove('visible');
+        showQuestion(1);
+        nextBtn.disabled = true;
+      });
+    });
+  </script>
+</body>
+</html>

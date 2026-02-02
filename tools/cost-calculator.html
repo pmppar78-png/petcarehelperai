@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-6484141649562994">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6484141649562994" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK0N7BD82Q"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FK0N7BD82Q');</script>
+  <meta name="description" content="Calculate the true cost of owning a dog or cat. Comprehensive pet cost calculator covering food, vet care, insurance, grooming, and more. Plan your pet budget.">
+  <link rel="canonical" href="https://petcarehelperai.netlify.app/tools/cost-calculator.html">
+  <title>Pet Cost Calculator - Annual Cost of Owning a Dog or Cat | Pet Care Helper AI</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .calculator-container {
+      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,253,250,0.9));
+      border-radius: 20px;
+      padding: 28px;
+      margin: 24px 0;
+      box-shadow: 0 8px 24px rgba(20,184,166,0.12);
+      border: 1px solid rgba(94,234,212,0.4);
+    }
+    .calc-form {
+      display: grid;
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group label {
+      font-weight: 600;
+      color: #0F172A;
+      font-size: 0.95rem;
+    }
+    .form-group select,
+    .form-group input {
+      padding: 12px 16px;
+      border: 2px solid #A7F3D0;
+      border-radius: 10px;
+      font-size: 1rem;
+      background: #fff;
+      transition: border-color 0.2s;
+    }
+    .form-group select:focus,
+    .form-group input:focus {
+      outline: none;
+      border-color: #14B8A6;
+    }
+    .calc-btn {
+      background: linear-gradient(135deg, #14B8A6, #0D9488);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(20,184,166,0.3);
+      transition: all 0.2s;
+    }
+    .calc-btn:hover {
+      background: linear-gradient(135deg, #0D9488, #0F766E);
+      transform: translateY(-2px);
+    }
+    .results-container {
+      display: none;
+      background: linear-gradient(135deg, #F0FDFA, #E0F2FE);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 24px;
+      border: 2px solid #5EEAD4;
+    }
+    .results-container.visible {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+    .result-total {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .result-value {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #0D9488;
+    }
+    .result-label {
+      color: #334155;
+      font-size: 0.95rem;
+    }
+    .cost-breakdown {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .cost-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid #E0F2FE;
+    }
+    .cost-row:last-child {
+      border-bottom: none;
+    }
+    .cost-row.total-row {
+      background: linear-gradient(135deg, #14B8A6, #0D9488);
+      color: white;
+      font-weight: 600;
+    }
+    .cost-category {
+      color: #334155;
+    }
+    .cost-amount {
+      font-weight: 600;
+      color: #0D9488;
+    }
+    .total-row .cost-amount {
+      color: white;
+    }
+    .savings-tip {
+      background: linear-gradient(135deg, #FEF3C7, #FEF9C3);
+      border: 1px solid #F59E0B;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 20px;
+    }
+    .savings-tip h4 {
+      color: #B45309;
+      margin: 0 0 8px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .inline-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 500px) {
+      .inline-group {
+        grid-template-columns: 1fr;
+      }
+      .result-value {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-title">
+      <div class="logo-pill"></div>
+      <div>
+        <h1>Pet Care Helper AI</h1>
+        <p class="subtitle">Dogs &bull; Cats &bull; Birds &bull; Reptiles &bull; Fish</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../chat.html" class="nav-link">AI Pet Help</a></li>
+        <li><a href="../dogs.html" class="nav-link">Dogs</a></li>
+        <li><a href="../cats.html" class="nav-link">Cats</a></li>
+        <li><a href="../birds.html" class="nav-link">Birds</a></li>
+        <li><a href="../reptiles.html" class="nav-link">Reptiles</a></li>
+        <li><a href="../fish.html" class="nav-link">Fish</a></li>
+        <li><a href="../guides.html" class="nav-link">Guides</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a> <span>&rsaquo;</span>
+      <a href="index.html">Tools</a> <span>&rsaquo;</span>
+      Cost Calculator
+    </div>
+
+    <article class="guide-content">
+      <h1>Pet Cost Calculator</h1>
+      <p>Planning to get a pet? Already have one and want to budget better? This calculator estimates the true annual cost of pet ownership based on your pet type, size, and care choices. No hidden surprises – know what to expect financially.</p>
+
+      <div class="calculator-container">
+        <form class="calc-form" id="costCalcForm">
+          <div class="form-group">
+            <label for="petType">Pet Type</label>
+            <select id="petType" required>
+              <option value="">Select pet type...</option>
+              <option value="dog-small">Dog (Small: under 25 lbs)</option>
+              <option value="dog-medium">Dog (Medium: 25-60 lbs)</option>
+              <option value="dog-large">Dog (Large: 60-100 lbs)</option>
+              <option value="dog-giant">Dog (Giant: over 100 lbs)</option>
+              <option value="cat">Cat</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="foodQuality">Food Quality</label>
+            <select id="foodQuality" required>
+              <option value="">Select food quality...</option>
+              <option value="budget">Budget (store brand)</option>
+              <option value="mid">Mid-Range (quality kibble)</option>
+              <option value="premium">Premium (high-quality brands)</option>
+              <option value="fresh">Fresh/Raw (subscription services)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="insurance">Pet Insurance</label>
+            <select id="insurance" required>
+              <option value="">Will you have pet insurance?</option>
+              <option value="none">No insurance</option>
+              <option value="accident">Accident-only plan</option>
+              <option value="full">Comprehensive plan</option>
+              <option value="wellness">Comprehensive + Wellness</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="grooming">Grooming Needs</label>
+            <select id="grooming" required>
+              <option value="">Select grooming approach...</option>
+              <option value="diy">DIY at home</option>
+              <option value="basic">Basic professional grooming (4x/year)</option>
+              <option value="regular">Regular professional grooming (8x/year)</option>
+              <option value="frequent">Frequent grooming (monthly)</option>
+            </select>
+          </div>
+
+          <div class="inline-group">
+            <div class="form-group">
+              <label for="boarding">Boarding/Pet Sitting (days/year)</label>
+              <select id="boarding">
+                <option value="0">None</option>
+                <option value="7">1 week</option>
+                <option value="14">2 weeks</option>
+                <option value="21">3 weeks</option>
+                <option value="30">1 month+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="training">Professional Training</label>
+              <select id="training">
+                <option value="none">None</option>
+                <option value="basic">Basic class</option>
+                <option value="private">Private sessions</option>
+                <option value="intensive">Intensive program</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="calc-btn">Calculate Annual Cost</button>
+        </form>
+
+        <div class="results-container" id="results">
+          <div class="result-total">
+            <p class="result-label">Estimated Annual Cost</p>
+            <div class="result-value" id="totalCost">$0</div>
+            <p class="result-label" id="monthlyLabel">($0/month)</p>
+          </div>
+
+          <div class="cost-breakdown" id="costBreakdown">
+            <!-- Populated by JavaScript -->
+          </div>
+
+          <div class="savings-tip" id="savingsTip">
+            <h4>Ways to Save</h4>
+            <p id="savingsContent"></p>
+          </div>
+
+          <div class="affiliate-callout" style="margin-top: 20px;">
+            <h4>Recommended Money-Saving Options</h4>
+            <p id="savingsRecommendations"></p>
+          </div>
+        </div>
+      </div>
+
+      <h2>What's Included in Pet Ownership Costs</h2>
+
+      <h3>Recurring Annual Costs</h3>
+      <ul>
+        <li><strong>Food:</strong> Daily nutrition, treats, and supplements</li>
+        <li><strong>Veterinary Care:</strong> Annual exams, vaccinations, preventive medications</li>
+        <li><strong>Pet Insurance:</strong> Monthly premiums (optional but recommended)</li>
+        <li><strong>Grooming:</strong> Haircuts, nail trims, bathing, dental care</li>
+        <li><strong>Supplies:</strong> Litter (cats), poop bags, toys, beds, replacements</li>
+        <li><strong>Boarding/Sitting:</strong> Care when you travel</li>
+      </ul>
+
+      <h3>First-Year Extra Costs (Not in Calculator)</h3>
+      <ul>
+        <li><strong>Adoption/Purchase:</strong> $50-$500 (shelter) to $500-$3,000+ (breeder)</li>
+        <li><strong>Spay/Neuter:</strong> $150-$500</li>
+        <li><strong>Microchipping:</strong> $25-$50</li>
+        <li><strong>Initial Supplies:</strong> Crate, bed, bowls, leash, collar – $200-$500</li>
+        <li><strong>Puppy/Kitten Vaccines:</strong> Series of 3-4 visits – $200-$400</li>
+      </ul>
+
+      <h3>Potential Emergency Costs</h3>
+      <ul>
+        <li><strong>Emergency vet visit:</strong> $500-$2,000</li>
+        <li><strong>Surgery:</strong> $1,500-$7,000+</li>
+        <li><strong>Chronic condition management:</strong> $100-$500/month</li>
+      </ul>
+
+      <div class="affiliate-callout">
+        <h4>Protect Against Unexpected Costs</h4>
+        <p>
+          <a href="https://www.spotpetins.com" target="_blank" rel="sponsored noopener">Spot Pet Insurance</a> - Customizable coverage |
+          <a href="https://www.lemonade.com/pet" target="_blank" rel="sponsored noopener">Lemonade Pet</a> - From $15/month |
+          <a href="https://trupanion.com" target="_blank" rel="sponsored noopener">Trupanion</a> - 90% coverage, direct vet pay |
+          <a href="https://www.pumpkin.care" target="_blank" rel="sponsored noopener">Pumpkin</a> - Insurance + wellness
+        </p>
+      </div>
+
+      <h2>Tips for Reducing Pet Costs</h2>
+      <ul>
+        <li><strong>Buy food in bulk:</strong> Save 10-30% with larger bags or autoship</li>
+        <li><strong>Get pet insurance early:</strong> Lower premiums, no pre-existing condition exclusions</li>
+        <li><strong>Use preventive care:</strong> Dental cleanings prevent expensive extractions</li>
+        <li><strong>Compare pharmacy prices:</strong> Online pharmacies are often 20-40% cheaper</li>
+        <li><strong>Learn basic grooming:</strong> Nail trims and brushing at home save hundreds</li>
+        <li><strong>Consider pet sitting swaps:</strong> Exchange care with other pet owners</li>
+      </ul>
+
+      <section class="info-card">
+        <h3>Questions About Pet Costs?</h3>
+        <p>Our AI assistant can help you understand specific costs for your pet's breed, health needs, or situation.</p>
+        <div class="hero-actions">
+          <a href="../chat.html" class="primary-btn">Ask the AI About Pet Budgeting</a>
+        </div>
+      </section>
+    </article>
+
+    <section class="transparency">
+      <h3>Disclaimer</h3>
+      <p>Cost estimates are based on national averages and may vary significantly by location, specific pet needs, and market conditions. Actual costs may be higher or lower. This calculator does not include first-year setup costs or emergency/illness expenses.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI Pet Medical &amp; Vet Help Finder &mdash; educational guidance, real-world vet options, and curated resources.</p>
+    <p style="font-size: 0.85rem; margin-top: 8px;">Some suggestions may include sponsored partners.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      if (navToggle) {
+        navToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          navToggle.classList.toggle('active');
+        });
+      }
+
+      const form = document.getElementById('costCalcForm');
+      const results = document.getElementById('results');
+
+      const costs = {
+        food: {
+          'dog-small': { budget: 300, mid: 500, premium: 800, fresh: 1500 },
+          'dog-medium': { budget: 400, mid: 700, premium: 1100, fresh: 2400 },
+          'dog-large': { budget: 550, mid: 900, premium: 1400, fresh: 3600 },
+          'dog-giant': { budget: 700, mid: 1200, premium: 1800, fresh: 4800 },
+          'cat': { budget: 200, mid: 400, premium: 700, fresh: 1200 }
+        },
+        vet: {
+          'dog-small': 350, 'dog-medium': 400, 'dog-large': 450, 'dog-giant': 500, 'cat': 300
+        },
+        insurance: {
+          'dog-small': { none: 0, accident: 150, full: 400, wellness: 600 },
+          'dog-medium': { none: 0, accident: 200, full: 550, wellness: 750 },
+          'dog-large': { none: 0, accident: 250, full: 700, wellness: 900 },
+          'dog-giant': { none: 0, accident: 300, full: 900, wellness: 1100 },
+          'cat': { none: 0, accident: 100, full: 300, wellness: 450 }
+        },
+        grooming: {
+          'dog-small': { diy: 50, basic: 200, regular: 400, frequent: 600 },
+          'dog-medium': { diy: 75, basic: 280, regular: 560, frequent: 840 },
+          'dog-large': { diy: 100, basic: 360, regular: 720, frequent: 1080 },
+          'dog-giant': { diy: 125, basic: 440, regular: 880, frequent: 1320 },
+          'cat': { diy: 30, basic: 120, regular: 240, frequent: 360 }
+        },
+        supplies: {
+          'dog-small': 200, 'dog-medium': 250, 'dog-large': 300, 'dog-giant': 400, 'cat': 300
+        },
+        boarding: {
+          'dog-small': 40, 'dog-medium': 50, 'dog-large': 60, 'dog-giant': 75, 'cat': 30
+        },
+        training: {
+          none: 0, basic: 200, private: 600, intensive: 1500
+        }
+      };
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const petType = document.getElementById('petType').value;
+        const foodQuality = document.getElementById('foodQuality').value;
+        const insurance = document.getElementById('insurance').value;
+        const grooming = document.getElementById('grooming').value;
+        const boardingDays = parseInt(document.getElementById('boarding').value);
+        const training = document.getElementById('training').value;
+
+        const foodCost = costs.food[petType][foodQuality];
+        const vetCost = costs.vet[petType];
+        const insuranceCost = costs.insurance[petType][insurance];
+        const groomingCost = costs.grooming[petType][grooming];
+        const suppliesCost = costs.supplies[petType];
+        const boardingCost = boardingDays * costs.boarding[petType];
+        const trainingCost = costs.training[training];
+
+        const totalCost = foodCost + vetCost + insuranceCost + groomingCost + suppliesCost + boardingCost + trainingCost;
+        const monthlyCost = Math.round(totalCost / 12);
+
+        document.getElementById('totalCost').textContent = '$' + totalCost.toLocaleString();
+        document.getElementById('monthlyLabel').textContent = '($' + monthlyCost.toLocaleString() + '/month)';
+
+        let breakdownHTML = '';
+        breakdownHTML += '<div class="cost-row"><span class="cost-category">Food & Treats</span><span class="cost-amount">$' + foodCost.toLocaleString() + '</span></div>';
+        breakdownHTML += '<div class="cost-row"><span class="cost-category">Veterinary Care</span><span class="cost-amount">$' + vetCost.toLocaleString() + '</span></div>';
+        breakdownHTML += '<div class="cost-row"><span class="cost-category">Pet Insurance</span><span class="cost-amount">$' + insuranceCost.toLocaleString() + '</span></div>';
+        breakdownHTML += '<div class="cost-row"><span class="cost-category">Grooming</span><span class="cost-amount">$' + groomingCost.toLocaleString() + '</span></div>';
+        breakdownHTML += '<div class="cost-row"><span class="cost-category">Supplies & Toys</span><span class="cost-amount">$' + suppliesCost.toLocaleString() + '</span></div>';
+        if (boardingCost > 0) {
+          breakdownHTML += '<div class="cost-row"><span class="cost-category">Boarding/Pet Sitting</span><span class="cost-amount">$' + boardingCost.toLocaleString() + '</span></div>';
+        }
+        if (trainingCost > 0) {
+          breakdownHTML += '<div class="cost-row"><span class="cost-category">Training</span><span class="cost-amount">$' + trainingCost.toLocaleString() + '</span></div>';
+        }
+        breakdownHTML += '<div class="cost-row total-row"><span class="cost-category">Total Annual Cost</span><span class="cost-amount">$' + totalCost.toLocaleString() + '</span></div>';
+
+        document.getElementById('costBreakdown').innerHTML = breakdownHTML;
+
+        // Savings tips
+        let savingsHTML = '';
+        if (insurance === 'none') {
+          savingsHTML += 'Consider pet insurance – a single emergency can cost $2,000-$5,000+. ';
+        }
+        if (foodQuality === 'fresh') {
+          savingsHTML += 'Mix fresh food with quality kibble to reduce costs while maintaining nutrition. ';
+        }
+        if (grooming !== 'diy') {
+          savingsHTML += 'Learn basic grooming at home (brushing, nail trims) to reduce professional grooming visits. ';
+        }
+        savingsHTML += 'Use Autoship services for 20-35% savings on food and supplies.';
+
+        document.getElementById('savingsContent').textContent = savingsHTML;
+
+        // Recommendations
+        const isDog = petType.startsWith('dog');
+        let recsHTML = '';
+        if (isDog) {
+          recsHTML = `
+            <a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener">Chewy Autoship</a> (save up to 35%) |
+            <a href="https://www.spotpetins.com" target="_blank" rel="sponsored noopener">Spot Insurance</a> |
+            <a href="https://www.1800petmeds.com" target="_blank" rel="sponsored noopener">1-800-PetMeds</a> (pharmacy savings) |
+            <a href="https://www.rover.com" target="_blank" rel="sponsored noopener">Rover</a> (affordable pet sitting)
+          `;
+        } else {
+          recsHTML = `
+            <a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener">Chewy Autoship</a> (save up to 35%) |
+            <a href="https://www.lemonade.com/pet" target="_blank" rel="sponsored noopener">Lemonade Pet</a> (from $15/mo) |
+            <a href="https://www.1800petmeds.com" target="_blank" rel="sponsored noopener">1-800-PetMeds</a> |
+            <a href="https://www.trustedhousesitters.com" target="_blank" rel="sponsored noopener">TrustedHousesitters</a>
+          `;
+        }
+        document.getElementById('savingsRecommendations').innerHTML = recsHTML;
+
+        results.classList.add('visible');
+        results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+</body>
+</html>

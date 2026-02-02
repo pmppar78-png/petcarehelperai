@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-6484141649562994">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6484141649562994" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK0N7BD82Q"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FK0N7BD82Q');</script>
+  <meta name="description" content="Free pet food calculator. Calculate exactly how much to feed your dog or cat based on weight, age, activity level, and food type. Prevent obesity and malnutrition.">
+  <link rel="canonical" href="https://petcarehelperai.netlify.app/tools/food-calculator.html">
+  <title>Pet Food Calculator - How Much to Feed Your Dog or Cat | Pet Care Helper AI</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .calculator-container {
+      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,253,250,0.9));
+      border-radius: 20px;
+      padding: 28px;
+      margin: 24px 0;
+      box-shadow: 0 8px 24px rgba(20,184,166,0.12);
+      border: 1px solid rgba(94,234,212,0.4);
+    }
+    .calc-form {
+      display: grid;
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group label {
+      font-weight: 600;
+      color: #0F172A;
+      font-size: 0.95rem;
+    }
+    .form-group select,
+    .form-group input {
+      padding: 12px 16px;
+      border: 2px solid #A7F3D0;
+      border-radius: 10px;
+      font-size: 1rem;
+      background: #fff;
+      transition: border-color 0.2s;
+    }
+    .form-group select:focus,
+    .form-group input:focus {
+      outline: none;
+      border-color: #14B8A6;
+    }
+    .calc-btn {
+      background: linear-gradient(135deg, #14B8A6, #0D9488);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(20,184,166,0.3);
+      transition: all 0.2s;
+    }
+    .calc-btn:hover {
+      background: linear-gradient(135deg, #0D9488, #0F766E);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(20,184,166,0.4);
+    }
+    .results-container {
+      display: none;
+      background: linear-gradient(135deg, #F0FDFA, #E0F2FE);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 24px;
+      border: 2px solid #5EEAD4;
+    }
+    .results-container.visible {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+    .result-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #0D9488;
+      text-align: center;
+    }
+    .result-label {
+      text-align: center;
+      color: #334155;
+      margin-bottom: 16px;
+    }
+    .result-details {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+    .result-details h4 {
+      margin: 0 0 12px;
+      color: #0F172A;
+    }
+    .result-details ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .result-details li {
+      margin-bottom: 8px;
+      color: #334155;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .inline-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 500px) {
+      .inline-group {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-title">
+      <div class="logo-pill"></div>
+      <div>
+        <h1>Pet Care Helper AI</h1>
+        <p class="subtitle">Dogs &bull; Cats &bull; Birds &bull; Reptiles &bull; Fish</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../chat.html" class="nav-link">AI Pet Help</a></li>
+        <li><a href="../dogs.html" class="nav-link">Dogs</a></li>
+        <li><a href="../cats.html" class="nav-link">Cats</a></li>
+        <li><a href="../birds.html" class="nav-link">Birds</a></li>
+        <li><a href="../reptiles.html" class="nav-link">Reptiles</a></li>
+        <li><a href="../fish.html" class="nav-link">Fish</a></li>
+        <li><a href="../guides.html" class="nav-link">Guides</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a> <span>&rsaquo;</span>
+      <a href="index.html">Tools</a> <span>&rsaquo;</span>
+      Food Calculator
+    </div>
+
+    <article class="guide-content">
+      <h1>Pet Food Calculator</h1>
+      <p>Calculate exactly how much food your dog or cat needs daily. This calculator considers your pet's weight, age, activity level, and body condition to provide personalized feeding recommendations that help prevent obesity and ensure proper nutrition.</p>
+
+      <div class="calculator-container">
+        <form class="calc-form" id="foodCalcForm">
+          <div class="form-group">
+            <label for="petType">Pet Type</label>
+            <select id="petType" required>
+              <option value="">Select pet type...</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </div>
+
+          <div class="inline-group">
+            <div class="form-group">
+              <label for="weight">Weight</label>
+              <input type="number" id="weight" min="1" max="300" step="0.1" placeholder="Enter weight" required>
+            </div>
+            <div class="form-group">
+              <label for="weightUnit">Unit</label>
+              <select id="weightUnit">
+                <option value="lbs">Pounds (lbs)</option>
+                <option value="kg">Kilograms (kg)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="age">Life Stage</label>
+            <select id="age" required>
+              <option value="">Select life stage...</option>
+              <option value="puppy">Puppy/Kitten (under 1 year)</option>
+              <option value="adult">Adult (1-7 years)</option>
+              <option value="senior">Senior (7+ years)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="activity">Activity Level</label>
+            <select id="activity" required>
+              <option value="">Select activity level...</option>
+              <option value="low">Low (mostly indoor, minimal exercise)</option>
+              <option value="moderate">Moderate (regular walks, some play)</option>
+              <option value="high">High (very active, working dog, athletic)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="condition">Body Condition</label>
+            <select id="condition" required>
+              <option value="">Select body condition...</option>
+              <option value="underweight">Underweight (ribs visible)</option>
+              <option value="ideal">Ideal (ribs easily felt)</option>
+              <option value="overweight">Overweight (ribs hard to feel)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="neutered">Spayed/Neutered?</label>
+            <select id="neutered" required>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-btn">Calculate Daily Food Amount</button>
+        </form>
+
+        <div class="results-container" id="results">
+          <p class="result-label">Your pet's recommended daily calories:</p>
+          <div class="result-value" id="calorieResult">0 kcal/day</div>
+
+          <div class="result-details">
+            <h4>Feeding Guide</h4>
+            <div id="feedingGuide"></div>
+          </div>
+
+          <div class="affiliate-callout" style="margin-top: 20px;">
+            <h4>Recommended Food Options</h4>
+            <p id="foodRecommendations"></p>
+          </div>
+        </div>
+      </div>
+
+      <h2>How the Calculator Works</h2>
+      <p>This calculator uses the Resting Energy Requirement (RER) formula, which is the standard veterinary method for calculating pet caloric needs:</p>
+      <ul>
+        <li><strong>RER = 70 × (body weight in kg)^0.75</strong></li>
+        <li>This base value is then multiplied by factors for age, activity, body condition, and neutering status</li>
+        <li>Puppies and kittens need more calories (up to 2-3x RER)</li>
+        <li>Senior pets typically need fewer calories</li>
+        <li>Active working dogs may need significantly more</li>
+      </ul>
+
+      <h2>Important Feeding Tips</h2>
+      <h3>For Dogs</h3>
+      <ul>
+        <li><strong>Divide meals:</strong> Feed adult dogs 2 meals per day, puppies 3-4 meals</li>
+        <li><strong>Monitor weight:</strong> Weigh monthly and adjust portions as needed</li>
+        <li><strong>Treats count:</strong> Treats should be no more than 10% of daily calories</li>
+        <li><strong>Fresh water:</strong> Always provide clean, fresh water</li>
+        <li><strong>Transition slowly:</strong> Change foods gradually over 7-10 days</li>
+      </ul>
+
+      <h3>For Cats</h3>
+      <ul>
+        <li><strong>Multiple small meals:</strong> Cats do better with 3-4 small meals or puzzle feeders</li>
+        <li><strong>Wet food benefits:</strong> Helps with hydration, important for urinary health</li>
+        <li><strong>Don't free-feed:</strong> Measured portions prevent obesity</li>
+        <li><strong>Variety:</strong> Rotating proteins can prevent food allergies</li>
+      </ul>
+
+      <div class="affiliate-callout">
+        <h4>Premium Food Delivery Services</h4>
+        <p>
+          <a href="https://www.thefarmersdog.com" target="_blank" rel="sponsored noopener">The Farmer's Dog</a> - Fresh, portion-controlled dog meals |
+          <a href="https://www.myollie.com" target="_blank" rel="sponsored noopener">Ollie</a> - Custom fresh food for dogs |
+          <a href="https://www.smalls.com" target="_blank" rel="sponsored noopener">Smalls</a> - Human-grade cat food |
+          <a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener">Chewy Autoship</a> - Save up to 35%
+        </p>
+      </div>
+
+      <h2>When to Consult a Veterinarian</h2>
+      <p>While this calculator provides a good starting point, consult your vet if:</p>
+      <ul>
+        <li>Your pet has specific health conditions (diabetes, kidney disease, allergies)</li>
+        <li>Your pet needs to lose or gain significant weight</li>
+        <li>You're feeding a prescription diet</li>
+        <li>Your pet is pregnant or nursing</li>
+        <li>Your pet has unusual appetite changes</li>
+      </ul>
+
+      <section class="info-card">
+        <h3>Need Personalized Nutrition Advice?</h3>
+        <p>Our AI assistant can help with specific dietary questions for your pet's unique needs.</p>
+        <div class="hero-actions">
+          <a href="../chat.html" class="primary-btn">Ask the AI About Pet Nutrition</a>
+        </div>
+      </section>
+    </article>
+
+    <section class="transparency">
+      <h3>Disclaimer</h3>
+      <p>This calculator provides general guidelines based on standard veterinary formulas. Individual pets may have different needs based on health conditions, metabolism, and specific food caloric density. Always consult with your veterinarian for personalized feeding recommendations.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI Pet Medical &amp; Vet Help Finder &mdash; educational guidance, real-world vet options, and curated resources.</p>
+    <p style="font-size: 0.85rem; margin-top: 8px;">Some suggestions may include sponsored partners.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      if (navToggle) {
+        navToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          navToggle.classList.toggle('active');
+        });
+      }
+
+      const form = document.getElementById('foodCalcForm');
+      const results = document.getElementById('results');
+      const calorieResult = document.getElementById('calorieResult');
+      const feedingGuide = document.getElementById('feedingGuide');
+      const foodRecommendations = document.getElementById('foodRecommendations');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const petType = document.getElementById('petType').value;
+        let weight = parseFloat(document.getElementById('weight').value);
+        const weightUnit = document.getElementById('weightUnit').value;
+        const age = document.getElementById('age').value;
+        const activity = document.getElementById('activity').value;
+        const condition = document.getElementById('condition').value;
+        const neutered = document.getElementById('neutered').value;
+
+        // Convert to kg if in lbs
+        if (weightUnit === 'lbs') {
+          weight = weight * 0.453592;
+        }
+
+        // Calculate RER (Resting Energy Requirement)
+        const RER = 70 * Math.pow(weight, 0.75);
+
+        // Apply multipliers
+        let multiplier = 1;
+
+        // Age factor
+        if (age === 'puppy') {
+          multiplier *= petType === 'dog' ? 2.5 : 2.5;
+        } else if (age === 'adult') {
+          multiplier *= 1.0;
+        } else if (age === 'senior') {
+          multiplier *= 0.8;
+        }
+
+        // Activity factor
+        if (activity === 'low') {
+          multiplier *= 1.2;
+        } else if (activity === 'moderate') {
+          multiplier *= 1.4;
+        } else if (activity === 'high') {
+          multiplier *= 1.8;
+        }
+
+        // Neutered factor (neutered pets typically need fewer calories)
+        if (neutered === 'yes') {
+          multiplier *= 0.9;
+        }
+
+        // Body condition adjustment
+        if (condition === 'underweight') {
+          multiplier *= 1.2;
+        } else if (condition === 'overweight') {
+          multiplier *= 0.8;
+        }
+
+        const dailyCalories = Math.round(RER * multiplier);
+
+        // Display results
+        calorieResult.textContent = dailyCalories + ' kcal/day';
+
+        // Calculate food amounts
+        const dryFoodCups = (dailyCalories / 350).toFixed(1); // Avg dry food ~350 kcal/cup
+        const wetFoodCans = (dailyCalories / 250).toFixed(1); // Avg wet food ~250 kcal/can
+
+        let guideHTML = '<ul>';
+        guideHTML += '<li><strong>Dry Food (kibble):</strong> Approximately ' + dryFoodCups + ' cups per day</li>';
+        guideHTML += '<li><strong>Wet Food (canned):</strong> Approximately ' + wetFoodCans + ' standard cans per day</li>';
+
+        if (petType === 'dog') {
+          guideHTML += '<li><strong>Meals per day:</strong> ' + (age === 'puppy' ? '3-4 meals' : '2 meals') + '</li>';
+          guideHTML += '<li><strong>Treats allowance:</strong> Up to ' + Math.round(dailyCalories * 0.1) + ' kcal from treats</li>';
+        } else {
+          guideHTML += '<li><strong>Meals per day:</strong> 3-4 small meals recommended</li>';
+          guideHTML += '<li><strong>Wet food tip:</strong> Include at least some wet food for hydration</li>';
+        }
+        guideHTML += '</ul>';
+        guideHTML += '<p style="font-size:0.85rem;color:#64748b;margin-top:12px;">Note: Actual amounts vary by food brand. Check your food\'s calorie content per cup/can and adjust accordingly.</p>';
+
+        feedingGuide.innerHTML = guideHTML;
+
+        // Set recommendations based on pet type
+        if (petType === 'dog') {
+          foodRecommendations.innerHTML = `
+            For dogs, we recommend:
+            <a href="https://www.thefarmersdog.com" target="_blank" rel="sponsored noopener">The Farmer's Dog</a> (fresh, pre-portioned meals),
+            <a href="https://www.myollie.com" target="_blank" rel="sponsored noopener">Ollie</a> (custom fresh food),
+            <a href="https://www.hillspet.com" target="_blank" rel="sponsored noopener">Hill's Science Diet</a> (vet-recommended),
+            or <a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener">Chewy</a> for great variety and Autoship savings.
+          `;
+        } else {
+          foodRecommendations.innerHTML = `
+            For cats, we recommend:
+            <a href="https://www.smalls.com" target="_blank" rel="sponsored noopener">Smalls</a> (human-grade cat food),
+            <a href="https://www.nomnomnow.com" target="_blank" rel="sponsored noopener">Nom Nom</a> (fresh delivery),
+            <a href="https://www.royalcanin.com" target="_blank" rel="sponsored noopener">Royal Canin</a> (breed-specific formulas),
+            or <a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener">Chewy</a> for wide selection and savings.
+          `;
+        }
+
+        results.classList.add('visible');
+        results.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    });
+  </script>
+</body>
+</html>

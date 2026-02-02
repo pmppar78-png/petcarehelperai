@@ -44,6 +44,266 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Interactive Tools -->
+  <url>
+    <loc>https://petcarehelperai.netlify.app/tools/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/tools/food-calculator.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/tools/cost-calculator.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/tools/breed-finder.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/tools/symptom-checker.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Breed Directory Pages -->
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dog-breeds.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/cat-breeds.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Dog Breed Pages -->
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/labrador-retriever.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/golden-retriever.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/german-shepherd.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/french-bulldog.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/bulldog.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/poodle.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/shih-tzu.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/miniature-schnauzer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/boston-terrier.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/pomeranian.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/havanese.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/shetland-sheepdog.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/brittany.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/cocker-spaniel.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/border-collie.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/beagle.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/boxer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/dachshund.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/rottweiler.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/yorkshire-terrier.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/vizsla.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/dogs/weimaraner.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Cat Breed Pages -->
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/cats/maine-coon.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/cats/persian.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/cats/ragdoll.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/cats/british-shorthair.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/cats/siamese.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/cats/bengal.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/cats/abyssinian.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/cats/scottish-fold.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/cats/sphynx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/cats/russian-blue.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/cats/norwegian-forest-cat.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/cats/birman.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/breeds/cats/oriental-shorthair.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Location-Based Service Finder Pages -->
+  <url>
+    <loc>https://petcarehelperai.netlify.app/locations/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/locations/new-york.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/locations/los-angeles.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/locations/chicago.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/locations/houston.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/locations/phoenix.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/locations/dallas.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/locations/san-diego.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Dog Guides -->
   <url>
     <loc>https://petcarehelperai.netlify.app/guides/dog-puppy-care.html</loc>
@@ -258,62 +518,84 @@
   <url>
     <loc>https://petcarehelperai.netlify.app/guides/compare-pet-insurance.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://petcarehelperai.netlify.app/guides/compare-dog-insurance.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://petcarehelperai.netlify.app/guides/compare-cat-insurance.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://petcarehelperai.netlify.app/guides/compare-exotic-insurance.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://petcarehelperai.netlify.app/guides/compare-fresh-dog-food.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://petcarehelperai.netlify.app/guides/compare-dog-food-lifestage.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://petcarehelperai.netlify.app/guides/compare-prescription-diet.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://petcarehelperai.netlify.app/guides/compare-online-vet.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://petcarehelperai.netlify.app/guides/compare-pet-sitting.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://petcarehelperai.netlify.app/guides/compare-dog-training.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://petcarehelperai.netlify.app/guides/compare-gps-tracker.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://petcarehelperai.netlify.app/guides/compare-pet-camera.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Best-Of Guides -->
+  <url>
+    <loc>https://petcarehelperai.netlify.app/guides/best-dog-food-allergies.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/guides/best-dog-food-sensitive-stomach.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/guides/best-cat-food-kidney-disease.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.netlify.app/guides/best-cat-food-weight-loss.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <!-- Evergreen Resource Pages -->
