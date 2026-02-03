@@ -15,7 +15,27 @@
     gtag('js', new Date());
     gtag('config', 'G-FK0N7BD82Q');
   </script>
-  <meta name="description" content="AI-powered pet health guidance for dogs, cats, birds, reptiles, and fish. Get educational information and find veterinary services near you." />
+  <!-- Skimlinks Affiliate Integration -->
+  <script type="text/javascript">
+    var skimlinks_domain = "petcarehelperai.netlify.app";
+  </script>
+  <script type="text/javascript" src="https://s.skimresources.com/js/PUBLISHER_ID.skimlinks.js" async></script>
+  <!-- Sovrn Commerce (VigLink) Integration -->
+  <script type="text/javascript">
+    var defined_vglnk = typeof vglnk !== "undefined";
+    if (!defined_vglnk) {
+      var vglnk = {key: "SOVRN_API_KEY"};
+      (function(d, t) {
+        var s = d.createElement(t);
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "//cdn.viglink.com/api/vglnk.js";
+        var r = d.getElementsByTagName(t)[0];
+        r.parentNode.insertBefore(s, r);
+      }(document, "script"));
+    }
+  </script>
+  <meta name="description" content="Why is my dog vomiting yellow foam? Is my cat's breathing too fast? Free AI pet symptom checker for dogs, cats, birds, reptiles and fish. Get instant answers to urgent pet health questions 24/7." />
   <link rel="canonical" href="https://petcarehelperai.netlify.app/" />
   <title>AI Pet Medical &amp; Vet Help Finder</title>
   <link rel="stylesheet" href="styles.css" />
@@ -57,6 +77,79 @@
     "sameAs": []
   }
   </script>
+  <!-- FAQ Schema Markup for Long-Tail Keywords -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is my dog vomiting yellow foam every morning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yellow foam vomiting in the morning is typically bilious vomiting syndrome, caused by bile buildup in an empty stomach overnight. Try feeding a small snack before bed or dividing meals into 3-4 smaller portions throughout the day. If vomiting continues despite dietary changes, or your dog shows other symptoms like lethargy or weight loss, consult your veterinarian."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my cat's breathing too fast when sleeping?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Normal resting respiratory rate for cats is 15-30 breaths per minute. Count breaths for 60 seconds while your cat sleeps. Rates consistently above 40 breaths per minute can indicate heart disease, respiratory infection, or other serious conditions. Open-mouth breathing in cats is always abnormal and requires immediate veterinary attention."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I do if my dog ate chocolate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Contact your vet or pet poison control (ASPCA: 888-426-4435) immediately. Toxicity depends on chocolate type and amount relative to your dog's size. Dark chocolate is most dangerous. Symptoms may not appear for 6-12 hours but include vomiting, diarrhea, rapid heart rate, and seizures. Early treatment is critical - do not wait for symptoms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is my cat not eating but still drinking water?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A cat drinking but not eating often indicates nausea, dental pain, or kidney issues. Unlike dogs, cats can develop hepatic lipidosis (fatty liver disease) if they don't eat for more than 48 hours, which is life-threatening. Try warming wet food to enhance smell. If your cat hasn't eaten for 24+ hours, consult a veterinarian promptly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "My male cat is straining to urinate - is this an emergency?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "YES - this is a life-threatening emergency. Male cats can develop urinary blockages that prevent urination. If untreated for 24-48 hours, this causes kidney failure and can be fatal. Signs include repeated trips to litter box, crying when trying to urinate, and licking genitals. Seek emergency veterinary care immediately."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I tell if my pet needs emergency veterinary care?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Emergency signs include: difficulty breathing, collapse, uncontrolled bleeding, seizures lasting over 2 minutes, known toxin ingestion, bloated abdomen with dry heaving, inability to urinate (especially male cats), severe trauma, and loss of consciousness. When in doubt, call an emergency vet for guidance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is my bird fluffed up and not moving much?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A fluffed-up, quiet bird is often sick and trying to conserve energy. Birds hide illness until severely unwell. Additional warning signs include tail bobbing, sitting on the cage floor, discharge from eyes or nares, and changes in droppings. Seek avian veterinary care promptly as birds can deteriorate quickly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "My fish has white spots - is this ich?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "White spots resembling salt grains on fish are likely ich (Ichthyophthirius multifiliis), a common parasitic infection. Quarantine affected fish, raise water temperature gradually to 82-86°F, add aquarium salt, and treat with ich medication. Ich can spread quickly and be fatal if untreated. Check water parameters as stress weakens fish immunity."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -74,12 +167,28 @@
       <ul class="nav-menu">
         <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="chat.html" class="nav-link">AI Pet Help</a></li>
-        <li><a href="dogs.html" class="nav-link">Dogs</a></li>
-        <li><a href="cats.html" class="nav-link">Cats</a></li>
-        <li><a href="birds.html" class="nav-link">Birds</a></li>
-        <li><a href="reptiles.html" class="nav-link">Reptiles</a></li>
-        <li><a href="fish.html" class="nav-link">Fish</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-link nav-dropdown-toggle">Pets</span>
+          <ul class="nav-dropdown-menu">
+            <li><a href="dogs.html" class="nav-link">Dogs</a></li>
+            <li><a href="cats.html" class="nav-link">Cats</a></li>
+            <li><a href="birds.html" class="nav-link">Birds</a></li>
+            <li><a href="reptiles.html" class="nav-link">Reptiles</a></li>
+            <li><a href="fish.html" class="nav-link">Fish</a></li>
+          </ul>
+        </li>
         <li><a href="guides.html" class="nav-link">Guides</a></li>
+        <li><a href="resources.html" class="nav-link">Resources</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-link nav-dropdown-toggle">Tools</span>
+          <ul class="nav-dropdown-menu">
+            <li><a href="tools/symptom-checker.html" class="nav-link">Symptom Checker</a></li>
+            <li><a href="tools/food-calculator.html" class="nav-link">Food Calculator</a></li>
+            <li><a href="tools/cost-calculator.html" class="nav-link">Cost Calculator</a></li>
+            <li><a href="tools/breed-finder.html" class="nav-link">Breed Finder</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="nav-link">About</a></li>
       </ul>
     </nav>
   </header>
@@ -152,16 +261,18 @@
         </li>
       </ul>
 
-      <h4>Examples of What You Can Ask</h4>
+      <h4>Real Questions Pet Owners Ask Us</h4>
       <ul class="examples-list">
-        <li>My dog is vomiting — what do I do?</li>
-        <li>What food should I feed a new kitten?</li>
-        <li>My bird is acting tired — is this serious?</li>
-        <li>Find a tele-vet that's open now.</li>
-        <li>Compare pet insurance options.</li>
-        <li>Where can I get affordable grooming?</li>
-        <li>Is this symptom an emergency?</li>
-        <li>What should I do if my reptile isn't eating?</li>
+        <li>Why is my dog vomiting yellow foam in the morning?</li>
+        <li>My puppy threw up undigested food 4 hours after eating</li>
+        <li>Cat not eating but drinking water for 2 days</li>
+        <li>Male cat straining to urinate but nothing comes out</li>
+        <li>Dog shaking and hiding under the bed suddenly</li>
+        <li>My old cat meows loudly at night for no reason</li>
+        <li>How long after eating does bloat happen in dogs?</li>
+        <li>Fish has white spots and is swimming erratically</li>
+        <li>Bearded dragon not eating for a week</li>
+        <li>Bird fluffed up and sitting at bottom of cage</li>
       </ul>
     </section>
 
@@ -363,6 +474,91 @@
       </p>
     </section>
 
+    <section class="info-card" id="pet-faq">
+      <h2>People Also Ask: Common Pet Health Questions</h2>
+
+      <div class="faq-item">
+        <h3>Why Is My Dog Vomiting But Acting Normal?</h3>
+        <p>Dogs who vomit once but maintain normal energy, appetite, and behavior have often experienced simple stomach upset from eating too fast, dietary indiscretion (eating something they shouldn't), or motion sickness. <strong>What to do:</strong> Withhold food for 12 hours while keeping water available, then offer a bland diet (boiled chicken and white rice). If vomiting recurs, contains blood, or your dog becomes lethargic, see a veterinarian.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How Do I Know If My Cat Is Sick?</h3>
+        <p>Cats are masters at hiding illness. Warning signs include: hiding more than usual, decreased appetite for 24+ hours, changes in litter box habits, vomiting or diarrhea, breathing faster than normal at rest (over 40 breaths/minute), excessive grooming or sudden grooming neglect, and behavioral changes like increased aggression or unusual vocalization. Any sudden change in your cat's normal routine warrants attention.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>When Should I Take My Pet to the Emergency Vet?</h3>
+        <p>Seek emergency care immediately for:</p>
+        <ul>
+          <li><strong>Dogs:</strong> Bloated/distended abdomen with dry heaving, difficulty breathing, collapse, seizures lasting over 2 minutes, known toxin ingestion, severe bleeding</li>
+          <li><strong>Cats:</strong> Male cat unable to urinate (emergency!), open-mouth breathing, collapse, not eating for 48+ hours, known toxin ingestion (especially lilies)</li>
+          <li><strong>Birds:</strong> Tail bobbing/labored breathing, bleeding, sitting on cage floor fluffed up, seizures</li>
+          <li><strong>Reptiles:</strong> Prolapse, severe burns, trauma, complete food refusal with weight loss</li>
+          <li><strong>Fish:</strong> Entire tank gasping at surface (oxygen/ammonia emergency)</li>
+        </ul>
+      </div>
+
+      <div class="faq-item">
+        <h3>What Human Foods Are Toxic to Pets?</h3>
+        <p><strong>Dogs - avoid:</strong> Chocolate (especially dark), grapes/raisins, onions/garlic, xylitol (artificial sweetener), macadamia nuts, alcohol, caffeine, avocado pit</p>
+        <p><strong>Cats - avoid:</strong> Onions/garlic, chocolate, alcohol, caffeine, grapes/raisins, raw eggs, lilies (extremely toxic!), xylitol</p>
+        <p><strong>Birds - avoid:</strong> Avocado, chocolate, caffeine, alcohol, apple seeds, onions, mushrooms, high-salt foods</p>
+        <p>If your pet ingests something toxic, contact ASPCA Poison Control (888-426-4435) or your emergency vet immediately.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How Much Does a Vet Visit Cost Without Insurance?</h3>
+        <p>Typical veterinary costs (US averages):</p>
+        <ul>
+          <li><strong>Routine wellness exam:</strong> $50-$100</li>
+          <li><strong>Emergency visit:</strong> $100-$300 (exam only, before treatment)</li>
+          <li><strong>Blood work panel:</strong> $100-$300</li>
+          <li><strong>X-rays:</strong> $150-$400</li>
+          <li><strong>Hospitalization:</strong> $500-$2,000+ per day</li>
+          <li><strong>Emergency surgery:</strong> $2,000-$10,000+</li>
+        </ul>
+        <p>Pet insurance can significantly reduce out-of-pocket costs. Most plans cover 70-90% of eligible expenses after deductible.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I Give My Dog Human Medicine for Pain?</h3>
+        <p><strong>Most human medications are dangerous for dogs.</strong> Never give: ibuprofen (Advil/Motrin), acetaminophen (Tylenol), naproxen (Aleve), or any prescription medications without vet guidance. These can cause kidney failure, liver damage, stomach ulcers, and death even in small doses.</p>
+        <p><strong>Safer options:</strong> Some vets may approve low-dose aspirin for short-term use in specific situations, but always consult your veterinarian first. Pet-specific pain medications like carprofen (Rimadyl) or meloxicam are much safer when prescribed appropriately.</p>
+      </div>
+    </section>
+
+    <section class="quick-links-section">
+      <h2 style="text-align: center; margin-bottom: 24px;">Explore by Pet Type</h2>
+      <p style="text-align: center; max-width: 700px; margin: 0 auto 24px;">Visit our specialized care hubs for comprehensive guidance on your specific pet.</p>
+      <div class="guide-grid" style="max-width: 1100px; margin: 0 auto;">
+        <a href="dogs.html" class="guide-card">
+          <h3>Dog Care Hub</h3>
+          <p>Complete dog care including symptoms, training, nutrition, breeds, and emergency guidance</p>
+        </a>
+        <a href="cats.html" class="guide-card">
+          <h3>Cat Care Hub</h3>
+          <p>Feline health, behavior issues, litter problems, life stage care, and veterinary guidance</p>
+        </a>
+        <a href="birds.html" class="guide-card">
+          <h3>Bird Care Hub</h3>
+          <p>Avian health, nutrition, housing, behavior, and finding avian veterinarians</p>
+        </a>
+        <a href="reptiles.html" class="guide-card">
+          <h3>Reptile Care Hub</h3>
+          <p>Temperature, lighting, feeding, species-specific care, and exotic vet resources</p>
+        </a>
+        <a href="fish.html" class="guide-card">
+          <h3>Fish &amp; Aquarium Hub</h3>
+          <p>Water quality, disease treatment, tank cycling, compatibility, and planted tanks</p>
+        </a>
+        <a href="guides.html" class="guide-card">
+          <h3>All Guides Directory</h3>
+          <p>Browse 100+ guides covering health, nutrition, training, products, and more</p>
+        </a>
+      </div>
+    </section>
+
     <section class="quick-links-section">
       <h2 style="text-align: center; margin-bottom: 24px;">Explore Our Resources</h2>
       <div class="cards-grid">
@@ -389,10 +585,20 @@
         <article class="info-card">
           <h3>Comparison Guides</h3>
           <ul>
-            <li><a href="guides/compare-pet-insurance.html">Best Pet Insurance 2024</a></li>
+            <li><a href="guides/compare-pet-insurance.html">Best Pet Insurance</a></li>
             <li><a href="guides/compare-fresh-dog-food.html">Fresh Dog Food Comparison</a></li>
             <li><a href="guides/compare-gps-tracker.html">GPS Pet Trackers Compared</a></li>
             <li><a href="guides/compare-online-vet.html">Online Vet Services Compared</a></li>
+          </ul>
+        </article>
+
+        <article class="info-card">
+          <h3>Popular Health Guides</h3>
+          <ul>
+            <li><a href="guides/dog-symptoms.html">Dog Symptom Checker</a></li>
+            <li><a href="guides/cat-symptoms.html">Cat Symptom Checker</a></li>
+            <li><a href="guides/poison-database.html">Poison &amp; Toxin Database</a></li>
+            <li><a href="guides/dog-first-aid.html">Dog First Aid Guide</a></li>
           </ul>
         </article>
 
@@ -405,6 +611,42 @@
             <li><a href="locations/chicago.html">Chicago Pet Services</a></li>
           </ul>
         </article>
+      </div>
+
+      <h3 style="text-align: center; margin: 32px 0 16px;">Most Popular Guides</h3>
+      <div class="guide-grid" style="max-width: 1100px; margin: 0 auto;">
+        <a href="guides/dog-puppy-care.html" class="guide-card">
+          <h4>Puppy Care Guide</h4>
+          <p>First-year essentials for new puppy owners</p>
+        </a>
+        <a href="guides/cat-kitten-care.html" class="guide-card">
+          <h4>Kitten Care Guide</h4>
+          <p>Raising a healthy, happy kitten</p>
+        </a>
+        <a href="guides/dog-training.html" class="guide-card">
+          <h4>Dog Training Basics</h4>
+          <p>Essential commands and techniques</p>
+        </a>
+        <a href="guides/cat-litter.html" class="guide-card">
+          <h4>Litter Box Problems</h4>
+          <p>Solving common litter issues</p>
+        </a>
+        <a href="guides/dog-nutrition.html" class="guide-card">
+          <h4>Dog Nutrition Guide</h4>
+          <p>Feeding for optimal health</p>
+        </a>
+        <a href="guides/cat-behavior.html" class="guide-card">
+          <h4>Cat Behavior Guide</h4>
+          <p>Understanding your feline</p>
+        </a>
+        <a href="guides/dog-dental.html" class="guide-card">
+          <h4>Dog Dental Health</h4>
+          <p>Oral care and prevention</p>
+        </a>
+        <a href="guides/emergency-prep.html" class="guide-card">
+          <h4>Emergency Preparedness</h4>
+          <p>Disaster planning for pets</p>
+        </a>
       </div>
     </section>
 
@@ -434,11 +676,91 @@
         <span style="font-size: 0.9rem;">Advertising &amp; Business Inquiries Only</span>
       </p>
     </section>
+
+    <section class="widget-promo">
+      <div class="widget-promo-content">
+        <div class="widget-promo-text">
+          <h3>Free AI Pet Help Widget for Your Website</h3>
+          <p>
+            Add our AI pet helper to your site for free! Help your visitors with pet health questions while enhancing your website's value.
+            Easy to integrate with just 2 lines of code.
+          </p>
+          <ul class="widget-features">
+            <li>Lightweight and fast-loading</li>
+            <li>Works on any website</li>
+            <li>Covers dogs, cats, birds, reptiles, and fish</li>
+            <li>Customizable position and styling</li>
+          </ul>
+          <a href="embed/embed-code.html" class="primary-btn">Get the Free Widget</a>
+        </div>
+        <div class="widget-promo-preview">
+          <div class="preview-mockup">
+            <div class="mockup-header">
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+            </div>
+            <div class="mockup-content">
+              <div class="mockup-chat-bubble mockup-ai">Hi! Ask me about your pet...</div>
+              <div class="mockup-chat-bubble mockup-user">My dog is limping</div>
+              <div class="mockup-chat-bubble mockup-ai">I can help with that. Let me ask a few questions...</div>
+            </div>
+            <div class="mockup-badge">Powered by PetCareHelperAI</div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>AI Pet Medical &amp; Vet Help Finder &mdash; educational guidance, real‑world vet options, and curated resources in one place.</p>
-    <p style="font-size: 0.85rem; margin-top: 8px;">Based in Boston, MA. Some suggestions may include sponsored partners. This does not affect guidance.</p>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4>Pet Care</h4>
+          <ul>
+            <li><a href="dogs.html">Dogs</a></li>
+            <li><a href="cats.html">Cats</a></li>
+            <li><a href="birds.html">Birds</a></li>
+            <li><a href="reptiles.html">Reptiles</a></li>
+            <li><a href="fish.html">Fish</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="guides.html">Care Guides</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="chat.html">AI Pet Help</a></li>
+            <li><a href="tools/symptom-checker.html">Symptom Checker</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Tools</h4>
+          <ul>
+            <li><a href="tools/food-calculator.html">Food Calculator</a></li>
+            <li><a href="tools/cost-calculator.html">Cost Calculator</a></li>
+            <li><a href="tools/breed-finder.html">Breed Finder</a></li>
+            <li><a href="feed.xml">RSS Feed</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="mailto:advertise@petcarehelperai.com">Partner With Us</a></li>
+            <li><a href="embed/embed-code.html">Free Widget</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pet Care Helper AI. Based in Boston, MA. Educational guidance only.</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="feed.xml">RSS</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script>
@@ -471,6 +793,18 @@
           navToggle.classList.toggle('active');
         });
       }
+
+      // Mobile dropdown toggle
+      const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const dropdown = this.closest('.nav-dropdown');
+            dropdown.classList.toggle('open');
+          }
+        });
+      });
     });
   </script>
 </body>
