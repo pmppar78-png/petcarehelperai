@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Free embeddable AI pet help widget for your website. Add instant pet health guidance to your site with just a few lines of code." />
+  <link rel="canonical" href="https://petcarehelperai.netlify.app/embed/embed-code.html" />
+  <title>Free Pet Help Widget for Your Website | PetCareHelperAI</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .embed-hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+      border-radius: 20px;
+      margin-bottom: 30px;
+    }
+
+    .embed-hero h1 {
+      font-size: 2rem;
+      margin: 0 0 12px;
+      background: linear-gradient(135deg, #14B8A6, #0D9488);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .embed-hero p {
+      font-size: 1.1rem;
+      color: #475569;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin: 30px 0;
+    }
+
+    .benefit-card {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      border: 1px solid #A7F3D0;
+      box-shadow: 0 2px 8px rgba(20, 184, 166, 0.08);
+    }
+
+    .benefit-card h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      color: #0D9488;
+    }
+
+    .benefit-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #64748B;
+    }
+
+    .code-section {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 24px 0;
+      border: 1px solid #A7F3D0;
+      box-shadow: 0 4px 16px rgba(20, 184, 166, 0.08);
+    }
+
+    .code-section h2 {
+      margin: 0 0 8px;
+      font-size: 1.3rem;
+      color: #0F172A;
+    }
+
+    .code-section h3 {
+      margin: 20px 0 8px;
+      font-size: 1rem;
+      color: #0D9488;
+    }
+
+    .code-section p {
+      margin: 0 0 16px;
+      color: #64748B;
+      font-size: 0.95rem;
+    }
+
+    .code-block {
+      position: relative;
+      background: #1E293B;
+      border-radius: 10px;
+      padding: 16px;
+      margin: 12px 0;
+      overflow-x: auto;
+    }
+
+    .code-block pre {
+      margin: 0;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #E2E8F0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .code-block .comment {
+      color: #64748B;
+    }
+
+    .code-block .tag {
+      color: #F472B6;
+    }
+
+    .code-block .attr {
+      color: #7DD3FC;
+    }
+
+    .code-block .string {
+      color: #A5F3FC;
+    }
+
+    .code-block .keyword {
+      color: #C4B5FD;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      padding: 6px 12px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      color: white;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .copy-btn.copied {
+      background: #14B8A6;
+      border-color: #14B8A6;
+    }
+
+    .preview-section {
+      background: linear-gradient(135deg, #F0FDFA, #E0F2FE);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 30px 0;
+      border: 1px solid #A7F3D0;
+    }
+
+    .preview-section h2 {
+      margin: 0 0 16px;
+      font-size: 1.3rem;
+      color: #0F172A;
+      text-align: center;
+    }
+
+    .preview-frame {
+      max-width: 400px;
+      height: 520px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .preview-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .options-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+
+    .options-table th,
+    .options-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #E0F2FE;
+    }
+
+    .options-table th {
+      background: #F0FDFA;
+      font-weight: 600;
+      color: #0F172A;
+    }
+
+    .options-table td:first-child {
+      font-family: monospace;
+      color: #0D9488;
+    }
+
+    .options-table td:nth-child(3) {
+      font-family: monospace;
+      color: #64748B;
+      font-size: 0.85rem;
+    }
+
+    .faq-section {
+      margin: 30px 0;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 12px 0;
+      border: 1px solid #E0F2FE;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      color: #0F172A;
+    }
+
+    .faq-item p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #64748B;
+      line-height: 1.6;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 30px 20px;
+      background: linear-gradient(135deg, #14B8A6, #0D9488);
+      border-radius: 16px;
+      margin-top: 30px;
+    }
+
+    .cta-section h2 {
+      color: white;
+      margin: 0 0 12px;
+      font-size: 1.4rem;
+    }
+
+    .cta-section p {
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0 0 20px;
+    }
+
+    .cta-section a {
+      display: inline-block;
+      padding: 12px 28px;
+      background: white;
+      color: #0D9488;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.2s;
+    }
+
+    .cta-section a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #0D9488;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .embed-hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .embed-hero p {
+        font-size: 1rem;
+      }
+
+      .code-block {
+        padding: 12px;
+      }
+
+      .code-block pre {
+        font-size: 0.75rem;
+      }
+
+      .preview-frame {
+        height: 450px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-title">
+      <div class="logo-pill"></div>
+      <div>
+        <h1>Pet Care Helper AI</h1>
+        <p class="subtitle">Free Widget for Your Website</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <a href="../index.html" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+      </svg>
+      Back to Home
+    </a>
+
+    <div class="embed-hero">
+      <h1>Free AI Pet Help Widget</h1>
+      <p>Add instant pet health guidance to your website. Help your visitors with pet questions while enhancing your site's value.</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <h3>Easy Integration</h3>
+        <p>Add the widget to your site with just 2 lines of code. No technical expertise required.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Completely Free</h3>
+        <p>Use our widget at no cost. We only ask for attribution with "Powered by PetCareHelperAI".</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Lightweight & Fast</h3>
+        <p>Minimal impact on page load. The widget loads asynchronously and won't slow down your site.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Mobile Friendly</h3>
+        <p>Responsive design works perfectly on all devices - desktops, tablets, and phones.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Customizable</h3>
+        <p>Choose position (bottom-right, bottom-left, or inline), button text, and more.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Pet Health Topics</h3>
+        <p>Covers dogs, cats, birds, reptiles, fish - with symptom guidance, nutrition, and more.</p>
+      </div>
+    </div>
+
+    <div class="preview-section">
+      <h2>Live Preview</h2>
+      <div class="preview-frame">
+        <iframe src="widget.html" title="Pet Care Widget Preview" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="code-section">
+      <h2>Quick Start (Recommended)</h2>
+      <p>The easiest way to add the widget. Just paste this code before the closing <code>&lt;/body&gt;</code> tag on your website:</p>
+
+      <div class="code-block">
+        <button class="copy-btn" data-code="quick">Copy</button>
+        <pre><span class="comment">&lt;!-- PetCareHelperAI Widget --&gt;</span>
+<span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="string">"https://petcarehelperai.netlify.app/embed/widget.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+<span class="tag">&lt;script&gt;</span>PetCareWidget.init();<span class="tag">&lt;/script&gt;</span></pre>
+      </div>
+
+      <p style="margin-top: 16px; font-size: 0.85rem; color: #94A3B8;">This adds a floating chat button in the bottom-right corner of your page.</p>
+    </div>
+
+    <div class="code-section">
+      <h2>Customization Options</h2>
+      <p>Configure the widget to match your preferences:</p>
+
+      <div class="code-block">
+        <button class="copy-btn" data-code="custom">Copy</button>
+        <pre><span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="string">"https://petcarehelperai.netlify.app/embed/widget.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+<span class="tag">&lt;script&gt;</span>
+  PetCareWidget.init({
+    <span class="attr">position</span>: <span class="string">'bottom-right'</span>,  <span class="comment">// 'bottom-right', 'bottom-left', or 'inline'</span>
+    <span class="attr">buttonText</span>: <span class="string">'Pet Help'</span>,       <span class="comment">// Text shown on the button</span>
+    <span class="attr">width</span>: <span class="string">'380px'</span>,              <span class="comment">// Widget width</span>
+    <span class="attr">height</span>: <span class="string">'520px'</span>              <span class="comment">// Widget height</span>
+  });
+<span class="tag">&lt;/script&gt;</span></pre>
+      </div>
+
+      <h3>Available Options</h3>
+      <table class="options-table">
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Description</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>position</td>
+            <td>Widget position: 'bottom-right', 'bottom-left', or 'inline'</td>
+            <td>'bottom-right'</td>
+          </tr>
+          <tr>
+            <td>buttonText</td>
+            <td>Text displayed on the floating button</td>
+            <td>'Pet Help'</td>
+          </tr>
+          <tr>
+            <td>containerId</td>
+            <td>ID of container element (required for 'inline' position)</td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td>width</td>
+            <td>Width of the chat popup</td>
+            <td>'380px'</td>
+          </tr>
+          <tr>
+            <td>height</td>
+            <td>Height of the chat popup</td>
+            <td>'520px'</td>
+          </tr>
+          <tr>
+            <td>zIndex</td>
+            <td>CSS z-index for the widget container</td>
+            <td>9999</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="code-section">
+      <h2>Inline Embed (Within Your Content)</h2>
+      <p>Embed the widget directly within your page content instead of as a floating button:</p>
+
+      <div class="code-block">
+        <button class="copy-btn" data-code="inline">Copy</button>
+        <pre><span class="comment">&lt;!-- Container where widget will appear --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">id</span>=<span class="string">"pet-widget-container"</span><span class="tag">&gt;&lt;/div&gt;</span>
+
+<span class="comment">&lt;!-- Widget script --&gt;</span>
+<span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="string">"https://petcarehelperai.netlify.app/embed/widget.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+<span class="tag">&lt;script&gt;</span>
+  PetCareWidget.init({
+    <span class="attr">position</span>: <span class="string">'inline'</span>,
+    <span class="attr">containerId</span>: <span class="string">'pet-widget-container'</span>
+  });
+<span class="tag">&lt;/script&gt;</span></pre>
+      </div>
+    </div>
+
+    <div class="code-section">
+      <h2>Simple iFrame Embed</h2>
+      <p>Alternatively, you can embed the widget directly using an iframe:</p>
+
+      <div class="code-block">
+        <button class="copy-btn" data-code="iframe">Copy</button>
+        <pre><span class="tag">&lt;iframe</span>
+  <span class="attr">src</span>=<span class="string">"https://petcarehelperai.netlify.app/embed/widget.html"</span>
+  <span class="attr">width</span>=<span class="string">"100%"</span>
+  <span class="attr">height</span>=<span class="string">"500"</span>
+  <span class="attr">style</span>=<span class="string">"border: none; border-radius: 12px; max-width: 400px;"</span>
+  <span class="attr">title</span>=<span class="string">"PetCareHelperAI Chat Widget"</span>
+  <span class="attr">loading</span>=<span class="string">"lazy"</span>
+<span class="tag">&gt;&lt;/iframe&gt;</span></pre>
+      </div>
+    </div>
+
+    <div class="code-section">
+      <h2>JavaScript API</h2>
+      <p>Control the widget programmatically:</p>
+
+      <div class="code-block">
+        <button class="copy-btn" data-code="api">Copy</button>
+        <pre><span class="comment">// Open the widget</span>
+PetCareWidget.open();
+
+<span class="comment">// Close the widget</span>
+PetCareWidget.close();
+
+<span class="comment">// Toggle open/closed</span>
+PetCareWidget.toggle();
+
+<span class="comment">// Remove the widget completely</span>
+PetCareWidget.destroy();</pre>
+      </div>
+    </div>
+
+    <div class="faq-section">
+      <h2 style="margin-bottom: 16px;">Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Is this really free?</h3>
+        <p>Yes! The widget is completely free to use. We only require that you keep the "Powered by PetCareHelperAI" attribution visible, which helps us grow and continue offering this service.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Will this slow down my website?</h3>
+        <p>No. The widget script is lightweight (~4KB) and loads asynchronously, meaning it won't block your page from loading. The iframe content only loads when users interact with the widget.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What topics does the AI cover?</h3>
+        <p>The AI provides guidance on dogs, cats, birds, reptiles, and fish. It covers health symptoms, nutrition, behavior, training, emergency recognition, and more. It's educational guidance and always recommends professional veterinary care when appropriate.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I customize the appearance?</h3>
+        <p>You can customize the position, button text, and dimensions. The widget uses a clean, neutral design that works well on most websites. For advanced customization needs, please contact us.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is user data collected?</h3>
+        <p>We don't collect personal information from widget users. Chat conversations are processed to provide AI responses but are not stored permanently or used for marketing purposes.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I remove the "Powered by" link?</h3>
+        <p>The attribution link is required for free use as it helps us sustain this service. If you need a white-label solution, please contact us about partnership options.</p>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <h2>Questions or Partnership Inquiries?</h2>
+      <p>We're here to help you get the most out of the widget.</p>
+      <a href="mailto:advertise@petcarehelperai.com">Contact Us</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>PetCareHelperAI &mdash; Free AI pet help widget for websites</p>
+    <p style="font-size: 0.85rem; margin-top: 8px;">
+      <a href="../index.html" style="color: #0D9488;">Home</a> |
+      <a href="../chat.html" style="color: #0D9488;">Try the AI Chat</a> |
+      <a href="../privacy-policy.html" style="color: #0D9488;">Privacy Policy</a>
+    </p>
+  </footer>
+
+  <script>
+    // Copy button functionality
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const codeBlock = this.parentElement.querySelector('pre');
+        const codeType = this.dataset.code;
+
+        // Get raw code without HTML formatting
+        const codeMap = {
+          'quick': `<!-- PetCareHelperAI Widget -->
+<script src="https://petcarehelperai.netlify.app/embed/widget.js"><\/script>
+<script>PetCareWidget.init();<\/script>`,
+
+          'custom': `<script src="https://petcarehelperai.netlify.app/embed/widget.js"><\/script>
+<script>
+  PetCareWidget.init({
+    position: 'bottom-right',  // 'bottom-right', 'bottom-left', or 'inline'
+    buttonText: 'Pet Help',    // Text shown on the button
+    width: '380px',            // Widget width
+    height: '520px'            // Widget height
+  });
+<\/script>`,
+
+          'inline': `<!-- Container where widget will appear -->
+<div id="pet-widget-container"></div>
+
+<!-- Widget script -->
+<script src="https://petcarehelperai.netlify.app/embed/widget.js"><\/script>
+<script>
+  PetCareWidget.init({
+    position: 'inline',
+    containerId: 'pet-widget-container'
+  });
+<\/script>`,
+
+          'iframe': `<iframe
+  src="https://petcarehelperai.netlify.app/embed/widget.html"
+  width="100%"
+  height="500"
+  style="border: none; border-radius: 12px; max-width: 400px;"
+  title="PetCareHelperAI Chat Widget"
+  loading="lazy"
+></iframe>`,
+
+          'api': `// Open the widget
+PetCareWidget.open();
+
+// Close the widget
+PetCareWidget.close();
+
+// Toggle open/closed
+PetCareWidget.toggle();
+
+// Remove the widget completely
+PetCareWidget.destroy();`
+        };
+
+        const codeToCopy = codeMap[codeType] || codeBlock.textContent;
+
+        navigator.clipboard.writeText(codeToCopy).then(() => {
+          this.textContent = 'Copied!';
+          this.classList.add('copied');
+          setTimeout(() => {
+            this.textContent = 'Copy';
+            this.classList.remove('copied');
+          }, 2000);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
