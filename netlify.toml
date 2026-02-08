@@ -1,7 +1,119 @@
 [build]
   functions = "netlify/functions"
 
+# Enable pretty URLs (clean URLs without .html extension)
+[build.processing.html]
+  pretty_urls = true
+
+# Intentional alias redirect
 [[redirects]]
   from = "/ai"
-  to = "/chat.html"
+  to = "/chat"
   status = 301
+  force = true
+
+# Redirect index.html files to directory paths
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tools/index.html"
+  to = "/tools/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/index.html"
+  to = "/locations/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/feeds/index.html"
+  to = "/feeds/"
+  status = 301
+  force = true
+
+# Redirect .html extensions to clean URLs for all directories
+# These use force=true to override Netlify's default file serving
+[[redirects]]
+  from = "/breeds/birds/*.html"
+  to = "/breeds/birds/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/cats/*.html"
+  to = "/breeds/cats/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/dogs/*.html"
+  to = "/breeds/dogs/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/*.html"
+  to = "/breeds/fish/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/*.html"
+  to = "/breeds/reptiles/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/small-animals/*.html"
+  to = "/breeds/small-animals/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/*.html"
+  to = "/breeds/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/*.html"
+  to = "/guides/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/*.html"
+  to = "/locations/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tools/*.html"
+  to = "/tools/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/resources/*.html"
+  to = "/resources/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/embed/*.html"
+  to = "/embed/:splat"
+  status = 301
+  force = true
+
+# Catch-all for root-level .html pages
+[[redirects]]
+  from = "/*.html"
+  to = "/:splat"
+  status = 301
+  force = true

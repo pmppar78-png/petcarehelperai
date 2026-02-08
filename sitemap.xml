@@ -3163,12 +3163,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://petcarehelperai.com/locations/index</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://petcarehelperai.com/locations/jacksonville</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -3295,18 +3289,11 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://petcarehelperai.com/tools/index</loc>
-    <lastmod>2026-02-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://petcarehelperai.com/tools/symptom-checker</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Symptom-specific guides -->
   <url>
     <loc>https://petcarehelperai.com/guides/dog-vomiting-yellow-foam-morning</loc>
     <lastmod>2026-02-03</lastmod>
@@ -3355,7 +3342,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- Breed+condition guides -->
   <url>
     <loc>https://petcarehelperai.com/guides/german-shepherd-hip-dysplasia</loc>
     <lastmod>2026-02-03</lastmod>
@@ -3404,7 +3390,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- Resource pages -->
   <url>
     <loc>https://petcarehelperai.com/resources/pet-statistics</loc>
     <lastmod>2026-02-03</lastmod>
@@ -3417,7 +3402,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Partner and press pages -->
   <url>
     <loc>https://petcarehelperai.com/partners</loc>
     <lastmod>2026-02-03</lastmod>
@@ -3430,42 +3414,184 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
-  <!-- Embed pages -->
   <url>
     <loc>https://petcarehelperai.com/embed/embed-code</loc>
     <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
-  <!-- Feed pages -->
   <url>
-    <loc>https://petcarehelperai.com/feeds/index</loc>
-    <lastmod>2026-02-03</lastmod>
+    <loc>https://petcarehelperai.com/breeds/cats/munchkin</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/breeds/cats/thai</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/breeds/cats/tiffanie</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/breeds/cats/toyger</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/breeds/dogs/australian-terrier</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/breeds/dogs/bluetick-coonhound</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/breeds/dogs/japanese-chin</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/breeds/dogs/miniature-pinscher</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/breeds/dogs/pekingese</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/breeds/dogs/silky-terrier</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/breeds/dogs/toy-poodle</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/breeds/small-animals/chinchilla</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/breeds/small-animals/ferret</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/breeds/small-animals/hedgehog</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/breeds/small-animals/sugar-glider</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/feeds/</loc>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://petcarehelperai.com/feed.xml</loc>
-    <lastmod>2026-02-03</lastmod>
+    <loc>https://petcarehelperai.com/guides/cat-bathing-guide</loc>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://petcarehelperai.com/feeds/dogs.xml</loc>
-    <lastmod>2026-02-03</lastmod>
+    <loc>https://petcarehelperai.com/guides/cat-brushing-guide</loc>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://petcarehelperai.com/feeds/cats.xml</loc>
-    <lastmod>2026-02-03</lastmod>
+    <loc>https://petcarehelperai.com/guides/cat-dental-disease</loc>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://petcarehelperai.com/feeds/guides.xml</loc>
-    <lastmod>2026-02-03</lastmod>
+    <loc>https://petcarehelperai.com/guides/cat-diabetes</loc>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/guides/cat-ear-cleaning</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/guides/cat-food-ingredients</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/guides/cat-hyperthyroidism</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/guides/cat-kidney-disease</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/guides/cat-nail-trimming</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/guides/cat-urinary-issues</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/guides/crayfish-care</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/locations/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/tools/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
