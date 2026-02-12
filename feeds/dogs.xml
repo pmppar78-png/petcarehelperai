@@ -6,8 +6,8 @@
   <channel>
     <title>Pet Care Helper AI - Dog Care Guides</title>
     <description>Comprehensive dog care guides covering training, nutrition, health, behavior, grooming, and everything dog owners need to know. AI-powered pet health guidance.</description>
-    <link>https://petcarehelperai.netlify.app/dogs.html</link>
-    <atom:link href="https://petcarehelperai.netlify.app/feeds/dogs.xml" rel="self" type="application/rss+xml"/>
+    <link>https://petcarehelperai.com/dogs</link>
+    <atom:link href="https://petcarehelperai.com/feeds/dogs.xml" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
     <copyright>Copyright 2024 Pet Care Helper AI. Feel free to republish with attribution.</copyright>
     <managingEditor>advertise@petcarehelperai.com (Pet Care Helper AI)</managingEditor>
@@ -15,9 +15,9 @@
     <lastBuildDate>Mon, 03 Feb 2025 00:00:00 GMT</lastBuildDate>
     <ttl>1440</ttl>
     <image>
-      <url>https://petcarehelperai.netlify.app/logo.png</url>
+      <url>https://petcarehelperai.com/logo.png</url>
       <title>Pet Care Helper AI - Dogs</title>
-      <link>https://petcarehelperai.netlify.app/dogs.html</link>
+      <link>https://petcarehelperai.com/dogs</link>
     </image>
     <category>Dogs</category>
     <category>Pet Care</category>
@@ -26,8 +26,8 @@
 
     <item>
       <title>Dog Training Fundamentals Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-training.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-training.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-training</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-training</guid>
       <description>Dog training fundamentals guide covering positive reinforcement, basic commands, house training, leash training, and behavior shaping for dogs of all ages.</description>
       <content:encoded><![CDATA[<p>Dog training fundamentals guide covering positive reinforcement, basic commands, house training, leash training, and behavior shaping for dogs of all ages.</p><p>Learn about the science of positive reinforcement, essential commands like sit, stay, come, and leave it, plus tips for leash training and house training your dog.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -38,8 +38,8 @@
 
     <item>
       <title>Complete Dog Nutrition Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-nutrition.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-nutrition.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-nutrition</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-nutrition</guid>
       <description>Complete dog nutrition guide covering dietary requirements, life-stage feeding, reading labels, and choosing the right food for your dog.</description>
       <content:encoded><![CDATA[<p>Complete dog nutrition guide covering dietary requirements, life-stage feeding, reading labels, and choosing the right food for your dog.</p><p>Understand protein, fat, and carbohydrate needs, plus special considerations for puppies, adults, and senior dogs.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -50,8 +50,8 @@
 
     <item>
       <title>Dog Breed Selection Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-breeds.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-breeds.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-breeds</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-breeds</guid>
       <description>Dog breed selection guide to help you find the perfect breed for your lifestyle, living situation, activity level, and family needs.</description>
       <content:encoded><![CDATA[<p>Dog breed selection guide to help you find the perfect breed for your lifestyle, living situation, activity level, and family needs.</p><p>Compare breeds by size, energy level, grooming needs, and temperament to find your ideal companion.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -61,8 +61,8 @@
 
     <item>
       <title>Dog Vaccination and Preventive Care Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-vaccination.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-vaccination.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-vaccination</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-vaccination</guid>
       <description>Essential vaccination schedules, preventive care recommendations, and health maintenance tips for dogs of all life stages.</description>
       <content:encoded><![CDATA[<p>Essential vaccination schedules, preventive care recommendations, and health maintenance tips for dogs of all life stages.</p><p>Learn about core and non-core vaccines, parasite prevention, and routine health screenings.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -73,8 +73,8 @@
 
     <item>
       <title>Complete Puppy Care Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-puppy-care.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-puppy-care.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-puppy-care</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-puppy-care</guid>
       <description>Complete puppy care guide covering everything new puppy owners need to know: feeding, vaccinations, training, socialization, and health essentials.</description>
       <content:encoded><![CDATA[<p>Complete puppy care guide covering everything new puppy owners need to know: feeding, vaccinations, training, socialization, and health essentials.</p><p>From bringing your puppy home to their first year milestones.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -85,8 +85,8 @@
 
     <item>
       <title>Dog Behavior and Body Language Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-behavior.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-behavior.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-behavior</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-behavior</guid>
       <description>Understanding dog behavior, body language, and communication to build a stronger bond with your canine companion.</description>
       <content:encoded><![CDATA[<p>Understanding dog behavior, body language, and communication to build a stronger bond with your canine companion.</p><p>Learn to read tail positions, ear movements, and other signals your dog uses to communicate.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -96,8 +96,8 @@
 
     <item>
       <title>Dog Dental Health Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-dental.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-dental.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-dental</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-dental</guid>
       <description>Dog dental health guide covering brushing techniques, dental disease prevention, professional cleanings, and maintaining your dog's oral health.</description>
       <content:encoded><![CDATA[<p>Dog dental health guide covering brushing techniques, dental disease prevention, professional cleanings, and maintaining your dog's oral health.</p><p>Prevent periodontal disease and keep your dog's teeth healthy for life.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -108,8 +108,8 @@
 
     <item>
       <title>Senior Dog Care Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-senior-care.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-senior-care.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-senior-care</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-senior-care</guid>
       <description>Caring for aging dogs including nutrition adjustments, mobility support, cognitive health, and managing age-related conditions.</description>
       <content:encoded><![CDATA[<p>Caring for aging dogs including nutrition adjustments, mobility support, cognitive health, and managing age-related conditions.</p><p>Help your senior dog live comfortably and maintain quality of life.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -120,8 +120,8 @@
 
     <item>
       <title>Dog First Aid Emergency Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-first-aid.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-first-aid.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-first-aid</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-first-aid</guid>
       <description>Essential first aid procedures for dogs including wound care, choking response, CPR basics, and when to seek emergency veterinary care.</description>
       <content:encoded><![CDATA[<p>Essential first aid procedures for dogs including wound care, choking response, CPR basics, and when to seek emergency veterinary care.</p><p>Be prepared for pet emergencies with this comprehensive guide.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -132,8 +132,8 @@
 
     <item>
       <title>Dog Symptom Reference Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-symptoms.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-symptoms.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-symptoms</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-symptoms</guid>
       <description>Common dog symptoms explained with urgency levels, possible causes, and guidance on when to see a veterinarian.</description>
       <content:encoded><![CDATA[<p>Common dog symptoms explained with urgency levels, possible causes, and guidance on when to see a veterinarian.</p><p>Quick reference for vomiting, diarrhea, lethargy, and other concerning signs.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -144,8 +144,8 @@
 
     <item>
       <title>Dog Travel Safety Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-travel.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-travel.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-travel</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-travel</guid>
       <description>Safe travel tips for dogs including car safety, flying with dogs, road trips, and pet-friendly travel planning.</description>
       <content:encoded><![CDATA[<p>Safe travel tips for dogs including car safety, flying with dogs, road trips, and pet-friendly travel planning.</p><p>Keep your dog safe and comfortable on every adventure.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -156,8 +156,8 @@
 
     <item>
       <title>Multi-Dog Household Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-multi-dog.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-multi-dog.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-multi-dog</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-multi-dog</guid>
       <description>Managing a multi-dog household including introductions, preventing conflicts, resource management, and keeping multiple dogs happy together.</description>
       <content:encoded><![CDATA[<p>Managing a multi-dog household including introductions, preventing conflicts, resource management, and keeping multiple dogs happy together.</p><p>Create harmony in your multi-dog home.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -168,8 +168,8 @@
 
     <item>
       <title>Dog Allergies Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-allergies.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-allergies.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-allergies</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-allergies</guid>
       <description>Understanding dog allergies including food allergies, environmental allergens, symptoms, testing, and treatment options.</description>
       <content:encoded><![CDATA[<p>Understanding dog allergies including food allergies, environmental allergens, symptoms, testing, and treatment options.</p><p>Help your itchy dog find relief from allergies.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -180,8 +180,8 @@
 
     <item>
       <title>Dog Arthritis Management Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-arthritis.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-arthritis.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-arthritis</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-arthritis</guid>
       <description>Complete guide to arthritis in dogs: symptoms, causes, treatment options including medications and supplements, pain management, and lifestyle modifications.</description>
       <content:encoded><![CDATA[<p>Complete guide to arthritis in dogs: symptoms, causes, treatment options including medications and supplements, pain management, and lifestyle modifications.</p><p>Improve your arthritic dog's mobility and comfort.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -193,8 +193,8 @@
 
     <item>
       <title>Dog Bloat (GDV) Emergency Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-bloat-gdv.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-bloat-gdv.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-bloat-gdv</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-bloat-gdv</guid>
       <description>Critical guide to bloat (GDV) in dogs: symptoms, emergency response, risk factors, treatment, prevention, and why this life-threatening condition needs immediate action.</description>
       <content:encoded><![CDATA[<p>Critical guide to bloat (GDV) in dogs: symptoms, emergency response, risk factors, treatment, prevention, and why this life-threatening condition needs immediate action.</p><p>Know the signs of this life-threatening emergency.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -205,8 +205,8 @@
 
     <item>
       <title>Dog Bathing Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-bathing-guide.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-bathing-guide.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-bathing-guide</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-bathing-guide</guid>
       <description>Complete dog bathing guide with step-by-step instructions, best shampoos, bathing frequency by breed, and tips for making bath time stress-free for your dog.</description>
       <content:encoded><![CDATA[<p>Complete dog bathing guide with step-by-step instructions, best shampoos, bathing frequency by breed, and tips for making bath time stress-free for your dog.</p><p>Make bath time easier for both you and your dog.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -216,8 +216,8 @@
 
     <item>
       <title>Dog Nail Trimming Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-nail-trimming.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-nail-trimming.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-nail-trimming</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-nail-trimming</guid>
       <description>Safe dog nail trimming techniques, best tools, handling the quick, and tips for dogs who hate nail trims.</description>
       <content:encoded><![CDATA[<p>Safe dog nail trimming techniques, best tools, handling the quick, and tips for dogs who hate nail trims.</p><p>Keep your dog's nails healthy without the stress.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -227,8 +227,8 @@
 
     <item>
       <title>Dog Ear Cleaning Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-ear-cleaning.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-ear-cleaning.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-ear-cleaning</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-ear-cleaning</guid>
       <description>Complete dog ear cleaning guide with step-by-step instructions, best ear cleaners, how to recognize ear infections, and tips for dogs with floppy or hairy ears.</description>
       <content:encoded><![CDATA[<p>Complete dog ear cleaning guide with step-by-step instructions, best ear cleaners, how to recognize ear infections, and tips for dogs with floppy or hairy ears.</p><p>Prevent ear infections with proper ear care.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -239,8 +239,8 @@
 
     <item>
       <title>Dog Recall Training Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-recall-training.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-recall-training.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-recall-training</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-recall-training</guid>
       <description>Train your dog to come when called with proven recall training techniques. Essential for safety and off-leash reliability.</description>
       <content:encoded><![CDATA[<p>Train your dog to come when called with proven recall training techniques. Essential for safety and off-leash reliability.</p><p>Build a bulletproof recall for off-leash freedom.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -250,8 +250,8 @@
 
     <item>
       <title>Dog Clicker Training Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-clicker-training.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-clicker-training.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-clicker-training</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-clicker-training</guid>
       <description>Complete beginner's guide to clicker training for dogs. Learn marker training techniques for faster, more effective dog training.</description>
       <content:encoded><![CDATA[<p>Complete beginner's guide to clicker training for dogs. Learn marker training techniques for faster, more effective dog training.</p><p>Master the science of clicker training.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -261,8 +261,8 @@
 
     <item>
       <title>Dog Barking Solutions Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-barking-solutions.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-barking-solutions.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-barking-solutions</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-barking-solutions</guid>
       <description>Stop excessive barking with proven training techniques. Understand why dogs bark and address the root cause.</description>
       <content:encoded><![CDATA[<p>Stop excessive barking with proven training techniques. Understand why dogs bark and address the root cause.</p><p>Reduce nuisance barking while keeping your dog happy.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -273,8 +273,8 @@
 
     <item>
       <title>Dog Jumping Solutions Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-jumping-solutions.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-jumping-solutions.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-jumping-solutions</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-jumping-solutions</guid>
       <description>Stop your dog from jumping on people with proven training techniques. Learn why dogs jump, prevention strategies, and step-by-step training for polite greetings.</description>
       <content:encoded><![CDATA[<p>Stop your dog from jumping on people with proven training techniques. Learn why dogs jump, prevention strategies, and step-by-step training for polite greetings.</p><p>Teach your dog polite greeting manners.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
