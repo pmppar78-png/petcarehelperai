@@ -4,7 +4,7 @@
  * Usage: Add this script to your site and call PetCareWidget.init()
  *
  * Example:
- * <script src="https://petcarehelperai.netlify.app/embed/widget.js"></script>
+ * <script src="https://petcarehelperai.com/embed/widget.js"></script>
  * <script>
  *   PetCareWidget.init({
  *     position: 'bottom-right', // 'bottom-right', 'bottom-left', or 'inline'
@@ -17,7 +17,7 @@
 (function(window, document) {
   'use strict';
 
-  var WIDGET_URL = 'https://petcarehelperai.netlify.app/embed/widget.html';
+  var WIDGET_URL = 'https://petcarehelperai.com/embed/widget.html';
   var WIDGET_VERSION = '1.0.0';
 
   var defaultConfig = {

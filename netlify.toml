@@ -5,14 +5,31 @@
 [build.processing.html]
   pretty_urls = true
 
-# Intentional alias redirect
+# =====================================================
+# REDIRECT RULES — Single-hop 301s to canonical URLs
+# Canonical format: https://petcarehelperai.com/path (no trailing slash, no .html)
+# Directory indexes use trailing slash: /tools/, /locations/, /feeds/
+# =====================================================
+
+# --- Domain normalization (www → non-www) ---
+# Netlify handles http→https automatically at the edge.
+# www→non-www is configured via Netlify domain settings.
+# These rules provide a fallback for any edge cases.
+
+[[redirects]]
+  from = "https://www.petcarehelperai.com/*"
+  to = "https://petcarehelperai.com/:splat"
+  status = 301
+  force = true
+
+# --- Intentional alias redirect ---
 [[redirects]]
   from = "/ai"
   to = "/chat"
   status = 301
   force = true
 
-# Redirect index.html files to directory paths
+# --- Redirect index.html files to directory paths ---
 [[redirects]]
   from = "/index.html"
   to = "/"
@@ -37,7 +54,7 @@
   status = 301
   force = true
 
-# Redirect .html extensions to clean URLs for all directories
+# --- Redirect .html extensions to clean URLs for all directories ---
 # These use force=true to override Netlify's default file serving
 [[redirects]]
   from = "/breeds/birds/*.html"

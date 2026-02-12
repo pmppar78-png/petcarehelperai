@@ -6,8 +6,8 @@
   <channel>
     <title>Pet Care Helper AI - Cat Care Guides</title>
     <description>Comprehensive cat care guides covering nutrition, behavior, health, grooming, and everything cat owners need to know. AI-powered pet health guidance.</description>
-    <link>https://petcarehelperai.netlify.app/cats.html</link>
-    <atom:link href="https://petcarehelperai.netlify.app/feeds/cats.xml" rel="self" type="application/rss+xml"/>
+    <link>https://petcarehelperai.com/cats</link>
+    <atom:link href="https://petcarehelperai.com/feeds/cats.xml" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
     <copyright>Copyright 2024 Pet Care Helper AI. Feel free to republish with attribution.</copyright>
     <managingEditor>advertise@petcarehelperai.com (Pet Care Helper AI)</managingEditor>
@@ -15,9 +15,9 @@
     <lastBuildDate>Mon, 03 Feb 2025 00:00:00 GMT</lastBuildDate>
     <ttl>1440</ttl>
     <image>
-      <url>https://petcarehelperai.netlify.app/logo.png</url>
+      <url>https://petcarehelperai.com/logo.png</url>
       <title>Pet Care Helper AI - Cats</title>
-      <link>https://petcarehelperai.netlify.app/cats.html</link>
+      <link>https://petcarehelperai.com/cats</link>
     </image>
     <category>Cats</category>
     <category>Pet Care</category>
@@ -26,8 +26,8 @@
 
     <item>
       <title>Cat Breed Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-breeds.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-breeds.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-breeds</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-breeds</guid>
       <description>Cat breed guide covering popular breeds, characteristics, health considerations, and finding the right cat breed for your lifestyle and home.</description>
       <content:encoded><![CDATA[<p>Cat breed guide covering popular breeds, characteristics, health considerations, and finding the right cat breed for your lifestyle and home.</p><p>From Persian to Siamese, Maine Coon to Bengal, learn about each breed's unique traits.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -37,8 +37,8 @@
 
     <item>
       <title>Cat Nutrition Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-nutrition.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-nutrition.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-nutrition</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-nutrition</guid>
       <description>Complete cat nutrition guide covering dietary requirements, wet vs dry food, feeding schedules, and special dietary needs for cats.</description>
       <content:encoded><![CDATA[<p>Complete cat nutrition guide covering dietary requirements, wet vs dry food, feeding schedules, and special dietary needs for cats.</p><p>Understand obligate carnivore needs and choose the best food for your feline.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -49,8 +49,8 @@
 
     <item>
       <title>Cat Behavior and Enrichment Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-behavior.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-behavior.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-behavior</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-behavior</guid>
       <description>Understanding cat behavior, body language, and providing environmental enrichment for a happy, healthy cat.</description>
       <content:encoded><![CDATA[<p>Understanding cat behavior, body language, and providing environmental enrichment for a happy, healthy cat.</p><p>Learn why cats do what they do and how to meet their behavioral needs.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -61,8 +61,8 @@
 
     <item>
       <title>Complete Kitten Care Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-kitten-care.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-kitten-care.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-kitten-care</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-kitten-care</guid>
       <description>Everything new kitten owners need to know about feeding, litter training, socialization, vaccinations, and kitten development milestones.</description>
       <content:encoded><![CDATA[<p>Everything new kitten owners need to know about feeding, litter training, socialization, vaccinations, and kitten development milestones.</p><p>Start your kitten off right with proper care from day one.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -73,8 +73,8 @@
 
     <item>
       <title>Cat Grooming and Dental Care Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-grooming.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-grooming.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-grooming</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-grooming</guid>
       <description>Complete cat dental care and grooming guide covering teeth cleaning, brushing techniques, nail trimming, coat care, bathing, and maintaining your cat's hygiene.</description>
       <content:encoded><![CDATA[<p>Complete cat dental care and grooming guide covering teeth cleaning, brushing techniques, nail trimming, coat care, bathing, and maintaining your cat's hygiene.</p><p>Keep your cat looking and feeling their best.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -85,8 +85,8 @@
 
     <item>
       <title>Cat Litter Box Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-litter.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-litter.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-litter</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-litter</guid>
       <description>Complete guide to cat litter boxes, litter types, placement, cleaning routines, and solving litter box problems.</description>
       <content:encoded><![CDATA[<p>Complete guide to cat litter boxes, litter types, placement, cleaning routines, and solving litter box problems.</p><p>Create the ideal litter setup for your cat's needs and preferences.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -97,8 +97,8 @@
 
     <item>
       <title>Senior Cat Care Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-senior-care.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-senior-care.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-senior-care</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-senior-care</guid>
       <description>Caring for aging cats including nutrition changes, mobility support, common senior cat health issues, and quality of life considerations.</description>
       <content:encoded><![CDATA[<p>Caring for aging cats including nutrition changes, mobility support, common senior cat health issues, and quality of life considerations.</p><p>Help your senior cat age gracefully with proper care.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -109,8 +109,8 @@
 
     <item>
       <title>Cat Symptom Reference Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-symptoms.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-symptoms.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-symptoms</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-symptoms</guid>
       <description>Common cat symptoms explained with urgency levels, possible causes, and guidance on when to see a veterinarian.</description>
       <content:encoded><![CDATA[<p>Common cat symptoms explained with urgency levels, possible causes, and guidance on when to see a veterinarian.</p><p>Know when your cat's symptoms require immediate attention.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -121,8 +121,8 @@
 
     <item>
       <title>Multi-Cat Household Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-multi-cat.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-multi-cat.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-multi-cat</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-multi-cat</guid>
       <description>Managing a multi-cat household including introductions, preventing conflicts, resource management, and keeping multiple cats happy together.</description>
       <content:encoded><![CDATA[<p>Managing a multi-cat household including introductions, preventing conflicts, resource management, and keeping multiple cats happy together.</p><p>Create harmony in your multi-cat home.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -133,8 +133,8 @@
 
     <item>
       <title>Indoor vs Outdoor Cats Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-indoor-outdoor.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-indoor-outdoor.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-indoor-outdoor</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-indoor-outdoor</guid>
       <description>Pros and cons of indoor vs outdoor cats, safety considerations, catios, and enrichment options for indoor cats.</description>
       <content:encoded><![CDATA[<p>Pros and cons of indoor vs outdoor cats, safety considerations, catios, and enrichment options for indoor cats.</p><p>Make the best decision for your cat's lifestyle and safety.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -145,8 +145,8 @@
 
     <item>
       <title>Cat Kidney Disease Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-kidney-disease.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-kidney-disease.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-kidney-disease</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-kidney-disease</guid>
       <description>Complete guide to chronic kidney disease in cats: stages, symptoms, diagnosis, treatment options, diet management, and home care.</description>
       <content:encoded><![CDATA[<p>Complete guide to chronic kidney disease in cats: stages, symptoms, diagnosis, treatment options, diet management, and home care.</p><p>Manage CKD and help your cat live comfortably.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -157,8 +157,8 @@
 
     <item>
       <title>Cat Hyperthyroidism Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-hyperthyroidism.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-hyperthyroidism.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-hyperthyroidism</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-hyperthyroidism</guid>
       <description>Complete guide to hyperthyroidism in cats: symptoms, diagnosis, treatment options including medication, radioactive iodine, surgery, and dietary management.</description>
       <content:encoded><![CDATA[<p>Complete guide to hyperthyroidism in cats: symptoms, diagnosis, treatment options including medication, radioactive iodine, surgery, and dietary management.</p><p>Understand and manage this common feline condition.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -169,8 +169,8 @@
 
     <item>
       <title>Cat Urinary Issues Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-urinary-issues.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-urinary-issues.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-urinary-issues</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-urinary-issues</guid>
       <description>Complete guide to feline urinary problems: FLUTD, urinary blockages, UTIs, crystals, and bladder stones. Symptoms, treatment, prevention, and emergency care.</description>
       <content:encoded><![CDATA[<p>Complete guide to feline urinary problems: FLUTD, urinary blockages, UTIs, crystals, and bladder stones. Symptoms, treatment, prevention, and emergency care.</p><p>Recognize urinary emergencies and prevent recurring issues.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -182,8 +182,8 @@
 
     <item>
       <title>Cat Diabetes Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-diabetes.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-diabetes.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-diabetes</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-diabetes</guid>
       <description>Complete guide to feline diabetes: symptoms, diagnosis, insulin therapy, diet management, blood glucose monitoring, and managing diabetic cats at home.</description>
       <content:encoded><![CDATA[<p>Complete guide to feline diabetes: symptoms, diagnosis, insulin therapy, diet management, blood glucose monitoring, and managing diabetic cats at home.</p><p>Successfully manage your diabetic cat's care.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -194,8 +194,8 @@
 
     <item>
       <title>Cat Dental Disease Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-dental-disease.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-dental-disease.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-dental-disease</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-dental-disease</guid>
       <description>Complete guide to dental disease in cats: gingivitis, periodontal disease, stomatitis, resorptive lesions. Signs, prevention, treatment, and home care tips.</description>
       <content:encoded><![CDATA[<p>Complete guide to dental disease in cats: gingivitis, periodontal disease, stomatitis, resorptive lesions. Signs, prevention, treatment, and home care tips.</p><p>Protect your cat's dental health and prevent painful conditions.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -206,8 +206,8 @@
 
     <item>
       <title>Cat Scratching Solutions Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-scratching-solutions.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-scratching-solutions.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-scratching-solutions</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-scratching-solutions</guid>
       <description>Protect your furniture while meeting your cat's scratching needs. Understand why cats scratch and redirect the behavior appropriately.</description>
       <content:encoded><![CDATA[<p>Protect your furniture while meeting your cat's scratching needs. Understand why cats scratch and redirect the behavior appropriately.</p><p>Save your furniture with proper scratching solutions.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -217,8 +217,8 @@
 
     <item>
       <title>Cat Biting Solutions Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-biting-solutions.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-biting-solutions.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-biting-solutions</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-biting-solutions</guid>
       <description>Stop unwanted cat biting behavior. Understand why cats bite and learn effective strategies for play aggression, petting aggression, and other biting issues.</description>
       <content:encoded><![CDATA[<p>Stop unwanted cat biting behavior. Understand why cats bite and learn effective strategies for play aggression, petting aggression, and other biting issues.</p><p>Reduce biting while strengthening your bond.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -228,8 +228,8 @@
 
     <item>
       <title>Cat Nail Trimming Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-nail-trimming.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-nail-trimming.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-nail-trimming</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-nail-trimming</guid>
       <description>Safe cat nail trimming techniques, best tools, handling tips for difficult cats, and alternatives to declawing.</description>
       <content:encoded><![CDATA[<p>Safe cat nail trimming techniques, best tools, handling tips for difficult cats, and alternatives to declawing.</p><p>Keep your cat's nails healthy without the struggle.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -239,8 +239,8 @@
 
     <item>
       <title>Cat Ear Cleaning Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-ear-cleaning.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-ear-cleaning.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-ear-cleaning</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-ear-cleaning</guid>
       <description>Complete cat ear cleaning guide with step-by-step instructions, how to recognize ear problems, best ear cleaners, and when to see a veterinarian.</description>
       <content:encoded><![CDATA[<p>Complete cat ear cleaning guide with step-by-step instructions, how to recognize ear problems, best ear cleaners, and when to see a veterinarian.</p><p>Maintain healthy ears and spot problems early.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -251,8 +251,8 @@
 
     <item>
       <title>Cat Brushing Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-brushing-guide.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-brushing-guide.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-brushing-guide</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-brushing-guide</guid>
       <description>Complete cat brushing guide with techniques for short, medium, and long-haired cats. Learn the best brushes, brushing frequency, and tips for a healthy coat.</description>
       <content:encoded><![CDATA[<p>Complete cat brushing guide with techniques for short, medium, and long-haired cats. Learn the best brushes, brushing frequency, and tips for a healthy coat.</p><p>Keep your cat's coat healthy and reduce shedding.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -262,8 +262,8 @@
 
     <item>
       <title>Cat Bathing Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-bathing-guide.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-bathing-guide.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-bathing-guide</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-bathing-guide</guid>
       <description>Complete cat bathing guide with step-by-step instructions, when cats need baths, best cat shampoos, and tips for making bath time less stressful for your cat.</description>
       <content:encoded><![CDATA[<p>Complete cat bathing guide with step-by-step instructions, when cats need baths, best cat shampoos, and tips for making bath time less stressful for your cat.</p><p>Bath time doesn't have to be a battle.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -273,8 +273,8 @@
 
     <item>
       <title>Cat Food Ingredients Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-food-ingredients.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-food-ingredients.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-food-ingredients</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-food-ingredients</guid>
       <description>Understanding cat food ingredients, labels, and nutritional requirements. Learn what to look for and what to avoid in cat food.</description>
       <content:encoded><![CDATA[<p>Understanding cat food ingredients, labels, and nutritional requirements. Learn what to look for and what to avoid in cat food.</p><p>Make informed choices about your cat's food.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -284,8 +284,8 @@
 
     <item>
       <title>Apartment Cats Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/apartment-cats.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/apartment-cats.html</guid>
+      <link>https://petcarehelperai.com/guides/apartment-cats</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/apartment-cats</guid>
       <description>Complete guide to keeping cats happy in apartments. Space optimization, enrichment ideas, and tips for indoor cat life in small spaces.</description>
       <content:encoded><![CDATA[<p>Complete guide to keeping cats happy in apartments. Space optimization, enrichment ideas, and tips for indoor cat life in small spaces.</p><p>Make apartment living great for your cat.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>

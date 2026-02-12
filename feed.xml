@@ -6,8 +6,8 @@
   <channel>
     <title>Pet Care Helper AI - Pet Health Guides</title>
     <description>AI-powered pet health guidance and comprehensive care guides for dogs, cats, birds, reptiles, and fish. Expert tips on nutrition, behavior, health symptoms, and more.</description>
-    <link>https://petcarehelperai.netlify.app/</link>
-    <atom:link href="https://petcarehelperai.netlify.app/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://petcarehelperai.com/</link>
+    <atom:link href="https://petcarehelperai.com/feed.xml" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
     <copyright>Copyright 2024 Pet Care Helper AI. Feel free to republish with attribution.</copyright>
     <managingEditor>advertise@petcarehelperai.com (Pet Care Helper AI)</managingEditor>
@@ -15,9 +15,9 @@
     <lastBuildDate>Mon, 03 Feb 2025 00:00:00 GMT</lastBuildDate>
     <ttl>1440</ttl>
     <image>
-      <url>https://petcarehelperai.netlify.app/logo.png</url>
+      <url>https://petcarehelperai.com/logo.png</url>
       <title>Pet Care Helper AI</title>
-      <link>https://petcarehelperai.netlify.app/</link>
+      <link>https://petcarehelperai.com/</link>
     </image>
     <category>Pets</category>
     <category>Animal Care</category>
@@ -26,8 +26,8 @@
     <!-- Dog Guides -->
     <item>
       <title>Dog Training Fundamentals Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-training.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-training.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-training</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-training</guid>
       <description>Dog training fundamentals guide covering positive reinforcement, basic commands, house training, leash training, and behavior shaping for dogs of all ages.</description>
       <content:encoded><![CDATA[<p>Dog training fundamentals guide covering positive reinforcement, basic commands, house training, leash training, and behavior shaping for dogs of all ages.</p><p>Learn about the science of positive reinforcement, essential commands like sit, stay, come, and leave it, plus tips for leash training and house training your dog.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -39,8 +39,8 @@
 
     <item>
       <title>Complete Dog Nutrition Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-nutrition.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-nutrition.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-nutrition</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-nutrition</guid>
       <description>Complete dog nutrition guide covering dietary requirements, life-stage feeding, reading labels, and choosing the right food for your dog.</description>
       <content:encoded><![CDATA[<p>Complete dog nutrition guide covering dietary requirements, life-stage feeding, reading labels, and choosing the right food for your dog.</p><p>Understand protein, fat, and carbohydrate needs, plus special considerations for puppies, adults, and senior dogs.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -52,8 +52,8 @@
 
     <item>
       <title>Dog Breed Selection Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-breeds.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-breeds.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-breeds</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-breeds</guid>
       <description>Dog breed selection guide to help you find the perfect breed for your lifestyle, living situation, activity level, and family needs.</description>
       <content:encoded><![CDATA[<p>Dog breed selection guide to help you find the perfect breed for your lifestyle, living situation, activity level, and family needs.</p><p>Compare breeds by size, energy level, grooming needs, and temperament to find your ideal companion.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -64,8 +64,8 @@
 
     <item>
       <title>Dog Vaccination and Preventive Care Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-vaccination.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-vaccination.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-vaccination</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-vaccination</guid>
       <description>Essential vaccination schedules, preventive care recommendations, and health maintenance tips for dogs of all life stages.</description>
       <content:encoded><![CDATA[<p>Essential vaccination schedules, preventive care recommendations, and health maintenance tips for dogs of all life stages.</p><p>Learn about core and non-core vaccines, parasite prevention, and routine health screenings.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -77,8 +77,8 @@
 
     <item>
       <title>Complete Puppy Care Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-puppy-care.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-puppy-care.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-puppy-care</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-puppy-care</guid>
       <description>Complete puppy care guide covering everything new puppy owners need to know: feeding, vaccinations, training, socialization, and health essentials.</description>
       <content:encoded><![CDATA[<p>Complete puppy care guide covering everything new puppy owners need to know: feeding, vaccinations, training, socialization, and health essentials.</p><p>From bringing your puppy home to their first year milestones.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -90,8 +90,8 @@
 
     <item>
       <title>Dog Behavior and Body Language Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-behavior.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-behavior.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-behavior</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-behavior</guid>
       <description>Understanding dog behavior, body language, and communication to build a stronger bond with your canine companion.</description>
       <content:encoded><![CDATA[<p>Understanding dog behavior, body language, and communication to build a stronger bond with your canine companion.</p><p>Learn to read tail positions, ear movements, and other signals your dog uses to communicate.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -102,8 +102,8 @@
 
     <item>
       <title>Dog Dental Health Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-dental.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-dental.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-dental</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-dental</guid>
       <description>Dog dental health guide covering brushing techniques, dental disease prevention, professional cleanings, and maintaining your dog's oral health.</description>
       <content:encoded><![CDATA[<p>Dog dental health guide covering brushing techniques, dental disease prevention, professional cleanings, and maintaining your dog's oral health.</p><p>Prevent periodontal disease and keep your dog's teeth healthy for life.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -115,8 +115,8 @@
 
     <item>
       <title>Senior Dog Care Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-senior-care.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-senior-care.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-senior-care</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-senior-care</guid>
       <description>Caring for aging dogs including nutrition adjustments, mobility support, cognitive health, and managing age-related conditions.</description>
       <content:encoded><![CDATA[<p>Caring for aging dogs including nutrition adjustments, mobility support, cognitive health, and managing age-related conditions.</p><p>Help your senior dog live comfortably and maintain quality of life.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -128,8 +128,8 @@
 
     <item>
       <title>Dog First Aid Emergency Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-first-aid.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-first-aid.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-first-aid</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-first-aid</guid>
       <description>Essential first aid procedures for dogs including wound care, choking response, CPR basics, and when to seek emergency veterinary care.</description>
       <content:encoded><![CDATA[<p>Essential first aid procedures for dogs including wound care, choking response, CPR basics, and when to seek emergency veterinary care.</p><p>Be prepared for pet emergencies with this comprehensive guide.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -141,8 +141,8 @@
 
     <item>
       <title>Dog Symptom Reference Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/dog-symptoms.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/dog-symptoms.html</guid>
+      <link>https://petcarehelperai.com/guides/dog-symptoms</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-symptoms</guid>
       <description>Common dog symptoms explained with urgency levels, possible causes, and guidance on when to see a veterinarian.</description>
       <content:encoded><![CDATA[<p>Common dog symptoms explained with urgency levels, possible causes, and guidance on when to see a veterinarian.</p><p>Quick reference for vomiting, diarrhea, lethargy, and other concerning signs.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -155,8 +155,8 @@
     <!-- Cat Guides -->
     <item>
       <title>Cat Breed Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-breeds.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-breeds.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-breeds</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-breeds</guid>
       <description>Cat breed guide covering popular breeds, characteristics, health considerations, and finding the right cat breed for your lifestyle and home.</description>
       <content:encoded><![CDATA[<p>Cat breed guide covering popular breeds, characteristics, health considerations, and finding the right cat breed for your lifestyle and home.</p><p>From Persian to Siamese, Maine Coon to Bengal, learn about each breed's unique traits.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -167,8 +167,8 @@
 
     <item>
       <title>Cat Nutrition Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-nutrition.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-nutrition.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-nutrition</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-nutrition</guid>
       <description>Complete cat nutrition guide covering dietary requirements, wet vs dry food, feeding schedules, and special dietary needs for cats.</description>
       <content:encoded><![CDATA[<p>Complete cat nutrition guide covering dietary requirements, wet vs dry food, feeding schedules, and special dietary needs for cats.</p><p>Understand obligate carnivore needs and choose the best food for your feline.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -180,8 +180,8 @@
 
     <item>
       <title>Cat Behavior and Enrichment Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-behavior.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-behavior.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-behavior</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-behavior</guid>
       <description>Understanding cat behavior, body language, and providing environmental enrichment for a happy, healthy cat.</description>
       <content:encoded><![CDATA[<p>Understanding cat behavior, body language, and providing environmental enrichment for a happy, healthy cat.</p><p>Learn why cats do what they do and how to meet their behavioral needs.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -193,8 +193,8 @@
 
     <item>
       <title>Complete Kitten Care Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-kitten-care.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-kitten-care.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-kitten-care</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-kitten-care</guid>
       <description>Everything new kitten owners need to know about feeding, litter training, socialization, vaccinations, and kitten development milestones.</description>
       <content:encoded><![CDATA[<p>Everything new kitten owners need to know about feeding, litter training, socialization, vaccinations, and kitten development milestones.</p><p>Start your kitten off right with proper care from day one.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -206,8 +206,8 @@
 
     <item>
       <title>Cat Grooming and Dental Care Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-grooming.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-grooming.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-grooming</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-grooming</guid>
       <description>Complete cat dental care and grooming guide covering teeth cleaning, brushing techniques, nail trimming, coat care, bathing, and maintaining your cat's hygiene.</description>
       <content:encoded><![CDATA[<p>Complete cat dental care and grooming guide covering teeth cleaning, brushing techniques, nail trimming, coat care, bathing, and maintaining your cat's hygiene.</p><p>Keep your cat looking and feeling their best.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -219,8 +219,8 @@
 
     <item>
       <title>Cat Litter Box Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-litter.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-litter.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-litter</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-litter</guid>
       <description>Complete guide to cat litter boxes, litter types, placement, cleaning routines, and solving litter box problems.</description>
       <content:encoded><![CDATA[<p>Complete guide to cat litter boxes, litter types, placement, cleaning routines, and solving litter box problems.</p><p>Create the ideal litter setup for your cat's needs and preferences.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -232,8 +232,8 @@
 
     <item>
       <title>Senior Cat Care Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-senior-care.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-senior-care.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-senior-care</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-senior-care</guid>
       <description>Caring for aging cats including nutrition changes, mobility support, common senior cat health issues, and quality of life considerations.</description>
       <content:encoded><![CDATA[<p>Caring for aging cats including nutrition changes, mobility support, common senior cat health issues, and quality of life considerations.</p><p>Help your senior cat age gracefully with proper care.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -245,8 +245,8 @@
 
     <item>
       <title>Cat Symptom Reference Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-symptoms.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-symptoms.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-symptoms</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-symptoms</guid>
       <description>Common cat symptoms explained with urgency levels, possible causes, and guidance on when to see a veterinarian.</description>
       <content:encoded><![CDATA[<p>Common cat symptoms explained with urgency levels, possible causes, and guidance on when to see a veterinarian.</p><p>Know when your cat's symptoms require immediate attention.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -258,8 +258,8 @@
 
     <item>
       <title>Multi-Cat Household Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-multi-cat.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-multi-cat.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-multi-cat</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-multi-cat</guid>
       <description>Managing a multi-cat household including introductions, preventing conflicts, resource management, and keeping multiple cats happy together.</description>
       <content:encoded><![CDATA[<p>Managing a multi-cat household including introductions, preventing conflicts, resource management, and keeping multiple cats happy together.</p><p>Create harmony in your multi-cat home.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -271,8 +271,8 @@
 
     <item>
       <title>Indoor vs Outdoor Cats Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/cat-indoor-outdoor.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/cat-indoor-outdoor.html</guid>
+      <link>https://petcarehelperai.com/guides/cat-indoor-outdoor</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-indoor-outdoor</guid>
       <description>Pros and cons of indoor vs outdoor cats, safety considerations, catios, and enrichment options for indoor cats.</description>
       <content:encoded><![CDATA[<p>Pros and cons of indoor vs outdoor cats, safety considerations, catios, and enrichment options for indoor cats.</p><p>Make the best decision for your cat's lifestyle and safety.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -285,8 +285,8 @@
     <!-- Bird Guides -->
     <item>
       <title>Complete Bird Care Starter Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/bird-starter.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/bird-starter.html</guid>
+      <link>https://petcarehelperai.com/guides/bird-starter</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/bird-starter</guid>
       <description>Essential guide for new bird owners covering species selection, cage setup, diet basics, and daily care routines for pet birds.</description>
       <content:encoded><![CDATA[<p>Essential guide for new bird owners covering species selection, cage setup, diet basics, and daily care routines for pet birds.</p><p>Start your bird ownership journey with confidence.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -298,8 +298,8 @@
 
     <item>
       <title>Bird Nutrition and Diet Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/bird-nutrition.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/bird-nutrition.html</guid>
+      <link>https://petcarehelperai.com/guides/bird-nutrition</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/bird-nutrition</guid>
       <description>Complete bird nutrition guide covering pellets, seeds, fresh foods, and species-specific dietary needs for pet birds.</description>
       <content:encoded><![CDATA[<p>Complete bird nutrition guide covering pellets, seeds, fresh foods, and species-specific dietary needs for pet birds.</p><p>Feed your bird a balanced diet for optimal health.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -311,8 +311,8 @@
 
     <item>
       <title>Bird Cage Setup and Environment Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/bird-habitat.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/bird-habitat.html</guid>
+      <link>https://petcarehelperai.com/guides/bird-habitat</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/bird-habitat</guid>
       <description>Setting up the ideal bird cage including size requirements, perches, toys, and creating an enriching environment for pet birds.</description>
       <content:encoded><![CDATA[<p>Setting up the ideal bird cage including size requirements, perches, toys, and creating an enriching environment for pet birds.</p><p>Create the perfect home for your feathered friend.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -324,8 +324,8 @@
 
     <item>
       <title>Bird Health and Symptom Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/bird-health.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/bird-health.html</guid>
+      <link>https://petcarehelperai.com/guides/bird-health</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/bird-health</guid>
       <description>Recognizing signs of illness in birds, common health problems, and when to seek avian veterinary care.</description>
       <content:encoded><![CDATA[<p>Recognizing signs of illness in birds, common health problems, and when to seek avian veterinary care.</p><p>Birds hide illness well - learn to spot the early warning signs.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -337,8 +337,8 @@
 
     <item>
       <title>Bird Species Selection Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/bird-species.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/bird-species.html</guid>
+      <link>https://petcarehelperai.com/guides/bird-species</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/bird-species</guid>
       <description>Comparing popular pet bird species including budgies, cockatiels, parrots, and finches to help you choose the right bird.</description>
       <content:encoded><![CDATA[<p>Comparing popular pet bird species including budgies, cockatiels, parrots, and finches to help you choose the right bird.</p><p>Find the perfect avian companion for your lifestyle.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -351,8 +351,8 @@
     <!-- Reptile Guides -->
     <item>
       <title>Complete Reptile Care Starter Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/reptile-starter.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/reptile-starter.html</guid>
+      <link>https://petcarehelperai.com/guides/reptile-starter</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/reptile-starter</guid>
       <description>Essential guide for new reptile owners covering species selection, enclosure setup, heating, lighting, and basic husbandry.</description>
       <content:encoded><![CDATA[<p>Essential guide for new reptile owners covering species selection, enclosure setup, heating, lighting, and basic husbandry.</p><p>Start your reptile keeping journey with proper knowledge.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -364,8 +364,8 @@
 
     <item>
       <title>Reptile Nutrition Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/reptile-nutrition.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/reptile-nutrition.html</guid>
+      <link>https://petcarehelperai.com/guides/reptile-nutrition</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/reptile-nutrition</guid>
       <description>Reptile nutrition guide covering feeding requirements for carnivores, insectivores, herbivores, and omnivores. Learn about feeder insects, gut-loading, and supplements.</description>
       <content:encoded><![CDATA[<p>Reptile nutrition guide covering feeding requirements for carnivores, insectivores, herbivores, and omnivores. Learn about feeder insects, gut-loading, and supplements.</p><p>Feed your reptile properly for optimal health.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -377,8 +377,8 @@
 
     <item>
       <title>Reptile Health and Symptom Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/reptile-health.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/reptile-health.html</guid>
+      <link>https://petcarehelperai.com/guides/reptile-health</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/reptile-health</guid>
       <description>Recognizing signs of illness in reptiles, common health problems, and when to seek exotic veterinary care.</description>
       <content:encoded><![CDATA[<p>Recognizing signs of illness in reptiles, common health problems, and when to seek exotic veterinary care.</p><p>Learn the signs of metabolic bone disease, respiratory infections, and other common issues.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -390,8 +390,8 @@
 
     <item>
       <title>Reptile Habitat Setup Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/reptile-habitat.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/reptile-habitat.html</guid>
+      <link>https://petcarehelperai.com/guides/reptile-habitat</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/reptile-habitat</guid>
       <description>Setting up the ideal reptile enclosure including heating, lighting, humidity control, substrate, and enrichment.</description>
       <content:encoded><![CDATA[<p>Setting up the ideal reptile enclosure including heating, lighting, humidity control, substrate, and enrichment.</p><p>Create the perfect environment for your reptile's species-specific needs.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -403,8 +403,8 @@
 
     <item>
       <title>Beginner-Friendly Reptile Species Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/reptile-species.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/reptile-species.html</guid>
+      <link>https://petcarehelperai.com/guides/reptile-species</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/reptile-species</guid>
       <description>Best reptiles for beginners including leopard geckos, bearded dragons, corn snakes, and blue-tongued skinks.</description>
       <content:encoded><![CDATA[<p>Best reptiles for beginners including leopard geckos, bearded dragons, corn snakes, and blue-tongued skinks.</p><p>Find the perfect first reptile for your experience level.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -417,8 +417,8 @@
     <!-- Fish Guides -->
     <item>
       <title>Fish Aquarium Starter Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/fish-aquarium-starter.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/fish-aquarium-starter.html</guid>
+      <link>https://petcarehelperai.com/guides/fish-aquarium-starter</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/fish-aquarium-starter</guid>
       <description>Complete beginner's guide to starting a freshwater aquarium including tank selection, cycling, and fish selection.</description>
       <content:encoded><![CDATA[<p>Complete beginner's guide to starting a freshwater aquarium including tank selection, cycling, and fish selection.</p><p>Set up your first aquarium successfully with proper planning.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -430,8 +430,8 @@
 
     <item>
       <title>Aquarium Water Quality Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/fish-water-quality.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/fish-water-quality.html</guid>
+      <link>https://petcarehelperai.com/guides/fish-water-quality</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/fish-water-quality</guid>
       <description>Aquarium water quality guide covering the nitrogen cycle, ammonia, nitrite, nitrate, pH, hardness, testing, and maintaining optimal water parameters for fish health.</description>
       <content:encoded><![CDATA[<p>Aquarium water quality guide covering the nitrogen cycle, ammonia, nitrite, nitrate, pH, hardness, testing, and maintaining optimal water parameters for fish health.</p><p>Master water chemistry for a thriving aquarium.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -443,8 +443,8 @@
 
     <item>
       <title>Fish Species Compatibility Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/fish-compatibility.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/fish-compatibility.html</guid>
+      <link>https://petcarehelperai.com/guides/fish-compatibility</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/fish-compatibility</guid>
       <description>Fish species compatibility guide for community aquariums. Learn which fish can live together, tankmate selection, and how to avoid aggression and compatibility issues.</description>
       <content:encoded><![CDATA[<p>Fish species compatibility guide for community aquariums. Learn which fish can live together, tankmate selection, and how to avoid aggression and compatibility issues.</p><p>Build a peaceful community tank.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -456,8 +456,8 @@
 
     <item>
       <title>Fish Nutrition Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/fish-nutrition.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/fish-nutrition.html</guid>
+      <link>https://petcarehelperai.com/guides/fish-nutrition</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/fish-nutrition</guid>
       <description>Complete guide to fish nutrition including types of fish food, feeding schedules, and dietary needs for different species.</description>
       <content:encoded><![CDATA[<p>Complete guide to fish nutrition including types of fish food, feeding schedules, and dietary needs for different species.</p><p>Feed your fish properly for health and vibrant colors.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -469,8 +469,8 @@
 
     <item>
       <title>Fish Health and Disease Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/fish-health.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/fish-health.html</guid>
+      <link>https://petcarehelperai.com/guides/fish-health</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/fish-health</guid>
       <description>Recognizing and treating common fish diseases including ich, fin rot, and other health problems in aquarium fish.</description>
       <content:encoded><![CDATA[<p>Recognizing and treating common fish diseases including ich, fin rot, and other health problems in aquarium fish.</p><p>Keep your fish healthy with early disease detection and treatment.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -482,8 +482,8 @@
 
     <item>
       <title>Planted Aquarium Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/fish-planted.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/fish-planted.html</guid>
+      <link>https://petcarehelperai.com/guides/fish-planted</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/fish-planted</guid>
       <description>Planted aquarium guide covering substrate, lighting, CO2, fertilizers, beginner plants, and maintenance for lush, healthy aquatic plant tanks.</description>
       <content:encoded><![CDATA[<p>Planted aquarium guide covering substrate, lighting, CO2, fertilizers, beginner plants, and maintenance for lush, healthy aquatic plant tanks.</p><p>Create a beautiful planted aquarium.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -496,8 +496,8 @@
     <!-- General Guides -->
     <item>
       <title>Pet Insurance Comparison Guide 2024</title>
-      <link>https://petcarehelperai.netlify.app/guides/compare-pet-insurance.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/compare-pet-insurance.html</guid>
+      <link>https://petcarehelperai.com/guides/compare-pet-insurance</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/compare-pet-insurance</guid>
       <description>Compare the best pet insurance providers in 2024 with coverage details, pricing, and reviews to find the right plan for your pet.</description>
       <content:encoded><![CDATA[<p>Compare the best pet insurance providers in 2024 with coverage details, pricing, and reviews to find the right plan for your pet.</p><p>Protect your pet and your wallet with the right insurance.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -509,8 +509,8 @@
 
     <item>
       <title>Pet Adoption Resource Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/adoption-guide.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/adoption-guide.html</guid>
+      <link>https://petcarehelperai.com/guides/adoption-guide</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/adoption-guide</guid>
       <description>Complete guide to adopting a pet including where to adopt, what to expect, and preparing your home for a new family member.</description>
       <content:encoded><![CDATA[<p>Complete guide to adopting a pet including where to adopt, what to expect, and preparing your home for a new family member.</p><p>Make adoption a success for you and your new pet.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -521,8 +521,8 @@
 
     <item>
       <title>Pet Poison and Toxin Database</title>
-      <link>https://petcarehelperai.netlify.app/guides/poison-database.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/poison-database.html</guid>
+      <link>https://petcarehelperai.com/guides/poison-database</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/poison-database</guid>
       <description>Comprehensive database of common household toxins and poisons dangerous to pets, with symptoms and emergency response information.</description>
       <content:encoded><![CDATA[<p>Comprehensive database of common household toxins and poisons dangerous to pets, with symptoms and emergency response information.</p><p>Know what's toxic to your pets and what to do in an emergency.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -534,8 +534,8 @@
 
     <item>
       <title>Emergency Preparedness for Pet Owners</title>
-      <link>https://petcarehelperai.netlify.app/guides/emergency-prep.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/emergency-prep.html</guid>
+      <link>https://petcarehelperai.com/guides/emergency-prep</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/emergency-prep</guid>
       <description>Prepare for emergencies with your pets including evacuation plans, emergency kits, and disaster preparedness for pet owners.</description>
       <content:encoded><![CDATA[<p>Prepare for emergencies with your pets including evacuation plans, emergency kits, and disaster preparedness for pet owners.</p><p>Be ready for any situation with proper planning.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -547,8 +547,8 @@
 
     <item>
       <title>Pet-Proofing Your Home Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/pet-proofing.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/pet-proofing.html</guid>
+      <link>https://petcarehelperai.com/guides/pet-proofing</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/pet-proofing</guid>
       <description>Complete guide to pet-proofing your home for dogs, cats, birds, and reptiles. Room-by-room safety tips, toxic plant identification, cord management, escape prevention, and puppy/kitten specific advice.</description>
       <content:encoded><![CDATA[<p>Complete guide to pet-proofing your home for dogs, cats, birds, and reptiles. Room-by-room safety tips, toxic plant identification, cord management, escape prevention, and puppy/kitten specific advice.</p><p>Make your home safe for all your pets.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
@@ -560,8 +560,8 @@
 
     <item>
       <title>Vet Visit Preparation Guide</title>
-      <link>https://petcarehelperai.netlify.app/guides/vet-visit-prep.html</link>
-      <guid isPermaLink="true">https://petcarehelperai.netlify.app/guides/vet-visit-prep.html</guid>
+      <link>https://petcarehelperai.com/guides/vet-visit-prep</link>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/vet-visit-prep</guid>
       <description>Complete guide to preparing for vet visits. Learn what to bring, questions to ask, how to reduce pet stress, and tips for maximizing your veterinary appointments.</description>
       <content:encoded><![CDATA[<p>Complete guide to preparing for vet visits. Learn what to bring, questions to ask, how to reduce pet stress, and tips for maximizing your veterinary appointments.</p><p>Make vet visits easier for you and your pet.</p>]]></content:encoded>
       <dc:creator>Pet Care Helper AI</dc:creator>
