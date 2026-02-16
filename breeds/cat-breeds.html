@@ -51,146 +51,13 @@
     }
   }
   </script>
-  <!-- Skimlinks Affiliate Integration -->
-  <script type="text/javascript">
-    var skimlinks_domain = "petcarehelperai.com";
-  </script>
-  <script type="text/javascript" src="https://s.skimresources.com/js/PUBLISHER_ID.skimlinks.js" async></script>
-  <!-- Sovrn Commerce (VigLink) Integration -->
-  <script type="text/javascript">
-    var defined_vglnk = typeof vglnk !== "undefined";
-    if (!defined_vglnk) {
-      var vglnk = {key: "SOVRN_API_KEY"};
-      (function(d, t) {
-        var s = d.createElement(t);
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "//cdn.viglink.com/api/vglnk.js";
-        var r = d.getElementsByTagName(t)[0];
-        r.parentNode.insertBefore(s, r);
-      }(document, "script"));
-    }
-  </script>
-  <style>
-    .breed-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-      margin: 24px 0;
-    }
-    .breed-card {
-      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(240,253,250,0.9));
-      border-radius: 14px;
-      padding: 18px;
-      border: 1px solid rgba(94,234,212,0.3);
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-    .breed-card:hover {
-      border-color: #14B8A6;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(20,184,166,0.15);
-    }
-    .breed-card h3 {
-      color: #0F172A;
-      margin: 0 0 8px;
-      font-size: 1.1rem;
-    }
-    .breed-card .breed-meta {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 8px;
-    }
-    .breed-tag {
-      background: #E0F2FE;
-      color: #0D9488;
-      padding: 3px 8px;
-      border-radius: 999px;
-      font-size: 0.75rem;
-    }
-    .breed-card p {
-      color: #64748b;
-      font-size: 0.9rem;
-      margin: 0;
-      line-height: 1.5;
-    }
-    .filter-section {
-      background: linear-gradient(135deg, rgba(240,253,250,0.9), rgba(224,242,254,0.9));
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 24px;
-    }
-    .filter-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-    }
-    .filter-label {
-      font-weight: 600;
-      color: #0F172A;
-    }
-    .filter-btn {
-      padding: 8px 16px;
-      border: 1px solid #A7F3D0;
-      border-radius: 999px;
-      background: white;
-      cursor: pointer;
-      font-size: 0.9rem;
-      color: #334155;
-      transition: all 0.2s;
-    }
-    .filter-btn:hover, .filter-btn.active {
-      background: #14B8A6;
-      color: white;
-      border-color: #14B8A6;
-    }
-    .alpha-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 20px 0;
-      padding: 16px;
-      background: linear-gradient(135deg, rgba(240,253,250,0.9), rgba(224,242,254,0.9));
-      border-radius: 12px;
-    }
-    .alpha-link {
-      width: 32px;
-      height: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: white;
-      border-radius: 6px;
-      text-decoration: none;
-      color: #0D9488;
-      font-weight: 600;
-      transition: all 0.2s;
-      border: 1px solid rgba(94,234,212,0.3);
-    }
-    .alpha-link:hover {
-      background: #14B8A6;
-      color: white;
-    }
-    .letter-section {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 2px solid rgba(94,234,212,0.3);
-    }
-    .letter-section h2 {
-      color: #0D9488;
-      font-size: 1.8rem;
-      margin-bottom: 16px;
-    }
-  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="logo-title">
       <div class="logo-pill"></div>
       <div>
-        <h1>Pet Care Helper AI</h1>
+        <span class="site-name">Pet Care Helper AI</span>
         <p class="subtitle">Dogs &bull; Cats &bull; Birds &bull; Reptiles &bull; Fish</p>
       </div>
     </div>
@@ -705,7 +572,18 @@
   <footer class="site-footer">
     <p>AI Pet Medical &amp; Vet Help Finder &mdash; educational guidance, real-world vet options, and curated resources.</p>
     <p style="font-size: 0.85rem; margin-top: 8px;">Some suggestions may include sponsored partners.</p>
-  </footer>
+      <nav class="footer-nav" style="margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem;">
+      <a href="/guides">Guides</a> &middot;
+      <a href="/tools/">Tools</a> &middot;
+      <a href="/locations/">Locations</a> &middot;
+      <a href="/resources">Resources</a> &middot;
+      <a href="/about">About</a> &middot;
+      <a href="/contact">Contact</a> &middot;
+      <a href="/privacy-policy">Privacy</a> &middot;
+      <a href="/terms-of-service">Terms</a> &middot;
+      <a href="/feeds/">RSS Feeds</a>
+    </nav>
+</footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
