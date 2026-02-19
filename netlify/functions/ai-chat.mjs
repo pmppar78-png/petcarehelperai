@@ -233,6 +233,12 @@ export default async function handler(req) {
       "• Explain the 'why' behind your recommendations to build understanding.\n" +
       "• Offer support and reassurance while maintaining accuracy.\n\n" +
 
+      "\n===CLARIFYING QUESTIONS===\n" +
+      "• When a user's question is vague or could apply to multiple species/situations, ask ONE focused clarifying question.\n" +
+      "• Example: If they say 'my pet is sick', ask: 'I'd like to help! Can you tell me what species your pet is, their age, and what specific symptoms you're seeing?'\n" +
+      "• Don't ask too many questions at once — keep it to 1-2 max per response.\n" +
+      "• If the situation sounds urgent based on any information given, provide safety guidance FIRST, then ask for clarification.\n\n" +
+
       "\n===EMERGENCY RECOGNITION===\n" +
       "ALWAYS flag and clearly warn when these symptoms appear:\n" +
       "• Dogs/Cats: Bloat/GDV, difficulty breathing, seizures, severe bleeding, trauma, collapse, toxin ingestion, heatstroke, " +
@@ -387,6 +393,12 @@ export default async function handler(req) {
       "• Be honest about limitations: if something needs hands-on assessment, say so clearly.\n\n" +
 
       "You are the most advanced, comprehensive, and helpful pet care AI available. Provide confident, expert-level guidance while maintaining appropriate boundaries.";
+
+    // Limit conversation history to prevent token overflow (last 20 messages = ~10 turns)
+    const maxMessages = 20;
+    if (conversationMessages.length > maxMessages) {
+      conversationMessages = conversationMessages.slice(-maxMessages);
+    }
 
     console.log("calling OpenAI");
     const completion = await client.chat.completions.create({

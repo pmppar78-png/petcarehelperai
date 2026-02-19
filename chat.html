@@ -38,6 +38,14 @@
   <meta name="description" content="Chat with our AI pet help assistant. Get educational guidance about pet health concerns for dogs, cats, birds, reptiles, and fish." />
   <link rel="canonical" href="https://petcarehelperai.com/chat" />
     <meta property="og:url" content="https://petcarehelperai.com/chat" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AI Pet Help Chat - Pet Care Helper AI" />
+  <meta property="og:description" content="Chat with our AI pet help assistant. Get educational guidance about pet health concerns for dogs, cats, birds, reptiles, and fish." />
+  <meta property="og:image" content="https://petcarehelperai.com/logo.png" />
+  <meta property="og:site_name" content="Pet Care Helper AI" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="AI Pet Help Chat - Pet Care Helper AI" />
+  <meta name="twitter:description" content="Chat with our AI pet help assistant. Get educational guidance about pet health concerns." />
   <title>AI Pet Help Chat</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
@@ -155,6 +163,26 @@
       color: #A5F3FC;
     }
   </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Pet Care Helper AI Chat",
+  "description": "AI-powered pet health guidance chat for dogs, cats, birds, reptiles, and fish.",
+  "url": "https://petcarehelperai.com/chat",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "datePublished": "2026-02-19",
+  "dateModified": "2026-02-19",
+  "author": {"@type": "Organization", "name": "Pet Care Helper AI"},
+  "publisher": {"@type": "Organization", "name": "Pet Care Helper AI"}
+}
+</script>
 </head>
 <body>
   <div class="chat-shell">
@@ -273,6 +301,11 @@
 
         // Store the AI reply in conversation history
         conversationHistory.push({ role: 'assistant', content: replyText });
+
+        // Trim conversation history to prevent memory bloat (keep last 20 messages)
+        if (conversationHistory.length > 20) {
+          conversationHistory = conversationHistory.slice(-20);
+        }
       } catch (err) {
         console.error('AI chat error:', err);
         addMessage('Sorry, something went wrong reaching the AI.');
