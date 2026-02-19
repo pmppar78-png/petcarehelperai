@@ -216,9 +216,21 @@
     function addMessage(text, isUser = false) {
       const div = document.createElement('div');
       div.className = 'msg ' + (isUser ? 'msg-user' : 'msg-ai');
-      div.innerHTML = text;
+      if (isUser) {
+        div.textContent = text;
+      } else {
+        div.innerHTML = text;
+      }
       chatWindow.appendChild(div);
       chatWindow.scrollTop = chatWindow.scrollHeight;
+    }
+
+    // Support ?q= query parameter for Schema.org SearchAction
+    const urlParams = new URLSearchParams(window.location.search);
+    const prefilledQuery = urlParams.get('q');
+    if (prefilledQuery) {
+      input.value = prefilledQuery;
+      form.dispatchEvent(new Event('submit'));
     }
 
     form.addEventListener('submit', async (e) => {
