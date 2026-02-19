@@ -143,7 +143,6 @@ function getAffiliatesFromCategory(categoryKey, maxCount = 4) {
 }
 
 export default async function handler(req) {
-  console.log("ai-chat function hit");
 
   if (req.method !== "POST") {
     return new Response(JSON.stringify({ error: "Method not allowed" }), {
@@ -190,7 +189,6 @@ export default async function handler(req) {
       .reverse()
       .find(m => m.role === "user");
     const message = latestUserMessage ? latestUserMessage.content : "";
-    console.log("Received message:", message ? message.substring(0, 50) + "..." : "(empty)");
 
     // System prompt for the AI pet care specialist
     const systemPrompt =
@@ -400,7 +398,6 @@ export default async function handler(req) {
       conversationMessages = conversationMessages.slice(-maxMessages);
     }
 
-    console.log("calling OpenAI");
     const completion = await client.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
@@ -411,9 +408,7 @@ export default async function handler(req) {
       max_tokens: 2048,
     });
 
-    console.log("OpenAI response received");
     const reply = completion.choices[0]?.message?.content || "";
-    console.log("Reply extracted, length:", reply.length);
 
     // Dynamic partner link suggestion based on conversation topic
     let affiliateSuggestion = "";
