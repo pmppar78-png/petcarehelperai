@@ -168,6 +168,7 @@
         <a href="/cats" style="font-size: 0.85rem; color: #5EEAD4;">Cats</a>
         <a href="/guides" style="font-size: 0.85rem; color: #5EEAD4;">Guides</a>
         <a href="/">&larr; Back to site</a>
+        <button id="newChatBtn" style="padding: 6px 14px; border-radius: 999px; border: 1px solid #5EEAD4; background: rgba(20,184,166,0.15); color: #5EEAD4; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.2s; white-space: nowrap;">New Chat</button>
       </nav>
     </header>
 
@@ -205,12 +206,27 @@
     const input = document.getElementById('userInput');
     const chatWindow = document.getElementById('chatWindow');
 
+    // Conversation history for multi-turn memory
+    let conversationHistory = [];
+
     // Topic quick buttons
     document.querySelectorAll('.topic-btn').forEach(btn => {
       btn.addEventListener('click', function() {
         input.value = this.dataset.topic;
         form.dispatchEvent(new Event('submit'));
       });
+    });
+
+    // New Chat button - resets conversation
+    document.getElementById('newChatBtn').addEventListener('click', function() {
+      conversationHistory = [];
+      // Remove all messages except the first welcome message
+      const messages = chatWindow.querySelectorAll('.msg');
+      messages.forEach((msg, index) => {
+        if (index > 0) msg.remove();
+      });
+      input.value = '';
+      input.focus();
     });
 
     function addMessage(text, isUser = false) {
@@ -240,16 +256,23 @@
       addMessage(text, true);
       input.value = '';
 
+      // Add user message to conversation history
+      conversationHistory.push({ role: 'user', content: text });
+
       try {
         const res = await fetch('/.netlify/functions/ai-chat', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({ message: text })
+          body: JSON.stringify({ messages: conversationHistory })
         });
         console.log('AI chat response status:', res.status);
         const data = await res.json();
         console.log('AI chat response data:', data);
-        addMessage(data.reply || 'Sorry, something went wrong. Please try again.');
+        const replyText = data.reply || 'Sorry, something went wrong. Please try again.';
+        addMessage(replyText);
+
+        // Store the AI reply in conversation history
+        conversationHistory.push({ role: 'assistant', content: replyText });
       } catch (err) {
         console.error('AI chat error:', err);
         addMessage('Sorry, something went wrong reaching the AI.');
