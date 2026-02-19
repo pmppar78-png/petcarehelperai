@@ -1,286 +1,781 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"
-  xmlns:atom="http://www.w3.org/2005/Atom"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/"
-  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Pet Care Helper AI - Dog Care Guides</title>
-    <description>Comprehensive dog care guides covering training, nutrition, health, behavior, grooming, and everything dog owners need to know. AI-powered pet health guidance.</description>
-    <link>https://petcarehelperai.com/dogs</link>
-    <atom:link href="https://petcarehelperai.com/feeds/dogs.xml" rel="self" type="application/rss+xml"/>
+    <link>https://petcarehelperai.com</link>
+    <description>Comprehensive pet care guides covering health, nutrition, training, and wellness for dogs, cats, birds, fish, reptiles, and small animals.</description>
     <language>en-us</language>
-    <copyright>Copyright 2024 Pet Care Helper AI. Feel free to republish with attribution.</copyright>
-    <managingEditor>advertise@petcarehelperai.com (Pet Care Helper AI)</managingEditor>
-    <webMaster>advertise@petcarehelperai.com (Pet Care Helper AI)</webMaster>
-    <lastBuildDate>Mon, 03 Feb 2025 00:00:00 GMT</lastBuildDate>
-    <ttl>1440</ttl>
-    <image>
-      <url>https://petcarehelperai.com/logo.png</url>
-      <title>Pet Care Helper AI - Dogs</title>
-      <link>https://petcarehelperai.com/dogs</link>
-    </image>
-    <category>Dogs</category>
-    <category>Pet Care</category>
-    <category>Dog Training</category>
-    <category>Dog Health</category>
-
+    <lastBuildDate>Thu, 19 Feb 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://petcarehelperai.com/feeds/dogs.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Dog Training Fundamentals Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-training</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-training</guid>
-      <description>Dog training fundamentals guide covering positive reinforcement, basic commands, house training, leash training, and behavior shaping for dogs of all ages.</description>
-      <content:encoded><![CDATA[<p>Dog training fundamentals guide covering positive reinforcement, basic commands, house training, leash training, and behavior shaping for dogs of all ages.</p><p>Learn about the science of positive reinforcement, essential commands like sit, stay, come, and leave it, plus tips for leash training and house training your dog.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Training</category>
-      <category>Behavior</category>
+      <title>Dog Surgery Costs</title>
+      <link>https://petcarehelperai.com/guides/dog-surgery-costs</link>
+      <description>Common dog surgery costs from spay/neuter to emergency procedures. Covers ACL repair, tumor removal, dental surgery, and how pet insurance helps.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-surgery-costs</guid>
     </item>
-
     <item>
-      <title>Complete Dog Nutrition Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-nutrition</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-nutrition</guid>
-      <description>Complete dog nutrition guide covering dietary requirements, life-stage feeding, reading labels, and choosing the right food for your dog.</description>
-      <content:encoded><![CDATA[<p>Complete dog nutrition guide covering dietary requirements, life-stage feeding, reading labels, and choosing the right food for your dog.</p><p>Understand protein, fat, and carbohydrate needs, plus special considerations for puppies, adults, and senior dogs.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Wed, 10 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Nutrition</category>
-      <category>Health</category>
+      <title>How Much Does Dog Grooming Cost</title>
+      <link>https://petcarehelperai.com/guides/dog-grooming-costs</link>
+      <description>Average dog grooming prices by breed size and service type. Covers bathing, haircuts, nail trimming, teeth cleaning, and mobile grooming fees.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-grooming-costs</guid>
     </item>
-
     <item>
-      <title>Dog Breed Selection Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-breeds</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-breeds</guid>
-      <description>Dog breed selection guide to help you find the perfect breed for your lifestyle, living situation, activity level, and family needs.</description>
-      <content:encoded><![CDATA[<p>Dog breed selection guide to help you find the perfect breed for your lifestyle, living situation, activity level, and family needs.</p><p>Compare breeds by size, energy level, grooming needs, and temperament to find your ideal companion.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Fri, 05 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Breeds</category>
+      <title>How Much Does Dog Training Cost</title>
+      <link>https://petcarehelperai.com/guides/dog-training-costs</link>
+      <description>Dog training costs for group classes, private sessions, board-and-train, and online programs. Covers puppy training, obedience, and behavioral modification pricing.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-training-costs</guid>
     </item>
-
     <item>
-      <title>Dog Vaccination and Preventive Care Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-vaccination</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-vaccination</guid>
-      <description>Essential vaccination schedules, preventive care recommendations, and health maintenance tips for dogs of all life stages.</description>
-      <content:encoded><![CDATA[<p>Essential vaccination schedules, preventive care recommendations, and health maintenance tips for dogs of all life stages.</p><p>Learn about core and non-core vaccines, parasite prevention, and routine health screenings.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Sun, 07 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Health</category>
-      <category>Vaccinations</category>
+      <title>How Much Does a Puppy Cost First Year</title>
+      <link>https://petcarehelperai.com/guides/how-much-does-a-puppy-cost</link>
+      <description>Total first-year puppy costs including purchase price, vaccinations, food, supplies, training, and unexpected expenses. Budget planning guide for new dog owners.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/how-much-does-a-puppy-cost</guid>
     </item>
-
     <item>
-      <title>Complete Puppy Care Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-puppy-care</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-puppy-care</guid>
-      <description>Complete puppy care guide covering everything new puppy owners need to know: feeding, vaccinations, training, socialization, and health essentials.</description>
-      <content:encoded><![CDATA[<p>Complete puppy care guide covering everything new puppy owners need to know: feeding, vaccinations, training, socialization, and health essentials.</p><p>From bringing your puppy home to their first year milestones.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Thu, 11 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Puppies</category>
-      <category>Care</category>
+      <title>Dog Vaccination Costs and Schedules</title>
+      <link>https://petcarehelperai.com/guides/dog-vaccination-costs</link>
+      <description>Complete dog vaccination cost guide covering core vaccines, optional vaccines, puppy vaccination schedules, and booster shot pricing.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-vaccination-costs</guid>
     </item>
-
     <item>
-      <title>Dog Behavior and Body Language Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-behavior</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-behavior</guid>
-      <description>Understanding dog behavior, body language, and communication to build a stronger bond with your canine companion.</description>
-      <content:encoded><![CDATA[<p>Understanding dog behavior, body language, and communication to build a stronger bond with your canine companion.</p><p>Learn to read tail positions, ear movements, and other signals your dog uses to communicate.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Mon, 08 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Behavior</category>
+      <title>Heartworm Treatment Cost for Dogs</title>
+      <link>https://petcarehelperai.com/guides/heartworm-treatment-cost</link>
+      <description>Complete guide to heartworm treatment costs, the treatment process, prevention costs, and how insurance covers heartworm disease in dogs.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/heartworm-treatment-cost</guid>
     </item>
-
     <item>
-      <title>Dog Dental Health Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-dental</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-dental</guid>
-      <description>Dog dental health guide covering brushing techniques, dental disease prevention, professional cleanings, and maintaining your dog's oral health.</description>
-      <content:encoded><![CDATA[<p>Dog dental health guide covering brushing techniques, dental disease prevention, professional cleanings, and maintaining your dog's oral health.</p><p>Prevent periodontal disease and keep your dog's teeth healthy for life.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Tue, 09 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Health</category>
-      <category>Dental</category>
+      <title>Dog Allergy Testing Cost</title>
+      <link>https://petcarehelperai.com/guides/dog-allergy-testing-cost</link>
+      <description>Costs of dog allergy testing including blood tests, skin tests, and elimination diets. Covers food allergy testing, environmental allergy panels, and treatment costs.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-allergy-testing-cost</guid>
     </item>
-
     <item>
-      <title>Senior Dog Care Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-senior-care</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-senior-care</guid>
-      <description>Caring for aging dogs including nutrition adjustments, mobility support, cognitive health, and managing age-related conditions.</description>
-      <content:encoded><![CDATA[<p>Caring for aging dogs including nutrition adjustments, mobility support, cognitive health, and managing age-related conditions.</p><p>Help your senior dog live comfortably and maintain quality of life.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Sat, 13 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Senior Care</category>
-      <category>Health</category>
+      <title>Lifetime Cost of Owning a Dog</title>
+      <link>https://petcarehelperai.com/guides/lifetime-cost-of-owning-a-dog</link>
+      <description>Total lifetime dog ownership costs from puppy to senior years. Covers annual expenses, unexpected costs, and how to budget for 10-15 years of dog ownership.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/lifetime-cost-of-owning-a-dog</guid>
     </item>
-
     <item>
-      <title>Dog First Aid Emergency Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-first-aid</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-first-aid</guid>
-      <description>Essential first aid procedures for dogs including wound care, choking response, CPR basics, and when to seek emergency veterinary care.</description>
-      <content:encoded><![CDATA[<p>Essential first aid procedures for dogs including wound care, choking response, CPR basics, and when to seek emergency veterinary care.</p><p>Be prepared for pet emergencies with this comprehensive guide.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Fri, 12 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Emergency</category>
-      <category>First Aid</category>
+      <title>Can Dogs Eat Grapes and Raisins</title>
+      <link>https://petcarehelperai.com/guides/can-dogs-eat-grapes</link>
+      <description>Why grapes and raisins are toxic to dogs, symptoms of grape poisoning, what to do if your dog eats grapes, and emergency treatment guide.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/can-dogs-eat-grapes</guid>
     </item>
-
     <item>
-      <title>Dog Symptom Reference Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-symptoms</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-symptoms</guid>
-      <description>Common dog symptoms explained with urgency levels, possible causes, and guidance on when to see a veterinarian.</description>
-      <content:encoded><![CDATA[<p>Common dog symptoms explained with urgency levels, possible causes, and guidance on when to see a veterinarian.</p><p>Quick reference for vomiting, diarrhea, lethargy, and other concerning signs.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Wed, 17 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Health</category>
-      <category>Symptoms</category>
+      <title>Can Dogs Eat Chocolate</title>
+      <link>https://petcarehelperai.com/guides/can-dogs-eat-chocolate</link>
+      <description>Complete guide to chocolate toxicity in dogs. Covers which types are most dangerous, toxic doses by weight, symptoms, and emergency treatment.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/can-dogs-eat-chocolate</guid>
     </item>
-
     <item>
-      <title>Dog Travel Safety Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-travel</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-travel</guid>
-      <description>Safe travel tips for dogs including car safety, flying with dogs, road trips, and pet-friendly travel planning.</description>
-      <content:encoded><![CDATA[<p>Safe travel tips for dogs including car safety, flying with dogs, road trips, and pet-friendly travel planning.</p><p>Keep your dog safe and comfortable on every adventure.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Travel</category>
-      <category>Safety</category>
+      <title>Can Dogs Eat Onions and Garlic</title>
+      <link>https://petcarehelperai.com/guides/can-dogs-eat-onions</link>
+      <description>Why onions, garlic, leeks, and chives are toxic to dogs. Covers symptoms of allium poisoning, dangerous amounts, and treatment.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/can-dogs-eat-onions</guid>
     </item>
-
     <item>
-      <title>Multi-Dog Household Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-multi-dog</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-multi-dog</guid>
-      <description>Managing a multi-dog household including introductions, preventing conflicts, resource management, and keeping multiple dogs happy together.</description>
-      <content:encoded><![CDATA[<p>Managing a multi-dog household including introductions, preventing conflicts, resource management, and keeping multiple dogs happy together.</p><p>Create harmony in your multi-dog home.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Sun, 21 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Behavior</category>
-      <category>Multi-Pet</category>
+      <title>Xylitol Poisoning in Dogs</title>
+      <link>https://petcarehelperai.com/guides/can-dogs-eat-xylitol</link>
+      <description>Why xylitol (birch sugar) is deadly for dogs. Products containing xylitol, symptoms, emergency treatment, and prevention guide.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/can-dogs-eat-xylitol</guid>
     </item>
-
     <item>
-      <title>Dog Allergies Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-allergies</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-allergies</guid>
-      <description>Understanding dog allergies including food allergies, environmental allergens, symptoms, testing, and treatment options.</description>
-      <content:encoded><![CDATA[<p>Understanding dog allergies including food allergies, environmental allergens, symptoms, testing, and treatment options.</p><p>Help your itchy dog find relief from allergies.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Tue, 23 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Health</category>
-      <category>Allergies</category>
+      <title>Can Dogs Eat Avocado</title>
+      <link>https://petcarehelperai.com/guides/can-dogs-eat-avocado</link>
+      <description>Is avocado safe for dogs? Covers persin toxicity, pit hazards, which parts are dangerous, and what to do if your dog eats avocado.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/can-dogs-eat-avocado</guid>
     </item>
-
     <item>
-      <title>Dog Arthritis Management Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-arthritis</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-arthritis</guid>
-      <description>Complete guide to arthritis in dogs: symptoms, causes, treatment options including medications and supplements, pain management, and lifestyle modifications.</description>
-      <content:encoded><![CDATA[<p>Complete guide to arthritis in dogs: symptoms, causes, treatment options including medications and supplements, pain management, and lifestyle modifications.</p><p>Improve your arthritic dog's mobility and comfort.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Thu, 25 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Health</category>
-      <category>Arthritis</category>
-      <category>Senior Care</category>
+      <title>Which Nuts Are Safe for Dogs</title>
+      <link>https://petcarehelperai.com/guides/can-dogs-eat-nuts</link>
+      <description>Complete guide to nuts and dogs. Covers macadamia toxicity, safe nuts, choking hazards, and portion guidelines for dogs.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/can-dogs-eat-nuts</guid>
     </item>
-
+    <item>
+      <title>Can Dogs Eat Bones Safely</title>
+      <link>https://petcarehelperai.com/guides/can-dogs-eat-bones</link>
+      <description>Which bones are safe for dogs and which are dangerous. Covers cooked vs raw, splintering risks, safe alternatives, and choking prevention.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/can-dogs-eat-bones</guid>
+    </item>
+    <item>
+      <title>Plants Toxic to Dogs</title>
+      <link>https://petcarehelperai.com/guides/plants-toxic-to-dogs</link>
+      <description>Common household and garden plants toxic to dogs. Covers lilies, sago palm, azaleas, oleander, tulips, and 40+ dangerous plants with symptoms.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/plants-toxic-to-dogs</guid>
+    </item>
+    <item>
+      <title>Essential Oils Toxic to Dogs</title>
+      <link>https://petcarehelperai.com/guides/essential-oils-toxic-to-dogs</link>
+      <description>Which essential oils are dangerous for dogs and which are safe. Covers diffusers, topical exposure, ingestion risks, and pet-safe alternatives.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/essential-oils-toxic-to-dogs</guid>
+    </item>
+    <item>
+      <title>Can Dogs Eat Peanut Butter</title>
+      <link>https://petcarehelperai.com/guides/can-dogs-eat-peanut-butter</link>
+      <description>Is peanut butter safe for dogs? Covers xylitol dangers, safe brands, portion sizes, and how to use peanut butter for training and enrichment.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/can-dogs-eat-peanut-butter</guid>
+    </item>
+    <item>
+      <title>Can Dogs Eat Cheese and Dairy</title>
+      <link>https://petcarehelperai.com/guides/can-dogs-eat-cheese</link>
+      <description>Which cheeses are safe for dogs, lactose intolerance signs, safe dairy products, and how much cheese dogs can eat without problems.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/can-dogs-eat-cheese</guid>
+    </item>
+    <item>
+      <title>Can Dogs Eat Eggs</title>
+      <link>https://petcarehelperai.com/guides/can-dogs-eat-eggs</link>
+      <description>Are eggs safe for dogs? Covers raw vs cooked, nutritional benefits, biotin concerns, and how to safely prepare eggs for your dog.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/can-dogs-eat-eggs</guid>
+    </item>
+    <item>
+      <title>Safe Fruits and Vegetables for Dogs</title>
+      <link>https://petcarehelperai.com/guides/safe-fruits-for-dogs</link>
+      <description>Complete list of fruits and vegetables safe for dogs, portion sizes, preparation tips, and which produce to avoid.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/safe-fruits-for-dogs</guid>
+    </item>
+    <item>
+      <title>Rat Poison and Rodenticide Toxicity in Dogs</title>
+      <link>https://petcarehelperai.com/guides/rat-poison-dogs</link>
+      <description>Types of rat poison and their effects on dogs. Covers symptoms by poison type, emergency treatment, and pet-safe rodent control alternatives.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/rat-poison-dogs</guid>
+    </item>
+    <item>
+      <title>Mushroom Poisoning in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-mushroom-poisoning</link>
+      <description>Toxic mushroom species dangerous to dogs, symptoms of mushroom poisoning, emergency response, and preventing mushroom ingestion on walks.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-mushroom-poisoning</guid>
+    </item>
+    <item>
+      <title>Dog Choking Emergency Guide</title>
+      <link>https://petcarehelperai.com/guides/dog-choking-emergency</link>
+      <description>Step-by-step guide for helping a choking dog. Covers Heimlich maneuver for dogs, recognizing choking vs coughing, and when to rush to the vet.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-choking-emergency</guid>
+    </item>
+    <item>
+      <title>Dog Heatstroke Emergency Guide</title>
+      <link>https://petcarehelperai.com/guides/dog-heatstroke-emergency</link>
+      <description>How to recognize and treat heatstroke in dogs. Covers cooling techniques, high-risk breeds, prevention, and when heatstroke becomes life-threatening.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-heatstroke-emergency</guid>
+    </item>
+    <item>
+      <title>Dog Seizure Emergency Guide</title>
+      <link>https://petcarehelperai.com/guides/dog-seizure-emergency</link>
+      <description>What to do when your dog has a seizure. Covers types of seizures, how to keep your dog safe, epilepsy management, and when seizures are emergencies.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-seizure-emergency</guid>
+    </item>
     <item>
       <title>Dog Bloat (GDV) Emergency Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-bloat-gdv</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-bloat-gdv</guid>
-      <description>Critical guide to bloat (GDV) in dogs: symptoms, emergency response, risk factors, treatment, prevention, and why this life-threatening condition needs immediate action.</description>
-      <content:encoded><![CDATA[<p>Critical guide to bloat (GDV) in dogs: symptoms, emergency response, risk factors, treatment, prevention, and why this life-threatening condition needs immediate action.</p><p>Know the signs of this life-threatening emergency.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Sat, 27 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Emergency</category>
-      <category>Health</category>
+      <link>https://petcarehelperai.com/guides/dog-bloat-emergency</link>
+      <description>Recognizing and responding to bloat in dogs. Covers symptoms of GDV, at-risk breeds, why bloat is life-threatening, and prevention strategies.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-bloat-emergency</guid>
     </item>
-
     <item>
-      <title>Dog Bathing Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-bathing-guide</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-bathing-guide</guid>
-      <description>Complete dog bathing guide with step-by-step instructions, best shampoos, bathing frequency by breed, and tips for making bath time stress-free for your dog.</description>
-      <content:encoded><![CDATA[<p>Complete dog bathing guide with step-by-step instructions, best shampoos, bathing frequency by breed, and tips for making bath time stress-free for your dog.</p><p>Make bath time easier for both you and your dog.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Mon, 29 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Grooming</category>
+      <title>Dog Poisoning Emergency Response</title>
+      <link>https://petcarehelperai.com/guides/dog-poisoning-emergency</link>
+      <description>What to do if your dog eats something toxic. Covers when to induce vomiting, when not to, poison control numbers, and emergency vet protocols.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-poisoning-emergency</guid>
     </item>
-
     <item>
-      <title>Dog Nail Trimming Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-nail-trimming</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-nail-trimming</guid>
-      <description>Safe dog nail trimming techniques, best tools, handling the quick, and tips for dogs who hate nail trims.</description>
-      <content:encoded><![CDATA[<p>Safe dog nail trimming techniques, best tools, handling the quick, and tips for dogs who hate nail trims.</p><p>Keep your dog's nails healthy without the stress.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Wed, 31 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Grooming</category>
+      <title>Dog Bite Emergency and Wound Care</title>
+      <link>https://petcarehelperai.com/guides/dog-bite-emergency</link>
+      <description>Emergency treatment for dog bite wounds on pets and humans. Covers cleaning wounds, infection prevention, when stitches are needed, and legal considerations.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-bite-emergency</guid>
     </item>
-
     <item>
-      <title>Dog Ear Cleaning Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-ear-cleaning</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-ear-cleaning</guid>
-      <description>Complete dog ear cleaning guide with step-by-step instructions, best ear cleaners, how to recognize ear infections, and tips for dogs with floppy or hairy ears.</description>
-      <content:encoded><![CDATA[<p>Complete dog ear cleaning guide with step-by-step instructions, best ear cleaners, how to recognize ear infections, and tips for dogs with floppy or hairy ears.</p><p>Prevent ear infections with proper ear care.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Fri, 02 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Grooming</category>
-      <category>Health</category>
+      <title>Dog Allergic Reaction and Anaphylaxis</title>
+      <link>https://petcarehelperai.com/guides/dog-allergic-reaction-emergency</link>
+      <description>Recognizing allergic reactions in dogs including bee stings, vaccine reactions, and anaphylaxis. Covers Benadryl dosing, EpiPen use, and emergency response.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-allergic-reaction-emergency</guid>
     </item>
-
+    <item>
+      <title>Dog Snake Bite Emergency Guide</title>
+      <link>https://petcarehelperai.com/guides/dog-snake-bite-emergency</link>
+      <description>What to do if your dog is bitten by a snake. Covers venomous vs non-venomous bites, first aid, treatment costs, and regional snake identification.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-snake-bite-emergency</guid>
+    </item>
+    <item>
+      <title>Dog Urinary Tract Infections (UTIs)</title>
+      <link>https://petcarehelperai.com/guides/dog-uti-urinary-tract-infection</link>
+      <description>Complete guide to UTIs in dogs covering symptoms, causes, diagnosis, treatment options, prevention, and when UTIs indicate a more serious condition.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-uti-urinary-tract-infection</guid>
+    </item>
+    <item>
+      <title>Pancreatitis in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-pancreatitis</link>
+      <description>Causes, symptoms, and treatment of pancreatitis in dogs. Covers acute vs chronic pancreatitis, dietary management, and long-term care strategies.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-pancreatitis</guid>
+    </item>
+    <item>
+      <title>Cushing's Disease in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-cushings-disease</link>
+      <description>Complete guide to Cushing's disease (hyperadrenocorticism) in dogs. Covers symptoms, diagnosis, treatment options, and managing quality of life.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-cushings-disease</guid>
+    </item>
+    <item>
+      <title>Hypothyroidism in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-hypothyroidism</link>
+      <description>Understanding hypothyroidism in dogs including symptoms, blood test diagnosis, thyroid medication, and long-term management of this common condition.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-hypothyroidism</guid>
+    </item>
+    <item>
+      <title>IVDD (Intervertebral Disc Disease) in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-ivdd-disc-disease</link>
+      <description>Complete guide to IVDD in dogs. Covers symptoms, at-risk breeds (Dachshunds, Corgis), treatment options from conservative to surgery, and recovery.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-ivdd-disc-disease</guid>
+    </item>
+    <item>
+      <title>Diabetes in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-diabetes</link>
+      <description>Managing diabetes in dogs including symptoms, insulin therapy, blood glucose monitoring, dietary management, and daily care routines.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-diabetes</guid>
+    </item>
+    <item>
+      <title>Heart Disease in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-heart-disease</link>
+      <description>Types of heart disease in dogs including DCM, valve disease, and congestive heart failure. Covers symptoms, diagnosis, medications, and prognosis.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-heart-disease</guid>
+    </item>
+    <item>
+      <title>Colitis and IBD in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-colitis-ibd</link>
+      <description>Guide to inflammatory bowel disease and colitis in dogs. Covers chronic diarrhea, diagnostic workup, dietary trials, medications, and management.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-colitis-ibd</guid>
+    </item>
+    <item>
+      <title>Dog Ear Infections Guide</title>
+      <link>https://petcarehelperai.com/guides/dog-ear-infections</link>
+      <description>Complete guide to ear infections in dogs. Covers outer, middle, and inner ear infections, treatment, prevention, and breeds prone to ear problems.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-ear-infections</guid>
+    </item>
+    <item>
+      <title>Dog Skin Allergies and Dermatitis</title>
+      <link>https://petcarehelperai.com/guides/dog-skin-allergies</link>
+      <description>Types of skin allergies in dogs including atopic dermatitis, food allergies, and contact allergies. Covers symptoms, testing, treatments, and itch relief.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-skin-allergies</guid>
+    </item>
+    <item>
+      <title>Anxiety Disorders in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-anxiety-disorders</link>
+      <description>Understanding dog anxiety including separation anxiety, noise phobia, and generalized anxiety. Covers behavioral therapy, medications, and calming aids.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-anxiety-disorders</guid>
+    </item>
+    <item>
+      <title>Dog Obesity Prevention and Weight Loss</title>
+      <link>https://petcarehelperai.com/guides/dog-obesity</link>
+      <description>Addressing obesity in dogs including health risks, ideal weight assessment, diet plans, exercise programs, and monitoring progress safely.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-obesity</guid>
+    </item>
+    <item>
+      <title>Dental Disease in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-dental-disease</link>
+      <description>Periodontal disease in dogs covering stages, symptoms, professional cleaning, home dental care, and preventing tooth loss and infections.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-dental-disease</guid>
+    </item>
+    <item>
+      <title>Parvovirus in Dogs and Puppies</title>
+      <link>https://petcarehelperai.com/guides/dog-parvovirus</link>
+      <description>Complete guide to canine parvovirus. Covers symptoms, treatment, survival rates, vaccination importance, and disinfection protocols.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-parvovirus</guid>
+    </item>
+    <item>
+      <title>Kennel Cough in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-kennel-cough</link>
+      <description>Understanding kennel cough (infectious tracheobronchitis) in dogs. Covers symptoms, treatment, Bordetella vaccination, and when it becomes pneumonia.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-kennel-cough</guid>
+    </item>
+    <item>
+      <title>Lyme Disease in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-lyme-disease</link>
+      <description>Lyme disease in dogs from tick bites. Covers symptoms, testing, antibiotic treatment, vaccination, and tick prevention strategies.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-lyme-disease</guid>
+    </item>
+    <item>
+      <title>Hot Spots on Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-hotspots</link>
+      <description>Causes and treatment of hot spots (acute moist dermatitis) in dogs. Covers home treatment, when to see the vet, and preventing recurrence.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-hotspots</guid>
+    </item>
+    <item>
+      <title>Cataracts in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-cataracts</link>
+      <description>Understanding cataracts in dogs including causes, stages, surgery options, costs, and managing vision loss in senior dogs.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-cataracts</guid>
+    </item>
+    <item>
+      <title>ACL/Cruciate Ligament Injury in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-cruciate-ligament-injury</link>
+      <description>Guide to cranial cruciate ligament (CCL/ACL) tears in dogs. Covers symptoms, surgical options (TPLO, TTA), recovery timelines, and costs.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-cruciate-ligament-injury</guid>
+    </item>
+    <item>
+      <title>Intestinal Parasites in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-intestinal-parasites</link>
+      <description>Common intestinal worms in dogs including roundworms, hookworms, whipworms, and tapeworms. Covers symptoms, deworming, and prevention protocols.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-intestinal-parasites</guid>
+    </item>
+    <item>
+      <title>Mange in Dogs (Demodectic and Sarcoptic)</title>
+      <link>https://petcarehelperai.com/guides/dog-mange</link>
+      <description>Complete guide to mange in dogs. Covers demodectic vs sarcoptic mange, symptoms, treatment options, and recovery expectations.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-mange</guid>
+    </item>
+    <item>
+      <title>Addison's Disease in Dogs</title>
+      <link>https://petcarehelperai.com/guides/dog-addisons-disease</link>
+      <description>Understanding Addison's disease (hypoadrenocorticism) in dogs. Covers symptoms, crisis situations, lifelong treatment, and daily management.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-addisons-disease</guid>
+    </item>
+    <item>
+      <title>Dog Separation Anxiety</title>
+      <link>https://petcarehelperai.com/guides/dog-separation-anxiety</link>
+      <description>Complete guide to separation anxiety in dogs. Covers symptoms, desensitization training, medications, calming aids, and preventing anxiety in puppies.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-separation-anxiety</guid>
+    </item>
+    <item>
+      <title>Dog Noise Phobia (Thunder, Fireworks)</title>
+      <link>https://petcarehelperai.com/guides/dog-noise-phobia</link>
+      <description>Managing noise phobia in dogs including thunderstorm anxiety and fireworks fear. Covers desensitization, calming products, medications, and safe spaces.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-noise-phobia</guid>
+    </item>
+    <item>
+      <title>Dog Reactivity Guide</title>
+      <link>https://petcarehelperai.com/guides/dog-reactivity</link>
+      <description>Understanding and managing reactive dogs. Covers leash reactivity, triggers, counter-conditioning techniques, management strategies, and professional help.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-reactivity</guid>
+    </item>
+    <item>
+      <title>Dog Resource Guarding</title>
+      <link>https://petcarehelperai.com/guides/dog-resource-guarding</link>
+      <description>Understanding and treating resource guarding in dogs. Covers food bowl aggression, toy guarding, trading exercises, and when to seek professional help.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-resource-guarding</guid>
+    </item>
+    <item>
+      <title>Puppy Potty Training Guide</title>
+      <link>https://petcarehelperai.com/guides/puppy-potty-training</link>
+      <description>Complete puppy potty training guide covering schedule, crate training method, bell training, troubleshooting accidents, and timeline expectations.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/puppy-potty-training</guid>
+    </item>
+    <item>
+      <title>Puppy Crate Training Guide</title>
+      <link>https://petcarehelperai.com/guides/puppy-crate-training</link>
+      <description>Step-by-step crate training for puppies. Covers choosing the right crate, building positive associations, nighttime training, and common mistakes.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/puppy-crate-training</guid>
+    </item>
+    <item>
+      <title>Puppy Biting and Mouthing Solutions</title>
+      <link>https://petcarehelperai.com/guides/puppy-biting-solutions</link>
+      <description>How to stop puppy biting and nipping. Covers bite inhibition, redirecting techniques, appropriate chew toys, and when biting indicates a problem.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/puppy-biting-solutions</guid>
+    </item>
+    <item>
+      <title>Dog Impulse Control Training</title>
+      <link>https://petcarehelperai.com/guides/dog-impulse-control</link>
+      <description>Teaching impulse control to dogs including leave it, wait, settle, and self-regulation exercises for excitable or reactive dogs.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-impulse-control</guid>
+    </item>
     <item>
       <title>Dog Recall Training Guide</title>
       <link>https://petcarehelperai.com/guides/dog-recall-training</link>
+      <description>How to train a reliable recall (come when called). Covers foundation training, proofing in distractions, emergency recall, and long-line techniques.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-recall-training</guid>
-      <description>Train your dog to come when called with proven recall training techniques. Essential for safety and off-leash reliability.</description>
-      <content:encoded><![CDATA[<p>Train your dog to come when called with proven recall training techniques. Essential for safety and off-leash reliability.</p><p>Build a bulletproof recall for off-leash freedom.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Sun, 04 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Training</category>
     </item>
-
     <item>
-      <title>Dog Clicker Training Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-clicker-training</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-clicker-training</guid>
-      <description>Complete beginner's guide to clicker training for dogs. Learn marker training techniques for faster, more effective dog training.</description>
-      <content:encoded><![CDATA[<p>Complete beginner's guide to clicker training for dogs. Learn marker training techniques for faster, more effective dog training.</p><p>Master the science of clicker training.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Training</category>
+      <title>Loose Leash Walking Training</title>
+      <link>https://petcarehelperai.com/guides/dog-loose-leash-walking</link>
+      <description>How to teach your dog to walk without pulling. Covers equipment choices, training techniques, troubleshooting, and making walks enjoyable.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-loose-leash-walking</guid>
     </item>
-
     <item>
-      <title>Dog Barking Solutions Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-barking-solutions</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-barking-solutions</guid>
-      <description>Stop excessive barking with proven training techniques. Understand why dogs bark and address the root cause.</description>
-      <content:encoded><![CDATA[<p>Stop excessive barking with proven training techniques. Understand why dogs bark and address the root cause.</p><p>Reduce nuisance barking while keeping your dog happy.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Thu, 08 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Training</category>
-      <category>Behavior</category>
+      <title>Understanding Dog Aggression</title>
+      <link>https://petcarehelperai.com/guides/dog-aggression-guide</link>
+      <description>Types of aggression in dogs including fear, territorial, and redirected aggression. Covers warning signs, management, and working with a behaviorist.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-aggression-guide</guid>
     </item>
-
     <item>
-      <title>Dog Jumping Solutions Guide</title>
-      <link>https://petcarehelperai.com/guides/dog-jumping-solutions</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-jumping-solutions</guid>
-      <description>Stop your dog from jumping on people with proven training techniques. Learn why dogs jump, prevention strategies, and step-by-step training for polite greetings.</description>
-      <content:encoded><![CDATA[<p>Stop your dog from jumping on people with proven training techniques. Learn why dogs jump, prevention strategies, and step-by-step training for polite greetings.</p><p>Teach your dog polite greeting manners.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Sat, 10 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Training</category>
-      <category>Behavior</category>
+      <title>Excessive Barking Solutions</title>
+      <link>https://petcarehelperai.com/guides/dog-excessive-barking</link>
+      <description>Why dogs bark excessively and how to reduce it. Covers demand barking, alert barking, anxiety barking, and positive training methods to address each type.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-excessive-barking</guid>
+    </item>
+    <item>
+      <title>Dog Digging Behavior Solutions</title>
+      <link>https://petcarehelperai.com/guides/dog-digging-solutions</link>
+      <description>Why dogs dig and how to redirect the behavior. Covers boredom digging, escape digging, instinct-driven digging, and creating appropriate dig zones.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-digging-solutions</guid>
+    </item>
+    <item>
+      <title>Dog Socialization Guide</title>
+      <link>https://petcarehelperai.com/guides/dog-socialization-guide</link>
+      <description>Complete socialization guide for puppies and adult dogs. Covers critical periods, socialization checklist, safe exposure techniques, and common mistakes.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-socialization-guide</guid>
+    </item>
+    <item>
+      <title>Dog Travel and Car Anxiety</title>
+      <link>https://petcarehelperai.com/guides/dog-travel-anxiety</link>
+      <description>Managing travel anxiety in dogs including car sickness, crate stress, and flying anxiety. Covers desensitization, medications, and travel preparation.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-travel-anxiety</guid>
+    </item>
+    <item>
+      <title>Puppy Teething Guide</title>
+      <link>https://petcarehelperai.com/guides/puppy-teething-guide</link>
+      <description>Complete puppy teething timeline and relief guide. Covers teething symptoms, safe chew toys, frozen treats, and when to worry about dental development.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/puppy-teething-guide</guid>
+    </item>
+    <item>
+      <title>Dog Mental Enrichment Guide</title>
+      <link>https://petcarehelperai.com/guides/dog-mental-enrichment</link>
+      <description>Keeping your dog mentally stimulated through puzzle toys, scent work, food enrichment, training games, and brain exercises to prevent boredom.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-mental-enrichment</guid>
+    </item>
+    <item>
+      <title>Best Dog Collars</title>
+      <link>https://petcarehelperai.com/guides/best-dog-collars</link>
+      <description>Expert guide to choosing the best dog collar by type: flat, martingale, breakaway, and smart collars. Covers sizing, materials, and top picks for every dog.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-dog-collars</guid>
+    </item>
+    <item>
+      <title>Best Dog Leashes</title>
+      <link>https://petcarehelperai.com/guides/best-dog-leashes</link>
+      <description>Complete dog leash buying guide covering standard, retractable, hands-free, and training leashes. Includes top picks for every walking style and dog size.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-dog-leashes</guid>
+    </item>
+    <item>
+      <title>Best Puppy Food</title>
+      <link>https://petcarehelperai.com/guides/best-dog-food-for-puppies</link>
+      <description>Top puppy food brands reviewed. Covers large breed vs small breed formulas, wet vs dry, grain-free considerations, and feeding schedule recommendations.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-dog-food-for-puppies</guid>
+    </item>
+    <item>
+      <title>Best Dog Food for Senior Dogs</title>
+      <link>https://petcarehelperai.com/guides/best-dog-food-seniors</link>
+      <description>Top senior dog food brands reviewed. Covers joint support formulas, low-calorie options, kidney-friendly diets, and transitioning to senior food.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-dog-food-seniors</guid>
+    </item>
+    <item>
+      <title>Best Dog Bowls and Feeders</title>
+      <link>https://petcarehelperai.com/guides/best-dog-bowls</link>
+      <description>Guide to choosing the best dog bowls including slow feeders, elevated bowls, stainless steel, and ceramic options. Covers sizing and safety considerations.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-dog-bowls</guid>
+    </item>
+    <item>
+      <title>Best Dog Gates and Barriers</title>
+      <link>https://petcarehelperai.com/guides/best-dog-gates</link>
+      <description>Top dog gates for stairs, doorways, and wide openings. Covers pressure-mounted, hardware-mounted, freestanding, and outdoor gate options.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-dog-gates</guid>
+    </item>
+    <item>
+      <title>Best Dog Supplements</title>
+      <link>https://petcarehelperai.com/guides/best-dog-supplements</link>
+      <description>Guide to the best dog supplements for joints, skin, digestion, and overall health. Covers glucosamine, fish oil, probiotics, and multivitamins.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-dog-supplements</guid>
+    </item>
+    <item>
+      <title>Best Dog Anxiety Products</title>
+      <link>https://petcarehelperai.com/guides/best-dog-anxiety-products</link>
+      <description>Comprehensive review of dog anxiety products including ThunderShirts, calming treats, pheromone diffusers, weighted blankets, and calming music.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-dog-anxiety-products</guid>
+    </item>
+    <item>
+      <title>Best Dog Shampoos</title>
+      <link>https://petcarehelperai.com/guides/best-dog-shampoos</link>
+      <description>Top dog shampoos for every coat type and skin condition. Covers medicated, hypoallergenic, deodorizing, and puppy-safe formulas.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-dog-shampoos</guid>
+    </item>
+    <item>
+      <title>Best Dog GPS Trackers</title>
+      <link>https://petcarehelperai.com/guides/best-dog-gps-trackers</link>
+      <description>Top GPS trackers for dogs compared. Covers Fi, Whistle, Tractive, AirTag, and Halo with range, battery life, and subscription comparisons.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-dog-gps-trackers</guid>
+    </item>
+    <item>
+      <title>Best Dog Puzzle Toys</title>
+      <link>https://petcarehelperai.com/guides/best-dog-puzzle-toys</link>
+      <description>Top puzzle toys and interactive feeders for dogs. Covers difficulty levels, food puzzles, snuffle mats, and toys that prevent boredom and anxiety.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-dog-puzzle-toys</guid>
+    </item>
+    <item>
+      <title>Best Dog Beds 2025</title>
+      <link>https://petcarehelperai.com/guides/best-dog-beds-2025</link>
+      <description>Updated guide to the best dog beds including orthopedic, bolster, cooling, and indestructible options for every size and sleeping style.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-dog-beds-2025</guid>
+    </item>
+    <item>
+      <title>Best Dog Car Seats and Safety Restraints</title>
+      <link>https://petcarehelperai.com/guides/best-dog-car-seats</link>
+      <description>Top dog car seats, harnesses, and barriers for safe travel. Covers crash-tested options, size guides, and state safety requirements.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-dog-car-seats</guid>
+    </item>
+    <item>
+      <title>Best Dog Raincoats and Boots</title>
+      <link>https://petcarehelperai.com/guides/best-dog-rain-gear</link>
+      <description>Top waterproof gear for dogs including raincoats, boots, and paw protectors. Covers sizing, materials, and options for every climate.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-dog-rain-gear</guid>
+    </item>
+    <item>
+      <title>Labrador Retriever Health Guide</title>
+      <link>https://petcarehelperai.com/guides/labrador-health-guide</link>
+      <description>Common health problems in Labrador Retrievers including hip dysplasia, obesity, ear infections, and cancer. Covers prevention, screening, and care.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/labrador-health-guide</guid>
+    </item>
+    <item>
+      <title>Golden Retriever Health Guide</title>
+      <link>https://petcarehelperai.com/guides/golden-retriever-health-guide</link>
+      <description>Health issues common in Golden Retrievers including cancer, hip dysplasia, heart disease, and skin conditions. Covers screenings and preventive care.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/golden-retriever-health-guide</guid>
+    </item>
+    <item>
+      <title>German Shepherd Health Guide</title>
+      <link>https://petcarehelperai.com/guides/german-shepherd-health-guide</link>
+      <description>Common German Shepherd health problems including hip/elbow dysplasia, DM, bloat, and allergies. Covers genetic testing and preventive care.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/german-shepherd-health-guide</guid>
+    </item>
+    <item>
+      <title>French Bulldog Health Guide</title>
+      <link>https://petcarehelperai.com/guides/french-bulldog-health-guide</link>
+      <description>Health challenges common in French Bulldogs including BOAS, spinal issues, skin fold dermatitis, and allergies. Covers surgery options and daily care.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/french-bulldog-health-guide</guid>
+    </item>
+    <item>
+      <title>Poodle Health Guide</title>
+      <link>https://petcarehelperai.com/guides/poodle-health-guide</link>
+      <description>Health issues in Standard, Miniature, and Toy Poodles including Addisons, bloat, hip dysplasia, and eye diseases. Covers genetic testing.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/poodle-health-guide</guid>
+    </item>
+    <item>
+      <title>English Bulldog Health Guide</title>
+      <link>https://petcarehelperai.com/guides/bulldog-health-guide</link>
+      <description>Comprehensive health guide for English Bulldogs covering breathing issues, skin problems, joint disease, and heat sensitivity. Covers daily management.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/bulldog-health-guide</guid>
+    </item>
+    <item>
+      <title>Rottweiler Health Guide</title>
+      <link>https://petcarehelperai.com/guides/rottweiler-health-guide</link>
+      <description>Common Rottweiler health issues including cancer, hip dysplasia, heart conditions, and cruciate ligament tears. Covers prevention and screening.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/rottweiler-health-guide</guid>
+    </item>
+    <item>
+      <title>Yorkshire Terrier Health Guide</title>
+      <link>https://petcarehelperai.com/guides/yorkshire-terrier-health-guide</link>
+      <description>Health issues in Yorkies including dental disease, liver shunt, collapsed trachea, and luxating patella. Covers small dog care considerations.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/yorkshire-terrier-health-guide</guid>
+    </item>
+    <item>
+      <title>Dachshund Health Guide</title>
+      <link>https://petcarehelperai.com/guides/dachshund-health-guide</link>
+      <description>Dachshund health problems including IVDD, obesity, dental disease, and joint issues. Covers back injury prevention and weight management.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dachshund-health-guide</guid>
+    </item>
+    <item>
+      <title>Boxer Health Guide</title>
+      <link>https://petcarehelperai.com/guides/boxer-health-guide</link>
+      <description>Common Boxer health problems including cancer, heart disease (ARVC), hip dysplasia, and thyroid issues. Covers screenings and preventive care.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/boxer-health-guide</guid>
+    </item>
+    <item>
+      <title>Siberian Husky Health Guide</title>
+      <link>https://petcarehelperai.com/guides/husky-health-guide</link>
+      <description>Health issues in Siberian Huskies including eye conditions, hip dysplasia, epilepsy, and zinc deficiency. Covers exercise needs and coat care.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/husky-health-guide</guid>
+    </item>
+    <item>
+      <title>Chihuahua Health Guide</title>
+      <link>https://petcarehelperai.com/guides/chihuahua-health-guide</link>
+      <description>Common Chihuahua health issues including dental disease, luxating patella, heart murmurs, and hypoglycemia. Covers small breed care considerations.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/chihuahua-health-guide</guid>
+    </item>
+    <item>
+      <title>Shih Tzu Health Guide</title>
+      <link>https://petcarehelperai.com/guides/shih-tzu-health-guide</link>
+      <description>Health problems in Shih Tzus including eye issues, breathing problems, dental disease, and ear infections. Covers grooming needs and preventive care.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/shih-tzu-health-guide</guid>
+    </item>
+    <item>
+      <title>Great Dane Health Guide</title>
+      <link>https://petcarehelperai.com/guides/great-dane-health-guide</link>
+      <description>Health challenges in Great Danes including bloat/GDV, heart disease, hip dysplasia, and Wobbler syndrome. Covers giant breed care and feeding.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/great-dane-health-guide</guid>
+    </item>
+    <item>
+      <title>Cavalier King Charles Spaniel Health Guide</title>
+      <link>https://petcarehelperai.com/guides/cavalier-king-charles-health-guide</link>
+      <description>Health issues in Cavaliers including heart disease (MVD), syringomyelia, eye problems, and hip dysplasia. Covers screening protocols.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cavalier-king-charles-health-guide</guid>
+    </item>
+    <item>
+      <title>Corgi Health Guide</title>
+      <link>https://petcarehelperai.com/guides/corgi-health-guide</link>
+      <description>Common health issues in Pembroke and Cardigan Welsh Corgis including IVDD, hip dysplasia, DM, and obesity. Covers prevention strategies.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/corgi-health-guide</guid>
+    </item>
+    <item>
+      <title>Pit Bull Health Guide</title>
+      <link>https://petcarehelperai.com/guides/pit-bull-health-guide</link>
+      <description>Health issues common in American Pit Bull Terriers including allergies, hip dysplasia, thyroid disease, and heart conditions. Covers preventive care.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/pit-bull-health-guide</guid>
+    </item>
+    <item>
+      <title>Beagle Health Guide</title>
+      <link>https://petcarehelperai.com/guides/beagle-health-guide</link>
+      <description>Common Beagle health problems including epilepsy, hypothyroidism, cherry eye, and obesity. Covers weight management and preventive screening.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/beagle-health-guide</guid>
+    </item>
+    <item>
+      <title>Doberman Pinscher Health Guide</title>
+      <link>https://petcarehelperai.com/guides/doberman-health-guide</link>
+      <description>Health issues in Doberman Pinschers including DCM, Wobbler syndrome, von Willebrand disease, and hypothyroidism. Covers cardiac screening.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/doberman-health-guide</guid>
+    </item>
+    <item>
+      <title>Best Dog Food Subscription Services Compared</title>
+      <link>https://petcarehelperai.com/guides/compare-dog-food-subscription</link>
+      <description>Comparing dog food subscription services including Farmer's Dog, Ollie, PetPlate, and Nom Nom. Covers pricing, ingredients, and convenience.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/compare-dog-food-subscription</guid>
+    </item>
+    <item>
+      <title>Best Dog DNA Tests Compared</title>
+      <link>https://petcarehelperai.com/guides/compare-dog-dna-test</link>
+      <description>Embark vs Wisdom Panel vs Orivet dog DNA tests compared. Covers breed detection accuracy, health screening, pricing, and which test is best.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/compare-dog-dna-test</guid>
+    </item>
+    <item>
+      <title>Responsible Dog Breeding Guide</title>
+      <link>https://petcarehelperai.com/guides/dog-breeding-guide</link>
+      <description>Comprehensive guide to responsible dog breeding covering health testing, genetics, whelping preparation, puppy care, and ethical breeding standards.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-breeding-guide</guid>
+    </item>
+    <item>
+      <title>Dog Pregnancy and Whelping Guide</title>
+      <link>https://petcarehelperai.com/guides/dog-pregnancy-guide</link>
+      <description>Complete guide to dog pregnancy from mating through whelping. Covers signs of pregnancy, nutrition, preparing a whelping box, labor stages, and newborn care.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/dog-pregnancy-guide</guid>
+    </item>
+    <item>
+      <title>Adolescent Dog Behavior Guide</title>
+      <link>https://petcarehelperai.com/guides/adolescent-dog-guide</link>
+      <description>Understanding the teenage dog phase (6-18 months). Covers regression in training, hormonal changes, exercise needs, and surviving canine adolescence.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/adolescent-dog-guide</guid>
+    </item>
+    <item>
+      <title>Geriatric Dog Care Guide</title>
+      <link>https://petcarehelperai.com/guides/geriatric-dog-care</link>
+      <description>Caring for senior dogs in their final years. Covers cognitive decline, mobility support, comfort care, end-of-life decisions, and quality of life assessment.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/geriatric-dog-care</guid>
+    </item>
+    <item>
+      <title>New Puppy Checklist and First Month Guide</title>
+      <link>https://petcarehelperai.com/guides/new-puppy-checklist</link>
+      <description>Everything you need for a new puppy including supplies checklist, first vet visit, potty training start, socialization window, and feeding schedule.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/new-puppy-checklist</guid>
     </item>
 
   </channel>

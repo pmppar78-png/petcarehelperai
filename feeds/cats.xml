@@ -1,297 +1,368 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"
-  xmlns:atom="http://www.w3.org/2005/Atom"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/"
-  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Pet Care Helper AI - Cat Care Guides</title>
-    <description>Comprehensive cat care guides covering nutrition, behavior, health, grooming, and everything cat owners need to know. AI-powered pet health guidance.</description>
-    <link>https://petcarehelperai.com/cats</link>
-    <atom:link href="https://petcarehelperai.com/feeds/cats.xml" rel="self" type="application/rss+xml"/>
+    <link>https://petcarehelperai.com</link>
+    <description>Comprehensive pet care guides covering health, nutrition, training, and wellness for dogs, cats, birds, fish, reptiles, and small animals.</description>
     <language>en-us</language>
-    <copyright>Copyright 2024 Pet Care Helper AI. Feel free to republish with attribution.</copyright>
-    <managingEditor>advertise@petcarehelperai.com (Pet Care Helper AI)</managingEditor>
-    <webMaster>advertise@petcarehelperai.com (Pet Care Helper AI)</webMaster>
-    <lastBuildDate>Mon, 03 Feb 2025 00:00:00 GMT</lastBuildDate>
-    <ttl>1440</ttl>
-    <image>
-      <url>https://petcarehelperai.com/logo.png</url>
-      <title>Pet Care Helper AI - Cats</title>
-      <link>https://petcarehelperai.com/cats</link>
-    </image>
-    <category>Cats</category>
-    <category>Pet Care</category>
-    <category>Cat Health</category>
-    <category>Cat Behavior</category>
-
+    <lastBuildDate>Thu, 19 Feb 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://petcarehelperai.com/feeds/cats.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Cat Breed Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-breeds</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-breeds</guid>
-      <description>Cat breed guide covering popular breeds, characteristics, health considerations, and finding the right cat breed for your lifestyle and home.</description>
-      <content:encoded><![CDATA[<p>Cat breed guide covering popular breeds, characteristics, health considerations, and finding the right cat breed for your lifestyle and home.</p><p>From Persian to Siamese, Maine Coon to Bengal, learn about each breed's unique traits.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Mon, 22 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Breeds</category>
+      <title>Cat Surgery Costs</title>
+      <link>https://petcarehelperai.com/guides/cat-surgery-costs</link>
+      <description>Average costs for common cat surgeries including spay/neuter, dental extractions, tumor removal, and urinary obstruction surgery with insurance tips.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-surgery-costs</guid>
     </item>
-
     <item>
-      <title>Cat Nutrition Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-nutrition</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-nutrition</guid>
-      <description>Complete cat nutrition guide covering dietary requirements, wet vs dry food, feeding schedules, and special dietary needs for cats.</description>
-      <content:encoded><![CDATA[<p>Complete cat nutrition guide covering dietary requirements, wet vs dry food, feeding schedules, and special dietary needs for cats.</p><p>Understand obligate carnivore needs and choose the best food for your feline.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Wed, 24 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Nutrition</category>
-      <category>Health</category>
+      <title>How Much Does a Kitten Cost First Year</title>
+      <link>https://petcarehelperai.com/guides/how-much-does-a-kitten-cost</link>
+      <description>Complete first-year kitten cost breakdown covering adoption fees, vaccinations, spay/neuter, food, litter, supplies, and veterinary care.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/how-much-does-a-kitten-cost</guid>
     </item>
-
     <item>
-      <title>Cat Behavior and Enrichment Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-behavior</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-behavior</guid>
-      <description>Understanding cat behavior, body language, and providing environmental enrichment for a happy, healthy cat.</description>
-      <content:encoded><![CDATA[<p>Understanding cat behavior, body language, and providing environmental enrichment for a happy, healthy cat.</p><p>Learn why cats do what they do and how to meet their behavioral needs.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Fri, 26 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Behavior</category>
-      <category>Enrichment</category>
+      <title>Cat Vaccination Costs and Schedules</title>
+      <link>https://petcarehelperai.com/guides/cat-vaccination-costs</link>
+      <description>Cat vaccination costs for FVRCP, rabies, FeLV, and optional vaccines. Includes kitten vaccination schedules and where to find affordable shots.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-vaccination-costs</guid>
     </item>
-
     <item>
-      <title>Complete Kitten Care Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-kitten-care</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-kitten-care</guid>
-      <description>Everything new kitten owners need to know about feeding, litter training, socialization, vaccinations, and kitten development milestones.</description>
-      <content:encoded><![CDATA[<p>Everything new kitten owners need to know about feeding, litter training, socialization, vaccinations, and kitten development milestones.</p><p>Start your kitten off right with proper care from day one.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Sun, 28 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Kittens</category>
-      <category>Care</category>
+      <title>Foods Toxic to Cats</title>
+      <link>https://petcarehelperai.com/guides/foods-toxic-to-cats</link>
+      <description>Complete list of foods dangerous or toxic to cats including lilies, onions, chocolate, alcohol, caffeine, and raw dough with emergency guidance.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/foods-toxic-to-cats</guid>
     </item>
-
     <item>
-      <title>Cat Grooming and Dental Care Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-grooming</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-grooming</guid>
-      <description>Complete cat dental care and grooming guide covering teeth cleaning, brushing techniques, nail trimming, coat care, bathing, and maintaining your cat's hygiene.</description>
-      <content:encoded><![CDATA[<p>Complete cat dental care and grooming guide covering teeth cleaning, brushing techniques, nail trimming, coat care, bathing, and maintaining your cat's hygiene.</p><p>Keep your cat looking and feeling their best.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate>
-      <category>Grooming</category>
-      <category>Health</category>
+      <title>Plants Toxic to Cats</title>
+      <link>https://petcarehelperai.com/guides/plants-toxic-to-cats</link>
+      <description>Household and outdoor plants dangerous to cats. Covers lilies (extremely toxic), poinsettias, aloe vera, and safe plant alternatives for cat owners.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/plants-toxic-to-cats</guid>
     </item>
-
     <item>
-      <title>Cat Litter Box Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-litter</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-litter</guid>
-      <description>Complete guide to cat litter boxes, litter types, placement, cleaning routines, and solving litter box problems.</description>
-      <content:encoded><![CDATA[<p>Complete guide to cat litter boxes, litter types, placement, cleaning routines, and solving litter box problems.</p><p>Create the ideal litter setup for your cat's needs and preferences.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Litter</category>
-      <category>Care</category>
+      <title>Essential Oils Toxic to Cats</title>
+      <link>https://petcarehelperai.com/guides/essential-oils-toxic-to-cats</link>
+      <description>Why most essential oils are dangerous for cats. Covers which oils to avoid, diffuser safety, symptoms of toxicity, and cat-safe alternatives.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/essential-oils-toxic-to-cats</guid>
     </item>
-
     <item>
-      <title>Senior Cat Care Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-senior-care</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-senior-care</guid>
-      <description>Caring for aging cats including nutrition changes, mobility support, common senior cat health issues, and quality of life considerations.</description>
-      <content:encoded><![CDATA[<p>Caring for aging cats including nutrition changes, mobility support, common senior cat health issues, and quality of life considerations.</p><p>Help your senior cat age gracefully with proper care.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Sat, 03 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Senior Care</category>
-      <category>Health</category>
+      <title>Can Cats Eat Tuna</title>
+      <link>https://petcarehelperai.com/guides/can-cats-eat-tuna</link>
+      <description>Is tuna safe for cats? Covers mercury risks, nutritional concerns, how much tuna is safe, and better fish alternatives for cats.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/can-cats-eat-tuna</guid>
     </item>
-
     <item>
-      <title>Cat Symptom Reference Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-symptoms</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-symptoms</guid>
-      <description>Common cat symptoms explained with urgency levels, possible causes, and guidance on when to see a veterinarian.</description>
-      <content:encoded><![CDATA[<p>Common cat symptoms explained with urgency levels, possible causes, and guidance on when to see a veterinarian.</p><p>Know when your cat's symptoms require immediate attention.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Mon, 05 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Health</category>
-      <category>Symptoms</category>
+      <title>Safe Human Foods for Cats</title>
+      <link>https://petcarehelperai.com/guides/safe-foods-for-cats</link>
+      <description>Which human foods cats can safely eat, proper portions, foods to always avoid, and healthy treat alternatives for cats.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/safe-foods-for-cats</guid>
     </item>
-
     <item>
-      <title>Multi-Cat Household Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-multi-cat</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-multi-cat</guid>
-      <description>Managing a multi-cat household including introductions, preventing conflicts, resource management, and keeping multiple cats happy together.</description>
-      <content:encoded><![CDATA[<p>Managing a multi-cat household including introductions, preventing conflicts, resource management, and keeping multiple cats happy together.</p><p>Create harmony in your multi-cat home.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Behavior</category>
-      <category>Multi-Pet</category>
+      <title>Cat Urinary Blockage Emergency</title>
+      <link>https://petcarehelperai.com/guides/cat-urinary-blockage-emergency</link>
+      <description>Recognizing urinary blockage in cats — a life-threatening emergency. Covers symptoms, why male cats are at higher risk, treatment, and prevention.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-urinary-blockage-emergency</guid>
     </item>
-
     <item>
-      <title>Indoor vs Outdoor Cats Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-indoor-outdoor</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-indoor-outdoor</guid>
-      <description>Pros and cons of indoor vs outdoor cats, safety considerations, catios, and enrichment options for indoor cats.</description>
-      <content:encoded><![CDATA[<p>Pros and cons of indoor vs outdoor cats, safety considerations, catios, and enrichment options for indoor cats.</p><p>Make the best decision for your cat's lifestyle and safety.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Fri, 09 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Safety</category>
-      <category>Lifestyle</category>
+      <title>Cat Fall Injury Guide (High-Rise Syndrome)</title>
+      <link>https://petcarehelperai.com/guides/cat-fall-injury</link>
+      <description>What to do when a cat falls from a height. Covers high-rise syndrome, internal injury signs, emergency transport, and window safety for cats.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-fall-injury</guid>
     </item>
-
     <item>
-      <title>Cat Kidney Disease Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-kidney-disease</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-kidney-disease</guid>
-      <description>Complete guide to chronic kidney disease in cats: stages, symptoms, diagnosis, treatment options, diet management, and home care.</description>
-      <content:encoded><![CDATA[<p>Complete guide to chronic kidney disease in cats: stages, symptoms, diagnosis, treatment options, diet management, and home care.</p><p>Manage CKD and help your cat live comfortably.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Sun, 11 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Health</category>
-      <category>Kidney Disease</category>
+      <title>Feline Leukemia Virus (FeLV)</title>
+      <link>https://petcarehelperai.com/guides/cat-feline-leukemia-felv</link>
+      <description>Complete guide to FeLV in cats covering transmission, testing, symptoms, treatment options, prevention, and managing FeLV-positive cats.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-feline-leukemia-felv</guid>
     </item>
-
     <item>
-      <title>Cat Hyperthyroidism Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-hyperthyroidism</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-hyperthyroidism</guid>
-      <description>Complete guide to hyperthyroidism in cats: symptoms, diagnosis, treatment options including medication, radioactive iodine, surgery, and dietary management.</description>
-      <content:encoded><![CDATA[<p>Complete guide to hyperthyroidism in cats: symptoms, diagnosis, treatment options including medication, radioactive iodine, surgery, and dietary management.</p><p>Understand and manage this common feline condition.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Tue, 13 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Health</category>
-      <category>Hyperthyroidism</category>
+      <title>Feline Immunodeficiency Virus (FIV)</title>
+      <link>https://petcarehelperai.com/guides/cat-fiv</link>
+      <description>Understanding FIV in cats. Covers transmission, testing, stages, treatment, living with an FIV-positive cat, and multi-cat household management.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-fiv</guid>
     </item>
-
     <item>
-      <title>Cat Urinary Issues Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-urinary-issues</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-urinary-issues</guid>
-      <description>Complete guide to feline urinary problems: FLUTD, urinary blockages, UTIs, crystals, and bladder stones. Symptoms, treatment, prevention, and emergency care.</description>
-      <content:encoded><![CDATA[<p>Complete guide to feline urinary problems: FLUTD, urinary blockages, UTIs, crystals, and bladder stones. Symptoms, treatment, prevention, and emergency care.</p><p>Recognize urinary emergencies and prevent recurring issues.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Thu, 15 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Health</category>
-      <category>Urinary</category>
-      <category>Emergency</category>
+      <title>Pancreatitis in Cats</title>
+      <link>https://petcarehelperai.com/guides/cat-pancreatitis</link>
+      <description>Causes, symptoms, and treatment of feline pancreatitis. Covers diagnosis challenges, dietary management, and connection to triaditis.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-pancreatitis</guid>
     </item>
-
     <item>
-      <title>Cat Diabetes Guide</title>
+      <title>Feline Asthma</title>
+      <link>https://petcarehelperai.com/guides/cat-asthma</link>
+      <description>Complete guide to asthma in cats covering triggers, symptoms, inhaler use, medications, and environmental management to reduce attacks.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-asthma</guid>
+    </item>
+    <item>
+      <title>Inflammatory Bowel Disease (IBD) in Cats</title>
+      <link>https://petcarehelperai.com/guides/cat-ibd</link>
+      <description>Understanding IBD in cats. Covers chronic vomiting and diarrhea, diagnosis, dietary trials, medication options, and long-term management.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-ibd</guid>
+    </item>
+    <item>
+      <title>Cat Obesity Prevention and Weight Loss</title>
+      <link>https://petcarehelperai.com/guides/cat-obesity</link>
+      <description>Managing overweight cats including health risks, ideal weight ranges, feeding strategies, portion control, and exercise ideas for indoor cats.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-obesity</guid>
+    </item>
+    <item>
+      <title>Diabetes in Cats</title>
       <link>https://petcarehelperai.com/guides/cat-diabetes</link>
+      <description>Managing feline diabetes including symptoms, insulin therapy, blood glucose monitoring, dietary management, and potential for diabetic remission.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-diabetes</guid>
-      <description>Complete guide to feline diabetes: symptoms, diagnosis, insulin therapy, diet management, blood glucose monitoring, and managing diabetic cats at home.</description>
-      <content:encoded><![CDATA[<p>Complete guide to feline diabetes: symptoms, diagnosis, insulin therapy, diet management, blood glucose monitoring, and managing diabetic cats at home.</p><p>Successfully manage your diabetic cat's care.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Sat, 17 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Health</category>
-      <category>Diabetes</category>
     </item>
-
     <item>
-      <title>Cat Dental Disease Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-dental-disease</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-dental-disease</guid>
-      <description>Complete guide to dental disease in cats: gingivitis, periodontal disease, stomatitis, resorptive lesions. Signs, prevention, treatment, and home care tips.</description>
-      <content:encoded><![CDATA[<p>Complete guide to dental disease in cats: gingivitis, periodontal disease, stomatitis, resorptive lesions. Signs, prevention, treatment, and home care tips.</p><p>Protect your cat's dental health and prevent painful conditions.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Mon, 19 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Health</category>
-      <category>Dental</category>
+      <title>Heart Disease in Cats (HCM)</title>
+      <link>https://petcarehelperai.com/guides/cat-heart-disease</link>
+      <description>Hypertrophic cardiomyopathy and other heart conditions in cats. Covers symptoms, diagnosis, treatment, at-risk breeds, and prognosis.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-heart-disease</guid>
     </item>
-
     <item>
-      <title>Cat Scratching Solutions Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-scratching-solutions</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-scratching-solutions</guid>
-      <description>Protect your furniture while meeting your cat's scratching needs. Understand why cats scratch and redirect the behavior appropriately.</description>
-      <content:encoded><![CDATA[<p>Protect your furniture while meeting your cat's scratching needs. Understand why cats scratch and redirect the behavior appropriately.</p><p>Save your furniture with proper scratching solutions.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Wed, 21 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Behavior</category>
+      <title>Cancer Signs in Cats</title>
+      <link>https://petcarehelperai.com/guides/cat-cancer-signs</link>
+      <description>How to recognize cancer symptoms in cats. Covers common types (lymphoma, squamous cell carcinoma), warning signs, diagnosis, and treatment options.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-cancer-signs</guid>
     </item>
-
     <item>
-      <title>Cat Biting Solutions Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-biting-solutions</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-biting-solutions</guid>
-      <description>Stop unwanted cat biting behavior. Understand why cats bite and learn effective strategies for play aggression, petting aggression, and other biting issues.</description>
-      <content:encoded><![CDATA[<p>Stop unwanted cat biting behavior. Understand why cats bite and learn effective strategies for play aggression, petting aggression, and other biting issues.</p><p>Reduce biting while strengthening your bond.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Fri, 23 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Behavior</category>
+      <title>Cat Upper Respiratory Infections</title>
+      <link>https://petcarehelperai.com/guides/cat-upper-respiratory-infection</link>
+      <description>Guide to URI in cats covering herpesvirus, calicivirus, symptoms, home care, when antibiotics are needed, and preventing spread in multi-cat homes.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-upper-respiratory-infection</guid>
     </item>
-
     <item>
-      <title>Cat Nail Trimming Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-nail-trimming</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-nail-trimming</guid>
-      <description>Safe cat nail trimming techniques, best tools, handling tips for difficult cats, and alternatives to declawing.</description>
-      <content:encoded><![CDATA[<p>Safe cat nail trimming techniques, best tools, handling tips for difficult cats, and alternatives to declawing.</p><p>Keep your cat's nails healthy without the struggle.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Sun, 25 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Grooming</category>
+      <title>Dental Disease in Cats</title>
+      <link>https://petcarehelperai.com/guides/cat-dental-disease-guide</link>
+      <description>Feline dental disease including stomatitis, tooth resorption, and periodontal disease. Covers symptoms, dental procedures, and home dental care.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-dental-disease-guide</guid>
     </item>
-
     <item>
-      <title>Cat Ear Cleaning Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-ear-cleaning</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-ear-cleaning</guid>
-      <description>Complete cat ear cleaning guide with step-by-step instructions, how to recognize ear problems, best ear cleaners, and when to see a veterinarian.</description>
-      <content:encoded><![CDATA[<p>Complete cat ear cleaning guide with step-by-step instructions, how to recognize ear problems, best ear cleaners, and when to see a veterinarian.</p><p>Maintain healthy ears and spot problems early.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Tue, 27 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Grooming</category>
-      <category>Health</category>
+      <title>Cat Constipation and Megacolon</title>
+      <link>https://petcarehelperai.com/guides/cat-constipation</link>
+      <description>Understanding constipation in cats from mild to severe megacolon. Covers causes, home remedies, laxatives, dietary changes, and when surgery is needed.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-constipation</guid>
     </item>
-
     <item>
-      <title>Cat Brushing Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-brushing-guide</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-brushing-guide</guid>
-      <description>Complete cat brushing guide with techniques for short, medium, and long-haired cats. Learn the best brushes, brushing frequency, and tips for a healthy coat.</description>
-      <content:encoded><![CDATA[<p>Complete cat brushing guide with techniques for short, medium, and long-haired cats. Learn the best brushes, brushing frequency, and tips for a healthy coat.</p><p>Keep your cat's coat healthy and reduce shedding.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Thu, 29 Feb 2024 00:00:00 GMT</pubDate>
-      <category>Grooming</category>
+      <title>Cat Skin Allergies and Dermatitis</title>
+      <link>https://petcarehelperai.com/guides/cat-skin-allergies</link>
+      <description>Types of skin allergies in cats including food allergies, flea allergy dermatitis, and environmental allergies. Covers testing, treatment, and itch relief.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-skin-allergies</guid>
     </item>
-
     <item>
-      <title>Cat Bathing Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-bathing-guide</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-bathing-guide</guid>
-      <description>Complete cat bathing guide with step-by-step instructions, when cats need baths, best cat shampoos, and tips for making bath time less stressful for your cat.</description>
-      <content:encoded><![CDATA[<p>Complete cat bathing guide with step-by-step instructions, when cats need baths, best cat shampoos, and tips for making bath time less stressful for your cat.</p><p>Bath time doesn't have to be a battle.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Sat, 02 Mar 2024 00:00:00 GMT</pubDate>
-      <category>Grooming</category>
+      <title>Intestinal Parasites in Cats</title>
+      <link>https://petcarehelperai.com/guides/cat-intestinal-parasites</link>
+      <description>Common worms in cats including roundworms, tapeworms, hookworms, and coccidia. Covers symptoms, deworming protocols, and indoor cat prevention.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-intestinal-parasites</guid>
     </item>
-
     <item>
-      <title>Cat Food Ingredients Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-food-ingredients</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-food-ingredients</guid>
-      <description>Understanding cat food ingredients, labels, and nutritional requirements. Learn what to look for and what to avoid in cat food.</description>
-      <content:encoded><![CDATA[<p>Understanding cat food ingredients, labels, and nutritional requirements. Learn what to look for and what to avoid in cat food.</p><p>Make informed choices about your cat's food.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Mon, 04 Mar 2024 00:00:00 GMT</pubDate>
-      <category>Nutrition</category>
+      <title>Cat Ear Infections Guide</title>
+      <link>https://petcarehelperai.com/guides/cat-ear-infections</link>
+      <description>Ear infections in cats covering bacterial, yeast, and ear mite infections. Covers symptoms, treatment, cleaning techniques, and prevention.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-ear-infections</guid>
     </item>
-
     <item>
-      <title>Apartment Cats Guide</title>
-      <link>https://petcarehelperai.com/guides/apartment-cats</link>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/apartment-cats</guid>
-      <description>Complete guide to keeping cats happy in apartments. Space optimization, enrichment ideas, and tips for indoor cat life in small spaces.</description>
-      <content:encoded><![CDATA[<p>Complete guide to keeping cats happy in apartments. Space optimization, enrichment ideas, and tips for indoor cat life in small spaces.</p><p>Make apartment living great for your cat.</p>]]></content:encoded>
-      <dc:creator>Pet Care Helper AI</dc:creator>
-      <pubDate>Wed, 06 Mar 2024 00:00:00 GMT</pubDate>
-      <category>Lifestyle</category>
-      <category>Enrichment</category>
+      <title>Feline Infectious Peritonitis (FIP)</title>
+      <link>https://petcarehelperai.com/guides/cat-fip</link>
+      <description>Understanding FIP in cats including wet and dry forms, diagnosis, the GS-441524 treatment breakthrough, and prognosis for affected cats.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-fip</guid>
+    </item>
+    <item>
+      <title>Cat Litter Box Problems and Solutions</title>
+      <link>https://petcarehelperai.com/guides/cat-litter-box-problems</link>
+      <description>Why cats stop using the litter box. Covers medical causes, behavioral causes, box setup optimization, cleaning protocols, and multi-cat strategies.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-litter-box-problems</guid>
+    </item>
+    <item>
+      <title>Cat Overgrooming (Psychogenic Alopecia)</title>
+      <link>https://petcarehelperai.com/guides/cat-overgrooming</link>
+      <description>Understanding excessive grooming and hair loss in cats. Covers stress triggers, medical vs behavioral causes, treatment options, and environmental enrichment.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-overgrooming</guid>
+    </item>
+    <item>
+      <title>Cat Clicker Training Guide</title>
+      <link>https://petcarehelperai.com/guides/cat-clicker-training</link>
+      <description>How to clicker train your cat. Covers getting started, teaching tricks, solving behavior problems, and mental enrichment through training.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-clicker-training</guid>
+    </item>
+    <item>
+      <title>Cat Aggression Causes and Solutions</title>
+      <link>https://petcarehelperai.com/guides/cat-aggression-guide</link>
+      <description>Types of aggression in cats including play, fear, redirected, and petting-induced aggression. Covers triggers, prevention, and behavior modification.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-aggression-guide</guid>
+    </item>
+    <item>
+      <title>Introducing Cats to Each Other</title>
+      <link>https://petcarehelperai.com/guides/introducing-cats</link>
+      <description>Step-by-step guide to introducing a new cat to your existing cats. Covers scent swapping, site swapping, visual introduction, and troubleshooting.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/introducing-cats</guid>
+    </item>
+    <item>
+      <title>Indoor Cat Enrichment Guide</title>
+      <link>https://petcarehelperai.com/guides/cat-enrichment-guide</link>
+      <description>Keeping indoor cats happy and stimulated. Covers climbing spaces, window perches, puzzle feeders, play routines, and environmental enrichment ideas.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-enrichment-guide</guid>
+    </item>
+    <item>
+      <title>Best Kitten Food</title>
+      <link>https://petcarehelperai.com/guides/best-cat-food-for-kittens</link>
+      <description>Top kitten food brands reviewed covering wet food, dry food, and combination feeding. Includes nutritional requirements and feeding schedule by age.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-cat-food-for-kittens</guid>
+    </item>
+    <item>
+      <title>Best Cat Food for Senior Cats</title>
+      <link>https://petcarehelperai.com/guides/best-cat-food-seniors</link>
+      <description>Top senior cat food brands reviewed. Covers kidney support, weight management, hydration, and transitioning older cats to appropriate nutrition.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-cat-food-seniors</guid>
+    </item>
+    <item>
+      <title>Best Cat Supplements</title>
+      <link>https://petcarehelperai.com/guides/best-cat-supplements</link>
+      <description>Top cat supplements for joint health, hairball control, urinary support, and overall wellness. Includes dosing guidelines and vet-recommended brands.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-cat-supplements</guid>
+    </item>
+    <item>
+      <title>Best Cat Anxiety Products</title>
+      <link>https://petcarehelperai.com/guides/best-cat-anxiety-products</link>
+      <description>Top products for reducing cat anxiety and stress. Covers Feliway diffusers, calming treats, hiding spots, and environmental solutions.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-cat-anxiety-products</guid>
+    </item>
+    <item>
+      <title>Best Cat Litter Boxes</title>
+      <link>https://petcarehelperai.com/guides/best-cat-litter-boxes</link>
+      <description>Top cat litter boxes reviewed including self-cleaning, covered, top-entry, and jumbo options. Covers multi-cat setups and odor control.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-cat-litter-boxes</guid>
+    </item>
+    <item>
+      <title>Maine Coon Health Guide</title>
+      <link>https://petcarehelperai.com/guides/maine-coon-health-guide</link>
+      <description>Common health problems in Maine Coon cats including HCM, hip dysplasia, spinal muscular atrophy, and polycystic kidney disease.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/maine-coon-health-guide</guid>
+    </item>
+    <item>
+      <title>Persian Cat Health Guide</title>
+      <link>https://petcarehelperai.com/guides/persian-health-guide</link>
+      <description>Health issues in Persian cats including PKD, breathing problems, eye conditions, dental disease, and skin fold infections. Covers grooming needs.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/persian-health-guide</guid>
+    </item>
+    <item>
+      <title>Siamese Cat Health Guide</title>
+      <link>https://petcarehelperai.com/guides/siamese-health-guide</link>
+      <description>Common Siamese cat health problems including respiratory issues, amyloidosis, dental disease, and progressive retinal atrophy. Covers breed-specific care.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/siamese-health-guide</guid>
+    </item>
+    <item>
+      <title>Bengal Cat Health Guide</title>
+      <link>https://petcarehelperai.com/guides/bengal-health-guide</link>
+      <description>Health concerns in Bengal cats including HCM, PRA, flat-chested kitten syndrome, and anesthetic sensitivity. Covers genetic testing.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/bengal-health-guide</guid>
+    </item>
+    <item>
+      <title>Ragdoll Cat Health Guide</title>
+      <link>https://petcarehelperai.com/guides/ragdoll-health-guide</link>
+      <description>Health issues in Ragdoll cats including HCM, bladder stones, and GI sensitivity. Covers genetic testing, nutrition, and preventive care.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/ragdoll-health-guide</guid>
+    </item>
+    <item>
+      <title>British Shorthair Health Guide</title>
+      <link>https://petcarehelperai.com/guides/british-shorthair-health-guide</link>
+      <description>Common health problems in British Shorthair cats including HCM, obesity, dental disease, and hemophilia B. Covers weight management.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/british-shorthair-health-guide</guid>
+    </item>
+    <item>
+      <title>Scottish Fold Health Guide</title>
+      <link>https://petcarehelperai.com/guides/scottish-fold-health-guide</link>
+      <description>Health issues specific to Scottish Fold cats including osteochondrodysplasia, ear problems, and HCM. Covers the cartilage condition controversy.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/scottish-fold-health-guide</guid>
+    </item>
+    <item>
+      <title>Sphynx Cat Health Guide</title>
+      <link>https://petcarehelperai.com/guides/sphynx-health-guide</link>
+      <description>Health concerns in Sphynx cats including HCM, skin conditions, temperature sensitivity, and dental disease. Covers hairless cat care requirements.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/sphynx-health-guide</guid>
+    </item>
+    <item>
+      <title>Abyssinian Cat Health Guide</title>
+      <link>https://petcarehelperai.com/guides/abyssinian-health-guide</link>
+      <description>Health concerns in Abyssinian cats including renal amyloidosis, PRA, gingivitis, and patellar luxation. Covers genetic testing and prevention.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/abyssinian-health-guide</guid>
+    </item>
+    <item>
+      <title>Best Fresh Cat Food Delivery Services Compared</title>
+      <link>https://petcarehelperai.com/guides/compare-fresh-cat-food</link>
+      <description>Comparing Smalls, Nom Nom, and other fresh cat food delivery services. Covers ingredients, pricing, meal plans, and which is best for your cat.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/compare-fresh-cat-food</guid>
+    </item>
+    <item>
+      <title>Best Cat GPS Trackers Compared</title>
+      <link>https://petcarehelperai.com/guides/compare-cat-gps-tracker</link>
+      <description>Comparing GPS trackers designed for cats including Tractive, Tabcat, and other lightweight options. Covers range, battery life, and cat-specific features.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/compare-cat-gps-tracker</guid>
+    </item>
+    <item>
+      <title>Cat Pregnancy and Queening Guide</title>
+      <link>https://petcarehelperai.com/guides/cat-pregnancy-guide</link>
+      <description>Guide to cat pregnancy covering signs, nutrition, preparing for kittens, labor stages, and neonatal kitten care for the first weeks of life.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-pregnancy-guide</guid>
+    </item>
+    <item>
+      <title>Geriatric Cat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/geriatric-cat-care</link>
+      <description>Caring for senior cats including common age-related conditions, comfort modifications, nutritional needs, and quality of life considerations.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/geriatric-cat-care</guid>
+    </item>
+    <item>
+      <title>New Kitten Checklist and First Month Guide</title>
+      <link>https://petcarehelperai.com/guides/new-kitten-checklist</link>
+      <description>Complete checklist for bringing home a new kitten. Covers supplies, kitten-proofing, first vet visit, feeding schedule, and litter training basics.</description>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/new-kitten-checklist</guid>
     </item>
 
   </channel>
