@@ -8,7 +8,7 @@
 # =====================================================
 # REDIRECT RULES — Single-hop 301s to canonical URLs
 # Canonical format: https://petcarehelperai.com/path (no trailing slash, no .html)
-# Directory indexes use trailing slash: /tools/, /locations/, /feeds/
+# Directory indexes use trailing slash: /tools/, /locations/, /feeds/, /guides/, /resources/
 # =====================================================
 
 # --- Domain normalization (www → non-www) ---
@@ -125,19 +125,6 @@
 [[redirects]]
   from = "/embed/*.html"
   to = "/embed/:splat"
-  status = 301
-  force = true
-
-# --- Trailing-slash normalization for root-level section pages ---
-[[redirects]]
-  from = "/guides/"
-  to = "/guides"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/resources/"
-  to = "/resources"
   status = 301
   force = true
 
