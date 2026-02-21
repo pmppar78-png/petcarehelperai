@@ -83,26 +83,6 @@ function buildHead({ title, description, canonical, cssPath, schema, ogTitle, og
     gtag('js', new Date());
     gtag('config', 'G-FK0N7BD82Q');
   </script>
-  <!-- Skimlinks Affiliate Integration -->
-  <script type="text/javascript">
-    var skimlinks_domain = "petcarehelperai.com";
-  </script>
-  <script type="text/javascript" src="https://s.skimresources.com/js/PUBLISHER_ID.skimlinks.js" async></script>
-  <!-- Sovrn Commerce (VigLink) Integration -->
-  <script type="text/javascript">
-    var defined_vglnk = typeof vglnk !== "undefined";
-    if (!defined_vglnk) {
-      var vglnk = {key: "SOVRN_API_KEY"};
-      (function(d, t) {
-        var s = d.createElement(t);
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "//cdn.viglink.com/api/vglnk.js";
-        var r = d.getElementsByTagName(t)[0];
-        r.parentNode.insertBefore(s, r);
-      }(document, "script"));
-    }
-  </script>
   <meta name="description" content="${description.replace(/"/g, '&quot;')}">
   <link rel="canonical" href="${canonical}">${ogTags}
   <title>${title.replace(/</g, '&lt;')} | Pet Care Helper AI</title>
