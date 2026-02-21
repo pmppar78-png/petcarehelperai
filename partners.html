@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <!-- Google AdSense verification -->
   <meta name="google-adsense-account" content="ca-pub-6484141649562994">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6484141649562994"
@@ -64,7 +64,7 @@
     }
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
       gap: 16px;
       margin: 20px 0;
     }
@@ -598,6 +598,7 @@
         navToggle.addEventListener('click', function() {
           navMenu.classList.toggle('active');
           navToggle.classList.toggle('active');
+          document.body.classList.toggle('nav-open');
         });
       }
 
