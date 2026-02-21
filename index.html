@@ -203,6 +203,26 @@
         <img src="cute_aquarium_fish.png" alt="Aquarium fish representing fish care resources" class="animal-icon" width="80" height="80" loading="lazy" decoding="async">
       </div>
 
+      <!-- Search Engine -->
+      <section class="search-section" id="search">
+        <h2>Search Our Pet Care Library</h2>
+        <p class="search-subtitle">Find breed guides, health info, care tips, and more across 3,000+ pages</p>
+        <div class="search-bar-wrapper">
+          <input type="text" id="site-search" placeholder="Search breeds, species, health topics..." autocomplete="off" aria-label="Search pet care library" />
+          <svg class="search-bar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <div class="search-results-dropdown" id="search-results"></div>
+        </div>
+        <div class="search-examples">
+          <span class="search-example-tag" data-q="Golden Retriever">Golden Retriever</span>
+          <span class="search-example-tag" data-q="Bengal Cat">Bengal Cat</span>
+          <span class="search-example-tag" data-q="Betta Fish">Betta Fish</span>
+          <span class="search-example-tag" data-q="Bearded Dragon">Bearded Dragon</span>
+          <span class="search-example-tag" data-q="Hedgehog">Hedgehog</span>
+          <span class="search-example-tag" data-q="Cockatiel">Cockatiel</span>
+        </div>
+        <p class="search-ai-hint">Can't find what you need? <a href="/chat">Ask our AI for personalized advice</a></p>
+      </section>
+
       <!-- Why Pet Owners Choose Us Section -->
       <div class="why-number-one">
         <h1 class="why-title">AI Pet Health Guidance for Dogs, Cats, Birds, Reptiles &amp; Fish</h1>
@@ -787,12 +807,8 @@
       tabBtns.forEach(btn => {
         btn.addEventListener('click', function() {
           const targetTab = this.getAttribute('data-tab');
-
-          // Remove active class from all buttons and contents
           tabBtns.forEach(b => b.classList.remove('active'));
           tabContents.forEach(content => content.classList.remove('active'));
-
-          // Add active class to clicked button and corresponding content
           this.classList.add('active');
           document.getElementById(targetTab).classList.add('active');
         });
@@ -801,7 +817,6 @@
       // Mobile navigation toggle
       const navToggle = document.querySelector('.nav-toggle');
       const navMenu = document.querySelector('.nav-menu');
-
       if (navToggle) {
         navToggle.addEventListener('click', function() {
           navMenu.classList.toggle('active');
@@ -817,6 +832,126 @@
             e.preventDefault();
             const dropdown = this.closest('.nav-dropdown');
             dropdown.classList.toggle('open');
+          }
+        });
+      });
+
+      // ========================
+      // Homepage Search Engine
+      // ========================
+      var searchIndex = null;
+      var searchInput = document.getElementById('site-search');
+      var searchResults = document.getElementById('search-results');
+      var highlightIdx = -1;
+
+      function loadSearchIndex() {
+        if (searchIndex) return Promise.resolve(searchIndex);
+        return fetch('/search-index.json')
+          .then(function(r) { return r.json(); })
+          .then(function(data) { searchIndex = data; return data; })
+          .catch(function() { searchIndex = []; return []; });
+      }
+
+      function renderResults(matches, query) {
+        highlightIdx = -1;
+        if (!matches.length) {
+          searchResults.innerHTML = '<div class="search-no-results">No results for "' + query.replace(/</g,'&lt;') + '". <a href="/chat?q=' + encodeURIComponent(query) + '">Ask our AI instead</a></div>';
+          searchResults.classList.add('active');
+          return;
+        }
+        var catLabels = {dogs:'Dog',cats:'Cat',birds:'Bird',fish:'Fish',reptiles:'Reptile','small-animals':'Small Animal',guides:'Guide'};
+        var html = '';
+        var shown = matches.slice(0, 12);
+        for (var i = 0; i < shown.length; i++) {
+          var m = shown[i];
+          var label = catLabels[m.c] || m.c;
+          html += '<a class="search-result-item" href="' + m.u + '">';
+          html += '<span class="search-result-cat">' + label + '</span>';
+          html += '<span class="search-result-title">' + m.t + '</span>';
+          html += '</a>';
+        }
+        if (matches.length > 12) {
+          html += '<div class="search-no-results">Showing 12 of ' + matches.length + ' results. <a href="/chat?q=' + encodeURIComponent(query) + '">Ask AI for more</a></div>';
+        }
+        searchResults.innerHTML = html;
+        searchResults.classList.add('active');
+      }
+
+      function doSearch(query) {
+        if (!query || query.length < 2) {
+          searchResults.classList.remove('active');
+          return;
+        }
+        loadSearchIndex().then(function(idx) {
+          var q = query.toLowerCase().trim();
+          var terms = q.split(/\s+/);
+          var scored = [];
+          for (var i = 0; i < idx.length; i++) {
+            var item = idx[i];
+            var haystack = (item.t + ' ' + item.k).toLowerCase();
+            var match = true;
+            var score = 0;
+            for (var j = 0; j < terms.length; j++) {
+              if (haystack.indexOf(terms[j]) === -1) { match = false; break; }
+              if (item.t.toLowerCase().indexOf(terms[j]) !== -1) score += 10;
+              if (item.k.toLowerCase().indexOf(terms[j]) === 0) score += 5;
+              score += 1;
+            }
+            if (match) scored.push({item: item, score: score});
+          }
+          scored.sort(function(a,b) { return b.score - a.score; });
+          var results = scored.map(function(s) { return s.item; });
+          renderResults(results, query);
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', function() {
+          doSearch(this.value);
+        });
+
+        searchInput.addEventListener('keydown', function(e) {
+          var items = searchResults.querySelectorAll('.search-result-item');
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            highlightIdx = Math.min(highlightIdx + 1, items.length - 1);
+            items.forEach(function(el, i) { el.classList.toggle('highlighted', i === highlightIdx); });
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            highlightIdx = Math.max(highlightIdx - 1, 0);
+            items.forEach(function(el, i) { el.classList.toggle('highlighted', i === highlightIdx); });
+          } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (highlightIdx >= 0 && items[highlightIdx]) {
+              window.location.href = items[highlightIdx].getAttribute('href');
+            } else if (this.value.trim()) {
+              window.location.href = '/chat?q=' + encodeURIComponent(this.value.trim());
+            }
+          } else if (e.key === 'Escape') {
+            searchResults.classList.remove('active');
+          }
+        });
+
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.search-bar-wrapper')) {
+            searchResults.classList.remove('active');
+          }
+        });
+
+        searchInput.addEventListener('focus', function() {
+          if (this.value.length >= 2) doSearch(this.value);
+        });
+      }
+
+      // Search example tags
+      var exTags = document.querySelectorAll('.search-example-tag');
+      exTags.forEach(function(tag) {
+        tag.addEventListener('click', function() {
+          var q = this.getAttribute('data-q');
+          if (searchInput) {
+            searchInput.value = q;
+            searchInput.focus();
+            doSearch(q);
           }
         });
       });
