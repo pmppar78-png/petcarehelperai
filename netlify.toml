@@ -152,11 +152,16 @@
 # HEADERS — SEO and performance optimization
 # =====================================================
 
-# Default indexing header for all pages
+# Default headers for all pages — security + SEO
 [[headers]]
   for = "/*"
   [headers.values]
     X-Robots-Tag = "index, follow"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 # No-index for embed widget (loaded in iframes)
 [[headers]]
@@ -176,6 +181,17 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
   for = "/*.js"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# XML feeds cache for 1 hour
+[[headers]]
+  for = "/*.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
