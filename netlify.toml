@@ -92,6 +92,19 @@
   status = 301
   force = true
 
+# --- New categories: Amphibians and Marine Fish ---
+[[redirects]]
+  from = "/breeds/amphibians/*.html"
+  to = "/breeds/amphibians/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/marine-fish/*.html"
+  to = "/breeds/marine-fish/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/breeds/*.html"
   to = "/breeds/:splat"

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pet Care Helper AI - Tool Care Guides</title>
+    <link>https://petcarehelperai.com</link>
+    <description>Comprehensive pet care guides covering health, nutrition, training, and wellness for dogs, cats, birds, fish, reptiles, and small animals.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Feb 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://petcarehelperai.com/feeds/tools.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Dog Breed Finder Quiz - What Dog Breed Is Right for Me?</title>
+      <link>https://petcarehelperai.com/tools/breed-finder</link>
+      <description>Find your perfect dog breed with our interactive quiz. Answer questions about your lifestyle, living space, activity level, and preferences to get personalized breed recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/tools/breed-finder</guid>
+    </item>
+    <item>
+      <title>Pet Cost Calculator - Annual Cost of Owning a Dog or Cat</title>
+      <link>https://petcarehelperai.com/tools/cost-calculator</link>
+      <description>Calculate the true cost of owning a dog or cat. Comprehensive pet cost calculator covering food, vet care, insurance, grooming, and more. Plan your pet budget.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/tools/cost-calculator</guid>
+    </item>
+    <item>
+      <title>Pet Food Calculator - How Much to Feed Your Dog or Cat</title>
+      <link>https://petcarehelperai.com/tools/food-calculator</link>
+      <description>Free pet food calculator. Calculate exactly how much to feed your dog or cat based on weight, age, activity level, and food type. Prevent obesity and malnutrition.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/tools/food-calculator</guid>
+    </item>
+    <item>
+      <title>Pet Care Tools &amp; Calculators</title>
+      <link>https://petcarehelperai.com/tools</link>
+      <description>Free pet care tools and calculators. Pet food calculator, cost calculator, breed finder quiz, and more. Make informed decisions about your pet&apos;s care.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/tools</guid>
+    </item>
+    <item>
+      <title>Pet Symptom Checker - Is My Dog or Cat Sick?</title>
+      <link>https://petcarehelperai.com/tools/symptom-checker</link>
+      <description>Check your pet&apos;s symptoms to understand potential causes and urgency level. Know when to see a vet immediately vs. when to monitor at home.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/tools/symptom-checker</guid>
+    </item>
+
+  </channel>
+</rss>
