@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="google-adsense-account" content="ca-pub-6484141649562994">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6484141649562994" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK0N7BD82Q"></script>
@@ -103,7 +103,7 @@
 
     .toc-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
       gap: 12px;
     }
 
@@ -217,7 +217,7 @@
     /* Cost Cards */
     .cost-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
       gap: 20px;
       margin: 24px 0;
     }
@@ -289,7 +289,7 @@
     /* Regional Comparison */
     .region-comparison {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
       gap: 20px;
       margin: 24px 0;
     }
@@ -355,7 +355,7 @@
 
     .lifetime-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
       gap: 16px;
     }
 
@@ -524,7 +524,7 @@
     /* Stat Summary Cards */
     .summary-stats {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
       gap: 16px;
       margin: 24px 0;
     }
@@ -566,7 +566,7 @@
 
     .hidden-costs-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
       gap: 12px;
     }
 
@@ -2375,6 +2375,7 @@
         navToggle.addEventListener('click', function() {
           navMenu.classList.toggle('active');
           navToggle.classList.toggle('active');
+          document.body.classList.toggle('nav-open');
         });
       }
     });
