@@ -1,368 +1,571 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pet Care Helper AI - Cat Care Guides</title>
     <link>https://petcarehelperai.com</link>
     <description>Comprehensive pet care guides covering health, nutrition, training, and wellness for dogs, cats, birds, fish, reptiles, and small animals.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Feb 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Feb 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://petcarehelperai.com/feeds/cats.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Cat Surgery Costs</title>
-      <link>https://petcarehelperai.com/guides/cat-surgery-costs</link>
-      <description>Average costs for common cat surgeries including spay/neuter, dental extractions, tumor removal, and urinary obstruction surgery with insurance tips.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-surgery-costs</guid>
+      <title>Best Food for Persian Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-persian-cat</link>
+      <description>Top rated cat food for Persian cats. Diet recommendations for their long coat, low energy needs, and common concerns like PKD.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-persian-cat</guid>
     </item>
     <item>
-      <title>How Much Does a Kitten Cost First Year</title>
-      <link>https://petcarehelperai.com/guides/how-much-does-a-kitten-cost</link>
-      <description>Complete first-year kitten cost breakdown covering adoption fees, vaccinations, spay/neuter, food, litter, supplies, and veterinary care.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/how-much-does-a-kitten-cost</guid>
+      <title>Best Food for Maine Coon Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-maine-coon-cat</link>
+      <description>Top rated cat food for Maine Coon cats. Diet recommendations for their long coat, moderate energy needs, and common concerns like HCM.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-maine-coon-cat</guid>
     </item>
     <item>
-      <title>Cat Vaccination Costs and Schedules</title>
-      <link>https://petcarehelperai.com/guides/cat-vaccination-costs</link>
-      <description>Cat vaccination costs for FVRCP, rabies, FeLV, and optional vaccines. Includes kitten vaccination schedules and where to find affordable shots.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-vaccination-costs</guid>
+      <title>Best Food for Ragdoll Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-ragdoll-cat</link>
+      <description>Top rated cat food for Ragdoll cats. Diet recommendations for their long coat, low energy needs, and common concerns like HCM.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-ragdoll-cat</guid>
     </item>
     <item>
-      <title>Foods Toxic to Cats</title>
-      <link>https://petcarehelperai.com/guides/foods-toxic-to-cats</link>
-      <description>Complete list of foods dangerous or toxic to cats including lilies, onions, chocolate, alcohol, caffeine, and raw dough with emergency guidance.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/foods-toxic-to-cats</guid>
+      <title>Best Food for British Shorthair Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-british-shorthair-cat</link>
+      <description>Top rated cat food for British Shorthair cats. Diet recommendations for their short coat, low energy needs, and common concerns like HCM.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-british-shorthair-cat</guid>
     </item>
     <item>
-      <title>Plants Toxic to Cats</title>
-      <link>https://petcarehelperai.com/guides/plants-toxic-to-cats</link>
-      <description>Household and outdoor plants dangerous to cats. Covers lilies (extremely toxic), poinsettias, aloe vera, and safe plant alternatives for cat owners.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/plants-toxic-to-cats</guid>
+      <title>Best Food for Siamese Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-siamese-cat</link>
+      <description>Top rated cat food for Siamese cats. Diet recommendations for their short coat, high energy needs, and common concerns like amyloidosis.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-siamese-cat</guid>
     </item>
     <item>
-      <title>Essential Oils Toxic to Cats</title>
-      <link>https://petcarehelperai.com/guides/essential-oils-toxic-to-cats</link>
-      <description>Why most essential oils are dangerous for cats. Covers which oils to avoid, diffuser safety, symptoms of toxicity, and cat-safe alternatives.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/essential-oils-toxic-to-cats</guid>
+      <title>Best Food for Bengal Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-bengal-cat</link>
+      <description>Top rated cat food for Bengal cats. Diet recommendations for their short coat, high energy needs, and common concerns like HCM.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-bengal-cat</guid>
     </item>
     <item>
-      <title>Can Cats Eat Tuna</title>
-      <link>https://petcarehelperai.com/guides/can-cats-eat-tuna</link>
-      <description>Is tuna safe for cats? Covers mercury risks, nutritional concerns, how much tuna is safe, and better fish alternatives for cats.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/can-cats-eat-tuna</guid>
+      <title>Best Food for Abyssinian Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-abyssinian-cat</link>
+      <description>Top rated cat food for Abyssinian cats. Diet recommendations for their short coat, high energy needs, and common concerns like renal amyloidosis.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-abyssinian-cat</guid>
     </item>
     <item>
-      <title>Safe Human Foods for Cats</title>
-      <link>https://petcarehelperai.com/guides/safe-foods-for-cats</link>
-      <description>Which human foods cats can safely eat, proper portions, foods to always avoid, and healthy treat alternatives for cats.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/safe-foods-for-cats</guid>
+      <title>Best Food for Scottish Fold Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-scottish-fold-cat</link>
+      <description>Top rated cat food for Scottish Fold cats. Diet recommendations for their short coat, moderate energy needs, and common concerns like osteochondrodysplasia.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-scottish-fold-cat</guid>
     </item>
     <item>
-      <title>Cat Urinary Blockage Emergency</title>
-      <link>https://petcarehelperai.com/guides/cat-urinary-blockage-emergency</link>
-      <description>Recognizing urinary blockage in cats — a life-threatening emergency. Covers symptoms, why male cats are at higher risk, treatment, and prevention.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-urinary-blockage-emergency</guid>
+      <title>Best Food for Sphynx Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-sphynx-cat</link>
+      <description>Top rated cat food for Sphynx cats. Diet recommendations for their hairless coat, high energy needs, and common concerns like HCM.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-sphynx-cat</guid>
     </item>
     <item>
-      <title>Cat Fall Injury Guide (High-Rise Syndrome)</title>
-      <link>https://petcarehelperai.com/guides/cat-fall-injury</link>
-      <description>What to do when a cat falls from a height. Covers high-rise syndrome, internal injury signs, emergency transport, and window safety for cats.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-fall-injury</guid>
+      <title>Best Food for Russian Blue Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-russian-blue-cat</link>
+      <description>Top rated cat food for Russian Blue cats. Diet recommendations for their short coat, moderate energy needs, and common concerns like bladder stones.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-russian-blue-cat</guid>
     </item>
     <item>
-      <title>Feline Leukemia Virus (FeLV)</title>
-      <link>https://petcarehelperai.com/guides/cat-feline-leukemia-felv</link>
-      <description>Complete guide to FeLV in cats covering transmission, testing, symptoms, treatment options, prevention, and managing FeLV-positive cats.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-feline-leukemia-felv</guid>
+      <title>Best Food for Birman Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-birman-cat</link>
+      <description>Top rated cat food for Birman cats. Diet recommendations for their long coat, moderate energy needs, and common concerns like HCM.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-birman-cat</guid>
     </item>
     <item>
-      <title>Feline Immunodeficiency Virus (FIV)</title>
-      <link>https://petcarehelperai.com/guides/cat-fiv</link>
-      <description>Understanding FIV in cats. Covers transmission, testing, stages, treatment, living with an FIV-positive cat, and multi-cat household management.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-fiv</guid>
+      <title>Best Food for Oriental Shorthair Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-oriental-shorthair-cat</link>
+      <description>Top rated cat food for Oriental Shorthair cats. Diet recommendations for their short coat, high energy needs, and common concerns like amyloidosis.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-oriental-shorthair-cat</guid>
     </item>
     <item>
-      <title>Pancreatitis in Cats</title>
-      <link>https://petcarehelperai.com/guides/cat-pancreatitis</link>
-      <description>Causes, symptoms, and treatment of feline pancreatitis. Covers diagnosis challenges, dietary management, and connection to triaditis.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-pancreatitis</guid>
+      <title>Best Food for Devon Rex Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-devon-rex-cat</link>
+      <description>Top rated cat food for Devon Rex cats. Diet recommendations for their short coat, high energy needs, and common concerns like HCM.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-devon-rex-cat</guid>
     </item>
     <item>
-      <title>Feline Asthma</title>
-      <link>https://petcarehelperai.com/guides/cat-asthma</link>
-      <description>Complete guide to asthma in cats covering triggers, symptoms, inhaler use, medications, and environmental management to reduce attacks.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-asthma</guid>
+      <title>Best Food for Norwegian Forest Cat Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-norwegian-forest-cat-cat</link>
+      <description>Top rated cat food for Norwegian Forest Cat cats. Diet recommendations for their long coat, moderate energy needs, and common concerns like HCM.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-norwegian-forest-cat-cat</guid>
     </item>
     <item>
-      <title>Inflammatory Bowel Disease (IBD) in Cats</title>
-      <link>https://petcarehelperai.com/guides/cat-ibd</link>
-      <description>Understanding IBD in cats. Covers chronic vomiting and diarrhea, diagnosis, dietary trials, medication options, and long-term management.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-ibd</guid>
+      <title>Best Food for Burmese Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-burmese-cat</link>
+      <description>Top rated cat food for Burmese cats. Diet recommendations for their short coat, high energy needs, and common concerns like diabetes.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-burmese-cat</guid>
     </item>
     <item>
-      <title>Cat Obesity Prevention and Weight Loss</title>
-      <link>https://petcarehelperai.com/guides/cat-obesity</link>
-      <description>Managing overweight cats including health risks, ideal weight ranges, feeding strategies, portion control, and exercise ideas for indoor cats.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-obesity</guid>
+      <title>Best Food for Exotic Shorthair Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-exotic-shorthair-cat</link>
+      <description>Top rated cat food for Exotic Shorthair cats. Diet recommendations for their short coat, low energy needs, and common concerns like PKD.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-exotic-shorthair-cat</guid>
     </item>
     <item>
-      <title>Diabetes in Cats</title>
-      <link>https://petcarehelperai.com/guides/cat-diabetes</link>
-      <description>Managing feline diabetes including symptoms, insulin therapy, blood glucose monitoring, dietary management, and potential for diabetic remission.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-diabetes</guid>
+      <title>Best Food for Tonkinese Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-tonkinese-cat</link>
+      <description>Top rated cat food for Tonkinese cats. Diet recommendations for their short coat, high energy needs, and common concerns like dental disease.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-tonkinese-cat</guid>
     </item>
     <item>
-      <title>Heart Disease in Cats (HCM)</title>
-      <link>https://petcarehelperai.com/guides/cat-heart-disease</link>
-      <description>Hypertrophic cardiomyopathy and other heart conditions in cats. Covers symptoms, diagnosis, treatment, at-risk breeds, and prognosis.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-heart-disease</guid>
+      <title>Best Food for American Shorthair Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-american-shorthair-cat</link>
+      <description>Top rated cat food for American Shorthair cats. Diet recommendations for their short coat, moderate energy needs, and common concerns like HCM.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-american-shorthair-cat</guid>
     </item>
     <item>
-      <title>Cancer Signs in Cats</title>
-      <link>https://petcarehelperai.com/guides/cat-cancer-signs</link>
-      <description>How to recognize cancer symptoms in cats. Covers common types (lymphoma, squamous cell carcinoma), warning signs, diagnosis, and treatment options.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-cancer-signs</guid>
+      <title>Best Food for Cornish Rex Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-cornish-rex-cat</link>
+      <description>Top rated cat food for Cornish Rex cats. Diet recommendations for their short coat, high energy needs, and common concerns like HCM.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-cornish-rex-cat</guid>
     </item>
     <item>
-      <title>Cat Upper Respiratory Infections</title>
-      <link>https://petcarehelperai.com/guides/cat-upper-respiratory-infection</link>
-      <description>Guide to URI in cats covering herpesvirus, calicivirus, symptoms, home care, when antibiotics are needed, and preventing spread in multi-cat homes.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-upper-respiratory-infection</guid>
+      <title>Best Food for Ragamuffin Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-ragamuffin-cat</link>
+      <description>Top rated cat food for Ragamuffin cats. Diet recommendations for their long coat, moderate energy needs, and common concerns like HCM.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-ragamuffin-cat</guid>
     </item>
     <item>
-      <title>Dental Disease in Cats</title>
-      <link>https://petcarehelperai.com/guides/cat-dental-disease-guide</link>
-      <description>Feline dental disease including stomatitis, tooth resorption, and periodontal disease. Covers symptoms, dental procedures, and home dental care.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-dental-disease-guide</guid>
+      <title>Best Food for Somali Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-somali-cat</link>
+      <description>Top rated cat food for Somali cats. Diet recommendations for their long coat, high energy needs, and common concerns like renal amyloidosis.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-somali-cat</guid>
     </item>
     <item>
-      <title>Cat Constipation and Megacolon</title>
-      <link>https://petcarehelperai.com/guides/cat-constipation</link>
-      <description>Understanding constipation in cats from mild to severe megacolon. Covers causes, home remedies, laxatives, dietary changes, and when surgery is needed.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-constipation</guid>
+      <title>Best Food for Turkish Angora Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-turkish-angora-cat</link>
+      <description>Top rated cat food for Turkish Angora cats. Diet recommendations for their long coat, high energy needs, and common concerns like deafness.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-turkish-angora-cat</guid>
     </item>
     <item>
-      <title>Cat Skin Allergies and Dermatitis</title>
-      <link>https://petcarehelperai.com/guides/cat-skin-allergies</link>
-      <description>Types of skin allergies in cats including food allergies, flea allergy dermatitis, and environmental allergies. Covers testing, treatment, and itch relief.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-skin-allergies</guid>
+      <title>Best Food for Balinese Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-balinese-cat</link>
+      <description>Top rated cat food for Balinese cats. Diet recommendations for their long coat, high energy needs, and common concerns like amyloidosis.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-balinese-cat</guid>
     </item>
     <item>
-      <title>Intestinal Parasites in Cats</title>
-      <link>https://petcarehelperai.com/guides/cat-intestinal-parasites</link>
-      <description>Common worms in cats including roundworms, tapeworms, hookworms, and coccidia. Covers symptoms, deworming protocols, and indoor cat prevention.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-intestinal-parasites</guid>
+      <title>Best Food for Chartreux Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-chartreux-cat</link>
+      <description>Top rated cat food for Chartreux cats. Diet recommendations for their short coat, moderate energy needs, and common concerns like luxating patella.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-chartreux-cat</guid>
     </item>
     <item>
-      <title>Cat Ear Infections Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-ear-infections</link>
-      <description>Ear infections in cats covering bacterial, yeast, and ear mite infections. Covers symptoms, treatment, cleaning techniques, and prevention.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-ear-infections</guid>
+      <title>Best Food for Singapura Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-singapura-cat</link>
+      <description>Top rated cat food for Singapura cats. Diet recommendations for their short coat, high energy needs, and common concerns like PKD.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-singapura-cat</guid>
     </item>
     <item>
-      <title>Feline Infectious Peritonitis (FIP)</title>
-      <link>https://petcarehelperai.com/guides/cat-fip</link>
-      <description>Understanding FIP in cats including wet and dry forms, diagnosis, the GS-441524 treatment breakthrough, and prognosis for affected cats.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-fip</guid>
+      <title>Best Food for Manx Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-manx-cat</link>
+      <description>Top rated cat food for Manx cats. Diet recommendations for their short coat, moderate energy needs, and common concerns like Manx syndrome.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-manx-cat</guid>
     </item>
     <item>
-      <title>Cat Litter Box Problems and Solutions</title>
-      <link>https://petcarehelperai.com/guides/cat-litter-box-problems</link>
-      <description>Why cats stop using the litter box. Covers medical causes, behavioral causes, box setup optimization, cleaning protocols, and multi-cat strategies.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-litter-box-problems</guid>
+      <title>Best Food for Ocicat Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-ocicat-cat</link>
+      <description>Top rated cat food for Ocicat cats. Diet recommendations for their short coat, high energy needs, and common concerns like HCM.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-ocicat-cat</guid>
     </item>
     <item>
-      <title>Cat Overgrooming (Psychogenic Alopecia)</title>
-      <link>https://petcarehelperai.com/guides/cat-overgrooming</link>
-      <description>Understanding excessive grooming and hair loss in cats. Covers stress triggers, medical vs behavioral causes, treatment options, and environmental enrichment.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-overgrooming</guid>
+      <title>Best Food for Japanese Bobtail Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-japanese-bobtail-cat</link>
+      <description>Top rated cat food for Japanese Bobtail cats. Diet recommendations for their short coat, high energy needs, and common concerns like obesity.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-japanese-bobtail-cat</guid>
     </item>
     <item>
-      <title>Cat Clicker Training Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-clicker-training</link>
-      <description>How to clicker train your cat. Covers getting started, teaching tricks, solving behavior problems, and mental enrichment through training.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-clicker-training</guid>
+      <title>Best Food for Havana Brown Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-havana-brown-cat</link>
+      <description>Top rated cat food for Havana Brown cats. Diet recommendations for their short coat, moderate energy needs, and common concerns like HCM.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-havana-brown-cat</guid>
     </item>
     <item>
-      <title>Cat Aggression Causes and Solutions</title>
-      <link>https://petcarehelperai.com/guides/cat-aggression-guide</link>
-      <description>Types of aggression in cats including play, fear, redirected, and petting-induced aggression. Covers triggers, prevention, and behavior modification.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-aggression-guide</guid>
+      <title>Best Food for Bombay Cats: Nutrition Guide</title>
+      <link>https://petcarehelperai.com/guides/best-food-for-bombay-cat</link>
+      <description>Top rated cat food for Bombay cats. Diet recommendations for their short coat, moderate energy needs, and common concerns like HCM.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-food-for-bombay-cat</guid>
     </item>
     <item>
-      <title>Introducing Cats to Each Other</title>
-      <link>https://petcarehelperai.com/guides/introducing-cats</link>
-      <description>Step-by-step guide to introducing a new cat to your existing cats. Covers scent swapping, site swapping, visual introduction, and troubleshooting.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/introducing-cats</guid>
+      <title>Persian Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/persian-cat-pet-insurance</link>
+      <description>Best pet insurance for Persian cats. Compare plans covering PKD, breathing issues, eye problems, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/persian-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Indoor Cat Enrichment Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-enrichment-guide</link>
-      <description>Keeping indoor cats happy and stimulated. Covers climbing spaces, window perches, puzzle feeders, play routines, and environmental enrichment ideas.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-enrichment-guide</guid>
+      <title>Maine Coon Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/maine-coon-cat-pet-insurance</link>
+      <description>Best pet insurance for Maine Coon cats. Compare plans covering HCM, hip dysplasia, spinal muscular atrophy, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/maine-coon-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Best Kitten Food</title>
-      <link>https://petcarehelperai.com/guides/best-cat-food-for-kittens</link>
-      <description>Top kitten food brands reviewed covering wet food, dry food, and combination feeding. Includes nutritional requirements and feeding schedule by age.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-cat-food-for-kittens</guid>
+      <title>Ragdoll Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/ragdoll-cat-pet-insurance</link>
+      <description>Best pet insurance for Ragdoll cats. Compare plans covering HCM, bladder stones, obesity, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/ragdoll-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Best Cat Food for Senior Cats</title>
-      <link>https://petcarehelperai.com/guides/best-cat-food-seniors</link>
-      <description>Top senior cat food brands reviewed. Covers kidney support, weight management, hydration, and transitioning older cats to appropriate nutrition.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-cat-food-seniors</guid>
+      <title>British Shorthair Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/british-shorthair-cat-pet-insurance</link>
+      <description>Best pet insurance for British Shorthair cats. Compare plans covering HCM, obesity, diabetes, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/british-shorthair-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Best Cat Supplements</title>
-      <link>https://petcarehelperai.com/guides/best-cat-supplements</link>
-      <description>Top cat supplements for joint health, hairball control, urinary support, and overall wellness. Includes dosing guidelines and vet-recommended brands.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-cat-supplements</guid>
+      <title>Siamese Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/siamese-cat-pet-insurance</link>
+      <description>Best pet insurance for Siamese cats. Compare plans covering amyloidosis, dental disease, asthma, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/siamese-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Best Cat Anxiety Products</title>
-      <link>https://petcarehelperai.com/guides/best-cat-anxiety-products</link>
-      <description>Top products for reducing cat anxiety and stress. Covers Feliway diffusers, calming treats, hiding spots, and environmental solutions.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-cat-anxiety-products</guid>
+      <title>Bengal Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/bengal-cat-pet-insurance</link>
+      <description>Best pet insurance for Bengal cats. Compare plans covering HCM, PRA, luxating patella, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/bengal-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Best Cat Litter Boxes</title>
-      <link>https://petcarehelperai.com/guides/best-cat-litter-boxes</link>
-      <description>Top cat litter boxes reviewed including self-cleaning, covered, top-entry, and jumbo options. Covers multi-cat setups and odor control.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/best-cat-litter-boxes</guid>
+      <title>Abyssinian Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/abyssinian-cat-pet-insurance</link>
+      <description>Best pet insurance for Abyssinian cats. Compare plans covering renal amyloidosis, PRA, gingivitis, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/abyssinian-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Maine Coon Health Guide</title>
-      <link>https://petcarehelperai.com/guides/maine-coon-health-guide</link>
-      <description>Common health problems in Maine Coon cats including HCM, hip dysplasia, spinal muscular atrophy, and polycystic kidney disease.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/maine-coon-health-guide</guid>
+      <title>Scottish Fold Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/scottish-fold-cat-pet-insurance</link>
+      <description>Best pet insurance for Scottish Fold cats. Compare plans covering osteochondrodysplasia, HCM, PKD, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/scottish-fold-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Persian Cat Health Guide</title>
-      <link>https://petcarehelperai.com/guides/persian-health-guide</link>
-      <description>Health issues in Persian cats including PKD, breathing problems, eye conditions, dental disease, and skin fold infections. Covers grooming needs.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/persian-health-guide</guid>
+      <title>Sphynx Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/sphynx-cat-pet-insurance</link>
+      <description>Best pet insurance for Sphynx cats. Compare plans covering HCM, skin infections, respiratory issues, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/sphynx-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Siamese Cat Health Guide</title>
-      <link>https://petcarehelperai.com/guides/siamese-health-guide</link>
-      <description>Common Siamese cat health problems including respiratory issues, amyloidosis, dental disease, and progressive retinal atrophy. Covers breed-specific care.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/siamese-health-guide</guid>
+      <title>Russian Blue Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/russian-blue-cat-pet-insurance</link>
+      <description>Best pet insurance for Russian Blue cats. Compare plans covering bladder stones, obesity, anxiety, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/russian-blue-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Bengal Cat Health Guide</title>
-      <link>https://petcarehelperai.com/guides/bengal-health-guide</link>
-      <description>Health concerns in Bengal cats including HCM, PRA, flat-chested kitten syndrome, and anesthetic sensitivity. Covers genetic testing.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/bengal-health-guide</guid>
+      <title>Birman Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/birman-cat-pet-insurance</link>
+      <description>Best pet insurance for Birman cats. Compare plans covering HCM, kidney disease, FIP, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/birman-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Ragdoll Cat Health Guide</title>
-      <link>https://petcarehelperai.com/guides/ragdoll-health-guide</link>
-      <description>Health issues in Ragdoll cats including HCM, bladder stones, and GI sensitivity. Covers genetic testing, nutrition, and preventive care.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/ragdoll-health-guide</guid>
+      <title>Oriental Shorthair Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/oriental-shorthair-cat-pet-insurance</link>
+      <description>Best pet insurance for Oriental Shorthair cats. Compare plans covering amyloidosis, dental disease, heart disease, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/oriental-shorthair-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>British Shorthair Health Guide</title>
-      <link>https://petcarehelperai.com/guides/british-shorthair-health-guide</link>
-      <description>Common health problems in British Shorthair cats including HCM, obesity, dental disease, and hemophilia B. Covers weight management.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/british-shorthair-health-guide</guid>
+      <title>Devon Rex Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/devon-rex-cat-pet-insurance</link>
+      <description>Best pet insurance for Devon Rex cats. Compare plans covering HCM, luxating patella, myopathy, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/devon-rex-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Scottish Fold Health Guide</title>
-      <link>https://petcarehelperai.com/guides/scottish-fold-health-guide</link>
-      <description>Health issues specific to Scottish Fold cats including osteochondrodysplasia, ear problems, and HCM. Covers the cartilage condition controversy.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/scottish-fold-health-guide</guid>
+      <title>Norwegian Forest Cat Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/norwegian-forest-cat-cat-pet-insurance</link>
+      <description>Best pet insurance for Norwegian Forest Cat cats. Compare plans covering HCM, hip dysplasia, glycogen storage disease, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/norwegian-forest-cat-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Sphynx Cat Health Guide</title>
-      <link>https://petcarehelperai.com/guides/sphynx-health-guide</link>
-      <description>Health concerns in Sphynx cats including HCM, skin conditions, temperature sensitivity, and dental disease. Covers hairless cat care requirements.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/sphynx-health-guide</guid>
+      <title>Burmese Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/burmese-cat-pet-insurance</link>
+      <description>Best pet insurance for Burmese cats. Compare plans covering diabetes, HCM, head defect, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/burmese-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Abyssinian Cat Health Guide</title>
-      <link>https://petcarehelperai.com/guides/abyssinian-health-guide</link>
-      <description>Health concerns in Abyssinian cats including renal amyloidosis, PRA, gingivitis, and patellar luxation. Covers genetic testing and prevention.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/abyssinian-health-guide</guid>
+      <title>Exotic Shorthair Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/exotic-shorthair-cat-pet-insurance</link>
+      <description>Best pet insurance for Exotic Shorthair cats. Compare plans covering PKD, breathing issues, eye problems, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/exotic-shorthair-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Best Fresh Cat Food Delivery Services Compared</title>
-      <link>https://petcarehelperai.com/guides/compare-fresh-cat-food</link>
-      <description>Comparing Smalls, Nom Nom, and other fresh cat food delivery services. Covers ingredients, pricing, meal plans, and which is best for your cat.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/compare-fresh-cat-food</guid>
+      <title>Tonkinese Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/tonkinese-cat-pet-insurance</link>
+      <description>Best pet insurance for Tonkinese cats. Compare plans covering dental disease, FIP, inflammatory bowel disease, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/tonkinese-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Best Cat GPS Trackers Compared</title>
-      <link>https://petcarehelperai.com/guides/compare-cat-gps-tracker</link>
-      <description>Comparing GPS trackers designed for cats including Tractive, Tabcat, and other lightweight options. Covers range, battery life, and cat-specific features.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/compare-cat-gps-tracker</guid>
+      <title>American Shorthair Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/american-shorthair-cat-pet-insurance</link>
+      <description>Best pet insurance for American Shorthair cats. Compare plans covering HCM, obesity, dental disease, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/american-shorthair-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Cat Pregnancy and Queening Guide</title>
-      <link>https://petcarehelperai.com/guides/cat-pregnancy-guide</link>
-      <description>Guide to cat pregnancy covering signs, nutrition, preparing for kittens, labor stages, and neonatal kitten care for the first weeks of life.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/cat-pregnancy-guide</guid>
+      <title>Cornish Rex Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/cornish-rex-cat-pet-insurance</link>
+      <description>Best pet insurance for Cornish Rex cats. Compare plans covering HCM, luxating patella, hyperthyroidism, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cornish-rex-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>Geriatric Cat Care Guide</title>
-      <link>https://petcarehelperai.com/guides/geriatric-cat-care</link>
-      <description>Caring for senior cats including common age-related conditions, comfort modifications, nutritional needs, and quality of life considerations.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/geriatric-cat-care</guid>
+      <title>Ragamuffin Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/ragamuffin-cat-pet-insurance</link>
+      <description>Best pet insurance for Ragamuffin cats. Compare plans covering HCM, PKD, obesity, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/ragamuffin-cat-pet-insurance</guid>
     </item>
     <item>
-      <title>New Kitten Checklist and First Month Guide</title>
-      <link>https://petcarehelperai.com/guides/new-kitten-checklist</link>
-      <description>Complete checklist for bringing home a new kitten. Covers supplies, kitten-proofing, first vet visit, feeding schedule, and litter training basics.</description>
-      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://petcarehelperai.com/guides/new-kitten-checklist</guid>
+      <title>Somali Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/somali-cat-pet-insurance</link>
+      <description>Best pet insurance for Somali cats. Compare plans covering renal amyloidosis, PRA, dental disease, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/somali-cat-pet-insurance</guid>
+    </item>
+    <item>
+      <title>Turkish Angora Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/turkish-angora-cat-pet-insurance</link>
+      <description>Best pet insurance for Turkish Angora cats. Compare plans covering deafness, HCM, ataxia, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/turkish-angora-cat-pet-insurance</guid>
+    </item>
+    <item>
+      <title>Balinese Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/balinese-cat-pet-insurance</link>
+      <description>Best pet insurance for Balinese cats. Compare plans covering amyloidosis, asthma, dental disease, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/balinese-cat-pet-insurance</guid>
+    </item>
+    <item>
+      <title>Chartreux Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/chartreux-cat-pet-insurance</link>
+      <description>Best pet insurance for Chartreux cats. Compare plans covering luxating patella, hip dysplasia, bladder stones, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/chartreux-cat-pet-insurance</guid>
+    </item>
+    <item>
+      <title>Singapura Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/singapura-cat-pet-insurance</link>
+      <description>Best pet insurance for Singapura cats. Compare plans covering PKD, uterine inertia, HCM, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/singapura-cat-pet-insurance</guid>
+    </item>
+    <item>
+      <title>Manx Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/manx-cat-pet-insurance</link>
+      <description>Best pet insurance for Manx cats. Compare plans covering Manx syndrome, arthritis, constipation, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/manx-cat-pet-insurance</guid>
+    </item>
+    <item>
+      <title>Ocicat Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/ocicat-cat-pet-insurance</link>
+      <description>Best pet insurance for Ocicat cats. Compare plans covering HCM, renal amyloidosis, dental disease, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/ocicat-cat-pet-insurance</guid>
+    </item>
+    <item>
+      <title>Japanese Bobtail Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/japanese-bobtail-cat-pet-insurance</link>
+      <description>Best pet insurance for Japanese Bobtail cats. Compare plans covering obesity, urinary tract issues, dental disease, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/japanese-bobtail-cat-pet-insurance</guid>
+    </item>
+    <item>
+      <title>Havana Brown Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/havana-brown-cat-pet-insurance</link>
+      <description>Best pet insurance for Havana Brown cats. Compare plans covering HCM, calcium oxalate stones, upper respiratory, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/havana-brown-cat-pet-insurance</guid>
+    </item>
+    <item>
+      <title>Bombay Cat Insurance: Costs &amp; Best Plans</title>
+      <link>https://petcarehelperai.com/guides/bombay-cat-pet-insurance</link>
+      <description>Best pet insurance for Bombay cats. Compare plans covering HCM, breathing issues, excessive tearing, monthly costs, and coverage recommendations.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/bombay-cat-pet-insurance</guid>
+    </item>
+    <item>
+      <title>Persian Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/persian-cat-grooming-guide</link>
+      <description>Grooming guide for Persian cats with long heavy-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/persian-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Maine Coon Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/maine-coon-cat-grooming-guide</link>
+      <description>Grooming guide for Maine Coon cats with long heavy-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/maine-coon-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Ragdoll Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/ragdoll-cat-grooming-guide</link>
+      <description>Grooming guide for Ragdoll cats with long moderate-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/ragdoll-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>British Shorthair Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/british-shorthair-cat-grooming-guide</link>
+      <description>Grooming guide for British Shorthair cats with short moderate-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/british-shorthair-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Siamese Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/siamese-cat-grooming-guide</link>
+      <description>Grooming guide for Siamese cats with short light-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/siamese-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Bengal Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/bengal-cat-grooming-guide</link>
+      <description>Grooming guide for Bengal cats with short light-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/bengal-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Abyssinian Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/abyssinian-cat-grooming-guide</link>
+      <description>Grooming guide for Abyssinian cats with short light-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/abyssinian-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Scottish Fold Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/scottish-fold-cat-grooming-guide</link>
+      <description>Grooming guide for Scottish Fold cats with short moderate-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/scottish-fold-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Sphynx Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/sphynx-cat-grooming-guide</link>
+      <description>Grooming guide for Sphynx cats with hairless minimal-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/sphynx-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Russian Blue Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/russian-blue-cat-grooming-guide</link>
+      <description>Grooming guide for Russian Blue cats with short moderate-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/russian-blue-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Birman Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/birman-cat-grooming-guide</link>
+      <description>Grooming guide for Birman cats with long moderate-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/birman-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Oriental Shorthair Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/oriental-shorthair-cat-grooming-guide</link>
+      <description>Grooming guide for Oriental Shorthair cats with short light-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/oriental-shorthair-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Devon Rex Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/devon-rex-cat-grooming-guide</link>
+      <description>Grooming guide for Devon Rex cats with short light-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/devon-rex-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Norwegian Forest Cat Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/norwegian-forest-cat-cat-grooming-guide</link>
+      <description>Grooming guide for Norwegian Forest Cat cats with long heavy-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/norwegian-forest-cat-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Burmese Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/burmese-cat-grooming-guide</link>
+      <description>Grooming guide for Burmese cats with short light-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/burmese-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Exotic Shorthair Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/exotic-shorthair-cat-grooming-guide</link>
+      <description>Grooming guide for Exotic Shorthair cats with short moderate-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/exotic-shorthair-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Tonkinese Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/tonkinese-cat-grooming-guide</link>
+      <description>Grooming guide for Tonkinese cats with short light-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/tonkinese-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>American Shorthair Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/american-shorthair-cat-grooming-guide</link>
+      <description>Grooming guide for American Shorthair cats with short moderate-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/american-shorthair-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Cornish Rex Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/cornish-rex-cat-grooming-guide</link>
+      <description>Grooming guide for Cornish Rex cats with short minimal-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/cornish-rex-cat-grooming-guide</guid>
+    </item>
+    <item>
+      <title>Ragamuffin Cat Grooming: Coat Care Guide</title>
+      <link>https://petcarehelperai.com/guides/ragamuffin-cat-grooming-guide</link>
+      <description>Grooming guide for Ragamuffin cats with long moderate-shedding coat. Brushing, bathing, nail trimming, and coat maintenance tips.</description>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://petcarehelperai.com/guides/ragamuffin-cat-grooming-guide</guid>
     </item>
 
   </channel>
