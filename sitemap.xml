@@ -18715,13 +18715,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://petcarehelperai.com/locations</loc>
+    <loc>https://petcarehelperai.com/locations/</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://petcarehelperai.com/tools</loc>
+    <loc>https://petcarehelperai.com/tools/</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
