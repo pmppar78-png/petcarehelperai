@@ -1,14 +1,16 @@
 [build]
   functions = "netlify/functions"
 
-# Enable pretty URLs (clean URLs without .html extension)
-[build.processing.html]
-  pretty_urls = true
+# pretty_urls is intentionally DISABLED so that .html redirect rules (force=true)
+# work correctly. Netlify default file serving already handles clean URLs natively:
+# /about serves about.html, /breeds/cats/persian serves breeds/cats/persian.html.
+# With pretty_urls enabled, .html requests bypass redirect rules and serve 200
+# (creating duplicate indexable URLs that cause GSC "Page with redirect" issues).
 
 # =====================================================
 # REDIRECT RULES — Single-hop 301s to canonical URLs
 # Canonical format: https://petcarehelperai.com/path (no trailing slash, no .html)
-# Directory indexes use trailing slash: /tools/, /locations/, /feeds/, /guides/, /resources/
+# Directory indexes use trailing slash: /tools/, /locations/, /feeds/
 # =====================================================
 
 # --- Domain normalization (www → non-www) ---
