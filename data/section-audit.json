@@ -1,0 +1,7303 @@
+{
+  "generated_at": "2026-02-23T07:10:12.116Z",
+  "total_pages": 6427,
+  "pct_with_top_picks_table": "100.0%",
+  "pct_with_buyer_guidance": "100.0%",
+  "pct_with_3plus_best_for_sections": "11.1%",
+  "pct_with_disclaimer": "100.0%",
+  "pct_with_faq_schema": "100.0%",
+  "pct_with_5plus_faq_questions": "77.9%",
+  "pct_with_cost_tables": "100.0% (2860/2860 applicable pages)",
+  "pct_with_internal_links": "100.0%",
+  "counts": {
+    "top_picks_table": 6427,
+    "buyer_guidance": 6427,
+    "best_for_3plus": 715,
+    "disclaimer": 6427,
+    "faq_schema": 6427,
+    "faq_5plus_questions": 5005,
+    "cost_tables_present": 2860,
+    "cost_tables_applicable": 2860,
+    "internal_links": 6427
+  },
+  "breakdown_by_page_type": {
+    "best-enrichment": {
+      "total": 715,
+      "topPicks": 715,
+      "buyerGuidance": 715,
+      "bestFor3": 0,
+      "disclaimer": 715,
+      "faqSchema": 715,
+      "faq5": 715,
+      "internalLinks": 715
+    },
+    "best-food": {
+      "total": 715,
+      "topPicks": 715,
+      "buyerGuidance": 715,
+      "bestFor3": 715,
+      "disclaimer": 715,
+      "faqSchema": 715,
+      "faq5": 715,
+      "internalLinks": 715
+    },
+    "best-habitat-size": {
+      "total": 715,
+      "topPicks": 715,
+      "buyerGuidance": 715,
+      "bestFor3": 0,
+      "disclaimer": 715,
+      "faqSchema": 715,
+      "faq5": 715,
+      "internalLinks": 715
+    },
+    "best-insurance": {
+      "total": 715,
+      "topPicks": 715,
+      "buyerGuidance": 715,
+      "bestFor3": 0,
+      "disclaimer": 715,
+      "faqSchema": 715,
+      "faq5": 715,
+      "internalLinks": 715
+    },
+    "cost-to-own": {
+      "total": 715,
+      "topPicks": 715,
+      "buyerGuidance": 715,
+      "bestFor3": 0,
+      "disclaimer": 715,
+      "faqSchema": 715,
+      "faq5": 715,
+      "internalLinks": 715
+    },
+    "first-time-owners": {
+      "total": 715,
+      "topPicks": 715,
+      "buyerGuidance": 715,
+      "bestFor3": 0,
+      "disclaimer": 715,
+      "faqSchema": 715,
+      "faq5": 715,
+      "internalLinks": 715
+    },
+    "health-costs": {
+      "total": 715,
+      "topPicks": 715,
+      "buyerGuidance": 715,
+      "bestFor3": 0,
+      "disclaimer": 715,
+      "faqSchema": 715,
+      "faq5": 715,
+      "internalLinks": 715
+    },
+    "vs-african-dwarf-frog": {
+      "total": 5,
+      "topPicks": 5,
+      "buyerGuidance": 5,
+      "bestFor3": 0,
+      "disclaimer": 5,
+      "faqSchema": 5,
+      "faq5": 0,
+      "internalLinks": 5
+    },
+    "vs-american-bullfrog": {
+      "total": 5,
+      "topPicks": 5,
+      "buyerGuidance": 5,
+      "bestFor3": 0,
+      "disclaimer": 5,
+      "faqSchema": 5,
+      "faq5": 0,
+      "internalLinks": 5
+    },
+    "vs-african-clawed-frog": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-axolotl": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-budgetts-frog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chinese-fire-belly-newt": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dart-frog": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-eastern-newt": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-fire-bellied-newt": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-fire-bellied-toad": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-fire-salamander": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-gray-tree-frog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-green-tree-frog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pacman-frog": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-red-eyed-tree-frog": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-spring-peeper": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-surinam-toad": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-tiger-salamander": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-tomato-frog": {
+      "total": 3,
+      "topPicks": 3,
+      "buyerGuidance": 3,
+      "bestFor3": 0,
+      "disclaimer": 3,
+      "faqSchema": 3,
+      "faq5": 0,
+      "internalLinks": 3
+    },
+    "vs-whites-tree-frog": {
+      "total": 3,
+      "topPicks": 3,
+      "buyerGuidance": 3,
+      "bestFor3": 0,
+      "disclaimer": 3,
+      "faqSchema": 3,
+      "faq5": 0,
+      "internalLinks": 3
+    },
+    "vs-alexandrine-parakeet": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-amazon-parrot": {
+      "total": 3,
+      "topPicks": 3,
+      "buyerGuidance": 3,
+      "bestFor3": 0,
+      "disclaimer": 3,
+      "faqSchema": 3,
+      "faq5": 0,
+      "internalLinks": 3
+    },
+    "vs-african-grey": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-american-singer-canary": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-blue-and-gold-macaw": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bourke-parakeet": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bourkes-parakeet": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-budgerigar": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-button-quail": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-caique": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-canary": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cape-parrot": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chicken": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cockatiel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cockatoo": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-conure": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cordon-bleu": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-coturnix-quail": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-diamond-dove": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dove": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dusky-conure": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-eclectus": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-finch": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-galah": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-gloster-canary": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-goffin-cockatoo": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-golden-conure": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-gouldian-finch": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-green-cheek-conure": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-green-wing-macaw": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-half-moon-conure": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-hawk-headed-parrot": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-hyacinth-macaw": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-indian-ringneck": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-java-finch": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-jenday-conure": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-kakariki": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-lineolated-parakeet": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-lorikeet": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-lovebird": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-macaw": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-masked-lovebird": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-meyer-parrot": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-military-macaw": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-moluccan-cockatoo": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-mynah": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-nanday-conure": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-owl-finch": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pacific-parrotlet": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-parrotlet": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-peach-faced-lovebird": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pigeon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pionus": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-plum-headed-parakeet": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-princess-parrot": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-quaker-parrot": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-red-bellied-parrot": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-red-factor-canary": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-red-rumped-parrot": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-roller-canary": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rosellas": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-scarlet-macaw": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-senegal-parrot": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-society-finch": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-spice-finch": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-star-finch": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-sun-conure": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-toucan": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-umbrella-cockatoo": {
+      "total": 1,
+      "topPicks": 1,
+      "buyerGuidance": 1,
+      "bestFor3": 0,
+      "disclaimer": 1,
+      "faqSchema": 1,
+      "faq5": 0,
+      "internalLinks": 1
+    },
+    "vs-zebra-finch": {
+      "total": 1,
+      "topPicks": 1,
+      "buyerGuidance": 1,
+      "bestFor3": 0,
+      "disclaimer": 1,
+      "faqSchema": 1,
+      "faq5": 0,
+      "internalLinks": 1
+    },
+    "vs-american-bobtail": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-american-curl": {
+      "total": 3,
+      "topPicks": 3,
+      "buyerGuidance": 3,
+      "bestFor3": 0,
+      "disclaimer": 3,
+      "faqSchema": 3,
+      "faq5": 0,
+      "internalLinks": 3
+    },
+    "vs-abyssinian": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-american-shorthair": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-american-wirehair": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-arabian-mau": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-asian": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-balinese": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bengal": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-birman": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bombay": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-british-longhair": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-british-shorthair": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-burmese": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-burmilla": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chartreux": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chausie": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cheetoh": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chinchilla": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-colorpoint-shorthair": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cornish-rex": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cymric": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-devon-rex": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-domestic-longhair": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-domestic-shorthair": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-donskoy": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-egyptian-mau": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-european-burmese": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-european-shorthair": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-exotic-shorthair": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-havana-brown": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-highlander": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-himalayan": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-japanese-bobtail": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-javanese": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-khao-manee": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-korat": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-kurilian-bobtail": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-laperm": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-lykoi": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-maine-coon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-manx": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-minuet": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-munchkin": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-nebelung": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-norwegian-forest-cat": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ocicat": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-oriental-longhair": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-oriental-shorthair": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-persian": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-peterbald": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pixie-bob": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ragamuffin": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ragdoll": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-russian-blue": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-russian-white": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-savannah": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-scottish-fold": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-selkirk-rex": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-serengeti": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-siamese": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-siberian": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-singapura": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-snowshoe": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-sokoke": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-somali": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-sphynx": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-thai": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-tiffanie": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-tonkinese": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-toyger": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-turkish-angora": {
+      "total": 1,
+      "topPicks": 1,
+      "buyerGuidance": 1,
+      "bestFor3": 0,
+      "disclaimer": 1,
+      "faqSchema": 1,
+      "faq5": 0,
+      "internalLinks": 1
+    },
+    "vs-turkish-van": {
+      "total": 1,
+      "topPicks": 1,
+      "buyerGuidance": 1,
+      "bestFor3": 0,
+      "disclaimer": 1,
+      "faqSchema": 1,
+      "faq5": 0,
+      "internalLinks": 1
+    },
+    "vs-afghan-hound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-airedale-terrier": {
+      "total": 3,
+      "topPicks": 3,
+      "buyerGuidance": 3,
+      "bestFor3": 0,
+      "disclaimer": 3,
+      "faqSchema": 3,
+      "faq5": 0,
+      "internalLinks": 3
+    },
+    "vs-affenpinscher": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-akbash": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-akita": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-alaskan-klee-kai": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-alaskan-malamute": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-american-bulldog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-american-eskimo": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-american-eskimo-dog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-american-foxhound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-american-pit-bull-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-american-staffordshire-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-american-water-spaniel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-anatolian-shepherd": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-aussiedoodle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-australian-cattle-dog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-australian-kelpie": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-australian-shepherd": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-australian-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-azawakh": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-barbet": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-basenji": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-basenjis": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-basset-hound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-beagle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bearded-collie": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-beauceron": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-belgian-malinois": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-belgian-sheepdog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-belgian-tervuren": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bergamasco": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-berger-picard": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bernedoodle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bernese-mountain-dog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bichon-frise": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-black-and-tan-coonhound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-black-russian-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bloodhound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bluetick-coonhound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-boerboel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bohemian-shepherd": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-border-collie": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-border-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bordoodle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-borzoi": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-boston-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bouvier-des-flandres": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-boxer": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-boykin-spaniel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bracco-italiano": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-briard": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-brittany": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-brussels-griffon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bull-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bulldog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bullmastiff": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cairn-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-canaan-dog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cane-corso": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cardigan-welsh-corgi": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-carolina-dog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-carpathian-shepherd": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-caucasian-shepherd": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cavachon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cavalier-king-charles": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cavalier-king-charles-spaniel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cavapoo": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-central-asian-shepherd": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cesky-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chesapeake-bay-retriever": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chi-poo": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chihuahua": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chinese-crested": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chinese-shar-pei": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chorkie": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chow-chow": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cirneco-dell-etna": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-clumber-spaniel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cockapoo": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cocker-spaniel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-collie": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-coton-de-tulear": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-croatian-sheepdog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dachshund": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dalmatian": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dandie-dinmont-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-doberman-pinscher": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dogo-argentino": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dogue-de-bordeaux": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dutch-shepherd": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-east-european-shepherd": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-english-bulldog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-english-cocker-spaniel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-english-foxhound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-english-setter": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-english-springer-spaniel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-english-toy-spaniel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-entlebucher-mountain-dog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-estrela-mountain-dog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-field-spaniel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-finnish-lapphund": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-finnish-spitz": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-flat-coated-retriever": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-fox-terrier-smooth": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-foxhound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-french-bulldog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-german-pinscher": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-german-shepherd": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-german-shorthaired-pointer": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-german-wirehaired-pointer": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-giant-schnauzer": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-golden-retriever": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-goldendoodle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-gordon-setter": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-great-dane": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-great-pyrenees": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-greater-swiss-mountain-dog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-greyhound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-harrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-havanese": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-hokkaido": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ibizan-hound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-irish-doodle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-irish-red-and-white-setter": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-irish-setter": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-irish-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-irish-water-spaniel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-irish-wolfhound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-italian-greyhound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-jack-russell-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-japanese-chin": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-japanese-spitz": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-jindo": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-kai-ken": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-kangal": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-keeshond": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-kerry-blue-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-king-shepherd": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-kishu-ken": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-komondor": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-kooikerhondje": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-kuvasz": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-labradoodle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-labrador-retriever": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-lagotto-romagnolo": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-lakeland-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-leonberger": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-lhasa-apso": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-maltese": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-maltipoo": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-manchester-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-maremma-sheepdog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-mastiff": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-miniature-pinscher": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-miniature-poodle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-miniature-schnauzer": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-morkie": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-mudi": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-neapolitan-mastiff": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-newfoundland": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-norfolk-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-norwegian-elkhound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-norwegian-lundehund": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-norwich-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-nova-scotia-duck-tolling-retriever": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-old-english-sheepdog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-olde-english-bulldogge": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-otterhound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-papillon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-parson-russell-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pekingese": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pembroke-welsh-corgi": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-peruvian-inca-orchid": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pharaoh-hound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pit-bull": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-plott-hound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pointer": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-polish-lowland-sheepdog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-polish-tatra-sheepdog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pomeranian": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pomsky": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-poodle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-portuguese-water-dog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-presa-canario": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pug": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-puggle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-puli": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pumi": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pyrenean-mastiff": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rat-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-redbone-coonhound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rhodesian-ridgeback": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rottweiler": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-saint-berdoodle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-saint-bernard": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-saluki": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-samoyed": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-sarplaninac": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-schipperke": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-schnoodle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-scottish-deerhound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-scottish-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-sealyham-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-sheepadoodle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-shetland-sheepdog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-shiba-inu": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-shih-poo": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-shih-tzu": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-shikoku": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-shiloh-shepherd": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-shorkie": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-siberian-husky": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-silky-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-skye-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-sloughi": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-soft-coated-wheaten-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-spanish-mastiff": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-spanish-water-dog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-spinone-italiano": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-springer-spaniel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-st-bernard": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-stabyhoun": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-staffordshire-bull-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-standard-poodle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-standard-schnauzer": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-sussex-spaniel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-swedish-vallhund": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-taiwan-dog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-thai-ridgeback": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-tibetan-mastiff": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-tibetan-spaniel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-tibetan-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-tornjak": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-toy-fox-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-toy-manchester-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-toy-poodle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-treeing-walker-coonhound": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-vizsla": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-weimaraner": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-welsh-corgi": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-welsh-springer-spaniel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-welsh-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-west-highland-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-west-highland-white-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-whippet": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-white-shepherd": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-wire-fox-terrier": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-wirehaired-pointing-griffon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-wirehaired-vizsla": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-xoloitzcuintli": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-yorkipoo": {
+      "total": 1,
+      "topPicks": 1,
+      "buyerGuidance": 1,
+      "bestFor3": 0,
+      "disclaimer": 1,
+      "faqSchema": 1,
+      "faq5": 0,
+      "internalLinks": 1
+    },
+    "vs-yorkshire-terrier": {
+      "total": 1,
+      "topPicks": 1,
+      "buyerGuidance": 1,
+      "bestFor3": 0,
+      "disclaimer": 1,
+      "faqSchema": 1,
+      "faq5": 0,
+      "internalLinks": 1
+    },
+    "vs-amano-shrimp": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-angelfish": {
+      "total": 3,
+      "topPicks": 3,
+      "buyerGuidance": 3,
+      "bestFor3": 0,
+      "disclaimer": 3,
+      "faqSchema": 3,
+      "faq5": 0,
+      "internalLinks": 3
+    },
+    "vs-african-cichlid": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-apistogramma": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-arowana": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-assassin-snail": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bamboo-shrimp": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-betta-fish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-blenny": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-blue-damsel": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-blue-green-chromis": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-blue-tang": {
+      "total": 5,
+      "topPicks": 5,
+      "buyerGuidance": 5,
+      "bestFor3": 0,
+      "disclaimer": 5,
+      "faqSchema": 5,
+      "faq5": 0,
+      "internalLinks": 5
+    },
+    "vs-blue-velvet-shrimp": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bolivian-ram": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bristlenose-pleco": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cardinal-tetra": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-celestial-pearl-danio": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cherry-barb": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cherry-shrimp": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chili-rasbora": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chromis": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cleaner-shrimp": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-cleaner-wrasse": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-clown-loach": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-clown-pleco": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-clownfish": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-common-pleco": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-congo-tetra": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-convict-cichlid": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-coral-beauty": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-corydoras": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-crystal-red-shrimp": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-danio": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-discus": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dottyback": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-dwarf-crayfish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dwarf-gourami": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-electric-blue-acara": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-electric-blue-crayfish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-electric-yellow-cichlid": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ember-tetra": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-emperor-angelfish": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-endler-livebearer": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-fairy-wrasse": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-fancy-goldfish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-fiddler-crab": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-firefish": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-flame-angelfish": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-flowerhorn": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-french-angelfish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-frontosa": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-german-blue-ram": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ghost-shrimp": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-glass-catfish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-goby": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-gold-barb": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-goldfish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-gouramis": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-green-terror": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-guppy": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-hatchetfish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-hawkfish": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-hermit-crab": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-hillstream-loach": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-honey-gourami": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-jack-dempsey": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-killifish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-koi": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-kole-tang": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-kuhli-loach": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-mandarin-goby": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-maroon-clownfish": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-melanurus-wrasse": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-molly": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-mystery-snail": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-neon-tetra": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-nerite-snail": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-oscar": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-otocinclus": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pacu": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-peacock-bass": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pearl-gourami": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pencilfish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-peppermint-shrimp": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pictus-catfish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-platy": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pleco": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-powder-blue-tang": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-rabbit-snail": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rainbow-fish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ram-cichlid": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ramshorn-snail": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rasbora": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-red-claw-crab": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rosy-barb": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rummy-nose-tetra": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-severum": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-siamese-algae-eater": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-silver-dollar": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-six-line-wrasse": {
+      "total": 4,
+      "topPicks": 4,
+      "buyerGuidance": 4,
+      "bestFor3": 0,
+      "disclaimer": 4,
+      "faqSchema": 4,
+      "faq5": 0,
+      "internalLinks": 4
+    },
+    "vs-swordtail": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-tiger-barb": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-turbo-snail": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-upside-down-catfish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-vampire-crab": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-watchman-goby": {
+      "total": 3,
+      "topPicks": 3,
+      "buyerGuidance": 3,
+      "bestFor3": 0,
+      "disclaimer": 3,
+      "faqSchema": 3,
+      "faq5": 0,
+      "internalLinks": 3
+    },
+    "vs-white-cloud": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-white-cloud-mountain-minnow": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-wrasse": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-yellow-tang": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-zebra-danio": {
+      "total": 1,
+      "topPicks": 1,
+      "buyerGuidance": 1,
+      "bestFor3": 0,
+      "disclaimer": 1,
+      "faqSchema": 1,
+      "faq5": 0,
+      "internalLinks": 1
+    },
+    "vs-bangai-cardinal": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-copperband-butterfly": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-flame-hawkfish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-foxface-rabbitfish": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-green-chromis": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-royal-gramma": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ackie-monitor": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-african-fat-tailed-gecko": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-amazon-tree-boa": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-anole": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-armadillo-lizard": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ball-python": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bearded-dragon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-black-throat-monitor": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-blood-python": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-blue-tongue-skink": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-boa-constrictor": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-box-turtle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-brazilian-rainbow-boa": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-bull-snake": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-burmese-python": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-california-kingsnake": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-carpet-python": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chameleon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-childrens-python": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chinese-water-dragon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-corn-snake": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-crested-gecko": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-electric-blue-gecko": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-emerald-tree-boa": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-fire-skink": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-frilled-dragon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-gargoyle-gecko": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-garter-snake": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-giant-day-gecko": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-gold-dust-day-gecko": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-greek-tortoise": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-green-iguana": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-green-tree-python": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-hermann-tortoise": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-hognose-snake": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-house-gecko": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-jacksons-chameleon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-kenyan-sand-boa": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-king-snake": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-knob-tailed-gecko": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-leachianus-gecko": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-leopard-gecko": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-leopard-tortoise": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-long-tailed-lizard": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-map-turtle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-mexican-black-kingsnake": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-milk-snake": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-monitor-lizard": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-mourning-gecko": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-mud-turtle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-musk-turtle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ornate-box-turtle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-painted-turtle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-panther-chameleon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-pine-snake": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-plated-lizard": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-poison-dart-frog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rainbow-boa": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rankins-dragon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rat-snake": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-red-eared-slider": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-red-footed-tortoise": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-reticulated-python": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ring-neck-snake": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rosy-boa": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rough-green-snake": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-russian-tortoise": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-sailfin-dragon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-satanic-leaf-tailed-gecko": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-savannah-monitor": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-schneiders-skink": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-softshell-turtle": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-spotted-python": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-sulcata-tortoise": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-tegu": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-tokay-gecko": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-tree-frog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-uromastyx": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-veiled-chameleon": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-vine-snake": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-western-hognose": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-woma-python": {
+      "total": 1,
+      "topPicks": 1,
+      "buyerGuidance": 1,
+      "bestFor3": 0,
+      "disclaimer": 1,
+      "faqSchema": 1,
+      "faq5": 0,
+      "internalLinks": 1
+    },
+    "vs-wood-turtle": {
+      "total": 1,
+      "topPicks": 1,
+      "buyerGuidance": 1,
+      "bestFor3": 0,
+      "disclaimer": 1,
+      "faqSchema": 1,
+      "faq5": 0,
+      "internalLinks": 1
+    },
+    "vs-african-pygmy-hedgehog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-american-guinea-pig": {
+      "total": 3,
+      "topPicks": 3,
+      "buyerGuidance": 3,
+      "bestFor3": 0,
+      "disclaimer": 3,
+      "faqSchema": 3,
+      "faq5": 0,
+      "internalLinks": 3
+    },
+    "vs-abyssinian-guinea-pig": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-american-rabbit": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-angora-rabbit": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-baldwin-guinea-pig": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-californian-rabbit": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chinchilla-mutations": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chinchilla-standard-gray": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-chinese-hamster": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-continental-giant": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-coronet-guinea-pig": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-degu": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dumbo-rat": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dutch-rabbit": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dwarf-campbell": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dwarf-hamster": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-dwarf-hotot": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-emperor-scorpion": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-english-angora": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-english-lop": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-fancy-mouse": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-fancy-rat": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-fennec-fox": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ferret": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ferret-albino": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-ferret-sable": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-flemish-giant": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-flying-squirrel": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-french-lop": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-gerbil": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-giant-african-land-snail": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-hairless-rat": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-harlequin-rabbit": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-hedgehog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-hermit-crab-pet": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-hissing-cockroach": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-holland-lop": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-jersey-wooly": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-lionhead": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-long-haired-hamster": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-mini-lop": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-mini-rex": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-mongolian-gerbil": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-mouse": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-netherland-dwarf": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-new-zealand-white": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-peruvian-guinea-pig": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-polish-rabbit": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-prairie-dog": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rat": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rex-guinea-pig": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-rex-rabbit": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-roborovski-hamster": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-short-tailed-opossum": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-silkie-guinea-pig": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-skinny-pig": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-stick-insect": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-sugar-glider": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-syrian-hamster": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-tarantula": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-teddy-guinea-pig": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-texel-guinea-pig": {
+      "total": 2,
+      "topPicks": 2,
+      "buyerGuidance": 2,
+      "bestFor3": 0,
+      "disclaimer": 2,
+      "faqSchema": 2,
+      "faq5": 0,
+      "internalLinks": 2
+    },
+    "vs-white-crested-guinea-pig": {
+      "total": 1,
+      "topPicks": 1,
+      "buyerGuidance": 1,
+      "bestFor3": 0,
+      "disclaimer": 1,
+      "faqSchema": 1,
+      "faq5": 0,
+      "internalLinks": 1
+    },
+    "vs-winter-white": {
+      "total": 1,
+      "topPicks": 1,
+      "buyerGuidance": 1,
+      "bestFor3": 0,
+      "disclaimer": 1,
+      "faqSchema": 1,
+      "faq5": 0,
+      "internalLinks": 1
+    }
+  },
+  "breakdown_by_category": {
+    "amphibians": {
+      "total": 179,
+      "topPicks": 179,
+      "buyerGuidance": 179,
+      "bestFor3": 20,
+      "disclaimer": 179,
+      "faqSchema": 179,
+      "faq5": 140,
+      "internalLinks": 179
+    },
+    "birds": {
+      "total": 629,
+      "topPicks": 629,
+      "buyerGuidance": 629,
+      "bestFor3": 70,
+      "disclaimer": 629,
+      "faqSchema": 629,
+      "faq5": 490,
+      "internalLinks": 629
+    },
+    "cats": {
+      "total": 656,
+      "topPicks": 656,
+      "buyerGuidance": 656,
+      "bestFor3": 73,
+      "disclaimer": 656,
+      "faqSchema": 656,
+      "faq5": 511,
+      "internalLinks": 656
+    },
+    "dogs": {
+      "total": 2276,
+      "topPicks": 2276,
+      "buyerGuidance": 2276,
+      "bestFor3": 253,
+      "disclaimer": 2276,
+      "faqSchema": 2276,
+      "faq5": 1771,
+      "internalLinks": 2276
+    },
+    "fish": {
+      "total": 998,
+      "topPicks": 998,
+      "buyerGuidance": 998,
+      "bestFor3": 111,
+      "disclaimer": 998,
+      "faqSchema": 998,
+      "faq5": 777,
+      "internalLinks": 998
+    },
+    "marine-fish": {
+      "total": 224,
+      "topPicks": 224,
+      "buyerGuidance": 224,
+      "bestFor3": 25,
+      "disclaimer": 224,
+      "faqSchema": 224,
+      "faq5": 175,
+      "internalLinks": 224
+    },
+    "reptiles": {
+      "total": 872,
+      "topPicks": 872,
+      "buyerGuidance": 872,
+      "bestFor3": 97,
+      "disclaimer": 872,
+      "faqSchema": 872,
+      "faq5": 679,
+      "internalLinks": 872
+    },
+    "small-animals": {
+      "total": 593,
+      "topPicks": 593,
+      "buyerGuidance": 593,
+      "bestFor3": 66,
+      "disclaimer": 593,
+      "faqSchema": 593,
+      "faq5": 462,
+      "internalLinks": 593
+    }
+  },
+  "pages_missing_sections_count": 5712,
+  "pages_missing_sections_sample": [
+    {
+      "file": "amphibians/african-clawed-frog/best-enrichment.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/african-clawed-frog/best-habitat-size.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/african-clawed-frog/best-insurance.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/african-clawed-frog/cost-to-own.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/african-clawed-frog/first-time-owners.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/african-clawed-frog/health-costs.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/african-clawed-frog/vs-african-dwarf-frog.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)",
+        "faq_5plus_questions (found 4)"
+      ]
+    },
+    {
+      "file": "amphibians/african-clawed-frog/vs-american-bullfrog.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)",
+        "faq_5plus_questions (found 4)"
+      ]
+    },
+    {
+      "file": "amphibians/african-dwarf-frog/best-enrichment.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/african-dwarf-frog/best-habitat-size.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/african-dwarf-frog/best-insurance.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/african-dwarf-frog/cost-to-own.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/african-dwarf-frog/first-time-owners.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/african-dwarf-frog/health-costs.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/african-dwarf-frog/vs-african-clawed-frog.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)",
+        "faq_5plus_questions (found 4)"
+      ]
+    },
+    {
+      "file": "amphibians/african-dwarf-frog/vs-american-bullfrog.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)",
+        "faq_5plus_questions (found 4)"
+      ]
+    },
+    {
+      "file": "amphibians/american-bullfrog/best-enrichment.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/american-bullfrog/best-habitat-size.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/american-bullfrog/best-insurance.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/american-bullfrog/cost-to-own.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/american-bullfrog/first-time-owners.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/american-bullfrog/health-costs.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/american-bullfrog/vs-african-dwarf-frog.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)",
+        "faq_5plus_questions (found 4)"
+      ]
+    },
+    {
+      "file": "amphibians/american-bullfrog/vs-axolotl.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)",
+        "faq_5plus_questions (found 4)"
+      ]
+    },
+    {
+      "file": "amphibians/axolotl/best-enrichment.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/axolotl/best-habitat-size.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/axolotl/best-insurance.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/axolotl/cost-to-own.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/axolotl/first-time-owners.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/axolotl/health-costs.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/axolotl/vs-american-bullfrog.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)",
+        "faq_5plus_questions (found 4)"
+      ]
+    },
+    {
+      "file": "amphibians/axolotl/vs-budgetts-frog.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)",
+        "faq_5plus_questions (found 4)"
+      ]
+    },
+    {
+      "file": "amphibians/budgetts-frog/best-enrichment.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/budgetts-frog/best-habitat-size.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/budgetts-frog/best-insurance.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/budgetts-frog/cost-to-own.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/budgetts-frog/first-time-owners.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/budgetts-frog/health-costs.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/budgetts-frog/vs-axolotl.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)",
+        "faq_5plus_questions (found 4)"
+      ]
+    },
+    {
+      "file": "amphibians/budgetts-frog/vs-chinese-fire-belly-newt.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)",
+        "faq_5plus_questions (found 4)"
+      ]
+    },
+    {
+      "file": "amphibians/chinese-fire-belly-newt/best-enrichment.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/chinese-fire-belly-newt/best-habitat-size.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/chinese-fire-belly-newt/best-insurance.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/chinese-fire-belly-newt/cost-to-own.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/chinese-fire-belly-newt/first-time-owners.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/chinese-fire-belly-newt/health-costs.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/chinese-fire-belly-newt/vs-budgetts-frog.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)",
+        "faq_5plus_questions (found 4)"
+      ]
+    },
+    {
+      "file": "amphibians/chinese-fire-belly-newt/vs-dart-frog.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)",
+        "faq_5plus_questions (found 4)"
+      ]
+    },
+    {
+      "file": "amphibians/dart-frog/best-enrichment.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    },
+    {
+      "file": "amphibians/dart-frog/best-habitat-size.html",
+      "missing": [
+        "best_for_sections (found 0, need 3+)"
+      ]
+    }
+  ],
+  "pages_missing_sections_note": "5712 pages have missing sections. Showing first 50 in sample above. Full list omitted for file size."
+}

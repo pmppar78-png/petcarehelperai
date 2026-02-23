@@ -1,0 +1,76 @@
+{
+  "comparison_pages": {
+    "total": 1422,
+    "avg_word_count": 464,
+    "pct_with_comparison_table": 100,
+    "pct_with_3plus_factors": 100,
+    "pct_with_who_should_choose": 100
+  },
+  "duplication": {
+    "by_type": {
+      "best-enrichment": {
+        "sample_size": 20,
+        "highest_similarity_pct": 81.7,
+        "avg_similarity_pct": 49.5,
+        "highest_pair": [
+          "dogs/ibizan-hound/best-enrichment.html",
+          "dogs/afghan-hound/best-enrichment.html"
+        ]
+      },
+      "best-food": {
+        "sample_size": 20,
+        "highest_similarity_pct": 79.2,
+        "avg_similarity_pct": 53,
+        "highest_pair": [
+          "birds/princess-parrot/best-food.html",
+          "birds/amazon-parrot/best-food.html"
+        ]
+      },
+      "best-habitat-size": {
+        "sample_size": 20,
+        "highest_similarity_pct": 85.4,
+        "avg_similarity_pct": 58.6,
+        "highest_pair": [
+          "amphibians/gray-tree-frog/best-habitat-size.html",
+          "amphibians/green-tree-frog/best-habitat-size.html"
+        ]
+      },
+      "best-insurance": {
+        "sample_size": 20,
+        "highest_similarity_pct": 82.1,
+        "avg_similarity_pct": 75.7,
+        "highest_pair": [
+          "dogs/labradoodle/best-insurance.html",
+          "dogs/basenji/best-insurance.html"
+        ]
+      },
+      "cost-to-own": {
+        "sample_size": 20,
+        "highest_similarity_pct": 82.6,
+        "avg_similarity_pct": 71.1,
+        "highest_pair": [
+          "dogs/belgian-sheepdog/cost-to-own.html",
+          "dogs/maremma-sheepdog/cost-to-own.html"
+        ]
+      },
+      "first-time-owners": {
+        "sample_size": 20,
+        "highest_similarity_pct": 83,
+        "avg_similarity_pct": 75.2,
+        "highest_pair": [
+          "fish/gouramis/first-time-owners.html",
+          "fish/pencilfish/first-time-owners.html"
+        ]
+      },
+      "health-costs": {
+        "sample_size": 20,
+        "highest_similarity_pct": 84.3,
+        "avg_similarity_pct": 77.7,
+        "highest_pair": [
+          "fish/french-angelfish/health-costs.html",
+          "fish/coral-beauty/health-costs.html"
+        ]
+      }
+    }
+  }
+}
