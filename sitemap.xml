@@ -49,6 +49,24 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://petcarehelperai.com/feeds/</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/embed/embed-code</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://petcarehelperai.com/embed/widget</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://petcarehelperai.com/marine-fish</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
