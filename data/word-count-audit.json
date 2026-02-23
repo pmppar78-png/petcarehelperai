@@ -2,80 +2,80 @@
   "generated": "2026-02-23",
   "total_pages": 6427,
   "min_word_count": {
-    "count": 372,
-    "file": "commercial/fish/hatchetfish/best-enrichment.html"
+    "count": 1314,
+    "file": "commercial/fish/apistogramma/best-enrichment.html"
   },
   "max_word_count": {
-    "count": 577,
-    "file": "commercial/small-animals/dwarf-hamster/first-time-owners.html"
+    "count": 2016,
+    "file": "commercial/small-animals/dwarf-hamster/vs-dwarf-campbell.html"
   },
-  "average_word_count": 456,
-  "median_word_count": 456,
-  "pages_under_700": 6427,
-  "pages_under_800": 6427,
+  "average_word_count": 1602,
+  "median_word_count": 1619,
+  "pages_under_700": 0,
+  "pages_under_800": 0,
   "pages_800_to_1200": 0,
-  "pages_1200_to_1800": 0,
-  "pages_above_1800": 0,
+  "pages_1200_to_1800": 6055,
+  "pages_above_1800": 372,
   "breakdown_by_type": {
     "best-enrichment": {
       "count": 715,
-      "min": 372,
-      "max": 481,
-      "avg": 403,
-      "median": 399
+      "min": 1314,
+      "max": 1686,
+      "avg": 1421,
+      "median": 1412
     },
     "best-food": {
       "count": 715,
-      "min": 439,
-      "max": 565,
-      "avg": 480,
-      "median": 485
+      "min": 1317,
+      "max": 1685,
+      "avg": 1427,
+      "median": 1424
     },
     "best-habitat-size": {
       "count": 715,
-      "min": 388,
-      "max": 488,
-      "avg": 420,
-      "median": 419
+      "min": 1453,
+      "max": 1859,
+      "avg": 1591,
+      "median": 1587
     },
     "best-insurance": {
       "count": 715,
-      "min": 439,
-      "max": 518,
-      "avg": 459,
-      "median": 457
+      "min": 1406,
+      "max": 1713,
+      "avg": 1489,
+      "median": 1480
     },
     "cost-to-own": {
       "count": 715,
-      "min": 438,
-      "max": 521,
-      "avg": 459,
-      "median": 456
+      "min": 1542,
+      "max": 1935,
+      "avg": 1663,
+      "median": 1657
     },
     "first-time-owners": {
       "count": 715,
-      "min": 491,
-      "max": 577,
-      "avg": 512,
-      "median": 510
+      "min": 1544,
+      "max": 1927,
+      "avg": 1669,
+      "median": 1660
     },
     "health-costs": {
       "count": 715,
-      "min": 445,
-      "max": 520,
-      "avg": 464,
-      "median": 462
+      "min": 1512,
+      "max": 1886,
+      "avg": 1638,
+      "median": 1631
     },
     "vs": {
       "count": 1422,
-      "min": 415,
-      "max": 541,
-      "avg": 453,
-      "median": 449
+      "min": 1584,
+      "max": 2016,
+      "avg": 1759,
+      "median": 1756
     }
   },
   "comparison_pages_stats": {
     "count": 1422,
-    "avg_word_count": 453
+    "avg_word_count": 1759
   }
 }
