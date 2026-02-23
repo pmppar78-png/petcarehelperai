@@ -143,6 +143,55 @@
   status = 301
   force = true
 
+# --- Commercial pages: .html extension → clean URLs ---
+[[redirects]]
+  from = "/commercial/dogs/*/*.html"
+  to = "/commercial/dogs/:splat/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/cats/*/*.html"
+  to = "/commercial/cats/:splat/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/birds/*/*.html"
+  to = "/commercial/birds/:splat/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/*/*.html"
+  to = "/commercial/fish/:splat/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/marine-fish/*/*.html"
+  to = "/commercial/marine-fish/:splat/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/*/*.html"
+  to = "/commercial/reptiles/:splat/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/amphibians/*/*.html"
+  to = "/commercial/amphibians/:splat/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/*/*.html"
+  to = "/commercial/small-animals/:splat/:splat"
+  status = 301
+  force = true
+
 # Catch-all for root-level .html pages
 [[redirects]]
   from = "/*.html"
