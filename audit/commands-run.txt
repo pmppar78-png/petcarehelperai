@@ -1,0 +1,78 @@
+# Commands Run During Audit
+# Generated: 2026-02-23
+
+## 1. Audit Script Creation
+
+### engines/audit-commercial.js
+- Full-scan audit of ALL 6,427 commercial pages
+- Parses HTML for R1–R7 requirements
+- Outputs: audit/commercial-audit.csv (full scan) + audit/commercial-sample-report.md (25+ samples)
+
+### engines/audit-entities.js
+- Scans all 715 entity/breed pages under /breeds/
+- Checks for injected "Buying Guides" (commercial-links-section) block
+- Outputs: audit/entity-injection-audit.md
+
+## 2. Commands Executed
+
+```bash
+# Create audit output directory
+mkdir -p /opt/build/repo/audit
+
+# Run full commercial page audit (all 6,427 pages)
+node engines/audit-commercial.js
+# Output: audit/commercial-audit.csv (6427 rows), audit/commercial-sample-report.md
+
+# Run entity injection audit (all 715 breed pages)
+node engines/audit-entities.js
+# Output: audit/entity-injection-audit.md
+```
+
+## 3. Verification Commands
+
+```bash
+# Count total commercial HTML files
+find /opt/build/repo/commercial -name "*.html" | wc -l
+# Result: 6427
+
+# Count total breed HTML files
+find /opt/build/repo/breeds -name "*.html" | wc -l
+# Result: 723 (715 entity pages + 8 potential index/misc files)
+
+# Verify entities.json entity count
+node -e "const e = JSON.parse(require('fs').readFileSync('data/entities.json','utf8')); console.log(e.length);"
+# Result: 715
+
+# Check CSV row count
+wc -l audit/commercial-audit.csv
+# Result: 6428 (6427 data rows + 1 header)
+
+# Count PASS/FAIL in CSV
+grep -c "PASS" audit/commercial-audit.csv
+# Result: 6427
+
+grep -c "FAIL" audit/commercial-audit.csv
+# Result: 0 (only in header)
+
+# Verify entity injection
+grep -rl "commercial-links-section" breeds/ | wc -l
+# Result: 715
+
+# Sample commercial page structure checks
+grep -l "application/ld+json" commercial/dogs/poodle/*.html | wc -l
+grep -l 'rel="canonical"' commercial/dogs/poodle/*.html | wc -l
+grep -l 'og:image' commercial/dogs/poodle/*.html | wc -l
+grep -l 'twitter:card' commercial/dogs/poodle/*.html | wc -l
+```
+
+## 4. Audit Results Summary
+
+### Commercial Pages
+- TOTAL scanned: 6427
+- TOTAL PASS: 6427
+- TOTAL FAIL: 0
+
+### Entity Pages
+- TOTAL scanned: 715
+- WITH Buying Guides injection: 715
+- MISSING injection: 0
