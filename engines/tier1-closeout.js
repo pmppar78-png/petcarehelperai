@@ -1209,6 +1209,8 @@ function runPhase6_SitemapRegeneration() {
     if (rel.startsWith('.netlify/')) continue;
     if (rel.startsWith('.git/')) continue;
     if (rel.startsWith('embed/')) continue;
+    if (rel === '404.html') continue;
+    if (rel === 'styles.css.html') continue;
 
     // Exclude feed XML-like HTML pages (index pages in feeds are fine to skip)
     if (rel.startsWith('feeds/')) continue;

@@ -260,6 +260,8 @@ function regenerateSitemap() {
     if (rel.startsWith('embed/') || rel.startsWith('embed\\')) return false;
     // Exclude 404
     if (rel === '404.html') return false;
+    // Exclude styles helper page
+    if (rel === 'styles.css.html') return false;
     // Exclude feeds directory HTML
     if (rel.startsWith('feeds/') || rel.startsWith('feeds\\')) return false;
     return true;
