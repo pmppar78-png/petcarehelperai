@@ -163,9 +163,21 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# No-index for embed widget (loaded in iframes)
+# No-index for embed resources (loaded in iframes)
 [[headers]]
-  for = "/embed/widget"
+  for = "/embed/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+# No-index for RSS feed landing pages and feed files
+[[headers]]
+  for = "/feeds/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+# No-index for the styles helper page
+[[headers]]
+  for = "/styles.css.html"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
