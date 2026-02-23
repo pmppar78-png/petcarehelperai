@@ -1,8 +1,6 @@
 # robots.txt for petcarehelperai.com
 User-agent: *
 Allow: /
-Disallow: /embed/
-Disallow: /feeds/
 
 # Sitemap location
 Sitemap: https://petcarehelperai.com/sitemap.xml
