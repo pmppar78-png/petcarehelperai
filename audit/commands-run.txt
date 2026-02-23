@@ -76,3 +76,29 @@ grep -l 'twitter:card' commercial/dogs/poodle/*.html | wc -l
 - TOTAL scanned: 715
 - WITH Buying Guides injection: 715
 - MISSING injection: 0
+[2026-02-23T20:59:35.062Z] DEPTH-AMPLIFY: Starting depth amplification pass...
+[2026-02-23T20:59:35.063Z] DEPTH-AMPLIFY: Processing species groups: dogs, cats, birds, fish, marine-fish, reptiles, amphibians, small-animals
+[2026-02-23T20:59:35.064Z] DEPTH-AMPLIFY: Processing 253 dogs pages...
+[2026-02-23T20:59:35.379Z] DEPTH-AMPLIFY: Completed dogs: 253 pages processed.
+[2026-02-23T20:59:35.379Z] DEPTH-AMPLIFY: Processing 73 cats pages...
+[2026-02-23T20:59:35.465Z] DEPTH-AMPLIFY: Completed cats: 73 pages processed.
+[2026-02-23T20:59:35.465Z] DEPTH-AMPLIFY: Processing 70 birds pages...
+[2026-02-23T20:59:35.547Z] DEPTH-AMPLIFY: Completed birds: 70 pages processed.
+[2026-02-23T20:59:35.547Z] DEPTH-AMPLIFY: Processing 111 fish pages...
+[2026-02-23T20:59:35.674Z] DEPTH-AMPLIFY: Completed fish: 111 pages processed.
+[2026-02-23T20:59:35.674Z] DEPTH-AMPLIFY: Processing 25 marine-fish pages...
+[2026-02-23T20:59:35.707Z] DEPTH-AMPLIFY: Completed marine-fish: 25 pages processed.
+[2026-02-23T20:59:35.707Z] DEPTH-AMPLIFY: Processing 97 reptiles pages...
+[2026-02-23T20:59:35.827Z] DEPTH-AMPLIFY: Completed reptiles: 97 pages processed.
+[2026-02-23T20:59:35.827Z] DEPTH-AMPLIFY: Processing 20 amphibians pages...
+[2026-02-23T20:59:35.856Z] DEPTH-AMPLIFY: Completed amphibians: 20 pages processed.
+[2026-02-23T20:59:35.856Z] DEPTH-AMPLIFY: Processing 66 small-animals pages...
+[2026-02-23T20:59:35.936Z] DEPTH-AMPLIFY: Completed small-animals: 66 pages processed.
+[2026-02-23T20:59:35.936Z] DEPTH-AMPLIFY: 
+[2026-02-23T20:59:35.937Z] DEPTH-AMPLIFY: === DEPTH AMPLIFICATION COMPLETE ===
+[2026-02-23T20:59:35.937Z] DEPTH-AMPLIFY: Total pages processed: 715
+[2026-02-23T20:59:35.937Z] DEPTH-AMPLIFY: Total pages modified: 715
+[2026-02-23T20:59:35.937Z] DEPTH-AMPLIFY: Word count - Min: 2761, Max: 4330, Avg: 3290, Median: 3244
+[2026-02-23T20:59:35.937Z] DEPTH-AMPLIFY: Pages below 1,800 words: 0
+[2026-02-23T20:59:35.937Z] DEPTH-AMPLIFY: Wrote audit/entity-depth.csv
+[2026-02-23T20:59:35.938Z] DEPTH-AMPLIFY: Wrote audit/entity-depth-report.md
