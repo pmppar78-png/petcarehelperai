@@ -23,6 +23,20 @@ const API_TIMEOUT = 10000;
 const RETRY_DELAY = 2000;
 
 // ============================================================
+// DIRECT IMAGE URLS — For breeds with no Wikipedia article/image
+// These bypass the Wikipedia API and use verified Wikimedia Commons URLs directly.
+// ============================================================
+
+const DIRECT_IMAGE_URLS = {
+  'dogs/bordoodle': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bordoodle.jpg/800px-Bordoodle.jpg',
+  'dogs/aussiedoodle': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/CannoliAtGate.jpg/800px-CannoliAtGate.jpg',
+  'dogs/chi-poo': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Thechi_poo.JPG/800px-Thechi_poo.JPG',
+  'dogs/pomsky': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pomsky_Dog_Breed_-_Pomeranian_Husky_Mix.jpg/800px-Pomsky_Dog_Breed_-_Pomeranian_Husky_Mix.jpg',
+  'dogs/irish-doodle': 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Can_Setter_dog_GFDL.jpg/800px-Can_Setter_dog_GFDL.jpg',
+  'cats/cheetoh': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/CheetohCatInGrass_%28cropped%29.jpg/800px-CheetohCatInGrass_%28cropped%29.jpg',
+};
+
+// ============================================================
 // EXPLICIT BREED-TO-WIKIPEDIA TITLE MAPPINGS
 // ============================================================
 
@@ -72,7 +86,7 @@ const EXPLICIT_MAPPINGS = {
   'dogs/bohemian-shepherd': 'Bohemian_Shepherd',
   'dogs/border-collie': 'Border_Collie',
   'dogs/border-terrier': 'Border_Terrier',
-  'dogs/bordoodle': 'Bordoodle',
+  'dogs/bordoodle': 'Bordoodle_(dog)',
   'dogs/borzoi': 'Borzoi',
   'dogs/boston-terrier': 'Boston_Terrier',
   'dogs/bouvier-des-flandres': 'Bouvier_des_Flandres',
@@ -886,6 +900,16 @@ async function fetchWikiImage(title, retryCount = 0) {
 async function fetchImageForBreed(category, slug) {
   const key = `${category}/${slug}`;
 
+  // Try direct image URL first (bypasses Wikipedia API for known breeds)
+  if (DIRECT_IMAGE_URLS[key]) {
+    return {
+      thumbnail: DIRECT_IMAGE_URLS[key],
+      original: DIRECT_IMAGE_URLS[key],
+      title: slug.replace(/-/g, ' '),
+      description: `Direct Wikimedia Commons image for ${slug.replace(/-/g, ' ')}`
+    };
+  }
+
   // Try explicit mapping first
   if (EXPLICIT_MAPPINGS[key]) {
     const result = await fetchWikiImage(EXPLICIT_MAPPINGS[key]);
@@ -1108,7 +1132,6 @@ async function main() {
   console.log('Step 2: Fetching real images from Wikipedia...');
   const imageCache = {};
   let wikiHits = 0;
-  let wikiFallbacks = 0;
 
   const fetchResults = await processInBatches(breedFiles, CONCURRENCY, async (file) => {
     const result = await fetchImageForBreed(file.category, file.slug);
@@ -1117,21 +1140,16 @@ async function main() {
       imageCache[`${file.category}/${file.slug}`] = result.thumbnail;
       return { ...file, imageUrl: result.thumbnail, source: 'wikipedia' };
     } else {
-      const fallback = CATEGORY_FALLBACKS[file.category];
-      if (fallback) {
-        imageCache[`${file.category}/${file.slug}`] = fallback.url;
-        return { ...file, imageUrl: fallback.url, source: 'fallback' };
-      }
+      // NO FALLBACK — never use generic category images
+      console.warn(`  WARNING: No breed-specific image found for ${file.category}/${file.slug}`);
       return { ...file, imageUrl: null, source: 'none' };
     }
   });
 
   wikiHits = fetchResults.filter(r => r.source === 'wikipedia').length;
-  wikiFallbacks = fetchResults.filter(r => r.source === 'fallback').length;
   const noImage = fetchResults.filter(r => r.source === 'none').length;
 
-  console.log(`  Wikipedia hits: ${wikiHits}`);
-  console.log(`  Category fallbacks: ${wikiFallbacks}`);
+  console.log(`  Wikipedia/Direct hits: ${wikiHits}`);
   console.log(`  No image available: ${noImage}`);
   console.log('');
 
@@ -1172,11 +1190,11 @@ async function main() {
   console.log(`  Errors: ${errors}`);
   console.log('');
 
-  // Log fallback breeds for transparency
-  const fallbackBreeds = fetchResults.filter(r => r.source === 'fallback');
-  if (fallbackBreeds.length > 0) {
-    console.log('Breeds using category fallback images:');
-    for (const fb of fallbackBreeds) {
+  // Log breeds without images for transparency
+  const noImageBreeds = fetchResults.filter(r => r.source === 'none');
+  if (noImageBreeds.length > 0) {
+    console.log('CRITICAL: Breeds with NO image (must be resolved):');
+    for (const fb of noImageBreeds) {
       console.log(`  - ${fb.category}/${fb.slug}`);
     }
     console.log('');
@@ -1185,8 +1203,7 @@ async function main() {
   console.log('=== Summary ===');
   console.log(`  Total breed files: ${breedFiles.length}`);
   console.log(`  Successfully updated: ${unsplashReplaced + placeholderReplaced + emojiReplaced + fallbackUpgraded}`);
-  console.log(`  Wikipedia image coverage: ${((wikiHits / breedFiles.length) * 100).toFixed(1)}%`);
-  console.log(`  Total coverage (with fallbacks): ${(((wikiHits + wikiFallbacks) / breedFiles.length) * 100).toFixed(1)}%`);
+  console.log(`  Breed-specific image coverage: ${((wikiHits / breedFiles.length) * 100).toFixed(1)}%`);
   console.log('');
   console.log('Visual authority enforcement complete.');
 }
