@@ -1,6 +1,6 @@
 # Commercial Page Audit — Sample Report
 
-**Generated:** 2026-02-23T06:30:27.543Z
+**Generated:** 2026-02-24T01:10:53.823Z
 **Total pages scanned:** 6427
 **Total PASS:** 6427
 **Total FAIL:** 0
@@ -18,19 +18,19 @@
 
 ## Sampled Pages (25 pages across all species groups and page types)
 
-### 1. dogs/finnish-lapphund/best-food — **PASS**
+### 1. dogs/dogue-de-bordeaux/health-costs — **PASS**
 
 | Field | Value |
 |-------|-------|
-| **File path** | `commercial/dogs/finnish-lapphund/best-food.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/dogs/finnish-lapphund/best-food` |
+| **File path** | `commercial/dogs/dogue-de-bordeaux/health-costs.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/dogs/dogue-de-bordeaux/health-costs` |
 | **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/dogs/finnish-lapphund/best-food` |
+| **Canonical** | `https://petcarehelperai.com/commercial/dogs/dogue-de-bordeaux/health-costs` |
 | **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Finnish_Lapphund_Glenc...` |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/French_Mastiff_female_...` |
 | **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Finnish_Lapphund_Glenc...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Finnish_Lapphund_Glenc...` |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/French_Mastiff_female_...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/French_Mastiff_female_...` |
 | **Hero img matches parent** | PASS |
 | **Top Picks rows** | 5 |
 | **Has buyer guidance** | PASS |
@@ -43,19 +43,19 @@
 | **Links to companions** | 8 |
 | **Terminology OK** | PASS |
 
-### 2. cats/bengal/health-costs — **PASS**
+### 2. cats/savannah/health-costs — **PASS**
 
 | Field | Value |
 |-------|-------|
-| **File path** | `commercial/cats/bengal/health-costs.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/cats/bengal/health-costs` |
+| **File path** | `commercial/cats/savannah/health-costs.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/cats/savannah/health-costs` |
 | **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/cats/bengal/health-costs` |
+| **Canonical** | `https://petcarehelperai.com/commercial/cats/savannah/health-costs` |
 | **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Paintedcats_Red_Star_s...` |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Tarangire-Natpark80060...` |
 | **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Paintedcats_Red_Star_s...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Paintedcats_Red_Star_s...` |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Tarangire-Natpark80060...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Tarangire-Natpark80060...` |
 | **Hero img matches parent** | PASS |
 | **Top Picks rows** | 5 |
 | **Has buyer guidance** | PASS |
@@ -68,344 +68,19 @@
 | **Links to companions** | 8 |
 | **Terminology OK** | PASS |
 
-### 3. birds/red-bellied-parrot/best-food — **PASS**
+### 3. birds/canary/comparison — **PASS**
 
 | Field | Value |
 |-------|-------|
-| **File path** | `commercial/birds/red-bellied-parrot/best-food.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/birds/red-bellied-parrot/best-food` |
+| **File path** | `commercial/birds/canary/vs-cape-parrot.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/birds/canary/vs-...` |
 | **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/birds/red-bellied-parrot/best-food` |
+| **Canonical** | `https://petcarehelperai.com/commercial/birds/canary/vs-cape-parrot` |
 | **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Red-bellied_Parrot_pai...` |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/GelbA.JPG/800px-GelbA....` |
 | **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Red-bellied_Parrot_pai...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Red-bellied_Parrot_pai...` |
-| **Hero img matches parent** | PASS |
-| **Top Picks rows** | 5 |
-| **Has buyer guidance** | PASS |
-| **Has best-for section** | PASS |
-| **Has disclaimer** | PASS |
-| **Has related links** | PASS |
-| **FAQ schema count** | 5 |
-| **FAQ schema OK (4–10)** | PASS |
-| **Links to parent** | 2 |
-| **Links to companions** | 8 |
-| **Terminology OK** | PASS |
-
-### 4. fish/glass-catfish/health-costs — **PASS**
-
-| Field | Value |
-|-------|-------|
-| **File path** | `commercial/fish/glass-catfish/health-costs.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/fish/glass-catfish/health-costs` |
-| **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/fish/glass-catfish/health-costs` |
-| **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Glaswelse.jpg/800px-Gl...` |
-| **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Glaswelse.jpg/800px-Gl...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Glaswelse.jpg/800px-Gl...` |
-| **Hero img matches parent** | PASS |
-| **Top Picks rows** | 5 |
-| **Has buyer guidance** | PASS |
-| **Has best-for section** | PASS |
-| **Has disclaimer** | PASS |
-| **Has related links** | PASS |
-| **FAQ schema count** | 5 |
-| **FAQ schema OK (4–10)** | PASS |
-| **Links to parent** | 2 |
-| **Links to companions** | 8 |
-| **Terminology OK** | PASS |
-
-### 5. marine-fish/clownfish/health-costs — **PASS**
-
-| Field | Value |
-|-------|-------|
-| **File path** | `commercial/marine-fish/clownfish/health-costs.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/marine-fish/clownfish/health-costs` |
-| **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/marine-fish/clownfish/health-costs` |
-| **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Amphiprion_ocellaris_%...` |
-| **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Amphiprion_ocellaris_%...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Amphiprion_ocellaris_%...` |
-| **Hero img matches parent** | PASS |
-| **Top Picks rows** | 5 |
-| **Has buyer guidance** | PASS |
-| **Has best-for section** | PASS |
-| **Has disclaimer** | PASS |
-| **Has related links** | PASS |
-| **FAQ schema count** | 5 |
-| **FAQ schema OK (4–10)** | PASS |
-| **Links to parent** | 2 |
-| **Links to companions** | 8 |
-| **Terminology OK** | PASS |
-
-### 6. reptiles/tree-frog/best-enrichment — **PASS**
-
-| Field | Value |
-|-------|-------|
-| **File path** | `commercial/reptiles/tree-frog/best-enrichment.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/reptiles/tree-frog/best-enrichment` |
-| **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/reptiles/tree-frog/best-enrichment` |
-| **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Laubfrosch_cropped.jpg...` |
-| **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Laubfrosch_cropped.jpg...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Laubfrosch_cropped.jpg...` |
-| **Hero img matches parent** | PASS |
-| **Top Picks rows** | 5 |
-| **Has buyer guidance** | PASS |
-| **Has best-for section** | PASS |
-| **Has disclaimer** | PASS |
-| **Has related links** | PASS |
-| **FAQ schema count** | 5 |
-| **FAQ schema OK (4–10)** | PASS |
-| **Links to parent** | 2 |
-| **Links to companions** | 8 |
-| **Terminology OK** | PASS |
-
-### 7. amphibians/budgetts-frog/health-costs — **PASS**
-
-| Field | Value |
-|-------|-------|
-| **File path** | `commercial/amphibians/budgetts-frog/health-costs.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/amphibians/budgetts-frog/health-costs` |
-| **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/amphibians/budgetts-frog/health-costs` |
-| **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Lepidobatrachus_laevis...` |
-| **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Lepidobatrachus_laevis...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Lepidobatrachus_laevis...` |
-| **Hero img matches parent** | PASS |
-| **Top Picks rows** | 5 |
-| **Has buyer guidance** | PASS |
-| **Has best-for section** | PASS |
-| **Has disclaimer** | PASS |
-| **Has related links** | PASS |
-| **FAQ schema count** | 5 |
-| **FAQ schema OK (4–10)** | PASS |
-| **Links to parent** | 2 |
-| **Links to companions** | 8 |
-| **Terminology OK** | PASS |
-
-### 8. small-animals/rex-guinea-pig/first-time-owners — **PASS**
-
-| Field | Value |
-|-------|-------|
-| **File path** | `commercial/small-animals/rex-guinea-pig/first-time-owners.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/small-animals/rex-guinea-pig/first-time-owners` |
-| **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/small-animals/rex-guinea-pig/first-time-owners` |
-| **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/George_the_amazing_gui...` |
-| **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/George_the_amazing_gui...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/George_the_amazing_gui...` |
-| **Hero img matches parent** | PASS |
-| **Top Picks rows** | 5 |
-| **Has buyer guidance** | PASS |
-| **Has best-for section** | PASS |
-| **Has disclaimer** | PASS |
-| **Has related links** | PASS |
-| **FAQ schema count** | 5 |
-| **FAQ schema OK (4–10)** | PASS |
-| **Links to parent** | 2 |
-| **Links to companions** | 8 |
-| **Terminology OK** | PASS |
-
-### 9. dogs/gordon-setter/best-food — **PASS**
-
-| Field | Value |
-|-------|-------|
-| **File path** | `commercial/dogs/gordon-setter/best-food.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/dogs/gordon-setter/best-food` |
-| **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/dogs/gordon-setter/best-food` |
-| **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Orrvilas_enska_w800px....` |
-| **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Orrvilas_enska_w800px....` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Orrvilas_enska_w800px....` |
-| **Hero img matches parent** | PASS |
-| **Top Picks rows** | 5 |
-| **Has buyer guidance** | PASS |
-| **Has best-for section** | PASS |
-| **Has disclaimer** | PASS |
-| **Has related links** | PASS |
-| **FAQ schema count** | 5 |
-| **FAQ schema OK (4–10)** | PASS |
-| **Links to parent** | 2 |
-| **Links to companions** | 8 |
-| **Terminology OK** | PASS |
-
-### 10. dogs/boykin-spaniel/best-insurance — **PASS**
-
-| Field | Value |
-|-------|-------|
-| **File path** | `commercial/dogs/boykin-spaniel/best-insurance.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/dogs/boykin-spaniel/best-insurance` |
-| **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/dogs/boykin-spaniel/best-insurance` |
-| **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Boykin_Spaniel_April_J...` |
-| **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Boykin_Spaniel_April_J...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Boykin_Spaniel_April_J...` |
-| **Hero img matches parent** | PASS |
-| **Top Picks rows** | 5 |
-| **Has buyer guidance** | PASS |
-| **Has best-for section** | PASS |
-| **Has disclaimer** | PASS |
-| **Has related links** | PASS |
-| **FAQ schema count** | 5 |
-| **FAQ schema OK (4–10)** | PASS |
-| **Links to parent** | 2 |
-| **Links to companions** | 8 |
-| **Terminology OK** | PASS |
-
-### 11. reptiles/box-turtle/cost-to-own — **PASS**
-
-| Field | Value |
-|-------|-------|
-| **File path** | `commercial/reptiles/box-turtle/cost-to-own.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/reptiles/box-turtle/cost-to-own` |
-| **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/reptiles/box-turtle/cost-to-own` |
-| **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Eastern_Box_Turtle2.jp...` |
-| **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Eastern_Box_Turtle2.jp...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Eastern_Box_Turtle2.jp...` |
-| **Hero img matches parent** | PASS |
-| **Top Picks rows** | 5 |
-| **Has buyer guidance** | PASS |
-| **Has best-for section** | PASS |
-| **Has disclaimer** | PASS |
-| **Has related links** | PASS |
-| **FAQ schema count** | 5 |
-| **FAQ schema OK (4–10)** | PASS |
-| **Links to parent** | 2 |
-| **Links to companions** | 8 |
-| **Terminology OK** | PASS |
-
-### 12. reptiles/mud-turtle/health-costs — **PASS**
-
-| Field | Value |
-|-------|-------|
-| **File path** | `commercial/reptiles/mud-turtle/health-costs.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/reptiles/mud-turtle/health-costs` |
-| **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/reptiles/mud-turtle/health-costs` |
-| **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sternotherus_odoratus....` |
-| **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sternotherus_odoratus....` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sternotherus_odoratus....` |
-| **Hero img matches parent** | PASS |
-| **Top Picks rows** | 5 |
-| **Has buyer guidance** | PASS |
-| **Has best-for section** | PASS |
-| **Has disclaimer** | PASS |
-| **Has related links** | PASS |
-| **FAQ schema count** | 5 |
-| **FAQ schema OK (4–10)** | PASS |
-| **Links to parent** | 2 |
-| **Links to companions** | 8 |
-| **Terminology OK** | PASS |
-
-### 13. birds/military-macaw/first-time-owners — **PASS**
-
-| Field | Value |
-|-------|-------|
-| **File path** | `commercial/birds/military-macaw/first-time-owners.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/birds/military-macaw/first-time-owners` |
-| **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/birds/military-macaw/first-time-owners` |
-| **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Ara_militaris_-London_...` |
-| **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Ara_militaris_-London_...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Ara_militaris_-London_...` |
-| **Hero img matches parent** | PASS |
-| **Top Picks rows** | 5 |
-| **Has buyer guidance** | PASS |
-| **Has best-for section** | PASS |
-| **Has disclaimer** | PASS |
-| **Has related links** | PASS |
-| **FAQ schema count** | 5 |
-| **FAQ schema OK (4–10)** | PASS |
-| **Links to parent** | 2 |
-| **Links to companions** | 8 |
-| **Terminology OK** | PASS |
-
-### 14. dogs/goldendoodle/best-habitat-size — **PASS**
-
-| Field | Value |
-|-------|-------|
-| **File path** | `commercial/dogs/goldendoodle/best-habitat-size.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/dogs/goldendoodle/best-habitat-size` |
-| **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/dogs/goldendoodle/best-habitat-size` |
-| **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Golden_Doodle_Standing...` |
-| **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Golden_Doodle_Standing...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Golden_Doodle_Standing...` |
-| **Hero img matches parent** | PASS |
-| **Top Picks rows** | 5 |
-| **Has buyer guidance** | PASS |
-| **Has best-for section** | PASS |
-| **Has disclaimer** | PASS |
-| **Has related links** | PASS |
-| **FAQ schema count** | 5 |
-| **FAQ schema OK (4–10)** | PASS |
-| **Links to parent** | 2 |
-| **Links to companions** | 8 |
-| **Terminology OK** | PASS |
-
-### 15. fish/kole-tang/best-enrichment — **PASS**
-
-| Field | Value |
-|-------|-------|
-| **File path** | `commercial/fish/kole-tang/best-enrichment.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/fish/kole-tang/best-enrichment` |
-| **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/fish/kole-tang/best-enrichment` |
-| **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Butterfly_Pavilion_8-2...` |
-| **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Butterfly_Pavilion_8-2...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Butterfly_Pavilion_8-2...` |
-| **Hero img matches parent** | PASS |
-| **Top Picks rows** | 5 |
-| **Has buyer guidance** | PASS |
-| **Has best-for section** | PASS |
-| **Has disclaimer** | PASS |
-| **Has related links** | PASS |
-| **FAQ schema count** | 5 |
-| **FAQ schema OK (4–10)** | PASS |
-| **Links to parent** | 2 |
-| **Links to companions** | 8 |
-| **Terminology OK** | PASS |
-
-### 16. fish/fiddler-crab/comparison — **PASS**
-
-| Field | Value |
-|-------|-------|
-| **File path** | `commercial/fish/fiddler-crab/vs-fancy-goldfish.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/fish/fiddler-crab/vs-...` |
-| **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/fish/fiddler-crab/vs-fancy-goldfish` |
-| **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Fiddler_crab.jpg/800px...` |
-| **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Fiddler_crab.jpg/800px...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Fiddler_crab.jpg/800px...` |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/GelbA.JPG/800px-GelbA....` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/GelbA.JPG/800px-GelbA....` |
 | **Hero img matches parent** | PASS |
 | **Top Picks rows** | 5 |
 | **Has buyer guidance** | PASS |
@@ -418,19 +93,44 @@
 | **Links to companions** | 11 |
 | **Terminology OK** | PASS |
 
-### 17. dogs/collie/cost-to-own — **PASS**
+### 4. fish/dwarf-crayfish/comparison — **PASS**
 
 | Field | Value |
 |-------|-------|
-| **File path** | `commercial/dogs/collie/cost-to-own.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/dogs/collie/cost-to-own` |
+| **File path** | `commercial/fish/dwarf-crayfish/vs-dottyback.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/fish/dwarf-crayfish/vs-...` |
 | **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/dogs/collie/cost-to-own` |
+| **Canonical** | `https://petcarehelperai.com/commercial/fish/dwarf-crayfish/vs-dottyback` |
 | **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/1Dog-rough-collie-port...` |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Cambarellus_lesliei.jp...` |
 | **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/1Dog-rough-collie-port...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/1Dog-rough-collie-port...` |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Cambarellus_lesliei.jp...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Cambarellus_lesliei.jp...` |
+| **Hero img matches parent** | PASS |
+| **Top Picks rows** | 5 |
+| **Has buyer guidance** | PASS |
+| **Has best-for section** | PASS |
+| **Has disclaimer** | PASS |
+| **Has related links** | PASS |
+| **FAQ schema count** | 4 |
+| **FAQ schema OK (4–10)** | PASS |
+| **Links to parent** | 3 |
+| **Links to companions** | 11 |
+| **Terminology OK** | PASS |
+
+### 5. marine-fish/coral-beauty/best-food — **PASS**
+
+| Field | Value |
+|-------|-------|
+| **File path** | `commercial/marine-fish/coral-beauty/best-food.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/marine-fish/coral-beauty/best-food` |
+| **File exists** | 200 (file exists) |
+| **Canonical** | `https://petcarehelperai.com/commercial/marine-fish/coral-beauty/best-food` |
+| **Canonical OK** | PASS |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Centropyge_bispinosa_1...` |
+| **OG:image matches parent hero** | PASS |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Centropyge_bispinosa_1...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Centropyge_bispinosa_1...` |
 | **Hero img matches parent** | PASS |
 | **Top Picks rows** | 5 |
 | **Has buyer guidance** | PASS |
@@ -443,19 +143,19 @@
 | **Links to companions** | 8 |
 | **Terminology OK** | PASS |
 
-### 18. dogs/spanish-mastiff/best-habitat-size — **PASS**
+### 6. reptiles/knob-tailed-gecko/best-insurance — **PASS**
 
 | Field | Value |
 |-------|-------|
-| **File path** | `commercial/dogs/spanish-mastiff/best-habitat-size.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/dogs/spanish-mastiff/best-habitat-size` |
+| **File path** | `commercial/reptiles/knob-tailed-gecko/best-insurance.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/reptiles/knob-tailed-gecko/best-insurance` |
 | **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/dogs/spanish-mastiff/best-habitat-size` |
+| **Canonical** | `https://petcarehelperai.com/commercial/reptiles/knob-tailed-gecko/best-insurance` |
 | **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Spanish_Mastiff.JPG/80...` |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Pale_Knob-tailed_Gecko...` |
 | **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Spanish_Mastiff.JPG/80...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Spanish_Mastiff.JPG/80...` |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Pale_Knob-tailed_Gecko...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Pale_Knob-tailed_Gecko...` |
 | **Hero img matches parent** | PASS |
 | **Top Picks rows** | 5 |
 | **Has buyer guidance** | PASS |
@@ -468,19 +168,19 @@
 | **Links to companions** | 8 |
 | **Terminology OK** | PASS |
 
-### 19. small-animals/degu/best-habitat-size — **PASS**
+### 7. amphibians/eastern-newt/best-enrichment — **PASS**
 
 | Field | Value |
 |-------|-------|
-| **File path** | `commercial/small-animals/degu/best-habitat-size.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/small-animals/degu/best-habitat-size` |
+| **File path** | `commercial/amphibians/eastern-newt/best-enrichment.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/amphibians/eastern-newt/best-enrichment` |
 | **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/small-animals/degu/best-habitat-size` |
+| **Canonical** | `https://petcarehelperai.com/commercial/amphibians/eastern-newt/best-enrichment` |
 | **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Octodon_degus_-Heidelb...` |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Redspotted_newt.jpg/80...` |
 | **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Octodon_degus_-Heidelb...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Octodon_degus_-Heidelb...` |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Redspotted_newt.jpg/80...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Redspotted_newt.jpg/80...` |
 | **Hero img matches parent** | PASS |
 | **Top Picks rows** | 5 |
 | **Has buyer guidance** | PASS |
@@ -493,19 +193,44 @@
 | **Links to companions** | 8 |
 | **Terminology OK** | PASS |
 
-### 20. dogs/basset-hound/cost-to-own — **PASS**
+### 8. small-animals/white-crested-guinea-pig/comparison — **PASS**
 
 | Field | Value |
 |-------|-------|
-| **File path** | `commercial/dogs/basset-hound/cost-to-own.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/dogs/basset-hound/cost-to-own` |
+| **File path** | `commercial/small-animals/white-crested-guinea-pig/vs-winter-white.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/small-animals/white-crested-guinea-pig/vs-...` |
 | **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/dogs/basset-hound/cost-to-own` |
+| **Canonical** | `https://petcarehelperai.com/commercial/small-animals/white-crested-guinea-pig/vs-winter-white` |
 | **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/BassetHound_profil.jpg...` |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/George_the_amazing_gui...` |
 | **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/BassetHound_profil.jpg...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/BassetHound_profil.jpg...` |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/George_the_amazing_gui...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/George_the_amazing_gui...` |
+| **Hero img matches parent** | PASS |
+| **Top Picks rows** | 5 |
+| **Has buyer guidance** | PASS |
+| **Has best-for section** | PASS |
+| **Has disclaimer** | PASS |
+| **Has related links** | PASS |
+| **FAQ schema count** | 4 |
+| **FAQ schema OK (4–10)** | PASS |
+| **Links to parent** | 3 |
+| **Links to companions** | 11 |
+| **Terminology OK** | PASS |
+
+### 9. fish/turbo-snail/best-food — **PASS**
+
+| Field | Value |
+|-------|-------|
+| **File path** | `commercial/fish/turbo-snail/best-food.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/fish/turbo-snail/best-food` |
+| **File exists** | 200 (file exists) |
+| **Canonical** | `https://petcarehelperai.com/commercial/fish/turbo-snail/best-food` |
+| **Canonical OK** | PASS |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Turbo_petholatus_Voava...` |
+| **OG:image matches parent hero** | PASS |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Turbo_petholatus_Voava...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Turbo_petholatus_Voava...` |
 | **Hero img matches parent** | PASS |
 | **Top Picks rows** | 5 |
 | **Has buyer guidance** | PASS |
@@ -518,19 +243,19 @@
 | **Links to companions** | 8 |
 | **Terminology OK** | PASS |
 
-### 21. fish/common-pleco/health-costs — **PASS**
+### 10. fish/red-claw-crab/best-insurance — **PASS**
 
 | Field | Value |
 |-------|-------|
-| **File path** | `commercial/fish/common-pleco/health-costs.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/fish/common-pleco/health-costs` |
+| **File path** | `commercial/fish/red-claw-crab/best-insurance.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/fish/red-claw-crab/best-insurance` |
 | **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/fish/common-pleco/health-costs` |
+| **Canonical** | `https://petcarehelperai.com/commercial/fish/red-claw-crab/best-insurance` |
 | **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Hypostomus_plecostomus...` |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Red_Claw_Crab.jpg/800p...` |
 | **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Hypostomus_plecostomus...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Hypostomus_plecostomus...` |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Red_Claw_Crab.jpg/800p...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Red_Claw_Crab.jpg/800p...` |
 | **Hero img matches parent** | PASS |
 | **Top Picks rows** | 5 |
 | **Has buyer guidance** | PASS |
@@ -543,19 +268,19 @@
 | **Links to companions** | 8 |
 | **Terminology OK** | PASS |
 
-### 22. small-animals/french-lop/cost-to-own — **PASS**
+### 11. birds/scarlet-macaw/cost-to-own — **PASS**
 
 | Field | Value |
 |-------|-------|
-| **File path** | `commercial/small-animals/french-lop/cost-to-own.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/small-animals/french-lop/cost-to-own` |
+| **File path** | `commercial/birds/scarlet-macaw/cost-to-own.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/birds/scarlet-macaw/cost-to-own` |
 | **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/small-animals/french-lop/cost-to-own` |
+| **Canonical** | `https://petcarehelperai.com/commercial/birds/scarlet-macaw/cost-to-own` |
 | **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/8/8e/Loprabbit.JPG...` |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Scarlet_macaw_%28Ara_m...` |
 | **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/8/8e/Loprabbit.JPG...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/8/8e/Loprabbit.JPG...` |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Scarlet_macaw_%28Ara_m...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Scarlet_macaw_%28Ara_m...` |
 | **Hero img matches parent** | PASS |
 | **Top Picks rows** | 5 |
 | **Has buyer guidance** | PASS |
@@ -568,19 +293,19 @@
 | **Links to companions** | 8 |
 | **Terminology OK** | PASS |
 
-### 23. marine-fish/dottyback/best-food — **PASS**
+### 12. fish/rummy-nose-tetra/health-costs — **PASS**
 
 | Field | Value |
 |-------|-------|
-| **File path** | `commercial/marine-fish/dottyback/best-food.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/marine-fish/dottyback/best-food` |
+| **File path** | `commercial/fish/rummy-nose-tetra/health-costs.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/fish/rummy-nose-tetra/health-costs` |
 | **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/marine-fish/dottyback/best-food` |
+| **Canonical** | `https://petcarehelperai.com/commercial/fish/rummy-nose-tetra/health-costs` |
 | **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Manonichthys_splendens...` |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hemigrammus_rhodostomu...` |
 | **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Manonichthys_splendens...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Manonichthys_splendens...` |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hemigrammus_rhodostomu...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hemigrammus_rhodostomu...` |
 | **Hero img matches parent** | PASS |
 | **Top Picks rows** | 5 |
 | **Has buyer guidance** | PASS |
@@ -593,19 +318,19 @@
 | **Links to companions** | 8 |
 | **Terminology OK** | PASS |
 
-### 24. fish/goby/cost-to-own — **PASS**
+### 13. fish/green-terror/first-time-owners — **PASS**
 
 | Field | Value |
 |-------|-------|
-| **File path** | `commercial/fish/goby/cost-to-own.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/fish/goby/cost-to-own` |
+| **File path** | `commercial/fish/green-terror/first-time-owners.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/fish/green-terror/first-time-owners` |
 | **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/fish/goby/cost-to-own` |
+| **Canonical** | `https://petcarehelperai.com/commercial/fish/green-terror/first-time-owners` |
 | **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Cryptocentrus_cinctus....` |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Andinoacara_rivulatus_...` |
 | **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Cryptocentrus_cinctus....` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Cryptocentrus_cinctus....` |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Andinoacara_rivulatus_...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Andinoacara_rivulatus_...` |
 | **Hero img matches parent** | PASS |
 | **Top Picks rows** | 5 |
 | **Has buyer guidance** | PASS |
@@ -618,19 +343,294 @@
 | **Links to companions** | 8 |
 | **Terminology OK** | PASS |
 
-### 25. fish/firefish/health-costs — **PASS**
+### 14. dogs/cavapoo/best-habitat-size — **PASS**
 
 | Field | Value |
 |-------|-------|
-| **File path** | `commercial/fish/firefish/health-costs.html` |
-| **Clean URL** | `https://petcarehelperai.com/commercial/fish/firefish/health-costs` |
+| **File path** | `commercial/dogs/cavapoo/best-habitat-size.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/dogs/cavapoo/best-habitat-size` |
 | **File exists** | 200 (file exists) |
-| **Canonical** | `https://petcarehelperai.com/commercial/fish/firefish/health-costs` |
+| **Canonical** | `https://petcarehelperai.com/commercial/dogs/cavapoo/best-habitat-size` |
 | **Canonical OK** | PASS |
-| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Fire_dartfish_%28Nemat...` |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1_Red_Toy_Cavoodle_Pu...` |
 | **OG:image matches parent hero** | PASS |
-| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Fire_dartfish_%28Nemat...` |
-| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Fire_dartfish_%28Nemat...` |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1_Red_Toy_Cavoodle_Pu...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1_Red_Toy_Cavoodle_Pu...` |
+| **Hero img matches parent** | PASS |
+| **Top Picks rows** | 5 |
+| **Has buyer guidance** | PASS |
+| **Has best-for section** | PASS |
+| **Has disclaimer** | PASS |
+| **Has related links** | PASS |
+| **FAQ schema count** | 5 |
+| **FAQ schema OK (4–10)** | PASS |
+| **Links to parent** | 2 |
+| **Links to companions** | 8 |
+| **Terminology OK** | PASS |
+
+### 15. small-animals/harlequin-rabbit/best-enrichment — **PASS**
+
+| Field | Value |
+|-------|-------|
+| **File path** | `commercial/small-animals/harlequin-rabbit/best-enrichment.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/small-animals/harlequin-rabbit/best-enrichment` |
+| **File exists** | 200 (file exists) |
+| **Canonical** | `https://petcarehelperai.com/commercial/small-animals/harlequin-rabbit/best-enrichment` |
+| **Canonical OK** | PASS |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Harlequin_Rabbits.jpg/...` |
+| **OG:image matches parent hero** | PASS |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Harlequin_Rabbits.jpg/...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Harlequin_Rabbits.jpg/...` |
+| **Hero img matches parent** | PASS |
+| **Top Picks rows** | 5 |
+| **Has buyer guidance** | PASS |
+| **Has best-for section** | PASS |
+| **Has disclaimer** | PASS |
+| **Has related links** | PASS |
+| **FAQ schema count** | 5 |
+| **FAQ schema OK (4–10)** | PASS |
+| **Links to parent** | 2 |
+| **Links to companions** | 8 |
+| **Terminology OK** | PASS |
+
+### 16. small-animals/stick-insect/comparison — **PASS**
+
+| Field | Value |
+|-------|-------|
+| **File path** | `commercial/small-animals/stick-insect/vs-skinny-pig.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/small-animals/stick-insect/vs-...` |
+| **File exists** | 200 (file exists) |
+| **Canonical** | `https://petcarehelperai.com/commercial/small-animals/stick-insect/vs-skinny-pig` |
+| **Canonical OK** | PASS |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Le_Caylar_fg01.JPG/800...` |
+| **OG:image matches parent hero** | PASS |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Le_Caylar_fg01.JPG/800...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Le_Caylar_fg01.JPG/800...` |
+| **Hero img matches parent** | PASS |
+| **Top Picks rows** | 5 |
+| **Has buyer guidance** | PASS |
+| **Has best-for section** | PASS |
+| **Has disclaimer** | PASS |
+| **Has related links** | PASS |
+| **FAQ schema count** | 4 |
+| **FAQ schema OK (4–10)** | PASS |
+| **Links to parent** | 3 |
+| **Links to companions** | 11 |
+| **Terminology OK** | PASS |
+
+### 17. fish/blue-damsel/best-insurance — **PASS**
+
+| Field | Value |
+|-------|-------|
+| **File path** | `commercial/fish/blue-damsel/best-insurance.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/fish/blue-damsel/best-insurance` |
+| **File exists** | 200 (file exists) |
+| **Canonical** | `https://petcarehelperai.com/commercial/fish/blue-damsel/best-insurance` |
+| **Canonical OK** | PASS |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Chrysiptera_cyanea_Gra...` |
+| **OG:image matches parent hero** | PASS |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Chrysiptera_cyanea_Gra...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Chrysiptera_cyanea_Gra...` |
+| **Hero img matches parent** | PASS |
+| **Top Picks rows** | 5 |
+| **Has buyer guidance** | PASS |
+| **Has best-for section** | PASS |
+| **Has disclaimer** | PASS |
+| **Has related links** | PASS |
+| **FAQ schema count** | 5 |
+| **FAQ schema OK (4–10)** | PASS |
+| **Links to parent** | 2 |
+| **Links to companions** | 8 |
+| **Terminology OK** | PASS |
+
+### 18. marine-fish/powder-blue-tang/first-time-owners — **PASS**
+
+| Field | Value |
+|-------|-------|
+| **File path** | `commercial/marine-fish/powder-blue-tang/first-time-owners.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/marine-fish/powder-blue-tang/first-time-owners` |
+| **File exists** | 200 (file exists) |
+| **Canonical** | `https://petcarehelperai.com/commercial/marine-fish/powder-blue-tang/first-time-owners` |
+| **Canonical OK** | PASS |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Pez_cirujano_azul_ciel...` |
+| **OG:image matches parent hero** | PASS |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Pez_cirujano_azul_ciel...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Pez_cirujano_azul_ciel...` |
+| **Hero img matches parent** | PASS |
+| **Top Picks rows** | 5 |
+| **Has buyer guidance** | PASS |
+| **Has best-for section** | PASS |
+| **Has disclaimer** | PASS |
+| **Has related links** | PASS |
+| **FAQ schema count** | 5 |
+| **FAQ schema OK (4–10)** | PASS |
+| **Links to parent** | 2 |
+| **Links to companions** | 8 |
+| **Terminology OK** | PASS |
+
+### 19. dogs/schnoodle/best-insurance — **PASS**
+
+| Field | Value |
+|-------|-------|
+| **File path** | `commercial/dogs/schnoodle/best-insurance.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/dogs/schnoodle/best-insurance` |
+| **File exists** | 200 (file exists) |
+| **Canonical** | `https://petcarehelperai.com/commercial/dogs/schnoodle/best-insurance` |
+| **Canonical OK** | PASS |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Labradoodle_Assistance_Dogs...` |
+| **OG:image matches parent hero** | PASS |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Labradoodle_Assistance_Dogs...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Labradoodle_Assistance_Dogs...` |
+| **Hero img matches parent** | PASS |
+| **Top Picks rows** | 5 |
+| **Has buyer guidance** | PASS |
+| **Has best-for section** | PASS |
+| **Has disclaimer** | PASS |
+| **Has related links** | PASS |
+| **FAQ schema count** | 5 |
+| **FAQ schema OK (4–10)** | PASS |
+| **Links to parent** | 2 |
+| **Links to companions** | 8 |
+| **Terminology OK** | PASS |
+
+### 20. fish/jack-dempsey/first-time-owners — **PASS**
+
+| Field | Value |
+|-------|-------|
+| **File path** | `commercial/fish/jack-dempsey/first-time-owners.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/fish/jack-dempsey/first-time-owners` |
+| **File exists** | 200 (file exists) |
+| **Canonical** | `https://petcarehelperai.com/commercial/fish/jack-dempsey/first-time-owners` |
+| **Canonical OK** | PASS |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Cichlasoma_octofasciat...` |
+| **OG:image matches parent hero** | PASS |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Cichlasoma_octofasciat...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Cichlasoma_octofasciat...` |
+| **Hero img matches parent** | PASS |
+| **Top Picks rows** | 5 |
+| **Has buyer guidance** | PASS |
+| **Has best-for section** | PASS |
+| **Has disclaimer** | PASS |
+| **Has related links** | PASS |
+| **FAQ schema count** | 5 |
+| **FAQ schema OK (4–10)** | PASS |
+| **Links to parent** | 2 |
+| **Links to companions** | 8 |
+| **Terminology OK** | PASS |
+
+### 21. dogs/saluki/first-time-owners — **PASS**
+
+| Field | Value |
+|-------|-------|
+| **File path** | `commercial/dogs/saluki/first-time-owners.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/dogs/saluki/first-time-owners` |
+| **File exists** | 200 (file exists) |
+| **Canonical** | `https://petcarehelperai.com/commercial/dogs/saluki/first-time-owners` |
+| **Canonical OK** | PASS |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Red_Smooth_Saluki.jpg/...` |
+| **OG:image matches parent hero** | PASS |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Red_Smooth_Saluki.jpg/...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Red_Smooth_Saluki.jpg/...` |
+| **Hero img matches parent** | PASS |
+| **Top Picks rows** | 5 |
+| **Has buyer guidance** | PASS |
+| **Has best-for section** | PASS |
+| **Has disclaimer** | PASS |
+| **Has related links** | PASS |
+| **FAQ schema count** | 5 |
+| **FAQ schema OK (4–10)** | PASS |
+| **Links to parent** | 2 |
+| **Links to companions** | 8 |
+| **Terminology OK** | PASS |
+
+### 22. dogs/brittany/cost-to-own — **PASS**
+
+| Field | Value |
+|-------|-------|
+| **File path** | `commercial/dogs/brittany/cost-to-own.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/dogs/brittany/cost-to-own` |
+| **File exists** | 200 (file exists) |
+| **Canonical** | `https://petcarehelperai.com/commercial/dogs/brittany/cost-to-own` |
+| **Canonical OK** | PASS |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/American_Brittany_stan...` |
+| **OG:image matches parent hero** | PASS |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/American_Brittany_stan...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/American_Brittany_stan...` |
+| **Hero img matches parent** | PASS |
+| **Top Picks rows** | 5 |
+| **Has buyer guidance** | PASS |
+| **Has best-for section** | PASS |
+| **Has disclaimer** | PASS |
+| **Has related links** | PASS |
+| **FAQ schema count** | 5 |
+| **FAQ schema OK (4–10)** | PASS |
+| **Links to parent** | 2 |
+| **Links to companions** | 8 |
+| **Terminology OK** | PASS |
+
+### 23. cats/peterbald/comparison — **PASS**
+
+| Field | Value |
+|-------|-------|
+| **File path** | `commercial/cats/peterbald/vs-persian.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/cats/peterbald/vs-...` |
+| **File exists** | 200 (file exists) |
+| **Canonical** | `https://petcarehelperai.com/commercial/cats/peterbald/vs-persian` |
+| **Canonical OK** | PASS |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/b/b7/Tamila_the_lilac_tabby_Peter...` |
+| **OG:image matches parent hero** | PASS |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/b/b7/Tamila_the_lilac_tabby_Peter...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/b/b7/Tamila_the_lilac_tabby_Peter...` |
+| **Hero img matches parent** | PASS |
+| **Top Picks rows** | 5 |
+| **Has buyer guidance** | PASS |
+| **Has best-for section** | PASS |
+| **Has disclaimer** | PASS |
+| **Has related links** | PASS |
+| **FAQ schema count** | 4 |
+| **FAQ schema OK (4–10)** | PASS |
+| **Links to parent** | 3 |
+| **Links to companions** | 11 |
+| **Terminology OK** | PASS |
+
+### 24. dogs/wirehaired-pointing-griffon/comparison — **PASS**
+
+| Field | Value |
+|-------|-------|
+| **File path** | `commercial/dogs/wirehaired-pointing-griffon/vs-wire-fox-terrier.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/dogs/wirehaired-pointing-griffon/vs-...` |
+| **File exists** | 200 (file exists) |
+| **Canonical** | `https://petcarehelperai.com/commercial/dogs/wirehaired-pointing-griffon/vs-wire-fox-terrier` |
+| **Canonical OK** | PASS |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/GCH_Int_Ch_UCH_Zerubba...` |
+| **OG:image matches parent hero** | PASS |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/GCH_Int_Ch_UCH_Zerubba...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/GCH_Int_Ch_UCH_Zerubba...` |
+| **Hero img matches parent** | PASS |
+| **Top Picks rows** | 5 |
+| **Has buyer guidance** | PASS |
+| **Has best-for section** | PASS |
+| **Has disclaimer** | PASS |
+| **Has related links** | PASS |
+| **FAQ schema count** | 4 |
+| **FAQ schema OK (4–10)** | PASS |
+| **Links to parent** | 3 |
+| **Links to companions** | 11 |
+| **Terminology OK** | PASS |
+
+### 25. fish/powder-blue-tang/health-costs — **PASS**
+
+| Field | Value |
+|-------|-------|
+| **File path** | `commercial/fish/powder-blue-tang/health-costs.html` |
+| **Clean URL** | `https://petcarehelperai.com/commercial/fish/powder-blue-tang/health-costs` |
+| **File exists** | 200 (file exists) |
+| **Canonical** | `https://petcarehelperai.com/commercial/fish/powder-blue-tang/health-costs` |
+| **Canonical OK** | PASS |
+| **OG:image** | `https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Pez_cirujano_azul_ciel...` |
+| **OG:image matches parent hero** | PASS |
+| **Hero img src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Pez_cirujano_azul_ciel...` |
+| **Parent hero src** | `https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Pez_cirujano_azul_ciel...` |
 | **Hero img matches parent** | PASS |
 | **Top Picks rows** | 5 |
 | **Has buyer guidance** | PASS |
