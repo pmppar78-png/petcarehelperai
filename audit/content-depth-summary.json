@@ -1,39 +1,39 @@
 {
-  "generated": "2026-02-23T08:09:02.302Z",
+  "generated": "2026-02-24T01:09:53.134Z",
   "total_pages": 6427,
   "overall_pass": true,
   "overall_fail_reasons": [],
   "word_count_global": {
-    "min": 1251,
-    "max": 1941,
-    "avg": 1536,
-    "median": 1553
+    "min": 1205,
+    "max": 1960,
+    "avg": 1416,
+    "median": 1357
   },
   "similarity_global": {
-    "avg": 50.12,
-    "median": 52.47
+    "avg": 41.92,
+    "median": 43.02
   },
   "by_page_type": {
     "best-enrichment": {
       "count": 715,
       "word_count": {
-        "min": 1251,
-        "max": 1611,
-        "avg": 1357,
-        "median": 1349
+        "min": 1230,
+        "max": 1615,
+        "avg": 1341,
+        "median": 1332
       },
       "unique_word_count": {
-        "avg": 608
+        "avg": 623
       },
       "similarity": {
         "min": 0,
-        "max": 59.27,
-        "avg": 52.1,
-        "median": 52.47,
+        "max": 49.73,
+        "avg": 42.45,
+        "median": 42.75,
         "pct_above_70": 0
       },
       "best_for_sections": {
-        "avg": 3,
+        "avg": 4,
         "pct_with_3_plus": 100
       },
       "threshold": 1200,
@@ -44,23 +44,23 @@
     "best-food": {
       "count": 715,
       "word_count": {
-        "min": 1256,
-        "max": 1614,
-        "avg": 1364,
-        "median": 1361
+        "min": 1243,
+        "max": 1632,
+        "avg": 1371,
+        "median": 1364
       },
       "unique_word_count": {
-        "avg": 649
+        "avg": 647
       },
       "similarity": {
         "min": 0,
-        "max": 58.55,
-        "avg": 52.31,
-        "median": 52.68,
+        "max": 58.75,
+        "avg": 40.79,
+        "median": 40.77,
         "pct_above_70": 0
       },
       "best_for_sections": {
-        "avg": 8,
+        "avg": 9,
         "pct_with_3_plus": 100
       },
       "threshold": 1200,
@@ -71,19 +71,19 @@
     "best-habitat-size": {
       "count": 715,
       "word_count": {
-        "min": 1390,
-        "max": 1786,
-        "avg": 1526,
-        "median": 1522
+        "min": 1213,
+        "max": 1535,
+        "avg": 1304,
+        "median": 1298
       },
       "unique_word_count": {
-        "avg": 712
+        "avg": 636
       },
       "similarity": {
         "min": 0,
-        "max": 58.35,
-        "avg": 52.01,
-        "median": 52.51,
+        "max": 52.38,
+        "avg": 45.02,
+        "median": 45.37,
         "pct_above_70": 0
       },
       "best_for_sections": {
@@ -98,19 +98,19 @@
     "best-insurance": {
       "count": 715,
       "word_count": {
-        "min": 1341,
-        "max": 1638,
-        "avg": 1421,
-        "median": 1413
+        "min": 1260,
+        "max": 1580,
+        "avg": 1364,
+        "median": 1360
       },
       "unique_word_count": {
-        "avg": 624
+        "avg": 595
       },
       "similarity": {
         "min": 0,
-        "max": 62.49,
-        "avg": 54.37,
-        "median": 54.6,
+        "max": 57.8,
+        "avg": 40.7,
+        "median": 40.75,
         "pct_above_70": 0
       },
       "best_for_sections": {
@@ -125,19 +125,19 @@
     "cost-to-own": {
       "count": 715,
       "word_count": {
-        "min": 1477,
-        "max": 1860,
-        "avg": 1595,
-        "median": 1589
+        "min": 1302,
+        "max": 1604,
+        "avg": 1392,
+        "median": 1386
       },
       "unique_word_count": {
-        "avg": 699
+        "avg": 638
       },
       "similarity": {
         "min": 0,
-        "max": 60.58,
-        "avg": 53.86,
-        "median": 54.37,
+        "max": 55.11,
+        "avg": 45.79,
+        "median": 45.93,
         "pct_above_70": 0
       },
       "best_for_sections": {
@@ -152,19 +152,19 @@
     "first-time-owners": {
       "count": 715,
       "word_count": {
-        "min": 1481,
-        "max": 1854,
-        "avg": 1604,
-        "median": 1595
+        "min": 1205,
+        "max": 1483,
+        "avg": 1286,
+        "median": 1279
       },
       "unique_word_count": {
-        "avg": 734
+        "avg": 630
       },
       "similarity": {
         "min": 0,
-        "max": 59.81,
-        "avg": 52.48,
-        "median": 52.71,
+        "max": 56.54,
+        "avg": 48.22,
+        "median": 48.29,
         "pct_above_70": 0
       },
       "best_for_sections": {
@@ -179,23 +179,23 @@
     "health-costs": {
       "count": 715,
       "word_count": {
-        "min": 1448,
-        "max": 1813,
-        "avg": 1572,
-        "median": 1566
+        "min": 1239,
+        "max": 1511,
+        "avg": 1318,
+        "median": 1310
       },
       "unique_word_count": {
-        "avg": 681
+        "avg": 597
       },
       "similarity": {
         "min": 0,
-        "max": 61.96,
-        "avg": 53.81,
-        "median": 54.05,
+        "max": 57.01,
+        "avg": 47.59,
+        "median": 47.56,
         "pct_above_70": 0
       },
       "best_for_sections": {
-        "avg": 3,
+        "avg": 4,
         "pct_with_3_plus": 100
       },
       "threshold": 1200,
@@ -206,23 +206,23 @@
     "comparison": {
       "count": 1422,
       "word_count": {
-        "min": 1523,
-        "max": 1941,
-        "avg": 1693,
-        "median": 1691
+        "min": 1518,
+        "max": 1960,
+        "avg": 1684,
+        "median": 1675
       },
       "unique_word_count": {
-        "avg": 657
+        "avg": 632
       },
       "similarity": {
         "min": 0,
-        "max": 62.11,
-        "avg": 40.01,
-        "median": 40.17,
+        "max": 59.54,
+        "avg": 33.3,
+        "median": 33.14,
         "pct_above_70": 0
       },
       "best_for_sections": {
-        "avg": 4,
+        "avg": 5,
         "pct_with_3_plus": 100
       },
       "threshold": 1500,

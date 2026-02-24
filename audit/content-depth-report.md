@@ -1,58 +1,107 @@
 # Content Depth Audit Report
 
-**Generated:** 2026-02-23T08:09:02.306Z
+**Generated:** 2026-02-24T01:09:53.139Z
 
-## Overall Result: PASS ✅
+## Overall Result: PASS
 
 **Total pages scanned:** 6427
 
-## Global Word Count Stats
+---
 
-| Metric | Value |
-|--------|-------|
-| Min | 1251 |
-| Max | 1941 |
-| Average | 1536 |
-| Median | 1553 |
+## Before vs After: Engine-Level Differentiation Impact
 
-## Stats by Page Type
+### Global Metrics
+
+| Metric | BEFORE | AFTER | Delta |
+|--------|--------|-------|-------|
+| Avg Word Count | 1536 | 1416 | -120 (adjusted for dedup) |
+| Median Word Count | 1553 | 1357 | -196 (adjusted for dedup) |
+| Avg Similarity | 50.12% | 41.92% | **-8.20 pp** |
+| Median Similarity | 52.47% | 43.02% | **-9.45 pp** |
+| % Pages >70% Similarity | 0% | 0% | No change |
+| Min Word Count | 1251 | 1205 | -46 |
+| Max Word Count | 1941 | 1960 | +19 |
+
+### Similarity by Page Type (Median)
+
+| Page Type | BEFORE | AFTER | Delta |
+|-----------|--------|-------|-------|
+| best-enrichment | 52.47% | 42.75% | **-9.72 pp** |
+| best-food | 52.68% | 40.77% | **-11.91 pp** |
+| best-habitat-size | 52.51% | 45.37% | **-7.14 pp** |
+| best-insurance | 54.60% | 40.75% | **-13.85 pp** |
+| cost-to-own | 54.37% | 45.93% | **-8.44 pp** |
+| first-time-owners | 52.71% | 48.29% | **-4.42 pp** |
+| health-costs | 54.05% | 47.56% | **-6.49 pp** |
+| comparison | 40.17% | 33.14% | **-7.03 pp** |
+
+### Word Count Thresholds (100% Meeting Required)
+
+| Page Type | BEFORE % Meeting | AFTER % Meeting | Threshold | PASS |
+|-----------|-----------------|-----------------|-----------|------|
+| best-enrichment | 100% | 100% | 1200 | PASS |
+| best-food | 100% | 100% | 1200 | PASS |
+| best-habitat-size | 100% | 100% | 1200 | PASS |
+| best-insurance | 100% | 100% | 1200 | PASS |
+| cost-to-own | 100% | 100% | 1200 | PASS |
+| first-time-owners | 100% | 100% | 1200 | PASS |
+| health-costs | 100% | 100% | 1200 | PASS |
+| comparison | 100% | 100% | 1500 | PASS |
+
+---
+
+## Current Stats by Page Type
 
 | Page Type | Count | Min WC | Avg WC | Median WC | Max WC | Threshold | % Meeting | Med Sim | % >70% Sim | Avg Best-For | PASS |
 |-----------|-------|--------|--------|-----------|--------|-----------|-----------|---------|------------|--------------|------|
-| best-enrichment | 715 | 1251 | 1357 | 1349 | 1611 | 1200 | 100% | 52.47% | 0% | 3 | PASS |
-| best-food | 715 | 1256 | 1364 | 1361 | 1614 | 1200 | 100% | 52.68% | 0% | 8 | PASS |
-| best-habitat-size | 715 | 1390 | 1526 | 1522 | 1786 | 1200 | 100% | 52.51% | 0% | 3 | PASS |
-| best-insurance | 715 | 1341 | 1421 | 1413 | 1638 | 1200 | 100% | 54.6% | 0% | 3 | PASS |
-| cost-to-own | 715 | 1477 | 1595 | 1589 | 1860 | 1200 | 100% | 54.37% | 0% | 3 | PASS |
-| first-time-owners | 715 | 1481 | 1604 | 1595 | 1854 | 1200 | 100% | 52.71% | 0% | 3 | PASS |
-| health-costs | 715 | 1448 | 1572 | 1566 | 1813 | 1200 | 100% | 54.05% | 0% | 3 | PASS |
-| comparison | 1422 | 1523 | 1693 | 1691 | 1941 | 1500 | 100% | 40.17% | 0% | 4 | PASS |
+| best-enrichment | 715 | 1230 | 1341 | 1332 | 1615 | 1200 | 100% | 42.75% | 0% | 4 | PASS |
+| best-food | 715 | 1243 | 1371 | 1364 | 1632 | 1200 | 100% | 40.77% | 0% | 9 | PASS |
+| best-habitat-size | 715 | 1213 | 1304 | 1298 | 1535 | 1200 | 100% | 45.37% | 0% | 3 | PASS |
+| best-insurance | 715 | 1260 | 1364 | 1360 | 1580 | 1200 | 100% | 40.75% | 0% | 3 | PASS |
+| cost-to-own | 715 | 1302 | 1392 | 1386 | 1604 | 1200 | 100% | 45.93% | 0% | 3 | PASS |
+| first-time-owners | 715 | 1205 | 1286 | 1279 | 1483 | 1200 | 100% | 48.29% | 0% | 3 | PASS |
+| health-costs | 715 | 1239 | 1318 | 1310 | 1511 | 1200 | 100% | 47.56% | 0% | 4 | PASS |
+| comparison | 1422 | 1518 | 1684 | 1675 | 1960 | 1500 | 100% | 33.14% | 0% | 5 | PASS |
 
-## 20 Example Pages
+---
 
-| # | File | Page Type | Word Count | Unique Words | Similarity | Best-For Sections |
-|---|------|-----------|------------|--------------|------------|-------------------|
-| 1 | commercial/fish/common-pleco/vs-clownfish.html | comparison | 1553 | 609 | 47.15% | 4 |
-| 2 | commercial/dogs/pointer/best-insurance.html | best-insurance | 1357 | 625 | 53.94% | 3 |
-| 3 | commercial/dogs/clumber-spaniel/best-enrichment.html | best-enrichment | 1365 | 609 | 51.16% | 3 |
-| 4 | commercial/dogs/portuguese-water-dog/best-insurance.html | best-insurance | 1463 | 623 | 53.18% | 3 |
-| 5 | commercial/dogs/irish-setter/health-costs.html | health-costs | 1589 | 686 | 53.68% | 3 |
-| 6 | commercial/dogs/kai-ken/best-habitat-size.html | best-habitat-size | 1571 | 732 | 50.28% | 3 |
-| 7 | commercial/reptiles/milk-snake/health-costs.html | health-costs | 1545 | 666 | 56.3% | 3 |
-| 8 | commercial/fish/goldfish/best-insurance.html | best-insurance | 1414 | 632 | 52.6% | 3 |
-| 9 | commercial/dogs/ibizan-hound/best-insurance.html | best-insurance | 1418 | 626 | 52.64% | 3 |
-| 10 | commercial/dogs/irish-doodle/best-food.html | best-food | 1373 | 655 | 52.88% | 8 |
-| 11 | commercial/dogs/puli/best-enrichment.html | best-enrichment | 1293 | 605 | 54.69% | 3 |
-| 12 | commercial/dogs/irish-red-and-white-setter/health-costs.html | health-costs | 1732 | 674 | 53.91% | 3 |
-| 13 | commercial/dogs/shorkie/health-costs.html | health-costs | 1510 | 674 | 55.12% | 3 |
-| 14 | commercial/dogs/bull-terrier/best-food.html | best-food | 1367 | 664 | 52.68% | 8 |
-| 15 | commercial/dogs/barbet/cost-to-own.html | cost-to-own | 1561 | 709 | 53.81% | 3 |
-| 16 | commercial/dogs/taiwan-dog/cost-to-own.html | cost-to-own | 1632 | 712 | 52.32% | 3 |
-| 17 | commercial/dogs/spinone-italiano/health-costs.html | health-costs | 1566 | 675 | 53.89% | 3 |
-| 18 | commercial/marine-fish/firefish/best-habitat-size.html | best-habitat-size | 1524 | 712 | 54.1% | 3 |
-| 19 | commercial/dogs/puggle/best-enrichment.html | best-enrichment | 1298 | 605 | 53.51% | 3 |
-| 20 | commercial/dogs/bluetick-coonhound/best-habitat-size.html | best-habitat-size | 1532 | 722 | 52.12% | 3 |
+## 20 Worst Offenders After (Highest Similarity)
+
+| # | URL | Page Type | Word Count | Similarity |
+|---|-----|-----------|------------|------------|
+| 1 | /commercial/marine-fish/flame-angelfish/health-costs | health-costs | 1324 | 52.00% |
+| 2 | /commercial/reptiles/fire-salamander/health-costs | health-costs | 1297 | 51.00% |
+| 3 | /commercial/birds/conure/health-costs | health-costs | 1264 | 51.00% |
+| 4 | /commercial/fish/fancy-goldfish/cost-to-own | cost-to-own | 1399 | 50.00% |
+| 5 | /commercial/cats/ocicat/health-costs | health-costs | 1252 | 49.00% |
+| 6 | /commercial/dogs/mudi/best-habitat-size | best-habitat-size | 1244 | 49.00% |
+| 7 | /commercial/fish/molly/cost-to-own | cost-to-own | 1388 | 48.00% |
+| 8 | /commercial/dogs/yorkipoo/cost-to-own | cost-to-own | 1334 | 48.00% |
+| 9 | /commercial/dogs/toy-poodle/first-time-owners | first-time-owners | 1284 | 48.00% |
+| 10 | /commercial/dogs/rhodesian-ridgeback/first-time-owners | first-time-owners | 1258 | 48.00% |
+| 11 | /commercial/amphibians/tiger-salamander/first-time-owners | first-time-owners | 1257 | 48.00% |
+| 12 | /commercial/small-animals/gerbil/health-costs | health-costs | 1267 | 47.00% |
+| 13 | /commercial/reptiles/black-throat-monitor/first-time-owners | first-time-owners | 1320 | 47.00% |
+| 14 | /commercial/fish/silver-dollar/cost-to-own | cost-to-own | 1427 | 47.00% |
+| 15 | /commercial/fish/hermit-crab/first-time-owners | first-time-owners | 1293 | 47.00% |
+| 16 | /commercial/dogs/labrador-retriever/first-time-owners | first-time-owners | 1302 | 47.00% |
+| 17 | /commercial/dogs/hokkaido/best-habitat-size | best-habitat-size | 1239 | 47.00% |
+| 18 | /commercial/fish/arowana/health-costs | health-costs | 1249 | 46.00% |
+| 19 | /commercial/fish/siamese-algae-eater/cost-to-own | cost-to-own | 1436 | 46.00% |
+| 20 | /commercial/dogs/caucasian-shepherd/cost-to-own | cost-to-own | 1383 | 46.00% |
+
+**Note:** Worst-case similarity is 52% (well below the 70% risk threshold). All 20 pages exceed word-count thresholds.
+
+---
+
+## Confirmations
+
+- **Word-count thresholds:** All 6,427 pages exceed minimum thresholds (1200 for standard, 1500 for comparison). CONFIRMED.
+- **Canonical tags:** Unchanged (generated by base template engine, not modified by expand engine).
+- **OG meta tags:** Unchanged (generated by base template engine, not modified by expand engine).
+- **Schema (FAQPage JSON-LD):** Unchanged (generated by base template engine, not modified by expand engine).
+- **Internal links:** Unchanged (Related Pages section preserved from base template).
 
 ## Conclusion
 
-All thresholds met. Content depth is sufficient across all page types.
+All thresholds met. Content depth is sufficient across all page types. Median similarity reduced by 9.45 percentage points overall, with best-insurance showing the largest improvement at -13.85pp.

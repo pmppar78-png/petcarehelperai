@@ -1,6 +1,6 @@
 # Entity Page Injection Audit Report
 
-**Generated:** 2026-02-23T06:29:27.667Z
+**Generated:** 2026-02-24T01:11:47.944Z
 
 ## Summary
 
@@ -86,11 +86,8 @@
 
 ```html
 <div class="breed-stats-card commercial-links-section" style="margin-top:30px;">
-        <h2>Buying Guides for Akita</h2>
-        <ul style="list-style:none;padding:0;">
-          <li style="padding:6px 0;"><a href="/commercial/dogs/akita/best-food" style="color:#0D9488;">Best Food for Akita &rarr;</a></li>
-          <li style="padding:6px 0;"><a href="/commercial/dogs/akita/best-insurance" style="color:#0D9488;">Best Pet Insurance for Akita &rarr;</a></li>
-          <li style="padding:6px 0;"><a href="/commercial/dogs/akita/cost-to-own" style="color:#0D9488;">Akita Cost to Own &rarr;</a></li>
+        
+      <p>Making an informed decision about whether Akita is the right dog for your household requires honest self-assessment about your lifestyle, living situation, experience level, and long-term plans. The lists above provide a starting framework, but the reality is more nuanced than any compatibility checklist can capture. The most important factor in successful Akita ownership is not whether you match a particular profile, but whether you are genuinely prepared to adapt your lifestyle to meet this bre
 ```
 
 ### 6. `breeds/dogs/alaskan-klee-kai.html`
@@ -99,11 +96,8 @@
 
 ```html
 <div class="breed-stats-card commercial-links-section" style="margin-top:30px;">
-        <h2>Buying Guides for Alaskan Klee Kai</h2>
-        <ul style="list-style:none;padding:0;">
-          <li style="padding:6px 0;"><a href="/commercial/dogs/alaskan-klee-kai/best-food" style="color:#0D9488;">Best Food for Alaskan Klee Kai &rarr;</a></li>
-          <li style="padding:6px 0;"><a href="/commercial/dogs/alaskan-klee-kai/best-insurance" style="color:#0D9488;">Best Pet Insurance for Alaskan Klee Kai &rarr;</a></li>
-          <li style="padding:6px 0;"><a href="/commercial/dogs/alaskan-klee-kai/cos
+        
+      <p>Making an informed decision about whether Alaskan Klee Kai is the right dog for your household requires honest self-assessment about your lifestyle, living situation, experience level, and long-term plans. The lists above provide a starting framework, but the reality is more nuanced than any compatibility checklist can capture. The most important factor in successful Alaskan Klee Kai ownership is not whether you match a particular profile, but whether you are genuinely prepared to adapt your life
 ```
 
 ### 7. `breeds/dogs/alaskan-malamute.html`
@@ -112,11 +106,8 @@
 
 ```html
 <div class="breed-stats-card commercial-links-section" style="margin-top:30px;">
-        <h2>Buying Guides for Alaskan Malamute</h2>
-        <ul style="list-style:none;padding:0;">
-          <li style="padding:6px 0;"><a href="/commercial/dogs/alaskan-malamute/best-food" style="color:#0D9488;">Best Food for Alaskan Malamute &rarr;</a></li>
-          <li style="padding:6px 0;"><a href="/commercial/dogs/alaskan-malamute/best-insurance" style="color:#0D9488;">Best Pet Insurance for Alaskan Malamute &rarr;</a></li>
-          <li style="padding:6px 0;"><a href="/commercial/dogs/alaskan-malamute/cos
+        
+      <p>Making an informed decision about whether Alaskan Malamute is the right dog for your household requires honest self-assessment about your lifestyle, living situation, experience level, and long-term plans. The lists above provide a starting framework, but the reality is more nuanced than any compatibility checklist can capture. The most important factor in successful Alaskan Malamute ownership is not whether you match a particular profile, but whether you are genuinely prepared to adapt your life
 ```
 
 ### 8. `breeds/dogs/american-bulldog.html`
@@ -125,11 +116,8 @@
 
 ```html
 <div class="breed-stats-card commercial-links-section" style="margin-top:30px;">
-        <h2>Buying Guides for American Bulldog</h2>
-        <ul style="list-style:none;padding:0;">
-          <li style="padding:6px 0;"><a href="/commercial/dogs/american-bulldog/best-food" style="color:#0D9488;">Best Food for American Bulldog &rarr;</a></li>
-          <li style="padding:6px 0;"><a href="/commercial/dogs/american-bulldog/best-insurance" style="color:#0D9488;">Best Pet Insurance for American Bulldog &rarr;</a></li>
-          <li style="padding:6px 0;"><a href="/commercial/dogs/american-bulldog/cos
+        
+      <p>Making an informed decision about whether American Bulldog is the right dog for your household requires honest self-assessment about your lifestyle, living situation, experience level, and long-term plans. The lists above provide a starting framework, but the reality is more nuanced than any compatibility checklist can capture. The most important factor in successful American Bulldog ownership is not whether you match a particular profile, but whether you are genuinely prepared to adapt your life
 ```
 
 ### 9. `breeds/dogs/american-eskimo-dog.html`
@@ -138,11 +126,8 @@
 
 ```html
 <div class="breed-stats-card commercial-links-section" style="margin-top:30px;">
-        <h2>Buying Guides for American Eskimo Dog</h2>
-        <ul style="list-style:none;padding:0;">
-          <li style="padding:6px 0;"><a href="/commercial/dogs/american-eskimo-dog/best-food" style="color:#0D9488;">Best Food for American Eskimo Dog &rarr;</a></li>
-          <li style="padding:6px 0;"><a href="/commercial/dogs/american-eskimo-dog/best-insurance" style="color:#0D9488;">Best Pet Insurance for American Eskimo Dog &rarr;</a></li>
-          <li style="padding:6px 0;"><a href="/commercial/dogs/ameri
+        
+      <p>Making an informed decision about whether American Eskimo Dog is the right dog for your household requires honest self-assessment about your lifestyle, living situation, experience level, and long-term plans. The lists above provide a starting framework, but the reality is more nuanced than any compatibility checklist can capture. The most important factor in successful American Eskimo Dog ownership is not whether you match a particular profile, but whether you are genuinely prepared to adapt you
 ```
 
 ### 10. `breeds/dogs/american-eskimo.html`
@@ -151,11 +136,8 @@
 
 ```html
 <div class="breed-stats-card commercial-links-section" style="margin-top:30px;">
-        <h2>Buying Guides for American Eskimo Dog</h2>
-        <ul style="list-style:none;padding:0;">
-          <li style="padding:6px 0;"><a href="/commercial/dogs/american-eskimo/best-food" style="color:#0D9488;">Best Food for American Eskimo Dog &rarr;</a></li>
-          <li style="padding:6px 0;"><a href="/commercial/dogs/american-eskimo/best-insurance" style="color:#0D9488;">Best Pet Insurance for American Eskimo Dog &rarr;</a></li>
-          <li style="padding:6px 0;"><a href="/commercial/dogs/american-eski
+        
+      <p>Making an informed decision about whether American Eskimo Dog is the right dog for your household requires honest self-assessment about your lifestyle, living situation, experience level, and long-term plans. The lists above provide a starting framework, but the reality is more nuanced than any compatibility checklist can capture. The most important factor in successful American Eskimo Dog ownership is not whether you match a particular profile, but whether you are genuinely prepared to adapt you
 ```
 
 ---
