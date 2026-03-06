@@ -219,6 +219,7 @@ function buildFooter() {
     const t=document.querySelector('.nav-toggle'),m=document.querySelector('.nav-menu');
     if(t&&m){t.addEventListener('click',()=>{m.classList.toggle('open');t.classList.toggle('active');})}
   </script>
+  <script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
 </body>
 </html>`;
 }

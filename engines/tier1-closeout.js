@@ -233,6 +233,7 @@ function buildFooterTemplate() {
       }
     });
   </script>
+  <script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
 </body>
 </html>`;
 }
