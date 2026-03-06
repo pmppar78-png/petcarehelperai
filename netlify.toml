@@ -38,6 +38,25 @@
   status = 301
   force = true
 
+# --- Redirect non-trailing-slash directory URLs to trailing-slash ---
+[[redirects]]
+  from = "/tools"
+  to = "/tools/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations"
+  to = "/locations/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/feeds"
+  to = "/feeds/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/tools/index.html"
   to = "/tools/"
@@ -145,50 +164,50 @@
 
 # --- Commercial pages: .html extension → clean URLs ---
 [[redirects]]
-  from = "/commercial/dogs/*/*.html"
-  to = "/commercial/dogs/:splat/:splat"
+  from = "/commercial/dogs/*.html"
+  to = "/commercial/dogs/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/commercial/cats/*/*.html"
-  to = "/commercial/cats/:splat/:splat"
+  from = "/commercial/cats/*.html"
+  to = "/commercial/cats/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/commercial/birds/*/*.html"
-  to = "/commercial/birds/:splat/:splat"
+  from = "/commercial/birds/*.html"
+  to = "/commercial/birds/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/commercial/fish/*/*.html"
-  to = "/commercial/fish/:splat/:splat"
+  from = "/commercial/fish/*.html"
+  to = "/commercial/fish/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/commercial/marine-fish/*/*.html"
-  to = "/commercial/marine-fish/:splat/:splat"
+  from = "/commercial/marine-fish/*.html"
+  to = "/commercial/marine-fish/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/commercial/reptiles/*/*.html"
-  to = "/commercial/reptiles/:splat/:splat"
+  from = "/commercial/reptiles/*.html"
+  to = "/commercial/reptiles/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/commercial/amphibians/*/*.html"
-  to = "/commercial/amphibians/:splat/:splat"
+  from = "/commercial/amphibians/*.html"
+  to = "/commercial/amphibians/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/commercial/small-animals/*/*.html"
-  to = "/commercial/small-animals/:splat/:splat"
+  from = "/commercial/small-animals/*.html"
+  to = "/commercial/small-animals/:splat"
   status = 301
   force = true
 
