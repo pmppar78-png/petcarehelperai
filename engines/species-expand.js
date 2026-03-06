@@ -258,6 +258,7 @@ function generateDogPage(breed) {
   <footer class="site-footer"><p>AI Pet Medical &amp; Vet Help Finder &mdash; educational guidance, real-world vet options, and curated resources.</p>
   <nav class="footer-nav" style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);font-size:0.85rem;"><a href="/guides">Guides</a> &middot; <a href="/tools/">Tools</a> &middot; <a href="/locations/">Locations</a> &middot; <a href="/about">About</a> &middot; <a href="/privacy-policy">Privacy</a> &middot; <a href="/terms-of-service">Terms</a></nav></footer>
   <script>document.addEventListener('DOMContentLoaded',function(){var t=document.querySelector('.nav-toggle'),m=document.querySelector('.nav-menu');if(t)t.addEventListener('click',function(){m.classList.toggle('active');t.classList.toggle('active')})});</script>
+  <script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
 </body></html>`;
 }
 
@@ -522,6 +523,7 @@ function generateGenericPage(category, species) {
   <footer class="site-footer"><p>AI Pet Medical &amp; Vet Help Finder &mdash; educational guidance, real-world vet options, and curated resources.</p>
   <nav class="footer-nav" style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);font-size:0.85rem;"><a href="/guides">Guides</a> &middot; <a href="/tools/">Tools</a> &middot; <a href="/locations/">Locations</a> &middot; <a href="/about">About</a> &middot; <a href="/privacy-policy">Privacy</a> &middot; <a href="/terms-of-service">Terms</a></nav></footer>
   <script>document.addEventListener('DOMContentLoaded',function(){var t=document.querySelector('.nav-toggle'),m=document.querySelector('.nav-menu');if(t)t.addEventListener('click',function(){m.classList.toggle('active');t.classList.toggle('active')})});</script>
+  <script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
 </body></html>`;
 }
 
