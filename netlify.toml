@@ -38,42 +38,13 @@
   status = 301
   force = true
 
-# --- Redirect non-trailing-slash directory URLs to trailing-slash ---
-[[redirects]]
-  from = "/tools"
-  to = "/tools/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/locations"
-  to = "/locations/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/feeds"
-  to = "/feeds/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/tools/index.html"
-  to = "/tools/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/locations/index.html"
-  to = "/locations/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/feeds/index.html"
-  to = "/feeds/"
-  status = 301
-  force = true
+# --- Directory index serving ---
+# /tools/, /locations/, /feeds/ are handled natively by Netlify:
+# - /tools serves tools/index.html (with automatic trailing-slash redirect)
+# - /tools/ serves tools/index.html directly
+# Explicit redirect rules for these were removed because they caused
+# infinite 301 redirect loops (the force=true flag made Netlify redirect
+# /tools/ back to /tools/ endlessly, producing 5xx errors for crawlers).
 
 # --- Redirect .html extensions to clean URLs for all directories ---
 # These use force=true to override Netlify's default file serving
