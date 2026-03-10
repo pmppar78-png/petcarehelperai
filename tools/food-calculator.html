@@ -152,6 +152,7 @@
   <meta name="twitter:description" content="Free pet food calculator. Calculate exactly how much to feed your dog or cat based on weight, age, activity level, and food type. Prevent obesity and malnutrition." />
 </head>
 <body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
   <header class="site-header">
     <div class="logo-title">
       <div class="logo-pill"></div>
@@ -178,7 +179,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="breadcrumb">
       <a href="/">Home</a> <span>&rsaquo;</span>
       <a href="/tools/">Tools</a> <span>&rsaquo;</span>
@@ -306,10 +307,10 @@
       <div class="affiliate-callout">
         <h4>Premium Food Delivery Services</h4>
         <p>
-          <a href="https://www.thefarmersdog.com" target="_blank" rel="sponsored noopener">The Farmer's Dog</a> - Fresh, portion-controlled dog meals |
-          <a href="https://www.myollie.com" target="_blank" rel="sponsored noopener">Ollie</a> - Custom fresh food for dogs |
-          <a href="https://www.smalls.com" target="_blank" rel="sponsored noopener">Smalls</a> - Human-grade cat food |
-          <a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener">Chewy Autoship</a> - Save up to 35%
+          <a href="https://www.thefarmersdog.com" target="_blank" rel="sponsored noopener noreferrer">The Farmer's Dog</a> - Fresh, portion-controlled dog meals |
+          <a href="https://www.myollie.com" target="_blank" rel="sponsored noopener noreferrer">Ollie</a> - Custom fresh food for dogs |
+          <a href="https://www.smalls.com" target="_blank" rel="sponsored noopener noreferrer">Smalls</a> - Human-grade cat food |
+          <a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener noreferrer">Chewy Autoship</a> - Save up to 35%
         </p>
       </div>
 
@@ -345,9 +346,9 @@
       <a href="/guides">Guides</a> &middot;
       <a href="/tools/">Tools</a> &middot;
       <a href="/locations/">Locations</a> &middot;
-      <a href="/amphibians">Amphibians</a> &middot;
-      <a href="/marine-fish">Marine Fish</a> &middot;
-      <a href="/resources">Resources</a> &middot;
+      <a href="/amphibians">Amphibians</a>
+            <a href="/marine-fish">Marine Fish</a>
+            <a href="/resources">Resources</a> &middot;
       <a href="/about">About</a> &middot;
       <a href="/contact">Contact</a> &middot;
       <a href="/privacy-policy">Privacy</a> &middot;
@@ -455,18 +456,18 @@
         if (petType === 'dog') {
           foodRecommendations.innerHTML = `
             For dogs, we recommend:
-            <a href="https://www.thefarmersdog.com" target="_blank" rel="sponsored noopener">The Farmer's Dog</a> (fresh, pre-portioned meals),
-            <a href="https://www.myollie.com" target="_blank" rel="sponsored noopener">Ollie</a> (custom fresh food),
-            <a href="https://www.hillspet.com" target="_blank" rel="sponsored noopener">Hill's Science Diet</a> (vet-recommended),
-            or <a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener">Chewy</a> for great variety and Autoship savings.
+            <a href="https://www.thefarmersdog.com" target="_blank" rel="sponsored noopener noreferrer">The Farmer's Dog</a> (fresh, pre-portioned meals),
+            <a href="https://www.myollie.com" target="_blank" rel="sponsored noopener noreferrer">Ollie</a> (custom fresh food),
+            <a href="https://www.hillspet.com" target="_blank" rel="sponsored noopener noreferrer">Hill's Science Diet</a> (vet-recommended),
+            or <a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener noreferrer">Chewy</a> for great variety and Autoship savings.
           `;
         } else {
           foodRecommendations.innerHTML = `
             For cats, we recommend:
-            <a href="https://www.smalls.com" target="_blank" rel="sponsored noopener">Smalls</a> (human-grade cat food),
-            <a href="https://www.nomnomnow.com" target="_blank" rel="sponsored noopener">Nom Nom</a> (fresh delivery),
-            <a href="https://www.royalcanin.com" target="_blank" rel="sponsored noopener">Royal Canin</a> (breed-specific formulas),
-            or <a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener">Chewy</a> for wide selection and savings.
+            <a href="https://www.smalls.com" target="_blank" rel="sponsored noopener noreferrer">Smalls</a> (human-grade cat food),
+            <a href="https://www.nomnomnow.com" target="_blank" rel="sponsored noopener noreferrer">Nom Nom</a> (fresh delivery),
+            <a href="https://www.royalcanin.com" target="_blank" rel="sponsored noopener noreferrer">Royal Canin</a> (breed-specific formulas),
+            or <a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener noreferrer">Chewy</a> for wide selection and savings.
           `;
         }
 

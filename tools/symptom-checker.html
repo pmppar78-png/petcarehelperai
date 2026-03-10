@@ -215,6 +215,7 @@
   <meta name="twitter:description" content="Check your pet's symptoms to understand potential causes and urgency level. Know when to see a vet immediately vs. when to monitor at home." />
 </head>
 <body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
   <header class="site-header">
     <div class="logo-title">
       <div class="logo-pill"></div>
@@ -241,7 +242,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="breadcrumb">
       <a href="/">Home</a> <span>&rsaquo;</span>
       <a href="/tools/">Tools</a> <span>&rsaquo;</span>
@@ -382,10 +383,10 @@
         <p>
           <strong>Poison Control:</strong> ASPCA: (888) 426-4435 | Pet Poison Helpline: (855) 764-7661<br><br>
           <strong>Tele-Vet Services:</strong>
-          <a href="https://www.pawp.com" target="_blank" rel="sponsored noopener">Pawp</a> |
-          <a href="https://www.airvet.com" target="_blank" rel="sponsored noopener">Airvet</a> |
-          <a href="https://vetster.com" target="_blank" rel="sponsored noopener">Vetster</a> |
-          <a href="https://www.justanswer.com/veterinary" target="_blank" rel="sponsored noopener">JustAnswer Vet</a>
+          <a href="https://www.pawp.com" target="_blank" rel="sponsored noopener noreferrer">Pawp</a> |
+          <a href="https://www.airvet.com" target="_blank" rel="sponsored noopener noreferrer">Airvet</a> |
+          <a href="https://vetster.com" target="_blank" rel="sponsored noopener noreferrer">Vetster</a> |
+          <a href="https://www.justanswer.com/veterinary" target="_blank" rel="sponsored noopener noreferrer">JustAnswer Vet</a>
         </p>
       </div>
 
@@ -444,9 +445,9 @@
       <a href="/guides">Guides</a> &middot;
       <a href="/tools/">Tools</a> &middot;
       <a href="/locations/">Locations</a> &middot;
-      <a href="/amphibians">Amphibians</a> &middot;
-      <a href="/marine-fish">Marine Fish</a> &middot;
-      <a href="/resources">Resources</a> &middot;
+      <a href="/amphibians">Amphibians</a>
+            <a href="/marine-fish">Marine Fish</a>
+            <a href="/resources">Resources</a> &middot;
       <a href="/about">About</a> &middot;
       <a href="/contact">Contact</a> &middot;
       <a href="/privacy-policy">Privacy</a> &middot;
@@ -585,17 +586,17 @@
         } else if (maxSeverity === 'urgent') {
           helpHTML = `
             Call your regular vet for an urgent appointment, or try tele-vet for immediate guidance:
-            <a href="https://www.pawp.com" target="_blank" rel="sponsored noopener">Pawp</a> |
-            <a href="https://www.airvet.com" target="_blank" rel="sponsored noopener">Airvet</a> |
-            <a href="https://vetster.com" target="_blank" rel="sponsored noopener">Vetster</a>
+            <a href="https://www.pawp.com" target="_blank" rel="sponsored noopener noreferrer">Pawp</a> |
+            <a href="https://www.airvet.com" target="_blank" rel="sponsored noopener noreferrer">Airvet</a> |
+            <a href="https://vetster.com" target="_blank" rel="sponsored noopener noreferrer">Vetster</a>
           `;
         } else {
           helpHTML = `
             Schedule a vet appointment or get guidance online:
-            <a href="https://www.pawp.com" target="_blank" rel="sponsored noopener">Pawp</a> |
-            <a href="https://www.airvet.com" target="_blank" rel="sponsored noopener">Airvet</a> |
-            <a href="https://vetster.com" target="_blank" rel="sponsored noopener">Vetster</a> |
-            <a href="https://www.justanswer.com/veterinary" target="_blank" rel="sponsored noopener">JustAnswer</a>
+            <a href="https://www.pawp.com" target="_blank" rel="sponsored noopener noreferrer">Pawp</a> |
+            <a href="https://www.airvet.com" target="_blank" rel="sponsored noopener noreferrer">Airvet</a> |
+            <a href="https://vetster.com" target="_blank" rel="sponsored noopener noreferrer">Vetster</a> |
+            <a href="https://www.justanswer.com/veterinary" target="_blank" rel="sponsored noopener noreferrer">JustAnswer</a>
           `;
         }
         document.getElementById('helpLinks').innerHTML = helpHTML;
