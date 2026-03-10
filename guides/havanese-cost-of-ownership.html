@@ -85,8 +85,7 @@
   <meta name="twitter:description" content="Total cost of owning a Havanese: purchase price, food, vet bills, grooming, and insurance. Annual and lifetime budget for this small breed." />
 </head>
 <body>
-  <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <header class="site-header">
+<header class="site-header">
     <div class="logo-title">
       <div class="logo-pill"></div>
       <div>
@@ -95,8 +94,8 @@
       </div>
     </div>
     <nav class="main-nav">
-      <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
-      <ul class="nav-menu">
+      <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu"><span class="hamburger"></span></button>
+      <ul class="nav-menu" id="mobile-menu">
         <li><a href="/" class="nav-link">Home</a></li>
         <li><a href="/chat" class="nav-link">AI Pet Help</a></li>
         <li><a href="/dogs" class="nav-link">Dogs</a></li>
@@ -282,6 +281,69 @@
           document.body.classList.toggle('nav-open'); }); }
     });
   </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('#mobile-menu, .nav-menu');
+    if (!navToggle || !navMenu) return;
+
+    if (!navMenu.id) navMenu.id = 'mobile-menu';
+    navToggle.setAttribute('aria-controls', navMenu.id);
+    navToggle.setAttribute('aria-label', 'Toggle menu');
+
+    const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+    const menuIsOpen = () => navMenu.classList.contains('active') || navMenu.classList.contains('open');
+
+    const syncExpandedState = () => {
+      navToggle.setAttribute('aria-expanded', isMobile() && menuIsOpen() ? 'true' : 'false');
+    };
+
+    const closeMenu = () => {
+      navMenu.classList.remove('active', 'open');
+      navToggle.classList.remove('active');
+      navMenu.querySelectorAll('.nav-dropdown.open').forEach((dropdown) => dropdown.classList.remove('open'));
+      navMenu.querySelectorAll('.nav-dropdown-toggle[aria-expanded="true"]').forEach((toggle) => toggle.setAttribute('aria-expanded', 'false'));
+      syncExpandedState();
+    };
+
+    navToggle.addEventListener('click', function () {
+      if (!isMobile()) return;
+      requestAnimationFrame(syncExpandedState);
+    });
+
+    navMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', function () {
+        if (isMobile()) closeMenu();
+      });
+    });
+
+    navMenu.querySelectorAll('.nav-dropdown-toggle').forEach((toggle) => {
+      toggle.addEventListener('click', function () {
+        if (!isMobile()) return;
+        const dropdown = this.closest('.nav-dropdown');
+        if (!dropdown) return;
+        const willOpen = !dropdown.classList.contains('open');
+        this.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      });
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!isMobile() || !menuIsOpen()) return;
+      if (navMenu.contains(event.target) || navToggle.contains(event.target)) return;
+      closeMenu();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && isMobile() && menuIsOpen()) {
+        closeMenu();
+        navToggle.focus();
+      }
+    });
+
+    window.addEventListener('resize', syncExpandedState);
+    syncExpandedState();
+  });
+</script>
   <script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
 </body>
 </html>

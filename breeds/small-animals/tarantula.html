@@ -30,10 +30,9 @@
   <meta name="twitter:description" content="Complete Tarantula guide: care requirements, housing, diet, health, and expert tips. AI-powered pet care advice." />
 </head>
 <body>
-  <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <header class="site-header"><div class="logo-title"><div class="logo-pill"></div><div><span class="site-name">Pet Care Helper AI</span><p class="subtitle">Dogs &bull; Cats &bull; Birds &bull; Reptiles &bull; Amphibians &bull; Fish</p></div></div>
-  <nav class="main-nav"><button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
-  <ul class="nav-menu"><li><a href="/" class="nav-link">Home</a></li><li><a href="/chat" class="nav-link">AI Pet Help</a></li><li><a href="/dogs" class="nav-link">Dogs</a></li><li><a href="/cats" class="nav-link">Cats</a></li><li><a href="/birds" class="nav-link">Birds</a></li><li><a href="/reptiles" class="nav-link">Reptiles</a></li><li><a href="/amphibians" class="nav-link">Amphibians</a></li><li><a href="/fish" class="nav-link">Fish</a></li><li><a href="/marine-fish" class="nav-link">Marine Fish</a></li><li><a href="/small-animals" class="nav-link">Small Animals</a></li><li><a href="/guides" class="nav-link">Guides</a></li></ul></nav></header>
+<header class="site-header"><div class="logo-title"><div class="logo-pill"></div><div><span class="site-name">Pet Care Helper AI</span><p class="subtitle">Dogs &bull; Cats &bull; Birds &bull; Reptiles &bull; Amphibians &bull; Fish</p></div></div>
+  <nav class="main-nav"><button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu"><span class="hamburger"></span></button>
+  <ul class="nav-menu" id="mobile-menu"><li><a href="/" class="nav-link">Home</a></li><li><a href="/chat" class="nav-link">AI Pet Help</a></li><li><a href="/dogs" class="nav-link">Dogs</a></li><li><a href="/cats" class="nav-link">Cats</a></li><li><a href="/birds" class="nav-link">Birds</a></li><li><a href="/reptiles" class="nav-link">Reptiles</a></li><li><a href="/amphibians" class="nav-link">Amphibians</a></li><li><a href="/fish" class="nav-link">Fish</a></li><li><a href="/marine-fish" class="nav-link">Marine Fish</a></li><li><a href="/small-animals" class="nav-link">Small Animals</a></li><li><a href="/guides" class="nav-link">Guides</a></li></ul></nav></header>
   <main id="main-content">
     <div class="breadcrumb"><a href="/">Home</a> <span>&rsaquo;</span> <a href="/small-animals">Small Animals</a> <span>&rsaquo;</span> <a href="/breeds/small-animal-breeds">Species</a> <span>&rsaquo;</span> Tarantula</div>
     <article class="guide-content">
@@ -188,5 +187,68 @@
 <p style="font-size: 0.85rem; margin-top: 8px;">Some suggestions may include sponsored partners.</p>
   <nav class="footer-nav" style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.1);font-size:0.85rem;"><a href="/guides">Guides</a> &middot; <a href="/tools/">Tools</a> &middot; <a href="/locations/">Locations</a> &middot; <a href="/amphibians">Amphibians</a> &middot; <a href="/marine-fish">Marine Fish</a> &middot; <a href="/resources">Resources</a> &middot; <a href="/about">About</a> &middot; <a href="/contact">Contact</a> &middot; <a href="/privacy-policy">Privacy</a> &middot; <a href="/terms-of-service">Terms</a> &middot; <a href="/feeds/">RSS Feeds</a></nav></footer>
   <script>document.addEventListener('DOMContentLoaded',function(){var t=document.querySelector('.nav-toggle'),m=document.querySelector('.nav-menu');if(t)t.addEventListener('click',function(){m.classList.toggle('active');t.classList.toggle('active')})});</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('#mobile-menu, .nav-menu');
+    if (!navToggle || !navMenu) return;
+
+    if (!navMenu.id) navMenu.id = 'mobile-menu';
+    navToggle.setAttribute('aria-controls', navMenu.id);
+    navToggle.setAttribute('aria-label', 'Toggle menu');
+
+    const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+    const menuIsOpen = () => navMenu.classList.contains('active') || navMenu.classList.contains('open');
+
+    const syncExpandedState = () => {
+      navToggle.setAttribute('aria-expanded', isMobile() && menuIsOpen() ? 'true' : 'false');
+    };
+
+    const closeMenu = () => {
+      navMenu.classList.remove('active', 'open');
+      navToggle.classList.remove('active');
+      navMenu.querySelectorAll('.nav-dropdown.open').forEach((dropdown) => dropdown.classList.remove('open'));
+      navMenu.querySelectorAll('.nav-dropdown-toggle[aria-expanded="true"]').forEach((toggle) => toggle.setAttribute('aria-expanded', 'false'));
+      syncExpandedState();
+    };
+
+    navToggle.addEventListener('click', function () {
+      if (!isMobile()) return;
+      requestAnimationFrame(syncExpandedState);
+    });
+
+    navMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', function () {
+        if (isMobile()) closeMenu();
+      });
+    });
+
+    navMenu.querySelectorAll('.nav-dropdown-toggle').forEach((toggle) => {
+      toggle.addEventListener('click', function () {
+        if (!isMobile()) return;
+        const dropdown = this.closest('.nav-dropdown');
+        if (!dropdown) return;
+        const willOpen = !dropdown.classList.contains('open');
+        this.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      });
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!isMobile() || !menuIsOpen()) return;
+      if (navMenu.contains(event.target) || navToggle.contains(event.target)) return;
+      closeMenu();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && isMobile() && menuIsOpen()) {
+        closeMenu();
+        navToggle.focus();
+      }
+    });
+
+    window.addEventListener('resize', syncExpandedState);
+    syncExpandedState();
+  });
+</script>
   <script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
 </body></html>
