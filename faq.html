@@ -35,7 +35,22 @@
     "dateModified": "2026-02-19",
     "author": [{"@type": "Organization", "name": "Pet Care Helper AI"}, {"@type": "Person", "name": "Paul Paradis", "jobTitle": "Founder", "url": "https://petcarehelperai.com/about"}], "reviewedBy": {"@type": "Organization", "name": "Pet Care Helper AI Veterinary Review Team", "url": "https://petcarehelperai.com/editorial-standards"},
     "publisher": {"@type": "Organization", "name": "Pet Care Helper AI"},
-    "mainEntity": []
+    "mainEntity": [
+      {"@type": "Question", "name": "What is AI Pet Medical & Vet Help Finder?", "acceptedAnswer": {"@type": "Answer", "text": "This platform is an AI-powered pet health guidance assistant that provides information for pet health concerns, connects you with veterinary services, and offers curated pet care resources for dogs, cats, birds, reptiles, and fish."}},
+      {"@type": "Question", "name": "Is this a replacement for my veterinarian?", "acceptedAnswer": {"@type": "Answer", "text": "No. The AI provides educational guidance and helps you understand when to seek professional care. Always consult a licensed veterinarian for diagnoses and treatment decisions."}},
+      {"@type": "Question", "name": "What types of pets do you support?", "acceptedAnswer": {"@type": "Answer", "text": "The platform supports dogs, cats, birds, reptiles, and fish. The AI is trained on a wide range of pet health information across these species, including exotic pets that may require specialized care."}},
+      {"@type": "Question", "name": "How does the AI help work?", "acceptedAnswer": {"@type": "Answer", "text": "Simply describe your pet's symptoms or concerns in your own words. The AI analyzes the information, highlights any red flags, suggests at-home care when appropriate, and advises when professional veterinary care is needed."}},
+      {"@type": "Question", "name": "Can I use this service at any time of day?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The AI assistant is available 24 hours a day, 7 days a week. Pet health concerns don't follow business hours, so the platform is always accessible when you need guidance."}},
+      {"@type": "Question", "name": "What if my pet has an emergency?", "acceptedAnswer": {"@type": "Answer", "text": "For emergencies, contact your local veterinarian or emergency animal clinic immediately. The AI can help identify urgent situations and connect you with emergency services in your area."}},
+      {"@type": "Question", "name": "Do I need to create an account to use the AI assistant?", "acceptedAnswer": {"@type": "Answer", "text": "No account creation is required to access the AI pet help assistant. You can start asking questions immediately through the chat interface."}},
+      {"@type": "Question", "name": "Can the AI help me find veterinarians near me?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The platform can connect you with local veterinary clinics, emergency animal hospitals, tele-veterinary services, exotic pet specialists, and mobile veterinarians based on your location and needs."}},
+      {"@type": "Question", "name": "What kinds of questions can I ask the AI?", "acceptedAnswer": {"@type": "Answer", "text": "You can ask about symptoms, behavioral concerns, nutrition questions, training tips, grooming recommendations, emergency situations, wellness care, habitat setup for exotic pets, and general pet care topics."}},
+      {"@type": "Question", "name": "How does the AI know if something is serious?", "acceptedAnswer": {"@type": "Answer", "text": "The AI is trained to recognize red flag symptoms and patterns that may indicate urgent health concerns. It analyzes your description and compares it against extensive databases of pet health information to assess severity and recommend appropriate action."}},
+      {"@type": "Question", "name": "Can the AI help with exotic pets like reptiles and birds?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The platform includes specialized knowledge for exotic pets including birds, reptiles, and fish. It can help you find veterinarians with exotic animal expertise and provide species-appropriate guidance."}},
+      {"@type": "Question", "name": "What should I have ready when describing my pet's symptoms?", "acceptedAnswer": {"@type": "Answer", "text": "Be prepared to describe when symptoms started, how your pet is behaving differently, any changes in eating or drinking habits, bathroom habits, energy levels, and any other unusual behaviors. The more detail you provide, the better the AI can assess the situation."}},
+      {"@type": "Question", "name": "Can I ask follow-up questions during a conversation?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The AI assistant supports interactive conversations where you can ask follow-up questions, clarify details, and get additional guidance based on your pet's specific situation."}},
+      {"@type": "Question", "name": "Does the platform provide resources beyond health emergencies?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Beyond urgent health concerns, the platform offers resources for nutrition, training, grooming, boarding, DNA testing, GPS tracking devices, wellness planning, and preventive care to support your pet's long-term health."}}
+    ]
   }
   </script>
   <meta property="og:title" content="FAQ - Pet Care Helper AI" />
@@ -47,6 +62,7 @@
   <meta name="twitter:description" content="Frequently asked questions about the AI Pet Help platform. Learn how our educational pet health guidance service works." />
 </head>
 <body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
   <header class="site-header">
     <div class="logo-title">
       <div class="logo-pill"></div>
@@ -63,7 +79,7 @@
         <li><a href="/" class="nav-link">Home</a></li>
         <li><a href="/chat" class="nav-link">AI Pet Help</a></li>
         <li class="nav-dropdown">
-          <span class="nav-link nav-dropdown-toggle">Pets</span>
+          <span class="nav-link nav-dropdown-toggle" role="button" tabindex="0" aria-expanded="false">Pets</span>
           <ul class="nav-dropdown-menu">
             <li><a href="/dogs" class="nav-link">Dogs</a></li>
             <li><a href="/cats" class="nav-link">Cats</a></li>
@@ -78,7 +94,7 @@
         <li><a href="/guides" class="nav-link">Guides</a></li>
         <li><a href="/resources" class="nav-link">Resources</a></li>
         <li class="nav-dropdown">
-          <span class="nav-link nav-dropdown-toggle">Tools</span>
+          <span class="nav-link nav-dropdown-toggle" role="button" tabindex="0" aria-expanded="false">Tools</span>
           <ul class="nav-dropdown-menu">
             <li><a href="/tools/symptom-checker" class="nav-link">Symptom Checker</a></li>
             <li><a href="/tools/food-calculator" class="nav-link">Food Calculator</a></li>
@@ -91,7 +107,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="info-card">
       <h1>Frequently Asked Questions</h1>
 
@@ -188,9 +204,9 @@
           <h4>Resources</h4>
           <ul>
             <li><a href="/guides">Care Guides</a></li>
-            <li><a href="/amphibians">Amphibians</a> &middot;
-      <a href="/marine-fish">Marine Fish</a> &middot;
-      <a href="/resources">Resources</a></li>
+            <li><a href="/amphibians">Amphibians</a>
+            <a href="/marine-fish">Marine Fish</a>
+            <a href="/resources">Resources</a></li>
             <li><a href="/chat">AI Pet Help</a></li>
             <li><a href="/tools/symptom-checker">Symptom Checker</a></li>
           </ul>
