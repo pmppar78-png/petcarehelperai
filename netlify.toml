@@ -72,6 +72,19 @@
   status = 301
   force = true
 
+# --- Redirect misplaced amphibian breed pages from reptiles to amphibians ---
+[[redirects]]
+  from = "/breeds/reptiles/poison-dart-frog"
+  to = "/breeds/amphibians/poison-dart-frog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/tree-frog"
+  to = "/breeds/amphibians/tree-frog"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/breeds/reptiles/*.html"
   to = "/breeds/reptiles/:splat"
