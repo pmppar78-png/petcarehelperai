@@ -321,10 +321,10 @@ const disclaimerVariants = [
 // SCHEMA AUTHOR UPGRADE
 // ============================================================
 const oldAuthorSchema = '"author":{"@type":"Organization","name":"Pet Care Helper AI"}';
-const newAuthorSchema = '"author":[{"@type":"Organization","name":"Pet Care Helper AI"},{"@type":"Person","name":"Paul Paradis","jobTitle":"Founder","url":"https://petcarehelperai.com/about"}],"reviewedBy":{"@type":"Organization","name":"Pet Care Helper AI Veterinary Review Team","url":"https://petcarehelperai.com/editorial-standards"}';
+const newAuthorSchema = '"author":[{"@type":"Organization","name":"Pet Care Helper AI"},{"@type":"Person","name":"Paul Paradis","jobTitle":"Founder","url":"https://petcarehelperai.com/about"}],"reviewedBy":{"@type":"Organization","name":"Pet Care Helper AI Editorial Team","url":"https://petcarehelperai.com/editorial-standards"}';
 
 const oldAuthorSchemaAlt = '"author": {"@type": "Organization", "name": "Pet Care Helper AI"}';
-const newAuthorSchemaAlt = '"author": [{"@type": "Organization", "name": "Pet Care Helper AI"}, {"@type": "Person", "name": "Paul Paradis", "jobTitle": "Founder", "url": "https://petcarehelperai.com/about"}], "reviewedBy": {"@type": "Organization", "name": "Pet Care Helper AI Veterinary Review Team", "url": "https://petcarehelperai.com/editorial-standards"}';
+const newAuthorSchemaAlt = '"author": [{"@type": "Organization", "name": "Pet Care Helper AI"}, {"@type": "Person", "name": "Paul Paradis", "jobTitle": "Founder", "url": "https://petcarehelperai.com/about"}], "reviewedBy": {"@type": "Organization", "name": "Pet Care Helper AI Editorial Team", "url": "https://petcarehelperai.com/editorial-standards"}';
 
 // ============================================================
 // LOCATION PAGE EXPANSION DATA
