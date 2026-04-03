@@ -1,4 +1,5 @@
 [build]
+  publish = "."
   functions = "netlify/functions"
 
 # pretty_urls is intentionally DISABLED so that .html redirect rules (force=true)
@@ -205,6 +206,29 @@
 # =====================================================
 # HEADERS — SEO and performance optimization
 # =====================================================
+
+# --- Critical crawl files: ads.txt, robots.txt, sitemap.xml ---
+# Served with correct content types, short cache, no X-Robots-Tag
+[[headers]]
+  for = "/ads.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=3600, must-revalidate"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=3600, must-revalidate"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=3600, must-revalidate"
+    X-Content-Type-Options = "nosniff"
 
 # Default headers for all pages — security + SEO
 [[headers]]
