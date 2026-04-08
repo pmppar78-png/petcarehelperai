@@ -185,7 +185,7 @@
       <h3>Dental Chews, Treats, and Supplements</h3>
       <p>Dental chews and treats can be a useful supplement to brushing, but they should not be considered a replacement. Look for products carrying the Veterinary Oral Health Council (VOHC) Seal of Acceptance, which indicates the product has met pre-set standards for reducing plaque or tartar in controlled clinical trials. The VOHC maintains a list of accepted products on their website for both dogs and cats. When selecting dental chews, choose products appropriate for your pet's size to reduce the risk of choking or gastrointestinal blockage, and account for the calories in your pet's daily intake.</p>
 
-      <p><strong>Water additives</strong> are tasteless or mildly flavored solutions added to your pet's drinking water. Some have earned the VOHC seal and can provide a modest reduction in plaque and tartar accumulation. They work best as part of a comprehensive dental care routine rather than as a standalone solution.</p>
+      <p><strong>Water additives</strong> are tasteless or mildly flavored solutions added to your pet's drinking water. Some have earned the VOHC seal and can provide a modest reduction in plaque and tartar accumulation. They work best as part of a full dental care routine rather than as a standalone solution.</p>
 
       <p><strong>Dental diets</strong> are specially formulated kibble with a larger, fibrous texture designed to mechanically scrub the tooth surface during chewing. Several dental diets have received the VOHC seal. Your veterinarian can help determine whether a dental diet is appropriate for your pet's nutritional needs.</p>
 
@@ -264,6 +264,9 @@
             <li><a href="/birds">Birds</a></li>
             <li><a href="/reptiles">Reptiles</a></li>
             <li><a href="/fish">Fish</a></li>
+            <li><a href="/small-animals">Small Animals</a></li>
+            <li><a href="/amphibians">Amphibians</a></li>
+            <li><a href="/marine-fish">Marine Fish</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -319,28 +322,6 @@
       <a href="/feeds/">RSS Feeds</a>
     </nav>
   </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const navToggle = document.querySelector('.nav-toggle');
-      const navMenu = document.querySelector('.nav-menu');
-      if (navToggle) {
-        navToggle.addEventListener('click', function() {
-          navMenu.classList.toggle('active');
-          navToggle.classList.toggle('active');
-        });
-      }
-      const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
-      dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            this.closest('.nav-dropdown').classList.toggle('open');
-          }
-        });
-      });
-    });
-  </script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.querySelector('.nav-toggle');

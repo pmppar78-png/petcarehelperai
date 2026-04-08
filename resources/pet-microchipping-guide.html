@@ -202,6 +202,9 @@
             <li><a href="/birds">Birds</a></li>
             <li><a href="/reptiles">Reptiles</a></li>
             <li><a href="/fish">Fish</a></li>
+            <li><a href="/small-animals">Small Animals</a></li>
+            <li><a href="/amphibians">Amphibians</a></li>
+            <li><a href="/marine-fish">Marine Fish</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -257,28 +260,6 @@
       <a href="/feeds/">RSS Feeds</a>
     </nav>
   </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const navToggle = document.querySelector('.nav-toggle');
-      const navMenu = document.querySelector('.nav-menu');
-      if (navToggle) {
-        navToggle.addEventListener('click', function() {
-          navMenu.classList.toggle('active');
-          navToggle.classList.toggle('active');
-        });
-      }
-      const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
-      dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            this.closest('.nav-dropdown').classList.toggle('open');
-          }
-        });
-      });
-    });
-  </script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.querySelector('.nav-toggle');
