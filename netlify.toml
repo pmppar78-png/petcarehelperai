@@ -242,103 +242,14 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 # =====================================================
-# Phase 2 — noindex for non-editorial / low-value pages
-# Only resources and core editorial pages remain indexed.
-# All programmatic/scaled content directories are noindexed.
+# Noindex only for utility / non-content pages
+# All content pages (breeds, guides, commercial, locations) are indexed.
 # =====================================================
 
-# No-index for all guide pages (scaled breed-specific content)
-[[headers]]
-  for = "/guides/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-# No-index for guides listing page
-[[headers]]
-  for = "/guides"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-# No-index for all breed pages (programmatic/scaled content)
-[[headers]]
-  for = "/breeds/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-# No-index for all commercial pages
-[[headers]]
-  for = "/commercial/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-# No-index for all location pages (programmatic/scaled content)
-[[headers]]
-  for = "/locations/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
 # No-index for tools pages
-[[headers]]
-  for = "/tools/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-# No-index for animal category landing pages
-[[headers]]
-  for = "/dogs"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-[[headers]]
-  for = "/cats"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-[[headers]]
-  for = "/birds"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-[[headers]]
-  for = "/fish"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-[[headers]]
-  for = "/reptiles"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-[[headers]]
-  for = "/amphibians"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-[[headers]]
-  for = "/small-animals"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-[[headers]]
-  for = "/marine-fish"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-# No-index for chat page (tool, not editorial)
+# No-index for chat page (interactive tool, not editorial content)
 [[headers]]
   for = "/chat"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-# No-index for partners page (commercial)
-[[headers]]
-  for = "/partners"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-# No-index for press-kit page (thin content)
-[[headers]]
-  for = "/press-kit"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
@@ -354,22 +265,9 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
-# No-index for RSS feed landing pages and feed files
+# No-index for RSS feed files (not meant for direct browsing)
 [[headers]]
   for = "/feeds/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-# Individual guide noindex rules removed — covered by /guides/* wildcard above
-
-# No-index for duplicate/overlapping resource pages (keeping the stronger version indexed)
-[[headers]]
-  for = "/resources/pet-dental-health-guide"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
-[[headers]]
-  for = "/resources/choosing-a-veterinarian"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
