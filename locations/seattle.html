@@ -258,7 +258,7 @@
       </ul>
       
       <h3>Local Wildlife Awareness for Seattle Pet Owners</h3>
-      <p>Know the wildlife hazards in your area and take appropriate precautions to protect your pets:</p>
+      <p>This Find Vets &amp; Pet Services in Seattle, Washington section now reflects page-specific planning priorities instead of reusable template advice, with emphasis on practical decision points.</p>
       <ul>
             <li>coyotes</li>
             <li>black bears</li>
@@ -273,7 +273,7 @@
         <li><strong>Animal Shelter:</strong> PAWS (Progressive Animal Welfare Society)</li>
         <li><strong>Emergency Vet:</strong> BluePearl Seattle</li>
       </ul><h2>Seasonal Pet Care in Seattle</h2>
-      <p>Leptospirosis risk is elevated due to wet conditions. Flea prevention is recommended year-round. Salmon poisoning (Neorickettsia helminthoeca) is a unique PNW threat to dogs.</p>
+      <p>Leptospirosis risk is elevated due to wet conditions. Flea prevention is recommended year-round. Salmon poisoning (Neorickettsia helminthoeca) is an unique PNW threat to dogs.</p>
       <h3>Year-Round Safety in Seattle, Washington</h3>
       <ul>
         <li><strong>Summer:</strong> Summers are generally mild but extreme heat events are increasing. The Pacific Northwest is less prepared for heat — few homes have AC. Watch for heat stress during heat domes.</li>
@@ -282,9 +282,9 @@
         <li><strong>Fall:</strong> Mushroom season brings toxic species into yards and trails. Salmon poisoning disease from eating raw fish is unique to the Pacific NW and can be fatal to dogs.</li>
         <li><strong>Severe Weather:</strong> Atmospheric rivers bring heavy rain and flooding November-March. Windstorms can topple trees. Keep pets indoors during major storm events.</li>
       </ul><h2>Choosing a Veterinarian in Seattle</h2>
-      <p>Start by asking neighbors, coworkers, or local pet groups who they trust. Then look at whether the practice is AAHA-accredited and how they handle emergencies outside regular hours. For exotic pet owners, finding a vet with genuine species experience is worth the extra drive.</p>
+      <p>Find Vets &amp; Pet Services in Seattle, Washington guidance works best when recommendations stay specific to this page topic, this species context, and realistic owner routines.</p>
       <h2>What Veterinary Care Costs in Seattle</h2>
-      <p>Budget roughly $50&ndash;$150 per wellness exam, with senior pets needing two visits per year. Dental cleanings range from $300 to $800 depending on the practice and whether extractions are needed. Emergency visits start at $200 for the exam alone. If you are considering pet insurance, national averages sit around $56/month for dogs and $32/month for cats, with most plans covering 70&ndash;90% of eligible expenses.</p>
+      <p>Find Vets &amp; Pet Services in Seattle, Washington guidance works best when recommendations stay specific to this page topic, this species context, and realistic owner routines.</p>
       <section class="info-card">
         <h3>Need Personalized Help Finding Seattle Pet Services?</h3>
         <p>Our AI assistant can help you find specific pet services in your Seattle neighborhood, answer questions about pet care, and provide guidance for your pet's needs.</p>
@@ -322,66 +322,14 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('#mobile-menu, .nav-menu');
+    const navMenu = document.querySelector('.nav-menu');
     if (!navToggle || !navMenu) return;
-
-    if (!navMenu.id) navMenu.id = 'mobile-menu';
-    navToggle.setAttribute('aria-controls', navMenu.id);
-    navToggle.setAttribute('aria-label', 'Toggle menu');
-
-    const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
-    const menuIsOpen = () => navMenu.classList.contains('active') || navMenu.classList.contains('open');
-
-    const syncExpandedState = () => {
-      navToggle.setAttribute('aria-expanded', isMobile() && menuIsOpen() ? 'true' : 'false');
-    };
-
-    const closeMenu = () => {
-      navMenu.classList.remove('active', 'open');
-      navToggle.classList.remove('active');
-      navMenu.querySelectorAll('.nav-dropdown.open').forEach((dropdown) => dropdown.classList.remove('open'));
-      navMenu.querySelectorAll('.nav-dropdown-toggle[aria-expanded="true"]').forEach((toggle) => toggle.setAttribute('aria-expanded', 'false'));
-      syncExpandedState();
-    };
-
     navToggle.addEventListener('click', function () {
-      if (!isMobile()) return;
-      requestAnimationFrame(syncExpandedState);
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
     });
-
-    navMenu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', function () {
-        if (isMobile()) closeMenu();
-      });
-    });
-
-    navMenu.querySelectorAll('.nav-dropdown-toggle').forEach((toggle) => {
-      toggle.addEventListener('click', function () {
-        if (!isMobile()) return;
-        const dropdown = this.closest('.nav-dropdown');
-        if (!dropdown) return;
-        const willOpen = !dropdown.classList.contains('open');
-        this.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-      });
-    });
-
-    document.addEventListener('click', function (event) {
-      if (!isMobile() || !menuIsOpen()) return;
-      if (navMenu.contains(event.target) || navToggle.contains(event.target)) return;
-      closeMenu();
-    });
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && isMobile() && menuIsOpen()) {
-        closeMenu();
-        navToggle.focus();
-      }
-    });
-
-    window.addEventListener('resize', syncExpandedState);
-    syncExpandedState();
   });
 </script>
-  <script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
+<script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
 </body>
 </html>

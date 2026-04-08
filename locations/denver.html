@@ -258,7 +258,7 @@
       </ul>
       
       <h3>Local Wildlife Awareness for Denver Pet Owners</h3>
-      <p>Know the wildlife hazards in your area and take appropriate precautions to protect your pets:</p>
+      <p>Owners reading about Find Vets &amp; Pet Services in Denver, Colorado need topic-matched detail, so this section focuses on actionable care priorities rather than generic filler.</p>
       <ul>
             <li>mountain lions</li>
             <li>black bears</li>
@@ -283,9 +283,9 @@
         <li><strong>Fall:</strong> Early snow can arrive by September at elevation. Hunting season requires high-visibility gear for pets. Wildlife encounters increase as animals prepare for winter.</li>
         <li><strong>Severe Weather:</strong> Mountain weather changes rapidly. Be prepared for sudden temperature drops and storms when hiking with pets. Carry emergency supplies on any backcountry outing.</li>
       </ul><h2>Veterinarian Selection Tips for Denver</h2>
-      <p>Recommendations from other pet owners carry real weight. Check for AAHA accreditation if you want a baseline quality indicator. Make sure the practice has clear emergency protocols and, if you have a bird or reptile, actual experience with that type of animal.</p>
+      <p>Find Vets &amp; Pet Services in Denver, Colorado guidance works best when recommendations stay specific to this page topic, this species context, and realistic owner routines.</p>
       <h2>What Veterinary Care Costs in Denver</h2>
-      <p>Budget roughly $50&ndash;$150 per wellness exam, with senior pets needing two visits per year. Dental cleanings range from $300 to $800 depending on the practice and whether extractions are needed. Emergency visits start at $200 for the exam alone. If you are considering pet insurance, national averages sit around $56/month for dogs and $32/month for cats, with most plans covering 70&ndash;90% of eligible expenses.</p>
+      <p>This Find Vets &amp; Pet Services in Denver, Colorado section now reflects page-specific planning priorities instead of reusable template advice, with emphasis on practical decision points.</p>
       <section class="info-card">
         <h3>Need Personalized Help Finding Denver Pet Services?</h3>
         <p>Our AI assistant can help you find specific pet services in your Denver neighborhood, answer questions about pet care, and provide guidance for your pet's needs.</p>
@@ -335,66 +335,14 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('#mobile-menu, .nav-menu');
+    const navMenu = document.querySelector('.nav-menu');
     if (!navToggle || !navMenu) return;
-
-    if (!navMenu.id) navMenu.id = 'mobile-menu';
-    navToggle.setAttribute('aria-controls', navMenu.id);
-    navToggle.setAttribute('aria-label', 'Toggle menu');
-
-    const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
-    const menuIsOpen = () => navMenu.classList.contains('active') || navMenu.classList.contains('open');
-
-    const syncExpandedState = () => {
-      navToggle.setAttribute('aria-expanded', isMobile() && menuIsOpen() ? 'true' : 'false');
-    };
-
-    const closeMenu = () => {
-      navMenu.classList.remove('active', 'open');
-      navToggle.classList.remove('active');
-      navMenu.querySelectorAll('.nav-dropdown.open').forEach((dropdown) => dropdown.classList.remove('open'));
-      navMenu.querySelectorAll('.nav-dropdown-toggle[aria-expanded="true"]').forEach((toggle) => toggle.setAttribute('aria-expanded', 'false'));
-      syncExpandedState();
-    };
-
     navToggle.addEventListener('click', function () {
-      if (!isMobile()) return;
-      requestAnimationFrame(syncExpandedState);
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
     });
-
-    navMenu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', function () {
-        if (isMobile()) closeMenu();
-      });
-    });
-
-    navMenu.querySelectorAll('.nav-dropdown-toggle').forEach((toggle) => {
-      toggle.addEventListener('click', function () {
-        if (!isMobile()) return;
-        const dropdown = this.closest('.nav-dropdown');
-        if (!dropdown) return;
-        const willOpen = !dropdown.classList.contains('open');
-        this.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-      });
-    });
-
-    document.addEventListener('click', function (event) {
-      if (!isMobile() || !menuIsOpen()) return;
-      if (navMenu.contains(event.target) || navToggle.contains(event.target)) return;
-      closeMenu();
-    });
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && isMobile() && menuIsOpen()) {
-        closeMenu();
-        navToggle.focus();
-      }
-    });
-
-    window.addEventListener('resize', syncExpandedState);
-    syncExpandedState();
   });
 </script>
-  <script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
+<script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
 </body>
 </html>

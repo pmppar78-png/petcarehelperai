@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-04-08T02:57:51.824Z",
+  "scanned_files": 9522,
+  "changed_files": 7416,
+  "issue_class_file_counts": {
+    "duplication": 7366,
+    "title_variable_leaks": 2,
+    "faq_schema_alignment": 191,
+    "species_inappropriate": 62,
+    "comparison_integrity": 0,
+    "html_markup": 2,
+    "javascript_repairs": 0,
+    "source_contamination": 62,
+    "location_value_duplication": 150,
+    "breed_template_padding": 604,
+    "exotic_genericity": 64,
+    "low_level_quality": 2
+  },
+  "duplicate_family_keys_fixed": 215
+}

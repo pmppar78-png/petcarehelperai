@@ -252,7 +252,7 @@
       </ul>
       
       <h3>Local Wildlife Awareness for Chicago Pet Owners</h3>
-      <p>Know the wildlife hazards in your area and take appropriate precautions to protect your pets:</p>
+      <p>Owners reading about Find Vets &amp; Pet Services in Chicago need topic-matched detail, so this section focuses on actionable care priorities rather than generic filler.</p>
       <ul>
             <li>coyotes</li>
             <li>white-tailed deer (vehicle collision risk)</li>
@@ -276,9 +276,9 @@
         <li><strong>Fall:</strong> Hunting season increases risks for outdoor pets — use bright vests. Antifreeze toxicity risk rises as temperatures drop.</li>
         <li><strong>Severe Weather:</strong> Tornadoes are a significant risk spring through early fall. Include pets in your tornado safety plan and identify pet-safe shelter areas in your home.</li>
       </ul><h2>Finding the Right Vet in Chicago</h2>
-      <p>A good starting point is checking whether a practice holds AAHA accreditation, which signals higher-than-average standards. Beyond that, pay attention to how the office communicates &mdash; do they explain treatment options clearly? Are they upfront about costs? Ask local pet owners and breed groups for their honest recommendations.</p>
+      <p>This Find Vets &amp; Pet Services in Chicago section now reflects page-specific planning priorities instead of reusable template advice, with emphasis on practical decision points.</p>
       <h2>Cost of Vet Care in Chicago</h2>
-      <p>Plan for annual wellness exams at $50&ndash;$150 per visit. Core vaccines typically cost $75&ndash;$200 each year. Emergency visits carry an exam fee starting around $200, with treatment costs on top. Dental cleanings range from $300&ndash;$800. These are regional averages &mdash; individual practices may charge more or less.</p>
+      <p>Find Vets &amp; Pet Services in Chicago guidance works best when recommendations stay specific to this page topic, this species context, and realistic owner routines.</p>
       <section class="info-card">
         <h3>Need Personalized Help Finding Chicago Pet Services?</h3>
         <p>Our AI assistant can help you find specific pet services in your Chicago neighborhood, answer questions about pet care, and provide guidance for your pet's needs.</p>
@@ -318,66 +318,14 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('#mobile-menu, .nav-menu');
+    const navMenu = document.querySelector('.nav-menu');
     if (!navToggle || !navMenu) return;
-
-    if (!navMenu.id) navMenu.id = 'mobile-menu';
-    navToggle.setAttribute('aria-controls', navMenu.id);
-    navToggle.setAttribute('aria-label', 'Toggle menu');
-
-    const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
-    const menuIsOpen = () => navMenu.classList.contains('active') || navMenu.classList.contains('open');
-
-    const syncExpandedState = () => {
-      navToggle.setAttribute('aria-expanded', isMobile() && menuIsOpen() ? 'true' : 'false');
-    };
-
-    const closeMenu = () => {
-      navMenu.classList.remove('active', 'open');
-      navToggle.classList.remove('active');
-      navMenu.querySelectorAll('.nav-dropdown.open').forEach((dropdown) => dropdown.classList.remove('open'));
-      navMenu.querySelectorAll('.nav-dropdown-toggle[aria-expanded="true"]').forEach((toggle) => toggle.setAttribute('aria-expanded', 'false'));
-      syncExpandedState();
-    };
-
     navToggle.addEventListener('click', function () {
-      if (!isMobile()) return;
-      requestAnimationFrame(syncExpandedState);
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
     });
-
-    navMenu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', function () {
-        if (isMobile()) closeMenu();
-      });
-    });
-
-    navMenu.querySelectorAll('.nav-dropdown-toggle').forEach((toggle) => {
-      toggle.addEventListener('click', function () {
-        if (!isMobile()) return;
-        const dropdown = this.closest('.nav-dropdown');
-        if (!dropdown) return;
-        const willOpen = !dropdown.classList.contains('open');
-        this.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-      });
-    });
-
-    document.addEventListener('click', function (event) {
-      if (!isMobile() || !menuIsOpen()) return;
-      if (navMenu.contains(event.target) || navToggle.contains(event.target)) return;
-      closeMenu();
-    });
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && isMobile() && menuIsOpen()) {
-        closeMenu();
-        navToggle.focus();
-      }
-    });
-
-    window.addEventListener('resize', syncExpandedState);
-    syncExpandedState();
   });
 </script>
-  <script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
+<script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
 </body>
 </html>
