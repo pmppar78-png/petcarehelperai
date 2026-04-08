@@ -25,34 +25,155 @@
     <meta property="og:url" content="https://petcarehelperai.com/faq" />
   <title>FAQ - Pet Care Helper AI</title>
   <link rel="stylesheet" href="styles.css" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "name": "FAQ",
-    "description": "Common questions about Pet Care Helper AI answered plainly. How the chat works, what animals are covered, what happens in emergencies, and more.",
-    "datePublished": "2026-02-19",
-    "dateModified": "2026-02-19",
-    "author": [{"@type": "Organization", "name": "Pet Care Helper AI"}, {"@type": "Person", "name": "Paul Paradis", "jobTitle": "Founder", "url": "https://petcarehelperai.com/about"}], "reviewedBy": {"@type": "Organization", "name": "Pet Care Helper AI Editorial Team", "url": "https://petcarehelperai.com/editorial-standards"},
-    "publisher": {"@type": "Organization", "name": "Pet Care Helper AI"},
-    "mainEntity": [
-      {"@type": "Question", "name": "What is Pet Care Helper AI?", "acceptedAnswer": {"@type": "Answer", "text": "Pet Care Helper AI is a free pet health resource with an AI assistant, care guides, breed profiles, and a veterinary service directory. You can ask questions about dogs, cats, birds, reptiles, fish, small animals, and amphibians."}},
-      {"@type": "Question", "name": "Does this replace going to the vet?", "acceptedAnswer": {"@type": "Answer", "text": "No. The AI gives educational guidance and helps you understand whether you should seek professional care. It cannot examine your pet, run tests, or prescribe anything. Your veterinarian is irreplaceable."}},
-      {"@type": "Question", "name": "Which pets can I ask about?", "acceptedAnswer": {"@type": "Answer", "text": "Dogs, cats, birds, reptiles, fish, small animals like rabbits and hamsters, and amphibians. The AI is strongest with these species but will do its best with other exotic pets too."}},
-      {"@type": "Question", "name": "How does the AI work?", "acceptedAnswer": {"@type": "Answer", "text": "Describe your pet's symptoms or concerns in your own words. The AI flags anything urgent, suggests home monitoring when appropriate, and recommends seeing a vet when the situation calls for it. You can ask follow-up questions in the same conversation."}},
-      {"@type": "Question", "name": "Is this available 24/7?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The AI runs around the clock, every day of the year. Pet problems don't wait for business hours, so neither does this tool."}},
-      {"@type": "Question", "name": "What should I do in a pet emergency?", "acceptedAnswer": {"@type": "Answer", "text": "Call your vet or nearest emergency animal hospital right away. The AI can help you recognize urgent situations, but in a real emergency, direct professional care is what your pet needs."}},
-      {"@type": "Question", "name": "Do I need an account to use this?", "acceptedAnswer": {"@type": "Answer", "text": "No. Just go to the AI Pet Help page and start typing. No account, no login, no personal information required."}},
-      {"@type": "Question", "name": "Can the AI help me find a vet near me?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It can point you toward local clinics, emergency hospitals, tele-vet services, and specialists including exotic pet vets. Just mention your location or what kind of care you need."}},
-      {"@type": "Question", "name": "What kinds of questions can I ask?", "acceptedAnswer": {"@type": "Answer", "text": "Pretty much anything pet-related: symptoms, behavior changes, nutrition, training, grooming, habitat setup, preventive care, or what to do in a specific situation."}},
-      {"@type": "Question", "name": "How does the AI decide if something is serious?", "acceptedAnswer": {"@type": "Answer", "text": "It looks for patterns and red flags in what you describe. Certain symptoms like difficulty breathing, seizures, or a male cat straining to urinate are known emergencies and get flagged immediately. For less clear situations, it weighs your details against veterinary knowledge to suggest the best next step."}},
-      {"@type": "Question", "name": "Can the AI help with exotic pets like parrots and geckos?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The AI has specialized knowledge for birds, reptiles, fish, and amphibians. It can also help you locate vets who specialize in exotic animals."}},
-      {"@type": "Question", "name": "What details should I include when describing symptoms?", "acceptedAnswer": {"@type": "Answer", "text": "Include when symptoms started, what's different about your pet's behavior, any changes in eating, drinking, or bathroom habits, and energy level. Specific descriptions are more useful than vague ones."}},
-      {"@type": "Question", "name": "Can I ask follow-up questions?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. The AI remembers the conversation context so you can add details, ask for clarification, or shift to a related topic without starting over."}},
-      {"@type": "Question", "name": "Is there more to the site beyond the AI chat?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We have in-depth care guides, breed profiles, interactive tools like a symptom checker, food calculator, cost calculator, and breed finder, plus a resource library covering everything from pet insurance to emergency first aid. All free."}}
-    ]
-  }
-  </script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "FAQ",
+  "description": "Common questions about Pet Care Helper AI answered plainly. How the chat works, what animals are covered, what happens in emergencies, and more.",
+  "datePublished": "2026-02-19",
+  "dateModified": "2026-02-19",
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Pet Care Helper AI"
+    },
+    {
+      "@type": "Person",
+      "name": "Paul Paradis",
+      "jobTitle": "Founder",
+      "url": "https://petcarehelperai.com/about"
+    }
+  ],
+  "reviewedBy": {
+    "@type": "Organization",
+    "name": "Pet Care Helper AI Editorial Team",
+    "url": "https://petcarehelperai.com/editorial-standards"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pet Care Helper AI",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://petcarehelperai.com/logo.png",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Pet Care Helper AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pet Care Helper AI is a free pet health resource with an AI assistant, care guides, breed profiles, and a veterinary service directory. You can ask questions about dogs, cats, birds, reptiles, fish, small animals, and amphibians."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this replace going to the vet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The AI gives educational guidance and helps you understand whether you should seek professional care. It cannot examine your pet, run tests, or prescribe anything. Your veterinarian is irreplaceable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which pets can I ask about?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dogs, cats, birds, reptiles, fish, small animals like rabbits and hamsters, and amphibians. The AI is strongest with these species but will do its best with other exotic pets too."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the AI work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Describe your pet's symptoms or concerns in your own words. The AI flags anything urgent, suggests home monitoring when appropriate, and recommends seeing a vet when the situation calls for it. You can ask follow-up questions in the same conversation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this available 24/7?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The AI runs around the clock, every day of the year. Pet problems don't wait for business hours, so neither does this tool."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I do in a pet emergency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call your vet or nearest emergency animal hospital right away. The AI can help you recognize urgent situations, but in a real emergency, direct professional care is what your pet needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an account to use this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Just go to the AI Pet Help page and start typing. No account, no login, no personal information required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the AI help me find a vet near me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. It can point you toward local clinics, emergency hospitals, tele-vet services, and specialists including exotic pet vets. Just mention your location or what kind of care you need."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kinds of questions can I ask?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pretty much anything pet-related: symptoms, behavior changes, nutrition, training, grooming, habitat setup, preventive care, or what to do in a specific situation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the AI decide if something is serious?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It looks for patterns and red flags in what you describe. Certain symptoms like difficulty breathing, seizures, or a male cat straining to urinate are known emergencies and get flagged immediately. For less clear situations, it weighs your details against veterinary knowledge to suggest the best next step."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the AI help with exotic pets like parrots and geckos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The AI has specialized knowledge for birds, reptiles, fish, and amphibians. It can also help you locate vets who specialize in exotic animals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What details should I include when describing symptoms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Include when symptoms started, what's different about your pet's behavior, any changes in eating, drinking, or bathroom habits, and energy level. Specific descriptions are more useful than vague ones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I ask follow-up questions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. The AI remembers the conversation context so you can add details, ask for clarification, or shift to a related topic without starting over."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there more to the site beyond the AI chat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We have in-depth care guides, breed profiles, interactive tools like a symptom checker, food calculator, cost calculator, and breed finder, plus a resource library covering everything from pet insurance to emergency first aid. All free."
+      }
+    }
+  ]
+}</script>
   <meta property="og:title" content="FAQ - Pet Care Helper AI" />
   <meta property="og:description" content="Common questions about Pet Care Helper AI answered plainly. How the chat works, what animals are covered, what happens in emergencies, and more." />
   <meta property="og:type" content="website" />
