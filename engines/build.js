@@ -179,7 +179,7 @@ function generateArticleSchema(title, desc) {
     "datePublished": "${TODAY}",
     "dateModified": "${TODAY}",
     "author": {"@type": "Organization", "name": "Pet Care Helper AI"},
-    "publisher": {"@type": "Organization", "name": "Pet Care Helper AI"}
+    "publisher": {"@type": "Organization", "name": "Pet Care Helper AI", "logo": {"@type": "ImageObject", "url": "https://petcarehelperai.com/logo.png"}}
   }
   </script>`;
 }
@@ -1239,15 +1239,14 @@ for (const f of locFiles) {
 
 // Build cross-linking keywords map
 function getRelatedGuides(slug, animal, limit = 8) {
-  // Find guides related by keyword overlap and animal type
-  const keywords = slug.replace(/-/g, ' ').split(' ');
+  // Find guides related by explicit token overlap and animal type; avoid partial-token collisions.
+  const keywords = new Set(slug.toLowerCase().split('-').filter((kw) => kw.length >= 4));
   const scored = allGuidePages.map(gp => {
     let score = 0;
-    const gpWords = gp.slug.replace(/-/g, ' ').split(' ');
+    const gpWords = new Set(gp.slug.toLowerCase().split('-').filter((kw) => kw.length >= 4));
     for (const kw of keywords) {
-      if (kw.length < 3) continue;
-      if (gpWords.includes(kw)) score += 3;
-      if (gp.desc.toLowerCase().includes(kw)) score += 1;
+      if (gpWords.has(kw)) score += 4;
+      if (new RegExp(`\\b${kw}\\b`, 'i').test(gp.desc)) score += 1;
     }
     if (gp.animal === animal || gp.animal === 'general') score += 2;
     if (gp.slug === slug) score = -1; // exclude self

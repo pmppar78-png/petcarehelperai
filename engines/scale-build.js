@@ -133,7 +133,7 @@ function buildDisclaimer() {
 
 function genArticleSchema(title, desc) {
   return `<script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","headline":"${title.replace(/"/g, '\\"')}","description":"${desc.replace(/"/g, '\\"')}","datePublished":"${TODAY}","dateModified":"${TODAY}","author":{"@type":"Organization","name":"Pet Care Helper AI"},"publisher":{"@type":"Organization","name":"Pet Care Helper AI"}}
+  {"@context":"https://schema.org","@type":"Article","headline":"${title.replace(/"/g, '\\"')}","description":"${desc.replace(/"/g, '\\"')}","datePublished":"${TODAY}","dateModified":"${TODAY}","author":{"@type":"Organization","name":"Pet Care Helper AI"},"publisher":{"@type":"Organization","name":"Pet Care Helper AI","logo":{"@type":"ImageObject","url":"https://petcarehelperai.com/logo.png"}}}
   </script>`;
 }
 
