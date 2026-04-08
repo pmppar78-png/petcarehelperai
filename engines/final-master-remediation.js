@@ -317,9 +317,9 @@ function buildUniqueParagraph(ctx, key, idx) {
       `For ${ctx.city || ctx.entity} households, practical planning means choosing providers by communication quality, species experience, and follow-up reliability.`
     ],
     comparison: [
-      `This comparison is specific to ${ctx.title} and should be evaluated through real differences in handling tolerance, medical risk profile, and daily husbandry load for each animal.`,
-      `Owners choosing between the two animals in ${ctx.title} should focus on species-level care demands, not marketing claims or one-size-fits-all checklists.`,
-      `A useful ${ctx.title} decision weighs time, habitat setup, and preventive-care discipline for both sides rather than defaulting to a single generic recommendation.`
+      `This comparison for ${ctx.title} focuses on practical differences in temperament, exercise demand, coat care, and long-term medical planning for both options.`,
+      `When choosing in ${ctx.title}, compare daily time commitment, space needs, training load, and veterinary risk profile for each side.`,
+      `${ctx.title} decisions are strongest when owners match household routine and budget to the specific needs of both options, not generic pet-care advice.`
     ],
     aquatic: [
       `${ctx.entity} care quality depends on stable water chemistry, measured feeding, and disciplined quarantine habits; these factors drive outcomes more than brand-name products.`,
@@ -332,9 +332,9 @@ function buildUniqueParagraph(ctx, key, idx) {
       `Strong ${ctx.entity} care plans prioritize enclosure conditions, stress reduction, and scheduled health observation instead of generic mammal care routines.`
     ],
     general: [
-      `${ctx.entity} guidance works best when recommendations stay specific to this page topic, this species context, and realistic owner routines.`,
-      `This ${ctx.entity} section now reflects page-specific planning priorities instead of reusable template advice, with emphasis on practical decision points.`,
-      `Owners reading about ${ctx.entity} need topic-matched detail, so this section focuses on actionable care priorities rather than generic filler.`
+      `${ctx.entity} care planning works best when feeding, enrichment, preventive care, and budget choices are aligned with this animal's real day-to-day needs.`,
+      `For ${ctx.entity}, the most useful advice is specific: clear routines, realistic cost expectations, and early prevention steps that reduce avoidable health setbacks.`,
+      `${ctx.entity} owners usually get better outcomes with consistent routines, species-appropriate nutrition, and scheduled veterinary checkups instead of one-size-fits-all tips.`
     ]
   };
 
