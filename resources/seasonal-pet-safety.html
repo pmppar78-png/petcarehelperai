@@ -224,7 +224,7 @@
       <p>These organizations are worth bookmarking. When something goes wrong, having the right number saved already can make the difference between a close call and a tragedy.</p>
 
       <ul>
-        <li><strong>ASPCA Animal Poison Control Center:</strong> <strong>(888) 426-4435</strong>. Available 24/7, 365 days a year. The ASPCA maintains the most comprehensive database of animal toxicology information and handles over 400,000 cases annually. Their toxic plant database and list of household hazards are essential references for every pet owner.</li>
+        <li><strong>ASPCA Animal Poison Control Center:</strong> <strong>(888) 426-4435</strong>. Available 24/7, 365 days a year. The ASPCA maintains the most practical database of animal toxicology information and handles over 400,000 cases annually. Their toxic plant database and list of household hazards are essential references for every pet owner.</li>
         <li><strong>American Veterinary Medical Association (AVMA):</strong> Publishes extensive seasonal safety resources for pet owners, including detailed guidance on hot weather safety, cold weather precautions, holiday hazards, and the dangers of leaving pets in vehicles. The AVMA's data on vehicle interior temperatures has been instrumental in raising public awareness about this preventable cause of pet death.</li>
         <li><strong>Pet Poison Helpline:</strong> <strong>(855) 764-7661</strong>. An animal poison control service available 24/7 for pet owners and veterinary professionals. The Pet Poison Helpline provides species-specific toxicology guidance and is an especially valuable resource for identifying toxic plants, foods, and household substances.</li>
       </ul>
@@ -246,6 +246,9 @@
             <li><a href="/birds">Birds</a></li>
             <li><a href="/reptiles">Reptiles</a></li>
             <li><a href="/fish">Fish</a></li>
+            <li><a href="/small-animals">Small Animals</a></li>
+            <li><a href="/amphibians">Amphibians</a></li>
+            <li><a href="/marine-fish">Marine Fish</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -301,28 +304,6 @@
       <a href="/feeds/">RSS Feeds</a>
     </nav>
   </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const navToggle = document.querySelector('.nav-toggle');
-      const navMenu = document.querySelector('.nav-menu');
-      if (navToggle) {
-        navToggle.addEventListener('click', function() {
-          navMenu.classList.toggle('active');
-          navToggle.classList.toggle('active');
-        });
-      }
-      const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
-      dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            this.closest('.nav-dropdown').classList.toggle('open');
-          }
-        });
-      });
-    });
-  </script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.querySelector('.nav-toggle');
