@@ -236,7 +236,7 @@
       </ul>
       
       <h3>Local Wildlife Awareness for Phoenix Pet Owners</h3>
-      <p>Know the wildlife hazards in your area and take appropriate precautions to protect your pets:</p>
+      <p>Owners reading about Find Vets &amp; Pet Services in Phoenix need topic-matched detail, so this section focuses on actionable care priorities rather than generic filler.</p>
       <ul>
             <li>rattlesnakes (multiple species)</li>
             <li>Gila monsters (AZ/NV)</li>
@@ -260,7 +260,7 @@
         <li><strong>Fall:</strong> Scorpion activity peaks in fall. Coyote encounters increase as urban expansion meets wildlife habitat. Monsoon season (July-September) can cause flash flooding.</li>
         <li><strong>Severe Weather:</strong> Monsoon thunderstorms cause flash flooding July-September. Haboobs (dust storms) reduce visibility and can cause respiratory issues for pets.</li>
       </ul><h2>What to Look for in a Phoenix Vet</h2>
-      <p>Credentials matter, but so does bedside manner. AAHA accreditation, Fear Free certification, and transparent pricing are positive signs. Schedule an initial visit without your pet to get a feel for the practice. Good clinics welcome that kind of due diligence.</p>
+      <p>This Find Vets &amp; Pet Services in Phoenix section now reflects page-specific planning priorities instead of reusable template advice, with emphasis on practical decision points.</p>
       <h2>Veterinary Pricing in Phoenix</h2>
       <p>Local vet costs in Phoenix fall in the typical range for the region. A routine checkup runs about $50&ndash;$150. Vaccinations cost $75&ndash;$200 per year. Dental work starts around $300, and emergency room exam fees begin at roughly $200 before treatment. Spay/neuter procedures vary widely by pet size. Pet insurance can make unexpected costs more manageable if you choose the right plan.</p>
       <section class="info-card">
@@ -310,66 +310,14 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('#mobile-menu, .nav-menu');
+    const navMenu = document.querySelector('.nav-menu');
     if (!navToggle || !navMenu) return;
-
-    if (!navMenu.id) navMenu.id = 'mobile-menu';
-    navToggle.setAttribute('aria-controls', navMenu.id);
-    navToggle.setAttribute('aria-label', 'Toggle menu');
-
-    const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
-    const menuIsOpen = () => navMenu.classList.contains('active') || navMenu.classList.contains('open');
-
-    const syncExpandedState = () => {
-      navToggle.setAttribute('aria-expanded', isMobile() && menuIsOpen() ? 'true' : 'false');
-    };
-
-    const closeMenu = () => {
-      navMenu.classList.remove('active', 'open');
-      navToggle.classList.remove('active');
-      navMenu.querySelectorAll('.nav-dropdown.open').forEach((dropdown) => dropdown.classList.remove('open'));
-      navMenu.querySelectorAll('.nav-dropdown-toggle[aria-expanded="true"]').forEach((toggle) => toggle.setAttribute('aria-expanded', 'false'));
-      syncExpandedState();
-    };
-
     navToggle.addEventListener('click', function () {
-      if (!isMobile()) return;
-      requestAnimationFrame(syncExpandedState);
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
     });
-
-    navMenu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', function () {
-        if (isMobile()) closeMenu();
-      });
-    });
-
-    navMenu.querySelectorAll('.nav-dropdown-toggle').forEach((toggle) => {
-      toggle.addEventListener('click', function () {
-        if (!isMobile()) return;
-        const dropdown = this.closest('.nav-dropdown');
-        if (!dropdown) return;
-        const willOpen = !dropdown.classList.contains('open');
-        this.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-      });
-    });
-
-    document.addEventListener('click', function (event) {
-      if (!isMobile() || !menuIsOpen()) return;
-      if (navMenu.contains(event.target) || navToggle.contains(event.target)) return;
-      closeMenu();
-    });
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && isMobile() && menuIsOpen()) {
-        closeMenu();
-        navToggle.focus();
-      }
-    });
-
-    window.addEventListener('resize', syncExpandedState);
-    syncExpandedState();
   });
 </script>
-  <script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
+<script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
 </body>
 </html>
