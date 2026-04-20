@@ -152,8 +152,6 @@ function buildHead({ title, description, canonical, cssPath, ogImage, schema }) 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-adsense-account" content="ca-pub-6484141649562994">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6484141649562994" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK0N7BD82Q"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FK0N7BD82Q');</script>
   <meta name="description" content="${esc(description)}">
@@ -219,7 +217,6 @@ function buildFooter() {
     const t=document.querySelector('.nav-toggle'),m=document.querySelector('.nav-menu');
     if(t&&m){t.addEventListener('click',()=>{m.classList.toggle('open');t.classList.toggle('active');})}
   </script>
-  <script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>
 </body>
 </html>`;
 }
