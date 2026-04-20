@@ -1,0 +1,14 @@
+{
+  "filesScanned": 9262,
+  "filesModified": 2659,
+  "replacements": 2991,
+  "byKey": {
+    "signalNoise": 80,
+    "generalAdvice": 130,
+    "disclaimer": 2004,
+    "successTrainingV2": 283,
+    "mistakesDerail": 221,
+    "systematicHealth": 224,
+    "understandingAsV2": 49
+  }
+}
