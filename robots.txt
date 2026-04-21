@@ -2,5 +2,21 @@
 User-agent: *
 Allow: /
 
+# Disallow infrastructure, build artifacts, data endpoints, and non-indexable paths
+Disallow: /.netlify/
+Disallow: /audit/
+Disallow: /data/
+Disallow: /engines/
+Disallow: /node_modules/
+Disallow: /netlify/
+Disallow: /embed/
+Disallow: /test-results/
+Disallow: /tools/*.cjs$
+Disallow: /search-index.json
+Disallow: /affiliates.json
+Disallow: /site.json
+Disallow: /package.json
+Disallow: /package-lock.json
+
 # Sitemap location
 Sitemap: https://petcarehelperai.com/sitemap.xml
