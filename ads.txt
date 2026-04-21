@@ -1,0 +1,20 @@
+# Pet Care Helper AI - ads.txt
+#
+# This file is reserved for authorized digital sellers once a primary ad
+# network (Google AdSense / Google Ad Manager, Ezoic, Mediavine, Sovrn, or
+# similar) is approved for this site. The site does not currently serve
+# display advertising.
+#
+# When ad network approval is granted, the approved publisher ID record
+# will be placed below in the format required by the IAB Tech Lab
+# Authorized Digital Sellers specification:
+#
+#   domain, publisher_id, relationship, certification_authority_id
+#
+# Example (for reference only — not active):
+#   google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+#
+# For questions about our monetization, affiliate disclosures, or
+# advertising policies, see /editorial-standards or contact us at
+# /contact. Affiliate disclosures are published on every revenue-eligible
+# page per FTC 16 CFR Part 255.
