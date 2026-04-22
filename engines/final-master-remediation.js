@@ -357,7 +357,7 @@ function fixLocationScripts(html) {
   const navScript = `<script>\n  document.addEventListener('DOMContentLoaded', function () {\n    const navToggle = document.querySelector('.nav-toggle');\n    const navMenu = document.querySelector('.nav-menu');\n    if (!navToggle || !navMenu) return;\n    navToggle.addEventListener('click', function () {\n      navMenu.classList.toggle('active');\n      navToggle.classList.toggle('active');\n    });\n  });\n</script>\n`;
 
   if (!out.includes('navToggle.classList.toggle(\'active\')')) {
-    out = out.replace(/<script type="text\/javascript" src="https:\/\/s\.skimresources\.com\/js\/299616X1787412\.skimlinks\.js"><\/script>/i, `${navScript}<script type="text/javascript" src="https://s.skimresources.com/js/299616X1787412.skimlinks.js"></script>`);
+    out = out.replace(/<head(\s[^>]*)?>/i, (m) => `${m}\n${navScript}`);
   }
 
   return { html: out, changed: out !== before };
