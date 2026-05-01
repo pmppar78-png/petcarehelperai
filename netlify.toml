@@ -74,6 +74,9 @@
   force = true
 
 # --- Redirect misplaced amphibian breed pages from reptiles to amphibians ---
+# These species existed historically under /breeds/reptiles/ but are amphibians.
+# Keeping single-hop 301s here so any legacy external links or stale Googlebot
+# requests resolve cleanly instead of returning 404s.
 [[redirects]]
   from = "/breeds/reptiles/poison-dart-frog"
   to = "/breeds/amphibians/poison-dart-frog"
@@ -83,6 +86,246 @@
 [[redirects]]
   from = "/breeds/reptiles/tree-frog"
   to = "/breeds/amphibians/tree-frog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/african-clawed-frog"
+  to = "/breeds/amphibians/african-clawed-frog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/african-dwarf-frog"
+  to = "/breeds/amphibians/african-dwarf-frog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/american-bullfrog"
+  to = "/breeds/amphibians/american-bullfrog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/axolotl"
+  to = "/breeds/amphibians/axolotl"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/dart-frog"
+  to = "/breeds/amphibians/dart-frog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/eastern-newt"
+  to = "/breeds/amphibians/eastern-newt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/fire-bellied-newt"
+  to = "/breeds/amphibians/fire-bellied-newt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/fire-salamander"
+  to = "/breeds/amphibians/fire-salamander"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/pacman-frog"
+  to = "/breeds/amphibians/pacman-frog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/red-eyed-tree-frog"
+  to = "/breeds/amphibians/red-eyed-tree-frog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/tiger-salamander"
+  to = "/breeds/amphibians/tiger-salamander"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/tomato-frog"
+  to = "/breeds/amphibians/tomato-frog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/whites-tree-frog"
+  to = "/breeds/amphibians/whites-tree-frog"
+  status = 301
+  force = true
+
+# --- Redirect misplaced marine fish breed pages from /breeds/fish/ to /breeds/marine-fish/ ---
+# These species exist under /breeds/marine-fish/ but historical internal links
+# (and any external links Google has cached) used /breeds/fish/.
+[[redirects]]
+  from = "/breeds/fish/blue-damsel"
+  to = "/breeds/marine-fish/blue-damsel"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/blue-tang"
+  to = "/breeds/marine-fish/blue-tang"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/cleaner-wrasse"
+  to = "/breeds/marine-fish/cleaner-wrasse"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/clownfish"
+  to = "/breeds/marine-fish/clownfish"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/coral-beauty"
+  to = "/breeds/marine-fish/coral-beauty"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/dottyback"
+  to = "/breeds/marine-fish/dottyback"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/emperor-angelfish"
+  to = "/breeds/marine-fish/emperor-angelfish"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/fairy-wrasse"
+  to = "/breeds/marine-fish/fairy-wrasse"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/firefish"
+  to = "/breeds/marine-fish/firefish"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/flame-angelfish"
+  to = "/breeds/marine-fish/flame-angelfish"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/hawkfish"
+  to = "/breeds/marine-fish/hawkfish"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/kole-tang"
+  to = "/breeds/marine-fish/kole-tang"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/mandarin-goby"
+  to = "/breeds/marine-fish/mandarin-goby"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/melanurus-wrasse"
+  to = "/breeds/marine-fish/melanurus-wrasse"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/powder-blue-tang"
+  to = "/breeds/marine-fish/powder-blue-tang"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/six-line-wrasse"
+  to = "/breeds/marine-fish/six-line-wrasse"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/watchman-goby"
+  to = "/breeds/marine-fish/watchman-goby"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/yellow-tang"
+  to = "/breeds/marine-fish/yellow-tang"
+  status = 301
+  force = true
+
+# --- Redirect misplaced commercial amphibian pages from reptiles to amphibians ---
+# Historical internal links used /commercial/reptiles/{tree-frog,poison-dart-frog}/*
+# but the amphibian commercial pages live under /commercial/amphibians/{green-tree-frog,dart-frog}/*.
+[[redirects]]
+  from = "/commercial/reptiles/tree-frog/*"
+  to = "/commercial/amphibians/green-tree-frog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/poison-dart-frog/*"
+  to = "/commercial/amphibians/dart-frog/:splat"
+  status = 301
+  force = true
+
+# --- Legacy /resources/feed.xml → /feed.xml ---
+# Resources pages historically used a relative href="feed.xml" that resolved to
+# /resources/feed.xml (which doesn't exist). Source links are now absolute, but
+# this catches any cached or external references.
+[[redirects]]
+  from = "/resources/feed.xml"
+  to = "/feed.xml"
+  status = 301
+  force = true
+
+# --- Legacy /cats/cat-breeds → /cats ---
+[[redirects]]
+  from = "/cats/cat-breeds"
+  to = "/cats"
+  status = 301
+  force = true
+
+# --- Legacy guide URL fixes ---
+[[redirects]]
+  from = "/guides/best-dog-food-for-kittens"
+  to = "/guides/best-cat-food-for-kittens"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/kitten-biting-solutions"
+  to = "/guides/cat-biting-solutions"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/signs-your-cat-is-in-pain"
+  to = "/guides/hero/signs-your-cat-is-in-pain"
   status = 301
   force = true
 
