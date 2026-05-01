@@ -1,0 +1,29 @@
+{
+  "total": 9289,
+  "withBreadcrumbList": 9261,
+  "withArticle": 9251,
+  "withCanonical": 9288,
+  "withSelfCanonical": 9288,
+  "withTitle": 9289,
+  "withDesc": 9289,
+  "noindex": 17,
+  "uniqueTitles": 9289,
+  "uniqueDescriptions": 9289,
+  "selfCanonicalMismatches": [],
+  "missingTitles": [],
+  "missingDescriptions": [],
+  "missingCanonical": [],
+  "duplicateTitleCount": 0,
+  "duplicateDescriptionCount": 0,
+  "sitemapUrlCount": 9271,
+  "sitemapUrlsMissingOnDisk": [],
+  "sitemapUrlsMissingOnDiskCount": 0,
+  "noindexInSitemap": [],
+  "indexableOrphanCount": 1,
+  "indexableOrphans": [
+    {
+      "file": "/chat.html",
+      "url": "https://petcarehelperai.com/chat"
+    }
+  ]
+}
