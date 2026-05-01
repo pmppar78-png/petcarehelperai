@@ -1,0 +1,11 @@
+about.html
+chat.html
+contact.html
+faq.html
+index.html
+partners.html
+press-kit.html
+privacy-policy.html
+resources.html
+terms-of-service.html
+tools/index.html
