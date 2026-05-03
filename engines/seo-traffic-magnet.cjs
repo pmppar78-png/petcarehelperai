@@ -460,8 +460,51 @@ function upgradeCommercialPage(filePath, html) {
   const rel = path.relative(ROOT, filePath).replace(/\\/g, '/');
   const m = rel.match(/^commercial\/([a-z-]+)\/([a-z0-9-]+)\/([a-z-]+)\.html$/);
   if (!m) return html;
-  const [, , breedSlug, kind] = m;
+  const [, speciesGroup, breedSlug, kind] = m;
   const breed = titleCase(breedSlug);
+  const speciesCopy = {
+    dogs: {
+      first: 'first dog',
+      habitatTitle: 'Best Crate & Space Size',
+      habitatDesc: 'crates, beds, and living space',
+    },
+    cats: {
+      first: 'first cat',
+      habitatTitle: 'Best Indoor Space & Setup',
+      habitatDesc: 'litter boxes, scratchers, resting areas, and living space',
+    },
+    birds: {
+      first: 'first bird',
+      habitatTitle: 'Best Cage & Room Setup',
+      habitatDesc: 'cages, perches, supervised out-of-cage space, and enrichment',
+    },
+    fish: {
+      first: 'first aquarium species',
+      habitatTitle: 'Best Tank & Setup Size',
+      habitatDesc: 'tank volume, filtration, aquascaping, and maintenance access',
+    },
+    'marine-fish': {
+      first: 'first saltwater aquarium species',
+      habitatTitle: 'Best Saltwater Tank & Setup Size',
+      habitatDesc: 'tank volume, filtration, reef-safe layout, and maintenance access',
+    },
+    reptiles: {
+      first: 'first reptile',
+      habitatTitle: 'Best Enclosure & Setup Size',
+      habitatDesc: 'enclosure size, heat gradients, hides, substrate, and lighting',
+    },
+    amphibians: {
+      first: 'first amphibian',
+      habitatTitle: 'Best Habitat & Setup Size',
+      habitatDesc: 'habitat size, humidity, substrate, water quality, and hides',
+    },
+    'small-animals': {
+      first: 'first small pet',
+      habitatTitle: 'Best Cage, Enclosure & Space Size',
+      habitatDesc: 'cages or enclosures, bedding, exercise space, and enrichment',
+    },
+  };
+  const copy = speciesCopy[speciesGroup] || speciesCopy.dogs;
 
   const titles = {
     'best-food': {
@@ -482,11 +525,11 @@ function upgradeCommercialPage(filePath, html) {
     },
     'first-time-owners': {
       title: `Is a ${breed} Good for First-Time Owners? (${YEAR}) — Honest Answer`,
-      desc:  `Whether ${article(breed)} ${breed} is a realistic first dog: training difficulty, time commitment, household fit, and the traits that trip up new owners.`,
+      desc:  `Whether ${article(breed)} ${breed} is a realistic ${copy.first}: care difficulty, time commitment, household fit, and the traits that trip up new owners.`,
     },
     'best-habitat-size': {
-      title: `Best Crate & Space Size for ${breed}: Measurements, Setup & Mistakes`,
-      desc:  `How to size crates, beds, and living space for ${article(breed)} ${breed} — measurements that actually fit, setup tips, and common sizing mistakes.`,
+      title: `${copy.habitatTitle} for ${breed}: Measurements, Setup & Mistakes`,
+      desc:  `How to size ${copy.habitatDesc} for ${article(breed)} ${breed} — measurements that actually fit, setup tips, and common sizing mistakes.`,
     },
     'best-enrichment': {
       title: `Best Toys & Enrichment for ${breed} (${YEAR}): What Actually Keeps Them Happy`,
