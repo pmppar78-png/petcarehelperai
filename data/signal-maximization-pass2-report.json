@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-05-03T14:50:43.931Z",
+  "scope": [
+    "guides",
+    "breeds",
+    "commercial",
+    "resources"
+  ],
+  "stats": {
+    "filesScanned": 9083,
+    "filesChanged": 0,
+    "ownerInsightBlocks": 2885,
+    "vetCareBlocks": 2885,
+    "faqHeadings": 0,
+    "faqSchemaQuestions": 0,
+    "disclaimers": 8991,
+    "comparisonIntros": 0,
+    "comparisonSectionOrders": 1352,
+    "comparisonConclusions": 0,
+    "anchors": 0,
+    "genericCardCopy": 0,
+    "metadataTitles": 0,
+    "metadataDescriptions": 0
+  },
+  "initialApplicationStats": {
+    "filesScanned": 9083,
+    "filesChanged": 9052,
+    "ownerInsightBlocks": 2885,
+    "vetCareBlocks": 2885,
+    "faqHeadings": 276,
+    "disclaimers": 9035,
+    "comparisonIntros": 1352,
+    "comparisonSectionOrders": 1352,
+    "comparisonConclusions": 1352,
+    "anchors": 7650,
+    "genericCardCopy": 1313,
+    "metadataTitles": 115,
+    "metadataDescriptions": 138,
+    "followUpContextFixes": 4308
+  }
+}

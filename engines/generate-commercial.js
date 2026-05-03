@@ -18,6 +18,16 @@ const TODAY = '2026-02-23';
 const SITE = 'https://petcarehelperai.com';
 const affiliates = JSON.parse(readFileSync(join(ROOT, 'affiliates.json'), 'utf8'));
 
+function stableIndex(seed, length) {
+  let h = 0;
+  for (let i = 0; i < seed.length; i += 1) h = ((h << 5) - h + seed.charCodeAt(i)) | 0;
+  return Math.abs(h) % length;
+}
+
+function chooseVariant(seed, variants) {
+  return variants[stableIndex(seed, variants.length)];
+}
+
 // ============================================================
 // SPECIES-AWARE TERMINOLOGY MAP
 // ============================================================
@@ -281,21 +291,55 @@ function buildRelatedLinks(entity, allEntities, currentPage) {
     `        <li><a href="/commercial/${entity.species_group}/${entity.slug}/vs-${s.slug}" style="color:#0D9488;">${entity.display_name} vs ${s.display_name}</a></li>`
   ).join('\n');
 
+  const guideAnchor = chooseVariant(`${entity.slug}|${currentPage}|guide-anchor`, [
+    `${entity.display_name} full care profile`,
+    `${entity.display_name} ownership and health guide`,
+    `Detailed ${entity.display_name} breed guide`,
+  ]);
+
   return `
       <div class="breed-stats-card" style="margin-top:30px;">
         <h2>Related ${entity.display_name} Pages</h2>
         <ul style="list-style:none;padding:0;">
-        <li><a href="/breeds/${entity.species_group}/${entity.slug}" style="color:#0D9488;font-weight:600;">&larr; ${entity.display_name} Complete Guide</a></li>
+        <li><a href="/breeds/${entity.species_group}/${entity.slug}" style="color:#0D9488;font-weight:600;">&larr; ${guideAnchor}</a></li>
 ${links}
 ${vsLinks}
         </ul>
       </div>`;
 }
 
-function buildDisclaimer() {
+function buildDisclaimer(entity, pageType = 'care') {
+  const variants = {
+    'best-food': [
+      `<strong>Feeding note:</strong> Use this ${entity.display_name} food guide to prepare better questions for your veterinarian. Product pricing varies by retailer and region. Some outbound links are affiliate links.`,
+      `<strong>Diet context:</strong> This page is educational and cannot replace a vet who knows your ${entity.display_name}. Cost ranges are directional. Affiliate links may support the site at no added cost.`,
+      `<strong>Before changing food:</strong> Confirm medical or diet-sensitive decisions with your veterinarian. Prices are typical ranges, not quotes. Some product links are affiliate links.`,
+    ],
+    'best-insurance': [
+      `<strong>Coverage note:</strong> Insurance terms depend on carrier rules, location, age, and pre-existing conditions. This ${entity.display_name} overview is educational. Some links may earn referral revenue.`,
+      `<strong>Policy context:</strong> Read the current policy documents before buying coverage for a ${entity.display_name}. Costs and exclusions change by provider. Affiliate links are disclosed.`,
+      `<strong>Before enrolling:</strong> Treat this as research support, not financial advice. Confirm deductibles, exclusions, and waiting periods directly with the insurer. Some links are affiliate links.`,
+    ],
+    'cost-to-own': [
+      `<strong>Cost note:</strong> ${entity.display_name} budgets vary by region, clinic, age, and care standard. Figures here are planning ranges. Affiliate links may help keep the resource free.`,
+      `<strong>Budget context:</strong> This is a planning aid for ${entity.display_name} ownership, not a quote. Local pricing and health events can move totals. Some outbound links are affiliate links.`,
+      `<strong>Planning note:</strong> Use these numbers as a starting point, then price care in your own city. Some products or services linked here may generate referral revenue.`,
+    ],
+    comparison: [
+      `<strong>Comparison note:</strong> This comparison is educational and cannot replace advice from a vet, breeder, or rescue that knows your household. Some links are affiliate links.`,
+      `<strong>Decision context:</strong> Use this comparison to narrow questions, then validate fit in person. Costs are estimates and some outbound links may earn a commission.`,
+      `<strong>Before choosing:</strong> Confirm health, cost, and compatibility details with qualified sources who know the individual animals. Affiliate links may support the site.`,
+    ],
+    care: [
+      `<strong>Care note:</strong> This ${entity.display_name} guidance is educational, not veterinary advice. Costs are approximate and vary by provider. Some links are affiliate links.`,
+      `<strong>Reader context:</strong> Use this page to prepare for better decisions, then confirm health questions with your veterinarian. Pricing is directional. Affiliate links may support the site.`,
+      `<strong>Before you act:</strong> Confirm medical decisions with a licensed veterinarian. Cost figures are typical ranges, not quotes. Some outbound links are affiliate links.`,
+    ],
+  };
+  const note = chooseVariant(`${entity.slug}|${pageType}|disclaimer`, variants[pageType] || variants.care);
   return `
       <div style="background:#FEF3C7;border-left:4px solid #F59E0B;padding:16px 20px;border-radius:8px;margin:30px 0;font-size:0.9rem;">
-        <strong>Disclaimer:</strong> This page is for informational purposes only and does not constitute veterinary advice. Costs vary by region, provider, and individual animal. Product links may be affiliate links &mdash; we may earn a commission at no extra cost to you. Always consult a licensed veterinarian for health-related decisions.
+        ${note}
       </div>`;
 }
 
@@ -394,7 +438,7 @@ ${buildAffiliateCallout(partners.slice(2, 5), `More ${t.feeding} Options`)}
         <li><strong>Best for Seniors:</strong> Formulas with joint support and adjusted calorie content for older ${entity.display_name}.</li>
       </ul>
 
-${buildDisclaimer()}
+${buildDisclaimer(entity, 'best-food')}
 ${buildRelatedLinks(entity, allEntities, 'best-food')}
     </article>
 ${buildFooter()}`;
@@ -457,7 +501,7 @@ ${buildAffiliateTable(partners, `Top ${t.insurance} Plans for ${entity.display_n
       </ul>
 
 ${buildAffiliateCallout(partners.slice(2, 5), 'Compare More Plans')}
-${buildDisclaimer()}
+${buildDisclaimer(entity, 'best-insurance')}
 ${buildRelatedLinks(entity, allEntities, 'best-insurance')}
     </article>
 ${buildFooter()}`;
@@ -554,7 +598,7 @@ ${buildAffiliateTable(partners, `Save on ${entity.display_name} Care`)}
       </ul>
 
 ${buildAffiliateCallout(partners.slice(2, 5), 'Smart Savings Options')}
-${buildDisclaimer()}
+${buildDisclaimer(entity, 'cost-to-own')}
 ${buildRelatedLinks(entity, allEntities, 'cost-to-own')}
     </article>
 ${buildFooter()}`;
@@ -615,7 +659,7 @@ ${buildAffiliateTable(partners, 'Protect Against Unexpected Costs')}
       <p>Even with insurance, having an emergency fund is wise. Set aside $50-$100 per month specifically for pet healthcare. This builds a safety net of $600-$1,200 per year that can cover deductibles or unexpected costs not fully covered by insurance.</p>
 
 ${buildAffiliateCallout(partners.slice(2, 5), 'Vet Care & Insurance Options')}
-${buildDisclaimer()}
+${buildDisclaimer(entity, 'health-costs')}
 ${buildRelatedLinks(entity, allEntities, 'health-costs')}
     </article>
 ${buildFooter()}`;
@@ -687,7 +731,7 @@ ${buildAffiliateTable(partners, 'Starter Essentials')}
       </ol>
 
 ${buildAffiliateCallout(partners.slice(2, 5), 'Getting Started')}
-${buildDisclaimer()}
+${buildDisclaimer(entity, 'first-time-owners')}
 ${buildRelatedLinks(entity, allEntities, 'first-time-owners')}
     </article>
 ${buildFooter()}`;
@@ -750,7 +794,7 @@ ${buildAffiliateTable(partners, `Top ${t.habitat} Options`)}
       </ul>
 
 ${buildAffiliateCallout(partners.slice(2, 5), 'Shop Supplies')}
-${buildDisclaimer()}
+${buildDisclaimer(entity, 'best-habitat-size')}
 ${buildRelatedLinks(entity, allEntities, 'best-habitat-size')}
     </article>
 ${buildFooter()}`;
@@ -835,7 +879,7 @@ ${enrichTypes}
       </ul>
 
 ${buildAffiliateCallout(partners.slice(2, 5), `Shop ${t.enrichment}`)}
-${buildDisclaimer()}
+${buildDisclaimer(entity, 'best-enrichment')}
 ${buildRelatedLinks(entity, allEntities, 'best-enrichment')}
     </article>
 ${buildFooter()}`;
@@ -897,12 +941,12 @@ ${buildAffiliateTable(partners, 'Recommended Resources')}
 
       <h2>Learn More About Each</h2>
       <ul>
-        <li><a href="/breeds/${entity.species_group}/${entity.slug}" style="color:#0D9488;font-weight:600;">${entity.display_name} Complete Guide &rarr;</a></li>
-        <li><a href="/breeds/${compEntity.species_group}/${compEntity.slug}" style="color:#0D9488;font-weight:600;">${compEntity.display_name} Complete Guide &rarr;</a></li>
+        <li><a href="/breeds/${entity.species_group}/${entity.slug}" style="color:#0D9488;font-weight:600;">${chooseVariant(`${entity.slug}|learn-more-a`, [`${entity.display_name} full care profile`, `${entity.display_name} ownership and health guide`, `Detailed ${entity.display_name} breed guide`])} &rarr;</a></li>
+        <li><a href="/breeds/${compEntity.species_group}/${compEntity.slug}" style="color:#0D9488;font-weight:600;">${chooseVariant(`${compEntity.slug}|learn-more-b`, [`${compEntity.display_name} full care profile`, `${compEntity.display_name} ownership and health guide`, `Detailed ${compEntity.display_name} breed guide`])} &rarr;</a></li>
       </ul>
 
 ${buildAffiliateCallout(partners.slice(2, 5), 'Get Started')}
-${buildDisclaimer()}
+${buildDisclaimer(entity, 'comparison')}
 ${buildRelatedLinks(entity, allEntities, 'vs-comparison')}
     </article>
 ${buildFooter()}`;
