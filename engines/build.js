@@ -182,6 +182,7 @@ function generateArticleSchema(title, desc) {
 }
 
 function generateFAQSchema(faqs) {
+  if (!faqs || faqs.length === 0) return '';
   const entities = faqs.map(faq => `      {
         "@type": "Question",
         "name": "${faq.q.replace(/"/g, '\\"')}",
@@ -1289,65 +1290,105 @@ console.log(`  Injected cross-links into ${linkedCount} pages.`);
 // PHASE 5: SITEMAP ENGINE
 // ============================================================
 
-console.log('Phase 5: Regenerating sitemap.xml...');
+console.log('Phase 5: Regenerating sitemap index + sub-sitemaps...');
 
-const allUrls = [];
-
-// Collect all HTML files
-function collectUrls(dir, urlPrefix) {
-  if (!existsSync(dir)) return;
+// Collect HTML URLs from a directory recursively
+function collectUrlsFromDir(dir, urlPrefix) {
+  const urls = [];
+  if (!existsSync(dir)) return urls;
   const entries = readdirSync(dir, { withFileTypes: true });
   for (const entry of entries) {
     if (entry.isDirectory()) {
-      collectUrls(join(dir, entry.name), `${urlPrefix}/${entry.name}`);
+      urls.push(...collectUrlsFromDir(join(dir, entry.name), `${urlPrefix}/${entry.name}`));
     } else if (entry.name.endsWith('.html')) {
       const slug = entry.name === 'index.html' ? '' : entry.name.replace('.html', '');
       const url = slug ? `${urlPrefix}/${slug}` : `${urlPrefix}/`;
-      allUrls.push(url);
+      urls.push(url);
     }
   }
+  return urls;
 }
 
-// Top-level pages
-const topLevelFiles = readdirSync(ROOT).filter(f => f.endsWith('.html'));
-for (const f of topLevelFiles) {
-  const slug = f === 'index.html' ? '' : f.replace('.html', '');
-  allUrls.push(slug ? `/${slug}` : '/');
+// Exclude non-indexable paths
+const excludePrefixes = ['/embed/', '/feeds/', '/chat', '/404', '/styles.css'];
+function shouldIncludeUrl(url) {
+  return !excludePrefixes.some(p => url === p || url.startsWith(p + '/') || url.startsWith(p + '.'));
 }
 
-collectUrls(join(ROOT, 'guides'), '/guides');
-collectUrls(join(ROOT, 'breeds'), '/breeds');
-collectUrls(join(ROOT, 'locations'), '/locations');
-collectUrls(join(ROOT, 'tools'), '/tools');
-collectUrls(join(ROOT, 'resources'), '/resources');
-collectUrls(join(ROOT, 'feeds'), '/feeds');
-collectUrls(join(ROOT, 'embed'), '/embed');
-
-// Determine priority
-function getPriority(url) {
-  if (url === '/' || url === '/dogs' || url === '/cats' || url === '/birds' || url === '/reptiles' || url === '/fish' || url === '/guides' || url === '/chat') return '1.0';
-  if (url.startsWith('/breeds/dog-breeds') || url.startsWith('/breeds/cat-breeds') || url.startsWith('/breeds/bird-breeds') || url.startsWith('/breeds/fish-breeds') || url.startsWith('/breeds/reptile-breeds') || url.startsWith('/breeds/small-animal-breeds')) return '0.8';
-  if (url.startsWith('/guides/') || url.startsWith('/tools/') || url.startsWith('/locations/')) return '0.7';
-  if (url.startsWith('/breeds/')) return '0.6';
-  if (url.startsWith('/resources/') || url === '/about' || url === '/faq' || url === '/partners') return '0.5';
-  return '0.4';
+function getSitemapPriority(url) {
+  if (url === '/') return '1.0';
+  if (['/dogs', '/cats', '/birds', '/reptiles', '/fish', '/marine-fish', '/amphibians', '/small-animals', '/guides'].includes(url)) return '0.9';
+  if (url.startsWith('/breeds/') && url.split('/').length === 3) return '0.8';
+  if (url.startsWith('/guides/')) return '0.7';
+  if (url.startsWith('/breeds/')) return '0.7';
+  if (url.startsWith('/commercial/')) return '0.6';
+  if (url.startsWith('/locations/')) return '0.6';
+  return '0.5';
 }
 
-// Remove duplicates and sort
-const uniqueUrls = [...new Set(allUrls)].filter(u => !u.includes('/embed/')).sort();
-
-const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+function buildSubSitemap(urls, comment) {
+  const filtered = [...new Set(urls)].filter(shouldIncludeUrl).sort();
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<!-- ${comment} -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${uniqueUrls.map(url => `  <url>
+${filtered.map(url => `  <url>
     <loc>https://petcarehelperai.com${url}</loc>
     <lastmod>${TODAY}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${getPriority(url)}</priority>
+    <priority>${getSitemapPriority(url)}</priority>
   </url>`).join('\n')}
 </urlset>`;
+}
 
-writeFileSync(join(ROOT, 'sitemap.xml'), sitemapXml);
-console.log(`  Sitemap generated with ${uniqueUrls.length} URLs.`);
+// Collect URLs by section
+const breedSitemapUrls = collectUrlsFromDir(join(ROOT, 'breeds'), '/breeds');
+const guideSitemapUrls = collectUrlsFromDir(join(ROOT, 'guides'), '/guides');
+const commercialSitemapUrls = collectUrlsFromDir(join(ROOT, 'commercial'), '/commercial');
+const locationSitemapUrls = collectUrlsFromDir(join(ROOT, 'locations'), '/locations');
+
+const pageSitemapUrls = [];
+const topLevelFiles = readdirSync(ROOT).filter(f => f.endsWith('.html'));
+for (const f of topLevelFiles) {
+  const slug = f === 'index.html' ? '' : f.replace('.html', '');
+  pageSitemapUrls.push(slug ? `/${slug}` : '/');
+}
+pageSitemapUrls.push(...collectUrlsFromDir(join(ROOT, 'tools'), '/tools'));
+pageSitemapUrls.push(...collectUrlsFromDir(join(ROOT, 'resources'), '/resources'));
+pageSitemapUrls.push(...locationSitemapUrls);
+
+// Write sub-sitemaps
+writeFileSync(join(ROOT, 'sitemap-pages.xml'), buildSubSitemap(pageSitemapUrls, 'Core pages, locations, tools, resources'));
+writeFileSync(join(ROOT, 'sitemap-breeds.xml'), buildSubSitemap(breedSitemapUrls, 'Breed pages'));
+writeFileSync(join(ROOT, 'sitemap-guides.xml'), buildSubSitemap(guideSitemapUrls, 'Guide pages'));
+writeFileSync(join(ROOT, 'sitemap-commercial.xml'), buildSubSitemap(commercialSitemapUrls, 'Commercial/decision pages'));
+
+// Write sitemap index
+const sitemapIndexXml = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://petcarehelperai.com/sitemap-pages.xml</loc>
+    <lastmod>${TODAY}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://petcarehelperai.com/sitemap-breeds.xml</loc>
+    <lastmod>${TODAY}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://petcarehelperai.com/sitemap-guides.xml</loc>
+    <lastmod>${TODAY}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://petcarehelperai.com/sitemap-commercial.xml</loc>
+    <lastmod>${TODAY}</lastmod>
+  </sitemap>
+</sitemapindex>`;
+
+writeFileSync(join(ROOT, 'sitemap.xml'), sitemapIndexXml);
+
+const totalSitemapUrls = [breedSitemapUrls, guideSitemapUrls, commercialSitemapUrls, pageSitemapUrls]
+  .map(urls => [...new Set(urls)].filter(shouldIncludeUrl).length)
+  .reduce((a, b) => a + b, 0);
+console.log(`  Sitemap index generated with ${totalSitemapUrls} total URLs across 4 sub-sitemaps.`);
 
 // ============================================================
 // PHASE 6: RSS FEED EXPANSION
