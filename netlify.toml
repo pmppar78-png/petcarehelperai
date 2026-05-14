@@ -293,6 +293,310 @@
   status = 301
   force = true
 
+# --- Specific cross-category comparison page redirects ---
+# These vs-pages don't exist at the reclassified destination, so redirect
+# to the reverse comparison page (which does exist) instead of the wildcard.
+[[redirects]]
+  from = "/commercial/fish/melanurus-wrasse/vs-molly"
+  to = "/commercial/fish/molly/vs-melanurus-wrasse"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/tiger-salamander/vs-tegu"
+  to = "/commercial/reptiles/tegu/vs-tiger-salamander"
+  status = 301
+  force = true
+
+# --- Redirect misplaced commercial amphibian pages (full species coverage) ---
+# Breeds-level redirects for reptiles→amphibians were comprehensive, but the
+# corresponding /commercial/ redirects were incomplete. These wildcards catch
+# any request to /commercial/reptiles/{amphibian-species}/* and redirect to
+# the correct /commercial/amphibians/{species}/* location.
+[[redirects]]
+  from = "/commercial/reptiles/african-clawed-frog/*"
+  to = "/commercial/amphibians/african-clawed-frog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/african-dwarf-frog/*"
+  to = "/commercial/amphibians/african-dwarf-frog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/american-bullfrog/*"
+  to = "/commercial/amphibians/american-bullfrog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/axolotl/*"
+  to = "/commercial/amphibians/axolotl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/budgetts-frog/*"
+  to = "/commercial/amphibians/budgetts-frog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/chinese-fire-belly-newt/*"
+  to = "/commercial/amphibians/chinese-fire-belly-newt/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/dart-frog/*"
+  to = "/commercial/amphibians/dart-frog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/eastern-newt/*"
+  to = "/commercial/amphibians/eastern-newt/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/fire-bellied-newt/*"
+  to = "/commercial/amphibians/fire-bellied-newt/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/fire-bellied-toad/*"
+  to = "/commercial/amphibians/fire-bellied-toad/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/fire-salamander/*"
+  to = "/commercial/amphibians/fire-salamander/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/gray-tree-frog/*"
+  to = "/commercial/amphibians/gray-tree-frog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/green-tree-frog/*"
+  to = "/commercial/amphibians/green-tree-frog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/pacman-frog/*"
+  to = "/commercial/amphibians/pacman-frog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/red-eyed-tree-frog/*"
+  to = "/commercial/amphibians/red-eyed-tree-frog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/spring-peeper/*"
+  to = "/commercial/amphibians/spring-peeper/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/surinam-toad/*"
+  to = "/commercial/amphibians/surinam-toad/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/tiger-salamander/*"
+  to = "/commercial/amphibians/tiger-salamander/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/tomato-frog/*"
+  to = "/commercial/amphibians/tomato-frog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/reptiles/whites-tree-frog/*"
+  to = "/commercial/amphibians/whites-tree-frog/:splat"
+  status = 301
+  force = true
+
+# --- Redirect misplaced commercial marine-fish pages (full species coverage) ---
+# Breeds-level redirects for fish→marine-fish were comprehensive, but the
+# corresponding /commercial/ redirects were entirely missing. These wildcards
+# catch any request to /commercial/fish/{marine-species}/* and redirect to
+# the correct /commercial/marine-fish/{species}/* location.
+[[redirects]]
+  from = "/commercial/fish/bangai-cardinal/*"
+  to = "/commercial/marine-fish/bangai-cardinal/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/blue-damsel/*"
+  to = "/commercial/marine-fish/blue-damsel/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/blue-tang/*"
+  to = "/commercial/marine-fish/blue-tang/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/cleaner-wrasse/*"
+  to = "/commercial/marine-fish/cleaner-wrasse/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/clownfish/*"
+  to = "/commercial/marine-fish/clownfish/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/copperband-butterfly/*"
+  to = "/commercial/marine-fish/copperband-butterfly/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/coral-beauty/*"
+  to = "/commercial/marine-fish/coral-beauty/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/dottyback/*"
+  to = "/commercial/marine-fish/dottyback/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/emperor-angelfish/*"
+  to = "/commercial/marine-fish/emperor-angelfish/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/fairy-wrasse/*"
+  to = "/commercial/marine-fish/fairy-wrasse/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/firefish/*"
+  to = "/commercial/marine-fish/firefish/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/flame-angelfish/*"
+  to = "/commercial/marine-fish/flame-angelfish/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/flame-hawkfish/*"
+  to = "/commercial/marine-fish/flame-hawkfish/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/foxface-rabbitfish/*"
+  to = "/commercial/marine-fish/foxface-rabbitfish/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/green-chromis/*"
+  to = "/commercial/marine-fish/green-chromis/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/hawkfish/*"
+  to = "/commercial/marine-fish/hawkfish/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/kole-tang/*"
+  to = "/commercial/marine-fish/kole-tang/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/mandarin-goby/*"
+  to = "/commercial/marine-fish/mandarin-goby/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/maroon-clownfish/*"
+  to = "/commercial/marine-fish/maroon-clownfish/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/melanurus-wrasse/*"
+  to = "/commercial/marine-fish/melanurus-wrasse/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/powder-blue-tang/*"
+  to = "/commercial/marine-fish/powder-blue-tang/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/royal-gramma/*"
+  to = "/commercial/marine-fish/royal-gramma/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/six-line-wrasse/*"
+  to = "/commercial/marine-fish/six-line-wrasse/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/watchman-goby/*"
+  to = "/commercial/marine-fish/watchman-goby/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/fish/yellow-tang/*"
+  to = "/commercial/marine-fish/yellow-tang/:splat"
+  status = 301
+  force = true
+
+# --- Malformed URL cleanup ---
+# Googlebot extracted "/month)" from page text like "($45/month)" and
+# crawled it as a URL. This catch-all redirect prevents 404 signals.
+[[redirects]]
+  from = "/month)"
+  to = "/"
+  status = 301
+  force = true
+
 # --- Legacy /resources/feed.xml → /feed.xml ---
 # Resources pages historically used a relative href="feed.xml" that resolved to
 # /resources/feed.xml (which doesn't exist). Source links are now absolute, but
