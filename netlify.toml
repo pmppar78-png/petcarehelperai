@@ -167,6 +167,48 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/breeds/reptiles/budgetts-frog"
+  to = "/breeds/amphibians/budgetts-frog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/chinese-fire-belly-newt"
+  to = "/breeds/amphibians/chinese-fire-belly-newt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/fire-bellied-toad"
+  to = "/breeds/amphibians/fire-bellied-toad"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/gray-tree-frog"
+  to = "/breeds/amphibians/gray-tree-frog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/green-tree-frog"
+  to = "/breeds/amphibians/green-tree-frog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/spring-peeper"
+  to = "/breeds/amphibians/spring-peeper"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/reptiles/surinam-toad"
+  to = "/breeds/amphibians/surinam-toad"
+  status = 301
+  force = true
+
 # --- Redirect misplaced marine fish breed pages from /breeds/fish/ to /breeds/marine-fish/ ---
 # These species exist under /breeds/marine-fish/ but historical internal links
 # (and any external links Google has cached) used /breeds/fish/.
@@ -275,6 +317,48 @@
 [[redirects]]
   from = "/breeds/fish/yellow-tang"
   to = "/breeds/marine-fish/yellow-tang"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/bangai-cardinal"
+  to = "/breeds/marine-fish/bangai-cardinal"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/copperband-butterfly"
+  to = "/breeds/marine-fish/copperband-butterfly"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/flame-hawkfish"
+  to = "/breeds/marine-fish/flame-hawkfish"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/foxface-rabbitfish"
+  to = "/breeds/marine-fish/foxface-rabbitfish"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/green-chromis"
+  to = "/breeds/marine-fish/green-chromis"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/maroon-clownfish"
+  to = "/breeds/marine-fish/maroon-clownfish"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/fish/royal-gramma"
+  to = "/breeds/marine-fish/royal-gramma"
   status = 301
   force = true
 
