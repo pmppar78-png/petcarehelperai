@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+  <title>When to see a vet | Pet Care Helper AI</title>
+  <meta name="description" content="Interactive checker that sorts pet symptoms into urgent, soon, or monitor, with emergency guidance and a disclaimer.">
+  <link rel="canonical" href="https://petcarehelperai.com/vet/checker">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="When to see a vet">
+  <meta property="og:description" content="Interactive checker that sorts pet symptoms into urgent, soon, or monitor, with emergency guidance and a disclaimer.">
+  <meta property="og:url" content="https://petcarehelperai.com/vet/checker">
+  <meta property="og:site_name" content="Pet Care Helper AI">
+  <link rel="stylesheet" href="/styles.css">
+  
+</head>
+<body>
+<header class="site-header">
+  <div class="logo-title">
+    <div class="logo-pill"></div>
+    <div>
+      <span class="site-name">Pet Care Helper AI</span>
+      <p class="subtitle">Dogs &bull; Cats &bull; Birds &bull; Reptiles &bull; Amphibians &bull; Fish</p>
+    </div>
+  </div>
+  <nav class="main-nav">
+    <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu"><span class="hamburger"></span></button>
+    <ul class="nav-menu" id="mobile-menu">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/chat" class="nav-link">AI Pet Help</a></li>
+        <li><a href="/vet/" class="nav-link active">Vet Help</a></li>
+        <li><a href="/dogs" class="nav-link">Dogs</a></li>
+        <li><a href="/cats" class="nav-link">Cats</a></li>
+        <li><a href="/birds" class="nav-link">Birds</a></li>
+        <li><a href="/reptiles" class="nav-link">Reptiles</a></li>
+        <li><a href="/amphibians" class="nav-link">Amphibians</a></li>
+        <li><a href="/fish" class="nav-link">Fish</a></li>
+        <li><a href="/marine-fish" class="nav-link">Marine Fish</a></li>
+        <li><a href="/small-animals" class="nav-link">Small Animals</a></li>
+        <li><a href="/guides" class="nav-link">Guides</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main-content">
+  <div class="breadcrumb"><a href="/">Home</a> <span>&rsaquo;</span> <a href="/vet/">Vet help</a> <span>&rsaquo;</span> When to see a vet</div>
+  <article class="guide-content">
+
+<h1>When to see a vet</h1>
+<p>Pick the species, tick what you are seeing, and the checker will sort the situation into urgent, soon, or monitor. It is a safety sort, not a diagnosis and not a triage line staffed by a clinic.</p>
+<div class="warning-box">
+  <h4>Disclaimer</h4>
+  <p>This tool does not examine your animal and does not create a veterinary-client relationship. If you are unsure, call a clinic. Trouble breathing, collapse, uncontrolled bleeding, seizures that keep going, a male cat who cannot urinate, a tight swelling belly in a dog, or a rabbit or guinea pig who has stopped eating should go to an emergency hospital now.</p>
+</div>
+<form class="checker-form" id="vet-checker" action="#">
+  <label class="checker-species">Species
+    <select id="checker-species" name="species">
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+      <option value="bird">Bird</option>
+      <option value="reptile">Reptile or amphibian</option>
+      <option value="small">Rabbit or small mammal</option>
+      <option value="fish">Fish</option>
+    </select>
+  </label>
+  <fieldset>
+    <legend>What are you seeing?</legend>
+    <div id="checker-options"></div>
+  </fieldset>
+  <button type="submit" class="primary-btn">Check</button>
+</form>
+<div id="checker-result" class="checker-result" hidden></div>
+<h2>How the three speeds work</h2>
+<p><strong>Urgent</strong> means leave now for the nearest open veterinary ER. Call them from the car so they can prepare oxygen, a blockage procedure, or decontamination. If the pet was hit by a car, is unconscious, or was in a fight with a wild animal, go even if the list below did not quite match.</p>
+<p><strong>Soon</strong> means contact your clinic today. If they cannot see a worsening pet, ask which emergency hospital they use. Soon is not "sometime this month."</p>
+<p><strong>Monitor</strong> means the animal is bright, the change is mild, and you have a plan to call if appetite, breathing, urine, or energy gets worse. Write down the time the sign started.</p>
+<h2>Poison help</h2>
+<p>ASPCA Animal Poison Control Center: (888) 426-4435. Pet Poison Helpline: (855) 764-7661. Both may charge a consultation fee. Bring the package. Do not induce vomiting unless a poison specialist or veterinarian tells you to. Some substances burn on the way back up.</p>
+<p>Read the matching guide after you have a speed: <a href="/vet/symptoms/dog-vomiting">dog vomiting</a>, <a href="/vet/symptoms/dog-diarrhea">dog diarrhea</a>, <a href="/vet/symptoms/dog-limping">dog limping</a>, <a href="/vet/symptoms/dog-itching">dog itching</a>, <a href="/vet/symptoms/cat-not-eating">cat not eating</a>, <a href="/vet/symptoms/cat-vomiting">cat vomiting</a>, <a href="/vet/symptoms/cat-urinary">cat urinary</a>, <a href="/vet/symptoms/bird-quiet">quiet bird</a>, <a href="/vet/symptoms/reptile-not-eating">reptile not eating</a>, <a href="/vet/symptoms/fish-gasping">fish gasping</a>, <a href="/vet/symptoms/small-mammal-not-eating">small mammal not eating</a>.</p>
+<script>
+(function () {
+  const options = [
+    { id: "breathing", level: "urgent", species: "all", label: "Trouble breathing, blue or pale gums, or open-mouth breathing in a cat or bird" },
+    { id: "collapse", level: "urgent", species: "all", label: "Collapse, unresponsiveness, or a seizure that is still going or repeats" },
+    { id: "bleeding", level: "urgent", species: "all", label: "Bleeding that will not stop, or a deep wound from a car or a fight" },
+    { id: "toxin", level: "urgent", species: "all", label: "Known or possible poison, including chocolate, xylitol, grapes, lily, rodent bait, or a human painkiller" },
+    { id: "bloat", level: "urgent", species: "dog", label: "Dog: unproductive retching or a tight, swelling belly" },
+    { id: "block", level: "urgent", species: "cat", label: "Cat, especially male: straining to urinate with little or no urine" },
+    { id: "stasis", level: "urgent", species: "small", label: "Rabbit or guinea pig: not eating, no droppings, hunched, or bloated" },
+    { id: "birddown", level: "urgent", species: "bird", label: "Bird: fluffed on the cage floor, tail bobbing, or bleeding" },
+    { id: "gasping", level: "urgent", species: "fish", label: "Several fish gasping at the surface or a filter that has stopped" },
+    { id: "reptilebad", level: "urgent", species: "reptile", label: "Reptile: open-mouth breathing, prolapse, seizures, or a soft jaw with tremors" },
+    { id: "vomitday", level: "soon", species: "dog cat", label: "Repeated vomiting today, or vomit with blood" },
+    { id: "stool", level: "soon", species: "dog cat small", label: "Diarrhea with blood, black stool, or diarrhea plus lethargy" },
+    { id: "limp", level: "soon", species: "dog cat", label: "Limping, or a leg that will not bear weight" },
+    { id: "appetite", level: "soon", species: "dog cat bird reptile", label: "Has not eaten for about a day (sooner for cats, birds, and reptiles losing weight)" },
+    { id: "eye", level: "soon", species: "all", label: "Squinting, a cloudy eye, or an eye injury" },
+    { id: "itch", level: "soon", species: "dog cat", label: "A hot, oozing skin sore or an ear that smells and hurts" },
+    { id: "onevomit", level: "monitor", species: "dog cat", label: "One vomit, then normal energy, gums, and appetite" },
+    { id: "soft", level: "monitor", species: "dog", label: "One soft stool in a bright adult dog, no blood" },
+    { id: "milditch", level: "monitor", species: "dog cat", label: "Mild scratching, no swelling, no breathing change" },
+    { id: "singlefish", level: "monitor", species: "fish", label: "One fish slightly less active, water tests are normal, others are fine" }
+  ];
+  const box = document.getElementById("checker-options");
+  const speciesEl = document.getElementById("checker-species");
+  const result = document.getElementById("checker-result");
+  function render() {
+    const sp = speciesEl.value;
+    box.innerHTML = options.filter((o) => o.species === "all" || o.species.split(" ").includes(sp)).map((o) =>
+      '<label><input type="checkbox" data-level="' + o.level + '" value="' + o.id + '"> <span>' + o.label + '</span></label>'
+    ).join("");
+  }
+  speciesEl.addEventListener("change", () => { render(); result.hidden = true; });
+  render();
+  document.getElementById("vet-checker").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const picked = [...box.querySelectorAll("input:checked")];
+    if (!picked.length) {
+      result.hidden = false;
+      result.className = "checker-result soon";
+      result.innerHTML = "<h2>Select at least one sign</h2><p>If none of the lines fit and you are worried, call a clinic and describe what changed, when it started, and whether the animal is still eating.</p>";
+      return;
+    }
+    const levels = picked.map((el) => el.dataset.level);
+    let level = "monitor";
+    if (levels.includes("urgent")) level = "urgent";
+    else if (levels.includes("soon")) level = "soon";
+    const copy = {
+      urgent: "<h2>Urgent: go to a veterinary ER now</h2><p>Leave for the nearest open emergency hospital. Call ahead if someone else can dial while you drive. If this may be a poison and the pet is still standing, you can also call ASPCA Animal Poison Control at (888) 426-4435 on the way. Do not induce vomiting unless they tell you to.</p>",
+      soon: "<h2>Soon: contact a clinic today</h2><p>Call your veterinarian and describe the signs. If they are closed or cannot fit a pet who is getting worse, ask which emergency hospital covers their patients. Keep water available unless vomiting makes that impossible. Skip human painkillers.</p>",
+      monitor: "<h2>Monitor, and call if it changes</h2><p>The signs you ticked are the milder ones, and only if the animal is otherwise bright. Write down the time. Call a clinic if there is another episode, if appetite drops, if breathing changes, or if you simply do not like how the animal looks. You do not need permission to be more careful than this tool.</p>"
+    };
+    result.hidden = false;
+    result.className = "checker-result " + level;
+    result.innerHTML = copy[level] + "<p>This is not a diagnosis. A veterinarian who can examine the animal is the next authority.</p>";
+    result.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  });
+})();
+</script>
+  </article>
+</main>
+<footer class="site-footer">
+  <p>AI Pet Medical &amp; Vet Help Finder &mdash; educational guidance, real-world vet options, and curated resources.</p>
+  <p style="font-size: 0.85rem; margin-top: 8px;">Some suggestions may include sponsored partners. This site does not replace a veterinarian.</p>
+  <nav class="footer-nav" style="margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem;">
+    <a href="/vet/">Vet Help</a> &middot;
+    <a href="/vet/checker">When to See a Vet</a> &middot;
+    <a href="/image-credits">Image Credits</a> &middot;
+    <a href="/guides">Guides</a> &middot;
+    <a href="/about">About</a> &middot;
+    <a href="/contact">Contact</a> &middot;
+    <a href="/privacy-policy">Privacy</a> &middot;
+    <a href="/terms-of-service">Terms</a> &middot;
+    <a href="/affiliate-disclosure">Disclosure</a> &middot;
+    <a href="/editorial-standards">Editorial Standards</a>
+  </nav>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('#mobile-menu');
+  if (!navToggle || !navMenu) return;
+  const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+  const closeMenu = () => { navMenu.classList.remove('active','open'); navToggle.classList.remove('active'); navToggle.setAttribute('aria-expanded','false'); };
+  navToggle.addEventListener('click', function () {
+    if (!isMobile()) return;
+    const open = !navMenu.classList.contains('active');
+    navMenu.classList.toggle('active', open);
+    navToggle.classList.toggle('active', open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navMenu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => { if (isMobile()) closeMenu(); }));
+});
+</script>
+</body>
+</html>

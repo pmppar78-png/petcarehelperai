@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://upload.wikimedia.org">
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK0N7BD82Q"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FK0N7BD82Q');</script>
@@ -71,7 +70,7 @@
   "datePublished": "2026-02-19",
   "dateModified": "2026-02-19"
 }</script>
-  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Eastern_Bearded_Dragon%2C_Majura%2C_ACT_2609%2C_Australia_imported_from_iNaturalist_photo_67070853_%28cropped%29.jpg/800px-Eastern_Bearded_Dragon%2C_Majura%2C_ACT_2609%2C_Australia_imported_from_iNaturalist_photo_67070853_%28cropped%29.jpg" />
+  <meta property="og:image" content="/animal-placeholder.svg" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Reptile Species Directory: Lizards, Snakes &amp; Turtles — Habitat, Diet &amp; Care" />
   <meta name="twitter:description" content="Complete reptile and amphibian species directory. Lizards, snakes, turtles, and frogs with care guides, habitat requirements, diet, and health information." />
@@ -117,6 +116,7 @@
       <ul class="nav-menu" id="mobile-menu">
         <li><a href="/" class="nav-link">Home</a></li>
         <li><a href="/chat" class="nav-link">AI Pet Help</a></li>
+        <li><a href="/vet/" class="nav-link">Vet Help</a></li>
         <li><a href="/dogs" class="nav-link">Dogs</a></li>
         <li><a href="/cats" class="nav-link">Cats</a></li>
         <li><a href="/birds" class="nav-link">Birds</a></li>
@@ -141,17 +141,38 @@
       <h1>Reptile &amp; Amphibian Species Guide</h1>
       <p>Explore reptile and amphibian profiles, from geckos and pythons to turtles and frogs, with habitat, diet, temperature, and care fundamentals.</p>
       <div class="breed-image-container" style="text-align:center;margin:20px 0;">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Eastern_Bearded_Dragon%2C_Majura%2C_ACT_2609%2C_Australia_imported_from_iNaturalist_photo_67070853_%28cropped%29.jpg/800px-Eastern_Bearded_Dragon%2C_Majura%2C_ACT_2609%2C_Australia_imported_from_iNaturalist_photo_67070853_%28cropped%29.jpg"
-     alt="Reptile &amp; Amphibian Species Guide illustration"
+<img src="/animal-placeholder.svg"
+     alt="Photo coming soon"
      class="guide-hero-image breed-hero-image"
      loading="lazy"
      width="800" height="600"
-     style="max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);aspect-ratio:4/3;object-fit:cover;">
+     style="max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);aspect-ratio:4/3;object-fit:cover;" decoding="async">
 </div>
 
     </section>
 
-    <div class="filter-section">
+    
+<section class="hub-guide"><h2>Using the reptile list</h2>
+<p>Filter by type first: lizard, snake, or turtle. Those groups do not share a heating plan. A leopard gecko's warm hide is a different project from a basking turtle who needs strong UVB and a water quality routine. Beginner-friendly on this page means the species is commonly captive-bred and the enclosure can be done correctly with a thermostat and a thermometer you can read, not that the animal thrives in a tank from a fair.</p>
+<p>Lifespan will surprise people who think of reptiles as short school projects. Many of the animals in this directory are a ten-to-twenty-year commitment, and some tortoises outlive the lease, the job, and the original owner. If the lifespan filter says long, believe it and name a backup caretaker before you buy.</p>
+<p>Search is literal. If you type "python," you will not also get every boa unless the blurb says python. Open the profile for temperatures, humidity, and whether UVB is optional or mandatory. Metabolic bone disease is what happens when that line is skipped. A reptile who stops eating and loses weight needs a clinician who sees reptiles. The <a href="/vet/symptoms/reptile-not-eating">not-eating guide</a> explains how that differs from a normal seasonal pause.</p>
+<p>Large constrictors and some turtles carry legal restrictions. The profile is where those cautions live. Wild-caught animals are a welfare and disease problem even when a shop will sell one.</p></section>
+<div class="hub-tools" id="hub-tools">
+  <label>Search
+    <input type="search" class="hub-search" placeholder="Search this directory" aria-label="Search this directory">
+  </label>
+  <label>Lifespan
+    <select class="hub-life" aria-label="Filter by lifespan">
+      <option value="all">Any lifespan</option>
+      <option value="short">Under 8 years</option>
+      <option value="medium">8 to 12 years</option>
+      <option value="long">Over 12 years</option>
+    </select>
+  </label>
+  <label class="hub-beg-label"><input type="checkbox" class="hub-beginner"> Beginner-friendly</label>
+  <p class="hub-count" aria-live="polite"></p>
+</div>
+<div class="filter-section">
       <div class="filter-row">
         <span class="filter-label">Filter by type:</span>
         <button class="filter-btn active" data-filter="all">All Species</button>
@@ -174,49 +195,49 @@
       <p>Small, generally docile lizards that are among the most beginner-friendly reptiles — if you get the heating, lighting, and humidity right from day one. Most are insectivores; a few larger species take fruit or nectar. Handling tolerance varies widely by species.</p>
 
       <div class="breed-grid">
-          <a href="/breeds/reptiles/leopard-gecko" class="breed-card" data-type="lizard">
+          <a data-life="long" data-beginner="yes" href="/breeds/reptiles/leopard-gecko" class="breed-card" data-type="lizard">
             <h3>Leopard Gecko</h3>
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Beginner</span></div>
             <p>Perfect beginner reptile. Docile, handleable, and don't require UVB lighting. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/crested-gecko" class="breed-card" data-type="lizard">
+          <a data-life="long" data-beginner="yes" href="/breeds/reptiles/crested-gecko" class="breed-card" data-type="lizard">
             <h3>Crested Gecko</h3>
-      <p>Once this part of reptile care clicks, the downstream choices tend to come faster and land better. No two reptile behave exactly alike, so let your own pet's cues guide the small adjustments that matter.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Beginner</span></div>
             <p>Easy to care for with room temperature needs. Can eat commercial diet. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/gargoyle-gecko" class="breed-card" data-type="lizard">
+          <a data-life="long" data-beginner="yes" href="/breeds/reptiles/gargoyle-gecko" class="breed-card" data-type="lizard">
             <h3>Gargoyle Gecko</h3>
-      <p>Pay attention to what makes your reptile your reptile, and the rest of the care plan tends to click into place.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Hardy</span></div>
             <p>Similar care to crested geckos. Bumpier texture, regenerate tails. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/african-fat-tailed-gecko" class="breed-card" data-type="lizard">
+          <a data-life="long" data-beginner="yes" href="/breeds/reptiles/african-fat-tailed-gecko" class="breed-card" data-type="lizard">
             <h3>African Fat-Tailed Gecko</h3>
-      <p>These attributes are not trivia; they shape the real decisions an owner makes every day, every month, and every year of ownership.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Gentle</span></div>
             <p>Similar to leopard geckos but need higher humidity. Very docile. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/tokay-gecko" class="breed-card" data-type="lizard">
+          <a data-life="medium" data-beginner="no" href="/breeds/reptiles/tokay-gecko" class="breed-card" data-type="lizard">
             <h3>Tokay Gecko</h3>
       
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Advanced</span></div>
             <p>Beautiful but notorious for biting. Loud calls, impressive colors. Lifespan 10-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/giant-day-gecko" class="breed-card" data-type="lizard">
+          <a data-life="medium" data-beginner="no" data-size="giant" href="/breeds/reptiles/giant-day-gecko" class="breed-card" data-type="lizard">
             <h3>Day Gecko (Phelsuma)</h3>
-      <p>The trade-off is simple: a few hours reading about their reptile behavior now versus larger bills and stress later.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Display</span></div>
             <p>Brilliant green coloring, active during day. Not for handling, display animals. Lifespan 10-15 years.</p>
           </a>
-          <a href="/breeds/reptiles/leachianus-gecko" class="breed-card" data-type="lizard">
+          <a data-life="long" data-beginner="no" data-size="large" href="/breeds/reptiles/leachianus-gecko" class="breed-card" data-type="lizard">
             <h3>Leachianus Gecko</h3>
-      <p>The traits above are only useful to the extent they shape actual decisions; the households that convert them into specific care defaults benefit most.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Large</span></div>
             <p>Largest gecko species. Impressive size, can be handleable. Lifespan 20+ years.</p>
@@ -227,38 +248,38 @@
       <!-- Bearded Dragons & Agamids -->
       <div class="subcategory">
         <h3>Bearded Dragons &amp; Agamids</h3>
-      <p>Breed origin shapes several practical defaults: calorie density, exercise tolerance, environmental preferences. Plans that respect these origins outperform plans that ignore them.</p>
+      
 
       <div class="breed-grid">
-          <a href="/breeds/reptiles/bearded-dragon" class="breed-card" data-type="lizard">
+          <a data-life="medium" data-beginner="no" href="/breeds/reptiles/bearded-dragon" class="breed-card" data-type="lizard">
             <h3>Bearded Dragon</h3>
-      <p>The closer your routine tracks your reptile's specific traits, the easier everything downstream becomes.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Popular</span></div>
             <p>Most popular pet lizard. Friendly, interactive, and full of personality. Lifespan 10-15 years.</p>
           </a>
-          <a href="/breeds/reptiles/rankins-dragon" class="breed-card" data-type="lizard">
+          <a data-life="short" data-beginner="yes" data-size="small" href="/breeds/reptiles/rankins-dragon" class="breed-card" data-type="lizard">
             <h3>Rankin's Dragon</h3>
-      <p>The details on this page vary by household, so use the structure as orientation rather than prescription.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Small</span></div>
             <p>Smaller cousin of bearded dragons. Similar care, more manageable size. Lifespan 8-10 years.</p>
           </a>
-          <a href="/breeds/reptiles/uromastyx" class="breed-card" data-type="lizard">
+          <a data-life="long" data-beginner="no" href="/breeds/reptiles/uromastyx" class="breed-card" data-type="lizard">
             <h3>Uromastyx</h3>
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Desert</span></div>
             <p>Herbivorous desert lizards with spiny tails. Need very hot, dry conditions. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/chinese-water-dragon" class="breed-card" data-type="lizard">
+          <a data-life="medium" data-beginner="no" href="/breeds/reptiles/chinese-water-dragon" class="breed-card" data-type="lizard">
             <h3>Chinese Water Dragon</h3>
-      <p>These principles serve as reliable starting points, but the most effective approach emerges from direct observation and gradual refinement.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Large Tank</span></div>
             <p>Beautiful green lizards needing large, humid enclosures with water. Lifespan 10-15 years.</p>
           </a>
-          <a href="/breeds/reptiles/frilled-dragon" class="breed-card" data-type="lizard">
+          <a data-life="medium" data-beginner="no" href="/breeds/reptiles/frilled-dragon" class="breed-card" data-type="lizard">
             <h3>Frilled Dragon</h3>
-      <p>A steady schedule you can maintain through busy weeks delivers better outcomes than an ambitious one that collapses after a month.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Unique</span></div>
             <p>Iconic frill display. Need tall enclosures and experienced care. Lifespan 10-15 years.</p>
@@ -272,37 +293,37 @@
       <p>Nail the basics — diet, exercise, preventive care — before worrying about optimisation at the edges.</p>
 
       <div class="breed-grid">
-          <a href="/breeds/reptiles/blue-tongue-skink" class="breed-card" data-type="lizard">
+          <a data-life="long" data-beginner="yes" href="/breeds/reptiles/blue-tongue-skink" class="breed-card" data-type="lizard">
             <h3>Blue-Tongue Skink</h3>
-      <p>Building dependable habits here is slow work with compounding returns; the initial investment pays back throughout ownership. </p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Handleable</span></div>
             <p>Docile, easy to handle with distinctive blue tongues. Great personality. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/fire-skink" class="breed-card" data-type="lizard">
+          <a data-life="long" data-beginner="no" data-size="medium" href="/breeds/reptiles/fire-skink" class="breed-card" data-type="lizard">
             <h3>Fire Skink</h3>
-      <p>Real-world outcomes trace back to consistency and attention to situational detail more than to any specific recommendation here. Small adjustments based on what you observe often yield the biggest improvements.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Colorful</span></div>
             <p>Stunning red and gold coloring. Burrowing species needing deep substrate. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/schneiders-skink" class="breed-card" data-type="lizard">
+          <a data-life="long" data-beginner="no" data-size="medium" href="/breeds/reptiles/schneiders-skink" class="breed-card" data-type="lizard">
             <h3>Schneider's Skink</h3>
-      <p>Success here comes from steady observation and a readiness to make small adjustments when the results suggest a change is needed.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Hardy</span></div>
             <p>Hardy desert skink, often underrated. Can become quite tame. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/anole" class="breed-card" data-type="lizard">
+          <a data-life="short" data-beginner="yes" href="/breeds/reptiles/anole" class="breed-card" data-type="lizard">
             <h3>Green Anole</h3>
-      <p>What matters most is consistency in the basics while staying alert to signals that something needs adjustment.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Display</span></div>
             <p>Small, active lizards that change color. Better as display animals. Lifespan 4-8 years.</p>
           </a>
-          <a href="/breeds/reptiles/long-tailed-lizard" class="breed-card" data-type="lizard">
+          <a data-life="short" data-beginner="yes" data-size="small" href="/breeds/reptiles/long-tailed-lizard" class="breed-card" data-type="lizard">
             <h3>Long-Tailed Grass Lizard</h3>
-      <p>Use these principles as your starting point, then let observation and experience guide the specifics.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Active</span></div>
             <p>Active, fast-moving lizards. Best in groups as display animals. Lifespan 5-10 years.</p>
@@ -316,23 +337,23 @@
       <p>Approach this with patience and a willingness to adapt as you learn what works best in your specific situation.</p>
 
       <div class="breed-grid">
-          <a href="/breeds/reptiles/veiled-chameleon" class="breed-card" data-type="lizard">
+          <a data-life="short" data-beginner="no" data-size="large" href="/breeds/reptiles/veiled-chameleon" class="breed-card" data-type="lizard">
             <h3>Veiled Chameleon</h3>
-      <p>Start with the recommended approach and make adjustments as needed based on real-world feedback.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Intermediate</span></div>
             <p>Hardiest chameleon species. Still require specific care but more forgiving. Lifespan 5-8 years.</p>
           </a>
-          <a href="/breeds/reptiles/panther-chameleon" class="breed-card" data-type="lizard">
+          <a data-life="short" data-beginner="no" data-size="medium" href="/breeds/reptiles/panther-chameleon" class="breed-card" data-type="lizard">
             <h3>Panther Chameleon</h3>
-      <p>Sound decision-making in this area depends on balancing general principles with specific observations.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Colorful</span></div>
             <p>Most colorful chameleon with locale-specific colors. Need experienced care. Lifespan 5-7 years.</p>
           </a>
-          <a href="/breeds/reptiles/jacksons-chameleon" class="breed-card" data-type="lizard">
+          <a data-life="short" data-beginner="no" data-size="medium" href="/breeds/reptiles/jacksons-chameleon" class="breed-card" data-type="lizard">
             <h3>Jackson's Chameleon</h3>
-      <p>Use vetted guidelines as the default and adjust where the animal in front of you contradicts the averages.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Three-Horned</span></div>
             <p>Males have three distinctive horns. Need cooler temps than other species. Lifespan 5-10 years.</p>
@@ -346,30 +367,30 @@
       <p>Start with the well-supported defaults, measure how they work, and tune from there.</p>
 
       <div class="breed-grid">
-          <a href="/breeds/reptiles/savannah-monitor" class="breed-card" data-type="lizard">
+          <a data-life="medium" data-beginner="no" data-size="large" href="/breeds/reptiles/savannah-monitor" class="breed-card" data-type="lizard">
             <h3>Savannah Monitor</h3>
-      <p>The best results come from combining general best practices with attentive observation of individual responses.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Large</span></div>
             <p>Most common pet monitor. Can be tamed but need huge enclosures. Lifespan 10-15 years.</p>
           </a>
-          <a href="/breeds/reptiles/ackie-monitor" class="breed-card" data-type="lizard">
+          <a data-life="long" data-beginner="no" data-size="medium" href="/breeds/reptiles/ackie-monitor" class="breed-card" data-type="lizard">
             <h3>Ackie Monitor</h3>
-      <p>The details matter, but so does the big picture — keep both in view as you develop your approach.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Dwarf Monitor</span></div>
             <p>Smaller "dwarf" monitor, more manageable. Active and intelligent. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/black-throat-monitor" class="breed-card" data-type="lizard">
+          <a data-life="long" data-beginner="no" data-size="large" href="/breeds/reptiles/black-throat-monitor" class="breed-card" data-type="lizard">
             <h3>Black-Throat Monitor</h3>
-      <p>Staying informed and observant gives you the best chance of making sound decisions as situations evolve.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Advanced</span></div>
             <p>Large, intelligent monitor. Can be dog-tame with work. Need room-sized enclosures. Lifespan 20+ years.</p>
           </a>
-          <a href="/breeds/reptiles/tegu" class="breed-card" data-type="lizard">
+          <a data-life="long" data-beginner="no" href="/breeds/reptiles/tegu" class="breed-card" data-type="lizard">
             <h3>Argentine Tegu</h3>
-      <p>A thoughtful approach here pays dividends in better outcomes and fewer unexpected complications.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Dog-Like</span></div>
             <p>Intelligent, can become very tame. Need large space and varied diet. Lifespan 15-20 years.</p>
@@ -389,58 +410,58 @@
       <p>The general direction is well-established — your job is to calibrate the details to fit your particular context.</p>
 
       <div class="breed-grid">
-          <a href="/breeds/reptiles/corn-snake" class="breed-card" data-type="snake">
+          <a data-life="long" data-beginner="no" href="/breeds/reptiles/corn-snake" class="breed-card" data-type="snake">
             <h3>Corn Snake</h3>
-      <p>Experience refines judgment over time — start with established practices and develop your own insights as you go.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Beginner</span></div>
             <p>Perfect first snake. Docile, easy to care for, many color morphs. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/ball-python" class="breed-card" data-type="snake">
+          <a data-life="long" data-beginner="yes" data-size="large" href="/breeds/reptiles/ball-python" class="breed-card" data-type="snake">
             <h3>Ball Python</h3>
-      <p>Practical experience will help you fine-tune these recommendations to your particular needs over time.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Popular</span></div>
             <p>Most popular pet snake. Docile "puppy dogs" of snakes. Thousands of morphs. Lifespan 20-30 years.</p>
           </a>
-          <a href="/breeds/reptiles/king-snake" class="breed-card" data-type="snake">
+          <a data-life="long" data-beginner="yes" href="/breeds/reptiles/king-snake" class="breed-card" data-type="snake">
             <h3>King Snake</h3>
-      <p>Progress comes from consistent application of sound principles, refined over time through direct experience.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Hardy</span></div>
             <p>Hardy, active snakes. Multiple species available with various patterns. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/milk-snake" class="breed-card" data-type="snake">
+          <a data-life="long" data-beginner="yes" data-size="medium" href="/breeds/reptiles/milk-snake" class="breed-card" data-type="snake">
             <h3>Milk Snake</h3>
-      <p>Apply this knowledge with flexibility, recognizing that individual variation is normal and expected.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Colorful</span></div>
             <p>Vibrant red, black, and white/yellow bands. Related to king snakes. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/rosy-boa" class="breed-card" data-type="snake">
+          <a data-life="long" data-beginner="yes" data-size="small" href="/breeds/reptiles/rosy-boa" class="breed-card" data-type="snake">
             <h3>Rosy Boa</h3>
-      <p>Building expertise in this area is an ongoing process that rewards patience, observation, and willingness to learn.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Gentle</span></div>
             <p>Small, gentle boas from North America. Slow-moving and docile. Lifespan 20-30 years.</p>
           </a>
-          <a href="/breeds/reptiles/kenyan-sand-boa" class="breed-card" data-type="snake">
+          <a data-life="long" data-beginner="yes" href="/breeds/reptiles/kenyan-sand-boa" class="breed-card" data-type="snake">
             <h3>Kenyan Sand Boa</h3>
-      <p>The strongest outcomes come from combining reliable guidelines with responsive, attentive care.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Small</span></div>
             <p>Small, burrowing boas. Easy to keep in smaller enclosures. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/hognose-snake" class="breed-card" data-type="snake">
+          <a data-life="long" data-beginner="yes" data-size="small" href="/breeds/reptiles/hognose-snake" class="breed-card" data-type="snake">
             <h3>Western Hognose Snake</h3>
-      <p>The framework here is solid, but the fine-tuning comes from hands-on experience with your own unique situation.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Unique</span></div>
             <p>Upturned nose, dramatic "death" displays. Mildly venomous but harmless to humans. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/garter-snake" class="breed-card" data-type="snake">
+          <a data-life="medium" data-beginner="yes" data-size="small" href="/breeds/reptiles/garter-snake" class="breed-card" data-type="snake">
             <h3>Garter Snake</h3>
-      <p>What matters most is consistency in the fundamentals — the details fall into place as you gain hands-on experience.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Active</span></div>
             <p>Active, diurnal snakes. Can eat varied diet including fish. Lifespan 10-15 years.</p>
@@ -454,51 +475,51 @@
       <p>Every owner develops their own rhythm with care routines, and the important thing is staying responsive to what your pet actually needs.</p>
 
       <div class="breed-grid">
-          <a href="/breeds/reptiles/boa-constrictor" class="breed-card" data-type="snake">
+          <a data-life="long" data-beginner="no" href="/breeds/reptiles/boa-constrictor" class="breed-card" data-type="snake">
             <h3>Boa Constrictor</h3>
-      <p>Reliable results follow from applying well-tested methods with attention to the specifics of your situation.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Large</span></div>
             <p>Classic large snake, generally docile. Need experienced keepers. Lifespan 20-30 years.</p>
           </a>
-          <a href="/breeds/reptiles/carpet-python" class="breed-card" data-type="snake">
+          <a data-life="long" data-beginner="no" data-size="large" href="/breeds/reptiles/carpet-python" class="breed-card" data-type="snake">
             <h3>Carpet Python</h3>
-      <p>Build on these basics by paying close attention to how things develop and being ready to pivot when needed.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Semi-Arboreal</span></div>
             <p>Beautiful patterns, can be nippy when young. Many subspecies available. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/brazilian-rainbow-boa" class="breed-card" data-type="snake">
+          <a data-life="long" data-beginner="no" data-size="large" href="/breeds/reptiles/brazilian-rainbow-boa" class="breed-card" data-type="snake">
             <h3>Brazilian Rainbow Boa</h3>
-      <p>Building confidence in pet care comes from doing the research, asking the right questions, and learning from direct experience.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Iridescent</span></div>
             <p>Stunning iridescent sheen. Need high humidity. Lifespan 20-25 years.</p>
           </a>
-          <a href="/breeds/reptiles/blood-python" class="breed-card" data-type="snake">
+          <a data-life="long" data-beginner="no" data-size="large" href="/breeds/reptiles/blood-python" class="breed-card" data-type="snake">
             <h3>Blood Python</h3>
-      <p>The learning curve is real but manageable: most owners find their stride within the first few months of consistent effort.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Thick</span></div>
             <p>Heavy-bodied, can be defensive. Beautiful red coloration. Lifespan 20-25 years.</p>
           </a>
-          <a href="/breeds/reptiles/green-tree-python" class="breed-card" data-type="snake">
+          <a data-life="long" data-beginner="no" data-size="medium" href="/breeds/reptiles/green-tree-python" class="breed-card" data-type="snake">
             <h3>Green Tree Python</h3>
-      <p>Informed owners make better choices at every stage, from initial setup through long-term maintenance and health management.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Arboreal</span></div>
             <p>Stunning arboreal species. Require specific humidity and perches. Lifespan 15-20 years.</p>
           </a>
-          <a href="/breeds/reptiles/burmese-python" class="breed-card" data-type="snake">
+          <a data-life="long" data-beginner="no" data-size="large" href="/breeds/reptiles/burmese-python" class="breed-card" data-type="snake">
             <h3>Burmese Python</h3>
-      <p>Each situation is unique, so adapt these guidelines based on what you observe working for your specific circumstances.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Giant</span></div>
             <p>Giant snake (15-20+ feet). Only for very experienced keepers. Lifespan 20-25 years.</p>
           </a>
-          <a href="/breeds/reptiles/reticulated-python" class="breed-card" data-type="snake">
+          <a data-life="long" data-beginner="no" data-size="large" href="/breeds/reptiles/reticulated-python" class="breed-card" data-type="snake">
             <h3>Reticulated Python</h3>
-      <p>Each case deserves individual attention — what applies broadly may need adjustment for specific circumstances.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Largest</span></div>
             <p>World's longest snake. "Super dwarf" locales more manageable. Advanced only. Lifespan 15-20 years.</p>
@@ -518,44 +539,44 @@
       <p>There is always more to learn, and the best pet owners stay curious and open to refining their approach over time.</p>
 
       <div class="breed-grid">
-          <a href="/breeds/reptiles/red-eared-slider" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="yes" data-size="large" href="/breeds/reptiles/red-eared-slider" class="breed-card" data-type="turtle">
             <h3>Red-Eared Slider</h3>
-      <p>Small improvements in daily care often compound into significant benefits over the lifetime of your pet.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Turtle</span><span class="breed-tag">Common</span></div>
             <p>Most common pet turtle. Need large tanks (75+ gallons) and strong filtration. Lifespan 20-40 years.</p>
           </a>
-          <a href="/breeds/reptiles/painted-turtle" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="yes" data-size="medium" href="/breeds/reptiles/painted-turtle" class="breed-card" data-type="turtle">
             <h3>Painted Turtle</h3>
-      <p>Every situation teaches something new — use each experience to build a more complete understanding.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Turtle</span><span class="breed-tag">Native</span></div>
             <p>Beautiful native species with colorful markings. Similar care to sliders. Lifespan 25-30 years.</p>
           </a>
-          <a href="/breeds/reptiles/map-turtle" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="no" data-size="medium" href="/breeds/reptiles/map-turtle" class="breed-card" data-type="turtle">
             <h3>Map Turtle</h3>
-      <p>The connection between thoughtful care and positive outcomes becomes increasingly clear as you gain experience.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Turtle</span><span class="breed-tag">Unique</span></div>
             <p>Map-like patterns on shell. Need very clean water. Lifespan 15-25 years.</p>
           </a>
-          <a href="/breeds/reptiles/musk-turtle" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="yes" data-size="small" href="/breeds/reptiles/musk-turtle" class="breed-card" data-type="turtle">
             <h3>Musk Turtle (Stinkpot)</h3>
-      <p>These principles provide direction, but hands-on experience with your particular situation will sharpen the details.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Turtle</span><span class="breed-tag">Small</span></div>
             <p>Small aquatic turtles staying under 5 inches. Need smaller tanks. Lifespan 30-50 years.</p>
           </a>
-          <a href="/breeds/reptiles/mud-turtle" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="yes" data-size="small" href="/breeds/reptiles/mud-turtle" class="breed-card" data-type="turtle">
             <h3>Mud Turtle</h3>
-      <p>Quality care stems from understanding both the general principles and the specific needs of your individual pet.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Turtle</span><span class="breed-tag">Small</span></div>
             <p>Small, hardy turtles. Can live in smaller setups than sliders. Lifespan 40-50 years.</p>
           </a>
-          <a href="/breeds/reptiles/softshell-turtle" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="no" data-size="large" href="/breeds/reptiles/softshell-turtle" class="breed-card" data-type="turtle">
             <h3>Softshell Turtle</h3>
-      <p>Investing time in learning about proper care early on reduces stress and complications as your pet grows and ages.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Turtle</span><span class="breed-tag">Advanced</span></div>
             <p>Unique leathery shell. Fast, can be aggressive. Need pristine water. Lifespan 25-50 years.</p>
@@ -569,44 +590,44 @@
       <p>As your experience grows, you will naturally become better at spotting potential issues before they become serious problems.</p>
 
       <div class="breed-grid">
-          <a href="/breeds/reptiles/russian-tortoise" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="yes" data-size="small" href="/breeds/reptiles/russian-tortoise" class="breed-card" data-type="turtle">
             <h3>Russian Tortoise</h3>
-      <p>Taking a proactive approach to care gives you more control over outcomes and fewer unpleasant surprises along the way.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Tortoise</span><span class="breed-tag">Beginner</span></div>
             <p>Hardy, smaller tortoise (8-10 inches). Tolerate varying temperatures. Lifespan 40-50 years.</p>
           </a>
-          <a href="/breeds/reptiles/hermann-tortoise" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="yes" data-size="small" href="/breeds/reptiles/hermann-tortoise" class="breed-card" data-type="turtle">
             <h3>Hermann's Tortoise</h3>
-      <p>Each season and life stage brings new considerations, so staying adaptable is one of the hallmarks of excellent pet ownership.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Tortoise</span><span class="breed-tag">Mediterranean</span></div>
             <p>Beautiful European species, moderate size. Good for temperate climates. Lifespan 50-75 years.</p>
           </a>
-          <a href="/breeds/reptiles/greek-tortoise" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="no" data-size="small" href="/breeds/reptiles/greek-tortoise" class="breed-card" data-type="turtle">
             <h3>Greek Tortoise</h3>
-      <p>The effort you put into understanding your specific needs directly translates to a healthier, happier companion.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Tortoise</span><span class="breed-tag">Hardy</span></div>
             <p>Similar to Hermann's, many subspecies. Hardy and personable. Lifespan 50-100 years.</p>
           </a>
-          <a href="/breeds/reptiles/sulcata-tortoise" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="no" data-size="large" href="/breeds/reptiles/sulcata-tortoise" class="breed-card" data-type="turtle">
             <h3>Sulcata Tortoise</h3>
-      <p>Consistent attention to the fundamentals creates a solid foundation that supports good outcomes across every stage of life.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Tortoise</span><span class="breed-tag">Giant</span></div>
             <p>Third largest tortoise (100+ lbs). Need outdoor enclosures. Lifespan 70-100+ years.</p>
           </a>
-          <a href="/breeds/reptiles/red-footed-tortoise" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="yes" data-size="medium" href="/breeds/reptiles/red-footed-tortoise" class="breed-card" data-type="turtle">
             <h3>Red-Footed Tortoise</h3>
-      <p>Exploring different aspects of pet care opens up practical insights that make everyday decisions more informed and effective.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Tortoise</span><span class="breed-tag">Tropical</span></div>
             <p>Colorful tropical tortoise. Need higher humidity than Mediterranean species. Lifespan 50+ years.</p>
           </a>
-          <a href="/breeds/reptiles/leopard-tortoise" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="no" data-size="large" href="/breeds/reptiles/leopard-tortoise" class="breed-card" data-type="turtle">
             <h3>Leopard Tortoise</h3>
-      <p>Learning about Leopard Tortoise in depth helps prospective owners set realistic expectations and prepare for the specific care requirements involved.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Tortoise</span><span class="breed-tag">Large</span></div>
             <p>Beautiful spotted shell pattern. Get large (40-50 lbs). Lifespan 80-100 years.</p>
@@ -620,23 +641,23 @@
       <p>Learning about Box Turtles &amp; Semi-Aquatic in depth helps prospective owners set realistic expectations and prepare for the specific care requirements involved.</p>
 
       <div class="breed-grid">
-          <a href="/breeds/reptiles/box-turtle" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="no" data-size="small" href="/breeds/reptiles/box-turtle" class="breed-card" data-type="turtle">
             <h3>Eastern Box Turtle</h3>
-      <p>Learning about Eastern Box Turtle in depth helps prospective owners set realistic expectations and prepare for the specific care requirements involved.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Turtle</span><span class="breed-tag">Native</span></div>
             <p>Can close shell completely. Need varied diet and outdoor space. Lifespan 30-40 years.</p>
           </a>
-          <a href="/breeds/reptiles/ornate-box-turtle" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="no" data-size="small" href="/breeds/reptiles/ornate-box-turtle" class="breed-card" data-type="turtle">
             <h3>Ornate Box Turtle</h3>
-      <p>Learning about Ornate Box Turtle in depth helps prospective owners set realistic expectations and prepare for the specific care requirements involved.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Turtle</span><span class="breed-tag">Prairie</span></div>
             <p>Beautiful star-burst pattern. Prairie species with different needs than eastern. Lifespan 30-40 years.</p>
           </a>
-          <a href="/breeds/reptiles/wood-turtle" class="breed-card" data-type="turtle">
+          <a data-life="long" data-beginner="no" data-size="medium" href="/breeds/reptiles/wood-turtle" class="breed-card" data-type="turtle">
             <h3>Wood Turtle</h3>
-      <p>Learning about Wood Turtle in depth helps prospective owners set realistic expectations and prepare for the specific care requirements involved.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag turtle">Turtle</span><span class="breed-tag">Intelligent</span></div>
             <p>Considered one of the most intelligent turtles. Semi-aquatic. Protected in many areas. Lifespan 40-60 years.</p>
@@ -703,195 +724,195 @@
       <p>Learning about More Reptile Species in depth helps prospective owners set realistic expectations and prepare for the specific care requirements involved.</p>
 
       <div class="breed-grid">
-                <a href="/breeds/reptiles/amazon-tree-boa" class="breed-card" data-type="snake">
+                <a data-life="long" data-beginner="no" href="/breeds/reptiles/amazon-tree-boa" class="breed-card" data-type="snake">
           <h3>Amazon Tree Boa</h3>
-      <p>Learning about Amazon Tree Boa in depth helps prospective owners set realistic expectations and prepare for the specific care requirements involved.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Arboreal</span></div>
           <p>Stunning arboreal boa with variable coloring. Can be defensive but beautiful display species.</p>
         </a>
-<a href="/breeds/reptiles/armadillo-lizard" class="breed-card" data-type="lizard">
+<a data-life="long" data-beginner="no" href="/breeds/reptiles/armadillo-lizard" class="breed-card" data-type="lizard">
           <h3>Armadillo Lizard</h3>
-      <p>Learning about Armadillo Lizard in depth helps prospective owners set realistic expectations and prepare for the specific care requirements involved.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Unique</span></div>
           <p>Spiny, armored lizard that curls into a ball for defense. Social species best kept in groups.</p>
         </a>
-        <a href="/breeds/reptiles/bull-snake" class="breed-card" data-type="snake">
+        <a data-life="long" data-beginner="yes" href="/breeds/reptiles/bull-snake" class="breed-card" data-type="snake">
           <h3>Bull Snake</h3>
-      <p>Learning about Bull Snake in depth helps prospective owners set realistic expectations and prepare for the specific care requirements involved.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Large Colubrid</span></div>
           <p>Large, active colubrid with a bold personality. Impressive size and defensive bluffing displays.</p>
         </a>
-                <a href="/breeds/reptiles/california-kingsnake" class="breed-card" data-type="snake">
+                <a data-life="long" data-beginner="no" href="/breeds/reptiles/california-kingsnake" class="breed-card" data-type="snake">
           <h3>California Kingsnake</h3>
-      <p>Learning about California Kingsnake in depth helps prospective owners set realistic expectations and prepare for the specific care requirements involved.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Beginner</span></div>
           <p>Hardy, attractive colubrid with bold banding. Easy to care for and widely available.</p>
         </a>
-<a href="/breeds/reptiles/chameleon" class="breed-card" data-type="lizard">
+<a data-life="short" data-beginner="no" href="/breeds/reptiles/chameleon" class="breed-card" data-type="lizard">
           <h3>Chameleon</h3>
-      <p>Learning about Chameleon in depth helps prospective owners set realistic expectations and prepare for the specific care requirements involved.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Color-Changing</span></div>
           <p>Iconic color-changing lizards with independently moving eyes and projectile tongues.</p>
         </a>
-                <a href="/breeds/reptiles/childrens-python" class="breed-card" data-type="snake">
+                <a data-life="long" data-beginner="no" href="/breeds/reptiles/childrens-python" class="breed-card" data-type="snake">
           <h3>Childrens Python</h3>
-      <p>Learning about Childrens Python in depth helps prospective owners set realistic expectations and prepare for the specific care requirements involved.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Small</span></div>
           <p>Small, docile Australian python perfect for beginners. Manageable size and calm temperament.</p>
         </a>
         <p>Brilliantly colored poison frogs, non-toxic in captivity. Stunning bioactive vivarium inhabitants.</p>
         </a>
-        <a href="/breeds/reptiles/electric-blue-gecko" class="breed-card" data-type="lizard">
+        <a data-life="short" data-beginner="no" href="/breeds/reptiles/electric-blue-gecko" class="breed-card" data-type="lizard">
           <h3>Electric Blue Day Gecko (Lygodactylus williamsi)</h3>
-      <p>Learning about Electric Blue Day Gecko (Lygodactylus williamsi) in depth helps prospective owners set realistic expectations and prepare for the specific care requirements involved.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Stunning</span></div>
           <p>Rare, brilliantly blue gecko from Tanzania. Small, delicate display animal requiring specific care.</p>
         </a>
-        <a href="/breeds/reptiles/emerald-tree-boa" class="breed-card" data-type="snake">
+        <a data-life="long" data-beginner="no" href="/breeds/reptiles/emerald-tree-boa" class="breed-card" data-type="snake">
           <h3>Emerald Tree Boa</h3>
-      <p>Prospective Emerald Tree Boa owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Advanced</span></div>
           <p>Brilliant green arboreal boa. Advanced species needing specific humidity and perching setup.</p>
         </a>
-        <a href="/breeds/reptiles/gold-dust-day-gecko" class="breed-card" data-type="lizard">
+        <a data-life="short" data-beginner="no" href="/breeds/reptiles/gold-dust-day-gecko" class="breed-card" data-type="lizard">
           <h3>Gold Dust Day Gecko</h3>
-      <p>Prospective Gold Dust Day Gecko owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Display</span></div>
           <p>Bright green gecko with gold speckling. Active diurnal species for planted vivariums.</p>
         </a>
-<a href="/breeds/reptiles/green-iguana" class="breed-card" data-type="lizard">
+<a data-life="long" data-beginner="no" href="/breeds/reptiles/green-iguana" class="breed-card" data-type="lizard">
           <h3>Green Iguana</h3>
-      <p>Prospective Green Iguana owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Large Herbivore</span></div>
           <p>Large herbivorous lizard reaching 5-6 feet. Require huge enclosures and experienced care.</p>
         </a>
                 <p>Diverse group of arboreal frogs with adhesive toe pads. Various species for vivarium setups.</p>
         </a>
-<a href="/breeds/reptiles/house-gecko" class="breed-card" data-type="lizard">
+<a data-life="short" data-beginner="yes" href="/breeds/reptiles/house-gecko" class="breed-card" data-type="lizard">
           <h3>House Gecko</h3>
-      <p>Prospective House Gecko owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Common</span></div>
           <p>Small, nocturnal geckos commonly found near human dwellings. Easy to keep and maintain.</p>
         </a>
-                <a href="/breeds/reptiles/knob-tailed-gecko" class="breed-card" data-type="lizard">
+                <a data-life="medium" data-beginner="no" href="/breeds/reptiles/knob-tailed-gecko" class="breed-card" data-type="lizard">
           <h3>Knob-Tailed Gecko</h3>
-      <p>Prospective Knob-Tailed Gecko owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Unique</span></div>
           <p>Australian gecko with distinctive knob-shaped tail. Terrestrial, nocturnal, and easy to keep.</p>
         </a>
-        <a href="/breeds/reptiles/mexican-black-kingsnake" class="breed-card" data-type="snake">
+        <a data-life="long" data-beginner="no" href="/breeds/reptiles/mexican-black-kingsnake" class="breed-card" data-type="snake">
           <h3>Mexican Black Kingsnake</h3>
-      <p>Prospective Mexican Black Kingsnake owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Jet Black</span></div>
           <p>Sleek, jet-black colubrid that is docile and easy to handle. Popular and striking species.</p>
         </a>
-<a href="/breeds/reptiles/monitor-lizard" class="breed-card" data-type="lizard">
+<a data-life="long" data-beginner="no" href="/breeds/reptiles/monitor-lizard" class="breed-card" data-type="lizard">
           <h3>Monitor Lizard</h3>
-      <p>Prospective Monitor Lizard owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Large Advanced</span></div>
           <p>Highly intelligent, large lizards requiring spacious enclosures and experienced keepers.</p>
         </a>
-        <a href="/breeds/reptiles/mourning-gecko" class="breed-card" data-type="lizard">
+        <a data-life="medium" data-beginner="yes" href="/breeds/reptiles/mourning-gecko" class="breed-card" data-type="lizard">
           <h3>Mourning Gecko</h3>
-      <p>Prospective Mourning Gecko owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Parthenogenic</span></div>
           <p>All-female species reproducing without males. Tiny, social geckos ideal for bioactive vivariums.</p>
         </a>
-                <a href="/breeds/reptiles/pine-snake" class="breed-card" data-type="snake">
+                <a data-life="long" data-beginner="no" data-size="large" href="/breeds/reptiles/pine-snake" class="breed-card" data-type="snake">
           <h3>Pine Snake</h3>
-      <p>Prospective Pine Snake owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Large Colubrid</span></div>
           <p>Large, bold colubrid with defensive hissing display. Hardy species with attractive patterning.</p>
         </a>
-<a href="/breeds/reptiles/plated-lizard" class="breed-card" data-type="lizard">
+<a data-life="long" data-beginner="yes" href="/breeds/reptiles/plated-lizard" class="breed-card" data-type="lizard">
           <h3>Plated Lizard</h3>
-      <p>Prospective Plated Lizard owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Docile</span></div>
           <p>Docile, armored lizards that become tame with regular handling. Hardy and straightforward care.</p>
         </a>
-        <a href="/breeds/reptiles/rainbow-boa" class="breed-card" data-type="snake">
+        <a data-life="long" data-beginner="no" href="/breeds/reptiles/rainbow-boa" class="breed-card" data-type="snake">
           <h3>Rainbow Boa</h3>
-      <p>Prospective Rainbow Boa owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Iridescent</span></div>
           <p>Stunning iridescent sheen on scales. Need high humidity and moderate temperatures.</p>
         </a>
-        <a href="/breeds/reptiles/rat-snake" class="breed-card" data-type="snake">
+        <a data-life="long" data-beginner="yes" href="/breeds/reptiles/rat-snake" class="breed-card" data-type="snake">
           <h3>Rat Snake</h3>
-      <p>Prospective Rat Snake owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Beginner-Friendly</span></div>
           <p>Hardy, adaptable colubrids great for beginners. Many species with varied colors and patterns.</p>
         </a>
-                <a href="/breeds/reptiles/ring-neck-snake" class="breed-card" data-type="snake">
+                <a data-life="short" data-beginner="no" data-size="small" href="/breeds/reptiles/ring-neck-snake" class="breed-card" data-type="snake">
           <h3>Ring-Neck Snake</h3>
-      <p>Prospective Ring-Neck Snake owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Tiny</span></div>
           <p>Tiny, secretive snake with colorful belly. Unique but challenging to keep in captivity.</p>
         </a>
-<a href="/breeds/reptiles/rough-green-snake" class="breed-card" data-type="snake">
+<a data-life="short" data-beginner="no" href="/breeds/reptiles/rough-green-snake" class="breed-card" data-type="snake">
           <h3>Rough Green Snake</h3>
-      <p>Prospective Rough Green Snake owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Arboreal</span></div>
           <p>Slender, bright green arboreal snake. Insectivore needing planted, vertical enclosures.</p>
         </a>
-        <a href="/breeds/reptiles/sailfin-dragon" class="breed-card" data-type="lizard">
+        <a data-life="long" data-beginner="no" href="/breeds/reptiles/sailfin-dragon" class="breed-card" data-type="lizard">
           <h3>Sailfin Dragon</h3>
-      <p>Prospective Sailfin Dragon owners benefit from connecting with experienced breeders or rescue organizations who can share firsthand insights.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Semi-Aquatic</span></div>
           <p>Impressive semi-aquatic lizard with a large sail-like crest. Need spacious enclosures with water areas.</p>
         </a>
-        <a href="/breeds/reptiles/satanic-leaf-tailed-gecko" class="breed-card" data-type="lizard">
+        <a data-life="medium" data-beginner="no" href="/breeds/reptiles/satanic-leaf-tailed-gecko" class="breed-card" data-type="lizard">
           <h3>Satanic Leaf-Tailed Gecko</h3>
-      <p>Satanic Leaf-Tailed Gecko thrives when its owner understands the unique combination of traits, health considerations, and daily needs that define the breed.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag lizard">Lizard</span><span class="breed-tag">Camouflage</span></div>
           <p>Master of camouflage from Madagascar. Bizarre leaf-like tail and incredible concealment abilities.</p>
         </a>
-        <a href="/breeds/reptiles/spotted-python" class="breed-card" data-type="snake">
+        <a data-life="long" data-beginner="no" href="/breeds/reptiles/spotted-python" class="breed-card" data-type="snake">
           <h3>Spotted Python</h3>
-      <p>Spotted Python thrives when its owner understands the unique combination of traits, health considerations, and daily needs that define the breed.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Small</span></div>
           <p>Small, attractively patterned Australian python. Docile and manageable size for beginners.</p>
         </a>
-        <a href="/breeds/reptiles/vine-snake" class="breed-card" data-type="snake">
+        <a data-life="medium" data-beginner="no" data-size="medium" href="/breeds/reptiles/vine-snake" class="breed-card" data-type="snake">
           <h3>Vine Snake</h3>
-      <p>Vine Snake thrives when its owner understands the unique combination of traits, health considerations, and daily needs that define the breed.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Slender</span></div>
           <p>Extremely slender arboreal snake. Advanced display species with unique elongated body shape.</p>
         </a>
-        <a href="/breeds/reptiles/western-hognose" class="breed-card" data-type="snake">
+        <a data-life="long" data-beginner="no" href="/breeds/reptiles/western-hognose" class="breed-card" data-type="snake">
           <h3>Western Hognose Snake</h3>
-      <p>Western Hognose Snake thrives when its owner understands the unique combination of traits, health considerations, and daily needs that define the breed.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Unique</span></div>
           <p>Upturned nose with dramatic death-feigning displays. Popular, handleable, and full of personality.</p>
         </a>
-        <a href="/breeds/reptiles/woma-python" class="breed-card" data-type="snake">
+        <a data-life="long" data-beginner="no" href="/breeds/reptiles/woma-python" class="breed-card" data-type="snake">
           <h3>Woma Python</h3>
-      <p>Woma Python thrives when its owner understands the unique combination of traits, health considerations, and daily needs that define the breed.</p>
+      
 
       <div class="breed-meta"><span class="breed-tag snake">Snake</span><span class="breed-tag">Docile</span></div>
           <p>Beautiful Australian python with gentle temperament. Attractive banding and easy to handle.</p>
@@ -915,18 +936,8 @@
       </div>
     </section>
 
-<section class="owner-insight" aria-label="Real-World Owner Insight" style="margin:24px 0;padding:20px;border-left:4px solid #0D9488;background:#F0FDFA;border-radius:6px;">
-  <h2 style="margin-top:0;">Real-World Notes on Reptile &amp;amp; Amphibian Species Guide</h2>
-  <p>Reptile &amp;amp; Amphibian Species Guide guidance works best when the household treats the first month as a calibration period. Feeding rhythm, sleep location, noise tolerance, and response to handling all create practical signals that broad pet advice cannot capture.</p>
-  <ul style="margin-top:12px;">
-    <li>Track one weekly observation tied to Reptile &amp;amp; Amphibian Species Guide, not just supply purchases.</li>
-    <li>Review cost assumptions after the first full month; recurring supplies often differ from the startup list.</li>
-  </ul>
-</section>
-<section class="vet-care" aria-label="Local Vet and Care Considerations" style="margin:24px 0;padding:20px;border-left:4px solid #2563EB;background:#EFF6FF;border-radius:6px;">
-  <h2 style="margin-top:0;">Care Access Considerations Around Reptile &amp;amp; Amphibian Species Guide</h2>
-  <p>A practical plan for Reptile &amp;amp; Amphibian Species Guide includes more than average annual cost. It should account for travel time to the right clinic, after-hours availability, refill logistics, and whether the veterinarian regularly sees this type of pet.</p>
-</section>
+
+
   </main>
 
   <footer class="site-footer">
@@ -939,7 +950,7 @@
       <a href="/amphibians">Amphibians</a> &middot;
       <a href="/marine-fish">Marine Fish</a> &middot;
       <a href="/resources">Resources</a> &middot;
-      <a href="/about">About</a> &middot;
+      <a href="/vet/">Vet Help</a> &middot; <a href="/vet/checker">When to See a Vet</a> &middot; <a href="/image-credits">Image Credits</a> &middot; <a href="/about">About</a> &middot;
       <a href="/contact">Contact</a> &middot;
       <a href="/privacy-policy">Privacy</a> &middot;
       <a href="/terms-of-service">Terms</a> &middot;
@@ -962,34 +973,7 @@
         });
       }
 
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const breedCards = document.querySelectorAll('.breed-card');
-      const categorySections = document.querySelectorAll('.category-section');
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-          filterBtns.forEach(b => b.classList.remove('active'));
-          this.classList.add('active');
-          const filter = this.dataset.filter;
-
-          if (filter === 'all') {
-            breedCards.forEach(card => card.style.display = 'block');
-            categorySections.forEach(section => section.style.display = 'block');
-          } else {
-            breedCards.forEach(card => {
-              if (card.dataset.type === filter) {
-                card.style.display = 'block';
-              } else {
-                card.style.display = 'none';
-              }
-            });
-            categorySections.forEach(section => {
-              const hasVisibleCards = section.querySelectorAll(`.breed-card[data-type="${filter}"]`).length > 0;
-              section.style.display = hasVisibleCards ? 'block' : 'none';
-            });
-          }
-        });
-      });
+      
     });
   </script>
 <script>
@@ -1054,6 +1038,56 @@
     window.addEventListener('resize', syncExpandedState);
     syncExpandedState();
   });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const root = document.getElementById('hub-tools');
+  if (!root) return;
+  const cards = [...document.querySelectorAll('.breed-card, .species-card')];
+  const search = root.querySelector('.hub-search');
+  const life = root.querySelector('.hub-life');
+  const beginner = root.querySelector('.hub-beginner');
+  const sizeBtns = [...document.querySelectorAll('.filter-btn')];
+  const countEl = root.querySelector('.hub-count');
+  let size = 'all';
+  const active = sizeBtns.find((b) => b.classList.contains('active'));
+  if (active && active.dataset.filter) size = active.dataset.filter;
+  function apply() {
+    const q = (search && search.value || '').trim().toLowerCase();
+    const lifeV = life ? life.value : 'all';
+    const beg = !!(beginner && beginner.checked);
+    cards.forEach((card) => {
+      const text = card.textContent.toLowerCase();
+      const cardSize = card.dataset.size || '';
+      const cardType = card.dataset.type || '';
+      const okS = size === 'all' || cardSize === size || cardType === size || (size === 'large' && cardSize === 'giant');
+      const okL = lifeV === 'all' || card.dataset.life === lifeV;
+      const okB = !beg || card.dataset.beginner === 'yes';
+      const okQ = !q || text.includes(q);
+      card.style.display = (okS && okL && okB && okQ) ? '' : 'none';
+    });
+    document.querySelectorAll('.letter-section, .category-section, .subcategory').forEach((sec) => {
+      const inner = [...sec.querySelectorAll('.breed-card, .species-card')];
+      if (!inner.length) return;
+      sec.style.display = inner.some((c) => c.style.display !== 'none') ? '' : 'none';
+    });
+    if (countEl) {
+      const shown = cards.filter((c) => c.style.display !== 'none').length;
+      countEl.textContent = shown + ' of ' + cards.length + ' shown';
+    }
+  }
+  sizeBtns.forEach((btn) => btn.addEventListener('click', function () {
+    sizeBtns.forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
+    size = btn.dataset.filter || 'all';
+    apply();
+  }));
+  if (search) search.addEventListener('input', apply);
+  if (life) life.addEventListener('change', apply);
+  if (beginner) beginner.addEventListener('change', apply);
+  apply();
+});
 </script>
 </body>
 </html>
