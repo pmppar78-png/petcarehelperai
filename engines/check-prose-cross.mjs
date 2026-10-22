@@ -135,6 +135,14 @@ const STOCK = [
   [/gradual process rather than an instant bond/i, "gradual process rather than an instant bond"],
   [/genuinely rewarding addition/i, "genuinely rewarding addition"],
   [/not enthusiasm alone/i, "preparation, not enthusiasm alone"],
+  [/Keepers with appropriate experience and dedication/i, "Keepers with appropriate experience and dedication"],
+  [/Enthusiasts interested in this (?:species|breed)'s unique characteristics/i, "Enthusiasts interested in unique characteristics"],
+  [/Those seeking a very low-maintenance pet/i, "Those seeking a very low-maintenance pet"],
+  [/Those with limited space or budget for proper setup/i, "Those with limited space or budget for proper setup"],
+  [/excellent choice for someone who enjoys the hands-on aspects/i, "excellent choice for someone who enjoys the hands-on aspects"],
+  [/suitability depends on the specific balance/i, "suitability depends on the specific balance"],
+  [/will change your household in ways both expected and surprising/i, "will change your household in ways both expected"],
+  [/was not designed to be a generic pet/i, "was not designed to be a generic pet"],
 ];
 
 const stockHits = [];
