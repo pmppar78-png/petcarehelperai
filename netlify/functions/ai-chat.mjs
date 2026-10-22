@@ -133,7 +133,7 @@ const categoryColors = {
 // Helper function to format partner links with category-specific colors
 function formatAffiliateLink(affiliate, categoryKey) {
   const color = categoryColors[categoryKey] || "#0ea5e9";
-  return `<a href="${affiliate.url}" target="_blank" rel="sponsored noopener"><span style="color:${color};font-weight:600;">${affiliate.name}</span></a>`;
+  return `<a href="${affiliate.url}" target="_blank" rel="noopener noreferrer"><span style="color:${color};font-weight:600;">${affiliate.name}</span></a>`;
 }
 
 // Helper function to get partner resources from a category
@@ -142,7 +142,39 @@ function getAffiliatesFromCategory(categoryKey, maxCount = 4) {
   return affiliates[categoryKey].slice(0, maxCount);
 }
 
-export default async function handler(req) {
+// Only our own site (petcarehelperai.com) and its Netlify deploys/previews may call this endpoint.
+const ALLOWED_ORIGIN = /^https:\/\/((www\.)?petcarehelperai\.com|([a-z0-9-]+--)?petcarehelperai\.netlify\.app)$/;
+function requestOrigin(req) {
+  const o = req.headers.get("origin");
+  if (o) return o;
+  const ref = req.headers.get("referer");
+  try { return ref ? new URL(ref).origin : ""; } catch (e) { return ""; }
+}
+// Simple in-memory rate limit: 10 requests per minute per IP (per function instance).
+const rateLimitMap = new Map();
+function isRateLimited(ip) {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+  if (!entry || now > entry.resetTime) {
+    rateLimitMap.set(ip, { count: 1, resetTime: now + 60000 });
+    if (rateLimitMap.size > 5000) rateLimitMap.clear();
+    return false;
+  }
+  if (entry.count >= 10) return true;
+  entry.count++;
+  return false;
+}
+
+export default async function handler(req, context) {
+  if (req.method === "POST" && !ALLOWED_ORIGIN.test(requestOrigin(req))) {
+    return new Response(JSON.stringify({ error: "Forbidden" }), { status: 403, headers: { "Content-Type": "application/json" } });
+  }
+  if (req.method === "POST") {
+    const ip = (context && context.ip) || req.headers.get("x-nf-client-connection-ip") || (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() || "unknown";
+    if (isRateLimited(ip)) {
+      return new Response(JSON.stringify({ reply: "You are sending messages very quickly. Please wait a minute and try again." }), { status: 429, headers: { "Content-Type": "application/json" } });
+    }
+  }
 
   if (req.method !== "POST") {
     return new Response(JSON.stringify({ error: "Method not allowed" }), {
@@ -177,11 +209,18 @@ export default async function handler(req) {
     // Backwards compatibility: if old format (body.message), wrap as single-message array
     let conversationMessages;
     if (Array.isArray(body.messages) && body.messages.length > 0) {
-      conversationMessages = body.messages;
+      // Only user/assistant turns are accepted from the client; the system prompt is server-side only.
+      conversationMessages = body.messages
+        .filter(m => m && (m.role === "user" || m.role === "assistant") && typeof m.content === "string")
+        .map(m => ({ role: m.role, content: m.content.slice(0, 6000) }));
     } else if (body.message) {
-      conversationMessages = [{ role: "user", content: body.message }];
+      conversationMessages = [{ role: "user", content: String(body.message).slice(0, 6000) }];
     } else {
       conversationMessages = [{ role: "user", content: "" }];
+    }
+
+    if (conversationMessages.length === 0 || !conversationMessages.some(m => m.role === "user" && m.content.trim())) {
+      return new Response(JSON.stringify({ error: "At least one message is required" }), { status: 400, headers: { "Content-Type": "application/json" } });
     }
 
     // Extract the latest user message for logging and affiliate detection
