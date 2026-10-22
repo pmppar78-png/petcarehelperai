@@ -73,7 +73,7 @@ const SPECIES = {
     { slug: 'western-hognose', name: 'Western Hognose Snake', type: 'Snake', size: '1.5-3 feet', lifespan: '15-20 years', temperament: 'Calm, Dramatic', difficulty: 'Beginner', origin: 'North America' },
     { slug: 'mexican-black-kingsnake', name: 'Mexican Black Kingsnake', type: 'Snake', size: '3-4 feet', lifespan: '15-20 years', temperament: 'Docile, Hardy', difficulty: 'Beginner', origin: 'Mexico' },
     { slug: 'california-kingsnake', name: 'California Kingsnake', type: 'Snake', size: '3-5 feet', lifespan: '15-20 years', temperament: 'Active, Hardy', difficulty: 'Beginner', origin: 'Western USA' },
-    { slug: 'childrens-python', name: 'Childrens Python', type: 'Snake', size: '2.5-4 feet', lifespan: '20-30 years', temperament: 'Docile, Manageable', difficulty: 'Beginner', origin: 'Australia' },
+    { slug: 'childrens-python', name: 'Children\'s Python', type: 'Snake', size: '2.5-4 feet', lifespan: '20-30 years', temperament: 'Docile, Manageable', difficulty: 'Beginner', origin: 'Australia' },
     { slug: 'spotted-python', name: 'Spotted Python', type: 'Snake', size: '2-4 feet', lifespan: '15-20 years', temperament: 'Calm, Hardy', difficulty: 'Beginner', origin: 'Australia' },
     { slug: 'woma-python', name: 'Woma Python', type: 'Snake', size: '4-5 feet', lifespan: '15-20 years', temperament: 'Docile, Food-Motivated', difficulty: 'Beginner-Intermediate', origin: 'Australia' },
   ],
