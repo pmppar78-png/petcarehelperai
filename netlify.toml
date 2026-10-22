@@ -19,6 +19,506 @@
 # www→non-www is configured via Netlify domain settings.
 # These rules provide a fallback for any edge cases.
 
+# Consolidate duplicate breed entities (301)
+[[redirects]]
+  from = "/breeds/dogs/basenjis"
+  to = "/breeds/dogs/basenji"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/dogs/basenjis.html"
+  to = "/breeds/dogs/basenji"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/best-enrichment"
+  to = "/commercial/dogs/basenji/best-enrichment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/best-enrichment.html"
+  to = "/commercial/dogs/basenji/best-enrichment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/best-food"
+  to = "/commercial/dogs/basenji/best-food"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/best-food.html"
+  to = "/commercial/dogs/basenji/best-food"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/best-habitat-size"
+  to = "/commercial/dogs/basenji/best-habitat-size"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/best-habitat-size.html"
+  to = "/commercial/dogs/basenji/best-habitat-size"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/best-insurance"
+  to = "/commercial/dogs/basenji/best-insurance"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/best-insurance.html"
+  to = "/commercial/dogs/basenji/best-insurance"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/cost-to-own"
+  to = "/commercial/dogs/basenji/cost-to-own"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/cost-to-own.html"
+  to = "/commercial/dogs/basenji/cost-to-own"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/first-time-owners"
+  to = "/commercial/dogs/basenji/first-time-owners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/first-time-owners.html"
+  to = "/commercial/dogs/basenji/first-time-owners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/health-costs"
+  to = "/commercial/dogs/basenji/health-costs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/health-costs.html"
+  to = "/commercial/dogs/basenji/health-costs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/vs-basenji"
+  to = "/breeds/dogs/basenji"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/vs-basenji.html"
+  to = "/breeds/dogs/basenji"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/vs-basset-hound"
+  to = "/breeds/dogs/basenji"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenjis/vs-basset-hound.html"
+  to = "/breeds/dogs/basenji"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenji/vs-basenjis"
+  to = "/breeds/dogs/basenji"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basenji/vs-basenjis.html"
+  to = "/breeds/dogs/basenji"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basset-hound/vs-basenjis"
+  to = "/breeds/dogs/basenji"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/basset-hound/vs-basenjis.html"
+  to = "/breeds/dogs/basenji"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/dogs/springer-spaniel"
+  to = "/breeds/dogs/english-springer-spaniel"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/dogs/springer-spaniel.html"
+  to = "/breeds/dogs/english-springer-spaniel"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/best-enrichment"
+  to = "/commercial/dogs/english-springer-spaniel/best-enrichment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/best-enrichment.html"
+  to = "/commercial/dogs/english-springer-spaniel/best-enrichment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/best-food"
+  to = "/commercial/dogs/english-springer-spaniel/best-food"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/best-food.html"
+  to = "/commercial/dogs/english-springer-spaniel/best-food"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/best-habitat-size"
+  to = "/commercial/dogs/english-springer-spaniel/best-habitat-size"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/best-habitat-size.html"
+  to = "/commercial/dogs/english-springer-spaniel/best-habitat-size"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/best-insurance"
+  to = "/commercial/dogs/english-springer-spaniel/best-insurance"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/best-insurance.html"
+  to = "/commercial/dogs/english-springer-spaniel/best-insurance"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/cost-to-own"
+  to = "/commercial/dogs/english-springer-spaniel/cost-to-own"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/cost-to-own.html"
+  to = "/commercial/dogs/english-springer-spaniel/cost-to-own"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/first-time-owners"
+  to = "/commercial/dogs/english-springer-spaniel/first-time-owners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/first-time-owners.html"
+  to = "/commercial/dogs/english-springer-spaniel/first-time-owners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/health-costs"
+  to = "/commercial/dogs/english-springer-spaniel/health-costs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/health-costs.html"
+  to = "/commercial/dogs/english-springer-spaniel/health-costs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/vs-spinone-italiano"
+  to = "/breeds/dogs/english-springer-spaniel"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/vs-spinone-italiano.html"
+  to = "/breeds/dogs/english-springer-spaniel"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/vs-st-bernard"
+  to = "/breeds/dogs/english-springer-spaniel"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/springer-spaniel/vs-st-bernard.html"
+  to = "/breeds/dogs/english-springer-spaniel"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/spinone-italiano/vs-springer-spaniel"
+  to = "/breeds/dogs/english-springer-spaniel"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/spinone-italiano/vs-springer-spaniel.html"
+  to = "/breeds/dogs/english-springer-spaniel"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/st-bernard/vs-springer-spaniel"
+  to = "/breeds/dogs/english-springer-spaniel"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/st-bernard/vs-springer-spaniel.html"
+  to = "/breeds/dogs/english-springer-spaniel"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/small-animals/hedgehog"
+  to = "/breeds/small-animals/african-pygmy-hedgehog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/small-animals/hedgehog.html"
+  to = "/breeds/small-animals/african-pygmy-hedgehog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/best-enrichment"
+  to = "/commercial/small-animals/african-pygmy-hedgehog/best-enrichment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/best-enrichment.html"
+  to = "/commercial/small-animals/african-pygmy-hedgehog/best-enrichment"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/best-food"
+  to = "/commercial/small-animals/african-pygmy-hedgehog/best-food"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/best-food.html"
+  to = "/commercial/small-animals/african-pygmy-hedgehog/best-food"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/best-habitat-size"
+  to = "/commercial/small-animals/african-pygmy-hedgehog/best-habitat-size"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/best-habitat-size.html"
+  to = "/commercial/small-animals/african-pygmy-hedgehog/best-habitat-size"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/best-insurance"
+  to = "/commercial/small-animals/african-pygmy-hedgehog/best-insurance"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/best-insurance.html"
+  to = "/commercial/small-animals/african-pygmy-hedgehog/best-insurance"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/cost-to-own"
+  to = "/commercial/small-animals/african-pygmy-hedgehog/cost-to-own"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/cost-to-own.html"
+  to = "/commercial/small-animals/african-pygmy-hedgehog/cost-to-own"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/first-time-owners"
+  to = "/commercial/small-animals/african-pygmy-hedgehog/first-time-owners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/first-time-owners.html"
+  to = "/commercial/small-animals/african-pygmy-hedgehog/first-time-owners"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/health-costs"
+  to = "/commercial/small-animals/african-pygmy-hedgehog/health-costs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/health-costs.html"
+  to = "/commercial/small-animals/african-pygmy-hedgehog/health-costs"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/vs-harlequin-rabbit"
+  to = "/breeds/small-animals/african-pygmy-hedgehog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/vs-harlequin-rabbit.html"
+  to = "/breeds/small-animals/african-pygmy-hedgehog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/vs-hermit-crab-pet"
+  to = "/breeds/small-animals/african-pygmy-hedgehog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hedgehog/vs-hermit-crab-pet.html"
+  to = "/breeds/small-animals/african-pygmy-hedgehog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/harlequin-rabbit/vs-hedgehog"
+  to = "/breeds/small-animals/african-pygmy-hedgehog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/harlequin-rabbit/vs-hedgehog.html"
+  to = "/breeds/small-animals/african-pygmy-hedgehog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hermit-crab-pet/vs-hedgehog"
+  to = "/breeds/small-animals/african-pygmy-hedgehog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/small-animals/hermit-crab-pet/vs-hedgehog.html"
+  to = "/breeds/small-animals/african-pygmy-hedgehog"
+  status = 301
+  force = true
+
+# Block internal build/audit artifacts from public access
+[[redirects]]
+  from = "/audit/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/engines/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/data/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/test-results/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/tools/*.cjs"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/results.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/package.json"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/package-lock.json"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/deno.lock"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/affiliates.json"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/site.json"
+  to = "/404.html"
+  status = 404
+  force = true
+
 [[redirects]]
   from = "https://www.petcarehelperai.com/*"
   to = "https://petcarehelperai.com/:splat"
