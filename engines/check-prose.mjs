@@ -10,6 +10,11 @@ import path from "node:path";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const TOKEN = /\b(?:Dogs|Cats|Birds|Reptiles|Amphibians|SmallAnimals|MarineFish|Marine|Fish)[A-Z][A-Za-z0-9]+\b/g;
+const SELF_REF = [
+  [/earlier version/i, "earlier version"],
+  [/this page previously/i, "this page previously"],
+  [/was wrong/i, "was wrong"],
+];
 
 function walk(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -33,6 +38,10 @@ function visibleText(html) {
     .replace(/\s+/g, " ");
 }
 
+function isBreedProfile(rel) {
+  return rel.startsWith("breeds/") && !path.basename(rel).includes("-breeds");
+}
+
 function sentences(text) {
   const parts = text.split(/(?<=[.!?])\s+/);
   const kept = [];
@@ -53,6 +62,11 @@ for (const file of walk(ROOT)) {
   const tokens = [...raw.matchAll(TOKEN)].map((m) => m[0]);
   if (tokens.length) {
     failures.push(`${rel}: CamelCase token ${[...new Set(tokens)].slice(0, 4).join(", ")}`);
+  }
+  const visible = visibleText(raw);
+  for (const [re, label] of SELF_REF) {
+    if (label === "was wrong" && !isBreedProfile(rel)) continue;
+    if (re.test(visible)) failures.push(`${rel}: page talks about its own edits ("${label}")`);
   }
   const counts = new Map();
   for (const sentence of sentences(visibleText(raw))) {

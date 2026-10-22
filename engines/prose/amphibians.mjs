@@ -3,18 +3,18 @@ export const profiles = {
     description: "Spring peepers are tiny eastern chorus frogs with a dark X on the back. They live about 3 to 4 years, call loudly, and need a cool vivarium and tiny prey.",
     faqTitle: "Spring peeper questions",
     faqs: [
-      { q: "How long do spring peepers live?", a: "About 3 to 4 years. That is a normal peeper lifespan, not a sign that care failed, and it is not a 10-year tree-frog figure copied onto the wrong animal." },
+      { q: "How long do spring peepers live?", a: "About 3 to 4 years. Wild peepers usually live about three years. A cool vivarium might add a season." },
       { q: "Do spring peepers make noise?", a: "Yes. Males give the high peeping call this frog is named for, especially on cool, damp evenings. They are not a silent species." },
       { q: "Are spring peepers beginner frogs?", a: "No. They are an advanced frog because the tank must stay cool, the prey is tiny, and a brown frog the size of a fingernail disappears into the plants." },
       { q: "What temperature does a spring peeper need?", a: "Keep the vivarium between 55 and 72°F. Ordinary apartment heat is what kills peepers that were sold as easy tree frogs." },
     ],
     html: `<h2>The peep is the point</h2>
-<p>Spring peepers are the thumbnail frogs with a dark X across the back. The scientific name is Pseudacris crucifer, and the range is eastern North American woodland, not a tropical frog room. Adults are about 0.75 to 1.5 inches. The quick-facts table lists a lifespan of 3 to 4 years, and that range is the honest one. Wild peepers usually live about three years. A cool terrarium might add a season. It does not turn them into a ten-year pet, and it does not make ownership a multi-decade project.</p>
+<p>Spring peepers are the thumbnail frogs with a dark X across the back. The scientific name is Pseudacris crucifer, and the range is eastern North American woodland, not a tropical frog room. Adults are about 0.75 to 1.5 inches. The quick-facts table lists a lifespan of 3 to 4 years. Wild peepers usually live about three years. A cool terrarium might add a season.</p>
 <h2>Cool air and tiny food</h2>
 <p>They want 55 to 72°F. A living room that sits at 75°F is already too warm. Humidity around 60 to 80 percent, a tall 10-gallon enclosure, thin branches or cork, and a water dish they can climb out of are the setup. Fruit flies, springtails, and pinhead crickets are the diet. Dusting calcium onto prey that small is awkward, so many keepers culture flies instead of buying one cup and hoping it lasts.</p>
 <p>Care level is advanced for a reason. The frog is easy to lose in moss, easy to overheat, and easy to starve if the only food in the house is a full-sized cricket. This is a poor first amphibian.</p>
 <h2>They do call</h2>
-<p>Males peep. That rising note is the breeding call, and one male in a quiet apartment can still produce it when the tank is cool and wet. An earlier version of this page claimed amphibians communicate with posture rather than sound. That claim is wrong for this species. The call is as much the field mark as the X. Between calls they hide. Anyone who wanted a frog on the glass every evening will find a peeper disappointing.</p>
+<p>Males peep. That rising note is the breeding call, and one male in a quiet apartment can still produce it when the tank is cool and wet. The call is as much the field mark as the X. Between calls they hide. Anyone who wanted a frog on the glass every evening will find a peeper disappointing.</p>
 <h2>Buying and warning signs</h2>
 <p>Look for captive-bred animals. Taking a chorus out of a local pond moves disease around and is illegal in many places. Fuzzy skin, a frog parked on the warm glass, or a male who stops calling after weeks of nightly noise are reasons to phone a clinic that sees amphibians. <a href="https://arav.org">ARAV's clinic list</a> is the practical directory. A peeper that vanishes from the food dish is easy to miss; the <a href="/vet/symptoms/reptile-not-eating">not-eating page</a> and the <a href="/vet/checker">urgency checker</a> are the on-site tools. The table puts the animal near $5 to $15 and a basic setup near $100 to $200. The short life is the fact people skip when they only read the price.</p>`,
   },
@@ -30,7 +30,7 @@ export const profiles = {
     ],
     html: `<h2>A frog that never comes on land</h2>
 <p>African clawed frogs, Xenopus laevis, spend their whole lives underwater. Adults are about 4 to 5 inches, females larger than males, with eyes on top of a flat head and dark claws on the hind toes. They have no tongue. Food is shoved into the mouth with the hands. The table's temperament line, hardy and an active swimmer, is fair. The legal line is the one sellers skip.</p>
-<p>Lifespan is often about 15 years in a clean tank, and some animals pass 20. The card's upper figure of 30 years is the far end of published reports, not a promise. Temperature belongs between 68 and 77°F. A 10-gallon tank is the listed minimum for one frog and gets crowded fast. Use a lid. They are famous escape artists.</p>
+<p>Lifespan is often about 15 years in a clean tank, and some animals pass 20. The 30-year figure in the quick facts is the far end of published reports, not a promise. Temperature belongs between 68 and 77°F. A 10-gallon tank is the listed minimum for one frog and gets crowded fast. Use a lid. They are famous escape artists.</p>
 <h2>What the mouth is for</h2>
 <p>Sinking pellets, earthworms, and bloodworms match the diet line. They will also swallow fish, tadpoles, and a smaller frog. A community aquarium is the wrong picture. Bare glass or stones too large to gulp are safer than gravel. Floating food that they cannot find on the bottom is a common reason a new keeper thinks the frog is "not eating."</p>
 <p>Released clawed frogs have established invasive populations, and this species was part of the story of chytrid fungus moving around the world. Several U.S. states restrict possession. California is one of them. Do not buy one and plan to sort the paperwork later, and do not dump the tank into a pond.</p>
@@ -63,7 +63,7 @@ export const profiles = {
     faqs: [
       { q: "How big do American bullfrogs get?", a: "Adults are about 6 to 8 inches, not counting the leap. A 55-gallon semi-aquatic tank is the table's minimum, and a tight lid is not optional." },
       { q: "What do bullfrogs eat?", a: "Large insects, earthworms, fish, crayfish, and mice. They also eat other frogs. The mouth size is the housing rule." },
-      { q: "Are bullfrogs good for beginners?", a: "The card says intermediate, which is generous. They are messy, loud, strong, and restricted in some western states because released frogs wreck native ponds." },
+      { q: "Are bullfrogs good for beginners?", a: "The quick facts say intermediate, which is generous. They are messy, loud, strong, and restricted in some western states because released frogs wreck native ponds." },
       { q: "How long do captive bullfrogs live?", a: "About 7 to 10 years if the water stays swimmable and the diet is not only fatty mice. Wild lifespan is often shorter." },
     ],
     html: `<h2>A pond predator in a tank</h2>
@@ -83,7 +83,7 @@ export const profiles = {
       { q: "Do Budgett's frogs really scream?", a: "Yes. A startled Budgett's frog inflates, opens a huge mouth, and gives a loud defensive bark. It is a warning, and it often comes with a bite." },
       { q: "How long do Budgett's frogs live?", a: "The table lists 15 to 20 years. Keepers who avoid overfeeding and keep the water clean report animals well into the teens. Twenty is the long end." },
       { q: "Can you hold a Budgett's frog?", a: "Not for fun. They bite hard, the mouth is most of the head, and handling dries the skin. Move them with a container when the tank needs cleaning." },
-      { q: "What do they eat?", a: "Earthworms, fish, shrimp, and roaches, as the card says. They will also eat another frog. One Budgett's frog per tank." },
+      { q: "What do they eat?", a: "Earthworms, fish, shrimp, and roaches, as the quick facts say. They will also eat another frog. One Budgett's frog per tank." },
     ],
     html: `<h2>The frog that barks</h2>
 <p>Budgett's frog, Lepidobatrachus laevis, is the round "hippo frog" from the Chaco of Argentina, Paraguay, and Bolivia. Adults are about 4 to 5 inches of mouth with a frog attached. The table's temperament words are aggressive, vocal, and odd-looking. All three are accurate. Poke the water and a resting frog can inflate, scream, and lunge.</p>
@@ -121,7 +121,7 @@ export const profiles = {
       { q: "Which fire-bellied newt is this page about?", a: "The photo and the 3 to 5 inch size match the Japanese fire-bellied newt, Cynops pyrrhogaster. The smaller, cooler Chinese species has a separate page. The origin cell in the quick facts mentions both countries." },
       { q: "What temperature do Japanese fire-bellied newts need?", a: "About 60 to 70°F, with clean water and a land area. Sustained heat in the upper 70s is stressful." },
       { q: "Are fire-bellied newts poisonous?", a: "The skin carries toxins. Do not handle them for fun, do not let pets lick them, and wash your hands after maintenance." },
-      { q: "How long do they live?", a: "The card lists 10 to 15 years. That is realistic for a Japanese fire-bellied newt kept cool, and optimistic for one left on a tropical heater." },
+      { q: "How long do they live?", a: "The quick facts list 10 to 15 years. That is realistic for a Japanese fire-bellied newt kept cool, and optimistic for one left on a tropical heater." },
     ],
     html: `<h2>Usually the Japanese newt</h2>
 <p>Pet shops use "fire-bellied newt" for two animals. The one that matches this page's 3 to 5 inch size, and the animal in the photo, is the Japanese fire-bellied newt, Cynops pyrrhogaster. The Chinese fire-belly is smaller and wants water closer to the high 50s. This card's origin cell says Japan and China because the trade lumps them. The care below is for the Japanese species. If the newt in the bag is barely 3 inches and was sold as Chinese, use the Chinese page instead of averaging the two.</p>
@@ -138,7 +138,7 @@ export const profiles = {
     faqTitle: "Eastern newt questions",
     faqs: [
       { q: "Why is my eastern newt bright red and living on land?", a: "That is the eft, the juvenile stage. Efts wander damp woods for years, then turn olive, grow a finned tail, and go back to water as adults." },
-      { q: "How long do eastern newts live?", a: "The card lists 12 to 15 years. That is the long end for a captive adult. Wild efts often never get that far, and a wild-caught animal should not be your plan." },
+      { q: "How long do eastern newts live?", a: "The quick facts list 12 to 15 years. That is the long end for a captive adult. Wild efts often never get that far, and a wild-caught animal should not be your plan." },
       { q: "Are eastern newts poisonous to touch?", a: "They carry tetrodotoxin in the skin, especially the red eft. Handling is for moving the animal, then you wash. They are not a children's handheld pet." },
       { q: "What do adult eastern newts eat?", a: "Bloodworms, brine shrimp, and small worms, in cool water around 60 to 70°F. Efts need tiny land prey and a damp terrestrial setup instead." },
     ],
@@ -149,7 +149,7 @@ export const profiles = {
 <p>Bloodworms, brine shrimp, and small worms feed aquatic adults. Efts take tiny invertebrates on land. Do not collect either stage from a park pond. Eastern newts can carry amphibian diseases, many states protect native amphibians, and a wild eft does not owe you a decade in a plastic box.</p>
 <p>The red color is aposematic. Toxin in the skin is real. Wash after contact, keep them away from mouths, and do not house them with other species.</p>
 <h2>Fuzzy skin is not a molt you wait out</h2>
-<p>White fluff, a newt that cannot dive, or an eft that dries into a corner needs help the same week, not after a forum thread. <a href="https://arav.org">ARAV</a> lists clinics. Use the <a href="/vet/checker">checker</a> if you are unsure it is urgent, and the <a href="/vet/symptoms/reptile-not-eating">not-eating page</a> if the worms sit untouched. The card prices the animal at about $5 to $15 and the setup at $75 to $150. That is for a captive animal whose stage you actually know.</p>`,
+<p>White fluff, a newt that cannot dive, or an eft that dries into a corner needs help the same week, not after a forum thread. <a href="https://arav.org">ARAV</a> lists clinics. Use the <a href="/vet/checker">checker</a> if you are unsure it is urgent, and the <a href="/vet/symptoms/reptile-not-eating">not-eating page</a> if the worms sit untouched. The quick facts put the animal at about $5 to $15 and the setup at $75 to $150. That is for a captive animal whose stage you actually know.</p>`,
   },
 
   "breeds/amphibians/dart-frog.html": {
@@ -159,7 +159,7 @@ export const profiles = {
       { q: "Are pet dart frogs poisonous?", a: "Wild dart frogs get their toxins from wild prey. Captive-bred frogs raised on fruit flies, springtails, and isopods do not carry that toxicity. Wash your hands anyway, and do not collect wild frogs." },
       { q: "Is every dart frog the same to keep?", a: "No. Dyeing poison frogs such as Dendrobates tinctorius are the common larger beginners-within-the-family. Thumbnail species are smaller, more territorial, and need finer prey. This page is the family, not a single recipe." },
       { q: "What enclosure do dart frogs need?", a: "A common starting vivarium is about 18 by 18 by 24 inches, bioactive, 72 to 80°F, with humidity often 80 to 100 percent. Ventilation still matters. Stagnant swamp air grows fungus." },
-      { q: "How long do dart frogs live?", a: "The card lists 10 to 15 years for well-kept captive frogs. That is long enough that a fruit-fly culture is a hobby of its own." },
+      { q: "How long do dart frogs live?", a: "The quick facts list 10 to 15 years for well-kept captive frogs. That is long enough that a fruit-fly culture is a hobby of its own." },
     ],
     html: `<h2>A family, with one frog in the photo</h2>
 <p>Dart frogs are the family Dendrobatidae: dyeing frogs, thumbnails, phantasmal frogs, and a pile of others from Central and South America. This page cannot be one care sheet. The photo is a dyeing poison frog, Dendrobates tinctorius, which is one of the sturdier species people actually keep. The table's size range, 0.5 to 2 inches, is the family's spread. A half-inch thumbnail is not a tinctorius that failed to grow.</p>
@@ -177,12 +177,12 @@ export const profiles = {
     faqs: [
       { q: "Should I buy a wild poison dart frog?", a: "No. Wild frogs can carry real toxins and real diseases, and collection hammers wild populations. Captive-bred frogs on fruit flies and springtails are the animals this page is about." },
       { q: "Do captive poison dart frogs stay poisonous?", a: "They do not maintain the wild alkaloids without the wild prey. Handle that as a hygiene rule, not as a dare. Wash after working in the tank." },
-      { q: "What is a reasonable first vivarium?", a: "About 18 by 18 by 24 inches, planted, 72 to 80°F, and humid enough to match the card's 80 to 100 percent. Identify the species before you decide how many frogs go in." },
+      { q: "What is a reasonable first vivarium?", a: "About 18 by 18 by 24 inches, planted, 72 to 80°F, and humid enough to match the 80 to 100 percent in the quick facts. Identify the species before you decide how many frogs go in." },
       { q: "How long do they live?", a: "Often 10 to 15 years in captivity. The advanced rating is about humidity and diet, not about a frog that dies in a season if you do the work." },
     ],
     html: `<h2>The name is the wild diet</h2>
 <p>Poison dart frog is the scary common name for a handful of bright dendrobatid species. The poison is not a gland they can switch on in a living room. Wild frogs store toxins from the insects they eat in the forest. A captive-bred frog raised on fruit flies and springtails does not have that chemistry. People still should not treat the animal as edible, and they should not import a wild one to "get the real thing." Wild frogs are how chytrid and illegal collection travel.</p>
-<p>The card is the short version of the family: very small, 0.5 to 2 inches, 10 to 15 years, 72 to 80°F, humidity 80 to 100 percent, an 18 by 18 by 24 vivarium, advanced care, fruit flies and springtails, bold and diurnal. Those numbers fit the common hobby species. They do not make a strawberry poison frog and a dyeing frog interchangeable. Ask for the scientific name on the receipt.</p>
+<p>The quick facts are the short version of the family: very small, 0.5 to 2 inches, 10 to 15 years, 72 to 80°F, humidity 80 to 100 percent, an 18 by 18 by 24 vivarium, advanced care, fruit flies and springtails, bold and diurnal. Those numbers fit the common hobby species. They do not make a strawberry poison frog and a dyeing frog interchangeable. Ask for the scientific name on the receipt.</p>
 <h2>A wet tank that still breathes</h2>
 <p>High humidity with no airflow grows mold and bacterial skin problems. A planted tank with a drain layer, leaf litter, and a vented top beats a sealed fog box. Frogs drink droplets and puddles. Mist, then let surfaces dry slightly so the frogs are not sitting in soup. Springtails do two jobs: food for froglets and janitors for mold.</p>
 <p>Groups only work for some species, and only when there is enough visual cover. Fighting looks like wrestling and weight loss, not like a cartoon chase. Separate animals that stay locked together.</p>
@@ -220,7 +220,7 @@ export const profiles = {
     ],
     html: `<h2>Yellow spots, cool dirt, no pool</h2>
 <p>Fire salamanders, Salamandra salamandra, are the black-and-yellow salamanders of European forests. Adults are about 6 to 10 inches, nocturnal, and slow. The pattern is a warning. Skin toxins are real, and a curious dog or a child who picks the animal up can get a painful introduction. They are a watching pet.</p>
-<p>The card says terrestrial, 55 to 68°F, 70 to 80 percent humidity, a 20-gallon tank, intermediate care, and 10 to 20 years. That temperature is the whole hobby. They overheat in ordinary summer rooms. Adults do not want a swimming aquarium. They want deep damp substrate, hides, and a water dish shallow enough that a salamander cannot become trapped underwater. Larvae are aquatic. An adult found swimming desperately is in trouble, not "going for a soak."</p>
+<p>The quick facts say terrestrial, 55 to 68°F, 70 to 80 percent humidity, a 20-gallon tank, intermediate care, and 10 to 20 years. That temperature is the whole hobby. They overheat in ordinary summer rooms. Adults do not want a swimming aquarium. They want deep damp substrate, hides, and a water dish shallow enough that a salamander cannot become trapped underwater. Larvae are aquatic. An adult found swimming desperately is in trouble, not "going for a soak."</p>
 <h2>Worms, and a fungus worth knowing</h2>
 <p>Earthworms are the best staple, with crickets, slugs, and the occasional waxworm. Feed at dusk. They often learn the tongs. Do not offer a communal tank with newts from another continent. Bsal, Batrachochytrium salamandrivorans, has wiped out fire salamander populations in parts of Europe and is linked to Asian salamander trade. Quarantine anything new. Do not rinse tanks into the garden.</p>
 <p>Some subspecies give birth to larvae, others to fully formed young. Breeding them is a specialist project with legal and disease consequences, not a fun extra.</p>
@@ -235,11 +235,11 @@ export const profiles = {
       { q: "Why did my gray tree frog turn green?", a: "Gray tree frogs change color with temperature, mood, and background. Green, gray, and blotched are the same frog. Cope's gray tree frog looks identical and is told apart by call and genetics, not by a photo." },
       { q: "Do they tolerate freezing?", a: "Wild gray tree frogs survive freezing weather by making glycerol. A pet frog is not a science experiment. Keep the tank around 65 to 78°F and do not put it in the freezer." },
       { q: "Are they loud?", a: "Males trill, especially when the room is humid or a storm drops the pressure. One frog can be a nighttime surprise in a bedroom." },
-      { q: "How long do gray tree frogs live?", a: "The card lists 7 to 10 years. Captive-bred animals in a tall, moderately humid tank are the ones that get there. Wild-caught frogs are a disease risk, not a bargain." },
+      { q: "How long do gray tree frogs live?", a: "The quick facts list 7 to 10 years. Captive-bred animals in a tall, moderately humid tank are the ones that get there. Wild-caught frogs are a disease risk, not a bargain." },
     ],
     html: `<h2>The frog that refuses to stay one color</h2>
 <p>Gray tree frogs are Dryophytes versicolor, the eastern North American climbers with sticky toes and a voice like a short trill. Cope's gray tree frog, Dryophytes chrysoscelis, is a separate species that looks the same on a branch. You will not sort them by the color of the back. In the wild, the inner thigh flash of yellow or orange is a better mark than "gray." In a tank they turn green, silver, or mottled depending on temperature and stress. That is normal, not two frogs.</p>
-<p>Adults are about 1.5 to 2 inches. The card lists 65 to 78°F, humidity 50 to 70 percent, a tall 18 by 18 by 24 inch vivarium, and 7 to 10 years. Humidity that high tropical number people copy from dart frogs is too wet for these. They want climbing space, a water bowl, and bark, then a chance to dry slightly between mistings.</p>
+<p>Adults are about 1.5 to 2 inches. The quick facts list 65 to 78°F, humidity 50 to 70 percent, a tall 18 by 18 by 24 inch vivarium, and 7 to 10 years. Humidity that high tropical number people copy from dart frogs is too wet for these. They want climbing space, a water bowl, and bark, then a chance to dry slightly between mistings.</p>
 <h2>Beginner, with a volume knob</h2>
 <p>Care level is beginner among native tree frogs if the animal is captive-bred. Crickets, moths, small roaches, and fruit flies, dusted with calcium, are the diet. Males call when rain hits the window. People who wanted a quiet pet should read that sentence twice. Wild collection is a bad plan: populations do not need another bucket, and a wild frog can bring chytrid into a collection.</p>
 <p>Wild gray tree frogs survive freezing by loading their tissues with glycerol. That fact gets repeated as a party trick. Do not chill a pet to "see if it works."</p>
@@ -254,11 +254,11 @@ export const profiles = {
       { q: "Is this the same frog as White's tree frog?", a: "No. American green tree frogs stay about 1.5 to 2.5 inches and often live 6 to 10 years. White's tree frogs are larger, calmer, and commonly live into the high teens." },
       { q: "Why does my green tree frog yell at night?", a: "Males call. A loud, nasal quonk is normal after lights-out, especially in a humid room. It is the reason some people move the tank out of the bedroom." },
       { q: "What setup do they need?", a: "A tall vivarium around 18 by 18 by 24 inches, 72 to 80°F, and humidity near 50 to 70 percent, with branches and a water dish. They are climbers, not burrowers." },
-      { q: "Are American green tree frogs beginner pets?", a: "The card says beginner, and that is fair for a captive-bred frog if you can tolerate the calling and you feed small insects. They are a weak choice if you want an animal to hold." },
+      { q: "Are American green tree frogs beginner pets?", a: "The quick facts say beginner, and that is fair for a captive-bred frog if you can tolerate the calling and you feed small insects. They are a weak choice if you want an animal to hold." },
     ],
     html: `<h2>The southeastern climber, not the Australian one</h2>
 <p>American green tree frogs are Dryophytes cinereus, the smooth green frogs with a pale stripe along the jaw, native to the southeastern United States. Adults are about 1.5 to 2.5 inches. People confuse them with White's tree frogs because both get called "green tree frog" in a shop. White's frogs are the chunky Australian dumpies, twice the bulk, with a much longer life. If the frog in front of you is delicate, bright green, and the size of a thumb, you are on the right page.</p>
-<p>The card lists 6 to 10 years, 72 to 80°F, humidity 50 to 70 percent, and a tall 18 by 18 by 24 inch vivarium. They are nocturnal and vocal. Care level is beginner. That means the husbandry is straightforward, not that the frog enjoys being passed around a party.</p>
+<p>The quick facts list 6 to 10 years, 72 to 80°F, humidity 50 to 70 percent, and a tall 18 by 18 by 24 inch vivarium. They are nocturnal and vocal. Care level is beginner. That means the husbandry is straightforward, not that the frog enjoys being passed around a party.</p>
 <h2>Night insects and a water dish</h2>
 <p>Crickets, small moths, and fruit flies, calcium-dusted, are the diet. Feed in the evening when they are awake. A frog that is asleep on the glass at noon is not sick. A frog that never hunts after dark might be. Give vertical bark and plants, a bowl big enough to soak, and misting that dries back rather than a constant drip wall. Too much standing water on the skin is a different problem from drought.</p>
 <p>Males call with a repeated nasal note. One frog is charming. Three males in a bedroom are a negotiation with whoever else lives there.</p>
@@ -273,7 +273,7 @@ export const profiles = {
       { q: "Which green tree frog is this?", a: "Dryophytes cinereus, the American green tree frog. The quick facts list 1.5 to 2.5 inches and a lifespan of 6 to 10 years. White's tree frogs are a different, larger, longer-lived species." },
       { q: "Do green tree frogs need a tall tank?", a: "Yes. Plan on something like 18 by 18 by 24 inches so they can climb. Floor space without height wastes the animal you bought." },
       { q: "Will they call?", a: "Males will, mostly at night. If sleep matters in that room, put the vivarium somewhere else." },
-      { q: "What should they eat?", a: "Insects: crickets and other small prey, dusted with calcium. The card's one-word diet line is insects, and pinhead or small crickets are the practical version." },
+      { q: "What should they eat?", a: "Insects: crickets and other small prey, dusted with calcium. The one-word diet line in the quick facts is insects, and pinhead or small crickets are the practical version." },
     ],
     html: `<h2>Read the size before you trust the common name</h2>
 <p>Shops say "green tree frog" and mean at least two animals. This page uses the numbers on its own card: 1.5 to 2.5 inches, 6 to 10 years, 72 to 80°F, humidity 50 to 70 percent, a tall 18 by 18 by 24 inch enclosure, beginner care, insects, vocal and active at night. Those figures belong to the American green tree frog, Dryophytes cinereus, from the southeastern United States. They do not belong to White's tree frog, which is larger, heavier, and often alive at 16. If your frog is a handful of frog with sleepy eyes, you want the White's page.</p>
@@ -288,14 +288,14 @@ export const profiles = {
     description: "Red-eyed tree frogs, Agalychnis callidryas, are nocturnal Central American climbers. The red eyes are a startle display. They are intermediate to keep and often live closer to 5 years than to 10.",
     faqTitle: "Red-eyed tree frog questions",
     faqs: [
-      { q: "Are red-eyed tree frogs good for beginners?", a: "The card says intermediate. The photo sells a beginner fantasy. They are nocturnal, humidity-sensitive, and a poor handling animal." },
+      { q: "Are red-eyed tree frogs good for beginners?", a: "The quick facts say intermediate. The photo sells a beginner fantasy. They are nocturnal, humidity-sensitive, and a poor handling animal." },
       { q: "How long do red-eyed tree frogs live?", a: "The table says 5 to 10 years. Five to seven is the common captive span. Ten is a well-kept outlier, not the number to plan a child's childhood around." },
       { q: "Why are the eyes red?", a: "Startle color. A sleeping frog tucks them away. When disturbed it flashes red eyes and bright flanks. It is a defense, not a sign you should wake it for guests." },
       { q: "What temperatures do they need?", a: "About 72 to 82°F, with humidity around 60 to 80 percent and a climb over a water bowl. They are not a dry lizard and not a flooded dart-frog box." },
     ],
     html: `<h2>Asleep on a leaf, on purpose</h2>
 <p>Red-eyed tree frogs, Agalychnis callidryas, are the leaf-sleepers of Central American rainforests, from Costa Rica through Panama. Adults are about 2 to 3 inches, green above, blue and yellow on the flanks, with red eyes they keep shut all day. People buy them for that postcard and then worry that the frog "never moves." It is nocturnal. The daytime statue is the healthy behavior. Waking it up to show the eyes stresses the animal you paid for.</p>
-<p>The card lists 5 to 10 years, 72 to 82°F, humidity 60 to 80 percent, a tall 18 by 18 by 24 inch vivarium, and intermediate care. Treat the lifespan as often closer to the low end. These are not White's tree frogs in brighter paint.</p>
+<p>The quick facts list 5 to 10 years, 72 to 82°F, humidity 60 to 80 percent, a tall 18 by 18 by 24 inch vivarium, and intermediate care. Treat the lifespan as often closer to the low end. These are not White's tree frogs in brighter paint.</p>
 <h2>Branches over water, insects after dark</h2>
 <p>They climb, drink droplets, and lay eggs over water in the wild. In a tank that means sturdy branches above a bowl, plants with broad leaves, and misting that raises humidity at night without leaving them soggy at noon. Crickets, fruit flies, and small roaches, dusted, are the diet. Offer them when the eyes are actually open.</p>
 <p>Handling rubs off the protective slime and is how tiny toe injuries start. Move them with a cup if you must. Children can watch the tank. They should not carry the frog to school.</p>
@@ -309,12 +309,12 @@ export const profiles = {
     faqs: [
       { q: "Is a Surinam toad supposed to look dead?", a: "They are flat, mottled, and still. That is the ambush shape, not a sick fish. Star-shaped fingertips and a square body are the animal, Pipa pipa." },
       { q: "How do they breed?", a: "Eggs are pressed into the skin of the female's back and develop in pockets. Fully formed froglets emerge. You will not see a clump of spawn stuck to a plant." },
-      { q: "Do they have tongues?", a: "No. They suction food from the water. Earthworms, bloodworms, shrimp, and small fish are the card's diet. Flakes on the surface are useless." },
+      { q: "Do they have tongues?", a: "No. They suction food from the water. Earthworms, bloodworms, shrimp, and small fish are the diet in the quick facts. Flakes on the surface are useless." },
       { q: "How long do Surinam toads live?", a: "About 7 to 10 years in a warm, clean aquatic tank of 20 gallons or more. They are an advanced animal because the water and the weirdness both have to be tolerated." },
     ],
     html: `<h2>A leaf with fingertips</h2>
 <p>Surinam toads, Pipa pipa, are fully aquatic frogs from northern South America. Adults are about 4 to 8 inches, flattened, and mottled like debris. The fingers end in little stars that sense movement. There is no tongue. Prey is sucked in. People return them to the shop because "it just sits there." Sitting there, underwater, looking like trash, is the entire hunting strategy.</p>
-<p>The card lists 7 to 10 years, 75 to 82°F, a 20-gallon or larger aquatic tank, and advanced care. They need still or gently filtered water, a sand or bare bottom where they can rest, and a lid. They are not strong swimmers in a river current. A powerhead aimed at the body is unkind.</p>
+<p>The quick facts list 7 to 10 years, 75 to 82°F, a 20-gallon or larger aquatic tank, and advanced care. They need still or gently filtered water, a sand or bare bottom where they can rest, and a lid. They are not strong swimmers in a river current. A powerhead aimed at the body is unkind.</p>
 <h2>Food sinks, tankmates disappear</h2>
 <p>Earthworms, bloodworms, shrimp, and small fish match the diet line. Drop food where the toad is. It will not chase pellets across the room. Anything else alive in the tank is either food or a nipper that will damage those sensory fingertips. Keep one species, and be careful about keeping two toads if one is much smaller.</p>
 <p>Reproduction is the fact everyone has heard. During a somersaulting embrace, eggs are implanted in the female's back and grow in skin pockets until froglets pop out. It is not a trick you should force with stressed, wild-caught animals. Most keepers will simply never see it, and that is fine.</p>
@@ -326,13 +326,13 @@ export const profiles = {
     description: "Tiger salamanders are large burrowing North American salamanders, often 6 to 14 inches, that can live 10 to 16 years on a diet of worms and insects in a cool terrestrial tank.",
     faqTitle: "Tiger salamander questions",
     faqs: [
-      { q: "How big do tiger salamanders get?", a: "The card says 6 to 14 inches. Barred tiger salamanders are the bulky ones at the top of that range. Plan the tank for the adult, not the juvenile in the cup." },
+      { q: "How big do tiger salamanders get?", a: "The quick facts say 6 to 14 inches. Barred tiger salamanders are the bulky ones at the top of that range. Plan the tank for the adult, not the juvenile in the cup." },
       { q: "Do they need water to swim?", a: "Adults are terrestrial burrowers. Give deep moist soil and a water dish. An aquarium full of water is the wrong life stage unless you truly have an aquatic larva or a neotenic animal." },
       { q: "Can two tiger salamanders live together?", a: "It is a bad default. Some populations produce cannibalistic morphs, and a big adult can eat a smaller one. One salamander per tank is the peaceful choice." },
       { q: "How long do they live?", a: "Often 10 to 16 years, sometimes longer, when kept around 60 to 72°F on earthworms and insects rather than a constant stream of fatty prey." },
     ],
     html: `<h2>A burrow with a salamander in it</h2>
-<p>Tiger salamanders are Ambystoma tigrinum and the closely related barred tiger salamander, Ambystoma mavortium, the big spotted diggers of North America. The card's size, 6 to 14 inches, covers both the slimmer eastern animals and the very large barred ones in the pet trade. They are hardy, often personable at feeding time, and almost invisible the rest of the day because they are underground. Beginner is a fair label for a captive-bred animal if you like a pet you mostly do not see.</p>
+<p>Tiger salamanders are Ambystoma tigrinum and the closely related barred tiger salamander, Ambystoma mavortium, the big spotted diggers of North America. The 6 to 14 inch size in the quick facts covers both the slimmer eastern animals and the very large barred ones in the pet trade. They are hardy, often personable at feeding time, and almost invisible the rest of the day because they are underground. Beginner is a fair label for a captive-bred animal if you like a pet you mostly do not see.</p>
 <p>Lifespan is listed at 10 to 16 years. Temperature should stay about 60 to 72°F, humidity 70 to 80 percent, in a 20-gallon or larger terrestrial tank. Depth of substrate matters more than height. They need soil or a similar mix that holds a burrow. Gravel and chunky bark are impaction risks. A water dish wide enough to soak, and too shallow to trap them, finishes the furniture.</p>
 <h2>Worms, not a mouse habit</h2>
 <p>Earthworms, crickets, and waxworms are the foods named in the quick facts. Waxworms are candy. Earthworms are the meal. They will beg, and they get fat. A salamander that is wider than its head and cannot be bothered to burrow is overfed. Tong-feeding is useful and also how they learn that fingers might be food. Keep the sessions short.</p>
@@ -352,11 +352,11 @@ export const profiles = {
     ],
     html: `<h2>A frog that pretends to be fruit</h2>
 <p>Tomato frogs are the round red frogs of Madagascar, genus Dyscophus. Females of the true tomato frog, Dyscophus antongilii, become the postcard: several inches of red. Males stay smaller and duskier. A lot of pet "tomato frogs" are actually Dyscophus guineti, the false tomato frog, which is a bit less intensely red and is the one more often exported. Care overlaps. The name on the invoice matters because antongilii is the species with the heavier trade limits. Ask before you pay.</p>
-<p>The card says 2 to 4 inches, 6 to 8 years, 65 to 80°F, humidity 70 to 80 percent, a 10-gallon terrestrial tank, beginner, and a sedentary temperament. They sit in a hole. That is the personality. People who need interaction should pick a different amphibian.</p>
+<p>The quick facts say 2 to 4 inches, 6 to 8 years, 65 to 80°F, humidity 70 to 80 percent, a 10-gallon terrestrial tank, beginner, and a sedentary temperament. They sit in a hole. That is the personality. People who need interaction should pick a different amphibian.</p>
 <h2>The glue is the defense</h2>
 <p>Grab a tomato frog and it may inflate and leak a white secretion that sticks to skin and is genuinely unpleasant. It is not a party trick. It stresses the frog and ruins the afternoon. Housing is a moist hide, a few inches of substrate they can back into, a shallow water dish, and insects. Crickets, earthworms, and dubia roaches, dusted, match the diet line. They are not strong swimmers, so the dish stays shallow.</p>
 <p>One frog per tank is simpler. A large female and a small male are not automatically a happy pair, and two animals in a 10-gallon will argue over the one good burrow.</p>
 <h2>Six to eight quiet years</h2>
-<p>Plan on 6 to 8 years, not a tree-frog decade. Cost is often $25 to $50 for the frog and $100 to $200 for the tank. A frog that stays on the surface, looks dry, or skips several meals needs a clinic rather than a brighter lamp. <a href="https://arav.org">ARAV</a> lists amphibian vets. The <a href="/vet/checker">checker</a> and the <a href="/vet/symptoms/reptile-not-eating">not-eating page</a> are the tools while you wait for a call back. Beginner here means humidity and a feeding tong, not hands-on.</p>`,
+<p>Plan on 6 to 8 years. Cost is often $25 to $50 for the frog and $100 to $200 for the tank. A frog that stays on the surface, looks dry, or skips several meals needs a clinic rather than a brighter lamp. <a href="https://arav.org">ARAV</a> lists amphibian vets. The <a href="/vet/checker">checker</a> and the <a href="/vet/symptoms/reptile-not-eating">not-eating page</a> are the tools while you wait for a call back. Beginner here means humidity and a feeding tong, not hands-on.</p>`,
   },
 };

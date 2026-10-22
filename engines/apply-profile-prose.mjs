@@ -104,7 +104,8 @@ for (const [rel, page] of Object.entries(profiles)) {
   html = html.replace(articleMatch[0], `<article class="guide-content">${body}\n</article>`);
   html = replaceFaq(html, page.faqs);
   html = setMeta(html, page.description);
-  if (/on the card/i.test(page.html + page.faqs.map((f) => f.q + f.a).join(" "))) {
+  const prose = page.html + page.faqs.map((f) => f.q + f.a).join(" ");
+  if (/\bthe card\b|earlier version|this page previously|was wrong/i.test(prose)) {
     throw new Error(`stock phrase in ${rel}`);
   }
   fs.writeFileSync(file, html);
