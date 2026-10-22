@@ -28,6 +28,8 @@ function articleText(html) {
   article = article.replace(/<div class="affiliate-callout"[\s\S]*?<\/div>/gi, " ");
   const commercial = article.indexOf("commercial-links-section");
   if (commercial >= 0) article = article.slice(0, commercial);
+  article = article.replace(/<(p|li|h1|h2|h3|h4|div|tr|section|a)(\s[^>]*)?>/gi, ". ");
+  article = article.replace(/<br\s*\/?>/gi, ". ");
   return article
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
@@ -39,14 +41,18 @@ function articleText(html) {
     .replace(/\s+/g, " ");
 }
 
+function sentenceKey(part) {
+  return part.trim().replace(/^[^A-Za-z]+/, "").replace(/[.!?]+$/, "").replace(/\s+/g, " ").trim();
+}
+
 function sentences(text) {
   const kept = [];
-  for (let part of text.split(/(?<=[.!?])\s+/)) {
-    part = part.trim().replace(/^[^A-Za-z]+/, "");
-    if (!/^[A-Z]/.test(part)) continue;
-    const words = part.replace(/[.!?]+$/, "").split(/\s+/).filter(Boolean);
+  for (const part of text.split(/(?<=[.!?])\s+/)) {
+    const key = sentenceKey(part);
+    if (!/^[A-Z]/.test(key)) continue;
+    const words = key.split(/\s+/).filter(Boolean);
     if (words.length <= 12) continue;
-    kept.push(part);
+    kept.push(key);
   }
   return kept;
 }
