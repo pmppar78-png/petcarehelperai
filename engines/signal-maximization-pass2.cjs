@@ -295,12 +295,7 @@ function improveGenericCardCopy(file, html) {
   let changed = 0;
   html = html.replace(/<a href="([^"]+)" class="guide-card"><h3>([^<]+)<\/h3><p>Expert pet care guide\.?<\/p><\/a>/g, (m, href, h3) => {
     changed += 1;
-    const copy = pick(file, `${href}|card`, [
-      `${h3} guidance with practical care checkpoints.`,
-      `Focused ${h3.toLowerCase()} help for everyday decisions.`,
-      `${h3} advice tied to symptoms, costs, and next steps.`,
-    ]);
-    return `<a href="${href}" class="guide-card"><h3>${h3}</h3><p>${escHtml(copy)}</p></a>`;
+    return `<a href="${href}" class="guide-card"><h3>${h3}</h3></a>`;
   });
   html = html.replace(/<a href="([^"]+)" class="guide-card"><h3>([^<]+)<\/h3><p>Browse the complete breed directory\.?<\/p><\/a>/g, (m, href, h3) => {
     changed += 1;

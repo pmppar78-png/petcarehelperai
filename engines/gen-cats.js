@@ -94,7 +94,7 @@ function makePage(b) {
       </div>
 
       <h2>${name} Overview</h2>
-      <p>The ${name} is a ${size.toLowerCase()} cat breed known for being ${temperament.toLowerCase()}. Weighing ${weight} with a lifespan of ${lifespan}, these cats make wonderful companions for the right owner. Their ${activity.toLowerCase()} activity level and ${intelligence.toLowerCase()} intelligence make them ${activity === 'Very High' || activity === 'High' ? 'engaging and entertaining pets that keep their owners on their toes' : 'adaptable and pleasant companions for a variety of households'}.</p>
+      <p>The ${name} is a ${size.toLowerCase()} cat breed known for being ${temperament.toLowerCase()}. Adults usually weigh ${weight} and often live ${lifespan}. Their ${activity.toLowerCase()} activity level and ${intelligence.toLowerCase()} intelligence are the practical facts to plan around, along with ${grooming.toLowerCase()} grooming.</p>
 
       <p>${name}s are ${goodKids === 'Excellent' ? 'excellent family cats that bond well with children' : 'good with respectful family members'} and ${goodPets === 'Good' ? 'generally get along well with other pets when properly introduced' : 'can coexist with other pets with proper introduction'}. Their ${shedding.toLowerCase()} shedding level and ${grooming.toLowerCase()} grooming needs make them ${grooming === 'Low' || grooming === 'Very Low' ? 'relatively easy to maintain' : 'a rewarding breed for those willing to invest in regular grooming'}.</p>
 

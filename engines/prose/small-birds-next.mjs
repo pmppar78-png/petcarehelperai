@@ -69,7 +69,7 @@ export const profiles = {
     ],
     html: `<h2>A Chilean rodent that should not see a raisin</h2>
 <p>Degus weigh about 6 to 10 ounces and often live 6 to 9 years. They are diurnal enough to be awake when you are, which is rarer than hamster marketing suggests. They chew. A plastic cage is a snack. Multi-level space, hay, and safe wood are the housing. The tail skin can slip off if you grab it. Scoop them up instead.</p>
-<p>They bark and whistle. They are not a quiet child's first pet, and they are not a hamster with a longer life. Cataracts in a degu are a diet emergency backward: the sugar already happened.</p>
+<p>They bark and whistle. They are not a quiet child's first pet, and they are not a hamster with a longer life. By the time a degu's lens turns cloudy, the sugary food that caused it has already been eaten. Fruit and sweet treats do not belong in the cage.</p>
 <h2>Teeth and blood sugar</h2>
 <p>Incisors and cheek teeth overgrow when the diet is soft. A degu that drools or drops food needs a dental exam under anesthesia by someone who treats exotic mammals. Diabetes shows up as drinking, weight loss, and cloudy eyes. <a href="https://www.merckvetmanual.com/">Merck</a> is the clinical reference. A degu off its hay is the <a href="/vet/symptoms/small-mammal-not-eating">appetite page</a>.</p>`,
   },
@@ -247,8 +247,8 @@ export const profiles = {
       { q: "Are they good apartment birds?", a: "Better than a macaw or a sun conure. They still call. An apartment can work if you are home and the neighbors are not sharing a paper wall." },
       { q: "Which pionus is this?", a: "Eight species share the genus. Blue-headed, white-capped, bronze-winged, and dusky are not the same size or the same price. Ask for the species on the receipt." },
     ],
-    html: `<h2>The medium parrot people buy when they have heard an Amazon</h2>
-<p>Pionus are stocky parrots, about 10 to 12 inches and 200 to 280 grams, often living 25 to 40 years. They are calmer and quieter than the famous talking parrots, and they are still parrots. A cage of at least 24 by 24 by 30 inches is a start. They need hours out, a shower, and a diet of pellets and vegetables rather than a sunflower habit.</p>
+    html: `<h2>Calmer than an Amazon, and still a long-lived parrot</h2>
+<p>Pionus are stocky parrots, about 10 to 12 inches and 200 to 280 grams, often living 25 to 40 years. They are calmer and quieter than the famous talking parrots, and they are still parrots. A cage of at least 24 by 24 by 30 inches is a start. They need hours out, a shower, and a diet of pellets and vegetables rather than a sunflower habit. A stressed or excited pionus can smell musky, and that scent fades when the bird settles. It is a breed quirk, not a dirty cage, and it is not a reason to ignore a bird that is fluffed or losing weight.</p>
 <p>Talking is moderate. A pionus that never speaks is normal. A pionus that screams all evening may be bored, hormonal, or under-slept. Twelve hours of dark, quiet night fixes more parrots than another toy.</p>
 <h2>The snuffle versus the sick bird</h2>
 <p>Learn the excited snuffle so you do not rush a healthy bird to a clinic, and so you do not ignore a real infection because someone online said pionus always wheeze. Weight loss is the fact that settles the argument. <a href="https://www.aav.org">AAV</a> lists avian vets. A bird that stays fluffed belongs on the <a href="/vet/symptoms/bird-quiet">quiet bird page</a>.</p>`,

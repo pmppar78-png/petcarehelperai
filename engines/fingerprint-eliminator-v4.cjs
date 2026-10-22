@@ -29,7 +29,6 @@ const RULES = [
       (T) => `Think of these as the first pass, a veterinarian familiar with your ${T}'s lifestyle will correct what actually needs correcting.`,
       (T) => `These starting-point recommendations are deliberately broad, a vet who has examined your ${T} can calibrate them properly.`,
       (T) => `What you read here is the template, not the answer, an in-person vet visit is where your ${T}'s plan gets personalized.`,
-      (T) => `This is the right shape of plan for most ${T} cases; the exact numbers belong in a conversation with your veterinarian.`,
       (T) => `Use this as preparatory reading, your vet's adjustments for your individual ${T} are what actually matter.`,
       (T) => `The usable version of this plan is the one your veterinarian writes after examining your ${T} in person.`,
       (T) => `Consider this scaffolding; final recommendations for your ${T} depend on a vet's read of weight, age, and baseline health.`,
