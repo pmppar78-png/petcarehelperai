@@ -313,7 +313,6 @@ function fixBreedPageGuideLinks() {
     for (const g of newGuides) {
       guidesHtml += `        <a href="/guides/${g}" class="guide-card">
           <h3>${guideSlugToTitle(g)}</h3>
-          <p>Expert guide for ${entityMap.get(key)?.display_name || slugToTitle(slug)} owners.</p>
         </a>\n`;
     }
 
