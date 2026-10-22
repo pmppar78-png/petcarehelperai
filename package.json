@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "AI Pet Medical & Vet Help Finder",
   "type": "module",
+  "scripts": {
+    "check:prose": "node engines/check-prose.mjs"
+  },
   "dependencies": {
     "openai": "^4.20.0"
   }
