@@ -143,6 +143,7 @@ const STOCK = [
   [/suitability depends on the specific balance/i, "suitability depends on the specific balance"],
   [/will change your household in ways both expected and surprising/i, "will change your household in ways both expected"],
   [/was not designed to be a generic pet/i, "was not designed to be a generic pet"],
+  [/popular aquarium species known for/i, "popular aquarium species known for"],
 ];
 
 const stockHits = [];
