@@ -500,7 +500,7 @@ export function checkerBody() {
 export function creditsIntro(hosted, placeholders) {
   return `<h1>Image credits</h1>
 <p>Breed and species photographs on this site are self-hosted copies of freely licensed files. A photo was kept only when the file title, description, or categories identified that species or breed. Look-alike animals, stamps, maps, and files that showed a different subject stayed off the page.</p>
-<p>Wikimedia Commons was searched first. Research-grade iNaturalist observations licensed CC0, CC BY, or CC BY-SA were checked when Commons had no file we could identify. Flickr, Pexels, and Unsplash were not queried, because no API key was available for those sites.</p>
+<p>Wikimedia Commons was searched first. Research-grade iNaturalist observations licensed CC0, CC BY, or CC BY-SA were checked when Commons had no file we could identify. A Flickr photo was used only when its page showed a CC0, CC BY, or CC BY-SA license and the description identified the animal. Pexels and Unsplash were not queried.</p>
 <p>${hosted} photographs are self-hosted as WebP, with a large image up to 960 pixels wide and a 250 pixel thumbnail. ${placeholders} profiles still use the neutral “Photo coming soon” illustration. Those profiles are listed after the credit tables.</p>
 <p>License names below are the ones the source reported. Follow the license link for the exact terms. Authors are credited as the source recorded them.</p>`;
 }

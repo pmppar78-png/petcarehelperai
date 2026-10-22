@@ -1,7 +1,7 @@
 {
   "generated": "2026-10-22T20:17:52.320Z",
-  "hosted": 679,
-  "placeholders": 3,
+  "hosted": 680,
+  "placeholders": 2,
   "images": [
     {
       "group": "birds",
@@ -12952,9 +12952,21 @@
       "name": "Saint Berdoodle",
       "sci": "",
       "alt": "Saint Berdoodle",
-      "sourceFile": null,
-      "placeholder": true,
-      "reason": "already placeholder"
+      "sourceFile": "https://www.flickr.com/photos/sheusestangerines/23331733886",
+      "placeholder": false,
+      "reason": "verified Flickr",
+      "main": "/images/breeds/dogs/saint-berdoodle.webp",
+      "thumb": "/images/breeds/dogs/saint-berdoodle-thumb.webp",
+      "width": 960,
+      "height": 960,
+      "thumbWidth": 250,
+      "thumbHeight": 250,
+      "author": "usestangerines",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "commonsUrl": "https://www.flickr.com/photos/sheusestangerines/23331733886",
+      "commonsTitle": "St. Bernard / Standard Poodle mix",
+      "source": "Flickr"
     },
     {
       "group": "dogs",

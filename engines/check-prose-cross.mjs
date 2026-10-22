@@ -144,6 +144,21 @@ const STOCK = [
   [/will change your household in ways both expected and surprising/i, "will change your household in ways both expected"],
   [/was not designed to be a generic pet/i, "was not designed to be a generic pet"],
   [/popular aquarium species known for/i, "popular aquarium species known for"],
+  [/popular pet bird species known for/i, "popular pet bird species known for"],
+  [/Whether you are a first-time owner/i, "Whether you are a first-time owner"],
+  [/represents one of the most fascinating/i, "represents one of the most fascinating"],
+  [/range of social and cognitive capabilities/i, "range of social and cognitive capabilities"],
+  [/physical environment you create for your/i, "physical environment you create for your"],
+  [/one of its most captivating qualities/i, "one of its most captivating qualities"],
+  [/Vocalization patterns in /i, "Vocalization patterns in"],
+  [/unique pet species known for/i, "unique pet species known for"],
+  [/has captivated pet owners/i, "has captivated pet owners"],
+  [/popularity of .+ as pets has grown significantly/i, "popularity of as pets has grown significantly"],
+  [/rewarding small animal companion that brings unique/i, "rewarding small animal companion that brings unique"],
+  [/most common misconceptions about/i, "most common misconceptions about"],
+  [/social, intelligent animals that benefit enormously/i, "social, intelligent animals that benefit enormously"],
+  [/becomes most evident once the animal has settled/i, "becomes most evident once the animal has settled"],
+  [/well-balanced personality that/i, "well-balanced personality that"],
 ];
 
 const stockHits = [];
