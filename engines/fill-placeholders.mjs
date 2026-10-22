@@ -109,6 +109,10 @@ const ID = {
   "cats/javanese": { phrases: ["javanese cat"] },
   "cats/minuet": { phrases: ["napoleon cat", "minuet cat"] },
   "small-animals/dwarf-hotot": { phrases: ["hotot rabbit", "blanc de hotot", "dwarf hotot"] },
+  "small-animals/chinchilla-mutations": { phrases: ["ebony chinchilla", "beige chinchilla", "violet chinchilla", "mosaic chinchilla"] },
+  "dogs/saint-berdoodle": { phrases: ["saint berdoodle", "st berdoodle"] },
+  "fish/rainbow-fish": { binomials: ["melanotaenia boesemani", "melanotaenia praecox"], phrases: ["rainbowfish", "boesemani"] },
+  "marine-fish/fairy-wrasse": { binomials: ["cirrhilabrus rubripinnis", "cirrhilabrus exquisitus"], phrases: ["fairy wrasse", "cirrhilabrus"] },
   "small-animals/long-haired-hamster": { phrases: ["teddy bear hamster", "longhair syrian", "long haired syrian"] },
   "dogs/maremma-sheepdog": { phrases: ["maremmano", "pastore maremmano", "maremma sheepdog"] },
   "dogs/polish-tatra-sheepdog": { phrases: ["tatra sheepdog", "polish tatra", "owczarek podhalanski"] },
@@ -223,6 +227,19 @@ const BREED_PHRASE = {
   "small-animals/coronet-guinea-pig": "coronet guinea",
   "small-animals/rex-guinea-pig": "rex guinea",
   "small-animals/silkie-guinea-pig": "silkie guinea",
+  "small-animals/dwarf-hamster": "dwarf hamster",
+  "dogs/irish-doodle": "irish doodle",
+  "dogs/maltipoo": "maltipoo",
+  "dogs/saint-berdoodle": "saint berdoodle",
+  "dogs/shorkie": "shorkie",
+  "fish/blenny": "blenny",
+  "fish/gouramis": "gourami",
+  "fish/killifish": "killifish",
+  "fish/rainbow-fish": "rainbowfish",
+  "fish/wrasse": "wrasse",
+  "marine-fish/fairy-wrasse": "fairy wrasse",
+  "reptiles/chameleon": "chameleon",
+  "reptiles/monitor-lizard": "monitor lizard",
   "small-animals/teddy-guinea-pig": "teddy guinea",
   "small-animals/texel-guinea-pig": "texel guinea",
   "small-animals/white-crested-guinea-pig": "white crested guinea",
@@ -237,7 +254,8 @@ const BREED_PHRASE = {
   "small-animals/hairless-rat": "hairless rat",
   "small-animals/long-haired-hamster": "long-haired syrian hamster",
   "small-animals/chinchilla-standard-gray": "chinchilla",
-  "birds/american-singer-canary": "american singer",
+  "small-animals/chinchilla-mutations": "ebony chinchilla",
+  "birds/american-singer-canary": "american singer canary",
   "birds/gloster-canary": "gloster canary",
   "birds/red-factor-canary": "red factor canary",
   "birds/roller-canary": "roller canary",
@@ -258,6 +276,18 @@ const REJECT_IF = {
   "birds/red-factor-canary": ["chick", "chic", "nestling"],
   "birds/roller-canary": ["birdcage", "bird cage", "vogelbauer"],
   "birds/canary": ["gloster", "roller", "red factor", "american singer"],
+  "small-animals/silkie-guinea-pig": ["chicken", "bantam", "gallus", "shetland", "rough collie"],
+  "small-animals/ferret-sable": ["albino", "angora"],
+  "small-animals/dwarf-hamster": ["syrian", "teddy bear", "roborovski"],
+  "dogs/irish-doodle": ["goldendoodle", "labradoodle", "sheepadoodle", "bernedoodle"],
+  "dogs/maltipoo": ["maltipom"],
+  "fish/rainbow-fish": ["trout", "shark", "rainbow boa"],
+  "fish/killifish": ["banded killifish", "fundulus", "darter"],
+  "fish/wrasse": ["fairy wrasse", "cirrhilabrus", "six line", "sixline"],
+  "marine-fish/fairy-wrasse": ["thalassoma", "coris", "pseudocheilinus", "six line"],
+  "reptiles/chameleon": ["anole", "anolis"],
+  "reptiles/monitor-lizard": ["komodo"],
+  "birds/american-singer-canary": ["concert", "microphone", "album", "portrait"],
   "fish/ram-cichlid": ["altispinosus", "bolivian"],
   "fish/german-blue-ram": ["altispinosus"],
   "fish/bolivian-ram": ["ramirezi"],
@@ -540,7 +570,10 @@ for (const profile of targets) {
     await download(pick.download, tmp);
     const dims = convertPair(tmp, main, thumb);
     fs.unlinkSync(tmp);
-    const altSci = (rule?.binomials?.[0] || "").replace(/\b\w/g, (c) => c.toUpperCase());
+    const sciParts = (rule?.binomials?.[0] || "").split(/\s+/).filter(Boolean);
+    const altSci = sciParts.length
+      ? `${sciParts[0].charAt(0).toUpperCase()}${sciParts[0].slice(1).toLowerCase()}${sciParts.length > 1 ? ` ${sciParts.slice(1).join(" ").toLowerCase()}` : ""}`
+      : "";
     const alt = altSci ? `${profile.name.replace(/:$/, "")} (${altSci})` : profile.name.replace(/:$/, "");
     const entry = {
       ...profile,
