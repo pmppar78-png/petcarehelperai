@@ -159,6 +159,14 @@ const STOCK = [
   [/social, intelligent animals that benefit enormously/i, "social, intelligent animals that benefit enormously"],
   [/becomes most evident once the animal has settled/i, "becomes most evident once the animal has settled"],
   [/well-balanced personality that/i, "well-balanced personality that"],
+  [/Diet has a compounding effect/i, "Diet has a compounding effect"],
+  [/requires understanding not just what to feed/i, "requires understanding not just what to feed"],
+  [/Good nutrition is the foundation/i, "Good nutrition is the foundation"],
+  [/Quarantine protocols represent one of the most impactful/i, "Quarantine protocols represent one of the most impactful"],
+  [/Diet variety is essential for optimal/i, "Diet variety is essential for optimal"],
+  [/most effective health strategy is a consistent one/i, "most effective health strategy is a consistent one"],
+  [/Recognizing early signs of disease/i, "Recognizing early signs of disease"],
+  [/Originally developed for various working tasks/i, "Originally developed for various working tasks"],
 ];
 
 const stockHits = [];
