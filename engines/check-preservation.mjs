@@ -452,6 +452,7 @@ function badEndWord(word) {
   return FRAGMENT_DANGLING.has(last) || FRAGMENT_OBJECTS.has(last);
 }
 
+// Prose sentences only. Never call this on a table cell, a list item, or a link line.
 function soften(text) {
   const clean = text.replace(/\s+/g, " ").trim();
   const words = clean.split(" ").filter(Boolean);
@@ -934,17 +935,8 @@ function shortLabel(text) {
   return words.slice(0, n).join(" ").replace(/[,;:|–—.-]+$/g, "").trim();
 }
 
-function safeAnchor(index, anchorHtml, rel, live) {
-  const text = decode(anchorHtml.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
-  if (!text) return anchorHtml;
-  const sentences = sentencesInText(text);
-  const risky = sentences.length
-    ? sentences.some((sentence) => notRequired(index, sentence, rel, live) || sentence.split(/\s+/).length >= MIN_WORDS)
-    : text.split(/\s+/).length >= MIN_WORDS;
-  if (!risky) return anchorHtml;
-  const label = shortLabel(text);
-  if (!label || label === text) return anchorHtml;
-  return anchorHtml.replace(/>[\s\S]*<\/a>\s*$/i, `>${escapeText(label)}</a>`);
+function safeAnchor(_index, anchorHtml) {
+  return anchorHtml;
 }
 
 function keepBlurb(index, raw, rel, live) {
@@ -991,7 +983,7 @@ function originLinkParagraphs(html) {
   while ((match = re.exec(region))) {
     if (/affiliate-disclosure|medical-disclaimer/i.test(match[0])) continue;
     if (!/<a\b/i.test(match[1])) continue;
-    out.push({ inner: match[1], hrefs: [...new Set(hrefsIn(match[1]))] });
+    out.push({ outer: match[0], inner: match[1], hrefs: [...new Set(hrefsIn(match[1]))] });
   }
   return out;
 }
@@ -1019,18 +1011,12 @@ function repairLinkParagraphs(index, html, originHtml, rel, live) {
     const inner = match[0].replace(/^<p\b[^>]*>/i, "").replace(/<\/p>$/i, "");
     const hrefs = [...new Set(hrefsIn(inner))];
     if (!hrefs.length) continue;
-    const origin = bestOriginParagraph(paragraphs, hrefs);
-    if (!origin) continue;
-    const missing = origin.hrefs.some((href) => !hrefs.includes(href));
-    const spliced = inner.includes(" -  - ");
-    if (!missing && !spliced) continue;
-    if (!hrefs.every((href) => origin.hrefs.includes(href))) continue;
-    const blurbSentences = sentencesInText(decode(inner.replace(/<a\b[\s\S]*?<\/a>/gi, " ")));
-    if (blurbSentences.some((sentence) => sentence.split(/\s+/).length >= 8)) continue;
-    const cleaned = cleanLinkInner(index, origin.inner, rel, live);
-    if (!cleaned) continue;
-    const next = `<p>${cleaned}</p>`;
-    if (next === match[0]) continue;
+    const origin = paragraphs.filter(
+      (paragraph) => paragraph.hrefs.length === hrefs.length && hrefs.every((href) => paragraph.hrefs.includes(href)),
+    );
+    if (origin.length !== 1) continue;
+    const next = origin[0].outer;
+    if (!next || next === match[0]) continue;
     edits.push({ start: match.index, end: match.index + match[0].length, text: next });
     rebuilt += 1;
   }
@@ -1038,8 +1024,10 @@ function repairLinkParagraphs(index, html, originHtml, rel, live) {
   const loose = /(<p class="affiliate-disclosure"[\s\S]*?<\/p>)\s*((?:<a\b[\s\S]*?<\/a>[\s\S]*?)+)<\/p>/gi;
   nextHtml = nextHtml.replace(loose, (full, disclosure, body) => {
     const hrefs = [...new Set(hrefsIn(body))];
-    const origin = bestOriginParagraph(paragraphs, hrefs);
-    const cleaned = origin ? cleanLinkInner(index, origin.inner, rel, live) : body.replace(/ -  - /g, " - ").trim();
+    const matches = paragraphs.filter(
+      (paragraph) => paragraph.hrefs.length === hrefs.length && hrefs.every((href) => paragraph.hrefs.includes(href)),
+    );
+    const cleaned = matches.length === 1 ? matches[0].inner : body.replace(/ -  - /g, " - ").trim();
     if (!cleaned) return full;
     rebuilt += 1;
     return `${disclosure}\n<p>${cleaned}</p>`;
@@ -1123,7 +1111,6 @@ function repairCells(index, html, originHtml, rel, live) {
       inserted += inserts.size;
     }
   }
-  next = stripTrailingCommas(next);
   return { html: next, repaired, inserted, ignored: regionAt < 0 };
 }
 
@@ -1132,22 +1119,13 @@ function stripTrailingCommas(html) {
 }
 
 function renderCell(index, cell, rel, live) {
-  const text = cell.text;
-  const useExact = !shouldSoften(index, text, rel, live);
-  const inner = useExact ? cell.html : escapeText(soften(text));
-  if (useExact) noteSentences(text, rel, live);
-  return `<${cell.tag}${cell.attrs}>${inner}</${cell.tag}>`;
+  noteSentences(cell.text, rel, live);
+  return cell.full;
 }
 
 function renderRow(index, row, rel, live) {
-  const cells = row.cells.map((cell) => {
-    const sentences = sentencesInText(cell.text);
-    const exactOk = sentences.every((sentence) => !isTemplate(index, sentence) && !wouldExceed(sentence, rel, live));
-    const inner = exactOk ? cell.html : escapeText(soften(cell.text));
-    if (exactOk) noteSentences(cell.text, rel, live);
-    return `<${cell.tag}${cell.attrs}>${inner}</${cell.tag}>`;
-  });
-  return `<tr>${cells.join("")}</tr>`;
+  for (const cell of row.cells) noteSentences(cell.text, rel, live);
+  return row.html;
 }
 
 function wouldExceed(sentence, rel, live) {
@@ -1223,7 +1201,7 @@ function appendHrefs(index, html, originHtml, rel, live) {
     anchors.push(safeAnchor(index, match[0], rel, live));
   }
   if (!anchors.length) return { html, added: 0 };
-  let block = `<p>${anchors.join(". ")}.</p>\n`;
+  let block = `<p>${anchors.join(" ")}</p>\n`;
   const sponsored = /rel\s*=\s*["'][^"']*sponsored/i.test(block);
   if (sponsored && !/affiliate-disclosure/i.test(html)) block = `${DISCLOSURE}\n${block}`;
   return { html: insertBeforeClose(html, block), added: anchors.length };
@@ -1260,7 +1238,8 @@ function dedupeTrailing(html) {
   while ((match = re.exec(article))) {
     const full = match[0];
     if (/affiliate-disclosure|medical-disclaimer/i.test(full)) continue;
-    const text = decode(full.replace(/<\/(a|p|li|div|h[1-6])>/gi, ". ").replace(/<br\s*\/?>/gi, ". ").replace(/<[^>]+>/g, " "));
+    if (/^<li\b/i.test(full) || /<a\b/i.test(full)) continue;
+    const text = decode(full.replace(/<\/(p|div|h[1-6])>/gi, ". ").replace(/<br\s*\/?>/gi, ". ").replace(/<[^>]+>/g, " "));
     const parts = text.split(/(?<=[.!?])\s+/).map((part) => part.trim()).filter(Boolean);
     const keys = parts.map(sentenceKey).filter(Boolean);
     if (!keys.length) continue;
