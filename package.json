@@ -7,7 +7,8 @@
     "check:prose": "node engines/check-prose.mjs && node engines/check-prose-cross.mjs && node engines/check-care-lines.mjs && node engines/check-fragments.mjs",
     "check:care-lines": "node engines/check-care-lines.mjs",
     "check:fragments": "node engines/check-fragments.mjs",
-    "check:repeated": "node engines/check-repeated-prose.mjs"
+    "check:repeated": "node engines/check-repeated-prose.mjs",
+    "check:preservation": "node engines/check-preservation.mjs"
   },
   "dependencies": {
     "@netlify/blobs": "^8.2.0",
