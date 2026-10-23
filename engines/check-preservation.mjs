@@ -19,7 +19,10 @@
  * deleted. A row or sentence can be deliberately replaced: a row passes
  * when one current row still contains the same words and numbers, and a
  * sentence passes when the same masked sentence with the same numbers is
- * present.
+ * present. A flawed origin sentence listed in
+ * data/preservation-replacements.json passes only when its reviewed
+ * replacement is on the page and carries the same numbers. The original
+ * wording does not have to remain.
  *
  * Dangling punctuation left by truncated cells ("Males: 10-16 lbs,") and
  * spliced link blurbs (" -  - ") fails the check.
@@ -635,6 +638,75 @@ function sentencePresent(text, visibleLower, currentSentences) {
   return false;
 }
 
+function normSentence(text) {
+  return text.toLowerCase().replace(/[.!?]+$/g, "").replace(/\s+/g, " ").trim();
+}
+
+function loadReplacements() {
+  const file = path.join(ROOT, "data/preservation-replacements.json");
+  const rows = JSON.parse(fs.readFileSync(file, "utf8"));
+  if (!Array.isArray(rows) || !rows.length) {
+    console.error("preservation replacements must be a non-empty array");
+    process.exit(1);
+  }
+  const map = new Map();
+  for (const row of rows) {
+    for (const field of ["page", "original", "replacement", "reason"]) {
+      if (!row[field] || typeof row[field] !== "string" || !row[field].trim()) {
+        console.error(`preservation replacement missing ${field}`);
+        process.exit(1);
+      }
+    }
+    const key = `${row.page}\n${normSentence(row.original)}`;
+    if (map.has(key)) {
+      console.error(`duplicate preservation replacement for ${row.page}`);
+      process.exit(1);
+    }
+    map.set(key, row);
+  }
+  return map;
+}
+
+const REPLACEMENTS = loadReplacements();
+
+function replacementRow(rel, sentence) {
+  return REPLACEMENTS.get(`${rel}\n${normSentence(sentence)}`) || null;
+}
+
+function sameFacts(original, replacement) {
+  const have = numericValues(replacement);
+  return [...numericValues(original)].every((num) => have.has(num));
+}
+
+function sentenceCovered(sentence, visibleLower, currentSentences, rel) {
+  const row = replacementRow(rel, sentence);
+  if (!row) return sentencePresent(sentence, visibleLower, currentSentences);
+  if (!sameFacts(sentence, row.replacement)) return false;
+  const replacement = row.replacement.toLowerCase().replace(/\s+/g, " ").trim();
+  return visibleLower.includes(replacement);
+}
+
+function assertReplacements(pagePairs) {
+  const byRel = new Map(pagePairs.map((pair) => [pair.rel, pair]));
+  const problems = [];
+  for (const row of REPLACEMENTS.values()) {
+    const pair = byRel.get(row.page);
+    if (!pair) {
+      problems.push(`${row.page}: page is not in the origin baseline`);
+      continue;
+    }
+    const found = sentencesOf(fs.readFileSync(pair.origin, "utf8")).some(
+      (sentence) => normSentence(sentence) === normSentence(row.original),
+    );
+    if (!found) problems.push(`${row.page}: original sentence is not on origin/main`);
+  }
+  if (problems.length) {
+    console.error("preservation replacements do not match origin sentences");
+    for (const line of problems) console.error(line);
+    process.exit(1);
+  }
+}
+
 function analyze(index, pair, live) {
   const originHtml = fs.readFileSync(pair.origin, "utf8");
   const currentHtml = fs.readFileSync(pair.current, "utf8");
@@ -648,7 +720,7 @@ function analyze(index, pair, live) {
   for (const sentence of originSentences) {
     if (notRequired(index, sentence, pair.rel, live)) continue;
     uniqueChecked += 1;
-    if (!sentencePresent(sentence, currentLower, currentSentences)) missingSentences.push(sentence);
+    if (!sentenceCovered(sentence, currentLower, currentSentences, pair.rel)) missingSentences.push(sentence);
   }
   const originNums = numericValues(originVisible);
   const currentNums = numericValues(currentVisible);
@@ -993,11 +1065,15 @@ function patchProse(index, html, originHtml, rel, live) {
   const placed = new Set();
   for (const sentence of new Set(sentencesOf(originHtml))) {
     const lower = sentence.toLowerCase();
-    if (placed.has(lower) || sentencePresent(sentence, pageText, currentSentences)) continue;
+    if (placed.has(lower) || sentenceCovered(sentence, pageText, currentSentences, rel)) continue;
     if (notRequired(index, sentence, rel, live)) continue;
+    const row = replacementRow(rel, sentence);
+    if (row && !sameFacts(sentence, row.replacement)) continue;
     placed.add(lower);
-    noteSentences(sentence, rel, live);
-    const body = /[.!?]$/.test(sentence) ? sentence : `${sentence}.`;
+    const body = row
+      ? row.replacement.replace(/\s+/g, " ").trim()
+      : (/[.!?]$/.test(sentence) ? sentence : `${sentence}.`);
+    noteSentences(body, rel, live);
     chunks.push(`<p>${escapeText(body)}</p>`);
   }
   if (!chunks.length) return { html, patched: 0, appended: 0, extended: 0 };
@@ -1263,6 +1339,7 @@ if (!out.length) {
 }
 const work = ONLY.size ? out.filter((pair) => ONLY.has(pair.rel) || ONLY.has(pair.originRel)) : out;
 console.error(`pages ${out.length}, work ${work.length}, missing counterparts ${missing.length}`);
+assertReplacements(out);
 const index = buildIndex(out);
 if (FIX) {
   const totals = fixAll(index, work);
