@@ -1501,3 +1501,111 @@
   for = "/*.xml"
   [headers.values]
     Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[redirects]]
+  from = "/guides/how-big-do-belgian-malinoiss-get"
+  to = "/guides/how-big-do-belgian-malinois-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-belgian-malinoiss-get.html"
+  to = "/guides/how-big-do-belgian-malinois-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-belgian-tervurens-get"
+  to = "/guides/how-big-do-belgian-tervuren-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-belgian-tervurens-get.html"
+  to = "/guides/how-big-do-belgian-tervuren-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-bichon-frises-get"
+  to = "/guides/how-big-do-bichon-frise-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-bichon-frises-get.html"
+  to = "/guides/how-big-do-bichon-frise-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-chinese-shar-peis-get"
+  to = "/guides/how-big-do-chinese-shar-pei-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-chinese-shar-peis-get.html"
+  to = "/guides/how-big-do-chinese-shar-pei-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-great-pyreneess-get"
+  to = "/guides/how-big-do-great-pyrenees-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-great-pyreneess-get.html"
+  to = "/guides/how-big-do-great-pyrenees-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-havaneses-get"
+  to = "/guides/how-big-do-havanese-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-havaneses-get.html"
+  to = "/guides/how-big-do-havanese-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-malteses-get"
+  to = "/guides/how-big-do-maltese-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-malteses-get.html"
+  to = "/guides/how-big-do-maltese-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-shiba-inus-get"
+  to = "/guides/how-big-do-shiba-inu-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-shiba-inus-get.html"
+  to = "/guides/how-big-do-shiba-inu-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-siberian-huskys-get"
+  to = "/guides/how-big-do-siberian-husky-get"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/how-big-do-siberian-huskys-get.html"
+  to = "/guides/how-big-do-siberian-husky-get"
+  status = 301
+  force = true
