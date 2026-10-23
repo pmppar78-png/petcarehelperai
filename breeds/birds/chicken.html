@@ -120,6 +120,7 @@
   ]
 }
 </script>
+  <link rel="preload" as="image" href="/images/breeds/birds/chicken.webp" fetchpriority="high">
 </head>
 <body>
 <header class="site-header">
@@ -154,7 +155,7 @@
 
       <div class="breed-image-header">
   <div class="breed-image-container" style="text-align:center;margin:20px 0;">
-  <img src="/images/breeds/birds/chicken.webp" srcset="/images/breeds/birds/chicken-thumb.webp 250w, /images/breeds/birds/chicken.webp 960w" sizes="(max-width: 640px) 92vw, 960px" alt="Backyard Chicken (Gallus gallus domesticus)" width="960" height="814" loading="lazy" decoding="async">
+  <img fetchpriority="high" src="/images/breeds/birds/chicken.webp" srcset="/images/breeds/birds/chicken-thumb.webp 250w, /images/breeds/birds/chicken.webp 960w" sizes="(max-width: 640px) 92vw, 960px" alt="Backyard Chicken (Gallus gallus domesticus)" width="960" height="814" loading="eager" decoding="async">
 </div>
 </div>
       <div class="breed-stats-card">
