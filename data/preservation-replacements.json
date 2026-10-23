@@ -1,0 +1,86 @@
+[
+  {
+    "page": "guides/rat-poison-dogs.html",
+    "original": "This Rat Poison and Rodenticide Toxicity in Dogs page is not a dose chart",
+    "replacement": "The package label names the chemical. A veterinarian or a poison hotline uses that name before any treatment.",
+    "reason": "The slotted title makes a garbled dose-chart line. The label and the hotline are what the sentence was trying to say."
+  },
+  {
+    "page": "resources/best-reptile-enclosures.html",
+    "original": "Disclaimer: Use this best reptile enclosures setup guide: tanks, terrariums vivariums (2026) resource as background, not as a substitute for professional guidance",
+    "replacement": "The 2026 comparisons of tanks, terrariums, and vivariums are background for an enclosure plan a veterinarian or an experienced keeper can check.",
+    "reason": "The sentence stuffs the page title into a robotic disclaimer and uses a tic."
+  },
+  {
+    "page": "resources/beginner-aquarium-setup-guide.html",
+    "original": "Disclaimer: Use this beginner aquarium setup guide: everything you need for your first fish tank resource as background, not as a substitute for professional guidance",
+    "replacement": "Read the tank, filter, and heater steps here as background before the first fish goes in the water. An experienced aquarist answers questions about that tank.",
+    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
+  },
+  {
+    "page": "resources/best-aquarium-filters-beginners.html",
+    "original": "Disclaimer: Use this best aquarium filters for beginners: a complete guide resource as background, not as a substitute for professional guidance",
+    "replacement": "Use the filter comparisons here as background while the tank's bacteria colony stays intact. An aquarist can check the choice for this tank.",
+    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
+  },
+  {
+    "page": "resources/best-cat-trees-scratchers.html",
+    "original": "Disclaimer: Use this best cat trees and scratching posts: expert guide for every budget (2026) resource as background, not as a substitute for professional guidance",
+    "replacement": "The 2026 cat tree and scratching post comparisons are background for matching a tree to the cat's size and budget.",
+    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
+  },
+  {
+    "page": "resources/best-dog-food-sensitive-stomachs.html",
+    "original": "Disclaimer: Use this best dog food for sensitive stomachs: a complete guide resource as background, not as a substitute for professional guidance",
+    "replacement": "The sensitive-stomach food notes here are background for a diet conversation with the dog's veterinarian.",
+    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
+  },
+  {
+    "page": "resources/pet-emergency-first-aid.html",
+    "original": "Disclaimer: Use this pet emergency first aid: what every owner should know resource as background, not as a substitute for professional guidance",
+    "replacement": "The first-aid steps here are background for the minutes before a veterinarian sees the animal.",
+    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
+  },
+  {
+    "page": "resources/pet-health-myths-debunked.html",
+    "original": "Disclaimer: Use this pet health myths debunked: separating fact from fiction resource as background, not as a substitute for professional guidance",
+    "replacement": "The myth-and-fact notes here are background for a conversation with the animal's veterinarian.",
+    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
+  },
+  {
+    "page": "resources/senior-pet-care-guide.html",
+    "original": "Disclaimer: The information here is intended to help you understand common aspects of senior pet care, not to replace the judgment of your veterinarian",
+    "replacement": "These senior-pet notes prepare questions for the veterinarian who already knows this animal.",
+    "reason": "Robotic comma-not disclaimer."
+  },
+  {
+    "page": "resources/signs-of-pain-in-pets.html",
+    "original": "Disclaimer: Use this signs of pain in pets: what most owners miss resource as background, not as a substitute for professional guidance",
+    "replacement": "The pain-sign notes here are background for deciding when a veterinarian should see the animal.",
+    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
+  },
+  {
+    "page": "breeds/cats/manx.html",
+    "original": "No tail is not a party trick",
+    "replacement": "The missing tail is a spinal trait.",
+    "reason": "Heading tic kept beside the rewritten heading. The missing tail is a spinal trait, which the next sentences describe."
+  },
+  {
+    "page": "breeds/birds/scarlet-macaw.html",
+    "original": "Red, and not a smaller project",
+    "replacement": "The red plumage still belongs to a full-size macaw.",
+    "reason": "Heading tic kept beside the rewritten heading. Size and lifespan stay in the next sentences."
+  },
+  {
+    "page": "breeds/birds/society-finch.html",
+    "original": "A finch seed mix is not the whole diet",
+    "replacement": "A finch seed mix leaves the diet unfinished.",
+    "reason": "Tic sentence repeated under its heading. Greens, egg food, and a cuttlebone stay in the next sentence."
+  },
+  {
+    "page": "editorial-standards.html",
+    "original": "This is a reference site, not a veterinary practice",
+    "replacement": "This reference site helps an owner prepare questions, and examination, diagnosis, and treatment happen at a veterinary practice.",
+    "reason": "Tic restored so preservation would keep the sentence. The following sentence still says the site cannot examine, diagnose, or treat."
+  }
+]
