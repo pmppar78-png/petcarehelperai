@@ -1,8 +1,12 @@
 #!/usr/bin/env node
 /**
- * Fails if the same sentence longer than 12 words appears on more than
- * three breed or species profiles. Shared site chrome, quick-fact tables,
- * affiliate blocks, and decision-guide lists are not profile prose.
+ * Fails if the same sentence, or a breed-name swap of it, appears on more
+ * than three pages. Tables and affiliate-callout boxes are prose. Short
+ * sentences are included. Every directory is scanned.
+ *
+ * A sentence here is text inside p, li, td, or th (so a heading is not a
+ * sentence). Fragments under five words are skipped so labels such as
+ * "Home" are not treated as prose.
  *
  * Usage: node engines/check-prose-cross.mjs
  */
@@ -10,74 +14,176 @@ import fs from "fs";
 import path from "path";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
-
-function profiles(dir, out = []) {
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) profiles(full, out);
-    else if (entry.name.endsWith(".html") && !entry.name.includes("-breeds")) out.push(full);
-  }
-  return out;
-}
-
-function articleText(html) {
-  const match = html.match(/<article[\s\S]*?<\/article>/i);
-  if (!match) return "";
-  let article = match[0];
-  article = article.replace(/<table[\s\S]*?<\/table>/gi, " ");
-  article = article.replace(/<div class="affiliate-callout"[\s\S]*?<\/div>/gi, " ");
-  const commercial = article.indexOf("commercial-links-section");
-  if (commercial >= 0) article = article.slice(0, commercial);
-  article = article.replace(/<(p|li|h1|h2|h3|h4|div|tr|section|a)(\s[^>]*)?>/gi, ". ");
-  article = article.replace(/<br\s*\/?>/gi, ". ");
-  return article
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&nbsp;/g, " ")
-    .replace(/&#39;|&rsquo;|&ldquo;|&rdquo;|&quot;/g, "'")
-    .replace(/&[a-z]+;/gi, " ")
-    .replace(/\s+/g, " ");
-}
-
-function sentenceKey(part) {
-  return part.trim().replace(/^[^A-Za-z]+/, "").replace(/[.!?]+$/, "").replace(/\s+/g, " ").trim();
-}
-
-function sentences(text) {
-  const kept = [];
-  for (const part of text.split(/(?<=[.!?])\s+/)) {
-    const key = sentenceKey(part);
-    if (!/^[A-Z]/.test(key)) continue;
-    const words = key.split(/\s+/).filter(Boolean);
-    if (words.length <= 12) continue;
-    kept.push(key);
-  }
-  return kept;
-}
-
-const seen = new Map();
-const files = profiles(path.join(ROOT, "breeds"));
-for (const file of files) {
-  const unique = new Set(sentences(articleText(fs.readFileSync(file, "utf8"))));
-  for (const sentence of unique) {
-    if (!seen.has(sentence)) seen.set(sentence, []);
-    seen.get(sentence).push(path.relative(ROOT, file));
-  }
-}
-
-const failures = [...seen.entries()].filter(([, list]) => list.length > 3);
+const MIN_WORDS = 5;
 
 function walkHtml(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === "node_modules" || entry.name === ".git" || entry.name === "engines") continue;
+    if (entry.name === "node_modules" || entry.name === ".git" || entry.name === "engines" || entry.name === "test-results") continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walkHtml(full, out);
     else if (entry.name.endsWith(".html")) out.push(full);
   }
   return out;
 }
+
+function breedNames() {
+  const names = new Set();
+  const breeds = path.join(ROOT, "breeds");
+  if (!fs.existsSync(breeds)) return names;
+  const stack = [breeds];
+  while (stack.length) {
+    const dir = stack.pop();
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) stack.push(full);
+      else if (entry.name.endsWith(".html") && !entry.name.includes("-breeds")) {
+        const slug = entry.name.replace(/\.html$/, "").replace(/-/g, " ").toLowerCase();
+        if (slug.length > 3) names.add(slug);
+      }
+    }
+  }
+  return names;
+}
+
+const NAME_SET = breedNames();
+
+function decode(text) {
+  return text
+    .replace(/&amp;/g, "&")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&#39;|&rsquo;|&ldquo;|&rdquo;|&quot;/g, "'")
+    .replace(/&[a-z]+;/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function regionText(html) {
+  const article = html.match(/<article[\s\S]*?<\/article>/i);
+  const main = html.match(/<main[\s\S]*?<\/main>/i);
+  return (article || main || ["", ""])[0];
+}
+
+function sentencesOf(html) {
+  const region = regionText(html);
+  if (!region) return [];
+  const chunks = region.match(/<(?:p|li|td|th)\b[^>]*>[\s\S]*?<\/(?:p|li|td|th)>/gi) || [];
+  const kept = [];
+  for (const chunk of chunks) {
+    const text = decode(chunk.replace(/<[^>]+>/g, " "));
+    for (const part of text.split(/(?<=[.!?])\s+/)) {
+      const key = part.replace(/^[^A-Za-z]+/, "").replace(/[.!?]+$/, "").replace(/\s+/g, " ").trim();
+      if (!/^[A-Z]/.test(key)) continue;
+      if (key.split(/\s+/).length < MIN_WORDS) continue;
+      kept.push(key);
+    }
+  }
+  return kept;
+}
+
+function normalize(sentence) {
+  const words = sentence.toLowerCase().match(/[a-z0-9']+/g) || [];
+  const out = [];
+  for (let i = 0; i < words.length; ) {
+    let hit = 0;
+    for (const len of [5, 4, 3, 2, 1]) {
+      if (i + len > words.length) continue;
+      const gram = words.slice(i, i + len).join(" ");
+      if (NAME_SET.has(gram)) {
+        hit = len;
+        break;
+      }
+    }
+    if (hit) {
+      out.push("name");
+      i += hit;
+    } else {
+      out.push(words[i].replace(/\d+/g, "#"));
+      i += 1;
+    }
+  }
+  return out.join(" ");
+}
+
+function shingles(norm) {
+  const words = norm.split(" ");
+  const set = new Set();
+  const width = words.length >= 8 ? 5 : 4;
+  if (words.length < width) return set;
+  for (let i = 0; i <= words.length - width; i++) set.add(words.slice(i, i + width).join(" "));
+  return set;
+}
+
+function jaccard(a, b) {
+  if (!a.size || !b.size) return 0;
+  let inter = 0;
+  const [small, large] = a.size < b.size ? [a, b] : [b, a];
+  for (const item of small) if (large.has(item)) inter += 1;
+  return inter / (a.size + b.size - inter);
+}
+
+const files = walkHtml(ROOT);
+const groups = new Map();
+for (const file of files) {
+  const rel = path.relative(ROOT, file);
+  const html = fs.readFileSync(file, "utf8");
+  for (const sentence of new Set(sentencesOf(html))) {
+    const key = normalize(sentence);
+    if (key.split(" ").length < MIN_WORDS) continue;
+    if (!groups.has(key)) groups.set(key, { example: sentence, files: [] });
+    groups.get(key).files.push(rel);
+  }
+}
+
+// Near-duplicates: same shingles after the breed name is replaced with "name".
+const reps = [...groups.entries()].map(([key, info]) => ({
+  key,
+  info,
+  sh: shingles(key),
+  bucket: key.split(" ").slice(0, 8).join(" "),
+}));
+const byBucket = new Map();
+for (const rep of reps) {
+  if (!byBucket.has(rep.bucket)) byBucket.set(rep.bucket, []);
+  byBucket.get(rep.bucket).push(rep);
+}
+
+const parent = new Map();
+function find(key) {
+  let root = key;
+  while (parent.get(root) !== root) root = parent.get(root);
+  while (key !== root) {
+    const next = parent.get(key);
+    parent.set(key, root);
+    key = next;
+  }
+  return root;
+}
+function unite(a, b) {
+  const pa = find(a);
+  const pb = find(b);
+  if (pa !== pb) parent.set(pb, pa);
+}
+for (const rep of reps) parent.set(rep.key, rep.key);
+for (const bucket of byBucket.values()) {
+  if (bucket.length < 2 || bucket.length > 250) continue;
+  for (let i = 0; i < bucket.length; i++) {
+    for (let j = i + 1; j < bucket.length; j++) {
+      if (jaccard(bucket[i].sh, bucket[j].sh) >= 0.8) unite(bucket[i].key, bucket[j].key);
+    }
+  }
+}
+
+const clustered = new Map();
+for (const rep of reps) {
+  const root = find(rep.key);
+  if (!clustered.has(root)) clustered.set(root, { example: rep.info.example, files: new Set() });
+  const dest = clustered.get(root);
+  for (const file of rep.info.files) dest.files.add(file);
+}
+
+const failures = [...clustered.values()]
+  .map((item) => [item.example, [...item.files]])
+  .filter(([, list]) => list.length > 3);
 
 function visiblePage(html) {
   return html
@@ -184,4 +290,4 @@ if (failures.length || stockHits.length) {
   }
   process.exit(1);
 }
-console.log(`cross-page prose check ok (${files.length} profiles, stock phrases clear)`);
+console.log(`cross-page prose check ok (${files.length} html files, stock phrases clear)`);
