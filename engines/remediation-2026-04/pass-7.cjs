@@ -1,10 +1,13 @@
 
-function indefiniteArticle(name) {
+function indefiniteArticle(name, capitalize) {
   const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
   const head = word.toLowerCase().split(/[^a-z]/)[0];
-  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
-  if (consonantSound.has(head)) return "a";
-  return /^[aeiou]/i.test(word) ? "an" : "a";
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
 }
 // Pass 7: catch species-specific ({species} not "pet") variants missed by pass 6, plus
 // training regex with parentheses in trait.
@@ -28,7 +31,7 @@ const OWNERS_V = [
   (breed) => `Real familiarity with this slice of ${breed} care keeps households out of reactive decision-making.`,
   (breed) => `Owners with a solid grasp of this layer tend to make calmer, more measured ${breed} decisions under pressure.`,
   (breed) => `Households that genuinely know this part of ${breed} care rarely find themselves in emergency-mode responses.`,
-  (breed) => `A ${breed} owner who has actually learned this aspect of care tends to act, not panic.`,
+  (breed) => `${indefiniteArticle(breed, true)} ${breed} owner who has actually learned this aspect of care tends to act, not panic.`,
   (breed) => `When the household is genuinely fluent in this dimension of ${breed} care, the reactive decisions tend to drop away.`,
   (breed) => `Skilled ${breed} households rarely land on worst-case reactions because they have already thought this through.`,
   (breed) => `An owner who has done the reading on this part of ${breed} care tends to respond thoughtfully rather than reactively.`,
@@ -42,7 +45,7 @@ const GETTING_V = [
   (breed) => `With ${indefiniteArticle(breed)} ${breed}, informed repetition beats perfection — the households that quietly repeat sensible choices outperform the ones chasing ideal ones.`,
   (breed) => `For ${indefiniteArticle(breed)} ${breed}, the useful goal is a set of repeatable, informed decisions, not a single perfect plan.`,
   (breed) => `What makes the difference for ${indefiniteArticle(breed)} ${breed} here is the steady repetition of good-enough choices rather than occasional perfect ones.`,
-  (breed) => `A ${breed} benefits most from repeatable, thoughtful decisions that keep being made week after week.`,
+  (breed) => `${indefiniteArticle(breed, true)} ${breed} benefits most from repeatable, thoughtful decisions that keep being made week after week.`,
   (breed) => `Strong ${breed} care on this dimension is made of small, repeatable decisions rather than any heroic one-off effort.`,
   (breed) => `For ${indefiniteArticle(breed)} ${breed}, informed repetition across months tends to outperform any perfect one-off effort.`,
   (breed) => `The ${breed} households that do well on this dimension are the ones quietly repeating informed choices, not chasing perfection.`
@@ -52,7 +55,7 @@ const TRAINING_V = [
   (breed, trait, tend) => `Working with ${indefiniteArticle(breed)} ${breed}'s ${trait} trainability profile — rather than against it — is what makes training sessions land, particularly given the natural ${tend} tendencies.`,
   (breed, trait, tend) => `${breed}s respond best when the training plan matches their ${trait} profile and acknowledges their natural ${tend} habits.`,
   (breed, trait, tend) => `Training outcomes for ${indefiniteArticle(breed)} ${breed} improve materially when the plan is calibrated to the ${trait} profile and the natural ${tend} tendencies.`,
-  (breed, trait, tend) => `A ${breed}'s ${trait} trainability and natural ${tend} tendencies set the frame — good training works with that frame, not around it.`,
+  (breed, trait, tend) => `${indefiniteArticle(breed, true)} ${breed}'s ${trait} trainability and natural ${tend} tendencies set the frame — good training works with that frame, not around it.`,
   (breed, trait, tend) => `Training effort for ${indefiniteArticle(breed)} ${breed} pays off most when it respects the ${trait} trainability profile and leans into the natural ${tend} habits.`,
   (breed, trait, tend) => `Effective ${breed} training acknowledges the ${trait} trainability profile and the natural ${tend} tendencies at the same time.`,
   (breed, trait, tend) => `For ${indefiniteArticle(breed)} ${breed}, well-designed training respects the ${trait} trainability baseline and works with the natural ${tend} pattern.`,

@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 
-function indefiniteArticle(name) {
+function indefiniteArticle(name, capitalize) {
   const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
   const head = word.toLowerCase().split(/[^a-z]/)[0];
-  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
-  if (consonantSound.has(head)) return "a";
-  return /^[aeiou]/i.test(word) ? "an" : "a";
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
 }
 /**
  * fingerprint-eliminator.js
@@ -65,7 +68,7 @@ const RULES = [
       (T) => `Among the many details of ${T} care, this is the one most households delay, and regret delaying. `,
       (T) => `This part of life with ${indefiniteArticle(T)} ${T} is less glamorous than training or diet, but its effect compounds over time. `,
       (T) => `Few checklists for ${indefiniteArticle(T)} ${T} emphasize this, yet veterinarians flag it repeatedly for a reason. `,
-      (T) => `A ${T} tends to reveal the payoff of this kind of attention gradually, rather than in a single dramatic moment. `,
+      (T) => `${indefiniteArticle(T, true)} ${T} tends to reveal the payoff of this kind of attention gradually, rather than in a single dramatic moment. `,
       (T) => `If you are optimizing ${indefiniteArticle(T)} ${T}'s routine, this is one of the higher-leverage items to get right early. `,
       (T) => `Experienced ${T} owners often cite this as the factor they wish they had taken more seriously at the start. `,
     ],
@@ -98,7 +101,7 @@ const RULES = [
       (T) => `Fine-tuning for a specific ${T} feels like extra work; in practice it removes more friction than it adds.`,
       (T) => `The owners who do best with ${indefiniteArticle(T)} ${T} treat the animal as an individual first and a breed member second.`,
       (T) => `General ${T} advice is a starting point; the real gains come from customizing to the animal you live with.`,
-      (T) => `A ${T} responds quickly when their routine matches their temperament, habitat, and age rather than a template.`,
+      (T) => `${indefiniteArticle(T, true)} ${T} responds quickly when their routine matches their temperament, habitat, and age rather than a template.`,
       (T) => `Adapt to the ${T} sitting in your home and you will almost always outperform a by-the-book approach.`,
       (T) => `Health and behavior metrics for ${indefiniteArticle(T)} ${T} tend to trend upward whenever the plan becomes more specific.`,
       (T) => `Personalization beats protocol: the more the routine reflects this ${T}, the better the outcomes.`,

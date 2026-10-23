@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 
-function indefiniteArticle(name) {
+function indefiniteArticle(name, capitalize) {
   const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
   const head = word.toLowerCase().split(/[^a-z]/)[0];
-  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
-  if (consonantSound.has(head)) return "a";
-  return /^[aeiou]/i.test(word) ? "an" : "a";
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
 }
 /**
  * fingerprint-eliminator-v9.cjs — handles first-year-costs template where
@@ -33,7 +36,7 @@ const RULES = [
       (T) => `The first twelve months of owning ${indefiniteArticle(T)} ${T} are almost always the most expensive. Acquisition fees, initial diagnostics, core gear, and replacement costs for things the animal destroys while learning the house all stack up before the ongoing annual number stabilizes.`,
       (T) => `Year one with ${indefiniteArticle(T)} ${T} tends to run well above the later-year average. Factor in the adoption or purchase cost, a full new-pet workup at the vet, the starter kit of equipment, and the inevitable replacements for items damaged while the animal acclimates.`,
       (T) => `Initial outlays for ${indefiniteArticle(T)} ${T} compress into the first year: acquisition, a comprehensive intake exam, core supplies, and the quietly sizeable replacement costs that come with an untrained animal living in your home. Later years look cheaper by comparison.`,
-      (T) => `A ${T}'s first year on your budget typically spikes because nothing is in place yet: adoption fees, an initial vet workup, starter supplies, and a steady trickle of damaged household items during the adjustment period all hit in the same twelve months.`,
+      (T) => `${indefiniteArticle(T, true)} ${T}'s first year on your budget typically spikes because nothing is in place yet: adoption fees, an initial vet workup, starter supplies, and a steady trickle of damaged household items during the adjustment period all hit in the same twelve months.`,
       (T) => `Budgeting for ${indefiniteArticle(T)} ${T} should separate one-time setup costs from ongoing annual costs. Year one carries the acquisition fee, full intake exam, new-pet gear, and a realistic line item for replacement of items the animal wrecks while adjusting.`,
       (T) => `Plan for year one with ${indefiniteArticle(T)} ${T} to come in materially higher than later years. The one-time pressure comes from the adoption or purchase cost, the first vet visit, core supplies, and normal breakage while the animal learns the household rules.`,
       (T) => `The first-year line item for ${indefiniteArticle(T)} ${T} is inflated for predictable reasons: the animal itself, a thorough intake workup, the initial round of supplies, and a tolerance budget for items destroyed during the settling-in phase.`,

@@ -1,10 +1,13 @@
 
-function indefiniteArticle(name) {
+function indefiniteArticle(name, capitalize) {
   const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
   const head = word.toLowerCase().split(/[^a-z]/)[0];
-  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
-  if (consonantSound.has(head)) return "a";
-  return /^[aeiou]/i.test(word) ? "an" : "a";
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
 }
 // Pass 10: Break remaining 150-300-page fingerprints.
 
@@ -255,7 +258,7 @@ const SMALL_SIGNALS_V = [
   (breed) => `Attention to the small behavioural signals your ${breed} gives you beats strict protocol adherence most of the time.`,
   (breed) => `Reading the subtle feedback from your ${breed} — appetite, posture, mood — reliably outperforms rigid rule-following.`,
   (breed) => `The ${breed} will signal what's working and what isn't; those signals beat written protocol in most real situations.`,
-  (breed) => `A ${breed}'s small daily signals — eaten portions, energy level, coat — are the primary feedback loop. Use it over any rigid rule.`,
+  (breed) => `${indefiniteArticle(breed, true)} ${breed}'s small daily signals — eaten portions, energy level, coat — are the primary feedback loop. Use it over any rigid rule.`,
   (breed) => `Rigid protocol adherence loses to attentive observation of your ${breed}'s small daily signals almost every time.`,
   (breed) => `Reading your ${breed}'s small signals closely usually produces better decisions than following any single protocol exactly.`,
   (breed) => `Pay attention to the small feedback signals — appetite, energy, coat, posture — rather than to the letter of any protocol.`

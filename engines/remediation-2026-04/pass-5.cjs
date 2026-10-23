@@ -1,10 +1,13 @@
 
-function indefiniteArticle(name) {
+function indefiniteArticle(name, capitalize) {
   const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
   const head = word.toLowerCase().split(/[^a-z]/)[0];
-  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
-  if (consonantSound.has(head)) return "a";
-  return /^[aeiou]/i.test(word) ? "an" : "a";
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
 }
 // Pass 5: Eliminate remaining stock bodies/fingerprints after pass 4.
 // Targets: "Dog ownership naturally builds community", "Owners who understand this piece",
@@ -38,12 +41,12 @@ const DOG_COMMUNITY_VARIANTS = [
   (breed) => `The social surface area around ${indefiniteArticle(breed)} ${breed} tends to grow steadily — neighbours who walk at the same hour, trainers, breed-specific meet-ups, and online communities all become part of the routine.`,
   (breed) => `Most ${breed} households end up with a wider network than they started with: parks, classes, fellow owners, and a vet clinic that knows the dog by name.`,
   (breed) => `Owning ${indefiniteArticle(breed)} ${breed} has a quiet social dividend; training groups, walking loops, and local forums become part of how the household operates.`,
-  (breed) => `A ${breed}'s daily needs pull the household into routines — morning walks, training sessions, weekend meet-ups — that generate community without the owner explicitly seeking it.`,
+  (breed) => `${indefiniteArticle(breed, true)} ${breed}'s daily needs pull the household into routines — morning walks, training sessions, weekend meet-ups — that generate community without the owner explicitly seeking it.`,
   (breed) => `Life with ${indefiniteArticle(breed)} ${breed} tends to layer in connections: the regulars at the dog park, the trainer who runs recall classes, the neighbour with the compatible schedule, the groomer who remembers the coat.`,
   (breed) => `One of the under-appreciated benefits of ${breed} ownership is the social graph it creates — familiar faces at parks, training nights, and local events that give the dog (and the owner) a richer routine.`,
   (breed) => `${breed} ownership has a way of producing community almost passively: the parks, the classes, the local vet practice, and the network of fellow owners all show up on the calendar without much effort.`,
   (breed) => `Between training classes, park regulars, and breed-specific groups, ${indefiniteArticle(breed)} ${breed} tends to expand its household's social orbit in ways few owners anticipate at adoption.`,
-  (breed) => `A ${breed}'s exercise and training cadence puts the owner in repeated contact with parks, classes, clubs, and other owners — community comes as a byproduct of good care.`
+  (breed) => `${indefiniteArticle(breed, true)} ${breed}'s exercise and training cadence puts the owner in repeated contact with parks, classes, clubs, and other owners — community comes as a byproduct of good care.`
 ];
 
 const DOG_COMMUNITY_REGEX = /Dog ownership naturally builds community through parks, training classes, and local groups\./g;
@@ -100,7 +103,7 @@ const GETTING_RIGHT_OPENERS = [
   (breed) => `What works for ${indefiniteArticle(breed)} ${breed} on this dimension is consistency and informed adjustment, not a flawless template.`,
   (breed) => `For ${indefiniteArticle(breed)} ${breed}, reliable improvements come from steady, informed decisions repeated across weeks — not from a perfect one-off plan.`,
   (breed) => `Successful ${breed} care here is iterative: steady effort, attention to feedback, and willingness to adjust once data comes in.`,
-  (breed) => `A ${breed} does not need a perfect plan on this front — it needs an attentive household making repeatable, informed calls.`
+  (breed) => `${indefiniteArticle(breed, true)} ${breed} does not need a perfect plan on this front — it needs an attentive household making repeatable, informed calls.`
 ];
 
 const GETTING_RIGHT_REGEX = /Getting this right for a pet is less about perfection and more about making informed, repeatable calls\./g;
@@ -194,7 +197,7 @@ const DEEP_DISCLAIMER_POOL = [
   (breed, species) => `<strong>Please note:</strong> General ${species || 'pet'} guidance; specific ${breed} decisions need the vet who knows the animal and the market that sets the price. Affiliate links are disclosed.`,
   (breed, species) => `<strong>Heads up:</strong> This is a planning reference for ${indefiniteArticle(breed)} ${breed}; the actual plan is a function of the animal, the vet, and the local market. Some links are affiliate.`,
   (breed, species) => `<strong>Context:</strong> ${breed} care decisions should be made with professional input and local pricing data; this page helps structure that process. Affiliate links are disclosed.`,
-  (breed, species) => `<strong>Up front:</strong> A ${breed} household uses this page to plan better, not to decide medically. Numbers are averages. A minority of links are affiliate.`,
+  (breed, species) => `<strong>Up front:</strong> ${indefiniteArticle(breed, true)} ${breed} household uses this page to plan better, not to decide medically. Numbers are averages. A minority of links are affiliate.`,
   (breed, species) => `<strong>About this page:</strong> Informational briefing for ${breed} owners. Medical decisions belong with vets; pricing decisions with local providers. Some links are affiliate.`,
   (breed, species) => `<strong>Editorial note:</strong> The page supports your ${breed}'s care planning without replacing the professional who oversees it. Figures are averages; affiliate links are disclosed.`,
   (breed, species) => `<strong>Please note:</strong> This is structured planning material for ${indefiniteArticle(breed)} ${breed}, not a veterinary or financial recommendation. Numbers are regional averages; some links on this page are affiliate.`

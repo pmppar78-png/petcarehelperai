@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 
-function indefiniteArticle(name) {
+function indefiniteArticle(name, capitalize) {
   const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
   const head = word.toLowerCase().split(/[^a-z]/)[0];
-  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
-  if (consonantSound.has(head)) return "a";
-  return /^[aeiou]/i.test(word) ? "an" : "a";
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
 }
 /**
  * depth-amplify.js — ADD-ONLY content depth amplification engine.
@@ -133,7 +136,7 @@ function expandOverview(name, facts, meta, species) {
     return `
       <p>Caring for ${indefiniteArticle(name)} ${name} is a long-term commitment that extends well beyond basic husbandry. With a lifespan that can reach ${lifespan} under optimal conditions, prospective keepers should approach ${name} ownership as a multi-year or even multi-decade responsibility. This ${meta.groupLabel} has evolved in specific ecological niches, and replicating those conditions in captivity is the foundation of good care. The ${careL} care level designation reflects the fact that ${name} require consistent attention to environmental parameters—temperature gradients, humidity levels, lighting cycles, and substrate conditions all play critical roles in their physical and behavioral health.</p>
 
-      <p>What sets experienced ${name} keepers apart from beginners is their understanding that these animals communicate through subtle behavioral cues rather than obvious vocalizations or body language. Changes in coloring, feeding response, basking patterns, and activity levels all provide diagnostic information about the animal's wellbeing. A ${name} that consistently avoids its warm basking zone, for instance, may be signaling early illness rather than simple preference. Similarly, changes in defecation frequency, consistency, or timing can indicate digestive or parasitic issues long before other symptoms become apparent. Learning to read these signals is arguably the most important skill ${indefiniteArticle(name)} ${name} keeper can develop.</p>
+      <p>What sets experienced ${name} keepers apart from beginners is their understanding that these animals communicate through subtle behavioral cues rather than obvious vocalizations or body language. Changes in coloring, feeding response, basking patterns, and activity levels all provide diagnostic information about the animal's wellbeing. ${indefiniteArticle(name, true)} ${name} that consistently avoids its warm basking zone, for instance, may be signaling early illness rather than simple preference. Similarly, changes in defecation frequency, consistency, or timing can indicate digestive or parasitic issues long before other symptoms become apparent. Learning to read these signals is arguably the most important skill ${indefiniteArticle(name)} ${name} keeper can develop.</p>
 
       <p>The ${meta.habitat} environment for ${name} should be designed with both physical and psychological needs in mind. This means not only providing the correct temperature gradient and humidity range, but also incorporating appropriate hides, climbing structures, and visual barriers that allow the animal to express natural behaviors. Enrichment is not a luxury for ${name}—it is a fundamental requirement that reduces stress, promotes normal activity patterns, and supports long-term health. Keepers who design their enclosures based on the animal's natural history rather than aesthetic preferences consistently report better feeding responses, more natural behaviors, and fewer health issues over time.</p>`;
   }
@@ -192,7 +195,7 @@ function expandTemperament(name, facts, meta, species) {
 
   if (species === 'reptiles' || species === 'amphibians') {
     return `
-      <p>The behavioral patterns of ${name} in captivity reflect a complex interplay between innate responses and environmental conditions. Unlike mammals, ${meta.termPlural} communicate primarily through body posture, color changes, movement patterns, and subtle physiological signals rather than vocalizations. Learning to interpret these signals is essential for any ${name} keeper who wants to provide truly responsive care. A ${name} that flattens its body, changes color, or alters its activity pattern is communicating something specific about its comfort level, and keepers who learn this language can anticipate and prevent problems before they escalate.</p>
+      <p>The behavioral patterns of ${name} in captivity reflect a complex interplay between innate responses and environmental conditions. Unlike mammals, ${meta.termPlural} communicate primarily through body posture, color changes, movement patterns, and subtle physiological signals rather than vocalizations. Learning to interpret these signals is essential for any ${name} keeper who wants to provide truly responsive care. ${indefiniteArticle(name, true)} ${name} that flattens its body, changes color, or alters its activity pattern is communicating something specific about its comfort level, and keepers who learn this language can anticipate and prevent problems before they escalate.</p>
 
       <p>Handling and socialization with ${name} requires a fundamentally different approach than with mammalian pets. These animals do not form social bonds in the same way that dogs or cats do—their tolerance of handling is learned through consistent positive association rather than affection in the mammalian sense. The key to building a positive handling relationship with your ${name} is patience, predictability, and respect for the animal's stress thresholds. Sessions should be brief initially and gradually extended as the animal demonstrates increasing comfort. Signs of stress during handling include rapid breathing, defensive posturing, color darkening, and attempts to flee—all signals that the session should end and the animal should be returned to its secure environment.</p>
 

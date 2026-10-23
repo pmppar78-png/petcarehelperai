@@ -1,10 +1,13 @@
 
-function indefiniteArticle(name) {
+function indefiniteArticle(name, capitalize) {
   const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
   const head = word.toLowerCase().split(/[^a-z]/)[0];
-  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
-  if (consonantSound.has(head)) return "a";
-  return /^[aeiou]/i.test(word) ? "an" : "a";
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
 }
 // Pass 11: Break remaining location-page fingerprints.
 
@@ -29,7 +32,7 @@ const VISITING_V = [
 const VISITING_REGEX = /Visiting a facility in person before committing gives you a firsthand[^<.]*?\./g;
 
 const FISH_TANK_V = [
-  (breed, size) => `A ${breed} does best with at least ${size} — bigger water volumes give you more stable chemistry, extra swim space, and flexibility when you want to add tankmates.`,
+  (breed, size) => `${indefiniteArticle(breed, true)} ${breed} does best with at least ${size} — bigger water volumes give you more stable chemistry, extra swim space, and flexibility when you want to add tankmates.`,
   (breed, size) => `Plan for a minimum of ${size} for ${indefiniteArticle(breed)} ${breed}; larger tanks are easier to manage because they buffer water-chemistry swings and give the fish room to establish territory.`,
   (breed, size) => `${breed}s need a starting tank of ${size} or more. Larger systems are more forgiving on water chemistry and far easier on tankmate compatibility.`,
   (breed, size) => `Size the tank at ${size} or greater for ${indefiniteArticle(breed)} ${breed}. Bigger volumes stabilise parameters and widen your aquascaping and tankmate options.`,

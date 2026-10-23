@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 
-function indefiniteArticle(name) {
+function indefiniteArticle(name, capitalize) {
   const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
   const head = word.toLowerCase().split(/[^a-z]/)[0];
-  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
-  if (consonantSound.has(head)) return "a";
-  return /^[aeiou]/i.test(word) ? "an" : "a";
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
 }
 /**
  * fingerprint-eliminator-v5.cjs — broader catches for "a/an" variants and
@@ -53,7 +56,7 @@ const RULES = [
       (T) => `${T} cost trajectories are consistent across households: a spike in year one, a plateau through the middle, and a gradual climb as the pet enters senior years. Use the full-lifetime number as your decision input.`,
       (T) => `${T} ownership costs peak during year one, level off across the adult years, and begin climbing again as the animal ages into the senior stage. That long arc, not year one alone, is what should inform the decision to get one.`,
       (T) => `Expect higher totals during your ${T}'s first year, a relatively flat adult period, and a slow upward drift in senior-year spending. Lifetime projections are the honest number to work with.`,
-      (T) => `A ${T}'s cost pattern is front-loaded in year one, then flat, then rising again in the senior years. Any serious cost-of-ownership discussion needs the full-lifetime total on the table.`,
+      (T) => `${indefiniteArticle(T, true)} ${T}'s cost pattern is front-loaded in year one, then flat, then rising again in the senior years. Any serious cost-of-ownership discussion needs the full-lifetime total on the table.`,
     ],
   },
   {

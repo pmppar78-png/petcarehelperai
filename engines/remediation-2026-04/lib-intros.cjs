@@ -1,10 +1,13 @@
 
-function indefiniteArticle(name) {
+function indefiniteArticle(name, capitalize) {
   const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
   const head = word.toLowerCase().split(/[^a-z]/)[0];
-  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
-  if (consonantSound.has(head)) return "a";
-  return /^[aeiou]/i.test(word) ? "an" : "a";
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
 }
 // Intro variant banks and common recurring-phrase replacements
 
@@ -74,7 +77,7 @@ const GENERIC_CLOSERS = {
       `${breedTitle}s settle into a stable rhythm when the routine reflects their natural temperament and life stage rather than a one-size-fits-all template.`,
       `Routines that match the ${breedTitle}'s actual energy and social preferences produce a more cooperative animal than routines adapted from other breeds.`,
       `The ${breedTitle}'s behaviour usually tells you within a few weeks whether the routine fits — adjust the routine before trying to adjust the animal.`,
-      `A ${breedTitle} on a well-fitted routine is noticeably calmer, more responsive, and easier to handle than one on a generic schedule.`,
+      `${indefiniteArticle(breedTitle, true)} ${breedTitle} on a well-fitted routine is noticeably calmer, more responsive, and easier to handle than one on a generic schedule.`,
       `Tailor the daily rhythm to the ${breedTitle}'s observed preferences; the animal will meet you halfway when the routine reflects its actual temperament.`,
       `${breedTitle}s do their best work when the household routine acknowledges their specific energy rhythm and environmental needs.`,
       `The right routine for this ${breedTitle} is usually visible in the first few weeks of observation — build from what the animal is telling you rather than from a template.`,

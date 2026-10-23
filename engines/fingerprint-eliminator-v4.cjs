@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 
-function indefiniteArticle(name) {
+function indefiniteArticle(name, capitalize) {
   const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
   const head = word.toLowerCase().split(/[^a-z]/)[0];
-  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
-  if (consonantSound.has(head)) return "a";
-  return /^[aeiou]/i.test(word) ? "an" : "a";
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
 }
 /**
  * fingerprint-eliminator-v4.cjs
@@ -53,7 +56,7 @@ const RULES = [
       (T) => `The first twelve months of owning ${indefiniteArticle(T)} ${T} are almost always the most expensive. Acquisition fees, initial diagnostics, core gear, and replacement costs for things the animal destroys while learning the house all stack up before the ongoing annual number stabilizes.`,
       (T) => `Year one with ${indefiniteArticle(T)} ${T} tends to run well above the later-year average. Factor in the adoption or purchase cost, a full new-pet workup at the vet, the starter kit of equipment, and the inevitable replacements for items damaged while the animal acclimates.`,
       (T) => `Initial outlays for ${indefiniteArticle(T)} ${T} compress into the first year: acquisition, a comprehensive intake exam, core supplies, and the quietly sizeable replacement costs that come with an untrained animal living in your home. Later years look cheaper by comparison.`,
-      (T) => `A ${T}'s first year on your budget typically spikes because nothing is in place yet, adoption fees, an initial vet workup, starter supplies, and a steady trickle of damaged household items during the adjustment period all hit in the same twelve months.`,
+      (T) => `${indefiniteArticle(T, true)} ${T}'s first year on your budget typically spikes because nothing is in place yet, adoption fees, an initial vet workup, starter supplies, and a steady trickle of damaged household items during the adjustment period all hit in the same twelve months.`,
       (T) => `Budgeting for ${indefiniteArticle(T)} ${T} should separate one-time setup costs from ongoing annual costs. Year one carries the acquisition fee, full intake exam, new-pet gear, and a realistic line item for replacement of items the animal wrecks while adjusting.`,
       (T) => `Plan for year one with ${indefiniteArticle(T)} ${T} to come in materially higher than later years. The one-time pressure comes from the adoption or purchase cost, the first vet visit, core supplies, and normal breakage while the animal learns the household rules.`,
       (T) => `The first-year line item for ${indefiniteArticle(T)} ${T} is inflated for predictable reasons: the animal itself, a thorough intake workup, the initial round of supplies, and a tolerance budget for items destroyed during the settling-in phase.`,
@@ -77,7 +80,7 @@ const RULES = [
       (T) => `The hidden layer of ${T} ownership cost has five main parts: rental pet deposits and monthly pet rent, boarding or professional pet-sitting when you travel, at least one emergency vet visit over the animal's lifetime, behavior training if issues surface, and a steady replacement line for gear and household items. Plan for all five.`,
       (T) => `${T} owners most often miscalculate on costs that never appear in a basic care summary. Rental deposits and monthly pet rent. Boarding or sitter fees. Emergency vet visits (likely at least once in most pets' lifetimes). Behavior training for problems that emerge. Replacement of damaged gear and household items. Put each on your planning spreadsheet.`,
       (T) => `Most ${T} budget misses happen outside the obvious care totals. Pet deposits and monthly pet rent for renters. Boarding or pet-sitting during travel. Emergency vet visits that land on most pets at least once. Behavior training when issues arise. Replacement of worn equipment and household items. Each is modest alone; collectively they move the year-end number.`,
-      (T) => `A ${T}'s quietly unbudgeted costs are the ones that live outside standard care: rental pet deposits, monthly pet rent, boarding, pet-sitters, emergency vet visits, behavior training, and the replacement pipeline for chewed, scratched, or damaged items. Modeling year-five totals without them produces misleading answers.`,
+      (T) => `${indefiniteArticle(T, true)} ${T}'s quietly unbudgeted costs are the ones that live outside standard care: rental pet deposits, monthly pet rent, boarding, pet-sitters, emergency vet visits, behavior training, and the replacement pipeline for chewed, scratched, or damaged items. Modeling year-five totals without them produces misleading answers.`,
       (T) => `For ${T} owners, the surprise costs cluster in a predictable set of categories: rental-related pet fees, travel-triggered boarding or sitters, emergency vet visits that most pets need at least once, remedial behavior training, and steady replacement of damaged supplies and household items. Add a line for each before committing to a pet budget.`,
     ],
   },
@@ -90,7 +93,7 @@ const RULES = [
       (T) => `Diet drives a meaningful share of ${indefiniteArticle(T)} ${T}'s long-term health. This guide walks through the considerations that actually move the needle, protein sources, life-stage formulation, and specific nutritional details, so shopping happens on information rather than price alone.`,
       (T) => `Food quality is one of the most consequential choices in owning ${indefiniteArticle(T)} ${T}. The sections here cover what to actually look for on a label, from protein sources to life-stage-appropriate formulation, so the decision reflects your pet rather than what the store is pushing.`,
       (T) => `Nutrition does a lot of the heavy lifting in keeping ${indefiniteArticle(T)} ${T} healthy long-term. This page unpacks what matters when choosing food, protein type and quality, life-stage fit, a handful of nutritional specifics, so the choice is intentional.`,
-      (T) => `A ${T}'s long-term health is downstream of diet more than most other factors. This guide works through the practical decisions, protein sources, life-stage requirements, formulation details, to let you pick deliberately rather than default to whatever's cheapest.`,
+      (T) => `${indefiniteArticle(T, true)} ${T}'s long-term health is downstream of diet more than most other factors. This guide works through the practical decisions, protein sources, life-stage requirements, formulation details, to let you pick deliberately rather than default to whatever's cheapest.`,
       (T) => `Feeding ${indefiniteArticle(T)} ${T} well pays compounding dividends. Below, the main decision criteria: protein quality, life-stage alignment, and the handful of nutritional details that actually matter, so food selection is a considered call.`,
       (T) => `What ends up in ${indefiniteArticle(T)} ${T}'s bowl matters more than almost any other daily choice. The guide below covers the relevant factors, protein sources, life-stage needs, and a few specifics, so shopping is deliberate rather than reactive.`,
     ],

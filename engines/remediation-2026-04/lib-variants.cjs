@@ -1,10 +1,13 @@
 
-function indefiniteArticle(name) {
+function indefiniteArticle(name, capitalize) {
   const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
   const head = word.toLowerCase().split(/[^a-z]/)[0];
-  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
-  if (consonantSound.has(head)) return "a";
-  return /^[aeiou]/i.test(word) ? "an" : "a";
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
 }
 // Deterministic variant library for petcarehelperai.com remediation (April 2026)
 // Every exported function takes (breed, species, pageType) and returns HTML
@@ -119,7 +122,7 @@ function financialPlanningTimeline(breed, species, seed) {
     `<p>The financial timeline for ${indefiniteArticle(breedTitle)} ${breedTitle} is not linear, and budgeting as if it were causes most of the stress households report in the first two years. Expect a concentrated spike in the first ninety days, a slow ramp as vaccine boosters and growth-stage needs appear, and a long flat plateau through adulthood. Insurance, once selected, becomes the largest predictable line item; food and preventive medication track a steady monthly cadence; grooming frequency depends on coat and lifestyle.</p>
       <p>The unpredictable line items — emergencies, dental extractions, chronic-disease diagnostics — concentrate around ages five to nine and again past twelve. A separate emergency reserve, replenished to $1,500–$3,000 after any drawdown, keeps these events from forcing trade-offs against non-pet obligations. Review the timeline annually; a single thirty-minute reconciliation catches drift before it becomes a funding gap.</p>`,
     `<p>Break the ${breedTitle} financial plan into a one-time setup budget and a recurring monthly operating budget, and the rest becomes tractable. The setup budget is funded once, typically $1,200–$3,500, and covers acquisition, initial exam, core supplies, and the first training commitment. The operating budget is funded every month and covers food, insurance, preventive medication, and grooming. A third bucket — the reserve — absorbs every cost that does not fit neatly into the first two.</p>
-      <p>The reserve is the quiet determinant of whether owners feel financially strained. A ${breedTitle} household without a reserve ends up reacting to every $400 dental cleaning as a budget crisis; a household with a funded reserve absorbs the same event without emotional overhead. Target the reserve at two months of operating budget plus $1,000 for emergencies, and top it up whenever a drawdown occurs rather than at year end.</p>`,
+      <p>The reserve is the quiet determinant of whether owners feel financially strained. ${indefiniteArticle(breedTitle, true)} ${breedTitle} household without a reserve ends up reacting to every $400 dental cleaning as a budget crisis; a household with a funded reserve absorbs the same event without emotional overhead. Target the reserve at two months of operating budget plus $1,000 for emergencies, and top it up whenever a drawdown occurs rather than at year end.</p>`,
     `<p>A practical ${breedTitle} timeline divides into four windows, each with its own spending signature. The intake window (first 30 days) is high-variance and high-cost, because it combines fixed acquisition fees with a compressed set of vet and supply purchases. The settling window (days 31 to 180) is medium-cost and weighted toward training and follow-up vet care. The adulthood window is low-volatility and should consume the household attention on savings rather than firefighting. The senior window reintroduces volatility through diagnostic and medication spend.</p>
       <p>Run a quarterly self-audit in the adulthood window. Pull the last ninety days of ${breedTitle}-related transactions and map them to these categories: food, vet and preventive medication, insurance, grooming, and discretionary. If any category is drifting more than 20% over projection, investigate before the next quarter, because small recurring overruns compound.</p>`
   ];

@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 
-function indefiniteArticle(name) {
+function indefiniteArticle(name, capitalize) {
   const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
   const head = word.toLowerCase().split(/[^a-z]/)[0];
-  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
-  if (consonantSound.has(head)) return "a";
-  return /^[aeiou]/i.test(word) ? "an" : "a";
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
 }
 /**
  * expand-commercial-content.js
@@ -486,7 +489,7 @@ function generateFirstTimeContent(name, data, meta) {
     `Before committing to ${indefiniteArticle(name)} ${name}, honestly evaluate whether your lifestyle can accommodate this ${meta.groupLabel}'s specific needs. ${name} ${meta.termPlural} are known for their ${traits.slice(0, 3).join(', ').toLowerCase()} nature, which means they thrive with owners who can provide ${data.exerciseNeeds.toLowerCase()} exercise and consistent engagement.`,
     `Choosing ${indefiniteArticle(name)} ${name} is a decision that should be driven by lifestyle compatibility, not just affection for the ${meta.groupLabel}. With their ${traits.slice(0, 3).join(', ').toLowerCase()} temperament and ${data.exerciseNeeds.toLowerCase()} energy demands, ${name} ${meta.termPlural} need owners who can genuinely match their daily requirements.`,
     `The most important question before getting ${indefiniteArticle(name)} ${name} isn't whether you want one—it's whether your daily life realistically supports one. This ${meta.groupLabel}'s ${traits.slice(0, 2).join(' and ').toLowerCase()} personality thrives with ${data.exerciseNeeds.toLowerCase()} engagement and structured routines.`,
-    `A ${name} will shape your daily routine for the next ${data.lifespan}, so realistic self-assessment matters more than enthusiasm. This ${meta.groupLabel} brings ${traits.slice(0, 2).join(' and ').toLowerCase()} energy that requires ${data.exerciseNeeds.toLowerCase()} daily commitment from their owner.`,
+    `${indefiniteArticle(name, true)} ${name} will shape your daily routine for the next ${data.lifespan}, so realistic self-assessment matters more than enthusiasm. This ${meta.groupLabel} brings ${traits.slice(0, 2).join(' and ').toLowerCase()} energy that requires ${data.exerciseNeeds.toLowerCase()} daily commitment from their owner.`,
   ];
 
   // Care level conditional recommendation
