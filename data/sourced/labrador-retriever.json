@@ -1,0 +1,42 @@
+{
+  "slug": "labrador-retriever",
+  "retrieved": "2026-10-23",
+  "facts": [
+    {
+      "id": "akc-snapshot",
+      "source": "American Kennel Club",
+      "url": "https://www.akc.org/breeds/labrador_retriever/index.cfm",
+      "text": "AKC breed snapshot: males 22.5 to 24.5 inches and 65 to 80 pounds, females 21.5 to 23.5 inches and 55 to 70 pounds, life expectancy 11 to 13 years."
+    },
+    {
+      "id": "ukc-standard",
+      "source": "United Kennel Club",
+      "url": "https://www.ukcdogs.com/labrador-retriever",
+      "text": "UKC standard revised May 1, 2017; breed recognized by UKC in 1947. Ancestor described as the Saint Johns Retriever, a smaller Newfoundland, brought to England on fishing boats and crossed by gamekeepers with gun dogs. By the middle of the 19th century the water-resistant coat and otter tail were already apparent. Name generally accepted by the late 1880s. Originally black. First recorded yellow Labrador in a litter born in 1899. Chocolates recorded about the same time and less popular then. Medium-sized, short-coupled, square or only slightly longer than tall. Elbow to ground about half the height at the withers. Short dense water-repellent double coat, outer coat close and straight with a slight wave down the back allowed, undercoat soft and dense. Otter tail thick at the base, tapering, no longer than the hock, never feathered, carried level or slightly above when moving. Soft mouth, good nose. Drop ears, tip covers the eye when pulled forward. Nose leather black on black and yellow dogs, liver on chocolate. Eyes brown, or brown or hazel in chocolates. Colors solid black, yellow from red to pale cream, or chocolate. Small white chest spot permissible. Friendly, outgoing, eager to please. Serious fault: shyness in a mature dog. Working scars from hunting are accepted."
+    },
+    {
+      "id": "vca-health",
+      "source": "VCA Animal Hospitals",
+      "url": "https://vcahospitals.com/know-your-pet/labrador-retriever",
+      "text": "VCA: friendly sporting retriever, short dense double coat, otter tail used as a rudder, colors black, yellow, and chocolate. Weekly brushing, heavy seasonal shed, bath after swimming or mud, ear cleaning especially in dogs that swim. High energy. Retrieving instinct shows up as chewing, carrying, and mouthing, and some dogs ingest non-food items. Weight gain worsens joint disease. Orthopedic risk makes controlled growth, weight management, and exercise important. Cancer screening matters with age, including new lumps, appetite changes, and low energy. Puppy (birth to 12 months): hip dysplasia, elbow dysplasia, osteochondritis dissecans, retinal dysplasia, tricuspid valve dysplasia. Adult (1 to 8 years): exercise-induced collapse, epilepsy, atopic dermatitis, progressive retinal dysplasia, gastric dilatation-volvulus, mast cell tumors. Senior (8+ years): hemangiosarcoma, cataracts. Ideal home: active, outdoor access, moderate time alone once trained and exercised, usually good with children and other pets when socialized."
+    },
+    {
+      "id": "umn-eic",
+      "source": "University of Minnesota Canine Genetics Lab",
+      "url": "https://canine-genetics.umn.edu/canine-genetic-testing/dynamin-1-associated-exercise-induced-collapse",
+      "text": "Exercise-induced collapse is described as the most common reason for exercise or excitement collapse in young, apparently healthy Labrador Retrievers. Autosomal recessive mutation in dynamin-1 (DNM1), locus found in 2007 on chromosome 9. Dynamin-1 is expressed in the brain and spinal cord and repackages synaptic vesicles. It is required when neurotransmitter demand is high, as with intense exercise, high excitement, or possibly a rise in body temperature. In tested Labrador populations, about 30 to 40 percent carry one copy and about 3 to 13 percent have two copies. The share of affected dogs varies with why the dogs were tested, and the lab reports little difference among field, show, and pet dogs. Most dogs with two copies, more than 80 percent, have at least one collapse by 4 years of age. A few dogs with two copies never collapse if they never do that level of work. Results are reported clear (N/N), carrier (E/N), or affected (E/E)."
+    },
+    {
+      "id": "merck-eic",
+      "source": "Merck Veterinary Manual, reviewed February 2026",
+      "url": "https://www.merckvetmanual.com/musculoskeletal-system/myopathies-in-dogs-and-cats/exercise-intolerance-and-exercise-induced-collapse-in-dogs",
+      "text": "Merck (full review February 2026): a DNM1 mutation is associated with exercise intolerance and collapse in some young-adult Labrador Retrievers, and heterozygous dogs and dogs that lack the mutation can still be affected. Signs in the Labrador form include limb weakness, then ataxia and collapse, 5 to 20 minutes after intense exercise. The patellar reflex may be decreased or absent during an episode. Dogs are normal between episodes and recovery is rapid. Homozygous dogs may show signs young, with a median age of 12 months in the cited grouping. Heterozygous dogs or dogs without the mutation who still collapsed were older in that grouping, median 23 months. Diagnosis of the known mutation is by genetic test. There is no treatment. Affected dogs should avoid intense activity."
+    },
+    {
+      "id": "akc-lagotto",
+      "source": "American Kennel Club, Lagotto Romagnolo",
+      "url": "https://www.akc.org/dog-breeds/lagotto-romagnolo",
+      "text": "AKC snapshot: males 17 to 19 inches and 28.5 to 35 pounds, females 16 to 18 inches and 24 to 31 pounds, life expectancy 15 to 17 years. Curly waterproof coat, woolly curls, beard and eyebrows, curls described as behaving more like hair than fur, trimmed regularly, some coats mat, minimal shedding, ears checked weekly. Parent club established 2007. AKC stud book June 1, 2015. Sporting Group from July 1, 2015. Brought into the FSS program in 2001. Companion events from January 1, 2008. Also called the Romagna Water Dog. History on the AKC page: waterfowl retrievers in the marshlands of Ravenna at least as far back as Renaissance Italy. Lago is Italian for lake. Later known for truffle work. AKC states the Lagotto is the only purebred dog recognized as a specialized truffle searcher. Recommended parent-club tests: patella evaluation, hip evaluation, ophthalmologist exam, benign familial juvenile epilepsy DNA, Lagotto storage disease DNA. AKC also names elbow dysplasia among conditions a responsible breeder screens. Exercise note on the page: mental stimulation and physical activity, scent work, dock diving, family time. The breed can gain weight if treats pile up."
+    }
+  ]
+}

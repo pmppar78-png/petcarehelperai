@@ -1,0 +1,32 @@
+[
+  {
+    "page": "guides/rat-poison-dogs.html",
+    "original": "This Rat Poison and Rodenticide Toxicity in Dogs page is not a dose chart",
+    "replacement": "The package label names the chemical. A veterinarian or a poison hotline uses that name before any treatment.",
+    "reason": "The slotted title makes a garbled dose-chart line. The label and the hotline are what the sentence was trying to say."
+  },
+  {
+    "page": "resources/best-dog-food-sensitive-stomachs.html",
+    "original": "Disclaimer: Use this best dog food for sensitive stomachs: a complete guide resource as background, not as a substitute for professional guidance",
+    "replacement": "Carry this sensitive-stomach guide into the diet appointment so your veterinarian can apply it to this dog.",
+    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
+  },
+  {
+    "page": "resources/senior-pet-care-guide.html",
+    "original": "Disclaimer: The information here is intended to help you understand common aspects of senior pet care, not to replace the judgment of your veterinarian",
+    "replacement": "Questions drawn from these senior-care sections belong with the veterinarian who already knows this animal's history.",
+    "reason": "Robotic comma-not disclaimer."
+  },
+  {
+    "page": "breeds/birds/society-finch.html",
+    "original": "A finch seed mix is not the whole diet",
+    "replacement": "Seed alone isn't a complete diet; add greens, egg food during a molt or breeding, and a cuttlebone.",
+    "reason": "Tic sentence under the diet heading. Seed is incomplete without greens, egg food during a molt or breeding, and a cuttlebone."
+  },
+  {
+    "page": "editorial-standards.html",
+    "original": "This is a reference site, not a veterinary practice",
+    "replacement": "This site helps owners prepare questions. Examination, diagnosis, and treatment happen at a veterinary practice.",
+    "reason": "Tic restored so preservation would keep the sentence. The following sentence still says the site cannot examine, diagnose, or treat."
+  }
+]

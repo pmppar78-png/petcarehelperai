@@ -333,7 +333,10 @@
     </div>
 
     <article class="guide-content">
+
+
       <h1>Dog Breed Finder Quiz</h1>
+<p class="medical-disclaimer">This page is educational reference material for preparing questions. A licensed veterinarian examines the animal, makes the diagnosis, and sets the treatment.</p>
 
       <div class="breed-image-container">
         <img src="/hero-dogs.jpg" alt="Row of different dog breeds sitting together for a group portrait" class="breed-hero-image" loading="lazy" width="800" height="600">
@@ -523,6 +526,9 @@
           <h2 class="results-title">Your Top Breed Matches</h2>
           <div id="breedResults"></div>
           <div class="affiliate-callout">
+
+<p class="affiliate-disclosure">Affiliate links may earn a commission. <a href="/affiliate-disclosure">Affiliate disclosure</a>.</p>
+
             <h4>Prepare for Your New Dog</h4>
             <p>
               <a href="https://embarkvet.com" target="_blank" rel="sponsored noopener noreferrer">Embark DNA</a> - Test your dog's genetics |
@@ -695,7 +701,7 @@
               <div class="breed-traits">
                 ${breed.traits.map(t => `<span class="trait-tag">${t}</span>`).join('')}
               </div>
-              <p class="breed-desc">${breed.desc}</p>
+              
               <a href="/breeds/dog-breeds" class="breed-link">Learn more about ${breed.name} &rarr;</a>
             </div>
           `;

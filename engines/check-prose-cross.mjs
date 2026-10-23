@@ -1,77 +1,35 @@
 #!/usr/bin/env node
 /**
- * Fails if the same sentence longer than 12 words appears on more than
- * three breed or species profiles. Shared site chrome, quick-fact tables,
- * affiliate blocks, and decision-guide lists are not profile prose.
+ * Fails if the same sentence, or a breed-name or city-name swap of it,
+ * appears on more than three pages. Every visible sentence in the article
+ * or main is prose, including headings, links, tables, and callout boxes.
+ * Every directory is scanned. Large groups are compared, not skipped.
+ *
+ * Fragments under four words are skipped so labels such as "Home" are not
+ * treated as prose.
+ *
+ * Legal notices are shared markup, not prose. includes/affiliate-disclosure.html
+ * and includes/medical-disclaimer.html are copied onto pages inside
+ * .affiliate-disclosure and .medical-disclaimer. Those elements are removed
+ * before any sentence is compared. There is no sentence allowlist.
+ *
+ * Sentences already present on that page's origin/main copy are exempt.
+ * That baseline ratchet applies only after the origin tree is read. A
+ * missing baseline is a hard error, not a silent pass and not a flood of
+ * false failures from empty origin files.
  *
  * Usage: node engines/check-prose-cross.mjs
  */
 import fs from "fs";
 import path from "path";
+import { FROM_CURRENT, resolveOriginBase } from "./origin-base.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
-
-function profiles(dir, out = []) {
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) profiles(full, out);
-    else if (entry.name.endsWith(".html") && !entry.name.includes("-breeds")) out.push(full);
-  }
-  return out;
-}
-
-function articleText(html) {
-  const match = html.match(/<article[\s\S]*?<\/article>/i);
-  if (!match) return "";
-  let article = match[0];
-  article = article.replace(/<table[\s\S]*?<\/table>/gi, " ");
-  article = article.replace(/<div class="affiliate-callout"[\s\S]*?<\/div>/gi, " ");
-  const commercial = article.indexOf("commercial-links-section");
-  if (commercial >= 0) article = article.slice(0, commercial);
-  article = article.replace(/<(p|li|h1|h2|h3|h4|div|tr|section|a)(\s[^>]*)?>/gi, ". ");
-  article = article.replace(/<br\s*\/?>/gi, ". ");
-  return article
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&nbsp;/g, " ")
-    .replace(/&#39;|&rsquo;|&ldquo;|&rdquo;|&quot;/g, "'")
-    .replace(/&[a-z]+;/gi, " ")
-    .replace(/\s+/g, " ");
-}
-
-function sentenceKey(part) {
-  return part.trim().replace(/^[^A-Za-z]+/, "").replace(/[.!?]+$/, "").replace(/\s+/g, " ").trim();
-}
-
-function sentences(text) {
-  const kept = [];
-  for (const part of text.split(/(?<=[.!?])\s+/)) {
-    const key = sentenceKey(part);
-    if (!/^[A-Z]/.test(key)) continue;
-    const words = key.split(/\s+/).filter(Boolean);
-    if (words.length <= 12) continue;
-    kept.push(key);
-  }
-  return kept;
-}
-
-const seen = new Map();
-const files = profiles(path.join(ROOT, "breeds"));
-for (const file of files) {
-  const unique = new Set(sentences(articleText(fs.readFileSync(file, "utf8"))));
-  for (const sentence of unique) {
-    if (!seen.has(sentence)) seen.set(sentence, []);
-    seen.get(sentence).push(path.relative(ROOT, file));
-  }
-}
-
-const failures = [...seen.entries()].filter(([, list]) => list.length > 3);
+const MIN_WORDS = 4;
 
 function walkHtml(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === "node_modules" || entry.name === ".git" || entry.name === "engines") continue;
+    if (entry.name === "node_modules" || entry.name === ".git" || entry.name === "engines" || entry.name === "test-results") continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walkHtml(full, out);
     else if (entry.name.endsWith(".html")) out.push(full);
@@ -79,8 +37,171 @@ function walkHtml(dir, out = []) {
   return out;
 }
 
+function namesFrom(dir, skip) {
+  const names = new Set();
+  if (!fs.existsSync(dir)) return names;
+  const stack = [dir];
+  while (stack.length) {
+    const current = stack.pop();
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      const full = path.join(current, entry.name);
+      if (entry.isDirectory()) stack.push(full);
+      else if (entry.name.endsWith(".html") && !skip(entry.name)) {
+        const slug = entry.name.replace(/\.html$/, "").replace(/-/g, " ").toLowerCase();
+        if (slug.length > 3 && slug !== "index") names.add(slug);
+      }
+    }
+  }
+  return names;
+}
+
+function breedNames() {
+  return namesFrom(path.join(ROOT, "breeds"), (name) => name.includes("-breeds"));
+}
+
+function cityNames() {
+  return namesFrom(path.join(ROOT, "locations"), () => false);
+}
+
+const NAME_SET = new Set([...breedNames(), ...cityNames()]);
+
+function decode(text) {
+  return text
+    .replace(/&amp;/g, "&")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&#39;|&rsquo;|&ldquo;|&rdquo;|&quot;/g, "'")
+    .replace(/&[a-z]+;/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function stripLegalNotices(html) {
+  return html.replace(
+    /<(p|div|aside|section)\b[^>]*\bclass\s*=\s*(["'])[^"']*\b(?:affiliate-disclosure|medical-disclaimer)\b[^"']*\2[^>]*>[\s\S]*?<\/\1>/gi,
+    " "
+  );
+}
+
+function regionText(html) {
+  const article = html.match(/<article[\s\S]*?<\/article>/i);
+  const main = html.match(/<main[\s\S]*?<\/main>/i);
+  return stripLegalNotices((article || main || ["", ""])[0]);
+}
+
+function sentencesOf(html) {
+  const region = regionText(html);
+  if (!region) return [];
+  let text = region
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<\/(p|li|div|h[1-6]|td|th|tr|section|blockquote|figcaption|dd|dt|caption|a)>/gi, ". ")
+    .replace(/<br\s*\/?>/gi, ". ");
+  text = decode(text.replace(/<[^>]+>/g, " "));
+  const kept = [];
+  for (const part of text.split(/(?<=[.!?])\s+/)) {
+    const key = part.replace(/^[^A-Za-z]+/, "").replace(/[.!?]+$/, "").replace(/\s+/g, " ").trim();
+    if (!/^[A-Z]/.test(key)) continue;
+    if (key.split(/\s+/).length < MIN_WORDS) continue;
+    kept.push(key);
+  }
+  return kept;
+}
+
+function normalize(sentence) {
+  const words = sentence.toLowerCase().match(/[a-z0-9']+/g) || [];
+  const out = [];
+  for (let i = 0; i < words.length; ) {
+    let hit = 0;
+    for (const len of [5, 4, 3, 2, 1]) {
+      if (i + len > words.length) continue;
+      const gram = words.slice(i, i + len).join(" ");
+      if (NAME_SET.has(gram)) {
+        hit = len;
+        break;
+      }
+    }
+    if (hit) {
+      out.push("name");
+      i += hit;
+    } else {
+      out.push(words[i].replace(/\d+/g, "#"));
+      i += 1;
+    }
+  }
+  return out.join(" ");
+}
+
+function shingles(norm) {
+  const words = norm.split(" ");
+  const set = new Set();
+  const width = words.length >= 8 ? 5 : 4;
+  if (words.length < width) return set;
+  for (let i = 0; i <= words.length - width; i++) set.add(words.slice(i, i + width).join(" "));
+  return set;
+}
+
+function jaccard(a, b) {
+  if (!a.size || !b.size) return 0;
+  let inter = 0;
+  const [small, large] = a.size < b.size ? [a, b] : [b, a];
+  for (const item of small) if (large.has(item)) inter += 1;
+  return inter / (a.size + b.size - inter);
+}
+
+const files = walkHtml(ROOT);
+const groups = new Map();
+for (const file of files) {
+  const rel = path.relative(ROOT, file);
+  const html = fs.readFileSync(file, "utf8");
+  for (const sentence of new Set(sentencesOf(html))) {
+    const key = normalize(sentence);
+    if (key.split(" ").length < MIN_WORDS) continue;
+    if (!groups.has(key)) groups.set(key, { example: sentence, files: [] });
+    groups.get(key).files.push(rel);
+  }
+}
+
+// Near-duplicates: same shingles after the breed name is replaced with "name".
+const reps = [...groups.entries()].map(([key, info]) => ({
+  key,
+  info,
+  sh: shingles(key),
+  bucket: key.split(" ").slice(0, 8).join(" "),
+}));
+const byBucket = new Map();
+for (const rep of reps) {
+  if (!byBucket.has(rep.bucket)) byBucket.set(rep.bucket, []);
+  byBucket.get(rep.bucket).push(rep);
+}
+
+const parent = new Map();
+function find(key) {
+  let root = key;
+  while (parent.get(root) !== root) root = parent.get(root);
+  while (key !== root) {
+    const next = parent.get(key);
+    parent.set(key, root);
+    key = next;
+  }
+  return root;
+}
+function unite(a, b) {
+  const pa = find(a);
+  const pb = find(b);
+  if (pa !== pb) parent.set(pb, pa);
+}
+for (const rep of reps) parent.set(rep.key, rep.key);
+for (const bucket of byBucket.values()) {
+  if (bucket.length < 2) continue;
+  for (let i = 0; i < bucket.length; i++) {
+    for (let j = i + 1; j < bucket.length; j++) {
+      if (jaccard(bucket[i].sh, bucket[j].sh) >= 0.8) unite(bucket[i].key, bucket[j].key);
+    }
+  }
+}
+
 function visiblePage(html) {
-  return html
+  return stripLegalNotices(html)
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
     .replace(/<[^>]+>/g, " ")
@@ -161,11 +282,63 @@ const STOCK = [
   [/well-balanced personality that/i, "well-balanced personality that"],
 ];
 
+// Pages still copied from origin/main keep that page's sentences. A cluster
+// fails only when the sentences this branch introduced span more than three
+// pages. Sentences already on that page's origin/main copy are exempt.
+const BASE = resolveOriginBase({ root: ROOT });
+const originNormCache = new Map();
+function originNorms(rel) {
+  if (originNormCache.has(rel)) return originNormCache.get(rel);
+  const originRel = FROM_CURRENT[rel] || rel;
+  const full = path.join(BASE, originRel);
+  const set = fs.existsSync(full) ? new Set(sentencesOf(fs.readFileSync(full, "utf8")).map(normalize)) : new Set();
+  originNormCache.set(rel, set);
+  return set;
+}
+const originVisibleCache = new Map();
+function originVisible(rel) {
+  if (originVisibleCache.has(rel)) return originVisibleCache.get(rel);
+  const originRel = FROM_CURRENT[rel] || rel;
+  const full = path.join(BASE, originRel);
+  const text = fs.existsSync(full) ? visiblePage(fs.readFileSync(full, "utf8")) : "";
+  originVisibleCache.set(rel, text);
+  return text;
+}
+
+const clustered = new Map();
+for (const rep of reps) {
+  const root = find(rep.key);
+  if (!clustered.has(root)) clustered.set(root, { example: rep.info.example, files: new Set(), pairs: [] });
+  const dest = clustered.get(root);
+  dest.pairs.push(rep);
+  for (const file of rep.info.files) dest.files.add(file);
+}
+
+const failures = [];
+for (const item of clustered.values()) {
+  const list = [...item.files];
+  if (list.length <= 3) continue;
+  const introduced = new Set();
+  for (const rep of item.pairs) {
+    for (const file of rep.info.files) {
+      if (!originNorms(file).has(rep.key)) introduced.add(file);
+    }
+  }
+  // Inherited main sentences may share a bucket with one edited page.
+  // Fail only when the new sentences themselves span more than three pages.
+  if (introduced.size > 3) failures.push([item.example, [...introduced]]);
+}
+
 const stockHits = [];
 for (const file of walkHtml(ROOT)) {
+  const rel = path.relative(ROOT, file);
   const text = visiblePage(fs.readFileSync(file, "utf8"));
+  const then = originVisible(rel);
   for (const [re, label] of STOCK) {
-    if (re.test(text)) stockHits.push(`${path.relative(ROOT, file)}: ${label}`);
+    re.lastIndex = 0;
+    const now = re.test(text);
+    re.lastIndex = 0;
+    if (now && !re.test(then)) stockHits.push(`${rel}: ${label}`);
   }
 }
 
@@ -184,4 +357,4 @@ if (failures.length || stockHits.length) {
   }
   process.exit(1);
 }
-console.log(`cross-page prose check ok (${files.length} profiles, stock phrases clear)`);
+console.log(`cross-page prose check ok (${files.length} html files, stock phrases clear)`);

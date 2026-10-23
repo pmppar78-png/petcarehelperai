@@ -7,8 +7,10 @@
  * - The same heading text appears twice inside one article.
  *
  * Scans the <article> only. Header, footer, and the shared veterinary
- * notice outside the article are site chrome, not page prose. Tables,
- * scripts, and styles are not sentences. Headings are checked on their
+ * notice outside the article are site chrome, not page prose. Elements
+ * with class affiliate-disclosure or medical-disclaimer are the shared
+ * legal notices from includes/, and they are removed before sentences
+ * are counted. Tables, scripts, and styles are not sentences. Headings are checked on their
  * own so a title is not glued to the paragraph under it.
  *
  * Not part of the Netlify build. `npm run check:repeated` still exits 1
@@ -19,6 +21,11 @@
  * Cross-page sentences and repeats already on main do not fail that job,
  * and Netlify still runs only the care-line check.
  *
+ * Full mode exempts a repeat that already exists on that page's origin/main
+ * copy. That ratchet requires the baseline. A missing baseline is a hard
+ * error, not an empty origin file and not a silent pass. --new-vs reads the
+ * git ref directly and does not use the worktree.
+ *
  * Usage:
  *   node engines/check-repeated-prose.mjs
  *   node engines/check-repeated-prose.mjs --new-vs origin/main
@@ -26,6 +33,7 @@
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
+import { FROM_CURRENT, resolveOriginBase } from "./origin-base.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 7;
@@ -54,9 +62,16 @@ function decode(text) {
     .trim();
 }
 
+function stripLegalNotices(html) {
+  return html.replace(
+    /<(p|div|aside|section)\b[^>]*\bclass\s*=\s*(["'])[^"']*\b(?:affiliate-disclosure|medical-disclaimer)\b[^"']*\2[^>]*>[\s\S]*?<\/\1>/gi,
+    " "
+  );
+}
+
 function articleOf(html) {
   const match = html.match(/<article\b[\s\S]*?<\/article>/i);
-  return match ? match[0] : "";
+  return match ? stripLegalNotices(match[0]) : "";
 }
 
 function headings(article) {
@@ -194,7 +209,44 @@ for (const file of files) {
   }
 }
 
-const acrossFailures = [...across.entries()].filter(([, list]) => list.length >= MAX_PAGES);
+// Repeats that already exist on the origin/main copy of that page are
+// inherited. A failure is a repeat or a 20-page sentence this branch added.
+const BASE = resolveOriginBase({ root: ROOT });
+const originCache = new Map();
+function originFacts(rel) {
+  if (originCache.has(rel)) return originCache.get(rel);
+  const originRel = FROM_CURRENT[rel] || rel;
+  const full = path.join(BASE, originRel);
+  const empty = { sentences: new Set(), repeated: new Set(), headings: new Map() };
+  if (!fs.existsSync(full)) {
+    originCache.set(rel, empty);
+    return empty;
+  }
+  const article = articleOf(fs.readFileSync(full, "utf8"));
+  const sentenceCounts = new Map();
+  for (const sentence of sentences(article)) sentenceCounts.set(sentence, (sentenceCounts.get(sentence) || 0) + 1);
+  const headingCounts = new Map();
+  for (const heading of headings(article)) headingCounts.set(heading, (headingCounts.get(heading) || 0) + 1);
+  const facts = {
+    sentences: new Set(sentenceCounts.keys()),
+    repeated: new Set([...sentenceCounts].filter(([, count]) => count >= 2).map(([sentence]) => sentence)),
+    headings: headingCounts,
+  };
+  originCache.set(rel, facts);
+  return facts;
+}
+
+const acrossFailures = [];
+for (const [sentence, list] of across.entries()) {
+  if (list.length < MAX_PAGES) continue;
+  if (list.some((rel) => !originFacts(rel).sentences.has(sentence))) acrossFailures.push([sentence, list]);
+}
+const newWithinSentences = withinSentences.filter((row) => !originFacts(row.rel).repeated.has(row.sentence));
+const newWithinHeadings = withinHeadings.filter((row) => (originFacts(row.rel).headings.get(row.heading) || 0) < 2);
+withinSentences.length = 0;
+withinSentences.push(...newWithinSentences);
+withinHeadings.length = 0;
+withinHeadings.push(...newWithinHeadings);
 acrossFailures.sort((a, b) => b[1].length - a[1].length);
 withinSentences.sort((a, b) => b.count - a.count);
 withinHeadings.sort((a, b) => b.count - a.count);

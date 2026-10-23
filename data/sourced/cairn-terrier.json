@@ -1,0 +1,30 @@
+{
+  "slug": "cairn-terrier",
+  "retrieved": "2026-10-23",
+  "facts": [
+    {
+      "id": "akc-snapshot",
+      "source": "American Kennel Club",
+      "url": "https://www.akc.org/dog-breeds/cairn-terrier/",
+      "text": "AKC describes Cairn Terriers as happy, busy little earthdogs bred to root out foxes and other small furred prey in the rocky Scottish countryside. They are curious and alert and want a place to explore and dig. The AKC breed snapshot lists males at 10 inches and 14 pounds, females at 9.5 inches and 13 pounds, with a life expectancy of 13 to 15 years."
+    },
+    {
+      "id": "ukc-standard",
+      "source": "United Kennel Club",
+      "url": "https://www.ukcdogs.com/cairn-terrier",
+      "text": "UKC standard, revised 15 April 2007, recognized the breed in 1959. Height 11 to 12 inches, weight 14 to 16 pounds. Developed in Scotland to hunt otter, fox, and other vermin along the shoreline. Scottish, West Highland White, and Cairn terriers came from the same stock, once called Scotch terriers and later Skye terriers, often distinguished only by color in the same litter. Challenge certificates in England in 1912. Small working terrier, agile, shaggy weather-resistant double coat: profuse harsh outer coat, short soft close undercoat. Head shorter and wider than the other terriers, foxy expression, scissors bite, dark hazel eyes, black nose, small erect ears. Colors: cream, wheaten, red, gray, or nearly black, brindling accepted, dark ears, muzzle, and tail tip typical. Tail short, carried gaily. Active, game, fearless disposition."
+    },
+    {
+      "id": "akc-health-tests",
+      "source": "American Kennel Club, Terrier Group health testing requirements, national breed club list",
+      "url": "https://www.akc.org/breeder-programs/breed-health-testing-requirements/terrier-group-health-testing-requirements/",
+      "text": "Parent-club recommended tests published by AKC: patella evaluation, cardiac exam, kidney ultrasound for missing kidney (aplasia) or deformed kidney (dysplasia), ocular melanosis eye exam, globoid cell leukodystrophy DNA test, and liver screening for portosystemic vascular anomaly and microvascular dysplasia."
+    },
+    {
+      "id": "vca-health",
+      "source": "VCA Animal Hospitals, Cairn Terrier handout",
+      "url": "https://vcahospitals.com/know-your-pet/cairn-terrier",
+      "text": "VCA lists patellar luxation, craniomandibular osteopathy, globoid cell leukodystrophy, cryptorchidism, hemophilia, hydrocephalus, Legg-Calve-Perthes disease, portosystemic vascular anomaly, microvascular dysplasia, ocular melanosis, kidney aplasia or dysplasia, atopic dermatitis, mitral valve dysplasia, cataracts, glaucoma, and testicular cancer. Rough double coat, hand-stripping or professional grooming, weekly brushing, limited bathing. Strong prey drive, digging and barking when under-stimulated. Originated in Scotland to hunt vermin in rocky terrain."
+    }
+  ]
+}
