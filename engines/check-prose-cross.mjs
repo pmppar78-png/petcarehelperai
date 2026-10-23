@@ -129,6 +129,14 @@ for (const file of files) {
   for (const sentence of new Set(sentencesOf(html))) {
     const key = normalize(sentence);
     if (key.split(" ").length < MIN_WORDS) continue;
+    // The FTC line and the two site disclaimers are required to stay
+    // word-for-word. They are not the filler this check is for.
+    if (
+      key === "disclosure affiliate links may earn a commission" ||
+      key === "editorial note this care page is educational and should be used to prepare questions for a veterinarian not replace an exam" ||
+      key === "referral links when present do not influence the care guidance" ||
+      key === "we are not a veterinary practice"
+    ) continue;
     if (!groups.has(key)) groups.set(key, { example: sentence, files: [] });
     groups.get(key).files.push(rel);
   }
