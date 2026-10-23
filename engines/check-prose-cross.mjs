@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * Fails if the same sentence, or a breed-name swap of it, appears on more
- * than three pages. Tables and affiliate-callout boxes are prose. Short
- * sentences are included. Every directory is scanned.
+ * Fails if the same sentence, or a breed-name or city-name swap of it,
+ * appears on more than three pages. Every visible sentence in the article
+ * or main is prose, including headings, links, tables, and callout boxes.
+ * Every directory is scanned. Large groups are compared, not skipped.
  *
- * A sentence here is text inside p, li, td, or th (so a heading is not a
- * sentence). Fragments under five words are skipped so labels such as
- * "Home" are not treated as prose.
+ * Fragments under four words are skipped so labels such as "Home" are not
+ * treated as prose.
  *
  * Usage: node engines/check-prose-cross.mjs
  */
@@ -14,7 +14,7 @@ import fs from "fs";
 import path from "path";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
-const MIN_WORDS = 5;
+const MIN_WORDS = 4;
 
 function walkHtml(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -26,26 +26,33 @@ function walkHtml(dir, out = []) {
   return out;
 }
 
-function breedNames() {
+function namesFrom(dir, skip) {
   const names = new Set();
-  const breeds = path.join(ROOT, "breeds");
-  if (!fs.existsSync(breeds)) return names;
-  const stack = [breeds];
+  if (!fs.existsSync(dir)) return names;
+  const stack = [dir];
   while (stack.length) {
-    const dir = stack.pop();
-    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-      const full = path.join(dir, entry.name);
+    const current = stack.pop();
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      const full = path.join(current, entry.name);
       if (entry.isDirectory()) stack.push(full);
-      else if (entry.name.endsWith(".html") && !entry.name.includes("-breeds")) {
+      else if (entry.name.endsWith(".html") && !skip(entry.name)) {
         const slug = entry.name.replace(/\.html$/, "").replace(/-/g, " ").toLowerCase();
-        if (slug.length > 3) names.add(slug);
+        if (slug.length > 3 && slug !== "index") names.add(slug);
       }
     }
   }
   return names;
 }
 
-const NAME_SET = breedNames();
+function breedNames() {
+  return namesFrom(path.join(ROOT, "breeds"), (name) => name.includes("-breeds"));
+}
+
+function cityNames() {
+  return namesFrom(path.join(ROOT, "locations"), () => false);
+}
+
+const NAME_SET = new Set([...breedNames(), ...cityNames()]);
 
 function decode(text) {
   return text
@@ -66,16 +73,18 @@ function regionText(html) {
 function sentencesOf(html) {
   const region = regionText(html);
   if (!region) return [];
-  const chunks = region.match(/<(?:p|li|td|th)\b[^>]*>[\s\S]*?<\/(?:p|li|td|th)>/gi) || [];
+  let text = region
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<\/(p|li|div|h[1-6]|td|th|tr|section|blockquote|figcaption|dd|dt|caption|a)>/gi, ". ")
+    .replace(/<br\s*\/?>/gi, ". ");
+  text = decode(text.replace(/<[^>]+>/g, " "));
   const kept = [];
-  for (const chunk of chunks) {
-    const text = decode(chunk.replace(/<[^>]+>/g, " "));
-    for (const part of text.split(/(?<=[.!?])\s+/)) {
-      const key = part.replace(/^[^A-Za-z]+/, "").replace(/[.!?]+$/, "").replace(/\s+/g, " ").trim();
-      if (!/^[A-Z]/.test(key)) continue;
-      if (key.split(/\s+/).length < MIN_WORDS) continue;
-      kept.push(key);
-    }
+  for (const part of text.split(/(?<=[.!?])\s+/)) {
+    const key = part.replace(/^[^A-Za-z]+/, "").replace(/[.!?]+$/, "").replace(/\s+/g, " ").trim();
+    if (!/^[A-Z]/.test(key)) continue;
+    if (key.split(/\s+/).length < MIN_WORDS) continue;
+    kept.push(key);
   }
   return kept;
 }
@@ -129,14 +138,6 @@ for (const file of files) {
   for (const sentence of new Set(sentencesOf(html))) {
     const key = normalize(sentence);
     if (key.split(" ").length < MIN_WORDS) continue;
-    // The FTC line and the two site disclaimers are required to stay
-    // word-for-word. They are not the filler this check is for.
-    if (
-      key === "disclosure affiliate links may earn a commission" ||
-      key === "editorial note this care page is educational and should be used to prepare questions for a veterinarian not replace an exam" ||
-      key === "referral links when present do not influence the care guidance" ||
-      key === "we are not a veterinary practice"
-    ) continue;
     if (!groups.has(key)) groups.set(key, { example: sentence, files: [] });
     groups.get(key).files.push(rel);
   }
@@ -173,7 +174,7 @@ function unite(a, b) {
 }
 for (const rep of reps) parent.set(rep.key, rep.key);
 for (const bucket of byBucket.values()) {
-  if (bucket.length < 2 || bucket.length > 250) continue;
+  if (bucket.length < 2) continue;
   for (let i = 0; i < bucket.length; i++) {
     for (let j = i + 1; j < bucket.length; j++) {
       if (jaccard(bucket[i].sh, bucket[j].sh) >= 0.8) unite(bucket[i].key, bucket[j].key);
