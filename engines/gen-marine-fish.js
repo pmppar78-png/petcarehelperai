@@ -1,4 +1,12 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -63,7 +71,7 @@ function makePage(s) {
 
   const faq = [
     { q: `Is the ${name} reef safe?`, a: `The ${name} is rated: ${reefSafe}. Reef compatibility can vary between individual specimens. Monitor closely when first introducing to a reef tank, and be prepared to relocate the fish if it develops problematic behaviors like coral nipping. Providing adequate feeding can reduce the likelihood of fish picking at corals.` },
-    { q: `How big of a tank does a ${name} need?`, a: `The ${name} requires a minimum tank size of ${tankMin}. Larger tanks provide more stable water parameters and reduce territorial aggression. For saltwater aquariums, stability is more important than hitting exact parameters, and larger water volumes resist parameter swings more effectively. Consider future fish additions when sizing your tank.` },
+    { q: `How big of a tank does ${indefiniteArticle(name)} ${name} need?`, a: `The ${name} requires a minimum tank size of ${tankMin}. Larger tanks provide more stable water parameters and reduce territorial aggression. For saltwater aquariums, stability is more important than hitting exact parameters, and larger water volumes resist parameter swings more effectively. Consider future fish additions when sizing your tank.` },
     { q: `What do ${name}s eat?`, a: `${name}s are classified as ${diet.split(':')[0].toLowerCase()}. Feed ${diet.split(':')[1] || 'a variety of prepared and frozen marine foods'}. Feed 2-3 times daily in small amounts that can be consumed within 2-3 minutes. Variety is essential for complete nutrition and maintaining vibrant coloration. Consider using an automatic feeder for consistency.` },
     { q: `Are ${name}s good for beginners?`, a: `${name}s are rated ${care.toLowerCase()} care level. ${care === 'Beginner' ? 'They are among the best fish for newcomers to saltwater aquariums, offering hardiness and forgiving nature while you learn the intricacies of marine water chemistry.' : care === 'Intermediate' ? 'They require some experience with saltwater aquariums and stable, established systems. Understanding water chemistry, proper acclimation, and disease prevention is important.' : 'They are recommended for experienced marine aquarists only. Advanced understanding of water chemistry, disease treatment, and specialized feeding requirements is essential for success with this species.'}` },
     { q: `How long do ${name}s live?`, a: `${name}s live ${lifespan} in captivity with proper care. Achieving maximum lifespan requires excellent water quality (ammonia and nitrite 0ppm, nitrate under 10ppm), stable salinity of ${salinity}, appropriate tank size, and a varied nutritious diet. Stress reduction through proper tankmate selection and adequate hiding spaces also contributes significantly to longevity.` },
@@ -156,7 +164,7 @@ function makePage(s) {
       </div>
 
       <h2>${name} Overview</h2>
-      <p>The ${name} is a ${size.toLowerCase()} saltwater species originating from the ${origin}. Known for being ${temperament.toLowerCase()}, this species is rated ${care.toLowerCase()} care level, making it ${care === 'Beginner' ? 'an excellent choice for aquarists new to saltwater keeping' : care === 'Intermediate' ? 'well-suited for hobbyists with some marine aquarium experience' : 'appropriate only for experienced marine aquarists with well-established systems'}. With a lifespan of ${lifespan}, this is a rewarding species that can be enjoyed for many years with proper care.</p>
+      <p>The ${name} is ${indefiniteArticle(size.toLowerCase())} ${size.toLowerCase()} saltwater species originating from the ${origin}. Known for being ${temperament.toLowerCase()}, this species is rated ${care.toLowerCase()} care level, making it ${care === 'Beginner' ? 'an excellent choice for aquarists new to saltwater keeping' : care === 'Intermediate' ? 'well-suited for hobbyists with some marine aquarium experience' : 'appropriate only for experienced marine aquarists with well-established systems'}. With a lifespan of ${lifespan}, this is a rewarding species that can be enjoyed for many years with proper care.</p>
 
       <p>${unique}</p>
 

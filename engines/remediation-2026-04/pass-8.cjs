@@ -1,3 +1,11 @@
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 // Pass 8: Target top remaining recurring paragraph fingerprints on vs-* and other comparison pages.
 // These span 200-1400 pages each.
 
@@ -112,7 +120,7 @@ const VET_CONVERSATION_V = [
   (breed) => `Running the specifics past your vet turns this page's generalities into a concrete ${breed} care plan.`,
   (breed) => `The vet's role is to adapt general ${breed} guidance into something calibrated to your animal's actual profile.`,
   (breed) => `A five-minute vet conversation is how generic ${breed} guidance becomes a plan fitted to your specific animal.`,
-  (breed) => `Talk the specifics through with your vet so the generalities here become a ${breed} plan calibrated to your animal's current status.`,
+  (breed) => `Talk the specifics through with your vet so the generalities here become ${indefiniteArticle(breed)} ${breed} plan calibrated to your animal's current status.`,
   (breed) => `Your vet's input converts these pages of ${breed} guidance into a plan that reflects your animal's weight, age, and health history.`,
   (breed) => `A brief conversation with your veterinarian translates this general ${breed} framework into a plan that fits the individual animal.`
 ];

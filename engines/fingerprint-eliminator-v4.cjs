@@ -1,4 +1,12 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 /**
  * fingerprint-eliminator-v4.cjs
  *
@@ -23,7 +31,7 @@ const RULES = [
     variants: [
       (T) => `Take this as a general baseline, your vet can narrow it down to what suits your ${T}'s actual health picture and daily habits.`,
       (T) => `Use this as orientation; your veterinarian can sharpen the specifics based on what they see in your ${T}.`,
-      (T) => `This is a reasonable default, the final plan for a ${T} should come from a veterinarian with the full chart in front of them.`,
+      (T) => `This is a reasonable default, the final plan for ${indefiniteArticle(T)} ${T} should come from a veterinarian with the full chart in front of them.`,
       (T) => `Treat these as opening assumptions; the refinement for your particular ${T} happens in the exam room.`,
       (T) => `General guidance like this gives you the right vocabulary for the vet visit where the real personalization happens for your ${T}.`,
       (T) => `Think of these as the first pass, a veterinarian familiar with your ${T}'s lifestyle will correct what actually needs correcting.`,
@@ -33,7 +41,7 @@ const RULES = [
       (T) => `The usable version of this plan is the one your veterinarian writes after examining your ${T} in person.`,
       (T) => `Consider this scaffolding; final recommendations for your ${T} depend on a vet's read of weight, age, and baseline health.`,
       (T) => `Reading this is step one, booking a routine vet visit to tune it to your ${T}'s lifestyle is step two.`,
-      (T) => `Published guidance can describe a ${T} in general, only your veterinarian can translate that to the specific animal in your home.`,
+      (T) => `Published guidance can describe ${indefiniteArticle(T)} ${T} in general, only your veterinarian can translate that to the specific animal in your home.`,
       (T) => `A veterinarian who knows your ${T} will treat recommendations like these as a starting budget and adjust each line as needed.`,
     ],
   },
@@ -41,18 +49,18 @@ const RULES = [
     id: 'first-year-costs-higher',
     regex: /First-year costs for a ([A-Za-z][A-Za-z0-9 '\u2019\-]{1,60}?) run higher than ongoing annual costs because everything is new\. Factor in the purchase or adoption fee, initial veterinary workup, core supplies, and the inevitable replacement of items damaged during the adjustment period\.?/g,
     variants: [
-      (T) => `Expect year one with a ${T} to cost meaningfully more than the steady-state years that follow. The one-time items include the purchase or adoption fee, the intake vet visit, starter supplies, and a predictable amount of chewed, scratched, or broken household objects during the settling-in period.`,
-      (T) => `The first twelve months of owning a ${T} are almost always the most expensive. Acquisition fees, initial diagnostics, core gear, and replacement costs for things the animal destroys while learning the house all stack up before the ongoing annual number stabilizes.`,
-      (T) => `Year one with a ${T} tends to run well above the later-year average. Factor in the adoption or purchase cost, a full new-pet workup at the vet, the starter kit of equipment, and the inevitable replacements for items damaged while the animal acclimates.`,
-      (T) => `Initial outlays for a ${T} compress into the first year: acquisition, a comprehensive intake exam, core supplies, and the quietly sizeable replacement costs that come with an untrained animal living in your home. Later years look cheaper by comparison.`,
+      (T) => `Expect year one with ${indefiniteArticle(T)} ${T} to cost meaningfully more than the steady-state years that follow. The one-time items include the purchase or adoption fee, the intake vet visit, starter supplies, and a predictable amount of chewed, scratched, or broken household objects during the settling-in period.`,
+      (T) => `The first twelve months of owning ${indefiniteArticle(T)} ${T} are almost always the most expensive. Acquisition fees, initial diagnostics, core gear, and replacement costs for things the animal destroys while learning the house all stack up before the ongoing annual number stabilizes.`,
+      (T) => `Year one with ${indefiniteArticle(T)} ${T} tends to run well above the later-year average. Factor in the adoption or purchase cost, a full new-pet workup at the vet, the starter kit of equipment, and the inevitable replacements for items damaged while the animal acclimates.`,
+      (T) => `Initial outlays for ${indefiniteArticle(T)} ${T} compress into the first year: acquisition, a comprehensive intake exam, core supplies, and the quietly sizeable replacement costs that come with an untrained animal living in your home. Later years look cheaper by comparison.`,
       (T) => `A ${T}'s first year on your budget typically spikes because nothing is in place yet, adoption fees, an initial vet workup, starter supplies, and a steady trickle of damaged household items during the adjustment period all hit in the same twelve months.`,
-      (T) => `Budgeting for a ${T} should separate one-time setup costs from ongoing annual costs. Year one carries the acquisition fee, full intake exam, new-pet gear, and a realistic line item for replacement of items the animal wrecks while adjusting.`,
-      (T) => `Plan for year one with a ${T} to come in materially higher than later years. The one-time pressure comes from the adoption or purchase cost, the first vet visit, core supplies, and normal breakage while the animal learns the household rules.`,
-      (T) => `The first-year line item for a ${T} is inflated for predictable reasons: the animal itself, a thorough intake workup, the initial round of supplies, and a tolerance budget for items destroyed during the settling-in phase.`,
-      (T) => `Expect year one with a ${T} to be front-loaded, acquisition fees, initial veterinary diagnostics, a complete set of starter supplies, and a realistic allowance for replacement items during the animal's first months at home.`,
-      (T) => `When projecting what a ${T} will actually cost, keep year one in its own column. It carries the acquisition cost, the new-pet vet visit, all of the first-time supplies, and a buffer for the items that will not survive the adjustment period.`,
-      (T) => `Setup year for a ${T} always costs more than the years that follow. The one-time pressure points are acquisition, initial vet work, starter supplies, and ordinary household replacement costs as the animal adapts.`,
-      (T) => `A first-year budget for a ${T} is front-heavy: adoption or purchase fee, a full intake exam, core gear, and realistic allowances for furniture, shoes, or equipment damaged while the animal learns the house.`,
+      (T) => `Budgeting for ${indefiniteArticle(T)} ${T} should separate one-time setup costs from ongoing annual costs. Year one carries the acquisition fee, full intake exam, new-pet gear, and a realistic line item for replacement of items the animal wrecks while adjusting.`,
+      (T) => `Plan for year one with ${indefiniteArticle(T)} ${T} to come in materially higher than later years. The one-time pressure comes from the adoption or purchase cost, the first vet visit, core supplies, and normal breakage while the animal learns the household rules.`,
+      (T) => `The first-year line item for ${indefiniteArticle(T)} ${T} is inflated for predictable reasons: the animal itself, a thorough intake workup, the initial round of supplies, and a tolerance budget for items destroyed during the settling-in phase.`,
+      (T) => `Expect year one with ${indefiniteArticle(T)} ${T} to be front-loaded, acquisition fees, initial veterinary diagnostics, a complete set of starter supplies, and a realistic allowance for replacement items during the animal's first months at home.`,
+      (T) => `When projecting what ${indefiniteArticle(T)} ${T} will actually cost, keep year one in its own column. It carries the acquisition cost, the new-pet vet visit, all of the first-time supplies, and a buffer for the items that will not survive the adjustment period.`,
+      (T) => `Setup year for ${indefiniteArticle(T)} ${T} always costs more than the years that follow. The one-time pressure points are acquisition, initial vet work, starter supplies, and ordinary household replacement costs as the animal adapts.`,
+      (T) => `A first-year budget for ${indefiniteArticle(T)} ${T} is front-heavy: adoption or purchase fee, a full intake exam, core gear, and realistic allowances for furniture, shoes, or equipment damaged while the animal learns the house.`,
     ],
   },
   {
@@ -63,7 +71,7 @@ const RULES = [
       (T) => `What most ${T} owners budget poorly for is everything the standard care line items leave out: landlord deposits and monthly pet rent, boarding or pet-sitting when travel happens, emergency vet visits that tend to hit once per lifetime, behavior training for the problems you did not predict, and the steady turnover of chewed gear and household casualties. Build a cushion for these specifically.`,
       (T) => `The line items that blindside ${T} owners are the ones outside the standard care budget. Pet deposits and monthly pet rent for renters can be several hundred dollars a year on their own. Boarding or pet-sitting for any trip. At least one emergency vet visit in most pets' lifetimes. Behavior training when household issues appear. Replacement of supplies and items the animal damages. Budget them explicitly.`,
       (T) => `Among ${T} owners, the most common budget surprise is the category that sits outside the obvious care costs. Pet deposits for rentals. Ongoing pet rent. Boarding during any travel. Emergency vet visits, which a majority of pets will require at some point. Behavior training if problems surface. Replacement of damaged household items. The headline cost of ownership almost never includes them.`,
-      (T) => `Typical "cost of ownership" figures for a ${T} miss several real expenses. Renters face pet deposits plus monthly pet rent. Travel triggers boarding or sitter fees. Emergency vet care becomes near-certain over a pet's lifetime. Behavior training may be required for specific issues. Household items get damaged and need replacing. These items compound quietly.`,
+      (T) => `Typical "cost of ownership" figures for ${indefiniteArticle(T)} ${T} miss several real expenses. Renters face pet deposits plus monthly pet rent. Travel triggers boarding or sitter fees. Emergency vet care becomes near-certain over a pet's lifetime. Behavior training may be required for specific issues. Household items get damaged and need replacing. These items compound quietly.`,
       (T) => `Most ${T} cost surprises come from outside the standard care list. Rental pet deposits and monthly pet rent. Boarding or pet-sitting every time you travel. Emergency vet visits that, statistically, happen at least once. Professional behavior training if behavioral issues arise. Ongoing replacement of worn or damaged supplies. These add up on their own schedule.`,
       (T) => `Budget shocks for ${T} owners tend to come from what sits outside the usual care column. Pet deposits and pet rent for renters. Boarding or sitters whenever you leave town. Emergency vet bills, statistically likely at some point. Behavior training when problems emerge. Replacement of worn supplies and damaged items. Factor them in early, not after they land.`,
       (T) => `The hidden layer of ${T} ownership cost has five main parts: rental pet deposits and monthly pet rent, boarding or professional pet-sitting when you travel, at least one emergency vet visit over the animal's lifetime, behavior training if issues surface, and a steady replacement line for gear and household items. Plan for all five.`,
@@ -77,28 +85,28 @@ const RULES = [
     id: 'nutrition-biggest-factors',
     regex: /Nutrition is one of the biggest factors in your ([A-Za-z][A-Za-z0-9 '\u2019\-]{1,60}?)'s long-term health\. This guide breaks down the key considerations\s*[\u2014\u2013\-]\s*from protein sources to life-stage needs\s*[\u2014\u2013\-]\s*so you can choose wisely rather than just grabbing whatever is on sale\.?/g,
     variants: [
-      (T) => `Diet is one of the highest-leverage decisions you make for a ${T}. This page covers what actually matters, protein quality, life-stage fit, a few specific considerations, so the choice is deliberate rather than whatever happens to be marked down at the store.`,
-      (T) => `What a ${T} eats shapes health outcomes more than most owners appreciate. The sections below cover protein sources, life-stage requirements, and common pitfalls, enough to make food selection a considered decision instead of a sale-driven one.`,
-      (T) => `Diet drives a meaningful share of a ${T}'s long-term health. This guide walks through the considerations that actually move the needle, protein sources, life-stage formulation, and specific nutritional details, so shopping happens on information rather than price alone.`,
-      (T) => `Food quality is one of the most consequential choices in owning a ${T}. The sections here cover what to actually look for on a label, from protein sources to life-stage-appropriate formulation, so the decision reflects your pet rather than what the store is pushing.`,
-      (T) => `Nutrition does a lot of the heavy lifting in keeping a ${T} healthy long-term. This page unpacks what matters when choosing food, protein type and quality, life-stage fit, a handful of nutritional specifics, so the choice is intentional.`,
+      (T) => `Diet is one of the highest-leverage decisions you make for ${indefiniteArticle(T)} ${T}. This page covers what actually matters, protein quality, life-stage fit, a few specific considerations, so the choice is deliberate rather than whatever happens to be marked down at the store.`,
+      (T) => `What ${indefiniteArticle(T)} ${T} eats shapes health outcomes more than most owners appreciate. The sections below cover protein sources, life-stage requirements, and common pitfalls, enough to make food selection a considered decision instead of a sale-driven one.`,
+      (T) => `Diet drives a meaningful share of ${indefiniteArticle(T)} ${T}'s long-term health. This guide walks through the considerations that actually move the needle, protein sources, life-stage formulation, and specific nutritional details, so shopping happens on information rather than price alone.`,
+      (T) => `Food quality is one of the most consequential choices in owning ${indefiniteArticle(T)} ${T}. The sections here cover what to actually look for on a label, from protein sources to life-stage-appropriate formulation, so the decision reflects your pet rather than what the store is pushing.`,
+      (T) => `Nutrition does a lot of the heavy lifting in keeping ${indefiniteArticle(T)} ${T} healthy long-term. This page unpacks what matters when choosing food, protein type and quality, life-stage fit, a handful of nutritional specifics, so the choice is intentional.`,
       (T) => `A ${T}'s long-term health is downstream of diet more than most other factors. This guide works through the practical decisions, protein sources, life-stage requirements, formulation details, to let you pick deliberately rather than default to whatever's cheapest.`,
-      (T) => `Feeding a ${T} well pays compounding dividends. Below, the main decision criteria: protein quality, life-stage alignment, and the handful of nutritional details that actually matter, so food selection is a considered call.`,
-      (T) => `What ends up in a ${T}'s bowl matters more than almost any other daily choice. The guide below covers the relevant factors, protein sources, life-stage needs, and a few specifics, so shopping is deliberate rather than reactive.`,
+      (T) => `Feeding ${indefiniteArticle(T)} ${T} well pays compounding dividends. Below, the main decision criteria: protein quality, life-stage alignment, and the handful of nutritional details that actually matter, so food selection is a considered call.`,
+      (T) => `What ends up in ${indefiniteArticle(T)} ${T}'s bowl matters more than almost any other daily choice. The guide below covers the relevant factors, protein sources, life-stage needs, and a few specifics, so shopping is deliberate rather than reactive.`,
     ],
   },
   {
     id: 'nutritional-profile-breakdown',
     regex: /Dietary planning for ([A-Za-z][A-Za-z0-9 '\u2019\-]{1,60}?) starts with understanding this breed's ([^<]+) physique and ([^<]+) character\.?/g,
     variants: [
-      (T, P1, P2) => `Any realistic feeding plan for a ${T} has to start with how this breed is actually built (${P1}) and how it typically behaves (${P2}).`,
-      (T, P1, P2) => `Feeding a ${T} well begins with respecting the breed's ${P1} frame and ${P2} temperament, both of which shape what the diet needs to support.`,
-      (T, P1, P2) => `Start any diet conversation about a ${T} from the physical baseline (${P1}) and behavioral baseline (${P2}); nutrition choices flow from there.`,
-      (T, P1, P2) => `A useful diet plan for a ${T} works backward from the breed's ${P1} build and ${P2} personality, both drive caloric needs and ingredient priorities.`,
-      (T, P1, P2) => `Understanding the ${T} as a ${P1}-framed, ${P2} breed is the right starting point for any feeding decision, size and temperament do most of the work in setting nutritional targets.`,
-      (T, P1, P2) => `Good ${T} nutrition planning opens with the structural facts: a ${P1} body and a ${P2} disposition both influence what the food has to provide.`,
-      (T, P1, P2) => `Feeding planning for a ${T} rests on two easy-to-observe inputs, the ${P1} build and the ${P2} behavioral profile, both translate directly into calorie and macronutrient choices.`,
-      (T, P1, P2) => `Begin any ${T} feeding conversation with the basics of the breed: a ${P1} physique and a ${P2} character. Those two facts shape almost every diet decision that follows.`,
+      (T, P1, P2) => `Any realistic feeding plan for ${indefiniteArticle(T)} ${T} has to start with how this breed is actually built (${P1}) and how it typically behaves (${P2}).`,
+      (T, P1, P2) => `Feeding ${indefiniteArticle(T)} ${T} well begins with respecting the breed's ${P1} frame and ${P2} temperament, both of which shape what the diet needs to support.`,
+      (T, P1, P2) => `Start any diet conversation about ${indefiniteArticle(T)} ${T} from the physical baseline (${P1}) and behavioral baseline (${P2}); nutrition choices flow from there.`,
+      (T, P1, P2) => `A useful diet plan for ${indefiniteArticle(T)} ${T} works backward from the breed's ${P1} build and ${P2} personality, both drive caloric needs and ingredient priorities.`,
+      (T, P1, P2) => `Understanding the ${T} as ${indefiniteArticle(P1)} ${P1}-framed, ${P2} breed is the right starting point for any feeding decision, size and temperament do most of the work in setting nutritional targets.`,
+      (T, P1, P2) => `Good ${T} nutrition planning opens with the structural facts: ${indefiniteArticle(P1)} ${P1} body and ${indefiniteArticle(P2)} ${P2} disposition both influence what the food has to provide.`,
+      (T, P1, P2) => `Feeding planning for ${indefiniteArticle(T)} ${T} rests on two easy-to-observe inputs, the ${P1} build and the ${P2} behavioral profile, both translate directly into calorie and macronutrient choices.`,
+      (T, P1, P2) => `Begin any ${T} feeding conversation with the basics of the breed: ${indefiniteArticle(P1)} ${P1} physique and ${indefiniteArticle(P2)} ${P2} character. Those two facts shape almost every diet decision that follows.`,
     ],
   },
 ];

@@ -1,4 +1,12 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 /**
  * SEO Traffic Magnet Upgrader
  *
@@ -291,7 +299,7 @@ function upgradeBreedPage(filePath, html) {
   );
   if (aheadRe.test(out)) {
     const alt = [
-      `<p>The most useful health habit a ${name} owner can build is a relationship with one specific veterinary practice that knows your dog. Continuity across visits catches subtle weight, dental, and organ changes that a one-off exam cannot.</p>`,
+      `<p>The most useful health habit ${indefiniteArticle(name)} ${name} owner can build is a relationship with one specific veterinary practice that knows your dog. Continuity across visits catches subtle weight, dental, and organ changes that a one-off exam cannot.</p>`,
       `<p>Preventive care pays off most when the same clinic sees your ${name} year after year. Trends in weight, bloodwork, and behavior only make sense when someone has a baseline to compare against.</p>`,
       `<p>A reliable baseline is what makes ${name} wellness care actually work. Consistent record-keeping — at home and at your vet — turns small, boring data points into early warnings that save money and discomfort later.</p>`,
     ];
@@ -383,7 +391,7 @@ function guideTemplates(type, subject, subject2) {
       desc:  `Is ${a} ${S} a good family pet? Temperament around kids, ages it handles best, household rules that actually work, and the warning signs to take seriously.`,
     },
     apartment: {
-      title: `Is a ${S} Apartment-Friendly? Space, Noise & an Honest Owner Reality Check`,
+      title: `Is ${indefiniteArticle(S)} ${S} Apartment-Friendly? Space, Noise & an Honest Owner Reality Check`,
       desc:  `${S} in an apartment: real space needs, noise profile, exercise minimums, neighbor-proof training tips, and whether this breed genuinely fits small-space living.`,
     },
     shedding: {
@@ -411,7 +419,7 @@ function guideTemplates(type, subject, subject2) {
       desc:  `The conditions ${S}s are prone to, how each one shows up early, what typical treatment costs look like, and which screenings give the best return.`,
     },
     adopt: {
-      title: `How to Adopt a ${S}: Costs, Red Flags & What to Know First`,
+      title: `How to Adopt ${indefiniteArticle(S)} ${S}: Costs, Red Flags & What to Know First`,
       desc:  `Adopting ${a} ${S}: rescue vs. shelter vs. breeder, adoption fees, questions to ask, red flags at a facility, and how to prepare your home for a smooth first month.`,
     },
     vs: {
@@ -524,7 +532,7 @@ function upgradeCommercialPage(filePath, html) {
       desc:  `What ${breed} owners actually pay for vet care, screenings, and breed-prone conditions — from routine exams to the ER visits most owners don't budget for.`,
     },
     'first-time-owners': {
-      title: `Is a ${breed} Good for First-Time Owners? (${YEAR}) — Honest Answer`,
+      title: `Is ${indefiniteArticle(breed)} ${breed} Good for First-Time Owners? (${YEAR}) — Honest Answer`,
       desc:  `Whether ${article(breed)} ${breed} is a realistic ${copy.first}: care difficulty, time commitment, household fit, and the traits that trip up new owners.`,
     },
     'best-habitat-size': {

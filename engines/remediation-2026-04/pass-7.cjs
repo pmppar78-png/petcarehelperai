@@ -1,3 +1,11 @@
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 // Pass 7: catch species-specific ({species} not "pet") variants missed by pass 6, plus
 // training regex with parentheses in trait.
 
@@ -28,28 +36,28 @@ const OWNERS_V = [
 ];
 
 const GETTING_V = [
-  (breed) => `Handling this well for a ${breed} is a matter of informed, repeatable decisions rather than a perfect plan.`,
-  (breed) => `Getting this right for a ${breed} is less about any specific action and more about the household doing the same informed thing every week.`,
+  (breed) => `Handling this well for ${indefiniteArticle(breed)} ${breed} is a matter of informed, repeatable decisions rather than a perfect plan.`,
+  (breed) => `Getting this right for ${indefiniteArticle(breed)} ${breed} is less about any specific action and more about the household doing the same informed thing every week.`,
   (breed) => `Quality ${breed} care here is produced by repeatable, informed choices rather than any single brilliant call.`,
-  (breed) => `With a ${breed}, informed repetition beats perfection — the households that quietly repeat sensible choices outperform the ones chasing ideal ones.`,
-  (breed) => `For a ${breed}, the useful goal is a set of repeatable, informed decisions, not a single perfect plan.`,
-  (breed) => `What makes the difference for a ${breed} here is the steady repetition of good-enough choices rather than occasional perfect ones.`,
+  (breed) => `With ${indefiniteArticle(breed)} ${breed}, informed repetition beats perfection — the households that quietly repeat sensible choices outperform the ones chasing ideal ones.`,
+  (breed) => `For ${indefiniteArticle(breed)} ${breed}, the useful goal is a set of repeatable, informed decisions, not a single perfect plan.`,
+  (breed) => `What makes the difference for ${indefiniteArticle(breed)} ${breed} here is the steady repetition of good-enough choices rather than occasional perfect ones.`,
   (breed) => `A ${breed} benefits most from repeatable, thoughtful decisions that keep being made week after week.`,
   (breed) => `Strong ${breed} care on this dimension is made of small, repeatable decisions rather than any heroic one-off effort.`,
-  (breed) => `For a ${breed}, informed repetition across months tends to outperform any perfect one-off effort.`,
+  (breed) => `For ${indefiniteArticle(breed)} ${breed}, informed repetition across months tends to outperform any perfect one-off effort.`,
   (breed) => `The ${breed} households that do well on this dimension are the ones quietly repeating informed choices, not chasing perfection.`
 ];
 
 const TRAINING_V = [
-  (breed, trait, tend) => `Working with a ${breed}'s ${trait} trainability profile — rather than against it — is what makes training sessions land, particularly given the natural ${tend} tendencies.`,
+  (breed, trait, tend) => `Working with ${indefiniteArticle(breed)} ${breed}'s ${trait} trainability profile — rather than against it — is what makes training sessions land, particularly given the natural ${tend} tendencies.`,
   (breed, trait, tend) => `${breed}s respond best when the training plan matches their ${trait} profile and acknowledges their natural ${tend} habits.`,
-  (breed, trait, tend) => `Training outcomes for a ${breed} improve materially when the plan is calibrated to the ${trait} profile and the natural ${tend} tendencies.`,
+  (breed, trait, tend) => `Training outcomes for ${indefiniteArticle(breed)} ${breed} improve materially when the plan is calibrated to the ${trait} profile and the natural ${tend} tendencies.`,
   (breed, trait, tend) => `A ${breed}'s ${trait} trainability and natural ${tend} tendencies set the frame — good training works with that frame, not around it.`,
-  (breed, trait, tend) => `Training effort for a ${breed} pays off most when it respects the ${trait} trainability profile and leans into the natural ${tend} habits.`,
+  (breed, trait, tend) => `Training effort for ${indefiniteArticle(breed)} ${breed} pays off most when it respects the ${trait} trainability profile and leans into the natural ${tend} habits.`,
   (breed, trait, tend) => `Effective ${breed} training acknowledges the ${trait} trainability profile and the natural ${tend} tendencies at the same time.`,
-  (breed, trait, tend) => `For a ${breed}, well-designed training respects the ${trait} trainability baseline and works with the natural ${tend} pattern.`,
+  (breed, trait, tend) => `For ${indefiniteArticle(breed)} ${breed}, well-designed training respects the ${trait} trainability baseline and works with the natural ${tend} pattern.`,
   (breed, trait, tend) => `${breed} training lands when the session design maps to the ${trait} profile and the natural ${tend} instincts.`,
-  (breed, trait, tend) => `Building a training routine around a ${breed}'s ${trait} profile and its natural ${tend} tendencies tends to produce steadier outcomes than generic training advice.`,
+  (breed, trait, tend) => `Building a training routine around ${indefiniteArticle(breed)} ${breed}'s ${trait} profile and its natural ${tend} tendencies tends to produce steadier outcomes than generic training advice.`,
   (breed, trait, tend) => `Good ${breed} training starts from the ${trait} trainability baseline and accepts the natural ${tend} tendencies rather than fighting them.`
 ];
 

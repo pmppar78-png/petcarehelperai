@@ -1,4 +1,12 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 /*
  * Indexing-Quality Pass (2026-04-27)
  *
@@ -308,7 +316,7 @@ function uniqSections(breed, speciesGroup, topicKey, seed) {
   const knob2 = pick(seed, 1, t.knobs.filter((k) => k !== knob1));
   const knob3 = pick(seed, 2, t.knobs.filter((k) => k !== knob1 && k !== knob2));
 
-  const scenario = `${pick(seed, 0, SCENARIO_OPENERS)} ${t.scenarioPivot} for a ${display}. The owner had been adjusting ${knob1} and ${knob2} for weeks before realising the issue traced to ${knob3}. The lesson that stuck with us: when something around ${t.label} looks settled, it is worth asking whether the variable you are not tracking is the one moving.`;
+  const scenario = `${pick(seed, 0, SCENARIO_OPENERS)} ${t.scenarioPivot} for ${indefiniteArticle(display)} ${display}. The owner had been adjusting ${knob1} and ${knob2} for weeks before realising the issue traced to ${knob3}. The lesson that stuck with us: when something around ${t.label} looks settled, it is worth asking whether the variable you are not tracking is the one moving.`;
 
   const wrongIntro = pick(seed, 1, WRONG_OPENERS);
   const wrongList = t.misconceptions

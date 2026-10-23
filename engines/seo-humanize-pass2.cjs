@@ -1,4 +1,12 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 /**
  * Pass 2: Humanization + Internal-Linking Expansion
  *
@@ -115,9 +123,9 @@ function humanize(filePath, html) {
   out = out.replace(budgetRe, (m, name) => {
     counters.budgetCushion++;
     const alts = [
-      `<p>A small emergency reserve — even a few hundred dollars parked somewhere accessible — changes how you respond to a ${name} health scare. You make the right call faster when cost isn't the first thing running through your head.</p>`,
+      `<p>A small emergency reserve — even a few hundred dollars parked somewhere accessible — changes how you respond to ${indefiniteArticle(name)} ${name} health scare. You make the right call faster when cost isn't the first thing running through your head.</p>`,
       `<p>Most experienced ${name} owners set aside a modest emergency fund after their first unexpected vet visit. Having it in place before you need it is the difference between a bad afternoon and a stressful decision.</p>`,
-      `<p>An emergency cushion is easy to postpone and quietly expensive to skip. For a ${name}, even $500 set aside for surprise vet bills or replacement gear removes most of the in-the-moment pressure from decisions that matter.</p>`,
+      `<p>An emergency cushion is easy to postpone and quietly expensive to skip. For ${indefiniteArticle(name)} ${name}, even $500 set aside for surprise vet bills or replacement gear removes most of the in-the-moment pressure from decisions that matter.</p>`,
     ];
     return pick(alts, name + ':budget');
   });

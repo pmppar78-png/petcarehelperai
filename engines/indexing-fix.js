@@ -1,3 +1,11 @@
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 /**
  * PetCareHelperAI — Indexing Emergency Fix Engine
  *
@@ -389,7 +397,7 @@ function fixGuidePageBackLinks() {
         const commercialTypes = [
           { slug: 'best-food', title: `Best Food for ${displayName}` },
           { slug: 'best-insurance', title: `Best Insurance for ${displayName}` },
-          { slug: 'cost-to-own', title: `Cost to Own a ${displayName}` },
+          { slug: 'cost-to-own', title: `Cost to Own ${indefiniteArticle(displayName)} ${displayName}` },
         ];
 
         for (const ct of commercialTypes) {

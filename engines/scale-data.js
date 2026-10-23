@@ -1,3 +1,11 @@
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 // Scale expansion data — breed metadata + programmatic page generation
 export const TODAY = '2026-02-21';
 
@@ -140,14 +148,14 @@ export const breedInsurancePages = [
 ];
 
 export const breedTrainingPages = dogBreeds.map(b => ({
-  slug:`how-to-train-a-${b.slug}`,title:`How to Train a ${b.name}: Complete Guide`,
+  slug:`how-to-train-a-${b.slug}`,title:`How to Train ${indefiniteArticle(b.name)} ${b.name}: Complete Guide`,
   desc:`${b.name} training guide covering obedience, socialization, and behavior. Tips for their ${b.energy} energy ${b.group} breed temperament.`,
   animal:'dogs',affiliateCategories:['trainingAndBehavior']
 }));
 
 export const breedExercisePages = dogBreeds.map(b => ({
   slug:`${b.slug}-exercise-guide`,title:`${b.name} Exercise Needs: Activity & Fitness Guide`,
-  desc:`How much exercise does a ${b.name} need? Activity recommendations for this ${b.size} ${b.energy}-energy ${b.group} breed.`,
+  desc:`How much exercise does ${indefiniteArticle(b.name)} ${b.name} need? Activity recommendations for this ${b.size} ${b.energy}-energy ${b.group} breed.`,
   animal:'dogs',affiliateCategories:['trainingAndBehavior','devicesGpsAndTech']
 }));
 
@@ -158,7 +166,7 @@ export const breedGroomingPages = [
 
 export const breedPuppyPages = dogBreeds.map(b => ({
   slug:`${b.slug}-puppy-guide`,title:`${b.name} Puppy Guide: First Year Care`,
-  desc:`Everything you need for a ${b.name} puppy's first year. Feeding schedule, training milestones, vaccination timeline, and health concerns for ${b.size} breed puppies.`,
+  desc:`Everything you need for ${indefiniteArticle(b.name)} ${b.name} puppy's first year. Feeding schedule, training milestones, vaccination timeline, and health concerns for ${b.size} breed puppies.`,
   animal:'dogs',affiliateCategories:['foodAndNutrition','trainingAndBehavior','insuranceAndWellness']
 }));
 
@@ -168,8 +176,8 @@ export const breedTemperamentPages = [
 ];
 
 export const breedCostPages = [
-  ...dogBreeds.map(b => ({slug:`${b.slug}-cost-of-ownership`,title:`Cost of Owning a ${b.name}: Budget Guide`,desc:`Total cost of owning a ${b.name}: purchase price, food, vet bills, grooming, and insurance. Annual and lifetime budget for this ${b.size} breed.`,animal:'dogs',affiliateCategories:['insuranceAndWellness','foodAndNutrition']})),
-  ...catBreeds.map(b => ({slug:`${b.slug}-cat-cost-of-ownership`,title:`Cost of Owning a ${b.name} Cat: Budget Guide`,desc:`Complete cost breakdown for ${b.name} cat ownership including food, veterinary care, grooming, and supplies. Monthly and annual budgets.`,animal:'cats',affiliateCategories:['insuranceAndWellness','foodAndNutrition']})),
+  ...dogBreeds.map(b => ({slug:`${b.slug}-cost-of-ownership`,title:`Cost of Owning ${indefiniteArticle(b.name)} ${b.name}: Budget Guide`,desc:`Total cost of owning ${indefiniteArticle(b.name)} ${b.name}: purchase price, food, vet bills, grooming, and insurance. Annual and lifetime budget for this ${b.size} breed.`,animal:'dogs',affiliateCategories:['insuranceAndWellness','foodAndNutrition']})),
+  ...catBreeds.map(b => ({slug:`${b.slug}-cat-cost-of-ownership`,title:`Cost of Owning ${indefiniteArticle(b.name)} ${b.name} Cat: Budget Guide`,desc:`Complete cost breakdown for ${b.name} cat ownership including food, veterinary care, grooming, and supplies. Monthly and annual budgets.`,animal:'cats',affiliateCategories:['insuranceAndWellness','foodAndNutrition']})),
 ];
 
 // ============================================================
@@ -460,19 +468,19 @@ export const breedLifespanPages = [
 ];
 
 export const breedKidsPages = [
-  ...dogBreeds.map(b => ({slug:`${b.slug}-with-kids`,title:`Are ${b.name}s Good with Kids? Family Guide`,desc:`Is a ${b.name} good for families with children? Temperament around kids, safety considerations, and age-appropriate interactions.`,animal:'dogs',affiliateCategories:['trainingAndBehavior']})),
+  ...dogBreeds.map(b => ({slug:`${b.slug}-with-kids`,title:`Are ${b.name}s Good with Kids? Family Guide`,desc:`Is ${indefiniteArticle(b.name)} ${b.name} good for families with children? Temperament around kids, safety considerations, and age-appropriate interactions.`,animal:'dogs',affiliateCategories:['trainingAndBehavior']})),
   ...catBreeds.map(b => ({slug:`${b.slug}-cat-with-kids`,title:`Are ${b.name} Cats Good with Kids?`,desc:`${b.name} cats with children: temperament, patience level, and tips for fostering a safe, loving relationship between cat and kids.`,animal:'cats',affiliateCategories:['trainingAndBehavior']})),
 ];
 
 export const breedApartmentPages = dogBreeds.map(b => ({
   slug:`${b.slug}-apartment-living`,title:`${b.name} in an Apartment: Can They Adapt?`,
-  desc:`Can a ${b.name} thrive in an apartment? Space needs, noise level, exercise requirements, and tips for ${b.size} breed apartment living.`,
+  desc:`Can ${indefiniteArticle(b.name)} ${b.name} thrive in an apartment? Space needs, noise level, exercise requirements, and tips for ${b.size} breed apartment living.`,
   animal:'dogs',affiliateCategories:['trainingAndBehavior','devicesGpsAndTech']
 }));
 
 export const breedAdoptionPages = [
-  ...dogBreeds.map(b => ({slug:`adopt-a-${b.slug}`,title:`How to Adopt a ${b.name}: Rescue Guide`,desc:`Adopting a ${b.name}: breed-specific rescues, what to expect, adoption costs, and preparing your home for a rescued ${b.name}.`,animal:'dogs',affiliateCategories:['insuranceAndWellness','foodAndNutrition','trainingAndBehavior']})),
-  ...catBreeds.map(b => ({slug:`adopt-a-${b.slug}-cat`,title:`How to Adopt a ${b.name} Cat: Rescue Guide`,desc:`Finding and adopting a ${b.name} cat from shelters and breed-specific rescues. What to expect and preparation tips.`,animal:'cats',affiliateCategories:['insuranceAndWellness','foodAndNutrition']})),
+  ...dogBreeds.map(b => ({slug:`adopt-a-${b.slug}`,title:`How to Adopt ${indefiniteArticle(b.name)} ${b.name}: Rescue Guide`,desc:`Adopting ${indefiniteArticle(b.name)} ${b.name}: breed-specific rescues, what to expect, adoption costs, and preparing your home for a rescued ${b.name}.`,animal:'dogs',affiliateCategories:['insuranceAndWellness','foodAndNutrition','trainingAndBehavior']})),
+  ...catBreeds.map(b => ({slug:`adopt-a-${b.slug}-cat`,title:`How to Adopt ${indefiniteArticle(b.name)} ${b.name} Cat: Rescue Guide`,desc:`Finding and adopting ${indefiniteArticle(b.name)} ${b.name} cat from shelters and breed-specific rescues. What to expect and preparation tips.`,animal:'cats',affiliateCategories:['insuranceAndWellness','foodAndNutrition']})),
 ];
 
 export const breedSheddingPages = dogBreeds.map(b => ({
@@ -490,7 +498,7 @@ export const breedSizePages = dogBreeds.map(b => ({
 // Cat-specific behavior/indoor pages
 export const catIndoorPages = catBreeds.map(b => ({
   slug:`${b.slug}-cat-indoor-guide`,title:`${b.name} Cat Indoor Living Guide`,
-  desc:`Keeping a ${b.name} cat happy indoors. Enrichment, vertical space, play needs for their ${b.energy} energy level, and preventing boredom.`,
+  desc:`Keeping ${indefiniteArticle(b.name)} ${b.name} cat happy indoors. Enrichment, vertical space, play needs for their ${b.energy} energy level, and preventing boredom.`,
   animal:'cats',affiliateCategories:['trainingAndBehavior','anxietyAndCalming']
 }));
 

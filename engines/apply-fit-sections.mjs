@@ -1,4 +1,12 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 /**
  * Replace generic "May be great for" bullets with species-specific lists,
  * and replace named template paragraphs when a longer factual note exists.
@@ -141,7 +149,7 @@ for (const file of walk(ROOT)) {
   }
   if (!bag.genericpet && bag.household) {
     const name = path.basename(rel, ".html").replace(/-/g, " ");
-    bag.genericpet = [`Do not treat ads for a ${name} as a health clearance. ${bag.household[0]}`];
+    bag.genericpet = [`Do not treat ads for ${indefiniteArticle(name)} ${name} as a health clearance. ${bag.household[0]}`];
   }
   html = html.replace(/<p\b[^>]*>[\s\S]*?<\/p>/gi, (p) => {
     const text = p.replace(/<[^>]+>/g, " ");

@@ -1,3 +1,11 @@
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 import fs from 'fs';
 import path from 'path';
 
@@ -141,7 +149,7 @@ function makePage(b) {
       </div>
 
       <h2>${name} Overview</h2>
-      <p>The ${name} is a ${size.toLowerCase()} ${subtype.toLowerCase()} known for being ${temperament.toLowerCase()}. With a lifespan of ${lifespan}, this species is a ${lifespan.includes('50') || lifespan.includes('70') || lifespan.includes('100') ? 'very significant long-term commitment that may outlive its owner' : lifespan.includes('20') || lifespan.includes('25') || lifespan.includes('30') ? 'long-term companion requiring years of dedicated care' : 'rewarding pet for committed keepers'}. As a ${care.toLowerCase()}-level species, the ${name} is ${care === 'Beginner' ? 'an excellent choice for newcomers to reptile and amphibian keeping' : care === 'Intermediate' ? 'suited for keepers with some experience in herpetoculture' : 'best kept by experienced keepers with advanced husbandry knowledge'}.</p>
+      <p>The ${name} is ${indefiniteArticle(size.toLowerCase())} ${size.toLowerCase()} ${subtype.toLowerCase()} known for being ${temperament.toLowerCase()}. With a lifespan of ${lifespan}, this species is ${indefiniteArticle(lifespan.includes('50') || lifespan.includes('70') || lifespan.includes('100') ? 'very significant long-term commitment that may outlive its owner' : lifespan.includes('20') || lifespan.includes('25') || lifespan.includes('30') ? 'long-term companion requiring years of dedicated care' : 'rewarding pet for committed keepers')} ${lifespan.includes('50') || lifespan.includes('70') || lifespan.includes('100') ? 'very significant long-term commitment that may outlive its owner' : lifespan.includes('20') || lifespan.includes('25') || lifespan.includes('30') ? 'long-term companion requiring years of dedicated care' : 'rewarding pet for committed keepers'}. As ${indefiniteArticle(care.toLowerCase())} ${care.toLowerCase()}-level species, the ${name} is ${care === 'Beginner' ? 'an excellent choice for newcomers to reptile and amphibian keeping' : care === 'Intermediate' ? 'suited for keepers with some experience in herpetoculture' : 'best kept by experienced keepers with advanced husbandry knowledge'}.</p>
 
       <p>Their diet of ${diet.toLowerCase()} ${diet.includes('Mouse') || diet.includes('Rat') || diet.includes('prey') ? 'requires owners to be comfortable feeding whole prey items' : diet.includes('Insect') || diet.includes('insect') ? 'requires a supply of live or prepared insects' : 'is straightforward and readily available'}. Temperature requirements of ${temp} make ${isAmph ? 'a cool, controlled environment' : 'proper heating equipment'} essential for their wellbeing.</p>
 

@@ -1,3 +1,11 @@
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 import fs from 'fs';
 import path from 'path';
 
@@ -124,7 +132,7 @@ function makePage(b) {
       </div>
 
       <h2>${name} Overview</h2>
-      <p>The ${name} is a ${size.toLowerCase()} ${type.toLowerCase()} ${isInvert ? 'invertebrate' : 'species'} that ${care === 'Beginner' ? 'is an excellent choice for both beginners and experienced aquarists' : care === 'Intermediate' ? 'is well-suited for hobbyists with some experience' : 'requires advanced knowledge and a well-established aquarium'}. With a lifespan of ${lifespan}, this ${temperament.toLowerCase()} species requires a minimum tank size of ${tankMin}.</p>
+      <p>The ${name} is ${indefiniteArticle(size.toLowerCase())} ${size.toLowerCase()} ${type.toLowerCase()} ${isInvert ? 'invertebrate' : 'species'} that ${care === 'Beginner' ? 'is an excellent choice for both beginners and experienced aquarists' : care === 'Intermediate' ? 'is well-suited for hobbyists with some experience' : 'requires advanced knowledge and a well-established aquarium'}. With a lifespan of ${lifespan}, this ${temperament.toLowerCase()} species requires a minimum tank size of ${tankMin}.</p>
 
       <p>${name}s thrive in water temperatures of ${temp} with a pH range of ${pH}. As ${diet.toLowerCase().includes('omni') ? 'an omnivore' : diet.toLowerCase().includes('herb') ? 'an herbivore' : 'a carnivore'}, they ${diet.toLowerCase().includes('omni') ? 'accept a wide variety of foods' : diet.toLowerCase().includes('herb') ? 'primarily graze on algae and plant matter' : 'prefer meaty foods and live or frozen offerings'}.</p>
 

@@ -1,3 +1,11 @@
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 // Pass 10: Break remaining 150-300-page fingerprints.
 
 const fs = require('fs');
@@ -70,12 +78,12 @@ const INSURANCE_IN_FORCE_REGEX = /If insurance is already in force, keep it\. Dr
 const ENV_MONITORING_V = [
   (breed) => `Steady environmental monitoring and proactive husbandry are the backbone of healthy ${breed} care — the daily work prevents most of the interventions you'd otherwise need.`,
   (breed) => `Consistent environmental tracking and forward-leaning husbandry produce the outcomes that reactive care usually cannot.`,
-  (breed) => `Monitoring the environment with discipline and handling husbandry proactively is what keeps a ${breed} out of problems rather than treating them.`,
+  (breed) => `Monitoring the environment with discipline and handling husbandry proactively is what keeps ${indefiniteArticle(breed)} ${breed} out of problems rather than treating them.`,
   (breed) => `Reliable environmental monitoring and disciplined husbandry are the foundation; without them, care plans drift into reactive mode.`,
   (breed) => `${breed} welfare lives or dies on consistent environmental monitoring and attentive, proactive husbandry.`,
   (breed) => `Environmental monitoring and proactive husbandry, done consistently, are the cheapest way to prevent the problems most ${breed}s develop.`,
-  (breed) => `A disciplined monitoring and husbandry routine for a ${breed} is the backbone of good outcomes; nothing else compensates for skipping it.`,
-  (breed) => `For a ${breed}, consistent environmental monitoring and a proactive husbandry rhythm are foundational — every other care layer depends on them.`
+  (breed) => `A disciplined monitoring and husbandry routine for ${indefiniteArticle(breed)} ${breed} is the backbone of good outcomes; nothing else compensates for skipping it.`,
+  (breed) => `For ${indefiniteArticle(breed)} ${breed}, consistent environmental monitoring and a proactive husbandry rhythm are foundational — every other care layer depends on them.`
 ];
 const ENV_MONITORING_REGEX = /Consistent environmental monitoring and proactive husbandry are the foundation[^<.]*?\./g;
 
@@ -171,49 +179,49 @@ const SPECIFICS_VARY_REGEX = /The specifics here vary based on individual circum
 // --- Portion control / Structure the exercise / Structuring enrichment / Prioritizing habitat
 const PORTION_CONTROL_V = [
   (breed) => `Portion control is mechanically simple but needs consistency — start with the recommended range and adjust against weight trend over 4-8 weeks.`,
-  (breed) => `For a ${breed}, the mechanics of portion control are easy; the hard part is doing it the same way every day.`,
+  (breed) => `For ${indefiniteArticle(breed)} ${breed}, the mechanics of portion control are easy; the hard part is doing it the same way every day.`,
   (breed) => `Portion control works when it is consistent — begin at the recommended range and calibrate against your ${breed}'s weight trajectory.`,
   (breed) => `Start portions at the recommended range and adjust every few weeks against your ${breed}'s body condition and weight trend.`,
   (breed) => `The ${breed}'s portion plan is simple in principle — use recommended starting ranges and iterate against the scale, not guess work.`,
-  (breed) => `Daily portion consistency matters more than portion perfection for a ${breed} — pick a range, measure, adjust to the trend.`,
-  (breed) => `Measure portions, track weight, adjust every 2-4 weeks — portion control for a ${breed} is mostly about not skipping any of those steps.`,
+  (breed) => `Daily portion consistency matters more than portion perfection for ${indefiniteArticle(breed)} ${breed} — pick a range, measure, adjust to the trend.`,
+  (breed) => `Measure portions, track weight, adjust every 2-4 weeks — portion control for ${indefiniteArticle(breed)} ${breed} is mostly about not skipping any of those steps.`,
   (breed) => `Start at the recommended portion range for your ${breed}, then adjust only in response to weight and condition data.`
 ];
 const PORTION_CONTROL_REGEX = /Portion control is straightforward but requires consistency\. Start with the recommended[^<.]*?\./g;
 
 const STRUCTURE_EXERCISE_V = [
-  (breed) => `Structure exercise around intensity and recovery — two moderate sessions, one high-intensity, and a rest day keeps a ${breed} steady without overtraining.`,
+  (breed) => `Structure exercise around intensity and recovery — two moderate sessions, one high-intensity, and a rest day keeps ${indefiniteArticle(breed)} ${breed} steady without overtraining.`,
   (breed) => `Think of the week as a structured cycle: moderate, moderate, high, recovery — works for most healthy adult ${breed}s.`,
   (breed) => `Build the exercise week around intensity cycling: a couple of moderate days, one harder day, and planned recovery for your ${breed}.`,
-  (breed) => `For a ${breed}, cycling exercise by intensity with scheduled recovery produces steadier outcomes than a flat daily routine.`,
-  (breed) => `Programme the week for a ${breed}: two moderate-intensity days, one higher-intensity, one recovery — calibrated to the animal's actual fitness.`,
-  (breed) => `Exercise structure matters as much as volume for a ${breed}; mix moderate and high-intensity days with intentional recovery.`,
-  (breed) => `A useful rhythm for a ${breed}: moderate days, a higher-intensity session, and a planned recovery day — adjust to the animal's actual fitness.`,
-  (breed) => `Exercise benefits for a ${breed} compound when intensity and recovery are both structured; flat daily routines underperform cycled ones.`
+  (breed) => `For ${indefiniteArticle(breed)} ${breed}, cycling exercise by intensity with scheduled recovery produces steadier outcomes than a flat daily routine.`,
+  (breed) => `Programme the week for ${indefiniteArticle(breed)} ${breed}: two moderate-intensity days, one higher-intensity, one recovery — calibrated to the animal's actual fitness.`,
+  (breed) => `Exercise structure matters as much as volume for ${indefiniteArticle(breed)} ${breed}; mix moderate and high-intensity days with intentional recovery.`,
+  (breed) => `A useful rhythm for ${indefiniteArticle(breed)} ${breed}: moderate days, a higher-intensity session, and a planned recovery day — adjust to the animal's actual fitness.`,
+  (breed) => `Exercise benefits for ${indefiniteArticle(breed)} ${breed} compound when intensity and recovery are both structured; flat daily routines underperform cycled ones.`
 ];
 const STRUCTURE_EXERCISE_REGEX = /Structure the exercise by intensity and recovery\. Two moderate days[^<.]*?\./g;
 
 const STRUCTURE_ENRICHMENT_V = [
-  (breed) => `A weekly enrichment calendar keeps a ${breed} stimulated without overloading any single day — the consistency is where the benefit lives.`,
-  (breed) => `Slotting enrichment into a weekly schedule produces steadier cognitive load for a ${breed} than ad-hoc sessions do.`,
-  (breed) => `Planned weekly enrichment for a ${breed} beats reactive enrichment on both cognitive benefit and household sanity.`,
-  (breed) => `A structured enrichment week for a ${breed} distributes cognitive load evenly and prevents the spikes that come with impromptu sessions.`,
-  (breed) => `Lay out the enrichment week in advance for a ${breed}; predictable stimulation patterns reduce behavioural variance.`,
-  (breed) => `Weekly planning of enrichment sessions for a ${breed} produces the consistency that ad-hoc approaches usually miss.`,
-  (breed) => `A written weekly enrichment schedule is the single cheapest intervention for a ${breed} with behavioural restlessness.`,
-  (breed) => `Scheduling enrichment for a ${breed} — rather than improvising it — produces consistently better behavioural outcomes.`
+  (breed) => `A weekly enrichment calendar keeps ${indefiniteArticle(breed)} ${breed} stimulated without overloading any single day — the consistency is where the benefit lives.`,
+  (breed) => `Slotting enrichment into a weekly schedule produces steadier cognitive load for ${indefiniteArticle(breed)} ${breed} than ad-hoc sessions do.`,
+  (breed) => `Planned weekly enrichment for ${indefiniteArticle(breed)} ${breed} beats reactive enrichment on both cognitive benefit and household sanity.`,
+  (breed) => `A structured enrichment week for ${indefiniteArticle(breed)} ${breed} distributes cognitive load evenly and prevents the spikes that come with impromptu sessions.`,
+  (breed) => `Lay out the enrichment week in advance for ${indefiniteArticle(breed)} ${breed}; predictable stimulation patterns reduce behavioural variance.`,
+  (breed) => `Weekly planning of enrichment sessions for ${indefiniteArticle(breed)} ${breed} produces the consistency that ad-hoc approaches usually miss.`,
+  (breed) => `A written weekly enrichment schedule is the single cheapest intervention for ${indefiniteArticle(breed)} ${breed} with behavioural restlessness.`,
+  (breed) => `Scheduling enrichment for ${indefiniteArticle(breed)} ${breed} — rather than improvising it — produces consistently better behavioural outcomes.`
 ];
 const STRUCTURE_ENRICHMENT_REGEX = /Structuring enrichment into a weekly schedule ensures consistent stimulation[^<.]*?\./g;
 
 const PRIORITIZE_HABITAT_V = [
-  (breed) => `Treating habitat stability as the first priority — over reactive fixes — usually produces the largest welfare gain for a ${breed}.`,
-  (breed) => `Habitat stability beats habitat firefighting; for a ${breed}, the steadier the setup, the fewer interventions are needed.`,
+  (breed) => `Treating habitat stability as the first priority — over reactive fixes — usually produces the largest welfare gain for ${indefiniteArticle(breed)} ${breed}.`,
+  (breed) => `Habitat stability beats habitat firefighting; for ${indefiniteArticle(breed)} ${breed}, the steadier the setup, the fewer interventions are needed.`,
   (breed) => `Stable habitat first, reactive care second — the order matters and it favours the ${breed} substantially.`,
-  (breed) => `Most welfare wins for a ${breed} come from holding the habitat steady, not from reacting after it drifts.`,
-  (breed) => `A stable habitat does more for a ${breed}'s welfare than a reactive care routine; pick stability first.`,
-  (breed) => `Habitat stability is the cheapest welfare lever for a ${breed}; reactive care is the expensive one.`,
-  (breed) => `The biggest welfare return for a ${breed} comes from keeping the habitat consistently stable rather than reacting after parameters drift.`,
-  (breed) => `For a ${breed}, investing in habitat stability reliably beats investing in response capacity for the problems that unstable habitats produce.`
+  (breed) => `Most welfare wins for ${indefiniteArticle(breed)} ${breed} come from holding the habitat steady, not from reacting after it drifts.`,
+  (breed) => `A stable habitat does more for ${indefiniteArticle(breed)} ${breed}'s welfare than a reactive care routine; pick stability first.`,
+  (breed) => `Habitat stability is the cheapest welfare lever for ${indefiniteArticle(breed)} ${breed}; reactive care is the expensive one.`,
+  (breed) => `The biggest welfare return for ${indefiniteArticle(breed)} ${breed} comes from keeping the habitat consistently stable rather than reacting after parameters drift.`,
+  (breed) => `For ${indefiniteArticle(breed)} ${breed}, investing in habitat stability reliably beats investing in response capacity for the problems that unstable habitats produce.`
 ];
 const PRIORITIZE_HABITAT_REGEX = /Prioritizing habitat stability over reactive care makes the biggest difference[^<.]*?\./g;
 
@@ -234,7 +242,7 @@ const TOPICS_FEW_MINUTES_V = [
   (breed) => `This is one of those topics where a few minutes of learning genuinely changes how you interact with your ${breed} every day afterwards.`,
   (breed) => `Invest a short window of attention on this topic — it disproportionately changes your day-to-day with the ${breed}.`,
   (breed) => `Few ${breed} care topics compound as well as this one — a small initial investment in understanding pays daily.`,
-  (breed) => `Time spent understanding this topic is one of the highest-leverage investments a ${breed} owner can make.`,
+  (breed) => `Time spent understanding this topic is one of the highest-leverage investments ${indefiniteArticle(breed)} ${breed} owner can make.`,
   (breed) => `This is a high-leverage topic for ${breed} owners; a short period of focused learning permanently changes daily decisions.`,
   (breed) => `Small effort, lasting payoff: understanding this topic well changes how you handle your ${breed} for as long as the animal is with you.`,
   (breed) => `A focused thirty minutes on this topic measurably improves daily ${breed} care for years afterwards.`,
@@ -281,13 +289,13 @@ const RE_WEIGH_REGEX = /Re-weigh every two weeks during active loss, monthly dur
 
 const PAIR_FORMULATION_V = [
   (breed) => `Match the formulation with a portion calculated against the ${breed}'s target weight, not the current weight — that's how weight drift gets corrected.`,
-  (breed) => `Calculate portions for a ${breed} against target weight, not current weight; this is the mechanism that closes the weight gap over time.`,
-  (breed) => `Portion for the target weight, not the current weight — that's the lever that moves a ${breed}'s weight in the right direction.`,
-  (breed) => `For a ${breed}, portion against target weight, not where the animal is today; the arithmetic does the corrective work over weeks.`,
-  (breed) => `Target-weight portioning (not current-weight) is how a ${breed}'s weight gets adjusted; the diet math does the work if the formulation supports it.`,
+  (breed) => `Calculate portions for ${indefiniteArticle(breed)} ${breed} against target weight, not current weight; this is the mechanism that closes the weight gap over time.`,
+  (breed) => `Portion for the target weight, not the current weight — that's the lever that moves ${indefiniteArticle(breed)} ${breed}'s weight in the right direction.`,
+  (breed) => `For ${indefiniteArticle(breed)} ${breed}, portion against target weight, not where the animal is today; the arithmetic does the corrective work over weeks.`,
+  (breed) => `Target-weight portioning (not current-weight) is how ${indefiniteArticle(breed)} ${breed}'s weight gets adjusted; the diet math does the work if the formulation supports it.`,
   (breed) => `Choose portion size based on the ${breed}'s goal weight and formulation specs, not the weight on the scale today.`,
   (breed) => `Portions should be computed from target weight, not current weight — the right formulation paired with the right target does most of the job.`,
-  (breed) => `For a ${breed} on a weight plan, pair the chosen formulation with portions calibrated to target weight, not present weight.`
+  (breed) => `For ${indefiniteArticle(breed)} ${breed} on a weight plan, pair the chosen formulation with portions calibrated to target weight, not present weight.`
 ];
 const PAIR_FORMULATION_REGEX = /Pair the formulation with a portion calculated against target weight rather[^<.]*?\./g;
 
@@ -298,8 +306,8 @@ const CALIBRATE_SOCIAL_V = [
   (breed) => `Individual ${breed}s vary significantly in social tolerance — calibrate against the animal in the house, not the breed in the abstract.`,
   (breed) => `Match social exposure to your specific ${breed}'s feedback, not to breed-level descriptions — variance within a breed is substantial.`,
   (breed) => `Let the individual ${breed}'s signals, not breed averages, set the ceiling on social exposure.`,
-  (breed) => `For a ${breed}, the right social exposure curve is the one that matches the individual animal's observed tolerance — not a breed-level number.`,
-  (breed) => `Social-exposure limits for a ${breed} come from the animal, not the breed profile; match the plan to observed behaviour.`
+  (breed) => `For ${indefiniteArticle(breed)} ${breed}, the right social exposure curve is the one that matches the individual animal's observed tolerance — not a breed-level number.`,
+  (breed) => `Social-exposure limits for ${indefiniteArticle(breed)} ${breed} come from the animal, not the breed profile; match the plan to observed behaviour.`
 ];
 const CALIBRATE_SOCIAL_REGEX = /Calibrate social exposure to the individual animal rather than to the breed average[^<.]*?\./g;
 

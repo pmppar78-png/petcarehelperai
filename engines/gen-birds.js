@@ -1,3 +1,11 @@
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 import fs from 'fs';
 import path from 'path';
 
@@ -108,9 +116,9 @@ function makePage(b) {
       </div>
 
       <h2>${name} Overview</h2>
-      <p>The ${name} is a ${size.toLowerCase()} ${type.toLowerCase()} that has captivated bird enthusiasts worldwide. With a lifespan of ${lifespan}, this species offers ${lifespan.includes('20') || lifespan.includes('25') || lifespan.includes('30') ? 'many years of companionship and is a significant commitment' : 'years of enjoyment for dedicated keepers'}. Their ${noise.toLowerCase()} noise level makes them ${noise.includes('Very Low') || noise.includes('Low') ? 'suitable for apartments and noise-sensitive environments' : 'better suited for homes where some vocalization is acceptable'}.</p>
+      <p>The ${name} is ${indefiniteArticle(size.toLowerCase())} ${size.toLowerCase()} ${type.toLowerCase()} that has captivated bird enthusiasts worldwide. With a lifespan of ${lifespan}, this species offers ${lifespan.includes('20') || lifespan.includes('25') || lifespan.includes('30') ? 'many years of companionship and is a significant commitment' : 'years of enjoyment for dedicated keepers'}. Their ${noise.toLowerCase()} noise level makes them ${noise.includes('Very Low') || noise.includes('Low') ? 'suitable for apartments and noise-sensitive environments' : 'better suited for homes where some vocalization is acceptable'}.</p>
 
-      <p>As a ${careLevel.toLowerCase()}-level bird, the ${name} is ${careLevel === 'Beginner' ? 'an excellent choice for first-time bird owners who are ready to provide proper care' : careLevel === 'Intermediate' ? 'well-suited for owners with some bird-keeping experience' : 'best kept by experienced aviculturists who understand their specialized needs'}. Their diet of ${diet.toLowerCase()} requires ${careLevel === 'Advanced' ? 'careful preparation and supplementation' : 'consistent quality and variety'}.</p>
+      <p>As ${indefiniteArticle(careLevel.toLowerCase())} ${careLevel.toLowerCase()}-level bird, the ${name} is ${careLevel === 'Beginner' ? 'an excellent choice for first-time bird owners who are ready to provide proper care' : careLevel === 'Intermediate' ? 'well-suited for owners with some bird-keeping experience' : 'best kept by experienced aviculturists who understand their specialized needs'}. Their diet of ${diet.toLowerCase()} requires ${careLevel === 'Advanced' ? 'careful preparation and supplementation' : 'consistent quality and variety'}.</p>
 
       <h2>Housing Requirements</h2>
       <p>Providing appropriate housing is essential for ${name} health and happiness:</p>

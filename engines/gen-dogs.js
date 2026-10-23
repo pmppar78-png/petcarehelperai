@@ -1,3 +1,11 @@
+
+function indefiniteArticle(name) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  if (consonantSound.has(head)) return "a";
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
 import fs from 'fs';
 import path from 'path';
 
@@ -183,7 +191,7 @@ function makePage(b) {
       </div>
 
       <h2>${name} Overview</h2>
-      <p>The ${name} is a ${size.toLowerCase()} ${group.toLowerCase()} breed known for being ${temperament.toLowerCase()}. Weighing ${weight} and standing ${height} tall, this breed combines an appealing appearance with a wonderful temperament that has made it a favorite among dog enthusiasts worldwide. With a lifespan of ${lifespan}, the ${name} offers years of loyal companionship.</p>
+      <p>The ${name} is ${indefiniteArticle(size.toLowerCase())} ${size.toLowerCase()} ${group.toLowerCase()} breed known for being ${temperament.toLowerCase()}. Weighing ${weight} and standing ${height} tall, this breed combines an appealing appearance with a wonderful temperament that has made it a favorite among dog enthusiasts worldwide. With a lifespan of ${lifespan}, the ${name} offers years of loyal companionship.</p>
 
       <p>Originally developed for ${group === 'Working' ? 'various working tasks including guarding, pulling, and rescue' : group === 'Herding' ? 'herding livestock with intelligence and agility' : group === 'Hound' ? 'hunting and tracking with exceptional senses' : group === 'Sporting' ? 'assisting hunters in the field with stamina and retrieving ability' : group === 'Terrier' ? 'hunting vermin and small game with tenacity and courage' : group === 'Toy' ? 'companionship and providing comfort to their owners' : group === 'Hybrid' ? 'combining the best traits of its parent breeds' : 'a variety of purposes'}, the ${name} has evolved into an excellent family companion while retaining many of its original instincts and abilities.</p>
 
@@ -257,7 +265,7 @@ function makePage(b) {
       </ul>
 
       <h2>Training Tips for ${name}s</h2>
-      <p>Training a ${name} is ${group === 'Terrier' || group === 'Hound' ? 'rewarding but requires patience and consistency' : 'generally enjoyable thanks to their willing nature'}:</p>
+      <p>Training ${indefiniteArticle(name)} ${name} is ${group === 'Terrier' || group === 'Hound' ? 'rewarding but requires patience and consistency' : 'generally enjoyable thanks to their willing nature'}:</p>
       <ul>
         <li><strong>Positive Reinforcement:</strong> Use treats, praise, and play as rewards for desired behaviors.</li>
         <li><strong>Consistency:</strong> Establish clear rules and maintain them across all family members.</li>
@@ -298,14 +306,14 @@ function makePage(b) {
         <li><strong>Shedding:</strong> ${shedding === 'High' ? 'Heavy shedding year-round with seasonal increases' : shedding === 'Moderate' ? 'Moderate shedding throughout the year' : 'Minimal shedding, making them a better choice for allergy sufferers'}.</li>
       </ul>
 
-      <h2>Is a ${name} Right for You?</h2>
+      <h2>Is ${indefiniteArticle(name)} ${name} Right for You?</h2>
 
       <h3>${name}s Are Great For:</h3>
       <ul>
         <li>${goodKids === 'Excellent' ? 'Families with children of all ages' : 'Families with older, respectful children'}</li>
         <li>${exercise === 'Very High' || exercise === 'High' ? 'Active individuals and families who enjoy outdoor adventures' : 'Owners who can provide moderate daily exercise'}</li>
         <li>${group === 'Working' || group === 'Herding' ? 'Experienced dog owners who can provide firm, consistent leadership' : 'Both first-time and experienced dog owners'}</li>
-        <li>Those looking for a ${temperament.split(',')[0].trim().toLowerCase()} and devoted companion</li>
+        <li>Those looking for ${indefiniteArticle(temperament.split(',')[0].trim().toLowerCase())} ${temperament.split(',')[0].trim().toLowerCase()} and devoted companion</li>
         <li>People who can commit to ${grooming === 'Very High' || grooming === 'High' ? 'regular grooming maintenance' : 'basic grooming needs'}</li>
       </ul>
 
