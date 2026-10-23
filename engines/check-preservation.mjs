@@ -63,7 +63,7 @@ import path from "path";
 import { assertChrome, assertWhyQuestions, runChromeFixtures } from "./chrome-main.mjs";
 import { hrefSatisfied, resolveOriginBase } from "./origin-base.mjs";
 
-const REPLACEMENTS_SHA256 = "8580b3967cfcc2f7e9627be4a358270d9c919b939fbfd66d81dee98537af3aee";
+const REPLACEMENTS_SHA256 = "c757c3af3499847ba428456edb8173791fddf018836f4042073091b273e2e917";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 4;

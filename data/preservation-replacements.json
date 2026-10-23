@@ -6,45 +6,9 @@
     "reason": "The slotted title makes a garbled dose-chart line. The label and the hotline are what the sentence was trying to say."
   },
   {
-    "page": "resources/best-reptile-enclosures.html",
-    "original": "Disclaimer: Use this best reptile enclosures setup guide: tanks, terrariums vivariums (2026) resource as background, not as a substitute for professional guidance",
-    "replacement": "Lay the 2026 tank, terrarium, and vivarium notes beside the species you keep, and ask a keeper who has housed that animal to review the plan.",
-    "reason": "The sentence stuffs the page title into a robotic disclaimer and uses a tic. The 2026 enclosure comparison stays."
-  },
-  {
-    "page": "resources/beginner-aquarium-setup-guide.html",
-    "original": "Disclaimer: Use this beginner aquarium setup guide: everything you need for your first fish tank resource as background, not as a substitute for professional guidance",
-    "replacement": "Fish go in only after the tank, filter, and heater are in place and the cycle described here has finished.",
-    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
-  },
-  {
-    "page": "resources/best-aquarium-filters-beginners.html",
-    "original": "Disclaimer: Use this best aquarium filters for beginners: a complete guide resource as background, not as a substitute for professional guidance",
-    "replacement": "Match the filter to the fish you will keep. Rinse its media in old tank water so the bacteria colony survives.",
-    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
-  },
-  {
-    "page": "resources/best-cat-trees-scratchers.html",
-    "original": "Disclaimer: Use this best cat trees and scratching posts: expert guide for every budget (2026) resource as background, not as a substitute for professional guidance",
-    "replacement": "Shortlist a cat tree or scratching post from the 2026 size and budget notes, then watch your own cat climb before you buy.",
-    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer. The 2026 buying notes stay."
-  },
-  {
     "page": "resources/best-dog-food-sensitive-stomachs.html",
     "original": "Disclaimer: Use this best dog food for sensitive stomachs: a complete guide resource as background, not as a substitute for professional guidance",
     "replacement": "Carry this sensitive-stomach guide into the diet appointment so your veterinarian can apply it to this dog.",
-    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
-  },
-  {
-    "page": "resources/pet-emergency-first-aid.html",
-    "original": "Disclaimer: Use this pet emergency first aid: what every owner should know resource as background, not as a substitute for professional guidance",
-    "replacement": "Use these steps to keep your pet stable on the way to the vet; they don't replace an exam.",
-    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
-  },
-  {
-    "page": "resources/pet-health-myths-debunked.html",
-    "original": "Disclaimer: Use this pet health myths debunked: separating fact from fiction resource as background, not as a substitute for professional guidance",
-    "replacement": "Test the claims below against the sources cited with them, and let your veterinarian decide which ones matter for your pet.",
     "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
   },
   {
@@ -52,24 +16,6 @@
     "original": "Disclaimer: The information here is intended to help you understand common aspects of senior pet care, not to replace the judgment of your veterinarian",
     "replacement": "Questions drawn from these senior-care sections belong with the veterinarian who already knows this animal's history.",
     "reason": "Robotic comma-not disclaimer."
-  },
-  {
-    "page": "resources/signs-of-pain-in-pets.html",
-    "original": "Disclaimer: Use this signs of pain in pets: what most owners miss resource as background, not as a substitute for professional guidance",
-    "replacement": "Learn the quiet signs on this page so you can tell the clinic what changed before your pet ever cries out.",
-    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
-  },
-  {
-    "page": "breeds/cats/manx.html",
-    "original": "No tail is not a party trick",
-    "replacement": "The missing tail",
-    "reason": "Heading tic. The H2 is the short name of the trait. The paragraph under it still says breeding for the missing tail raises Manx syndrome risk, and the Merck Veterinary Manual link stays in the next section."
-  },
-  {
-    "page": "breeds/birds/scarlet-macaw.html",
-    "original": "Red, and not a smaller project",
-    "replacement": "A large, long-lived parrot",
-    "reason": "Heading tic. The H2 names the animal. The paragraph under it still says a scarlet macaw is large, loud, and long-lived, and needs an experienced owner."
   },
   {
     "page": "breeds/birds/society-finch.html",
