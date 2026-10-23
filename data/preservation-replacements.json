@@ -8,74 +8,74 @@
   {
     "page": "resources/best-reptile-enclosures.html",
     "original": "Disclaimer: Use this best reptile enclosures setup guide: tanks, terrariums vivariums (2026) resource as background, not as a substitute for professional guidance",
-    "replacement": "The 2026 comparisons of tanks, terrariums, and vivariums are background for an enclosure plan a veterinarian or an experienced keeper can check.",
-    "reason": "The sentence stuffs the page title into a robotic disclaimer and uses a tic."
+    "replacement": "Lay the 2026 tank, terrarium, and vivarium notes beside the species you keep, and ask a keeper who has housed that animal to review the plan.",
+    "reason": "The sentence stuffs the page title into a robotic disclaimer and uses a tic. The 2026 enclosure comparison stays."
   },
   {
     "page": "resources/beginner-aquarium-setup-guide.html",
     "original": "Disclaimer: Use this beginner aquarium setup guide: everything you need for your first fish tank resource as background, not as a substitute for professional guidance",
-    "replacement": "Read the tank, filter, and heater steps here as background before the first fish goes in the water. An experienced aquarist answers questions about that tank.",
+    "replacement": "Fish go in only after the tank, filter, and heater are in place and the cycle described here has finished.",
     "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
   },
   {
     "page": "resources/best-aquarium-filters-beginners.html",
     "original": "Disclaimer: Use this best aquarium filters for beginners: a complete guide resource as background, not as a substitute for professional guidance",
-    "replacement": "Use the filter comparisons here as background while the tank's bacteria colony stays intact. An aquarist can check the choice for this tank.",
+    "replacement": "Match the filter to the fish you will keep. Rinse its media in old tank water so the bacteria colony survives.",
     "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
   },
   {
     "page": "resources/best-cat-trees-scratchers.html",
     "original": "Disclaimer: Use this best cat trees and scratching posts: expert guide for every budget (2026) resource as background, not as a substitute for professional guidance",
-    "replacement": "The 2026 cat tree and scratching post comparisons are background for matching a tree to the cat's size and budget.",
-    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
+    "replacement": "Shortlist a cat tree or scratching post from the 2026 size and budget notes, then watch your own cat climb before you buy.",
+    "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer. The 2026 buying notes stay."
   },
   {
     "page": "resources/best-dog-food-sensitive-stomachs.html",
     "original": "Disclaimer: Use this best dog food for sensitive stomachs: a complete guide resource as background, not as a substitute for professional guidance",
-    "replacement": "The sensitive-stomach food notes here are background for a diet conversation with the dog's veterinarian.",
+    "replacement": "Carry this sensitive-stomach guide into the diet appointment so your veterinarian can apply it to this dog.",
     "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
   },
   {
     "page": "resources/pet-emergency-first-aid.html",
     "original": "Disclaimer: Use this pet emergency first aid: what every owner should know resource as background, not as a substitute for professional guidance",
-    "replacement": "The first-aid steps here are background for the minutes before a veterinarian sees the animal.",
+    "replacement": "Use these steps to keep your pet stable on the way to the vet; they don't replace an exam.",
     "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
   },
   {
     "page": "resources/pet-health-myths-debunked.html",
     "original": "Disclaimer: Use this pet health myths debunked: separating fact from fiction resource as background, not as a substitute for professional guidance",
-    "replacement": "The myth-and-fact notes here are background for a conversation with the animal's veterinarian.",
+    "replacement": "Test the claims below against the sources cited with them, and let your veterinarian decide which ones matter for your pet.",
     "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
   },
   {
     "page": "resources/senior-pet-care-guide.html",
     "original": "Disclaimer: The information here is intended to help you understand common aspects of senior pet care, not to replace the judgment of your veterinarian",
-    "replacement": "These senior-pet notes prepare questions for the veterinarian who already knows this animal.",
+    "replacement": "Questions drawn from these senior-care sections belong with the veterinarian who already knows this animal's history.",
     "reason": "Robotic comma-not disclaimer."
   },
   {
     "page": "resources/signs-of-pain-in-pets.html",
     "original": "Disclaimer: Use this signs of pain in pets: what most owners miss resource as background, not as a substitute for professional guidance",
-    "replacement": "The pain-sign notes here are background for deciding when a veterinarian should see the animal.",
+    "replacement": "Learn the quiet signs on this page so you can tell the clinic what changed, instead of waiting for an obvious cry.",
     "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
   },
   {
     "page": "breeds/cats/manx.html",
     "original": "No tail is not a party trick",
-    "replacement": "The missing tail is a spinal trait.",
-    "reason": "Heading tic kept beside the rewritten heading. The missing tail is a spinal trait, which the next sentences describe."
+    "replacement": "The missing tail is a spinal trait, and breeding for it raises Manx syndrome risk, which the Merck Veterinary Manual describes.",
+    "reason": "Heading tic. The missing tail is a spinal trait, and breeding for it raises Manx syndrome risk. Merck Veterinary Manual is the source already used on the page."
   },
   {
     "page": "breeds/birds/scarlet-macaw.html",
     "original": "Red, and not a smaller project",
-    "replacement": "The red plumage still belongs to a full-size macaw.",
-    "reason": "Heading tic kept beside the rewritten heading. Size and lifespan stay in the next sentences."
+    "replacement": "Despite the striking plumage, a scarlet macaw is a large, loud, long-lived parrot that needs an experienced owner.",
+    "reason": "Heading tic. The striking plumage belongs to a large, loud, long-lived parrot that needs an experienced owner."
   },
   {
     "page": "breeds/birds/society-finch.html",
     "original": "A finch seed mix is not the whole diet",
-    "replacement": "A finch seed mix leaves the diet unfinished.",
-    "reason": "Tic sentence repeated under its heading. Greens, egg food, and a cuttlebone stay in the next sentence."
+    "replacement": "Seed alone isn't a complete diet; add greens, egg food during a molt or breeding, and a cuttlebone.",
+    "reason": "Tic sentence under the diet heading. Seed is incomplete without greens, egg food during a molt or breeding, and a cuttlebone."
   },
   {
     "page": "editorial-standards.html",

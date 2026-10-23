@@ -24,6 +24,16 @@
  * replacement is on the page and carries the same numbers. The original
  * wording does not have to remain.
  *
+ * Replacements are compared with each other as well. Each replacement is
+ * split on period, question mark, exclamation mark, and semicolon. After
+ * the same name and digit masking, two sentences from different pages
+ * fail when the masked strings are identical, when their shingle Jaccard
+ * is at least 0.8, or when they share a masked 4-gram. They also fail
+ * when they share a masked 3-gram that contains a word outside a short
+ * function-word list. Jaccard alone misses a shared skeleton such as
+ * "here are background for" or "here as background" once the surrounding
+ * words differ. The 4-gram and content 3-gram tests catch that.
+ *
  * Dangling punctuation left by truncated cells ("Males: 10-16 lbs,") and
  * spliced link blurbs (" -  - ") fails the check.
  *
@@ -686,7 +696,91 @@ function sentenceCovered(sentence, visibleLower, currentSentences, rel) {
   return visibleLower.includes(replacement);
 }
 
+const FUNCTION_WORDS = new Set(
+  "a an the and or of to for in on with from by as at that this these those it its who which when while before after so then than into over your you they their them is are be can will if but here there not do does up out about only also just through during such other own already still where what how all any some our we has have had been being was were may might should would could".split(
+    " ",
+  ),
+);
+
+function replacementPieces(text) {
+  return text
+    .split(/(?<=[.!?;])\s+/)
+    .map((part) => part.replace(/[.!?;]+$/g, "").replace(/\s+/g, " ").trim())
+    .filter((part) => (part.toLowerCase().match(/[a-z0-9']+/g) || []).length >= MIN_WORDS);
+}
+
+function maskedGrams(norm, width, contentOnly) {
+  const words = norm.split(" ").filter(Boolean);
+  const set = new Set();
+  if (words.length < width) return set;
+  for (let i = 0; i <= words.length - width; i++) {
+    const slice = words.slice(i, i + width);
+    if (
+      contentOnly &&
+      !slice.some((word) => word !== "#" && word !== "name" && !FUNCTION_WORDS.has(word))
+    ) {
+      continue;
+    }
+    set.add(slice.join(" "));
+  }
+  return set;
+}
+
+function assertReplacementVariety() {
+  const items = [];
+  for (const row of REPLACEMENTS.values()) {
+    for (const sentence of replacementPieces(row.replacement)) {
+      const key = normalize(sentence);
+      items.push({
+        page: row.page,
+        sentence,
+        key,
+        sh: shingles(key),
+        grams4: maskedGrams(key, 4, false),
+        grams3: maskedGrams(key, 3, true),
+      });
+    }
+  }
+  const problems = [];
+  for (let i = 0; i < items.length; i++) {
+    for (let j = i + 1; j < items.length; j++) {
+      const a = items[i];
+      const b = items[j];
+      if (a.page === b.page) continue;
+      if (a.key === b.key) {
+        problems.push(`${a.page} and ${b.page} share a masked replacement: ${a.key}`);
+        continue;
+      }
+      const sim = jaccard(a.sh, b.sh);
+      if (sim >= 0.8) {
+        problems.push(
+          `${a.page} and ${b.page} replacements are near-duplicates (${sim.toFixed(2)})`,
+        );
+        continue;
+      }
+      for (const gram of a.grams4) {
+        if (b.grams4.has(gram)) {
+          problems.push(`${a.page} and ${b.page} share the masked 4-gram "${gram}"`);
+          break;
+        }
+      }
+      for (const gram of a.grams3) {
+        if (b.grams3.has(gram)) {
+          problems.push(`${a.page} and ${b.page} share the masked 3-gram "${gram}"`);
+          break;
+        }
+      }
+    }
+  }
+  if (problems.length) {
+    console.error("preservation replacements share structure");
+    for (const line of problems) console.error(line);
+    process.exit(1);
+  }
+}
+
 function assertReplacements(pagePairs) {
+  assertReplacementVariety();
   const byRel = new Map(pagePairs.map((pair) => [pair.rel, pair]));
   const problems = [];
   for (const row of REPLACEMENTS.values()) {
