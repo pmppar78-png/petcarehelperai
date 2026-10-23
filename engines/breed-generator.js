@@ -28,7 +28,7 @@ function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>
 // ═══════════════════════════════════════════════════════════════════════════════
 const AFF = {
   thefarmersdog: ["The Farmer's Dog",'https://www.thefarmersdog.com'],
-  chewy: ['Chewy Autoship','https://www.chewy.com/app/autoship'],
+  chewy: ['Chewy Autoship','https://www.chewy.com/b/autoship-save-15682'],
   nomnom: ['Nom Nom','https://www.nomnomnow.com'],
   ollie: ['Ollie','https://www.myollie.com'],
   smalls: ['Smalls','https://www.smalls.com'],
