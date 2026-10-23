@@ -62,14 +62,14 @@
   {
     "page": "breeds/cats/manx.html",
     "original": "No tail is not a party trick",
-    "replacement": "The missing tail is a spinal trait, and breeding for it raises Manx syndrome risk, which the Merck Veterinary Manual describes.",
-    "reason": "Heading tic. The missing tail is a spinal trait, and breeding for it raises Manx syndrome risk. Merck Veterinary Manual is the source already used on the page."
+    "replacement": "The missing tail",
+    "reason": "Heading tic. The H2 is the short name of the trait. The paragraph under it still says breeding for the missing tail raises Manx syndrome risk, and the Merck Veterinary Manual link stays in the next section."
   },
   {
     "page": "breeds/birds/scarlet-macaw.html",
     "original": "Red, and not a smaller project",
-    "replacement": "Despite the striking plumage, a scarlet macaw is a large, loud, long-lived parrot that needs an experienced owner.",
-    "reason": "Heading tic. The striking plumage belongs to a large, loud, long-lived parrot that needs an experienced owner."
+    "replacement": "A large, long-lived parrot",
+    "reason": "Heading tic. The H2 names the animal. The paragraph under it still says a scarlet macaw is large, loud, and long-lived, and needs an experienced owner."
   },
   {
     "page": "breeds/birds/society-finch.html",

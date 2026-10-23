@@ -60,10 +60,10 @@
 import crypto from "crypto";
 import fs from "fs";
 import path from "path";
-import { assertChrome } from "./chrome-main.mjs";
+import { assertChrome, assertWhyQuestions, runChromeFixtures } from "./chrome-main.mjs";
 import { hrefSatisfied, resolveOriginBase } from "./origin-base.mjs";
 
-const REPLACEMENTS_SHA256 = "0f3d4d282457320376d88010646fa208fc9a2155ebd43a7af9b3bee8ed4c56cd";
+const REPLACEMENTS_SHA256 = "8580b3967cfcc2f7e9627be4a358270d9c919b939fbfd66d81dee98537af3aee";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 4;
@@ -1462,6 +1462,13 @@ if (!out.length) {
 const work = ONLY.size ? out.filter((pair) => ONLY.has(pair.rel) || ONLY.has(pair.originRel)) : out;
 console.error(`pages ${out.length}, work ${work.length}, missing counterparts ${missing.length}`);
 assertReplacements(out);
+runChromeFixtures();
+const why = assertWhyQuestions(ROOT);
+if (why.length) {
+  console.error(`why-does FAQ names failed (${why.length})`);
+  for (const line of why.slice(0, 40)) console.error(line);
+  process.exit(1);
+}
 const chrome = assertChrome(ROOT, BASE);
 if (chrome.problems.length) {
   console.error(`chrome check failed (${chrome.problems.length} pages)`);

@@ -28,7 +28,7 @@ export const RENAMES = {
   "guides/how-big-do-bichon-frises-get.html": "guides/how-big-do-bichon-frise-get.html",
   "guides/how-big-do-chinese-shar-peis-get.html": "guides/how-big-do-chinese-shar-pei-get.html",
   "guides/how-big-do-great-pyreneess-get.html": "guides/how-big-do-great-pyrenees-get.html",
-  "guides/how-big-do-havanese-get.html": "guides/how-big-do-havanese-get.html",
+  "guides/how-big-do-havaneses-get.html": "guides/how-big-do-havanese-get.html",
   "guides/how-big-do-malteses-get.html": "guides/how-big-do-maltese-get.html",
   "guides/how-big-do-shiba-inus-get.html": "guides/how-big-do-shiba-inu-get.html",
   "guides/how-big-do-siberian-huskys-get.html": "guides/how-big-do-siberian-husky-get.html",
