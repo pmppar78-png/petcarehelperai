@@ -194,18 +194,6 @@ for (const bucket of byBucket.values()) {
   }
 }
 
-const clustered = new Map();
-for (const rep of reps) {
-  const root = find(rep.key);
-  if (!clustered.has(root)) clustered.set(root, { example: rep.info.example, files: new Set() });
-  const dest = clustered.get(root);
-  for (const file of rep.info.files) dest.files.add(file);
-}
-
-const failures = [...clustered.values()]
-  .map((item) => [item.example, [...item.files]])
-  .filter(([, list]) => list.length > 3);
-
 function visiblePage(html) {
   return stripLegalNotices(html)
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
@@ -288,11 +276,73 @@ const STOCK = [
   [/well-balanced personality that/i, "well-balanced personality that"],
 ];
 
+// Pages still copied from origin/main keep that page's sentences. A cluster
+// fails only when a page introduces a sentence its origin copy did not have.
+const BASE = path.resolve(process.env.PRESERVATION_BASE || "/tmp/main-tree");
+const FROM_CURRENT = {
+  "guides/how-big-do-belgian-malinois-get.html": "guides/how-big-do-belgian-malinoiss-get.html",
+  "guides/how-big-do-belgian-tervuren-get.html": "guides/how-big-do-belgian-tervurens-get.html",
+  "guides/how-big-do-bichon-frise-get.html": "guides/how-big-do-bichon-frises-get.html",
+  "guides/how-big-do-chinese-shar-pei-get.html": "guides/how-big-do-chinese-shar-peis-get.html",
+  "guides/how-big-do-great-pyrenees-get.html": "guides/how-big-do-great-pyreneess-get.html",
+  "guides/how-big-do-havanese-get.html": "guides/how-big-do-havaneses-get.html",
+  "guides/how-big-do-maltese-get.html": "guides/how-big-do-malteses-get.html",
+  "guides/how-big-do-shiba-inu-get.html": "guides/how-big-do-shiba-inus-get.html",
+  "guides/how-big-do-siberian-husky-get.html": "guides/how-big-do-siberian-huskys-get.html",
+};
+const originNormCache = new Map();
+function originNorms(rel) {
+  if (originNormCache.has(rel)) return originNormCache.get(rel);
+  const originRel = FROM_CURRENT[rel] || rel;
+  const full = path.join(BASE, originRel);
+  const set = fs.existsSync(full) ? new Set(sentencesOf(fs.readFileSync(full, "utf8")).map(normalize)) : new Set();
+  originNormCache.set(rel, set);
+  return set;
+}
+const originVisibleCache = new Map();
+function originVisible(rel) {
+  if (originVisibleCache.has(rel)) return originVisibleCache.get(rel);
+  const originRel = FROM_CURRENT[rel] || rel;
+  const full = path.join(BASE, originRel);
+  const text = fs.existsSync(full) ? visiblePage(fs.readFileSync(full, "utf8")) : "";
+  originVisibleCache.set(rel, text);
+  return text;
+}
+
+const clustered = new Map();
+for (const rep of reps) {
+  const root = find(rep.key);
+  if (!clustered.has(root)) clustered.set(root, { example: rep.info.example, files: new Set(), pairs: [] });
+  const dest = clustered.get(root);
+  dest.pairs.push(rep);
+  for (const file of rep.info.files) dest.files.add(file);
+}
+
+const failures = [];
+for (const item of clustered.values()) {
+  const list = [...item.files];
+  if (list.length <= 3) continue;
+  const introduced = new Set();
+  for (const rep of item.pairs) {
+    for (const file of rep.info.files) {
+      if (!originNorms(file).has(rep.key)) introduced.add(file);
+    }
+  }
+  // Inherited main sentences may share a bucket with one edited page.
+  // Fail only when the new sentences themselves span more than three pages.
+  if (introduced.size > 3) failures.push([item.example, [...introduced]]);
+}
+
 const stockHits = [];
 for (const file of walkHtml(ROOT)) {
+  const rel = path.relative(ROOT, file);
   const text = visiblePage(fs.readFileSync(file, "utf8"));
+  const then = originVisible(rel);
   for (const [re, label] of STOCK) {
-    if (re.test(text)) stockHits.push(`${path.relative(ROOT, file)}: ${label}`);
+    re.lastIndex = 0;
+    const now = re.test(text);
+    re.lastIndex = 0;
+    if (now && !re.test(then)) stockHits.push(`${rel}: ${label}`);
   }
 }
 

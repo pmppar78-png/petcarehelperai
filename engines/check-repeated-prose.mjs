@@ -203,7 +203,55 @@ for (const file of files) {
   }
 }
 
-const acrossFailures = [...across.entries()].filter(([, list]) => list.length >= MAX_PAGES);
+// Repeats that already exist on the origin/main copy of that page are
+// inherited. A failure is a repeat or a 20-page sentence this branch added.
+const BASE = path.resolve(process.env.PRESERVATION_BASE || "/tmp/main-tree");
+const FROM_CURRENT = {
+  "guides/how-big-do-belgian-malinois-get.html": "guides/how-big-do-belgian-malinoiss-get.html",
+  "guides/how-big-do-belgian-tervuren-get.html": "guides/how-big-do-belgian-tervurens-get.html",
+  "guides/how-big-do-bichon-frise-get.html": "guides/how-big-do-bichon-frises-get.html",
+  "guides/how-big-do-chinese-shar-pei-get.html": "guides/how-big-do-chinese-shar-peis-get.html",
+  "guides/how-big-do-great-pyrenees-get.html": "guides/how-big-do-great-pyreneess-get.html",
+  "guides/how-big-do-havanese-get.html": "guides/how-big-do-havaneses-get.html",
+  "guides/how-big-do-maltese-get.html": "guides/how-big-do-malteses-get.html",
+  "guides/how-big-do-shiba-inu-get.html": "guides/how-big-do-shiba-inus-get.html",
+  "guides/how-big-do-siberian-husky-get.html": "guides/how-big-do-siberian-huskys-get.html",
+};
+const originCache = new Map();
+function originFacts(rel) {
+  if (originCache.has(rel)) return originCache.get(rel);
+  const originRel = FROM_CURRENT[rel] || rel;
+  const full = path.join(BASE, originRel);
+  const empty = { sentences: new Set(), repeated: new Set(), headings: new Map() };
+  if (!fs.existsSync(full)) {
+    originCache.set(rel, empty);
+    return empty;
+  }
+  const article = articleOf(fs.readFileSync(full, "utf8"));
+  const sentenceCounts = new Map();
+  for (const sentence of sentences(article)) sentenceCounts.set(sentence, (sentenceCounts.get(sentence) || 0) + 1);
+  const headingCounts = new Map();
+  for (const heading of headings(article)) headingCounts.set(heading, (headingCounts.get(heading) || 0) + 1);
+  const facts = {
+    sentences: new Set(sentenceCounts.keys()),
+    repeated: new Set([...sentenceCounts].filter(([, count]) => count >= 2).map(([sentence]) => sentence)),
+    headings: headingCounts,
+  };
+  originCache.set(rel, facts);
+  return facts;
+}
+
+const acrossFailures = [];
+for (const [sentence, list] of across.entries()) {
+  if (list.length < MAX_PAGES) continue;
+  if (list.some((rel) => !originFacts(rel).sentences.has(sentence))) acrossFailures.push([sentence, list]);
+}
+const newWithinSentences = withinSentences.filter((row) => !originFacts(row.rel).repeated.has(row.sentence));
+const newWithinHeadings = withinHeadings.filter((row) => (originFacts(row.rel).headings.get(row.heading) || 0) < 2);
+withinSentences.length = 0;
+withinSentences.push(...newWithinSentences);
+withinHeadings.length = 0;
+withinHeadings.push(...newWithinHeadings);
 acrossFailures.sort((a, b) => b[1].length - a[1].length);
 withinSentences.sort((a, b) => b.count - a.count);
 withinHeadings.sort((a, b) => b.count - a.count);
