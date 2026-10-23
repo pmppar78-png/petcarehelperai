@@ -56,7 +56,7 @@
   {
     "page": "resources/signs-of-pain-in-pets.html",
     "original": "Disclaimer: Use this signs of pain in pets: what most owners miss resource as background, not as a substitute for professional guidance",
-    "replacement": "Learn the quiet signs on this page so you can tell the clinic what changed, instead of waiting for an obvious cry.",
+    "replacement": "Learn the quiet signs on this page so you can tell the clinic what changed before your pet ever cries out.",
     "reason": "Slot-filled title inside a robotic not-as-a-substitute disclaimer."
   },
   {
@@ -80,7 +80,546 @@
   {
     "page": "editorial-standards.html",
     "original": "This is a reference site, not a veterinary practice",
-    "replacement": "This reference site helps an owner prepare questions, and examination, diagnosis, and treatment happen at a veterinary practice.",
+    "replacement": "This site helps owners prepare questions. Examination, diagnosis, and treatment happen at a veterinary practice.",
     "reason": "Tic restored so preservation would keep the sentence. The following sentence still says the site cannot examine, diagnose, or treat."
+  },
+  {
+    "page": "breeds/birds/caique.html",
+    "original": "Energy is the care level",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/dogs/bichon-frise.html",
+    "original": "Recommended for Bichon Frises",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/dogs/bichon-frise.html",
+    "original": "How Big Do Bichon Frises Get?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/dogs/havanese.html",
+    "original": "How Big Do Havaneses Get?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/dogs/labrador-retriever.html",
+    "original": "Recommended for Labrador Retrievers",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/dogs/maltese.html",
+    "original": "How Big Do Malteses Get?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/fish/goldfish.html",
+    "original": "How big do goldfish get?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/ball-python.html",
+    "original": "Recommended for Ball Pythons",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/bearded-dragon.html",
+    "original": "Recommended for Bearded Dragons",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/blood-python.html",
+    "original": "Rats, not a power-feeding contest",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/emerald-tree-boa.html",
+    "original": "Display, not a shoulder snake",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/frilled-dragon.html",
+    "original": "Frilled Dragon (Frilled Neck Lizard)",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/garter-snake.html",
+    "original": "The striped snake is not a tiny pet-shop extra",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/gold-dust-day-gecko.html",
+    "original": "A cup, not a grip",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/greek-tortoise.html",
+    "original": "Weeds, not a fruit bowl",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/monitor-lizard.html",
+    "original": "A genus, not a starter lizard",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/monitor-lizard.html",
+    "original": "Tame, powerful, and not a roommate",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/ornate-box-turtle.html",
+    "original": "A prairie turtle, not a woodland one",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/panther-chameleon.html",
+    "original": "Color is the locale, not a mood ring you can trust",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/red-footed-tortoise.html",
+    "original": "A forest tortoise, not a desert one",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/sailfin-dragon.html",
+    "original": "Sailfin Dragon (Philippine Sailfin Lizard)",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/tegu.html",
+    "original": "A locked room, not a couch pet",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/uromastyx.html",
+    "original": "A genus that wants a desert, not a generic lizard tank",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/reptiles/western-hognose.html",
+    "original": "Dry dirt, not a swamp",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/small-animal-breeds.html",
+    "original": "Long-Haired (Teddy Bear) Hamster",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "breeds/small-animals/skinny-pig.html",
+    "original": "Skinny Pig (Hairless Guinea Pig)",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "editorial-team.html",
+    "original": "Ben Whitaker — Aquarium and Marine Systems Contributor",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/best-bird-cages.html",
+    "original": "Best Small Animal Cages and Habitats",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/best-bird-food.html",
+    "original": "Best species-appropriate avian pellets and fresh foods for Senior Dogs",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/best-cat-food-for-kittens.html",
+    "original": "Best cat food for Senior Dogs",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/best-cat-food-seniors.html",
+    "original": "Best cat food for Senior Dogs",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/best-dog-car-seats.html",
+    "original": "Quick Answers About Best Dog Car Seats and Safety Restraints",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/best-dog-shampoos.html",
+    "original": "Quick Answers About Best Dog Shampoos",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/best-food-for-belgian-malinois.html",
+    "original": "What is the best food brand for Belgian Malinoiss?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/best-food-for-bichon-frise.html",
+    "original": "What is the best food brand for Bichon Frises?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/best-food-for-great-pyrenees.html",
+    "original": "What is the best food brand for Great Pyreneess?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/best-food-for-havanese.html",
+    "original": "What is the best food brand for Havaneses?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/best-food-for-shiba-inu.html",
+    "original": "What is the best food brand for Shiba Inus?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/can-dogs-eat-cheese.html",
+    "original": "Quick Answers About Can Dogs Eat Cheese and Dairy",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/cat-fip.html",
+    "original": "Common Questions About Feline Infectious Peritonitis (FIP)",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/cat-fiv.html",
+    "original": "Common Questions About Feline Immunodeficiency Virus (FIV)",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/cat-intestinal-parasites.html",
+    "original": "Intestinal Parasites in Dogs",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/cat-pregnancy-guide.html",
+    "original": "Cat Pregnancy and Queening Guide Questions Owners Ask",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/compare-dog-food-lifestage.html",
+    "original": "Adult Dog healthy weight, muscle mass, and energy levels. This is typically the longest life stage, lasting from maturity until senior years. When Is My Dog an Adult? Small breeds: 12 months Medium breeds: 12-14 months Large breeds: 15-18 months Giant breeds: 18-24 months Adult Dog Nutritional Requirements Moderate protein (18-26%): Maintains lean muscle mass Moderate fat (8-15%): Provides energy without excess calories Balanced omega fatty acids: Skin, coat, and immune health Appropriate fiber: Digestive health AAFCO statement: \"Formulated for adult maintenance\" or \"all life stages\" Best Adult Dog Food Options Brand/Product Type Best For Price Range The Farmer's Dog Fresh Overall adult nutrition $$ Nom Nom Fresh Digestive health focus $$ Ollie Fresh Recipe variety, sensitive stomachs $$ PetPlate Fresh Value-conscious fresh feeding $ Acana/Orijen (Chewy) Kibble High-protein, whole food kibble $ Adult Dog Considerations by Activity Level Activity Level Examples Caloric Needs Food Recommendation Low activity Senior-like adults, apartment dogs Lower than average Weight management formulas Normal activity Daily walks, moderate play Standard adult maintenance Standard adult formulas High activity Running partners, hiking dogs Higher than average Active/performance formulas Working dogs Herding, hunting, service work Significantly higher Sport/working dog formulas Senior Dog healthy weight, and support cognitive function. The right diet can significantly improve quality of life in the golden years. When Is My Dog a Senior? Dog Size Senior Age Life Expectancy Small breed (under 20 lbs) 9-11 years 12-16 years Medium breed (20-50 lbs) 8-9 years 10-14 years Large breed (50-100 lbs) 6-7 years 10-12 years Giant breed (over 100 lbs) 5-6 years 8-10 years Senior Dog Nutritional Requirements Maintained or increased protein (20-28%): Prevents muscle loss (sarcopenia) Reduced fat and calories: Prevents obesity as metabolism slows Glucosamine and chondroitin: Joint support Omega-3 fatty acids: Anti-inflammatory, cognitive support Antioxidants: Support aging immune system Easy digestibility: Aging digestive systems need gentler food Best Senior Dog Food Options Brand/Product Type Best For Price Range The Farmer's Dog Fresh Highly digestible senior nutrition $$ Nom Nom Fresh GI health, senior dogs with sensitive stomachs $$ Ollie Fresh Seniors needing novel proteins $$ Hill's Science Diet Senior (Chewy) Kibble Clinically proven senior nutrition $ Purina Pro Plan Bright Mind Kibble Cognitive support for seniors $ Common Senior Dog Health Concerns and Nutrition Arthritis: Look for added glucosamine, chondroitin, and omega-3s Weight gain: Choose lower calorie formulas or reduce portions Dental issues: Soft/fresh food may be easier to eat Kidney disease: May need reduced phosphorus (consult vet) Cognitive decline: Antioxidants, omega-3s, medium-chain triglycerides Weight Management Overweight puppies: Reduce treats, avoid free-feeding, consult vet Overweight adults: Switch to weight management formula, increase exercise Overweight seniors: Critical to address; excess weight worsens arthritis Food Allergies/Sensitivities Can develop at any age, but often appear in adults (1-3 years) Common allergens: beef, dairy, chicken, wheat, soy Ollie offers novel proteins like lamb and venison Limited ingredient diets available at Chewy Breed-Specific Considerations Brachycephalic breeds: May need smaller kibble or soft food Deep-chested breeds: Multiple small meals to reduce bloat risk Breeds prone to hip dysplasia: Large breed puppy food, joint supplements as adults/seniors Our Recommendations Summary",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/crested-gecko-care-guide.html",
+    "original": "Common Questions About Crested Gecko Care Guide",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/dog-cruciate-ligament-injury.html",
+    "original": "Common Questions About ACL/Cruciate Ligament Injury in Dogs",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/dog-ear-infections.html",
+    "original": "ACL/Cruciate Ligament Injury in Dogs",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/dog-ear-infections.html",
+    "original": "Best Dog Raincoats and Boots",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/dog-poisoning-emergency.html",
+    "original": "Call Before You Drive — The Two Numbers That Matter",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/dog-poisoning-emergency.html",
+    "original": "Top 10 Dog Toxins (2024 ASPCA Poison Control Data)",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/dog-poisoning-emergency.html",
+    "original": "Induce Vomiting — Yes, No, and the Rules",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/dog-poisoning-emergency.html",
+    "original": "DO consider inducing vomiting (after hotline clearance) for:",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/dog-poisoning-emergency.html",
+    "original": "DO NOT induce vomiting for:",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/dog-poisoning-emergency.html",
+    "original": "The Hydrogen Peroxide Protocol — Only if a Vet or Hotline Has Cleared It",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/dog-poisoning-emergency.html",
+    "original": "Toxin-Specific Numbers to Recognize",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/dog-poisoning-emergency.html",
+    "original": "Owner Mistakes That Worsen Poisoning Outcomes",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/dog-poisoning-emergency.html",
+    "original": "Prevention Tips — The Specific List",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/dog-uti-urinary-tract-infection.html",
+    "original": "Diabetes in Dogs",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/geriatric-dog-care.html",
+    "original": "Diabetes in Dogs",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/how-big-do-belgian-malinois-get.html",
+    "original": "What are the most important considerations for how big do belgian malinoiss get?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/how-big-do-belgian-tervuren-get.html",
+    "original": "What are the most important considerations for how big do belgian tervurens get?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/how-big-do-bichon-frise-get.html",
+    "original": "What are the most important considerations for how big do bichon frises get?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/how-big-do-chinese-shar-pei-get.html",
+    "original": "What are the most important considerations for how big do chinese shar peis get?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/how-big-do-great-pyrenees-get.html",
+    "original": "What are the most important considerations for how big do great pyreneess get?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/how-big-do-havanese-get.html",
+    "original": "What are the most important considerations for how big do havaneses get?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/how-big-do-maltese-get.html",
+    "original": "What are the most important considerations for how big do malteses get?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/how-big-do-shiba-inu-get.html",
+    "original": "What are the most important considerations for how big do shiba inus get?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/how-big-do-siberian-husky-get.html",
+    "original": "What are the most important considerations for how big do siberian huskys get?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/lovebird-care-guide.html",
+    "original": "stocking compatibility and stress reduction",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/multi-pet-household-guide.html",
+    "original": "Multi-Pet Household Guide Questions Owners Ask",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/new-puppy-checklist.html",
+    "original": "New Kitten Checklist and First Month Guide",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/new-puppy-checklist.html",
+    "original": "Puppy Crate training for puppies. Covers choosing the right crate, building positive associations, nighttime trai...",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/senior-dog-not-eating.html",
+    "original": "7. Cognitive Dysfunction Syndrome (CDS)",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "guides/why-does-my-dog-have-hot-spots.html",
+    "original": "Can I treat a hot spot at home?",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "medical-disclaimer.html",
+    "original": "Not a Veterinary Service",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "resources/common-cat-illness-costs.html",
+    "original": "1. Chronic Kidney Disease (CKD)",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
+  },
+  {
+    "page": "resources/senior-pet-care-guide.html",
+    "original": "Quality of Life Assessment Tools",
+    "replacement": "Reviewed heading change.",
+    "reason": "The origin heading was rewritten or removed. It is not a shortened remnant of a repeated heading.",
+    "kind": "heading"
   }
 ]
