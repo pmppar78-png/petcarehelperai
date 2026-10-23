@@ -33,10 +33,9 @@ function transitioningDiet(breed, species, seed) {
   const breedTitle = titleCase(breed);
   if (aquaticSpecies(species)) {
     const who = pluralAnimal(breedTitle);
-    const salt = species === "marine-fish" ? "ammonia, nitrite, nitrate, salinity, and temperature" : "ammonia, nitrite, nitrate, and temperature";
     const variants = aquaticInvertebrate(breedTitle) ? [
       `<p>Switch ${who} food over seven to ten days. Start with about a quarter of the new food mixed into the old food, then step the mix up every few days. A sudden change shows up as hiding, refused food, or a molt that does not finish.</p>
-      <p>If those signs appear, go back to the previous mix and test ${salt} before you blame the food.</p>`,
+      <p>If those signs appear, go back to the previous mix before you blame the food.</p>`,
       `<p>Change ${who} food in a quiet week, not in the same week as a new tank or a move. Otherwise you cannot tell a diet problem from a water problem.</p>
       <p>Hold the new food for at least three weeks after the mix is complete. Judge it by foraging and by molts that finish.</p>`,
       `<p>For ${who}, days 1–2 can be about 25% new food, days 3–4 about half, days 5–6 about 75%, then the new food alone. If they hide or stop foraging, drop back a step.</p>
@@ -45,7 +44,7 @@ function transitioningDiet(breed, species, seed) {
       <p>Note the date, the mix, whether they ate, and whether a molt finished. That log is what you show an aquatic veterinarian if the transition stalls.</p>`
     ] : [
       `<p>Switch ${who} food over seven to ten days. Start with about a quarter of the new food mixed into the old food, then step the mix up every few days. A sudden change shows up as refused food, stringy white feces, or clamped fins.</p>
-      <p>If those signs appear, go back to the previous mix and test ${salt} before you blame the food.</p>`,
+      <p>If those signs appear, go back to the previous mix before you blame the food.</p>`,
       `<p>Change ${who} food in a quiet week, not in the same week as a new tank or a move. Otherwise you cannot tell a diet problem from a water problem.</p>
       <p>Hold the new food for at least three weeks after the mix is complete. Judge it by appetite, color, and whether feces stay free of white stringy casts.</p>`,
       `<p>For ${who}, days 1–2 can be about 25% new food, days 3–4 about half, days 5–6 about 75%, then the new food alone. If the fish clamp fins or spit pellets, drop back a step.</p>
@@ -74,22 +73,22 @@ function weightManagement(breed, species, seed) {
     const who = pluralAnimal(breedTitle);
     const variants = aquaticInvertebrate(breedTitle) ? [
       `<p>Weight in ${who} is mostly uneaten food and extra feedings. Feed what they finish, and pull leftovers so they do not rot in the tank.</p>
-      <p>A ${breedTitle} that hides or stalls in a molt is a health sign, not a cue to pile on more food. Ask an aquatic veterinarian before you cut rations hard.</p>`,
+      <p>${indefiniteArticle(breedTitle, true)} ${breedTitle} that hides or stalls in a molt needs an aquatic veterinarian before the ration changes.</p>`,
       `<p>${indefiniteArticle(breedTitle, true)} ${breedTitle} that is getting too heavy does better on a measured ration of the right food than on constant snacks.</p>
       <p>The activity that matters is foraging through the tank. A bare tank with food dropped in one spot does less for ${who} than a layout they have to search.</p>`,
-      `<p>Weighing ${who} at home is awkward, so watch whether they forage and whether molts finish. A soft, overstuffed look from too much food is the portion problem. A failed molt is not.</p>
+      `<p>Weighing ${who} at home is awkward, so watch whether they forage and whether molts finish. A soft, overstuffed look from too much food is the portion problem. A failed molt is a health problem.</p>
       <p>Change the amount in small steps. A sharp cut can leave ${who} ignoring the feeding spot.</p>`,
       `<p>A weight-control food for ${who} is the species-appropriate formula fed in a smaller ration. Algae eaters still need their vegetable matter. Carnivorous snails and crabs still need meaty foods.</p>
-      <p>Count every extra wafer, frozen cube, and vegetable piece. Those additions, not the measured ration, are what usually overfeed ${who}.</p>`
+      <p>Count every extra wafer, frozen cube, and vegetable piece. Those additions are what usually overfeed ${who}.</p>`
     ] : [
       `<p>Weight in ${who} is mostly uneaten food and extra feedings. Feed what they finish in a couple of minutes, and pull leftovers so they do not rot in the tank.</p>
-      <p>A sunken belly or a swollen one is a health sign, not a cue to add treats. Reassess body shape every few weeks and ask an aquatic veterinarian before you cut rations hard.</p>`,
+      <p>A sunken belly or a swollen one needs an aquatic veterinarian before you add food. Reassess body shape every few weeks.</p>`,
       `<p>${indefiniteArticle(breedTitle, true)} ${breedTitle} that is getting too heavy does better on a measured ration of the right food than on a lower-quality pellet plus constant snacks.</p>
       <p>The activity that matters is swimming and searching the layout for food. A bare tank with food dropped in one spot does less for ${who} than a layout they have to search.</p>`,
       `<p>Weighing a fish at home is awkward, so use body shape: a pinched belly, a bulge, or a pinecone swell of the scales. Those are different problems, and only the bulge from overfeeding is a portion issue.</p>
       <p>Change the amount in small steps. A sharp cut can leave ${who} picking at the substrate or, in aggressive species, picking at tankmates.</p>`,
       `<p>A weight-control food for ${who} is the species-appropriate formula fed in a smaller ration. Herbivores and algae eaters still need their vegetable matter. Carnivores still need meaty foods.</p>
-      <p>Count every extra wafer, frozen cube, and pea. Those additions, not the measured pellet, are what usually overfeed ${who}.</p>`
+      <p>Count every extra wafer, frozen cube, and pea. Those additions are what usually overfeed ${who}.</p>`
     ];
     return variants[seed % variants.length];
   }

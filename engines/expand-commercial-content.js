@@ -186,15 +186,15 @@ function generateFoodContent(name, data, meta) {
   const waterTests = meta.term === "marine fish"
     ? "ammonia, nitrite, nitrate, salinity, and temperature"
     : "ammonia, nitrite, nitrate, and temperature";
-  // Variant sensitivity paragraphs. Aquatic pages must not inherit mammal gut and skin signs.
+  // One water-test sentence lives here. Other aquatic sections must not repeat it.
   const sensitivityVariants = aquatic && invertebrate ? [
-    `A ${name} with a diet or water problem hides, refuses food, or fails a molt. Test ${waterTests} before changing the food. If the water is stable and the ${name} still will not forage, an aquatic veterinarian should look for a bad molt or an infection.`,
-    `Food trouble in a ${name} is usually the water or a piece of food the animal cannot handle. Watch whether it forages and whether molts finish. Correct the water test before you blame the brand.`,
-    `A ${name} ignores food when the piece is wrong or the water is off. Hiding and a stalled molt are the signs to record. A water test comes before a brand change.`,
+    `If foraging stops, the animal hides, or a molt stalls, test ${waterTests} before you change the food.`,
+    `Food trouble is usually the water or a piece of food the animal cannot handle. Watch whether it forages and whether molts finish. Test ${waterTests} before you blame the brand.`,
+    `Hiding and a stalled molt are the signs to record. Test ${waterTests} before you change the food.`,
   ] : aquatic ? [
-    `A ${name} with a diet or water problem loses appetite, fades, clamps the fins, flashes against decor, passes stringy white feces, or works the gills too fast. Test ${waterTests} before changing the food. If the water is stable and the ${name} still will not eat, an aquatic veterinarian should look for parasites or infection.`,
-    `Food trouble in a ${name} is usually the water or a pellet of the wrong size. Watch appetite, color, fin position, and whether feces turn white and stringy. Correct ammonia and temperature first, then ask an aquatic veterinarian if the fish still declines.`,
-    `A ${name} spits or ignores pellets when the piece is the wrong size or the water is off. Clamped fins, pale color, rapid gill movement, and stringy feces are the signs to record. A water test comes before a brand change.`,
+    `If appetite drops, color fades, fins clamp, or feces turn stringy and white, test ${waterTests} before you change the food.`,
+    `Food trouble is usually the water or a pellet of the wrong size. Watch appetite, color, fin position, and whether feces turn white and stringy. Test ${waterTests} before you change the food.`,
+    `Clamped fins, pale color, rapid gill movement, and stringy feces are the signs to record. Test ${waterTests} before you change the food.`,
   ] : [
     `${name} ${meta.termPlural} can be susceptible to dietary sensitivities, particularly given their predisposition to ${conditions}. Signs of food sensitivity include digestive upset, skin irritation, excessive scratching, and changes in stool quality. For ${name} with suspected food allergies, a veterinarian-guided elimination diet can identify trigger ingredients. Limited-ingredient diets (LIDs) that use novel proteins such as venison, duck, or lamb combined with single carbohydrate sources are often effective. Avoid common allergens including wheat, corn, and soy unless your ${name} tolerates them well. Probiotics and digestive enzyme supplements can also support gut health in sensitive ${name} ${meta.termPlural}.`,
     `Given ${name}'s predisposition to ${conditions}, monitoring for dietary sensitivities is important. Watch for persistent itching, ear infections, loose stools, or vomiting after meals. If sensitivity is suspected, work with your ${meta.vetType} on a strict elimination diet over 8-12 weeks to pinpoint the offending ingredient. Hydrolyzed protein diets break proteins into fragments too small to trigger immune responses and can be an effective diagnostic and management tool. Once triggers are identified, maintaining an avoidance diet is straightforward with the wide range of limited-ingredient options now available for ${meta.termPlural}.`,
