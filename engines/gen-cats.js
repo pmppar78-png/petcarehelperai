@@ -143,7 +143,7 @@ function makePage(b) {
       <div class="affiliate-callout">
         <h4>Save on ${name} Care</h4>
         <p>
-          <a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener">Chewy Autoship</a> - Save on food &amp; litter |
+          <a href="https://www.chewy.com/app/content/autoship" target="_blank" rel="sponsored noopener">Chewy Autoship</a> - Save on food &amp; litter |
           <a href="https://www.lemonade.com/pet" target="_blank" rel="sponsored noopener">Lemonade Pet</a> - Affordable cat insurance |
           <a href="https://www.feliway.com" target="_blank" rel="sponsored noopener">Feliway</a> - Stress reduction products
         </p>
