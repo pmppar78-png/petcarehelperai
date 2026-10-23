@@ -8,6 +8,11 @@
  * Fragments under four words are skipped so labels such as "Home" are not
  * treated as prose.
  *
+ * Legal notices are shared markup, not prose. includes/affiliate-disclosure.html
+ * and includes/medical-disclaimer.html are copied onto pages inside
+ * .affiliate-disclosure and .medical-disclaimer. Those elements are removed
+ * before any sentence is compared. There is no sentence allowlist.
+ *
  * Usage: node engines/check-prose-cross.mjs
  */
 import fs from "fs";
@@ -64,10 +69,17 @@ function decode(text) {
     .trim();
 }
 
+function stripLegalNotices(html) {
+  return html.replace(
+    /<(p|div|aside|section)\b[^>]*\bclass\s*=\s*(["'])[^"']*\b(?:affiliate-disclosure|medical-disclaimer)\b[^"']*\2[^>]*>[\s\S]*?<\/\1>/gi,
+    " "
+  );
+}
+
 function regionText(html) {
   const article = html.match(/<article[\s\S]*?<\/article>/i);
   const main = html.match(/<main[\s\S]*?<\/main>/i);
-  return (article || main || ["", ""])[0];
+  return stripLegalNotices((article || main || ["", ""])[0]);
 }
 
 function sentencesOf(html) {
@@ -195,7 +207,7 @@ const failures = [...clustered.values()]
   .filter(([, list]) => list.length > 3);
 
 function visiblePage(html) {
-  return html
+  return stripLegalNotices(html)
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
     .replace(/<[^>]+>/g, " ")

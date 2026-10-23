@@ -7,8 +7,10 @@
  * - The same heading text appears twice inside one article.
  *
  * Scans the <article> only. Header, footer, and the shared veterinary
- * notice outside the article are site chrome, not page prose. Tables,
- * scripts, and styles are not sentences. Headings are checked on their
+ * notice outside the article are site chrome, not page prose. Elements
+ * with class affiliate-disclosure or medical-disclaimer are the shared
+ * legal notices from includes/, and they are removed before sentences
+ * are counted. Tables, scripts, and styles are not sentences. Headings are checked on their
  * own so a title is not glued to the paragraph under it.
  *
  * Not part of the Netlify build. `npm run check:repeated` still exits 1
@@ -54,9 +56,16 @@ function decode(text) {
     .trim();
 }
 
+function stripLegalNotices(html) {
+  return html.replace(
+    /<(p|div|aside|section)\b[^>]*\bclass\s*=\s*(["'])[^"']*\b(?:affiliate-disclosure|medical-disclaimer)\b[^"']*\2[^>]*>[\s\S]*?<\/\1>/gi,
+    " "
+  );
+}
+
 function articleOf(html) {
   const match = html.match(/<article\b[\s\S]*?<\/article>/i);
-  return match ? match[0] : "";
+  return match ? stripLegalNotices(match[0]) : "";
 }
 
 function headings(article) {
