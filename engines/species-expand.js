@@ -124,10 +124,10 @@ function getBreedsUrl(category) {
 
 function getAffiliate(category) {
   if (category === 'dogs') return `<a href="https://www.thefarmersdog.com" target="_blank" rel="sponsored noopener">The Farmer's Dog</a> - Fresh, human-grade meals | <a href="https://embarkvet.com" target="_blank" rel="sponsored noopener">Embark DNA</a> - Breed health screening | <a href="https://www.spotpetins.com" target="_blank" rel="sponsored noopener">Spot Insurance</a> - Comprehensive coverage`;
-  if (category === 'cats') return `<a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener">Chewy</a> - Cat food &amp; supplies | <a href="https://www.basepaws.com" target="_blank" rel="sponsored noopener">Basepaws</a> - Cat DNA testing | <a href="https://www.spotpetins.com" target="_blank" rel="sponsored noopener">Spot Insurance</a> - Cat health coverage`;
-  if (category === 'fish') return `<a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener">Chewy</a> - Aquarium supplies | <a href="https://www.petco.com" target="_blank" rel="sponsored noopener">Petco</a> - Tanks &amp; equipment`;
-  if (category === 'reptiles') return `<a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener">Chewy</a> - Reptile supplies | <a href="https://www.petco.com" target="_blank" rel="sponsored noopener">Petco</a> - Terrariums &amp; equipment`;
-  return `<a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener">Chewy</a> - Pet supplies | <a href="https://www.petco.com" target="_blank" rel="sponsored noopener">Petco</a> - Habitats &amp; equipment`;
+  if (category === 'cats') return `<a href="https://www.chewy.com/app/content/autoship" target="_blank" rel="sponsored noopener">Chewy</a> - Cat food &amp; supplies | <a href="https://www.basepaws.com" target="_blank" rel="sponsored noopener">Basepaws</a> - Cat DNA testing | <a href="https://www.spotpetins.com" target="_blank" rel="sponsored noopener">Spot Insurance</a> - Cat health coverage`;
+  if (category === 'fish') return `<a href="https://www.chewy.com/app/content/autoship" target="_blank" rel="sponsored noopener">Chewy</a> - Aquarium supplies | <a href="https://www.petco.com" target="_blank" rel="sponsored noopener">Petco</a> - Tanks &amp; equipment`;
+  if (category === 'reptiles') return `<a href="https://www.chewy.com/app/content/autoship" target="_blank" rel="sponsored noopener">Chewy</a> - Reptile supplies | <a href="https://www.petco.com" target="_blank" rel="sponsored noopener">Petco</a> - Terrariums &amp; equipment`;
+  return `<a href="https://www.chewy.com/app/content/autoship" target="_blank" rel="sponsored noopener">Chewy</a> - Pet supplies | <a href="https://www.petco.com" target="_blank" rel="sponsored noopener">Petco</a> - Habitats &amp; equipment`;
 }
 
 function generateDogPage(breed) {
@@ -199,7 +199,7 @@ function generateDogPage(breed) {
 
       <h2>Diet &amp; Nutrition</h2>
       <p>${breed.dietaryNeeds}</p>
-      <div class="affiliate-callout"><h4>Top Food Choices for ${breed.name}s</h4><p><a href="https://www.thefarmersdog.com" target="_blank" rel="sponsored noopener">The Farmer's Dog</a> - Fresh, pre-portioned meals | <a href="https://www.chewy.com/app/autoship" target="_blank" rel="sponsored noopener">Chewy Autoship</a> - Save on premium food</p></div>
+      <div class="affiliate-callout"><h4>Top Food Choices for ${breed.name}s</h4><p><a href="https://www.thefarmersdog.com" target="_blank" rel="sponsored noopener">The Farmer's Dog</a> - Fresh, pre-portioned meals | <a href="https://www.chewy.com/app/content/autoship" target="_blank" rel="sponsored noopener">Chewy Autoship</a> - Save on premium food</p></div>
 
       <h2>Housing &amp; Environment</h2>
       <p>${breed.housing}</p>
