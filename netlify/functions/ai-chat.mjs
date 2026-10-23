@@ -3,7 +3,7 @@ import OpenAI from "openai";
 // Affiliate data embedded directly to avoid JSON import issues in Netlify Functions
 const affiliates = {
   "foodAndNutrition": [
-    { "name": "Chewy Autoship", "url": "https://www.chewy.com/app/autoship" },
+    { "name": "Chewy Autoship", "url": "https://www.chewy.com/b/autoship-save-15682" },
     { "name": "The Farmer's Dog", "url": "https://www.thefarmersdog.com" },
     { "name": "Nom Nom", "url": "https://www.nomnomnow.com" },
     { "name": "Ollie", "url": "https://www.myollie.com" },
@@ -57,7 +57,7 @@ const affiliates = {
     { "name": "Dunbar Academy", "url": "https://www.dunbaracademy.com" },
     { "name": "Pupford", "url": "https://pupford.com" },
     { "name": "Brain Training for Dogs", "url": "https://braintrainingfordogs.com" },
-    { "name": "GoodPup", "url": "https://www.goodpup.com" }
+    { "name": "Rover dog training", "url": "https://www.rover.com/training/search" }
   ],
   "walkingSittingBoarding": [
     { "name": "Rover", "url": "https://www.rover.com" },
@@ -94,7 +94,7 @@ const affiliates = {
     { "name": "FURminator", "url": "https://www.furminator.com" },
     { "name": "Wahl grooming tools", "url": "https://www.wahlpetproducts.com" },
     { "name": "Nutramax Cosequin", "url": "https://www.nutramaxlabs.com" },
-    { "name": "Nordic Naturals Pets", "url": "https://www.nordicnaturals.com/pets" },
+    { "name": "Nordic Naturals Pets", "url": "https://www.nordic.com/nordic-pet/" },
     { "name": "Grizzly Salmon Oil", "url": "https://grizzlypetproducts.com" }
   ],
   "anxietyAndCalming": [
@@ -133,13 +133,54 @@ const categoryColors = {
 // Helper function to format partner links with category-specific colors
 function formatAffiliateLink(affiliate, categoryKey) {
   const color = categoryColors[categoryKey] || "#0ea5e9";
-  return `<a href="${affiliate.url}" target="_blank" rel="noopener noreferrer"><span style="color:${color};font-weight:600;">${affiliate.name}</span></a>`;
+  return `<a href="${affiliate.url}" target="_blank" rel="sponsored nofollow noopener noreferrer"><span style="color:${color};font-weight:600;">${affiliate.name}</span></a>`;
 }
 
 // Helper function to get partner resources from a category
 function getAffiliatesFromCategory(categoryKey, maxCount = 4) {
   if (!affiliates[categoryKey] || !Array.isArray(affiliates[categoryKey])) return [];
   return affiliates[categoryKey].slice(0, maxCount);
+}
+
+const APPROVED_URLS = new Set(
+  Object.values(affiliates).flat().map((item) => item.url)
+);
+
+function approvedUrlBlock() {
+  return Object.values(affiliates)
+    .flat()
+    .map((item) => `- ${item.name}: ${item.url}`)
+    .join("\n");
+}
+
+function isAllowedHref(href) {
+  if (APPROVED_URLS.has(href)) return true;
+  try {
+    const url = new URL(href);
+    return url.protocol === "https:" && url.hostname === "www.google.com" && url.pathname === "/search";
+  } catch (err) {
+    return false;
+  }
+}
+
+// The model is told to use only the approved list. This drops any other link
+// it writes anyway, including review sites it was not given.
+function stripUnapprovedLinks(text) {
+  let out = String(text).replace(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi, (full, attrs, inner) => {
+    const match = attrs.match(/href\s*=\s*["']([^"']+)["']/i);
+    if (match && isAllowedHref(match[1])) return full;
+    return inner;
+  });
+  out = out.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, (full, label, url) => (
+    isAllowedHref(url) ? full : label
+  ));
+  out = out.replace(/https?:\/\/[^\s)<"]+/g, (url) => {
+    const trimmed = url.replace(/[.,;:]+$/, "");
+    const suffix = url.slice(trimmed.length);
+    return (isAllowedHref(trimmed) ? trimmed : "") + suffix;
+  });
+  out = out.replace(/\bpetinsurancereview\.com\b/gi, "");
+  return out.replace(/[ \t]{2,}/g, " ").replace(/ +([.,;:])/g, "$1");
 }
 
 // Only our own site (petcarehelperai.com) and its Netlify deploys/previews may call this endpoint.
@@ -323,7 +364,7 @@ export default async function handler(req, context) {
       "• Tele-vet needs → Suggest Pawp Vet, Airvet, Vetster for 24/7 virtual consultations\n" +
       "• Medication/pharmacy questions → Suggest 1-800-PetMeds, PetCareRx, Chewy Pharmacy, or similar\n" +
       "• DNA/breed questions → Suggest Embark DNA, Wisdom Panel, Basepaws (cats)\n" +
-      "• Training/behavior issues → Suggest K9 Training Institute, SpiritDog Training, Brain Training for Dogs, GoodPup\n" +
+      "• Training/behavior issues → Suggest K9 Training Institute, SpiritDog Training, Brain Training for Dogs, Rover dog training\n" +
       "• Walking/sitting/boarding needs → Suggest Rover, Wag!, TrustedHousesitters, Camp Bow Wow\n" +
       "• GPS/tracking concerns → Suggest Fi GPS Collars, Whistle GPS, Tractive GPS, Halo Collar\n" +
       "• Pet cameras/monitoring → Suggest Furbo, Petcube\n" +
@@ -332,8 +373,19 @@ export default async function handler(req, context) {
       "• Anxiety/calming needs → Suggest ThunderShirt, Adaptil (dogs), Feliway (cats), calming supplements\n" +
       "• Aquarium/fish care → Suggest Aquarium Co-Op, API Aquarium, Seachem, Fluval\n\n" +
 
+      "APPROVED LINKS ONLY (strict):\n" +
+      "• Output a URL only when you copy it exactly from the approved list below.\n" +
+      "• The one exception is a Google search link of the form https://www.google.com/search?q=... used in the vet-finder steps.\n" +
+      "• Do not invent, recall, or guess any other website. Do not link review sites, comparison sites, blogs, retailers, clinics, or articles that are not on the list.\n" +
+      "• petinsurancereview.com is not approved. Neither is any domain you remember from training.\n" +
+      "• If a useful resource is not on the list, name the kind of help in words and give no URL.\n" +
+      "• Phone numbers already written in these instructions may be given as numbers. Do not turn them into new websites.\n\n" +
+      "APPROVED URL LIST:\n" +
+      approvedUrlBlock() + "\n\n" +
+
       "FORMATTING RULES:\n" +
       "• Use 0–4 partner links per answer (NEVER more)\n" +
+      "• Every partner URL must be copied from the approved list. Never type a URL from memory.\n" +
       "• Links will be formatted automatically with category-appropriate colors\n" +
       "• Mention partners AFTER giving your main advice\n" +
       "• NEVER discuss business models or payment structures\n" +
@@ -447,7 +499,7 @@ export default async function handler(req, context) {
       max_tokens: 2048,
     });
 
-    const reply = completion.choices[0]?.message?.content || "";
+    const reply = stripUnapprovedLinks(completion.choices[0]?.message?.content || "");
 
     // Dynamic partner link suggestion based on conversation topic
     let affiliateSuggestion = "";
