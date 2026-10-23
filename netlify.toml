@@ -1,4 +1,5 @@
 [build]
+  command = "node engines/check-care-lines.mjs"
   publish = "."
   functions = "netlify/functions"
 
