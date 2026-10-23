@@ -4,8 +4,9 @@
   "description": "AI Pet Medical & Vet Help Finder",
   "type": "module",
   "scripts": {
-    "check:prose": "node engines/check-prose.mjs && node engines/check-prose-cross.mjs && node engines/check-care-lines.mjs && node engines/check-repeated-prose.mjs",
-    "check:care-lines": "node engines/check-care-lines.mjs"
+    "check:prose": "node engines/check-prose.mjs && node engines/check-prose-cross.mjs && node engines/check-care-lines.mjs",
+    "check:care-lines": "node engines/check-care-lines.mjs",
+    "check:repeated": "node engines/check-repeated-prose.mjs"
   },
   "dependencies": {
     "openai": "^4.20.0"

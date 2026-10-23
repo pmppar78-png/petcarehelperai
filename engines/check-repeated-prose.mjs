@@ -11,6 +11,11 @@
  * scripts, and styles are not sentences. Headings are checked on their
  * own so a title is not glued to the paragraph under it.
  *
+ * Not part of the Netlify build. `npm run check:repeated` still exits 1
+ * when it finds repeats. The GitHub Action "Repeated prose report" prints
+ * the same output and does not fail the workflow, so a production deploy
+ * is not blocked while the shared sentences are rewritten.
+ *
  * Usage: node engines/check-repeated-prose.mjs
  */
 import fs from "node:fs";
