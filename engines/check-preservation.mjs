@@ -33,17 +33,13 @@
  * function-word list. Jaccard alone misses a shared skeleton such as
  * "here are background for" or "here as background" once the surrounding
  * words differ. The 4-gram and content 3-gram tests catch that.
- * Heading rows (kind "heading") are reviewed exceptions for origin
- * headings that were rewritten. They are not sentence replacements, and
- * they are left out of the similarity comparison.
- *
- * Every H1–H6 on origin/main must still be an H1–H6 on the current page,
- * with the same text after entity and whitespace normalization. A proper
- * word-prefix left behind, such as "Lyme Disease in" for "Lyme Disease
- * in Dogs", fails even when the full heading is a cross-page template.
- * A heading whose masked form occurs on more than three origin pages may
- * be absent when no shortened remnant remains. Any other missing heading
- * must be listed in the replacements file.
+ * There is no heading exemption. engines/chrome-main.mjs compares the
+ * title, meta description, Open Graph title, Twitter title, H1, every
+ * H2–H6 text and level, JSON-LD headline and article name, image alt, and
+ * link text with origin/main. A page whose visible article differs from
+ * origin/main may add headings. It may not drop or rewrite a heading that
+ * is on origin/main. The only text that may stand in for an origin
+ * heading is the replacement on one of the reviewed sentence rows.
  *
  * data/preservation-replacements.json is pinned by SHA-256. Adding or
  * editing a row fails this check until the pin in this file is updated
@@ -64,9 +60,10 @@
 import crypto from "crypto";
 import fs from "fs";
 import path from "path";
+import { assertChrome } from "./chrome-main.mjs";
 import { hrefSatisfied, resolveOriginBase } from "./origin-base.mjs";
 
-const REPLACEMENTS_SHA256 = "484d2ab39c437ce46863a5132117278f613baf6333f7bc886caa52e4aae06e01";
+const REPLACEMENTS_SHA256 = "0f3d4d282457320376d88010646fa208fc9a2155ebd43a7af9b3bee8ed4c56cd";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 4;
@@ -693,8 +690,8 @@ function loadReplacements() {
         process.exit(1);
       }
     }
-    if (row.kind !== undefined && row.kind !== "heading") {
-      console.error(`preservation replacement has unknown kind on ${row.page}`);
+    if (row.kind !== undefined) {
+      console.error(`preservation replacement rows cannot exempt headings (${row.page})`);
       process.exit(1);
     }
     const key = `${row.page}\n${normSentence(row.original)}`;
@@ -710,9 +707,7 @@ function loadReplacements() {
 const REPLACEMENTS = loadReplacements();
 
 function replacementRow(rel, sentence) {
-  const row = REPLACEMENTS.get(`${rel}\n${normSentence(sentence)}`) || null;
-  if (row && row.kind === "heading") return null;
-  return row;
+  return REPLACEMENTS.get(`${rel}\n${normSentence(sentence)}`) || null;
 }
 
 function sameFacts(original, replacement) {
@@ -761,7 +756,6 @@ function maskedGrams(norm, width, contentOnly) {
 function assertReplacementVariety() {
   const items = [];
   for (const row of REPLACEMENTS.values()) {
-    if (row.kind === "heading") continue;
     for (const sentence of replacementPieces(row.replacement)) {
       const key = normalize(sentence);
       items.push({
@@ -812,65 +806,6 @@ function assertReplacementVariety() {
   }
 }
 
-function headingTexts(html) {
-  const found = [];
-  const re = /<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1>/gi;
-  let match;
-  while ((match = re.exec(html))) {
-    const text = decode(match[2].replace(/<[^>]+>/g, " "));
-    if (text) found.push(text);
-  }
-  return found;
-}
-
-function headingWords(text) {
-  return text.toLowerCase().replace(/[^a-z0-9']+/g, " ").trim().split(/\s+/).filter(Boolean);
-}
-
-function isWordPrefix(short, full) {
-  const left = headingWords(short);
-  const right = headingWords(full);
-  if (left.length < 2 || left.length >= right.length) return false;
-  return right.slice(0, left.length).join(" ") === left.join(" ");
-}
-
-function assertHeadings(pagePairs) {
-  const counts = new Map();
-  const originByRel = new Map();
-  for (const pair of pagePairs) {
-    const heads = headingTexts(fs.readFileSync(pair.origin, "utf8"));
-    originByRel.set(pair.rel, heads);
-    const seen = new Set();
-    for (const head of heads) {
-      const key = normalize(head);
-      if (seen.has(key)) continue;
-      seen.add(key);
-      counts.set(key, (counts.get(key) || 0) + 1);
-    }
-  }
-  const problems = [];
-  for (const pair of pagePairs) {
-    const originList = originByRel.get(pair.rel);
-    const current = headingTexts(fs.readFileSync(pair.current, "utf8"));
-    const currentKeys = new Set(current.map((head) => normSentence(head)));
-    const originKeys = new Set(originList.map((head) => normSentence(head)));
-    for (const head of originList) {
-      if (currentKeys.has(normSentence(head))) continue;
-      if (REPLACEMENTS.has(`${pair.rel}\n${normSentence(head)}`)) continue;
-      const remnant = current.some(
-        (item) => isWordPrefix(item, head) && !originKeys.has(normSentence(item)),
-      );
-      if (!remnant && (counts.get(normalize(head)) || 0) > 3) continue;
-      problems.push(`${pair.rel}: ${head}`);
-    }
-  }
-  if (problems.length) {
-    console.error(`origin headings missing (${problems.length})`);
-    for (const line of problems.slice(0, 40)) console.error(line);
-    process.exit(1);
-  }
-}
-
 function assertReplacements(pagePairs) {
   assertReplacementVariety();
   const byRel = new Map(pagePairs.map((pair) => [pair.rel, pair]));
@@ -882,11 +817,6 @@ function assertReplacements(pagePairs) {
       continue;
     }
     const originHtml = fs.readFileSync(pair.origin, "utf8");
-    if (row.kind === "heading") {
-      const found = headingTexts(originHtml).some((head) => normSentence(head) === normSentence(row.original));
-      if (!found) problems.push(`${row.page}: original heading is not on origin/main`);
-      continue;
-    }
     const found = sentencesOf(originHtml).some(
       (sentence) => normSentence(sentence) === normSentence(row.original),
     );
@@ -1532,7 +1462,13 @@ if (!out.length) {
 const work = ONLY.size ? out.filter((pair) => ONLY.has(pair.rel) || ONLY.has(pair.originRel)) : out;
 console.error(`pages ${out.length}, work ${work.length}, missing counterparts ${missing.length}`);
 assertReplacements(out);
-assertHeadings(out);
+const chrome = assertChrome(ROOT, BASE);
+if (chrome.problems.length) {
+  console.error(`chrome check failed (${chrome.problems.length} pages)`);
+  for (const line of chrome.problems.slice(0, 40)) console.error(line);
+  process.exit(1);
+}
+console.error(`chrome check ok (${chrome.pages} html files)`);
 const index = buildIndex(out);
 if (FIX) {
   const totals = fixAll(index, work);

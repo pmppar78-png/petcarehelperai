@@ -46,6 +46,9 @@ export const HREF_RENAMES = {
   "/guides/how-big-do-malteses-get": "/guides/how-big-do-maltese-get",
   "/guides/how-big-do-shiba-inus-get": "/guides/how-big-do-shiba-inu-get",
   "/guides/how-big-do-siberian-huskys-get": "/guides/how-big-do-siberian-husky-get",
+  "/breeds/dogs/pembroke-welsh-corgi/best-food": "/commercial/dogs/pembroke-welsh-corgi/best-food",
+  "/breeds/dogs/pembroke-welsh-corgi/best-insurance": "/commercial/dogs/pembroke-welsh-corgi/best-insurance",
+  "/breeds/dogs/pembroke-welsh-corgi/cost-to-own": "/commercial/dogs/pembroke-welsh-corgi/cost-to-own",
 };
 
 const CACHE = "/tmp/origin-main-baseline";
