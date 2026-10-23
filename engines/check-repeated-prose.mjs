@@ -21,6 +21,11 @@
  * Cross-page sentences and repeats already on main do not fail that job,
  * and Netlify still runs only the care-line check.
  *
+ * Full mode exempts a repeat that already exists on that page's origin/main
+ * copy. That ratchet requires the baseline. A missing baseline is a hard
+ * error, not an empty origin file and not a silent pass. --new-vs reads the
+ * git ref directly and does not use the worktree.
+ *
  * Usage:
  *   node engines/check-repeated-prose.mjs
  *   node engines/check-repeated-prose.mjs --new-vs origin/main
@@ -28,6 +33,7 @@
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
+import { FROM_CURRENT, resolveOriginBase } from "./origin-base.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 7;
@@ -205,18 +211,7 @@ for (const file of files) {
 
 // Repeats that already exist on the origin/main copy of that page are
 // inherited. A failure is a repeat or a 20-page sentence this branch added.
-const BASE = path.resolve(process.env.PRESERVATION_BASE || "/tmp/main-tree");
-const FROM_CURRENT = {
-  "guides/how-big-do-belgian-malinois-get.html": "guides/how-big-do-belgian-malinoiss-get.html",
-  "guides/how-big-do-belgian-tervuren-get.html": "guides/how-big-do-belgian-tervurens-get.html",
-  "guides/how-big-do-bichon-frise-get.html": "guides/how-big-do-bichon-frises-get.html",
-  "guides/how-big-do-chinese-shar-pei-get.html": "guides/how-big-do-chinese-shar-peis-get.html",
-  "guides/how-big-do-great-pyrenees-get.html": "guides/how-big-do-great-pyreneess-get.html",
-  "guides/how-big-do-havanese-get.html": "guides/how-big-do-havaneses-get.html",
-  "guides/how-big-do-maltese-get.html": "guides/how-big-do-malteses-get.html",
-  "guides/how-big-do-shiba-inu-get.html": "guides/how-big-do-shiba-inus-get.html",
-  "guides/how-big-do-siberian-husky-get.html": "guides/how-big-do-siberian-huskys-get.html",
-};
+const BASE = resolveOriginBase({ root: ROOT });
 const originCache = new Map();
 function originFacts(rel) {
   if (originCache.has(rel)) return originCache.get(rel);

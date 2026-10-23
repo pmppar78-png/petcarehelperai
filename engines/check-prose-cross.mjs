@@ -13,10 +13,16 @@
  * .affiliate-disclosure and .medical-disclaimer. Those elements are removed
  * before any sentence is compared. There is no sentence allowlist.
  *
+ * Sentences already present on that page's origin/main copy are exempt.
+ * That baseline ratchet applies only after the origin tree is read. A
+ * missing baseline is a hard error, not a silent pass and not a flood of
+ * false failures from empty origin files.
+ *
  * Usage: node engines/check-prose-cross.mjs
  */
 import fs from "fs";
 import path from "path";
+import { FROM_CURRENT, resolveOriginBase } from "./origin-base.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 4;
@@ -277,19 +283,9 @@ const STOCK = [
 ];
 
 // Pages still copied from origin/main keep that page's sentences. A cluster
-// fails only when a page introduces a sentence its origin copy did not have.
-const BASE = path.resolve(process.env.PRESERVATION_BASE || "/tmp/main-tree");
-const FROM_CURRENT = {
-  "guides/how-big-do-belgian-malinois-get.html": "guides/how-big-do-belgian-malinoiss-get.html",
-  "guides/how-big-do-belgian-tervuren-get.html": "guides/how-big-do-belgian-tervurens-get.html",
-  "guides/how-big-do-bichon-frise-get.html": "guides/how-big-do-bichon-frises-get.html",
-  "guides/how-big-do-chinese-shar-pei-get.html": "guides/how-big-do-chinese-shar-peis-get.html",
-  "guides/how-big-do-great-pyrenees-get.html": "guides/how-big-do-great-pyreneess-get.html",
-  "guides/how-big-do-havanese-get.html": "guides/how-big-do-havaneses-get.html",
-  "guides/how-big-do-maltese-get.html": "guides/how-big-do-malteses-get.html",
-  "guides/how-big-do-shiba-inu-get.html": "guides/how-big-do-shiba-inus-get.html",
-  "guides/how-big-do-siberian-husky-get.html": "guides/how-big-do-siberian-huskys-get.html",
-};
+// fails only when the sentences this branch introduced span more than three
+// pages. Sentences already on that page's origin/main copy are exempt.
+const BASE = resolveOriginBase({ root: ROOT });
 const originNormCache = new Map();
 function originNorms(rel) {
   if (originNormCache.has(rel)) return originNormCache.get(rel);

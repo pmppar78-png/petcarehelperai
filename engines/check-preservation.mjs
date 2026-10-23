@@ -27,9 +27,15 @@
  *   node engines/check-preservation.mjs
  *   node engines/check-preservation.mjs --fix
  *   node engines/check-preservation.mjs --base /tmp/main-tree
+ *
+ * The baseline is origin/main. An explicit --base path, PRESERVATION_BASE,
+ * /tmp/main-tree, or a git worktree of origin/main must contain HTML.
+ * A missing baseline exits 1. This check never reports ok with zero pages.
+ * An old how-big href is satisfied by its renamed slug.
  */
 import fs from "fs";
 import path from "path";
+import { hrefSatisfied, resolveOriginBase } from "./origin-base.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 4;
@@ -139,7 +145,8 @@ function argValue(flag, fallback) {
   return i !== -1 && process.argv[i + 1] ? process.argv[i + 1] : fallback;
 }
 
-const BASE = path.resolve(argValue("--base", "/tmp/main-tree"));
+const explicitBase = argValue("--base", "");
+const BASE = resolveOriginBase({ root: ROOT, explicit: explicitBase || undefined });
 const FIX = process.argv.includes("--fix");
 const ONLY = new Set(
   (argValue("--only", "") || "")
@@ -648,7 +655,7 @@ function analyze(index, pair, live) {
   const missingNums = [...originNums].filter((num) => !currentNums.has(num));
   const originHrefs = [...new Set(hrefsIn(regionHtml(originHtml)))];
   const currentHrefs = new Set(hrefsIn(currentHtml));
-  const missingHrefs = originHrefs.filter((href) => !currentHrefs.has(href));
+  const missingHrefs = originHrefs.filter((href) => !hrefSatisfied(href, currentHrefs));
   const originTables = tablesOf(originHtml);
   const currentTables = tablesOf(currentHtml);
   const currentRows = currentTables.flatMap((table) => table.rows);
@@ -1250,6 +1257,10 @@ function report(pagePairs, missingPages, index, live) {
 }
 
 const { out, missing } = pairs();
+if (!out.length) {
+  console.error("origin baseline produced no pages. Refusing a vacuous pass.");
+  process.exit(1);
+}
 const work = ONLY.size ? out.filter((pair) => ONLY.has(pair.rel) || ONLY.has(pair.originRel)) : out;
 console.error(`pages ${out.length}, work ${work.length}, missing counterparts ${missing.length}`);
 const index = buildIndex(out);
