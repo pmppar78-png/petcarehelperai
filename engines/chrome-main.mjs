@@ -24,7 +24,7 @@
  */
 import fs from "fs";
 import path from "path";
-import { FROM_CURRENT, resolveOriginBase } from "./origin-base.mjs";
+import { FROM_CURRENT, originFile, resolveOriginBase } from "./origin-base.mjs";
 
 export function decode(text) {
   return String(text)
@@ -339,10 +339,10 @@ export function assertChrome(root, base) {
   let pages = 0;
   for (const file of walkHtml(root)) {
     const rel = path.relative(root, file).split(path.sep).join("/");
-    const originRel = FROM_CURRENT[rel] || rel;
+    const originRel = originFile(base, rel);
     const originPath = path.join(base, originRel);
-    if (FROM_CURRENT[rel] && !fs.existsSync(originPath)) {
-      problems.push(`${rel}: origin counterpart missing (${originRel})`);
+    if (!fs.existsSync(originPath)) {
+      if (FROM_CURRENT[rel]) problems.push(`${rel}: origin counterpart missing (${FROM_CURRENT[rel]})`);
       continue;
     }
     if (!fs.existsSync(originPath)) continue;

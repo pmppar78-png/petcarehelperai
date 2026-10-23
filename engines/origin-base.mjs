@@ -36,6 +36,15 @@ export const RENAMES = {
 
 export const FROM_CURRENT = Object.fromEntries(Object.entries(RENAMES).map(([origin, current]) => [current, origin]));
 
+// The rename map still names the pre-merge plural files. Once those files
+// are gone from origin/main, compare the live slug to itself. A missing
+// plural file must not look like an empty origin page.
+export function originFile(base, rel) {
+  const mapped = FROM_CURRENT[rel];
+  if (mapped && fs.existsSync(path.join(base, mapped))) return mapped;
+  return rel;
+}
+
 export const HREF_RENAMES = {
   "/guides/how-big-do-belgian-malinoiss-get": "/guides/how-big-do-belgian-malinois-get",
   "/guides/how-big-do-belgian-tervurens-get": "/guides/how-big-do-belgian-tervuren-get",

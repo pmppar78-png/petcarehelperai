@@ -22,7 +22,7 @@
  */
 import fs from "fs";
 import path from "path";
-import { FROM_CURRENT, resolveOriginBase } from "./origin-base.mjs";
+import { originFile, resolveOriginBase } from "./origin-base.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 4;
@@ -289,7 +289,7 @@ const BASE = resolveOriginBase({ root: ROOT });
 const originNormCache = new Map();
 function originNorms(rel) {
   if (originNormCache.has(rel)) return originNormCache.get(rel);
-  const originRel = FROM_CURRENT[rel] || rel;
+  const originRel = originFile(BASE, rel);
   const full = path.join(BASE, originRel);
   const set = fs.existsSync(full) ? new Set(sentencesOf(fs.readFileSync(full, "utf8")).map(normalize)) : new Set();
   originNormCache.set(rel, set);
@@ -298,7 +298,7 @@ function originNorms(rel) {
 const originVisibleCache = new Map();
 function originVisible(rel) {
   if (originVisibleCache.has(rel)) return originVisibleCache.get(rel);
-  const originRel = FROM_CURRENT[rel] || rel;
+  const originRel = originFile(BASE, rel);
   const full = path.join(BASE, originRel);
   const text = fs.existsSync(full) ? visiblePage(fs.readFileSync(full, "utf8")) : "";
   originVisibleCache.set(rel, text);

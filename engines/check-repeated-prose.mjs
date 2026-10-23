@@ -33,7 +33,7 @@
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
-import { FROM_CURRENT, resolveOriginBase } from "./origin-base.mjs";
+import { originFile, resolveOriginBase } from "./origin-base.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 7;
@@ -215,7 +215,7 @@ const BASE = resolveOriginBase({ root: ROOT });
 const originCache = new Map();
 function originFacts(rel) {
   if (originCache.has(rel)) return originCache.get(rel);
-  const originRel = FROM_CURRENT[rel] || rel;
+  const originRel = originFile(BASE, rel);
   const full = path.join(BASE, originRel);
   const empty = { sentences: new Set(), repeated: new Set(), headings: new Map() };
   if (!fs.existsSync(full)) {

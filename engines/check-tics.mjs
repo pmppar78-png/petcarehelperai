@@ -17,7 +17,7 @@
  */
 import fs from "fs";
 import path from "path";
-import { FROM_CURRENT, resolveOriginBase } from "./origin-base.mjs";
+import { originFile, resolveOriginBase } from "./origin-base.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const BASE = resolveOriginBase({ root: ROOT });
@@ -136,7 +136,7 @@ function headingRepeats(html) {
 const failures = [];
 for (const file of walk(ROOT)) {
   const rel = path.relative(ROOT, file);
-  const originRel = FROM_CURRENT[rel] || rel;
+  const originRel = originFile(BASE, rel);
   const originPath = path.join(BASE, originRel);
   const originHtml = fs.existsSync(originPath) ? fs.readFileSync(originPath, "utf8") : "";
   const origin = originHtml ? plain(originHtml) : "";
