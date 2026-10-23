@@ -2,7 +2,7 @@
   "foodAndNutrition": [
     {
       "name": "Chewy Autoship",
-      "url": "https://www.chewy.com/app/autoship",
+      "url": "https://www.chewy.com/b/autoship-save-15682",
       "category": "Food & Nutrition",
       "hook": "Save up to 35% with Autoship on food, treats, and supplies delivered to your door"
     },
@@ -299,10 +299,10 @@
       "hook": "Specialized training for reactive and anxious dogs"
     },
     {
-      "name": "GoodPup",
-      "url": "https://www.goodpup.com",
+      "name": "Rover dog training",
+      "url": "https://www.rover.com/training/search",
       "category": "Training & Behavior",
-      "hook": "1-on-1 virtual dog training with certified professional trainers"
+      "hook": "Live dog training booked with a trainer through Rover"
     }
   ],
   "walkingSittingBoarding": [
@@ -512,7 +512,7 @@
     },
     {
       "name": "Nordic Naturals Pets",
-      "url": "https://www.nordicnaturals.com/pets",
+      "url": "https://www.nordic.com/nordic-pet/",
       "category": "Grooming & Supplements",
       "hook": "Premium omega-3 fish oil supplements for pet skin, coat, and joint health"
     },
