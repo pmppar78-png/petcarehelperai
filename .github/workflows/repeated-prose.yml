@@ -1,4 +1,4 @@
-name: Repeated prose report
+name: Repeated prose
 
 on:
   pull_request:
@@ -7,28 +7,24 @@ on:
 
 jobs:
   repeated-prose:
-    name: Report repeated prose
+    name: New within-page repeats
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Run repeated-prose check
-        run: |
-          set +e
-          node engines/check-repeated-prose.mjs > repeated-prose.txt 2>&1
-          cat repeated-prose.txt
-          exit 0
+      - name: Fetch main
+        run: git fetch origin main:refs/remotes/origin/main
+      - name: Fail on new within-page repeats and duplicate H2s
+        run: node engines/check-repeated-prose.mjs --new-vs origin/main
       - name: Write job summary
         if: always()
         run: |
           {
-            echo "## Repeated prose report"
+            echo "## Repeated prose"
             echo ""
-            echo "Informational only. This does not block the Netlify production deploy."
-            echo ""
-            echo '```'
-            head -n 60 repeated-prose.txt
-            echo '```'
+            echo "Fails when a changed page introduces a within-page sentence of 7 or more words, or a duplicate h2, that origin/main does not already repeat. Cross-page template sentences and repeats inherited from main stay out of this job. Netlify does not run this check."
           } >> "$GITHUB_STEP_SUMMARY"

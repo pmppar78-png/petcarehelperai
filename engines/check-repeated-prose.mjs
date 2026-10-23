@@ -12,12 +12,18 @@
  * own so a title is not glued to the paragraph under it.
  *
  * Not part of the Netlify build. `npm run check:repeated` still exits 1
- * when it finds repeats. The GitHub Action "Repeated prose report" prints
- * the same output and does not fail the workflow, so a production deploy
- * is not blocked while the shared sentences are rewritten.
+ * when it finds the inherited repeats. The GitHub Action runs
+ * `node engines/check-repeated-prose.mjs --new-vs origin/main` and fails
+ * only when a changed page introduces a within-page 7+ word sentence
+ * repeat, or a duplicate h2, that the baseline ref does not already have.
+ * Cross-page sentences and repeats already on main do not fail that job,
+ * and Netlify still runs only the care-line check.
  *
- * Usage: node engines/check-repeated-prose.mjs
+ * Usage:
+ *   node engines/check-repeated-prose.mjs
+ *   node engines/check-repeated-prose.mjs --new-vs origin/main
  */
+import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -64,6 +70,73 @@ function headings(article) {
   return found;
 }
 
+function h2s(article) {
+  const found = [];
+  const re = /<h2\b[^>]*>([\s\S]*?)<\/h2>/gi;
+  let match;
+  while ((match = re.exec(article))) {
+    const text = decode(match[1].replace(/<[^>]+>/g, " "));
+    if (text) found.push(text);
+  }
+  return found;
+}
+
+function repeatedSet(items) {
+  const counts = new Map();
+  for (const item of items) counts.set(item, (counts.get(item) || 0) + 1);
+  return new Set([...counts].filter(([, count]) => count >= 2).map(([item]) => item));
+}
+
+function gitText(args) {
+  return execFileSync("git", args, {
+    cwd: ROOT,
+    encoding: "utf8",
+    maxBuffer: 64 * 1024 * 1024,
+  });
+}
+
+function checkNewAgainst(ref) {
+  const names = gitText(["diff", "--name-only", "--diff-filter=ACMR", ref, "--", "*.html"])
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const failures = [];
+  for (const rel of names) {
+    const full = path.join(ROOT, rel);
+    if (!fs.existsSync(full)) continue;
+    const currentArticle = articleOf(fs.readFileSync(full, "utf8"));
+    const currentSentences = repeatedSet(sentences(currentArticle));
+    const currentH2 = repeatedSet(h2s(currentArticle));
+    let baseSentences = new Set();
+    let baseH2 = new Set();
+    try {
+      const baseHtml = gitText(["show", `${ref}:${rel}`]);
+      const baseArticle = articleOf(baseHtml);
+      baseSentences = repeatedSet(sentences(baseArticle));
+      baseH2 = repeatedSet(h2s(baseArticle));
+    } catch {
+      baseSentences = new Set();
+      baseH2 = new Set();
+    }
+    for (const sentence of currentSentences) {
+      if (!baseSentences.has(sentence)) {
+        failures.push(`${rel}: new repeated sentence: ${sentence.slice(0, 160)}`);
+      }
+    }
+    for (const heading of currentH2) {
+      if (!baseH2.has(heading)) failures.push(`${rel}: new duplicate h2: ${heading.slice(0, 140)}`);
+    }
+  }
+  if (failures.length) {
+    console.error(
+      `new repeated-prose check failed against ${ref} (${failures.length} new within-page repeats or duplicate h2s in ${names.length} changed html files)`
+    );
+    for (const line of failures.slice(0, 80)) console.error(line);
+    process.exit(1);
+  }
+  console.log(`new repeated-prose check ok against ${ref} (${names.length} changed html files)`);
+}
+
 function sentences(article) {
   let text = article
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
@@ -81,6 +154,17 @@ function sentences(article) {
     kept.push(key);
   }
   return kept;
+}
+
+const newVsIndex = process.argv.indexOf("--new-vs");
+if (newVsIndex !== -1) {
+  const ref = process.argv[newVsIndex + 1];
+  if (!ref) {
+    console.error("usage: node engines/check-repeated-prose.mjs --new-vs <git-ref>");
+    process.exit(1);
+  }
+  checkNewAgainst(ref);
+  process.exit(0);
 }
 
 const files = walk(ROOT);
