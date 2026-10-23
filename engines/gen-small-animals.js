@@ -1,3 +1,14 @@
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 import fs from 'fs';
 import path from 'path';
 
@@ -120,7 +131,7 @@ function makePage(b) {
       </div>
 
       <h2>${name} Overview</h2>
-      <p>The ${name} is a ${size.toLowerCase()} ${subtype.toLowerCase()} that makes ${care === 'Beginner' ? 'an excellent pet for beginners and families' : care === 'Intermediate' ? 'a wonderful pet for those with some small animal experience' : 'a rewarding but challenging pet for experienced keepers'}. With a lifespan of ${lifespan}, they are ${lifespan.includes('10') || lifespan.includes('12') || lifespan.includes('15') || lifespan.includes('20') ? 'a significant long-term commitment' : 'a shorter-term commitment compared to some pets'}. Their ${activity.toLowerCase()} activity level and ${social.toLowerCase()} social nature make them engaging and entertaining companions.</p>
+      <p>The ${name} is ${indefiniteArticle(size.toLowerCase())} ${size.toLowerCase()} ${subtype.toLowerCase()} that makes ${care === 'Beginner' ? 'an excellent pet for beginners and families' : care === 'Intermediate' ? 'a wonderful pet for those with some small animal experience' : 'a rewarding but challenging pet for experienced keepers'}. With a lifespan of ${lifespan}, they are ${lifespan.includes('10') || lifespan.includes('12') || lifespan.includes('15') || lifespan.includes('20') ? 'a significant long-term commitment' : 'a shorter-term commitment compared to some pets'}. Their ${activity.toLowerCase()} activity level and ${social.toLowerCase()} social nature make them engaging and entertaining companions.</p>
 
       <p>${name}s ${social.includes('Social') || social.includes('social') ? 'thrive with companionship and are best kept with compatible cage mates' : social.includes('Solitary') ? 'are solitary animals that should be housed individually to prevent fighting' : 'have specific social needs that should be researched carefully'}. Their diet of ${diet.toLowerCase()} is ${isRabbit || isGP ? 'hay-based with supplemental pellets and fresh vegetables' : isRat ? 'primarily lab blocks supplemented with fresh foods' : 'specifically formulated for their nutritional needs'}.</p>
 
@@ -192,7 +203,7 @@ function makePage(b) {
         <li><strong>Exercise:</strong> ${isRabbit ? 'Daily free-roaming time in bunny-proofed space' : isGP ? 'Floor time in safe, enclosed area' : isRat ? 'Daily out-of-cage time for exploration and bonding' : 'Species-appropriate exercise opportunities'}.</li>
       </ul>
 
-      <h2>Is a ${name} Right for You?</h2>
+      <h2>Is ${indefiniteArticle(name)} ${name} Right for You?</h2>
       <h3>${name}s Are Great For:</h3>
       <ul>
         <li>${care === 'Beginner' ? 'First-time small pet owners' : 'Experienced small animal keepers'}</li>

@@ -1,4 +1,15 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 /**
  * fingerprint-eliminator.js
  *
@@ -36,8 +47,8 @@ const RULES = [
       (T) => `Watch your individual ${T} for feedback signals, and tune routines to the patterns you actually see.`,
       (T) => `Your ${T} will show you what works through appetite, energy, coat, and behavior, adjust based on that evidence.`,
       (T) => `Treat published advice as a framework, then shape it around the particular ${T} sitting in your home.`,
-      (T) => `Any care plan for a ${T} improves when it reflects the quirks of the specific animal, not a generic profile.`,
-      (T) => `Expect some trial and error, a ${T} tends to signal clearly when something fits and when it does not.`,
+      (T) => `Any care plan for ${indefiniteArticle(T)} ${T} improves when it reflects the quirks of the specific animal, not a generic profile.`,
+      (T) => `Expect some trial and error, ${indefiniteArticle(T)} ${T} tends to signal clearly when something fits and when it does not.`,
       (T) => `Let the ${T} in front of you, not an idealized version, drive the pace of any new routine.`,
       (T) => `Small tweaks based on how your ${T} actually reacts usually beat rigid adherence to a template.`,
       (T) => `Use this as a baseline, the right rhythm for your ${T} tends to reveal itself within a few weeks.`,
@@ -50,15 +61,15 @@ const RULES = [
     name: 'This area of {X} ownership often gets overlooked...',
     regex: /This area of ([A-Za-z][A-Za-z0-9 '\u2019\-]{1,60}?) ownership often gets overlooked, but it plays a meaningful role in long-term health and happiness\.?\s*/g,
     variants: [
-      (T) => `Owners sometimes skip past this when planning for a ${T}, yet it quietly shapes quality of life across the years. `,
+      (T) => `Owners sometimes skip past this when planning for ${indefiniteArticle(T)} ${T}, yet it quietly shapes quality of life across the years. `,
       (T) => `It is easy to treat this corner of ${T} care as optional, the animals that thrive usually prove otherwise. `,
-      (T) => `Planning for a ${T} tends to focus on the obvious topics; this one rewards attention that few owners give it. `,
-      (T) => `People often underestimate how much this piece of a ${T}'s routine influences later health outcomes. `,
+      (T) => `Planning for ${indefiniteArticle(T)} ${T} tends to focus on the obvious topics; this one rewards attention that few owners give it. `,
+      (T) => `People often underestimate how much this piece of ${indefiniteArticle(T)} ${T}'s routine influences later health outcomes. `,
       (T) => `Among the many details of ${T} care, this is the one most households delay, and regret delaying. `,
-      (T) => `This part of life with a ${T} is less glamorous than training or diet, but its effect compounds over time. `,
-      (T) => `Few checklists for a ${T} emphasize this, yet veterinarians flag it repeatedly for a reason. `,
-      (T) => `A ${T} tends to reveal the payoff of this kind of attention gradually, rather than in a single dramatic moment. `,
-      (T) => `If you are optimizing a ${T}'s routine, this is one of the higher-leverage items to get right early. `,
+      (T) => `This part of life with ${indefiniteArticle(T)} ${T} is less glamorous than training or diet, but its effect compounds over time. `,
+      (T) => `Few checklists for ${indefiniteArticle(T)} ${T} emphasize this, yet veterinarians flag it repeatedly for a reason. `,
+      (T) => `${indefiniteArticle(T, true)} ${T} tends to reveal the payoff of this kind of attention gradually, rather than in a single dramatic moment. `,
+      (T) => `If you are optimizing ${indefiniteArticle(T)} ${T}'s routine, this is one of the higher-leverage items to get right early. `,
       (T) => `Experienced ${T} owners often cite this as the factor they wish they had taken more seriously at the start. `,
     ],
   },
@@ -68,15 +79,15 @@ const RULES = [
     regex: /Owners who invest time in understanding ([A-Za-z][A-Za-z0-9 '\u2019\-]{1,60}?)'s particular needs typically spend less on corrective care and enjoy a stronger bond with their dog\.?/g,
     variants: [
       (T) => `Households that take the time to learn ${T}-specific patterns tend to avoid expensive corrective work later.`,
-      (T) => `Upfront effort to understand how a ${T} actually operates usually pays dividends in fewer vet emergencies.`,
+      (T) => `Upfront effort to understand how ${indefiniteArticle(T)} ${T} actually operates usually pays dividends in fewer vet emergencies.`,
       (T) => `Owners who study the ${T} closely, not in the abstract but the pet in front of them, report better outcomes across the board.`,
       (T) => `The trade-off is simple: a few hours reading about ${T} behavior now versus larger bills and stress later.`,
       (T) => `Investing in ${T} knowledge early is one of the cheapest insurance policies available to an owner.`,
       (T) => `Owners who bother to understand the ${T}'s natural tendencies usually build deeper trust with the animal too.`,
       (T) => `A little curiosity about how the ${T} is wired goes a long way toward preventing avoidable missteps.`,
-      (T) => `The habits that keep a ${T} healthy long-term almost always start with an owner willing to learn.`,
+      (T) => `The habits that keep ${indefiniteArticle(T)} ${T} healthy long-term almost always start with an owner willing to learn.`,
       (T) => `Owners who engage with ${T}-specific guidance, rather than generic pet advice, tend to spot problems sooner.`,
-      (T) => `Understanding a ${T} as a ${T}, not just as "a pet," changes the quality of every decision that follows.`,
+      (T) => `Understanding ${indefiniteArticle(T)} ${T} as ${indefiniteArticle(T)} ${T}, not just as "a pet," changes the quality of every decision that follows.`,
     ],
   },
   {
@@ -88,11 +99,11 @@ const RULES = [
       (T) => `A care plan fitted to this particular ${T} almost always produces better behavior and better health markers.`,
       (T) => `Every time you adjust for something the ${T} actually does, rather than what breed profiles predict, results improve.`,
       (T) => `Fine-tuning for a specific ${T} feels like extra work; in practice it removes more friction than it adds.`,
-      (T) => `The owners who do best with a ${T} treat the animal as an individual first and a breed member second.`,
+      (T) => `The owners who do best with ${indefiniteArticle(T)} ${T} treat the animal as an individual first and a breed member second.`,
       (T) => `General ${T} advice is a starting point; the real gains come from customizing to the animal you live with.`,
-      (T) => `A ${T} responds quickly when their routine matches their temperament, habitat, and age rather than a template.`,
+      (T) => `${indefiniteArticle(T, true)} ${T} responds quickly when their routine matches their temperament, habitat, and age rather than a template.`,
       (T) => `Adapt to the ${T} sitting in your home and you will almost always outperform a by-the-book approach.`,
-      (T) => `Health and behavior metrics for a ${T} tend to trend upward whenever the plan becomes more specific.`,
+      (T) => `Health and behavior metrics for ${indefiniteArticle(T)} ${T} tend to trend upward whenever the plan becomes more specific.`,
       (T) => `Personalization beats protocol: the more the routine reflects this ${T}, the better the outcomes.`,
     ],
   },
@@ -109,7 +120,7 @@ const RULES = [
       (T) => `When in doubt, choose the guidance that names the ${T} explicitly over the guidance that treats all pets alike.`,
       (T) => `${T}-aware routines catch issues earlier, respond faster, and prevent more than generic ones.`,
       (T) => `The signal in ${T}-specific advice usually outweighs the noise in generalized pet content.`,
-      (T) => `Pay attention to what makes a ${T} a ${T}, and the rest of the care plan tends to click into place.`,
+      (T) => `Pay attention to what makes ${indefiniteArticle(T)} ${T} ${indefiniteArticle(T)} ${T}, and the rest of the care plan tends to click into place.`,
       (T) => `Narrow, breed-aware detail beats broad pet-care platitudes in nearly every scenario owners actually face.`,
     ],
   },
@@ -120,8 +131,8 @@ const RULES = [
     variants: [
       (T) => `A clear picture of this side of ${T} care puts you in a better position to make decisions the animal can actually feel. `,
       (T) => `Once this part of ${T} care clicks, the downstream choices tend to come faster and land better. `,
-      (T) => `Knowing how this works in a ${T} context removes a lot of the guesswork from day-to-day decisions. `,
-      (T) => `Getting this right for a ${T} is less about perfection and more about making informed, repeatable calls. `,
+      (T) => `Knowing how this works in ${indefiniteArticle(T)} ${T} context removes a lot of the guesswork from day-to-day decisions. `,
+      (T) => `Getting this right for ${indefiniteArticle(T)} ${T} is less about perfection and more about making informed, repeatable calls. `,
       (T) => `Think of this as the knowledge layer that most ${T} owners skip and later wish they had started with. `,
       (T) => `Build literacy here and the rest of ${T} ownership becomes measurably less stressful. `,
       (T) => `Owners who understand this piece of ${T} care rarely default to worst-case reactions. `,
@@ -142,7 +153,7 @@ const RULES = [
       (T) => `A veterinarian who knows your ${T} will see variables an article cannot; treat their input as the final adjustment.`,
       (T) => `Articles can describe the shape of a good ${T} diet; only a veterinarian can tune it to the animal at home.`,
       (T) => `For the last mile of any ${T} feeding plan, a veterinarian's perspective usually beats another round of internet reading.`,
-      (T) => `Every feeding plan for a ${T} should end with a brief veterinary check, especially after weight, age, or health changes.`,
+      (T) => `Every feeding plan for ${indefiniteArticle(T)} ${T} should end with a brief veterinary check, especially after weight, age, or health changes.`,
     ],
   },
   {
@@ -231,7 +242,7 @@ const RULES = [
       (T) => `A good routine vet in ${T} is the one you can reach quickly, trust with your species, and actually want to call, visiting before anything is wrong is how you find that fit.`,
       (T) => `Before committing to a primary veterinarian in ${T}, tour the clinic, meet the lead vet, and confirm they regularly see the species you bring in.`,
       (T) => `Picking a routine vet in ${T} should balance convenience against service breadth; book a wellness visit so your pet's first exposure is not a medical emergency.`,
-      (T) => `Location matters, but a ${T} clinic's communication style, emergency protocols, and species experience matter more, check all four with a pre-crisis wellness visit.`,
+      (T) => `Location matters, but ${indefiniteArticle(T)} ${T} clinic's communication style, emergency protocols, and species experience matter more, check all four with a pre-crisis wellness visit.`,
       (T) => `Use a standard wellness visit in ${T} as your audit; the clinic's handling of that low-stakes appointment tends to predict how they will operate under pressure.`,
     ],
   },

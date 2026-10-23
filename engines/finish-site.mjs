@@ -5,7 +5,6 @@
 import fs from "fs";
 import path from "path";
 import { pageShell } from "./page-shell.mjs";
-import { CARE_LINES } from "./care-lines.mjs";
 import { HUB_NOTES } from "./hub-notes.mjs";
 import { symptoms, symptomHead, hubBody, checkerBody, creditsIntro } from "./vet-content.mjs";
 
@@ -42,24 +41,6 @@ function normText(html) {
     .replace(/\s+/g, " ")
     .trim()
     .toLowerCase();
-}
-
-function pageToken(slug) {
-  const t = String(slug)
-    .split(/[^a-z0-9]+/i)
-    .filter(Boolean)
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
-    .join("");
-  return t || "Page";
-}
-
-function sentenceBlock(token, lines) {
-  const paras = [];
-  for (let i = 0; i < lines.length; i += 4) {
-    const chunk = lines.slice(i, i + 4).map((line) => `The ${token} ${line}.`).join(" ");
-    paras.push(`<p>${chunk}</p>`);
-  }
-  return paras.join("\n");
 }
 
 function dropBoilerSections(html) {
@@ -306,21 +287,11 @@ function safeIntros(article, slug) {
   return kept;
 }
 
-function rewriteArticle(html, token, slug) {
-  const m = html.match(/<article class="guide-content">[\s\S]*?<\/article>/i);
-  if (!m) return html;
-  const article = m[0];
-  const h1 = (article.match(/<h1[\s\S]*?<\/h1>/i) || [])[0] || `<h1>${esc(slug)}</h1>`;
-  const img = (article.match(/<div class="breed-image-container"[\s\S]*?<\/div>/i) || [])[0] || "";
-  const wild = wildlifeWords(article).map((w) => `<p>The ${token} notes local ${w}.</p>`).join("\n");
-  const intros = "";
-  const links = sponsoredLinks(article).map((link, i) => {
-    const line = CARE_LINES[CARE_LINES.length - 1 - (i % CARE_LINES.length)];
-    const relAttr = link.sponsored ? ' rel="sponsored noopener noreferrer"' : "";
-    return `<p><a href="${esc(link.href)}"${relAttr}>The ${token} ${line}.</a></p>`;
-  }).join("\n");
-  const inner = [h1, img, intros, wild, sentenceBlock(token, CARE_LINES), links].filter(Boolean).join("\n");
-  return html.replace(article, `<article class="guide-content">\n${inner}\n</article>`);
+function rewriteArticle(html) {
+  // The care-line rewriter was removed. It replaced real articles with
+  // "The {Token} {three-word line}." sentences. engines/check-care-lines.mjs
+  // fails the build if that pattern returns.
+  return html;
 }
 
 function writePage(file, { title, description, canonical, active, crumb, body, extraHead = "" }) {
@@ -688,28 +659,9 @@ function main() {
   prepareHubs(meta);
   console.log("hubs stamped", meta.size);
 
-  let locations = 0;
-  for (const file of fs.readdirSync(path.join(ROOT, "locations"))) {
-    if (!file.endsWith(".html") || file === "index.html") continue;
-    const full = path.join(ROOT, "locations", file);
-    const slug = file.replace(/\.html$/, "");
-    const html = rewriteArticle(fs.readFileSync(full, "utf8"), pageToken(slug), slug);
-    fs.writeFileSync(full, html);
-    locations++;
-  }
-  report.locationsRewritten = locations;
-
-  const guides = sitemapUrls("sitemap-guides.xml").map(urlToFile);
-  let guidesRewritten = 0;
-  for (const relFile of guides) {
-    const full = path.join(ROOT, relFile);
-    if (!fs.existsSync(full)) continue;
-    const slug = path.basename(relFile, ".html");
-    fs.writeFileSync(full, rewriteArticle(fs.readFileSync(full, "utf8"), pageToken(slug), slug));
-    guidesRewritten++;
-  }
-  report.indexedGuidesRewritten = guidesRewritten;
-  console.log("rewrote locations", locations, "guides", guidesRewritten);
+  report.locationsRewritten = 0;
+  report.indexedGuidesRewritten = 0;
+  console.log("skipped care-line rewrite");
 
   report.sitemaps = updateSitemaps();
   report.profiles = profileAudit();

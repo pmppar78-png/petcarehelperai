@@ -1,4 +1,15 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 /*
  * Phase 2 signal maximization pass.
  *
@@ -233,7 +244,7 @@ function disclaimerBlock(file, ctx) {
     ],
     'best-insurance': [
       `<strong>Coverage note:</strong> Insurance terms depend on carrier rules, location, age, and pre-existing conditions. This ${escHtml(ctx.entity)} overview is educational. Some links may earn referral revenue.`,
-      `<strong>Policy context:</strong> Read the current policy documents before buying coverage for a ${escHtml(ctx.entity)}. Costs and exclusions change by provider. Affiliate links are disclosed.`,
+      `<strong>Policy context:</strong> Read the current policy documents before buying coverage for ${indefiniteArticle(escHtml(ctx.entity))} ${escHtml(ctx.entity)}. Costs and exclusions change by provider. Affiliate links are disclosed.`,
       `<strong>Before enrolling:</strong> Treat this as research support, not financial advice. Confirm deductibles, exclusions, and waiting periods directly with the insurer. Some links are affiliate links.`,
     ],
     'cost-to-own': [

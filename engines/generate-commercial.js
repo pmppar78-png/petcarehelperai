@@ -1,4 +1,15 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 /**
  * Commercial Page Engine — PetCareHelperAI
  *
@@ -317,7 +328,7 @@ function buildDisclaimer(entity, pageType = 'care') {
     ],
     'best-insurance': [
       `<strong>Coverage note:</strong> Insurance terms depend on carrier rules, location, age, and pre-existing conditions. This ${entity.display_name} overview is educational. Some links may earn referral revenue.`,
-      `<strong>Policy context:</strong> Read the current policy documents before buying coverage for a ${entity.display_name}. Costs and exclusions change by provider. Affiliate links are disclosed.`,
+      `<strong>Policy context:</strong> Read the current policy documents before buying coverage for ${indefiniteArticle(entity.display_name)} ${entity.display_name}. Costs and exclusions change by provider. Affiliate links are disclosed.`,
       `<strong>Before enrolling:</strong> Treat this as research support, not financial advice. Confirm deductibles, exclusions, and waiting periods directly with the insurer. Some links are affiliate links.`,
     ],
     'cost-to-own': [
@@ -512,7 +523,7 @@ ${buildFooter()}`;
 function genCostToOwn(entity, allEntities) {
   const t = speciesTerms[entity.species_group];
   const title = `${entity.display_name} Cost to Own: Yearly & Lifetime Budget (2026)`;
-  const desc = `Complete cost breakdown for owning a ${entity.display_name}. Startup costs, monthly expenses, annual budget, and lifetime estimates.`;
+  const desc = `Complete cost breakdown for owning ${indefiniteArticle(entity.display_name)} ${entity.display_name}. Startup costs, monthly expenses, annual budget, and lifetime estimates.`;
   const canonical = `${SITE}/commercial/${entity.species_group}/${entity.slug}/cost-to-own`;
   const partners = pickAffiliates(getAffiliateCategories('cost-to-own', entity.species_group));
 
@@ -544,11 +555,11 @@ function genCostToOwn(entity, allEntities) {
   }
 
   const faqs = [
-    [`How much does a ${entity.display_name} cost?`, `Initial purchase/adoption cost varies widely. Budget ${startupCost} for the animal plus initial setup and supplies.`],
-    [`What are the monthly costs of owning a ${entity.display_name}?`, `Monthly costs typically include food, supplies, and routine care, averaging $50-$300 depending on the level of care.`],
-    [`What is the lifetime cost of a ${entity.display_name}?`, `The estimated lifetime cost of owning a ${entity.display_name} is approximately ${lifetimeCost}, including all food, veterinary care, supplies, and insurance.`],
+    [`How much does ${indefiniteArticle(entity.display_name)} ${entity.display_name} cost?`, `Initial purchase/adoption cost varies widely. Budget ${startupCost} for the animal plus initial setup and supplies.`],
+    [`What are the monthly costs of owning ${indefiniteArticle(entity.display_name)} ${entity.display_name}?`, `Monthly costs typically include food, supplies, and routine care, averaging $50-$300 depending on the level of care.`],
+    [`What is the lifetime cost of ${indefiniteArticle(entity.display_name)} ${entity.display_name}?`, `The estimated lifetime cost of owning ${indefiniteArticle(entity.display_name)} ${entity.display_name} is approximately ${lifetimeCost}, including all food, veterinary care, supplies, and insurance.`],
     [`What unexpected costs should I budget for?`, `Emergency veterinary care is the biggest unexpected cost. Having pet insurance or an emergency fund of $1,000-$3,000 is recommended.`],
-    [`How can I reduce the cost of owning a ${entity.display_name}?`, `Buy supplies in bulk, use preventive care to avoid expensive treatments, compare insurance plans, and invest in quality food to prevent health issues.`],
+    [`How can I reduce the cost of owning ${indefiniteArticle(entity.display_name)} ${entity.display_name}?`, `Buy supplies in bulk, use preventive care to avoid expensive treatments, compare insurance plans, and invest in quality food to prevent health issues.`],
   ];
 
   const html = `${buildHead({ title, description: desc, canonical, cssPath: '../../../styles.css', ogImage: entity.hero_image_src, schema: buildFaqSchema(faqs) })}
@@ -559,7 +570,7 @@ ${buildBreadcrumb(entity, 'Cost to Own')}
       <h1>${esc(title)}</h1>
 ${heroImageBlock(entity)}
 
-      <p>Before bringing a ${entity.display_name} home, it's essential to understand the full financial commitment. This guide breaks down every cost you can expect from day one through your pet's entire life.</p>
+      <p>Before bringing ${indefiniteArticle(entity.display_name)} ${entity.display_name} home, it's essential to understand the full financial commitment. This guide breaks down every cost you can expect from day one through your pet's entire life.</p>
 
       <h2>Cost Summary at a Glance</h2>
       <table class="comparison-table">
@@ -670,15 +681,15 @@ ${buildFooter()}`;
 function genFirstTimeOwners(entity, allEntities) {
   const t = speciesTerms[entity.species_group];
   const title = `Is ${entity.display_name} Good for First-Time Owners? (Honest Guide)`;
-  const desc = `Should a first-time pet owner get a ${entity.display_name}? Honest assessment of care difficulty, costs, time commitment, and what to expect.`;
+  const desc = `Should a first-time pet owner get ${indefiniteArticle(entity.display_name)} ${entity.display_name}? Honest assessment of care difficulty, costs, time commitment, and what to expect.`;
   const canonical = `${SITE}/commercial/${entity.species_group}/${entity.slug}/first-time-owners`;
   const partners = pickAffiliates(getAffiliateCategories('first-time-owners', entity.species_group));
 
   const faqs = [
     [`Is ${entity.display_name} a good pet for beginners?`, `${entity.display_name} can be a good choice for dedicated beginners who research care requirements thoroughly. Success depends on your commitment to proper care, budget, and time.`],
     [`How much time does ${entity.display_name} care require daily?`, `Daily care includes feeding, habitat maintenance, and interaction. Plan for at least 30 minutes to 2 hours of daily care depending on the species' needs.`],
-    [`What should I know before getting a ${entity.display_name}?`, `Research the full cost of ownership, space requirements, dietary needs, common health issues, and expected lifespan. Be prepared for a long-term commitment.`],
-    [`What supplies do I need for a ${entity.display_name}?`, `Essential supplies include appropriate ${t.habitat.toLowerCase()}, ${t.feeding.toLowerCase()}, water/food dishes, ${t.enrichment.toLowerCase()}, and species-specific care items.`],
+    [`What should I know before getting ${indefiniteArticle(entity.display_name)} ${entity.display_name}?`, `Research the full cost of ownership, space requirements, dietary needs, common health issues, and expected lifespan. Be prepared for a long-term commitment.`],
+    [`What supplies do I need for ${indefiniteArticle(entity.display_name)} ${entity.display_name}?`, `Essential supplies include appropriate ${t.habitat.toLowerCase()}, ${t.feeding.toLowerCase()}, water/food dishes, ${t.enrichment.toLowerCase()}, and species-specific care items.`],
     [`How do I find a reputable ${entity.display_name} breeder or rescue?`, `Research breeders thoroughly, ask for health certifications, visit facilities when possible, and consider adoption from species-specific rescues.`],
   ];
 
@@ -690,7 +701,7 @@ ${buildBreadcrumb(entity, 'First-Time Owners')}
       <h1>${esc(title)}</h1>
 ${heroImageBlock(entity)}
 
-      <p>Thinking about getting a ${entity.display_name} as your first pet? This honest guide covers everything you need to know before making the commitment &mdash; including care difficulty, real costs, and what daily life looks like.</p>
+      <p>Thinking about getting ${indefiniteArticle(entity.display_name)} ${entity.display_name} as your first pet? This honest guide covers everything you need to know before making the commitment &mdash; including care difficulty, real costs, and what daily life looks like.</p>
 
       <h2>Quick Assessment</h2>
       <table class="comparison-table">
@@ -749,9 +760,9 @@ function genBestHabitat(entity, allEntities) {
   const isFish = ['fish', 'marine-fish'].includes(entity.species_group);
 
   const faqs = [
-    [`What size ${t.habitat.toLowerCase()} does a ${entity.display_name} need?`, `${entity.display_name} requires an appropriately sized ${t.habitat.toLowerCase()} based on their adult size and activity level. Always choose the largest ${t.habitat.toLowerCase()} you can accommodate and afford.`],
-    [`What equipment do I need for a ${entity.display_name} ${t.habitat.toLowerCase()}?`, `Essential equipment includes ${isFish ? 'filtration, heating, lighting, and water testing kits' : `appropriate substrate, temperature control, lighting, and ${t.enrichment.toLowerCase()} items`}.`],
-    [`How much does a ${entity.display_name} ${t.habitat.toLowerCase()} setup cost?`, `A complete setup typically ranges from $100-$1,000+ depending on size and quality of equipment chosen.`],
+    [`What size ${t.habitat.toLowerCase()} does ${indefiniteArticle(entity.display_name)} ${entity.display_name} need?`, `${entity.display_name} requires an appropriately sized ${t.habitat.toLowerCase()} based on their adult size and activity level. Always choose the largest ${t.habitat.toLowerCase()} you can accommodate and afford.`],
+    [`What equipment do I need for ${indefiniteArticle(entity.display_name)} ${entity.display_name} ${t.habitat.toLowerCase()}?`, `Essential equipment includes ${isFish ? 'filtration, heating, lighting, and water testing kits' : `appropriate substrate, temperature control, lighting, and ${t.enrichment.toLowerCase()} items`}.`],
+    [`How much does ${indefiniteArticle(entity.display_name)} ${entity.display_name} ${t.habitat.toLowerCase()} setup cost?`, `A complete setup typically ranges from $100-$1,000+ depending on size and quality of equipment chosen.`],
     [`Can I use a smaller ${t.habitat.toLowerCase()} for a baby ${entity.display_name}?`, `It's generally better to start with an adult-sized ${t.habitat.toLowerCase()}. This avoids the cost of upgrading later and provides a stable environment from day one.`],
     [`How often should I clean the ${t.habitat.toLowerCase()}?`, `Perform partial cleaning weekly and thorough cleaning monthly. ${isFish ? 'Weekly water changes of 10-25% are essential.' : 'Spot-clean daily and do a full substrate change monthly.'}`],
   ];
@@ -909,7 +920,7 @@ ${buildBreadcrumb(entity, `vs ${compEntity.display_name}`)}
       <h1>${esc(title)}</h1>
 ${heroImageBlock(entity)}
 
-      <p>Trying to decide between a ${entity.display_name} and a ${compEntity.display_name}? This side-by-side comparison covers the key differences in care, temperament, costs, and suitability to help you make the right choice.</p>
+      <p>Trying to decide between ${indefiniteArticle(entity.display_name)} ${entity.display_name} and ${indefiniteArticle(compEntity.display_name)} ${compEntity.display_name}? This side-by-side comparison covers the key differences in care, temperament, costs, and suitability to help you make the right choice.</p>
 
       <h2>Side-by-Side Comparison</h2>
       <table class="comparison-table">

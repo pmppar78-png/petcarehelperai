@@ -1,4 +1,15 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 /**
  * Replace generic "May be great for" bullets with species-specific lists,
  * and replace named template paragraphs when a longer factual note exists.
@@ -141,7 +152,7 @@ for (const file of walk(ROOT)) {
   }
   if (!bag.genericpet && bag.household) {
     const name = path.basename(rel, ".html").replace(/-/g, " ");
-    bag.genericpet = [`Do not treat ads for a ${name} as a health clearance. ${bag.household[0]}`];
+    bag.genericpet = [`Do not treat ads for ${indefiniteArticle(name)} ${name} as a health clearance. ${bag.household[0]}`];
   }
   html = html.replace(/<p\b[^>]*>[\s\S]*?<\/p>/gi, (p) => {
     const text = p.replace(/<[^>]+>/g, " ");

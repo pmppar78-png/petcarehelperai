@@ -1,3 +1,14 @@
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 /**
  * PetCareHelperAI — Indexing Emergency Fix Engine
  *
@@ -389,7 +400,7 @@ function fixGuidePageBackLinks() {
         const commercialTypes = [
           { slug: 'best-food', title: `Best Food for ${displayName}` },
           { slug: 'best-insurance', title: `Best Insurance for ${displayName}` },
-          { slug: 'cost-to-own', title: `Cost to Own a ${displayName}` },
+          { slug: 'cost-to-own', title: `Cost to Own ${indefiniteArticle(displayName)} ${displayName}` },
         ];
 
         for (const ct of commercialTypes) {

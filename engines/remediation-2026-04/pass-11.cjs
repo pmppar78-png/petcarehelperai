@@ -1,3 +1,14 @@
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 // Pass 11: Break remaining location-page fingerprints.
 
 const fs = require('fs');
@@ -21,14 +32,14 @@ const VISITING_V = [
 const VISITING_REGEX = /Visiting a facility in person before committing gives you a firsthand[^<.]*?\./g;
 
 const FISH_TANK_V = [
-  (breed, size) => `A ${breed} does best with at least ${size} — bigger water volumes give you more stable chemistry, extra swim space, and flexibility when you want to add tankmates.`,
-  (breed, size) => `Plan for a minimum of ${size} for a ${breed}; larger tanks are easier to manage because they buffer water-chemistry swings and give the fish room to establish territory.`,
+  (breed, size) => `${indefiniteArticle(breed, true)} ${breed} does best with at least ${size} — bigger water volumes give you more stable chemistry, extra swim space, and flexibility when you want to add tankmates.`,
+  (breed, size) => `Plan for a minimum of ${size} for ${indefiniteArticle(breed)} ${breed}; larger tanks are easier to manage because they buffer water-chemistry swings and give the fish room to establish territory.`,
   (breed, size) => `${breed}s need a starting tank of ${size} or more. Larger systems are more forgiving on water chemistry and far easier on tankmate compatibility.`,
-  (breed, size) => `Size the tank at ${size} or greater for a ${breed}. Bigger volumes stabilise parameters and widen your aquascaping and tankmate options.`,
-  (breed, size) => `Target a ${size} tank at minimum for a ${breed}. The larger footprint provides the stability and flexibility that small tanks tend to lack.`,
-  (breed, size) => `Don't go below ${size} for a ${breed}. Larger tanks are measurably easier to keep stable and open up more layout options.`,
-  (breed, size) => `${size} is the floor for a ${breed}; above that, water-chemistry stability and tankmate options improve substantially.`,
-  (breed, size) => `Size up to at least ${size} for a ${breed}. Bigger tanks forgive mistakes that smaller ones punish, and the aesthetics improve too.`
+  (breed, size) => `Size the tank at ${size} or greater for ${indefiniteArticle(breed)} ${breed}. Bigger volumes stabilise parameters and widen your aquascaping and tankmate options.`,
+  (breed, size) => `Target ${indefiniteArticle(size)} ${size} tank at minimum for ${indefiniteArticle(breed)} ${breed}. The larger footprint provides the stability and flexibility that small tanks tend to lack.`,
+  (breed, size) => `Don't go below ${size} for ${indefiniteArticle(breed)} ${breed}. Larger tanks are measurably easier to keep stable and open up more layout options.`,
+  (breed, size) => `${size} is the floor for ${indefiniteArticle(breed)} ${breed}; above that, water-chemistry stability and tankmate options improve substantially.`,
+  (breed, size) => `Size up to at least ${size} for ${indefiniteArticle(breed)} ${breed}. Bigger tanks forgive mistakes that smaller ones punish, and the aesthetics improve too.`
 ];
 // "require a minimum tank size of X+ gallons. Larger tanks are always better..."
 const FISH_TANK_REGEX = /([A-Z][A-Za-z' -]+)s? require a minimum tank size of (\d+\+? gallons)\. Larger tanks are always better as they provide more stable water conditions[^<.]*?\./g;

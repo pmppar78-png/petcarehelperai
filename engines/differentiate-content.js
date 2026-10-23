@@ -1,4 +1,15 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 /**
  * differentiate-content.js
  * Final pass: injects entity-unique text (from short_summary and Quick Facts)
@@ -139,7 +150,7 @@ for (let i = 0; i < allFiles.length; i += BATCH) {
 
         'first-time-owners': `
       <h2>Getting to Know ${name}: Essential Breed Profile</h2>
-      <p>${summary}${condStr} For first-time owners specifically, understanding these ${name} characteristics before commitment is vital for a successful experience. ${facts ? `Core specifications to know: ${facts}.` : ''} Each trait and characteristic of ${name} has practical daily-life implications that first-time owners should prepare for. Researching and accepting these specific requirements before bringing a ${name} home is the single most important predictor of a positive first-time ownership experience with this particular ${meta.groupLabel}.</p>`,
+      <p>${summary}${condStr} For first-time owners specifically, understanding these ${name} characteristics before commitment is vital for a successful experience. ${facts ? `Core specifications to know: ${facts}.` : ''} Each trait and characteristic of ${name} has practical daily-life implications that first-time owners should prepare for. Researching and accepting these specific requirements before bringing ${indefiniteArticle(name)} ${name} home is the single most important predictor of a positive first-time ownership experience with this particular ${meta.groupLabel}.</p>`,
 
         'health-costs': `
       <h2>About ${name}: Health Profile and Genetic Background</h2>
@@ -161,7 +172,7 @@ for (let i = 0; i < allFiles.length; i += BATCH) {
 
       newContent += `
       <h2>Key Specifications: ${name} vs ${otherName}</h2>
-      <p>${name} specifications at a glance: ${facts || `a ${meta.term} with distinctive characteristics`}. By contrast, ${otherName} specifications: ${otherFacts || `a ${meta.term} with its own unique profile`}. These concrete specifications reveal important practical differences that affect daily care routines, space requirements, and budget planning. ${conditions.length > 0 ? `Health-wise, ${name} is predisposed to ${conditions.slice(0, 2).join(' and ')}.` : ''} ${otherConditions.length > 0 ? `Meanwhile, ${otherName} owners should monitor for ${otherConditions.slice(0, 2).join(' and ')}.` : ''} Comparing these specific data points rather than general impressions leads to better-informed ownership decisions.</p>`;
+      <p>${name} specifications at a glance: ${facts || `${indefiniteArticle(meta.term)} ${meta.term} with distinctive characteristics`}. By contrast, ${otherName} specifications: ${otherFacts || `${indefiniteArticle(meta.term)} ${meta.term} with its own unique profile`}. These concrete specifications reveal important practical differences that affect daily care routines, space requirements, and budget planning. ${conditions.length > 0 ? `Health-wise, ${name} is predisposed to ${conditions.slice(0, 2).join(' and ')}.` : ''} ${otherConditions.length > 0 ? `Meanwhile, ${otherName} owners should monitor for ${otherConditions.slice(0, 2).join(' and ')}.` : ''} Comparing these specific data points rather than general impressions leads to better-informed ownership decisions.</p>`;
     }
 
     if (!newContent) continue;

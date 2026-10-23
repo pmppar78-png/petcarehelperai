@@ -1,3 +1,14 @@
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 import fs from 'fs';
 import path from 'path';
 
@@ -94,7 +105,7 @@ function makePage(b) {
       </div>
 
       <h2>${name} Overview</h2>
-      <p>The ${name} is a ${size.toLowerCase()} cat breed known for being ${temperament.toLowerCase()}. Adults usually weigh ${weight} and often live ${lifespan}. Their ${activity.toLowerCase()} activity level and ${intelligence.toLowerCase()} intelligence are the practical facts to plan around, along with ${grooming.toLowerCase()} grooming.</p>
+      <p>The ${name} is ${indefiniteArticle(size.toLowerCase())} ${size.toLowerCase()} cat breed known for being ${temperament.toLowerCase()}. Adults usually weigh ${weight} and often live ${lifespan}. Their ${activity.toLowerCase()} activity level and ${intelligence.toLowerCase()} intelligence are the practical facts to plan around, along with ${grooming.toLowerCase()} grooming.</p>
 
       <p>${name}s are ${goodKids === 'Excellent' ? 'excellent family cats that bond well with children' : 'good with respectful family members'} and ${goodPets === 'Good' ? 'generally get along well with other pets when properly introduced' : 'can coexist with other pets with proper introduction'}. Their ${shedding.toLowerCase()} shedding level and ${grooming.toLowerCase()} grooming needs make them ${grooming === 'Low' || grooming === 'Very Low' ? 'relatively easy to maintain' : 'a rewarding breed for those willing to invest in regular grooming'}.</p>
 
@@ -167,12 +178,12 @@ function makePage(b) {
         <li><strong>Ear Cleaning:</strong> Weekly checks and cleaning as needed.</li>
       </ul>
 
-      <h2>Is a ${name} Right for You?</h2>
+      <h2>Is ${indefiniteArticle(name)} ${name} Right for You?</h2>
       <h3>${name}s Are Great For:</h3>
       <ul>
         <li>${activity === 'Very High' || activity === 'High' ? 'Active owners who enjoy interactive play' : 'Owners looking for a balanced companion'}</li>
         <li>${goodKids === 'Excellent' ? 'Families with children' : 'Households with respectful family members'}</li>
-        <li>Those who appreciate a ${temperament.split(',')[0].trim().toLowerCase()} feline companion</li>
+        <li>Those who appreciate ${indefiniteArticle(temperament.split(',')[0].trim().toLowerCase())} ${temperament.split(',')[0].trim().toLowerCase()} feline companion</li>
         <li>${grooming === 'Low' ? 'People wanting a low-maintenance cat' : 'Owners willing to commit to regular grooming'}</li>
       </ul>
       <h3>${name}s May Not Be Ideal For:</h3>

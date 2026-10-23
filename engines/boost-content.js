@@ -1,4 +1,15 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 /**
  * boost-content.js
  * Second-pass: adds entity-specific differentiation content to push
@@ -111,7 +122,7 @@ function boostComparison(name1, name2, data1, data2, meta, summary1, summary2) {
       <p>${summary2} In contrast, ${name2} brings different strengths and considerations to the ownership experience. Their ${data2.temperament.toLowerCase()} personality creates a daily dynamic involving ${data2.exerciseNeeds.toLowerCase()} energy management, ${data2.shedding.toLowerCase()} maintenance routines, and space planning for their ${data2.size} build. The ${data2.careLevel.toLowerCase()} care demands of ${name2} span their ${data2.lifespan} lifespan, requiring owners to commit to ongoing engagement and health monitoring throughout.</p>
 
       <h2>Day-in-the-Life: ${name1} vs ${name2}</h2>
-      <p>A typical day reveals the practical differences between these ${meta.termPlural}. A ${name1} owner's morning starts with ${data1.exerciseNeeds.toLowerCase().includes('high') ? 'an energetic 45-60 minute' : data1.exerciseNeeds.toLowerCase().includes('low') ? 'a brief 15-20 minute' : 'a moderate 30-45 minute'} activity session, followed by measured feeding appropriate for their ${data1.size} build. Midday involves checking enrichment and ensuring comfort. Evenings include social interaction and ${data1.shedding.toLowerCase().includes('high') ? 'regular grooming sessions' : 'light maintenance'}. For a ${name2} owner, the rhythm differs: mornings feature ${data2.exerciseNeeds.toLowerCase().includes('high') ? 'a vigorous 45-60 minute' : data2.exerciseNeeds.toLowerCase().includes('low') ? 'a gentle 15-20 minute' : 'a balanced 30-45 minute'} exercise period, with a feeding routine tailored to their ${data2.size} frame. The daily grooming commitment for ${name2} with ${data2.shedding.toLowerCase()} maintenance needs contrasts with ${name1}'s ${data1.shedding.toLowerCase()} requirements, potentially adding 10-30 minutes daily. These practical differences often matter more than theoretical comparisons when choosing between ${name1} and ${name2}.</p>`;
+      <p>A typical day reveals the practical differences between these ${meta.termPlural}. ${indefiniteArticle(name1, true)} ${name1} owner's morning starts with ${data1.exerciseNeeds.toLowerCase().includes('high') ? 'an energetic 45-60 minute' : data1.exerciseNeeds.toLowerCase().includes('low') ? 'a brief 15-20 minute' : 'a moderate 30-45 minute'} activity session, followed by measured feeding appropriate for their ${data1.size} build. Midday involves checking enrichment and ensuring comfort. Evenings include social interaction and ${data1.shedding.toLowerCase().includes('high') ? 'regular grooming sessions' : 'light maintenance'}. For ${indefiniteArticle(name2)} ${name2} owner, the rhythm differs: mornings feature ${data2.exerciseNeeds.toLowerCase().includes('high') ? 'a vigorous 45-60 minute' : data2.exerciseNeeds.toLowerCase().includes('low') ? 'a gentle 15-20 minute' : 'a balanced 30-45 minute'} exercise period, with a feeding routine tailored to their ${data2.size} frame. The daily grooming commitment for ${name2} with ${data2.shedding.toLowerCase()} maintenance needs contrasts with ${name1}'s ${data1.shedding.toLowerCase()} requirements, potentially adding 10-30 minutes daily. These practical differences often matter more than theoretical comparisons when choosing between ${name1} and ${name2}.</p>`;
 }
 
 function boostEnrichment(name, data, meta, summary) {
@@ -135,7 +146,7 @@ function boostHabitat(name, data, meta, summary) {
 function boostFirstTime(name, data, meta, summary) {
   return `
       <h2>What Makes ${name} Unique as a Companion</h2>
-      <p>${summary} Understanding this background prepares first-time owners for the specific joys and challenges of living with a ${name}. Their ${data.temperament.toLowerCase()} personality means daily interactions have a distinctive character that sets ${name} apart from other ${meta.termPlural}. The ${data.exerciseNeeds.toLowerCase()} energy demands and ${data.shedding.toLowerCase()} maintenance needs shape your daily routine in specific ways. First-time ${name} owners who research this ${meta.groupLabel}'s unique characteristics before bringing one home report significantly higher satisfaction and fewer unexpected challenges during the critical first year.</p>`;
+      <p>${summary} Understanding this background prepares first-time owners for the specific joys and challenges of living with ${indefiniteArticle(name)} ${name}. Their ${data.temperament.toLowerCase()} personality means daily interactions have a distinctive character that sets ${name} apart from other ${meta.termPlural}. The ${data.exerciseNeeds.toLowerCase()} energy demands and ${data.shedding.toLowerCase()} maintenance needs shape your daily routine in specific ways. First-time ${name} owners who research this ${meta.groupLabel}'s unique characteristics before bringing one home report significantly higher satisfaction and fewer unexpected challenges during the critical first year.</p>`;
 }
 
 // ── Main ────────────────────────────────────────────────────────────

@@ -1,3 +1,14 @@
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 // Pass 6: Catch remaining disclaimer variants where <div> and <strong> are not adjacent.
 // Also reduce residual fingerprints that pass 5 missed due to strict regex.
 
@@ -30,7 +41,7 @@ const DEEP_DISCLAIMER_POOL = [
   (breed, species) => `<strong>Up front:</strong> None of the content here replaces a vet who knows your ${breed}. Pricing varies meaningfully by region; treat numbers as planning anchors, not quotes. Some links are affiliate.`,
   (breed, species) => `<strong>About this page:</strong> Educational resource, not veterinary advice. Figures are U.S.-averaged and vary regionally. Certain links are affiliate links; they do not change the underlying recommendations.`,
   (breed, species) => `<strong>Editorial note:</strong> Presented as a planning reference, not a medical opinion. Numbers are indicative; your region and your ${breed}'s specifics will move them. Affiliate links are disclosed per editorial policy.`,
-  (breed, species) => `<strong>Please note:</strong> Use what follows to structure your thinking about a ${breed}, not to make specific medical calls. Prices are averages that bend with geography. A portion of links on this page are affiliate.`,
+  (breed, species) => `<strong>Please note:</strong> Use what follows to structure your thinking about ${indefiniteArticle(breed)} ${breed}, not to make specific medical calls. Prices are averages that bend with geography. A portion of links on this page are affiliate.`,
   (breed, species) => `<strong>Heads up:</strong> ${breed}-specific plans belong with your veterinarian; this page prepares the conversation. Figures are regional averages. Some links pay a small commission at no cost to the reader.`,
   (breed, species) => `<strong>Context:</strong> General ${species || 'pet'} information; individual animals vary and your veterinarian is the right source for specific decisions on your ${breed}. Pricing is U.S.-wide and regional variation is material. Some links are affiliate.`,
   (breed, species) => `<strong>Up front:</strong> Educational content; medical and financial decisions for your ${breed} belong with the people who examine the animal and know your local market. Affiliate links are present and disclosed.`,
@@ -38,7 +49,7 @@ const DEEP_DISCLAIMER_POOL = [
   (breed, species) => `<strong>Editorial note:</strong> Informational only. Your vet is the authority on your ${breed}'s medical care; your local market is the authority on pricing. Some links on the page are affiliate.`,
   (breed, species) => `<strong>Please note:</strong> The structure here fits a typical healthy adult ${breed}; puppies, seniors, and animals with existing conditions need an adjusted plan with veterinary input. Pricing is regional. Affiliate links are disclosed.`,
   (breed, species) => `<strong>Heads up:</strong> This is preparatory material for your ${breed}'s care decisions, not a replacement for the professional who examines your animal. Figures are averages; some links are affiliate.`,
-  (breed, species) => `<strong>Context:</strong> Use this as a planning baseline for a ${breed} and adjust it against your vet's input and your local pricing. A share of links on the page are affiliate links, disclosed per our policy.`,
+  (breed, species) => `<strong>Context:</strong> Use this as a planning baseline for ${indefiniteArticle(breed)} ${breed} and adjust it against your vet's input and your local pricing. A share of links on the page are affiliate links, disclosed per our policy.`,
   (breed, species) => `<strong>Up front:</strong> Guidance here is general; protocols and prices always need to be reconciled with the clinic that sees your ${breed} and the providers in your area. Some links pay a small commission.`,
   (breed, species) => `<strong>About this page:</strong> A reference for structuring ${breed} care decisions rather than a prescription. Numbers move with region and provider. Affiliate links are present and labelled.`,
   (breed, species) => `<strong>Editorial note:</strong> Reading this page should produce better questions for your ${breed}'s veterinarian, not specific medical calls. Prices are medians across U.S. metros. Some links are affiliate.`,
@@ -53,26 +64,26 @@ const DEEP_DISCLAIMER_POOL = [
   (breed, species) => `<strong>Context:</strong> ${breed}-level generalisations are a useful scaffold; individual animal decisions belong with the veterinarian who sees your pet. Prices are indicative. Affiliate links are disclosed.`,
   (breed, species) => `<strong>Up front:</strong> General ${species || 'pet'} reference material; specific medical calls for your ${breed} belong with a professional, and specific prices belong with local providers. Some links are affiliate.`,
   (breed, species) => `<strong>About this page:</strong> Structured to help you plan, not to replace veterinary judgement on your ${breed}. Figures are U.S. metro averages; some links are affiliate.`,
-  (breed, species) => `<strong>Editorial note:</strong> Use this page to think more clearly about a ${breed}, then take the specifics to your vet. Prices are regional averages. Affiliate links on the page are disclosed.`,
-  (breed, species) => `<strong>Please note:</strong> The page is written for owners preparing for vet visits and major decisions about a ${breed} — not as a replacement for the clinic. Pricing moves regionally. Some links are affiliate.`,
+  (breed, species) => `<strong>Editorial note:</strong> Use this page to think more clearly about ${indefiniteArticle(breed)} ${breed}, then take the specifics to your vet. Prices are regional averages. Affiliate links on the page are disclosed.`,
+  (breed, species) => `<strong>Please note:</strong> The page is written for owners preparing for vet visits and major decisions about ${indefiniteArticle(breed)} ${breed} — not as a replacement for the clinic. Pricing moves regionally. Some links are affiliate.`,
   (breed, species) => `<strong>Heads up:</strong> Treat the numbers and protocols as the baseline you adjust against your ${breed}'s actual profile with veterinary input. Affiliate links appear on this page and are disclosed.`,
-  (breed, species) => `<strong>Context:</strong> This is a planning resource for a ${breed} household, not a veterinary consultation. Regional pricing moves these figures meaningfully. Some of the links on this page are affiliate.`,
+  (breed, species) => `<strong>Context:</strong> This is a planning resource for ${indefiniteArticle(breed)} ${breed} household, not a veterinary consultation. Regional pricing moves these figures meaningfully. Some of the links on this page are affiliate.`,
   (breed, species) => `<strong>Up front:</strong> The page aims to brief you well enough to have a better conversation about your ${breed}; it is not itself that conversation. Numbers are medians. Affiliate links are disclosed.`,
   (breed, species) => `<strong>About this page:</strong> A structured reference for ${breed} care decisions; your vet remains the authority on medical questions. Pricing is regional. Some links are affiliate.`,
   (breed, species) => `<strong>Editorial note:</strong> General information for ${breed} owners; not a substitute for individual veterinary guidance. Prices are indicative, and some links are affiliate.`,
   (breed, species) => `<strong>Please note:</strong> Reading this should reduce the number of questions you forget to ask at the vet, not replace the vet. Numbers are regional averages. Affiliate links are disclosed.`,
   (breed, species) => `<strong>Heads up:</strong> Every recommendation on this page is a default to be adjusted for your ${breed}'s specifics with veterinary input. Prices move by region. Some links are affiliate.`,
-  (breed, species) => `<strong>Context:</strong> Treat this as preparatory reading for a ${breed} household — not as a substitute for medical judgement or regional pricing research. Affiliate links are disclosed per editorial policy.`,
+  (breed, species) => `<strong>Context:</strong> Treat this as preparatory reading for ${indefiniteArticle(breed)} ${breed} household — not as a substitute for medical judgement or regional pricing research. Affiliate links are disclosed per editorial policy.`,
   (breed, species) => `<strong>Up front:</strong> The page briefs common ${breed} situations; your vet and your local market own the specifics. Some links are affiliate and do not change recommendations.`,
   (breed, species) => `<strong>About this page:</strong> Educational material, not veterinary advice; not a price quote. Your ${breed}'s plan belongs with the vet who examines the animal. Affiliate links are present and disclosed.`,
   (breed, species) => `<strong>Editorial note:</strong> Use this page to sharpen the questions you ask about your ${breed}. Numbers are regional medians; some links on the page are affiliate.`,
   (breed, species) => `<strong>Please note:</strong> General ${species || 'pet'} guidance; specific ${breed} decisions need the vet who knows the animal and the market that sets the price. Affiliate links are disclosed.`,
-  (breed, species) => `<strong>Heads up:</strong> This is a planning reference for a ${breed}; the actual plan is a function of the animal, the vet, and the local market. Some links are affiliate.`,
+  (breed, species) => `<strong>Heads up:</strong> This is a planning reference for ${indefiniteArticle(breed)} ${breed}; the actual plan is a function of the animal, the vet, and the local market. Some links are affiliate.`,
   (breed, species) => `<strong>Context:</strong> ${breed} care decisions should be made with professional input and local pricing data; this page helps structure that process. Affiliate links are disclosed.`,
-  (breed, species) => `<strong>Up front:</strong> A ${breed} household uses this page to plan better, not to decide medically. Numbers are averages. A minority of links are affiliate.`,
+  (breed, species) => `<strong>Up front:</strong> ${indefiniteArticle(breed, true)} ${breed} household uses this page to plan better, not to decide medically. Numbers are averages. A minority of links are affiliate.`,
   (breed, species) => `<strong>About this page:</strong> Informational briefing for ${breed} owners. Medical decisions belong with vets; pricing decisions with local providers. Some links are affiliate.`,
   (breed, species) => `<strong>Editorial note:</strong> The page supports your ${breed}'s care planning without replacing the professional who oversees it. Figures are averages; affiliate links are disclosed.`,
-  (breed, species) => `<strong>Please note:</strong> This is structured planning material for a ${breed}, not a veterinary or financial recommendation. Numbers are regional averages; some links on this page are affiliate.`
+  (breed, species) => `<strong>Please note:</strong> This is structured planning material for ${indefiniteArticle(breed)} ${breed}, not a veterinary or financial recommendation. Numbers are regional averages; some links on this page are affiliate.`
 ];
 
 // Whitespace-tolerant regex; also matches multi-line divs
@@ -101,32 +112,32 @@ const OWNERS_V = [
   (breed) => `Real familiarity with this slice of ${breed} care keeps households out of reactive decision-making.`,
   (breed) => `Owners with a solid grasp of this layer tend to make calmer, more measured ${breed} decisions under pressure.`,
   (breed) => `Households that genuinely know this part of ${breed} care rarely find themselves in emergency-mode responses.`,
-  (breed) => `A ${breed} owner who has actually learned this aspect of care tends to act, not panic.`,
+  (breed) => `${indefiniteArticle(breed, true)} ${breed} owner who has actually learned this aspect of care tends to act, not panic.`,
   (breed) => `When the household is genuinely fluent in this dimension of ${breed} care, the reactive decisions tend to drop away.`,
   (breed) => `Skilled ${breed} households rarely land on worst-case reactions because they have already thought this through.`
 ];
 
 const GETTING_RIGHT_REGEX = /Getting this right for a pet is less about perfection and more about making informed, repeatable calls\./g;
 const GETTING_V = [
-  (breed) => `Handling this well for a ${breed} is a matter of informed, repeatable decisions rather than a perfect plan.`,
-  (breed) => `Getting this right for a ${breed} is less about any specific action and more about the household doing the same informed thing every week.`,
+  (breed) => `Handling this well for ${indefiniteArticle(breed)} ${breed} is a matter of informed, repeatable decisions rather than a perfect plan.`,
+  (breed) => `Getting this right for ${indefiniteArticle(breed)} ${breed} is less about any specific action and more about the household doing the same informed thing every week.`,
   (breed) => `Quality ${breed} care here is produced by repeatable, informed choices rather than any single brilliant call.`,
-  (breed) => `With a ${breed}, informed repetition beats perfection — the households that quietly repeat sensible choices outperform the ones chasing ideal ones.`,
-  (breed) => `For a ${breed}, the useful goal is a set of repeatable, informed decisions, not a single perfect plan.`,
-  (breed) => `What makes the difference for a ${breed} here is the steady repetition of good-enough choices rather than occasional perfect ones.`,
-  (breed) => `A ${breed} benefits most from repeatable, thoughtful decisions that keep being made week after week.`,
+  (breed) => `With ${indefiniteArticle(breed)} ${breed}, informed repetition beats perfection — the households that quietly repeat sensible choices outperform the ones chasing ideal ones.`,
+  (breed) => `For ${indefiniteArticle(breed)} ${breed}, the useful goal is a set of repeatable, informed decisions, not a single perfect plan.`,
+  (breed) => `What makes the difference for ${indefiniteArticle(breed)} ${breed} here is the steady repetition of good-enough choices rather than occasional perfect ones.`,
+  (breed) => `${indefiniteArticle(breed, true)} ${breed} benefits most from repeatable, thoughtful decisions that keep being made week after week.`,
   (breed) => `Strong ${breed} care on this dimension is made of small, repeatable decisions rather than any heroic one-off effort.`
 ];
 
 const SUCCESS_TRAINING_REGEX = /Successful training for ([A-Z][A-Za-z -]+) respects this (?:breed|species)'s ([a-z -]+) trainability profile and natural ([a-z -]+) tendencies\./g;
 const SUCCESS_TRAINING_V = [
-  (breed, trait, tend) => `Working with a ${breed}'s ${trait} trainability profile — rather than against it — is what makes training sessions land, particularly given the breed's natural ${tend} tendencies.`,
+  (breed, trait, tend) => `Working with ${indefiniteArticle(breed)} ${breed}'s ${trait} trainability profile — rather than against it — is what makes training sessions land, particularly given the breed's natural ${tend} tendencies.`,
   (breed, trait, tend) => `${breed}s respond best when the training plan matches their ${trait} profile and acknowledges their natural ${tend} habits.`,
-  (breed, trait, tend) => `Training outcomes for a ${breed} improve materially when the plan is calibrated to the breed's ${trait} profile and its natural ${tend} tendencies.`,
-  (breed, trait, tend) => `A ${breed}'s ${trait} trainability and natural ${tend} tendencies give you the frame — good training works with that frame, not around it.`,
-  (breed, trait, tend) => `Training effort for a ${breed} pays off most when it respects the breed's ${trait} trainability profile and leans into its natural ${tend} habits.`,
+  (breed, trait, tend) => `Training outcomes for ${indefiniteArticle(breed)} ${breed} improve materially when the plan is calibrated to the breed's ${trait} profile and its natural ${tend} tendencies.`,
+  (breed, trait, tend) => `${indefiniteArticle(breed, true)} ${breed}'s ${trait} trainability and natural ${tend} tendencies give you the frame — good training works with that frame, not around it.`,
+  (breed, trait, tend) => `Training effort for ${indefiniteArticle(breed)} ${breed} pays off most when it respects the breed's ${trait} trainability profile and leans into its natural ${tend} habits.`,
   (breed, trait, tend) => `Effective ${breed} training acknowledges two things at once: the breed's ${trait} trainability profile and its natural ${tend} tendencies.`,
-  (breed, trait, tend) => `For a ${breed}, well-designed training respects the ${trait} trainability baseline and works with the natural ${tend} pattern.`,
+  (breed, trait, tend) => `For ${indefiniteArticle(breed)} ${breed}, well-designed training respects the ${trait} trainability baseline and works with the natural ${tend} pattern.`,
   (breed, trait, tend) => `${breed} training lands when the session design maps to the breed's ${trait} profile and its natural ${tend} instincts.`
 ];
 

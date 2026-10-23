@@ -1,4 +1,15 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 /**
  * fingerprint-eliminator-v5.cjs — broader catches for "a/an" variants and
  * remaining template variants.
@@ -38,14 +49,14 @@ const RULES = [
     id: 'first-year-highest',
     regex: /First-year costs are the highest, followed by relatively stable annual maintenance through the adult years, with a gradual increase as your ([A-Za-z][A-Za-z0-9 '\u2019\-]{1,60}?) enters the senior phase\. Having a realistic lifetime cost estimate helps you make an informed decision before bringing one home\.?/g,
     variants: [
-      (T) => `Year one tends to peak, adult years settle into a relatively flat annual cost, and senior years for a ${T} usually drift upward again as age-related care needs appear. A realistic lifetime projection matters more than any single year's number.`,
+      (T) => `Year one tends to peak, adult years settle into a relatively flat annual cost, and senior years for ${indefiniteArticle(T)} ${T} usually drift upward again as age-related care needs appear. A realistic lifetime projection matters more than any single year's number.`,
       (T) => `A typical ${T} cost curve is high in year one, flat through the middle years, and gently rising in the senior phase as health care needs scale up. Lifetime math is what separates informed purchase decisions from impulsive ones.`,
-      (T) => `Expect a ${T}'s cost pattern to follow a predictable arc: elevated during the first year, stable through adulthood, and trending upward again in the senior years. Running the full-lifetime estimate before acquiring the animal is the useful exercise.`,
+      (T) => `Expect ${indefiniteArticle(T)} ${T}'s cost pattern to follow a predictable arc: elevated during the first year, stable through adulthood, and trending upward again in the senior years. Running the full-lifetime estimate before acquiring the animal is the useful exercise.`,
       (T) => `The shape of ${T} ownership costs is familiar: year one is highest, the adult years stabilize, and the senior phase reintroduces elevated spending driven by age-linked care. Plan on the lifetime total, not the headline year-one figure.`,
       (T) => `${T} cost trajectories are consistent across households: a spike in year one, a plateau through the middle, and a gradual climb as the pet enters senior years. Use the full-lifetime number as your decision input.`,
       (T) => `${T} ownership costs peak during year one, level off across the adult years, and begin climbing again as the animal ages into the senior stage. That long arc, not year one alone, is what should inform the decision to get one.`,
       (T) => `Expect higher totals during your ${T}'s first year, a relatively flat adult period, and a slow upward drift in senior-year spending. Lifetime projections are the honest number to work with.`,
-      (T) => `A ${T}'s cost pattern is front-loaded in year one, then flat, then rising again in the senior years. Any serious cost-of-ownership discussion needs the full-lifetime total on the table.`,
+      (T) => `${indefiniteArticle(T, true)} ${T}'s cost pattern is front-loaded in year one, then flat, then rising again in the senior years. Any serious cost-of-ownership discussion needs the full-lifetime total on the table.`,
     ],
   },
   {

@@ -1,4 +1,15 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 // Replace the generic, semantically-empty comparison tables on breed-vs-breed pages
 // with real differentiated tables using actual breed data from scale-data.js.
 
@@ -107,7 +118,7 @@ function buildParagraphs(a, b) {
   if (higherEnergy) {
     lines.push(`<p>Energy level is the practical differentiator for most households: ${A.name} is classified as ${A.energy}-energy and ${B.name} as ${B.energy}-energy. ${higherEnergy} needs structured daily outlets \u2014 not just a walk around the block \u2014 or it will create its own outlet, often destructively. The lower-energy option is easier to fit around desk jobs and short walks without compromising welfare.</p>`);
   } else {
-    lines.push(`<p>Both breeds share a ${A.energy} energy level, so the differentiator here is temperament, not exercise volume. Watch how each individual dog responds to training pressure, novelty, and time alone \u2014 that tells you more than the AKC group label.</p>`);
+    lines.push(`<p>Both breeds share ${indefiniteArticle(A.energy)} ${A.energy} energy level, so the differentiator here is temperament, not exercise volume. Watch how each individual dog responds to training pressure, novelty, and time alone \u2014 that tells you more than the AKC group label.</p>`);
   }
 
   if (longerLived) {
@@ -122,7 +133,7 @@ function buildParagraphs(a, b) {
 
   const aShed = A.shedding, bShed = B.shedding;
   if (aShed !== bShed) {
-    lines.push(`<p>Grooming effort is meaningfully different: ${A.name} sheds at a ${aShed} level, ${B.name} at ${bShed}. That drives brush frequency, vacuum load, and whether the coat tolerates a week between sessions or demands daily attention during peak seasons.</p>`);
+    lines.push(`<p>Grooming effort is meaningfully different: ${A.name} sheds at ${indefiniteArticle(aShed)} ${aShed} level, ${B.name} at ${bShed}. That drives brush frequency, vacuum load, and whether the coat tolerates a week between sessions or demands daily attention during peak seasons.</p>`);
   }
 
   return lines.join('\n        ');

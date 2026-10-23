@@ -1,3 +1,14 @@
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 // Intro variant banks and common recurring-phrase replacements
 
 const { titleCase } = require('./lib-variants.cjs');
@@ -30,13 +41,13 @@ function introCheckInWithVet(breed, species, seed) {
     `Loop your veterinarian in before any significant diet adjustment for your ${breedTitle} — they hold the context that makes the change safe.`,
     `A short veterinary consultation ahead of a diet change gives your ${breedTitle}'s plan a personalised layer that generic advice cannot provide.`,
     `When adjusting your ${breedTitle}'s feeding plan, a quick check-in with your vet is the simplest way to confirm the change fits the animal's current health profile.`,
-    `Significant diet changes for a ${breedTitle} benefit from a brief vet conversation — especially if there are existing medications or chronic conditions in play.`,
+    `Significant diet changes for ${indefiniteArticle(breedTitle)} ${breedTitle} benefit from a brief vet conversation — especially if there are existing medications or chronic conditions in play.`,
     `Consider a preliminary vet call before any meaningful diet transition for your ${breedTitle}; it surfaces risks in minutes that might otherwise take weeks to diagnose.`,
     `Diet transitions for ${breedTitle}s are safer when the vet is aware of them in advance, particularly for animals with known sensitivities or ongoing treatment.`,
     `Add a vet touch-point to any non-trivial diet adjustment for your ${breedTitle} — the cost is a phone call and the benefit is an individualised green light.`,
     `A brief vet consultation before switching your ${breedTitle}'s core diet catches interactions that are difficult to anticipate from a general guide.`,
     `Before finalising a diet change for your ${breedTitle}, flag it to the veterinarian who knows the animal's history — they are best placed to spot problems early.`,
-    `Significant dietary changes for a ${breedTitle} are worth a five-minute vet conversation up front, particularly if the animal has any existing health considerations.`,
+    `Significant dietary changes for ${indefiniteArticle(breedTitle)} ${breedTitle} are worth a five-minute vet conversation up front, particularly if the animal has any existing health considerations.`,
     `Involve your veterinarian before material feeding changes for your ${breedTitle}; small interventions in advance reliably prevent larger interventions later.`
   ];
   return variants[seed % variants.length];
@@ -51,7 +62,7 @@ const GENERIC_CLOSERS = {
       `Skipping this step looks harmless month to month and accumulates into the kind of outcome that shows up in year three or year seven.`,
       `Deferring decisions here is one of the few reliably regrettable choices in ${breedTitle} ownership.`,
       `The households that keep this corner on the plan are consistently the ones with the fewest surprises downstream.`,
-      `Quiet parts of a ${breedTitle}'s care plan reward the discipline to handle them on schedule rather than on demand.`,
+      `Quiet parts of ${indefiniteArticle(breedTitle)} ${breedTitle}'s care plan reward the discipline to handle them on schedule rather than on demand.`,
       `Most households underestimate the compounding value of handling this steadily rather than when it becomes urgent.`,
       `The return on sustained attention here is larger than it looks in any single month.`,
       `Time spent on this layer of the plan pays back most in the years when no single dramatic event happens.`,
@@ -66,7 +77,7 @@ const GENERIC_CLOSERS = {
       `${breedTitle}s settle into a stable rhythm when the routine reflects their natural temperament and life stage rather than a one-size-fits-all template.`,
       `Routines that match the ${breedTitle}'s actual energy and social preferences produce a more cooperative animal than routines adapted from other breeds.`,
       `The ${breedTitle}'s behaviour usually tells you within a few weeks whether the routine fits — adjust the routine before trying to adjust the animal.`,
-      `A ${breedTitle} on a well-fitted routine is noticeably calmer, more responsive, and easier to handle than one on a generic schedule.`,
+      `${indefiniteArticle(breedTitle, true)} ${breedTitle} on a well-fitted routine is noticeably calmer, more responsive, and easier to handle than one on a generic schedule.`,
       `Tailor the daily rhythm to the ${breedTitle}'s observed preferences; the animal will meet you halfway when the routine reflects its actual temperament.`,
       `${breedTitle}s do their best work when the household routine acknowledges their specific energy rhythm and environmental needs.`,
       `The right routine for this ${breedTitle} is usually visible in the first few weeks of observation — build from what the animal is telling you rather than from a template.`,

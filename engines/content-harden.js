@@ -1,4 +1,15 @@
 #!/usr/bin/env node
+
+function indefiniteArticle(name, capitalize) {
+  const word = String(name == null ? "" : name).trim().replace(/^[^A-Za-z]+/, "");
+  const head = word.toLowerCase().split(/[^a-z]/)[0];
+  const consonantSound = new Set(["unique","uniquely","united","university","universal","uniform","user","useful","usual","usually","utility","uterine","unit","ewe","european","eucalyptus","usda","uri","url","one","once"]);
+  const silentH = new Set(["hour","herb","honest","honor","honour","heir"]);
+  let article = "a";
+  if (!consonantSound.has(head) && (silentH.has(head) || /^[aeiou]/i.test(word))) article = "an";
+  if (capitalize) article = article.charAt(0).toUpperCase() + article.slice(1);
+  return article;
+}
 /**
  * PetCareHelperAI — Content Hardening Engine
  *
@@ -132,15 +143,15 @@ const dogIntroPatterns = [
   (b) => `Originally bred as ${b.group === 'sporting' ? 'a hunting and retrieving companion' : b.group === 'herding' ? 'a livestock guardian and herding dog' : b.group === 'working' ? 'a versatile working dog' : b.group === 'hound' ? 'a scent-tracking and pursuit dog' : b.group === 'terrier' ? 'a tenacious vermin hunter' : b.group === 'toy' ? 'a devoted companion animal' : 'a multipurpose breed'}, the ${b.name} brings centuries of selective breeding into the modern home.`,
   (b) => `Few breeds combine ${b.energy === 'high' ? 'boundless energy' : b.energy === 'moderate' ? 'steady enthusiasm' : 'calm composure'} with the ${b.name}'s distinctive character quite so effectively.`,
   (b) => `The ${b.name} occupies a unique position among ${b.size} breeds, weighing ${b.weight} and carrying a temperament shaped by the ${b.group} group's heritage.`,
-  (b) => `Understanding the ${b.name} means looking beyond the breed standard to the individual dog — though at ${b.weight} with a ${b.energy}-energy disposition, certain patterns consistently emerge.`,
+  (b) => `Understanding the ${b.name} means looking beyond the breed standard to the individual dog — though at ${b.weight} with ${indefiniteArticle(b.energy)} ${b.energy}-energy disposition, certain patterns consistently emerge.`,
   (b) => `What sets the ${b.name} apart from other ${b.group} breeds is the specific combination of size, drive, and health profile that defines daily life with this dog.`,
   (b) => `Prospective ${b.name} owners should know that this ${b.size} ${b.group} breed demands an informed approach to nutrition, exercise, and preventive health management.`,
   (b) => `The ${b.name}'s ${b.shedding} shedding coat and ${b.energy} activity requirements tell only part of the story — their ${b.group} heritage shapes everything from trainability to health risks.`,
   (b) => `At ${b.weight} with a life expectancy of ${b.lifespan}, the ${b.name} represents a significant commitment that rewards prepared owners with years of devoted companionship.`,
   (b) => `Among ${b.size} breeds in the ${b.group} group, the ${b.name} stands out for its particular blend of physical characteristics and behavioral tendencies.`,
   (b) => `Whether you are researching the ${b.name} for the first time or deepening your knowledge as a current owner, the breed's ${b.group} lineage is the foundation for understanding their needs.`,
-  (b) => `The ${b.name}'s reputation in the ${b.group} group reflects generations of purposeful breeding, resulting in a ${b.size} dog with predictable but nuanced care requirements.`,
-  (b) => `Living with a ${b.name} means adapting to a ${b.energy}-energy companion that thrives on structure, appropriate exercise, and attentive health monitoring.`,
+  (b) => `The ${b.name}'s reputation in the ${b.group} group reflects generations of purposeful breeding, resulting in ${indefiniteArticle(b.size)} ${b.size} dog with predictable but nuanced care requirements.`,
+  (b) => `Living with ${indefiniteArticle(b.name)} ${b.name} means adapting to ${indefiniteArticle(b.energy)} ${b.energy}-energy companion that thrives on structure, appropriate exercise, and attentive health monitoring.`,
 ];
 
 const catIntroPatterns = [
@@ -148,12 +159,12 @@ const catIntroPatterns = [
   (b) => `At ${b.weight} with a life expectancy spanning ${b.lifespan}, the ${b.name} represents one of the more ${b.energy === 'high' ? 'active and engaging' : b.energy === 'moderate' ? 'balanced and adaptable' : 'serene and low-maintenance'} cat breeds available.`,
   (b) => `Understanding the ${b.name} starts with their ${b.coat}-coated, ${b.size}-framed build — but their personality and health profile reveal the deeper story.`,
   (b) => `Few cat breeds combine the ${b.name}'s particular blend of ${b.energy} activity, ${b.shedding} shedding characteristics, and distinctive health considerations.`,
-  (b) => `The ${b.name} occupies a specific niche in the feline world: a ${b.size} cat with ${b.coat} fur, ${b.energy} energy demands, and predispositions that informed owners should understand.`,
-  (b) => `Choosing a ${b.name} means preparing for a ${b.lifespan} companionship with a cat whose ${b.energy} nature and ${b.coat} coat define the rhythm of daily care.`,
+  (b) => `The ${b.name} occupies a specific niche in the feline world: ${indefiniteArticle(b.size)} ${b.size} cat with ${b.coat} fur, ${b.energy} energy demands, and predispositions that informed owners should understand.`,
+  (b) => `Choosing ${indefiniteArticle(b.name)} ${b.name} means preparing for ${indefiniteArticle(b.lifespan)} ${b.lifespan} companionship with a cat whose ${b.energy} nature and ${b.coat} coat define the rhythm of daily care.`,
   (b) => `What makes the ${b.name} remarkable among ${b.size} cat breeds is the interplay between their physical characteristics and the behavioral patterns that emerge from their genetic heritage.`,
   (b) => `For those considering the ${b.name}, the breed's combination of ${b.shedding} shedding, ${b.energy} activity level, and known health predispositions forms the essential baseline for informed ownership.`,
   (b) => `The ${b.name} cat's appeal extends well beyond aesthetics — their ${b.energy}-energy temperament creates a household dynamic quite different from more sedentary breeds.`,
-  (b) => `Weighing ${b.weight} at maturity, the ${b.name} brings a ${b.size}-framed presence into the home along with a set of care requirements that reward attentive, knowledgeable owners.`,
+  (b) => `Weighing ${b.weight} at maturity, the ${b.name} brings ${indefiniteArticle(b.size)} ${b.size}-framed presence into the home along with a set of care requirements that reward attentive, knowledgeable owners.`,
 ];
 
 // ============================================================
@@ -242,7 +253,7 @@ for (const breed of dogBreeds) {
   // Bloat-prone breeds
   if (breed.issues.some(i => i.includes('bloat'))) {
     sections.push(`<h3>Gastric Dilatation-Volvulus (GDV) Prevention</h3>
-      <p>Bloat, technically gastric dilatation-volvulus (GDV), represents a life-threatening surgical emergency with mortality rates between 10-33% even with treatment. As a ${breed.size} breed with a deep chest conformation, the ${breed.name} carries elevated GDV risk. A landmark Purdue University study identified key risk factors: feeding from elevated bowls (contrary to earlier recommendations), eating one large meal daily, rapid eating, and a fearful temperament. Evidence-based prevention includes feeding 2-3 smaller meals daily, restricting vigorous exercise for 60-90 minutes after eating, and discussing prophylactic gastropexy with your veterinarian — a procedure that can be performed during spay/neuter surgery and reduces GDV risk by over 90%.</p>`);
+      <p>Bloat, technically gastric dilatation-volvulus (GDV), represents a life-threatening surgical emergency with mortality rates between 10-33% even with treatment. As ${indefiniteArticle(breed.size)} ${breed.size} breed with a deep chest conformation, the ${breed.name} carries elevated GDV risk. A landmark Purdue University study identified key risk factors: feeding from elevated bowls (contrary to earlier recommendations), eating one large meal daily, rapid eating, and a fearful temperament. Evidence-based prevention includes feeding 2-3 smaller meals daily, restricting vigorous exercise for 60-90 minutes after eating, and discussing prophylactic gastropexy with your veterinarian — a procedure that can be performed during spay/neuter surgery and reduces GDV risk by over 90%.</p>`);
   }
 
   // Heart disease breeds
