@@ -1,5 +1,5 @@
 [build]
-  command = "node engines/check-care-lines.mjs"
+  command = "node engines/check-care-lines.mjs && node engines/check-fragments.mjs"
   publish = "."
   functions = "netlify/functions"
 
@@ -1276,6 +1276,50 @@
 [[redirects]]
   from = "/embed/*.html"
   to = "/embed/:splat"
+  status = 301
+  force = true
+
+# Duplicate indexed breed URLs. Welsh Corgi is the Pembroke page; Cardigan stays separate.
+[[redirects]]
+  from = "/breeds/dogs/west-highland-terrier"
+  to = "/breeds/dogs/west-highland-white-terrier"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/dogs/west-highland-terrier.html"
+  to = "/breeds/dogs/west-highland-white-terrier"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/west-highland-terrier/*"
+  to = "/breeds/dogs/west-highland-white-terrier"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/dogs/welsh-corgi"
+  to = "/breeds/dogs/pembroke-welsh-corgi"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/breeds/dogs/welsh-corgi.html"
+  to = "/breeds/dogs/pembroke-welsh-corgi"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/commercial/dogs/welsh-corgi/*"
+  to = "/breeds/dogs/pembroke-welsh-corgi"
+  status = 301
+  force = true
+
+# Near-duplicate commercial templates go to the breed profile instead of a thin page.
+[[redirects]]
+  from = "/commercial/:group/:slug/:page"
+  to = "/breeds/:group/:slug"
   status = 301
   force = true
 

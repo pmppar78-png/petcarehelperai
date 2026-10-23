@@ -3,7 +3,7 @@ import OpenAI from "openai";
 // Affiliate data embedded directly to avoid JSON import issues in Netlify Functions
 const affiliates = {
   "foodAndNutrition": [
-    { "name": "Chewy Autoship", "url": "https://www.chewy.com/app/autoship" },
+    { "name": "Chewy Autoship", "url": "https://www.chewy.com/b/autoship-save-15682" },
     { "name": "The Farmer's Dog", "url": "https://www.thefarmersdog.com" },
     { "name": "Nom Nom", "url": "https://www.nomnomnow.com" },
     { "name": "Ollie", "url": "https://www.myollie.com" },
@@ -150,9 +150,10 @@ function requestOrigin(req) {
   const ref = req.headers.get("referer");
   try { return ref ? new URL(ref).origin : ""; } catch (e) { return ""; }
 }
-// Simple in-memory rate limit: 10 requests per minute per IP (per function instance).
+// 10 requests per minute per IP. Netlify Blobs keeps the count across cold starts.
+// The in-memory map is only the fallback when Blobs is unavailable.
 const rateLimitMap = new Map();
-function isRateLimited(ip) {
+function memoryRateLimited(ip) {
   const now = Date.now();
   const entry = rateLimitMap.get(ip);
   if (!entry || now > entry.resetTime) {
@@ -164,6 +165,26 @@ function isRateLimited(ip) {
   entry.count++;
   return false;
 }
+async function isRateLimited(ip) {
+  const now = Date.now();
+  try {
+    const { getStore } = await import("@netlify/blobs");
+    const store = getStore({ name: "ai-chat-rate", consistency: "strong" });
+    const key = `ip:${String(ip).replace(/[^a-zA-Z0-9.:_-]/g, "").slice(0, 80) || "unknown"}`;
+    const entry = await store.get(key, { type: "json" });
+    if (!entry || now > entry.resetTime) {
+      await store.setJSON(key, { count: 1, resetTime: now + 60000 });
+      return false;
+    }
+    if (entry.count >= 10) return true;
+    entry.count += 1;
+    await store.setJSON(key, entry);
+    return false;
+  } catch (err) {
+    console.error("blob rate limit unavailable", err && err.message);
+    return memoryRateLimited(ip);
+  }
+}
 
 export default async function handler(req, context) {
   if (req.method === "POST" && !ALLOWED_ORIGIN.test(requestOrigin(req))) {
@@ -171,7 +192,7 @@ export default async function handler(req, context) {
   }
   if (req.method === "POST") {
     const ip = (context && context.ip) || req.headers.get("x-nf-client-connection-ip") || (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() || "unknown";
-    if (isRateLimited(ip)) {
+    if (await isRateLimited(ip)) {
       return new Response(JSON.stringify({ reply: "You are sending messages very quickly. Please wait a minute and try again." }), { status: 429, headers: { "Content-Type": "application/json" } });
     }
   }
@@ -283,7 +304,7 @@ export default async function handler(req, context) {
       "• Birds: Labored breathing, tail bobbing, blood in droppings, trauma, egg binding, sudden lethargy, seizures.\n" +
       "• Reptiles: Prolapse, severe burns, respiratory distress (open-mouth breathing, wheezing), trauma, refusal to move, seizures.\n" +
       "• Fish: Entire tank affected, gasping at surface, mass die-off, ammonia/nitrite spike.\n" +
-      "• Small animals: GI stasis (especially rabbits), not eating for >12-24hrs, labored breathing, bloat, seizures, heatstroke, severe diarrhea.\n\n" +
+      "• Small animals: GI stasis (especially rabbits), not eating for more than 12 to 24 hours, labored breathing, bloat, seizures, heatstroke, severe diarrhea.\n\n" +
 
       "For emergencies, tell users: 'This is an emergency. Contact an emergency vet or animal ER immediately. If after hours, call your vet's emergency line or " +
       "use an emergency clinic locator. For poisoning, also contact Pet Poison Helpline (855-764-7661) or ASPCA Poison Control (888-426-4435).'\n\n" +
