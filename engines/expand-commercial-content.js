@@ -181,8 +181,21 @@ function generateFoodContent(name, data, meta) {
     low: `${name}'s lower activity level means protein at 22-28% of calories is sufficient. Avoid over-rich formulas that can cause weight gain in less active ${meta.termPlural}.`,
   };
 
-  // Variant sensitivity paragraphs
-  const sensitivityVariants = [
+  const aquatic = meta.term === "fish" || meta.term === "marine fish";
+  const invertebrate = /shrimp|snail|crab|crayfish/i.test(name);
+  const waterTests = meta.term === "marine fish"
+    ? "ammonia, nitrite, nitrate, salinity, and temperature"
+    : "ammonia, nitrite, nitrate, and temperature";
+  // Variant sensitivity paragraphs. Aquatic pages must not inherit mammal gut and skin signs.
+  const sensitivityVariants = aquatic && invertebrate ? [
+    `A ${name} with a diet or water problem hides, refuses food, or fails a molt. Test ${waterTests} before changing the food. If the water is stable and the ${name} still will not forage, an aquatic veterinarian should look for a bad molt or an infection.`,
+    `Food trouble in a ${name} is usually the water or a piece of food the animal cannot handle. Watch whether it forages and whether molts finish. Correct the water test before you blame the brand.`,
+    `A ${name} ignores food when the piece is wrong or the water is off. Hiding and a stalled molt are the signs to record. A water test comes before a brand change.`,
+  ] : aquatic ? [
+    `A ${name} with a diet or water problem loses appetite, fades, clamps the fins, flashes against decor, passes stringy white feces, or works the gills too fast. Test ${waterTests} before changing the food. If the water is stable and the ${name} still will not eat, an aquatic veterinarian should look for parasites or infection.`,
+    `Food trouble in a ${name} is usually the water or a pellet of the wrong size. Watch appetite, color, fin position, and whether feces turn white and stringy. Correct ammonia and temperature first, then ask an aquatic veterinarian if the fish still declines.`,
+    `A ${name} spits or ignores pellets when the piece is the wrong size or the water is off. Clamped fins, pale color, rapid gill movement, and stringy feces are the signs to record. A water test comes before a brand change.`,
+  ] : [
     `${name} ${meta.termPlural} can be susceptible to dietary sensitivities, particularly given their predisposition to ${conditions}. Signs of food sensitivity include digestive upset, skin irritation, excessive scratching, and changes in stool quality. For ${name} with suspected food allergies, a veterinarian-guided elimination diet can identify trigger ingredients. Limited-ingredient diets (LIDs) that use novel proteins such as venison, duck, or lamb combined with single carbohydrate sources are often effective. Avoid common allergens including wheat, corn, and soy unless your ${name} tolerates them well. Probiotics and digestive enzyme supplements can also support gut health in sensitive ${name} ${meta.termPlural}.`,
     `Given ${name}'s predisposition to ${conditions}, monitoring for dietary sensitivities is important. Watch for persistent itching, ear infections, loose stools, or vomiting after meals. If sensitivity is suspected, work with your ${meta.vetType} on a strict elimination diet over 8-12 weeks to pinpoint the offending ingredient. Hydrolyzed protein diets break proteins into fragments too small to trigger immune responses and can be an effective diagnostic and management tool. Once triggers are identified, maintaining an avoidance diet is straightforward with the wide range of limited-ingredient options now available for ${meta.termPlural}.`,
     `Dietary sensitivities affect a notable proportion of ${meta.termPlural}, and ${name} is no exception given the ${meta.groupLabel}'s association with ${conditions}. The most reliable symptoms to watch include chronic ear inflammation, paw licking, intermittent diarrhea, and flatulence. Novel protein sources—rabbit, kangaroo, or insect-based formulas—offer alternatives when common proteins trigger reactions. Grain-free diets are not automatically better; many ${name} ${meta.termPlural} tolerate grains well. Focus on identifying specific triggers through controlled elimination rather than blanket ingredient avoidance.`,
@@ -221,7 +234,11 @@ function generateFoodContent(name, data, meta) {
       <p>If your ${name} needs to lose or maintain weight, choose a formula with L-carnitine and higher fiber content. These help ${name} feel satisfied while consuming fewer calories, which is especially important given their ${data.exerciseNeeds.toLowerCase()} activity level.</p>
 
       <h2>Signs Your ${name} Is Thriving on Their Diet</h2>
-      <p>A well-nourished ${name} displays consistent energy throughout the day that matches their ${primaryTrait.toLowerCase()} nature. The coat should be glossy and smooth without excessive dryness, flaking, or dullness. Healthy digestion is indicated by firm, well-formed stools one to two times daily. Dental health remains strong with minimal tartar buildup when diet supports oral care. Eyes should be bright and clear, and your ${name} should maintain a stable, appropriate weight for their frame. Changes in any of these indicators may signal that a dietary adjustment is needed. Regular ${meta.vetType} check-ups help confirm that your ${name}'s nutritional plan is working optimally.</p>
+      <p>${aquatic && invertebrate
+        ? `A well-fed ${name} forages, keeps a normal shell or exoskeleton, and completes molts. It does not spend the day hidden or ignore food that it used to take. Any of those changes means check the water, then the diet.`
+        : aquatic
+        ? `A well-fed ${name} eats readily, holds normal color, and carries fins away from the body. Feces are not white or stringy, and the fish is not flashing against rocks or gasping at the surface. Weight stays even for the body, without a sunken belly or a pinecone swell. Any of those changes means check the water, then the diet.`
+        : `A well-nourished ${name} displays consistent energy throughout the day that matches their ${primaryTrait.toLowerCase()} nature. The coat should be glossy and smooth without excessive dryness, flaking, or dullness. Healthy digestion is indicated by firm, well-formed stools one to two times daily. Dental health remains strong with minimal tartar buildup when diet supports oral care. Eyes should be bright and clear, and your ${name} should maintain a stable, appropriate weight for their frame. Changes in any of these indicators may signal that a dietary adjustment is needed. Regular ${meta.vetType} check-ups help confirm that your ${name}'s nutritional plan is working optimally.`}</p>
 
       <h2>Expert Feeding Tips for ${name} Owners</h2>
       <p>${pickVariant(name + 'tips', expertTipsVariants)}</p>

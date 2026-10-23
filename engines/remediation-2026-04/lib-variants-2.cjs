@@ -14,10 +14,47 @@ function indefiniteArticle(name, capitalize) {
 
 const { titleCase, articleFor } = require('./lib-variants.cjs');
 
+function pluralAnimal(title) {
+  if (/fish$/i.test(title)) return title.replace(/Fish$/, "fish");
+  return title + "s";
+}
+
+function aquaticSpecies(species) {
+  return species === "fish" || species === "marine-fish";
+}
+
+function aquaticInvertebrate(title) {
+  return /shrimp|snail|crab|crayfish/i.test(title);
+}
+
 // -------- best-food: Best for Transitioning Diet & Weight Management --------
 
 function transitioningDiet(breed, species, seed) {
   const breedTitle = titleCase(breed);
+  if (aquaticSpecies(species)) {
+    const who = pluralAnimal(breedTitle);
+    const salt = species === "marine-fish" ? "ammonia, nitrite, nitrate, salinity, and temperature" : "ammonia, nitrite, nitrate, and temperature";
+    const variants = aquaticInvertebrate(breedTitle) ? [
+      `<p>Switch ${who} food over seven to ten days. Start with about a quarter of the new food mixed into the old food, then step the mix up every few days. A sudden change shows up as hiding, refused food, or a molt that does not finish.</p>
+      <p>If those signs appear, go back to the previous mix and test ${salt} before you blame the food.</p>`,
+      `<p>Change ${who} food in a quiet week, not in the same week as a new tank or a move. Otherwise you cannot tell a diet problem from a water problem.</p>
+      <p>Hold the new food for at least three weeks after the mix is complete. Judge it by foraging and by molts that finish.</p>`,
+      `<p>For ${who}, days 1–2 can be about 25% new food, days 3–4 about half, days 5–6 about 75%, then the new food alone. If they hide or stop foraging, drop back a step.</p>
+      <p>Rushing the switch is the usual failure. A two-day change fouls the water and stops feeding. Give the week-long mix a chance before you decide the formula is wrong for ${who}.</p>`,
+      `<p>Sensitive ${who} can take two weeks, with each step held for three days. The extra time is cheaper than a crash in appetite.</p>
+      <p>Note the date, the mix, whether they ate, and whether a molt finished. That log is what you show an aquatic veterinarian if the transition stalls.</p>`
+    ] : [
+      `<p>Switch ${who} food over seven to ten days. Start with about a quarter of the new food mixed into the old food, then step the mix up every few days. A sudden change shows up as refused food, stringy white feces, or clamped fins.</p>
+      <p>If those signs appear, go back to the previous mix and test ${salt} before you blame the food.</p>`,
+      `<p>Change ${who} food in a quiet week, not in the same week as a new tank or a move. Otherwise you cannot tell a diet problem from a water problem.</p>
+      <p>Hold the new food for at least three weeks after the mix is complete. Judge it by appetite, color, and whether feces stay free of white stringy casts.</p>`,
+      `<p>For ${who}, days 1–2 can be about 25% new food, days 3–4 about half, days 5–6 about 75%, then the new food alone. If the fish clamp fins or spit pellets, drop back a step.</p>
+      <p>Rushing the switch is the usual failure. A two-day change stresses the fish and the water. Give the week-long mix a chance before you decide the formula is wrong for ${who}.</p>`,
+      `<p>Sensitive ${who} can take two weeks, with each step held for three days. The extra time is cheaper than a crash in appetite.</p>
+      <p>Note the date, the mix, whether they ate, and whether feces turned stringy or white. That log is what you show an aquatic veterinarian if the transition stalls.</p>`
+    ];
+    return variants[seed % variants.length];
+  }
   const variants = [
     `<p>Switch ${breedTitle} food over seven to ten days, not one or two. Start with about 25% new food mixed into the existing diet for three days, step to 50/50 for the next three days, shift to 75% new food for two days, then complete the change. This slow ramp gives the ${breedTitle}'s gut microbiome time to adapt and catches any intolerance before it turns into sustained GI upset.</p>
       <p>Track three markers during the transition: stool consistency, appetite, and energy. Any material change in any one of these is a signal to pause the transition for an extra 48 hours, not to push through. Transitions that trigger repeated loose stools or appetite suppression are often diet-quality or ingredient issues, not adjustment issues — the right response is usually a return to the previous food and a conversation with the veterinarian rather than a further change.</p>`,
@@ -33,6 +70,29 @@ function transitioningDiet(breed, species, seed) {
 
 function weightManagement(breed, species, seed) {
   const breedTitle = titleCase(breed);
+  if (aquaticSpecies(species)) {
+    const who = pluralAnimal(breedTitle);
+    const variants = aquaticInvertebrate(breedTitle) ? [
+      `<p>Weight in ${who} is mostly uneaten food and extra feedings. Feed what they finish, and pull leftovers so they do not rot in the tank.</p>
+      <p>A ${breedTitle} that hides or stalls in a molt is a health sign, not a cue to pile on more food. Ask an aquatic veterinarian before you cut rations hard.</p>`,
+      `<p>${indefiniteArticle(breedTitle, true)} ${breedTitle} that is getting too heavy does better on a measured ration of the right food than on constant snacks.</p>
+      <p>The activity that matters is foraging through the tank. A bare tank with food dropped in one spot does less for ${who} than a layout they have to search.</p>`,
+      `<p>Weighing ${who} at home is awkward, so watch whether they forage and whether molts finish. A soft, overstuffed look from too much food is the portion problem. A failed molt is not.</p>
+      <p>Change the amount in small steps. A sharp cut can leave ${who} ignoring the feeding spot.</p>`,
+      `<p>A weight-control food for ${who} is the species-appropriate formula fed in a smaller ration. Algae eaters still need their vegetable matter. Carnivorous snails and crabs still need meaty foods.</p>
+      <p>Count every extra wafer, frozen cube, and vegetable piece. Those additions, not the measured ration, are what usually overfeed ${who}.</p>`
+    ] : [
+      `<p>Weight in ${who} is mostly uneaten food and extra feedings. Feed what they finish in a couple of minutes, and pull leftovers so they do not rot in the tank.</p>
+      <p>A sunken belly or a swollen one is a health sign, not a cue to add treats. Reassess body shape every few weeks and ask an aquatic veterinarian before you cut rations hard.</p>`,
+      `<p>${indefiniteArticle(breedTitle, true)} ${breedTitle} that is getting too heavy does better on a measured ration of the right food than on a lower-quality pellet plus constant snacks.</p>
+      <p>The activity that matters is swimming and searching the layout for food. A bare tank with food dropped in one spot does less for ${who} than a layout they have to search.</p>`,
+      `<p>Weighing a fish at home is awkward, so use body shape: a pinched belly, a bulge, or a pinecone swell of the scales. Those are different problems, and only the bulge from overfeeding is a portion issue.</p>
+      <p>Change the amount in small steps. A sharp cut can leave ${who} picking at the substrate or, in aggressive species, picking at tankmates.</p>`,
+      `<p>A weight-control food for ${who} is the species-appropriate formula fed in a smaller ration. Herbivores and algae eaters still need their vegetable matter. Carnivores still need meaty foods.</p>
+      <p>Count every extra wafer, frozen cube, and pea. Those additions, not the measured pellet, are what usually overfeed ${who}.</p>`
+    ];
+    return variants[seed % variants.length];
+  }
   const variants = [
     `<p>Weight management for ${breedTitle} is a calorie accounting problem. Most overweight ${breedTitle}s receive the right-looking portion plus the un-tracked calories from treats, chews, table scraps, and training rewards. A weight-management formula with L-carnitine and elevated fibre helps satiety, but it does not fix the accounting. Measure daily food by gram rather than scoop, count treat calories into the daily total, and restrict treats to 10% of daily intake.</p>
       <p>Set a target weight with the veterinarian and reassess monthly. Weight loss of roughly 1% of body weight per week is safe and sustainable; faster loss risks lean-mass depletion, particularly for adult and senior ${breedTitle}s. Re-measure body condition score at each monthly check-in, because weight alone can mislead when lean mass is shifting alongside fat.</p>`,
