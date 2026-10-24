@@ -20,7 +20,7 @@
   {
     "page": "guides/labrador-retriever-health-issues.html",
     "original": "The Labrador Retriever's reputation in the sporting group reflects generations of purposeful breeding, resulting in a large dog with predictable but nuanced care requirements.",
-    "replacement": "Weighing 55-80 lbs, with a lifespan of 11-14 yrs, a Labrador Retriever needs the hips kept lean and the food cup measured across those years.",
+    "replacement": "Weighing 55-80 lbs, with a lifespan of 11-14 yrs, a Labrador Retriever needs to stay lean to protect its hips, and the food cup should be measured across those years.",
     "reason": "Empty sporting-group filler removed. The page keeps the weight and the 11-14 yr lifespan in one plain sentence about the hips and the food cup."
   },
   {
@@ -326,5 +326,125 @@
     "replacement": "11-14 yrs",
     "correct": true,
     "reason": "AKC lists the Labrador Retriever lifespan as 11-14 years. The card and intro no longer say 10-13."
+  },
+  {
+    "page": "guides/how-big-do-beagles-get.html",
+    "original": "What are the most important considerations for how big do beagles get?",
+    "replacement": "What do the 13-inch and 15-inch Beagle varieties weigh?",
+    "reason": "The old heading dropped the page title into the question. The new heading asks the size question in plain words."
+  },
+  {
+    "page": "guides/how-big-do-french-bulldogs-get.html",
+    "original": "What are the most important considerations for how big do french bulldogs get?",
+    "replacement": "What height and weight cap apply to an adult French Bulldog?",
+    "reason": "The old heading dropped the page title into the question. The new heading asks the size question in plain words."
+  },
+  {
+    "page": "guides/how-big-do-golden-retrievers-get.html",
+    "original": "What are the most important considerations for how big do golden retrievers get?",
+    "replacement": "What scale reading fits a female Golden Retriever, and what fits a male?",
+    "reason": "The old heading dropped the page title into the question. The new heading asks the size question in plain words."
+  },
+  {
+    "page": "guides/how-big-do-labrador-retrievers-get.html",
+    "original": "What are the most important considerations for how big do labrador retrievers get?",
+    "replacement": "What chest and weight should a full-grown Labrador Retriever show?",
+    "reason": "The old heading dropped the page title into the question. The new heading asks the size question in plain words."
+  },
+  {
+    "page": "guides/french-bulldog-health-issues.html",
+    "original": "What are the most important considerations for french bulldog?",
+    "replacement": "Which airway grades and spine problems belong on a French Bulldog visit?",
+    "reason": "The old heading used a lowercase breed name with no article. The new heading names the health questions."
+  },
+  {
+    "page": "guides/golden-retriever-health-issues.html",
+    "original": "What are the most important considerations for golden retriever?",
+    "replacement": "Which warnings go in a Golden Retriever folder?",
+    "reason": "The old heading used a lowercase breed name with no article. The new heading names the warnings to bring."
+  },
+  {
+    "page": "guides/labrador-retriever-health-issues.html",
+    "original": "What are the most important considerations for labrador retriever?",
+    "replacement": "Which hip and elbow records belong with a Labrador Retriever puppy?",
+    "reason": "The old heading used a lowercase breed name with no article. The new heading names the records to request."
+  },
+  {
+    "page": "guides/beagle-grooming-guide.html",
+    "original": "Beagles have moderate shedding and require 2–3 times per week brushing",
+    "replacement": "Schedule 2-3 brushings.",
+    "reason": "The brushing line was missing a verb phrase. The schedule now says how often the coat is brushed."
+  },
+  {
+    "page": "guides/beagle-grooming-guide.html",
+    "original": "Regular grooming sessions keep your Beagle's coat healthy and help you bond with your dog",
+    "replacement": "Dirt from a field edge sits in the webs and under the long leather, so those two spots get a look every time the brush comes out.",
+    "reason": "The bonding slogan was replaced with the spots a Beagle brush actually has to reach."
+  },
+  {
+    "page": "guides/beagle-grooming-guide.html",
+    "original": "The Beagle's reputation in the hound group reflects generations of purposeful breeding, resulting in a medium dog with predictable but nuanced care requirements",
+    "replacement": "Dirt from a field edge sits in the webs and under the long leather, so those two spots get a look every time the brush comes out.",
+    "reason": "The hound-group filler was replaced with the field dirt a Beagle brings back in the feet and ears."
+  },
+  {
+    "page": "guides/beagle-grooming-guide.html",
+    "original": "Health Predisposition Summary: Beagles show higher-than-average incidence of epilepsy, hypothyroidism, cherry eye based on breed health database data",
+    "replacement": "Dirt from a field edge sits in the webs and under the long leather, so those two spots get a look every time the brush comes out.",
+    "reason": "The database-summary box was replaced with the grooming check that catches a dirty ear or a pink gland."
+  },
+  {
+    "page": "guides/french-bulldog-grooming-guide.html",
+    "original": "French Bulldogs have moderate shedding and require 2–3 times per week brushing",
+    "replacement": "Repeat 2-3 wipes.",
+    "reason": "The brushing line did not match fold care. The page now says how often the folds are wiped."
+  },
+  {
+    "page": "guides/french-bulldog-grooming-guide.html",
+    "original": "Regular grooming sessions keep your French Bulldog's coat healthy and help you bond with your dog",
+    "replacement": "Fold care and short rinses for a French Bulldog fill the sections below.",
+    "reason": "The bonding slogan was replaced with the fold-and-rinse work this coat actually needs."
+  },
+  {
+    "page": "guides/french-bulldog-grooming-guide.html",
+    "original": "The French Bulldog's reputation in the non-sporting group reflects generations of purposeful breeding, resulting in a small dog with predictable but nuanced care requirements",
+    "replacement": "Fold care and short rinses for a French Bulldog fill the sections below.",
+    "reason": "The group-reputation filler was replaced with the fold care the sections cover."
+  },
+  {
+    "page": "guides/french-bulldog-grooming-guide.html",
+    "original": "Outcomes track closely to how well the owner pays attention to the individual animal rather than the breed stereotype",
+    "replacement": "Fold care and short rinses for a French Bulldog fill the sections below.",
+    "reason": "The stereotype line was replaced with the fold-and-rinse work on this page."
+  },
+  {
+    "page": "guides/french-bulldog-health-issues.html",
+    "original": "Health Awareness: French Bulldogs show elevated breed-level risk for brachycephalic syndrome, spinal disorders, allergies",
+    "replacement": "French Bulldogs commonly have breathing problems from their flat faces, spinal disc disease is also more common in the breed, and skin allergies are frequent.",
+    "reason": "The label sentence dropped the word and. The page now names the airway, the spine, and the skin in one sentence."
+  },
+  {
+    "page": "guides/french-bulldog-temperament.html",
+    "original": "Health Predisposition Summary: French Bulldogs show higher-than-average incidence of brachycephalic syndrome, spinal disorders, allergies based on breed health database data",
+    "replacement": "Heat and a long walk show a tight airway before a quiet day at home does.",
+    "reason": "The database summary was replaced with how heat and a long walk show the airway limit."
+  },
+  {
+    "page": "guides/golden-retriever-temperament.html",
+    "original": "Health Awareness: Golden Retrievers carry genetic predispositions to cancer, hip dysplasia, heart disease",
+    "replacement": "A Golden Retriever wants the retrieve, and the day goes better when that game has a clear end.",
+    "reason": "The predisposition label was replaced with the retrieve the temperament page is about. The disease list stays in the note above it."
+  },
+  {
+    "page": "guides/how-big-do-labrador-retrievers-get.html",
+    "original": "Understanding your Labrador Retriever's instinctual drives makes enrichment more effective",
+    "replacement": "A Labrador Retriever was bred to carry things, so a bumper in the yard gives the mouth a job.",
+    "reason": "The instinct slogan was replaced with the carrying job this retriever still wants."
+  },
+  {
+    "page": "guides/labrador-retriever-health-issues.html",
+    "original": "For Labrador Retrievers, the inputs that matter most are a large frame, a heavy shedding coat, and breed-level risk for hip dysplasia and elbow dysplasia",
+    "replacement": "The heavy chest and the retrieving mouth are the two things that change an ordinary week: measure the cup, and dry the ears after a swim.",
+    "reason": "The inputs slogan was replaced with the chest and the mouth, which are what change the week."
   }
 ]

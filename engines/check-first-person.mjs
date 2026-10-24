@@ -13,7 +13,11 @@
  * the author has, years in practice, your correspondent, the clinic
  * team here, the staff at this practice, this reviewer, take it
  * from a groomer, the present author, and the apostrophe-less
- * forms Ive and Im.
+ * forms Ive and Im. General patterns also match this or our
+ * clinic, practice, hospital, vet, or groomer; folks at this;
+ * the undersigned; a humble writer; the grooming table; at the
+ * practice, clinic, or hospital; a vet who has seen; and
+ * speaking for the practice.
  * Article is read first, then main, then body. Guides, breeds, and the
  * other content directories are scanned. Sentences already on that page's
  * origin/main copy are exempt. Legal notices are not body text. A missing
@@ -31,7 +35,7 @@ const SKIP = new Set(["node_modules", ".git", "engines", "test-results", "audit"
 const PRONOUN =
   /\b(?:i|i'd|i'll|i'm|i've|ive|im|me|my|mine|myself|we|we're|we've|our|ours|ourselves|us|let's|let’s)\b/i;
 const PERSONA =
-  /\b(?:this writer|this author|in (?:this|our) (?:practice|clinic)|speaking as a vet(?: tech)?|as a vet(?: tech)?|the patient|here at the clinic|yours truly|personally|having (?:measured|treated|seen)|speaking from experience|this vet has seen|the author has|years in practice|your correspondent|the clinic team here|the staff at this practice|this reviewer|take it from a groomer|the present author)\b/i;
+  /\b(?:this writer|this author|in (?:this|our) (?:practice|clinic)|speaking as a vet(?: tech)?|as a vet(?: tech)?|the patient|here at the clinic|yours truly|personally|having (?:measured|treated|seen)|speaking from experience|this vet has seen|the author has|years in practice|your correspondent|the clinic team here|the staff at this practice|this reviewer|take it from a groomer|the present author|(?:this|our) (?:clinic|practice|hospital|vet|groomer)|folks at this|the undersigned|humble writer|grooming table|at the (?:practice|clinic|hospital)|vet who has seen|speaking for the practice)\b/i;
 const EXPERIENCE =
   /\b(?:i|we|my|our|myself|ourselves)\b[^.!?]{0,80}\b(?:kept|keep|weighed|weigh|treated|treat|measured|measure|carried|carry|watched|watch|lived|live|shared|share)\b|\b(?:kept|weighed|treated|measured|carried|watched)\b[^.!?]{0,40}\b(?:i|me|my|we|our|myself|ourselves)\b/i;
 
@@ -147,6 +151,18 @@ function fixtureFailures() {
     ["reviewer", "This reviewer has seen that ear infection twice."],
     ["groomer", "Take it from a groomer: the ears were sour."],
     ["present-author", "The present author weighed the puppy on Tuesday."],
+    ["undersigned", "The undersigned recommends weighing the puppy before breakfast."],
+    ["vet-seen", "Trust a vet who has seen it: the ears were sour."],
+    ["this-groomer", "This groomer has clipped that coat for years."],
+    ["down-practice", "Down at the practice the scale sits by the door."],
+    ["grooming-table", "After a decade at the grooming table, the ears were always sour."],
+    ["hospital-team", "The team at this hospital weighed the puppy."],
+    ["folks", "Folks at this clinic weigh the puppy before breakfast."],
+    ["anyone-clinic", "Ask anyone at this clinic about that ear."],
+    ["speaking-practice", "Speaking for the practice, the hips were scored that morning."],
+    ["humble", "Your humble writer weighed the puppy on Tuesday."],
+    ["back-when", "Back when this vet trained, the hips were scored by hand."],
+    ["our-groomer", "Our groomer weighed the puppy before the bath."],
     ["short", "I weighed him."],
   ];
   for (const [label, sentence] of bad) {
@@ -158,6 +174,7 @@ function fixtureFailures() {
     "The registry year line reads 11 to 14.",
     "Be patient with a puppy who mouths sleeves.",
     "Ask a veterinarian before the next vaccine visit.",
+    "Ask your vet before the next vaccine visit.",
     "The author of the textbook lists the hip scores.",
     "AKC lists a span of 10 to 12 years.",
   ];
@@ -198,7 +215,7 @@ function main() {
     for (const line of fixture) console.error(line);
     process.exit(1);
   }
-  console.log("first-person fixtures ok (pronouns, persona, clinic voice, experience, Ive/Im, correspondent, staff, reviewer, groomer, present author, short sentence, body fallback, content dirs)");
+  console.log("first-person fixtures ok (pronouns, persona, clinic voice, experience, Ive/Im, correspondent, staff, reviewer, groomer, present author, undersigned, folks, humble writer, short sentence, body fallback, content dirs)");
   const BASE = resolveOriginBase({ root: ROOT });
   const problems = [];
   let pages = 0;

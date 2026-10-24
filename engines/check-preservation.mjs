@@ -81,7 +81,7 @@ import path from "path";
 import { assertChrome, assertWhyQuestions, runChromeFixtures } from "./chrome-main.mjs";
 import { hrefSatisfied, resolveOriginBase } from "./origin-base.mjs";
 
-const REPLACEMENTS_SHA256 = "384e0324e30e7c29c6356231dea45f09ae3b85d63a6ecfba40514cd4789003f5";
+const REPLACEMENTS_SHA256 = "c3fcc529a458ab521987bf1c25977e8be8fb9353b58b1d41cb796ba011dd356e";
 const MAX_DROPS = 15;
 const MAX_CORRECTIONS = 4;
 const LAB_LIFE_FROM = "10-13 yrs";
