@@ -22,7 +22,40 @@
  * present. A flawed origin sentence listed in
  * data/preservation-replacements.json passes only when its reviewed
  * replacement is on the page and carries the same numbers. The original
- * wording does not have to remain.
+ * wording does not have to remain. An inaccurate fact can instead be
+ * dropped with {"page","original","drop":true,"reason"}. A drop is
+ * allowed only for one of the 15 pinned page-and-sentence pairs:
+ * the breed-screening template ("should receive breed-specific
+ * screening for … starting at N-N years") on the Beagle, French
+ * Bulldog, Golden Retriever, and Labrador guide that already lists
+ * it. The reason must say the fact was wrong, and any new sentence
+ * must not carry a digit from that dropped sentence. A digit the
+ * origin page also states elsewhere still fails in a new sentence,
+ * because small ages such as 1, 2, 3, and 5 show up in tables and
+ * other facts. Text is NFKC-normalized and the number words one
+ * through twenty-four are read as digits before that comparison.
+ * On a drop, any new sentence that says screen, test, check,
+ * evaluate, x-ray, or radiograph (any form) together with an age
+ * fails even when those digits were not in the dropped sentence.
+ * Ages include years/months and the abbreviations yr/yrs/mo/mos,
+ * a hyphenated -month or -year, an ordinal with birthday, and
+ * "a year" or "a year old". Two sentences are exempt, and only as
+ * an exact match on one page: the VCA weekly Beagle brushing
+ * sentence on guides/beagle-grooming-guide.html, and the VCA weekly
+ * French Bulldog brushing sentence on
+ * guides/french-bulldog-grooming-guide.html. A near-miss, or either
+ * sentence on another page, still fails. Moving a listed
+ * sentence onto another page fails. Sentences without numbers cannot
+ * be dropped. The file may hold at most the listed number of drops.
+ * Numbers that appear only in a dropped sentence are not required
+ * on the page. An unpinned drop fails.
+ * A Labrador lifespan card or intro may use a number-correction row,
+ * {"correct":true,"original":"10-13 yrs","replacement":"11-13 yrs"},
+ * and only on the four Labrador guides (health, grooming,
+ * temperament, and how-big). That is the only allowed correction.
+ * The old span must leave the page and the new span must appear.
+ * The same row on any other page, including adopt-a-akita, fails.
+ * Other number swaps fail.
  *
  * Replacements are compared with each other as well. Each replacement is
  * split on period, question mark, exclamation mark, and semicolon. After
@@ -63,7 +96,78 @@ import path from "path";
 import { assertChrome, assertWhyQuestions, runChromeFixtures } from "./chrome-main.mjs";
 import { hrefSatisfied, resolveOriginBase } from "./origin-base.mjs";
 
-const REPLACEMENTS_SHA256 = "1abf6c3fa7c3faffcf6a28281150de0bbd85b17d74514b52ac37e72a076df2a0";
+const REPLACEMENTS_SHA256 = "3cce15364101ace73ad269c4b3c6b15f76edc541edd771b517c0b15b50ea4c30";
+const MAX_DROPS = 15;
+const MAX_CORRECTIONS = 4;
+const LAB_LIFE_FROM = "10-13 yrs";
+const LAB_LIFE_TO = "11-13 yrs";
+const SCREENING_DROP =
+  /^(?:Beagles|French Bulldogs|Golden Retrievers|Labrador Retrievers) should receive breed-specific screening for .+ starting at \d+-\d+ years of age/;
+const BEAGLE_BRUSH_PAGE = "guides/beagle-grooming-guide.html";
+const BEAGLE_BRUSH_SENTENCE =
+  "VCA says to brush a Beagle weekly to remove loose hair, and AKC numbers the short-coat passes 1, 2, and 3: against the hair, with the hair, then a repeat.";
+const FRENCH_BRUSH_PAGE = "guides/french-bulldog-grooming-guide.html";
+const FRENCH_BRUSH_SENTENCE =
+  "VCA rates French Bulldog grooming requirements at 2 out of 5 and shedding at 3 out of 5, and the coat needs brushing about once a week.";
+const NUMBER_WORDS = [
+  ["twenty-four", "24"],
+  ["twenty-three", "23"],
+  ["twenty-two", "22"],
+  ["twenty-one", "21"],
+  ["twenty", "20"],
+  ["nineteen", "19"],
+  ["eighteen", "18"],
+  ["seventeen", "17"],
+  ["sixteen", "16"],
+  ["fifteen", "15"],
+  ["fourteen", "14"],
+  ["thirteen", "13"],
+  ["twelve", "12"],
+  ["eleven", "11"],
+  ["ten", "10"],
+  ["nine", "9"],
+  ["eight", "8"],
+  ["seven", "7"],
+  ["six", "6"],
+  ["five", "5"],
+  ["four", "4"],
+  ["three", "3"],
+  ["two", "2"],
+  ["one", "1"],
+];
+const LAB_LIFE_PAGES = new Set([
+  "guides/labrador-retriever-health-issues.html",
+  "guides/labrador-retriever-grooming-guide.html",
+  "guides/labrador-retriever-temperament.html",
+  "guides/how-big-do-labrador-retrievers-get.html",
+]);
+const BEAGLE_SCREEN =
+  "Beagles should receive breed-specific screening for epilepsy starting at 3-5 years of age or earlier if symptoms appear";
+const FRENCH_SCREEN =
+  "French Bulldogs should receive breed-specific screening for brachycephalic syndrome starting at 3-5 years of age or earlier if symptoms appear";
+const GOLDEN_SCREEN =
+  "Golden Retrievers should receive breed-specific screening for cancer starting at 1-2 years of age, as large breeds develop structural issues early";
+const LAB_SCREEN =
+  "Labrador Retrievers should receive breed-specific screening for hip dysplasia starting at 1-2 years of age, as large breeds develop structural issues early";
+const DROP_PAIRS = new Set(
+  [
+    ["guides/beagle-health-issues.html", BEAGLE_SCREEN],
+    ["guides/beagle-grooming-guide.html", BEAGLE_SCREEN],
+    ["guides/beagle-temperament.html", BEAGLE_SCREEN],
+    ["guides/how-big-do-beagles-get.html", BEAGLE_SCREEN],
+    ["guides/french-bulldog-health-issues.html", FRENCH_SCREEN],
+    ["guides/french-bulldog-grooming-guide.html", FRENCH_SCREEN],
+    ["guides/french-bulldog-temperament.html", FRENCH_SCREEN],
+    ["guides/how-big-do-french-bulldogs-get.html", FRENCH_SCREEN],
+    ["guides/golden-retriever-health-issues.html", GOLDEN_SCREEN],
+    ["guides/golden-retriever-grooming-guide.html", GOLDEN_SCREEN],
+    ["guides/golden-retriever-temperament.html", GOLDEN_SCREEN],
+    ["guides/how-big-do-golden-retrievers-get.html", GOLDEN_SCREEN],
+    ["guides/labrador-retriever-grooming-guide.html", LAB_SCREEN],
+    ["guides/labrador-retriever-temperament.html", LAB_SCREEN],
+    ["guides/how-big-do-labrador-retrievers-get.html", LAB_SCREEN],
+  ].map(([page, original]) => `${page}\n${normSentence(original)}`),
+);
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 4;
@@ -668,6 +772,116 @@ function normSentence(text) {
   return text.toLowerCase().replace(/[.!?]+$/g, "").replace(/\s+/g, " ").trim();
 }
 
+function inaccurateReason(reason) {
+  return typeof reason === "string" && /\b(?:false|inaccurate|incorrect|wrong)\b/i.test(reason);
+}
+
+export function screeningDropOriginal(original) {
+  const text = String(original || "").replace(/\s+/g, " ").trim();
+  return SCREENING_DROP.test(text) && numericValues(text).size > 0;
+}
+
+export function dropRowAccepted(row) {
+  if (!row || row.drop !== true) return false;
+  if (row.replacement !== undefined || row.correct === true) return false;
+  if (!inaccurateReason(row.reason)) return false;
+  if (!screeningDropOriginal(row.original)) return false;
+  const key = `${row.page}\n${normSentence(String(row.original || ""))}`;
+  if (!DROP_PAIRS.has(key)) return false;
+  return true;
+}
+
+export function dropRosterWithinCap(rows, cap = MAX_DROPS) {
+  if (!Array.isArray(rows)) return false;
+  const drops = rows.filter((row) => row && row.drop === true);
+  if (drops.length > cap) return false;
+  return drops.every((row) => dropRowAccepted(row));
+}
+
+export function labLifespanCorrection(row) {
+  if (!row || row.correct !== true || row.drop === true) return false;
+  if (!LAB_LIFE_PAGES.has(row.page)) return false;
+  const original = String(row.original || "").replace(/\s+/g, " ").trim();
+  const replacement = String(row.replacement || "").replace(/\s+/g, " ").trim();
+  return original === LAB_LIFE_FROM && replacement === LAB_LIFE_TO && numericValues(original).size > 0;
+}
+
+export function correctionRosterWithinCap(rows, cap = MAX_CORRECTIONS) {
+  if (!Array.isArray(rows)) return false;
+  const corrections = rows.filter((row) => row && row.correct === true);
+  if (corrections.length > cap) return false;
+  return corrections.every((row) => labLifespanCorrection(row));
+}
+
+export function correctionIsReviewed(row, reviewed) {
+  if (!labLifespanCorrection(row)) return false;
+  const key = `${row.page}\n${normSentence(row.original)}`;
+  return reviewed instanceof Map ? reviewed.has(key) : false;
+}
+
+function loadReplacementRows(raw) {
+  const rows = JSON.parse(raw.toString("utf8"));
+  if (!Array.isArray(rows) || !rows.length) {
+    console.error("preservation replacements must be a non-empty array");
+    process.exit(1);
+  }
+  const map = new Map();
+  for (const row of rows) {
+    if (!row.page || typeof row.page !== "string" || !row.page.trim()) {
+      console.error("preservation replacement missing page");
+      process.exit(1);
+    }
+    if (!row.original || typeof row.original !== "string" || !row.original.trim()) {
+      console.error(`preservation replacement missing original (${row.page})`);
+      process.exit(1);
+    }
+    if (!row.reason || typeof row.reason !== "string" || !row.reason.trim()) {
+      console.error(`preservation replacement missing reason (${row.page})`);
+      process.exit(1);
+    }
+    if (row.kind !== undefined) {
+      console.error(`preservation replacement rows cannot exempt headings (${row.page})`);
+      process.exit(1);
+    }
+    if (row.drop === true) {
+      if (!dropRowAccepted(row)) {
+        console.error(`preservation drop is not a pinned screening page-and-sentence pair (${row.page})`);
+        process.exit(1);
+      }
+    } else if (row.drop !== undefined) {
+      console.error(`preservation drop must be true (${row.page})`);
+      process.exit(1);
+    } else if (row.correct === true) {
+      if (!labLifespanCorrection(row)) {
+        console.error(`preservation number correction must change Labrador 10-13 yrs to 11-13 yrs (${row.page})`);
+        process.exit(1);
+      }
+    } else if (row.correct !== undefined) {
+      console.error(`preservation number correction must be true (${row.page})`);
+      process.exit(1);
+    } else if (!row.replacement || typeof row.replacement !== "string" || !row.replacement.trim()) {
+      console.error(`preservation replacement missing replacement (${row.page})`);
+      process.exit(1);
+    }
+    const key = `${row.page}\n${normSentence(row.original)}`;
+    if (map.has(key)) {
+      console.error(`duplicate preservation replacement for ${row.page}`);
+      process.exit(1);
+    }
+    map.set(key, row);
+  }
+  const listed = [...map.values()];
+  if (!dropRosterWithinCap(listed)) {
+    console.error(`preservation drops exceed the listed cap of ${MAX_DROPS} or include a non-screening sentence`);
+    process.exit(1);
+  }
+  if (!correctionRosterWithinCap(listed)) {
+    console.error(`preservation number corrections exceed the listed cap of ${MAX_CORRECTIONS}`);
+    process.exit(1);
+  }
+  return map;
+}
+
 function loadReplacements() {
   const file = path.join(ROOT, "data/preservation-replacements.json");
   const raw = fs.readFileSync(file);
@@ -678,31 +892,7 @@ function loadReplacements() {
     console.error(`pin    ${REPLACEMENTS_SHA256}`);
     process.exit(1);
   }
-  const rows = JSON.parse(raw.toString("utf8"));
-  if (!Array.isArray(rows) || !rows.length) {
-    console.error("preservation replacements must be a non-empty array");
-    process.exit(1);
-  }
-  const map = new Map();
-  for (const row of rows) {
-    for (const field of ["page", "original", "replacement", "reason"]) {
-      if (!row[field] || typeof row[field] !== "string" || !row[field].trim()) {
-        console.error(`preservation replacement missing ${field}`);
-        process.exit(1);
-      }
-    }
-    if (row.kind !== undefined) {
-      console.error(`preservation replacement rows cannot exempt headings (${row.page})`);
-      process.exit(1);
-    }
-    const key = `${row.page}\n${normSentence(row.original)}`;
-    if (map.has(key)) {
-      console.error(`duplicate preservation replacement for ${row.page}`);
-      process.exit(1);
-    }
-    map.set(key, row);
-  }
-  return map;
+  return loadReplacementRows(raw);
 }
 
 const REPLACEMENTS = loadReplacements();
@@ -716,12 +906,118 @@ function sameFacts(original, replacement) {
   return [...numericValues(original)].every((num) => have.has(num));
 }
 
+function foldNumericWords(text) {
+  let folded = String(text).normalize("NFKC");
+  for (const [word, digit] of NUMBER_WORDS) {
+    folded = folded.replace(new RegExp(`\\b${word}\\b`, "gi"), digit);
+  }
+  return folded;
+}
+
+const SCREEN_WORD =
+  /\b(?:screen\w*|test\w*|check\w*|evaluat\w*|x-rays?|radiographs?|radiography)\b/i;
+const ORDINAL_AGE =
+  /\b(?:first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth|eleventh|twelfth)\b[\s\S]{0,80}\bbirthdays?\b/i;
+const AGE_UNIT = "(?:years?|yrs?|months?|mos|mo)";
+const AGE_RANGE_SEP =
+  "(?:\\s*(?:-|–|—|to|through|or)\\s*|\\s*-\\s*(?:to|through|or)\\s*-\\s*)";
+const AGE_PATTERN = new RegExp(
+  `\\b(?:\\d+(?:\\.\\d+)?${AGE_RANGE_SEP}\\d+(?:\\.\\d+)?|\\d+(?:\\.\\d+)?)\\s*-?\\s*${AGE_UNIT}(?:\\s*-?\\s*old)?\\b|\\b\\d+(?:\\.\\d+)?-(?:year|month|yr|mo)s?(?:-old)?\\b`,
+  "i",
+);
+
+function hasScreenAge(sentence) {
+  const folded = foldNumericWords(sentence);
+  if (!SCREEN_WORD.test(folded)) return false;
+  if (AGE_PATTERN.test(folded)) return true;
+  if (ORDINAL_AGE.test(sentence)) return true;
+  if (/\ba year(?:\s+old)?\b/i.test(folded)) return true;
+  return false;
+}
+
+export function newTextCarriesNumbers(original, originHtml, currentHtml, page) {
+  const old = numericValues(foldNumericWords(original));
+  if (!old.size) return false;
+  const originKeys = new Set(sentencesOf(originHtml).map(normSentence));
+  const allowed = new Set();
+  if (page === BEAGLE_BRUSH_PAGE) allowed.add(normSentence(BEAGLE_BRUSH_SENTENCE));
+  if (page === FRENCH_BRUSH_PAGE) allowed.add(normSentence(FRENCH_BRUSH_SENTENCE));
+  for (const sentence of sentencesOf(currentHtml)) {
+    const key = normSentence(sentence);
+    if (originKeys.has(key) || allowed.has(key)) continue;
+    if (hasScreenAge(sentence)) return true;
+    const have = numericValues(foldNumericWords(sentence));
+    for (const num of old) if (have.has(num)) return true;
+  }
+  return false;
+}
+
+export function dropIsReviewed(row, reviewed) {
+  if (!row || row.drop !== true) return false;
+  const key = `${row.page}\n${normSentence(row.original)}`;
+  return reviewed instanceof Map ? reviewed.has(key) : false;
+}
+
 function sentenceCovered(sentence, visibleLower, currentSentences, rel) {
   const row = replacementRow(rel, sentence);
   if (!row) return sentencePresent(sentence, visibleLower, currentSentences);
+  if (row.drop === true) {
+    const needle = row.original.toLowerCase().replace(/\s+/g, " ").trim();
+    return !visibleLower.includes(needle);
+  }
+  if (row.correct === true) {
+    if (!labLifespanCorrection(row)) return false;
+    const replacement = row.replacement.toLowerCase().replace(/\s+/g, " ").trim();
+    const oldSpan = row.original.toLowerCase().replace(/\s+/g, " ").trim();
+    return visibleLower.includes(replacement) && !visibleLower.includes(oldSpan);
+  }
   if (!sameFacts(sentence, row.replacement)) return false;
   const replacement = row.replacement.toLowerCase().replace(/\s+/g, " ").trim();
   return visibleLower.includes(replacement);
+}
+
+function droppedNumberExemptions(originHtml, rel) {
+  const drops = [...REPLACEMENTS.values()].filter((row) => row.page === rel && row.drop === true);
+  if (!drops.length) return new Set();
+  let rest = visibleText(originHtml).toLowerCase().replace(/\s+/g, " ");
+  for (const row of drops) {
+    const needle = row.original.toLowerCase().replace(/\s+/g, " ").trim();
+    rest = rest.split(needle).join(" ");
+  }
+  const remain = numericValues(rest);
+  const exempt = new Set();
+  for (const row of drops) {
+    for (const num of numericValues(row.original)) {
+      if (!remain.has(num)) exempt.add(num);
+    }
+  }
+  return exempt;
+}
+
+function correctedNumberExemptions(originHtml, rel) {
+  const rows = [...REPLACEMENTS.values()].filter(
+    (row) => row.page === rel && labLifespanCorrection(row),
+  );
+  if (!rows.length) return new Set();
+  let rest = visibleText(originHtml).toLowerCase().replace(/\s+/g, " ");
+  for (const row of rows) {
+    const needle = row.original.toLowerCase().replace(/\s+/g, " ").trim();
+    rest = rest.split(needle).join(" ");
+  }
+  const remain = numericValues(rest);
+  const exempt = new Set();
+  for (const row of rows) {
+    for (const num of numericValues(row.original)) {
+      if (!remain.has(num)) exempt.add(num);
+    }
+  }
+  return exempt;
+}
+
+function numberExemptions(originHtml, rel) {
+  const exempt = droppedNumberExemptions(originHtml, rel);
+  for (const num of correctedNumberExemptions(originHtml, rel)) exempt.add(num);
+  return exempt;
 }
 
 const FUNCTION_WORDS = new Set(
@@ -757,6 +1053,7 @@ function maskedGrams(norm, width, contentOnly) {
 function assertReplacementVariety() {
   const items = [];
   for (const row of REPLACEMENTS.values()) {
+    if (row.drop === true || row.correct === true) continue;
     for (const sentence of replacementPieces(row.replacement)) {
       const key = normalize(sentence);
       items.push({
@@ -784,6 +1081,17 @@ function assertReplacementVariety() {
         problems.push(
           `${a.page} and ${b.page} replacements are near-duplicates (${sim.toFixed(2)})`,
         );
+        continue;
+      }
+      const brushPair = new Set([
+        normSentence(BEAGLE_BRUSH_SENTENCE),
+        normSentence(FRENCH_BRUSH_SENTENCE),
+      ]);
+      if (
+        brushPair.has(normSentence(a.sentence)) &&
+        brushPair.has(normSentence(b.sentence)) &&
+        normSentence(a.sentence) !== normSentence(b.sentence)
+      ) {
         continue;
       }
       for (const gram of a.grams4) {
@@ -818,10 +1126,43 @@ function assertReplacements(pagePairs) {
       continue;
     }
     const originHtml = fs.readFileSync(pair.origin, "utf8");
+    if (row.correct === true) {
+      const currentHtml = fs.readFileSync(pair.current, "utf8");
+      const originLower = visibleText(originHtml).toLowerCase().replace(/\s+/g, " ");
+      const currentLower = visibleText(currentHtml).toLowerCase().replace(/\s+/g, " ");
+      const oldSpan = row.original.toLowerCase();
+      const nextSpan = row.replacement.toLowerCase();
+      if (!labLifespanCorrection(row)) {
+        problems.push(`${row.page}: number correction is outside the Labrador 10-13 to 11-13 span`);
+      }
+      if (!originLower.includes(oldSpan)) {
+        problems.push(`${row.page}: corrected lifespan is not on origin/main`);
+      }
+      if (!currentLower.includes(nextSpan) || currentLower.includes(oldSpan)) {
+        problems.push(`${row.page}: Labrador lifespan was not corrected to 11-13 yrs`);
+      }
+      continue;
+    }
     const found = sentencesOf(originHtml).some(
       (sentence) => normSentence(sentence) === normSentence(row.original),
     );
     if (!found) problems.push(`${row.page}: original sentence is not on origin/main`);
+    if (row.drop === true) {
+      if (!dropRowAccepted(row)) {
+        problems.push(`${row.page}: drop is not the screening-age template`);
+      }
+      const currentHtml = fs.readFileSync(pair.current, "utf8");
+      const currentLower = visibleText(currentHtml).toLowerCase().replace(/\s+/g, " ");
+      const needle = row.original.toLowerCase().replace(/\s+/g, " ").trim();
+      if (currentLower.includes(needle)) {
+        problems.push(`${row.page}: dropped sentence is still on the page`);
+      }
+      if (newTextCarriesNumbers(row.original, originHtml, currentHtml, row.page)) {
+        problems.push(
+          `${row.page}: drop keeps old numbers in new text (${[...numericValues(row.original)].join(", ")})`,
+        );
+      }
+    }
   }
   if (problems.length) {
     console.error("preservation replacements do not match origin sentences");
@@ -847,7 +1188,8 @@ function analyze(index, pair, live) {
   }
   const originNums = numericValues(originVisible);
   const currentNums = numericValues(currentVisible);
-  const missingNums = [...originNums].filter((num) => !currentNums.has(num));
+  const exemptNums = numberExemptions(originHtml, pair.rel);
+  const missingNums = [...originNums].filter((num) => !currentNums.has(num) && !exemptNums.has(num));
   const originHrefs = [...new Set(hrefsIn(regionHtml(originHtml)))];
   const currentHrefs = new Set(hrefsIn(currentHtml));
   const missingHrefs = originHrefs.filter((href) => !hrefSatisfied(href, currentHrefs));
@@ -1168,6 +1510,7 @@ function patchProse(index, html, originHtml, rel, live) {
     if (placed.has(lower) || sentenceCovered(sentence, pageText, currentSentences, rel)) continue;
     if (notRequired(index, sentence, rel, live)) continue;
     const row = replacementRow(rel, sentence);
+    if (row && (row.drop === true || row.correct === true)) continue;
     if (row && !sameFacts(sentence, row.replacement)) continue;
     placed.add(lower);
     const body = row
@@ -1207,8 +1550,11 @@ function appendHrefs(index, html, originHtml, rel, live) {
   return { html: insertBeforeClose(html, block), added: anchors.length };
 }
 
-function appendFigures(html, originHtml) {
-  const missing = [...numericValues(visibleText(originHtml))].filter((num) => !numericValues(visibleText(html)).has(num));
+function appendFigures(html, originHtml, rel) {
+  const exempt = rel ? numberExemptions(originHtml, rel) : new Set();
+  const missing = [...numericValues(visibleText(originHtml))].filter(
+    (num) => !numericValues(visibleText(html)).has(num) && !exempt.has(num),
+  );
   if (!missing.length) return { html, added: 0 };
   const phrases = phrasesFor(visibleText(originHtml), missing);
   if (!phrases.length) return { html, added: 0 };
@@ -1346,7 +1692,7 @@ function fixAll(index, pagePairs) {
     html = prose.html;
     const hrefs = appendHrefs(index, html, originHtml, pair.rel, live);
     html = hrefs.html;
-    const figures = appendFigures(html, originHtml);
+    const figures = appendFigures(html, originHtml, pair.rel);
     html = figures.html;
     html = dedupeTrailing(html);
     html = syncFaq(html);
@@ -1432,6 +1778,249 @@ function report(pagePairs, missingPages, index, live) {
   }
   return { stats, samples };
 }
+
+function dropFixtures() {
+  const failures = [];
+  const screening =
+    "Beagles should receive breed-specific screening for epilepsy starting at 3-5 years of age or earlier if symptoms appear";
+  const origin = `<article><p>${screening}.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
+  const stillThere = `<article><p>Come back when the hound turns 3, and again when the hound turns 5.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
+  const clean = `<article><p>No screening test exists for epilepsy in this breed.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
+  const row = {
+    page: "guides/beagle-grooming-guide.html",
+    original: screening,
+    drop: true,
+    reason: "false screening schedule",
+  };
+  if (!inaccurateReason(row.reason)) failures.push("fixture rejected a false-schedule reason");
+  if (inaccurateReason("accurate lifespan kept on the card")) {
+    failures.push("fixture accepted a drop of an accurate fact");
+  }
+  if (!newTextCarriesNumbers(screening, origin, stillThere)) {
+    failures.push("drop of an accurate fact did not fail");
+  }
+  if (newTextCarriesNumbers(screening, origin, clean)) {
+    failures.push("valid drop was rejected because an origin table still had a digit");
+  }
+  const brushing = `<article><p>${BEAGLE_BRUSH_SENTENCE}</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
+  if (newTextCarriesNumbers(screening, origin, brushing, BEAGLE_BRUSH_PAGE)) {
+    failures.push("pinned Beagle brushing sentence was treated as the screening ages");
+  }
+  const nearMiss = `<article><p>VCA says to brush a Beagle weekly to remove loose hair, and AKC numbers the short-coat passes 1, 2, and 3: against the hair, with the hair, then once more.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
+  if (!newTextCarriesNumbers(screening, origin, nearMiss, BEAGLE_BRUSH_PAGE)) {
+    failures.push("near-miss brushing sentence was exempt");
+  }
+  if (!newTextCarriesNumbers(screening, origin, brushing, "guides/beagle-health-issues.html")) {
+    failures.push("Beagle brushing sentence was exempt on another page");
+  }
+  const frenchOrigin = `<article><p>${FRENCH_SCREEN}.</p><p>Check the folds at 3 months and again at 5.</p></article>`;
+  const frenchBrush = `<article><p>${FRENCH_BRUSH_SENTENCE}</p><p>Check the folds at 3 months and again at 5.</p></article>`;
+  if (newTextCarriesNumbers(FRENCH_SCREEN, frenchOrigin, frenchBrush, FRENCH_BRUSH_PAGE)) {
+    failures.push("pinned French brushing sentence was treated as the screening ages");
+  }
+  const frenchNear = `<article><p>VCA rates French Bulldog grooming requirements at 2 out of 5 and shedding at 3 out of 5, and the coat needs brushing about once each week.</p><p>Check the folds at 3 months and again at 5.</p></article>`;
+  if (!newTextCarriesNumbers(FRENCH_SCREEN, frenchOrigin, frenchNear, FRENCH_BRUSH_PAGE)) {
+    failures.push("near-miss French brushing sentence was exempt");
+  }
+  if (!newTextCarriesNumbers(FRENCH_SCREEN, frenchOrigin, frenchBrush, "guides/french-bulldog-health-issues.html")) {
+    failures.push("French brushing sentence was exempt on another page");
+  }
+  const gradeLine =
+    "The Kennel Club and the University of Cambridge grade brachycephalic obstructive airway syndrome from about 12 months, before breeding.";
+  const graded = `<article><p>${gradeLine}</p><p>Check the folds at 3 months and again at 5.</p></article>`;
+  if (newTextCarriesNumbers(FRENCH_SCREEN, frenchOrigin, graded, "guides/french-bulldog-health-issues.html")) {
+    failures.push("BOAS grade sentence was treated as a screening age");
+  }
+  const onlyFive = `<article><p>Start the screening when the hound turns 5.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
+  if (!newTextCarriesNumbers(screening, origin, onlyFive)) {
+    failures.push("a new sentence with a dropped digit did not fail");
+  }
+  const attacks = [
+    [
+      "guides/labrador-retriever-temperament.html",
+      LAB_SCREEN,
+      `<article><p>${LAB_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Labrador Retrievers should be screened for hip dysplasia at 1-2 years of age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/golden-retriever-health-issues.html",
+      GOLDEN_SCREEN,
+      `<article><p>${GOLDEN_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Golden Retrievers should be screened for cancer starting at 1-2 years of age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/beagle-health-issues.html",
+      screening,
+      origin,
+      `<article><p>Beagles should be screened for epilepsy starting at 3-5 years of age.</p><p>Puppy visits are every 3-4 weeks.</p></article>`,
+    ],
+    [
+      "guides/beagle-grooming-guide.html",
+      screening,
+      origin,
+      `<article><p>Beagles should be screened for epilepsy starting at 3-5 years of age.</p><p>Puppy visits are every 3-4 weeks.</p></article>`,
+    ],
+    [
+      "guides/french-bulldog-health-issues.html",
+      FRENCH_SCREEN,
+      `<article><p>${FRENCH_SCREEN}.</p><p>Check the folds at 3 months and again at 5.</p></article>`,
+      `<article><p>French Bulldogs should be screened for brachycephalic syndrome at 3 years.</p><p>Check the folds at 3 months and again at 5.</p></article>`,
+    ],
+    [
+      "guides/how-big-do-french-bulldogs-get.html",
+      FRENCH_SCREEN,
+      `<article><p>${FRENCH_SCREEN}.</p><p>Check the folds at 3 months and again at 5.</p></article>`,
+      `<article><p>French Bulldogs should be screened for brachycephalic syndrome at 3 years.</p><p>Check the folds at 3 months and again at 5.</p></article>`,
+    ],
+    [
+      "guides/labrador-retriever-temperament.html",
+      LAB_SCREEN,
+      `<article><p>${LAB_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Labrador Retrievers should be screened for hip dysplasia at one to two years of age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/golden-retriever-health-issues.html",
+      GOLDEN_SCREEN,
+      `<article><p>${GOLDEN_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Golden Retrievers should be screened for cancer starting at 12 to 24 months of age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/beagle-health-issues.html",
+      screening,
+      origin,
+      `<article><p>Beagles should be screened for epilepsy starting at three to five years of age.</p><p>Puppy visits are every 3-4 weeks.</p></article>`,
+    ],
+    [
+      "guides/beagle-grooming-guide.html",
+      screening,
+      origin,
+      `<article><p>Beagles should be screened for epilepsy starting at ３-５ years of age.</p><p>Puppy visits are every 3-4 weeks.</p></article>`,
+    ],
+    [
+      "guides/golden-retriever-health-issues.html",
+      GOLDEN_SCREEN,
+      `<article><p>${GOLDEN_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Golden Retrievers should be screened for cancer starting at 12-24 mos of age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/golden-retriever-health-issues.html",
+      GOLDEN_SCREEN,
+      `<article><p>${GOLDEN_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Golden Retrievers should be screened for cancer from a 12-month-old age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/labrador-retriever-temperament.html",
+      LAB_SCREEN,
+      `<article><p>${LAB_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Labrador Retrievers should be screened for hip dysplasia between the first and second birthdays.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/labrador-retriever-temperament.html",
+      LAB_SCREEN,
+      `<article><p>${LAB_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Labrador Retrievers should be screened for hip dysplasia at a year old.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/beagle-health-issues.html",
+      screening,
+      origin,
+      `<article><p>Beagles should be screened for epilepsy from the third to the fifth birthday.</p><p>Puppy visits are every 3-4 weeks.</p></article>`,
+    ],
+    [
+      "guides/golden-retriever-health-issues.html",
+      GOLDEN_SCREEN,
+      `<article><p>${GOLDEN_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Golden Retrievers should be checked for cancer starting at 12 to 24 months of age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/golden-retriever-health-issues.html",
+      GOLDEN_SCREEN,
+      `<article><p>${GOLDEN_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Golden Retrievers should be tested for cancer starting at 12 to 24 months of age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/beagle-health-issues.html",
+      screening,
+      origin,
+      `<article><p>Beagles should be tested for epilepsy at 36 to 60 months.</p><p>Puppy visits are every 3-4 weeks.</p></article>`,
+    ],
+  ];
+  for (const [page, dropped, originHtml, currentHtml] of attacks) {
+    if (!newTextCarriesNumbers(dropped, originHtml, currentHtml, page)) {
+      failures.push(`screening restatement did not fail (${page})`);
+    }
+  }
+  const pinned = new Map();
+  if (dropIsReviewed(row, pinned)) failures.push("unpinned drop did not fail");
+  pinned.set(`${row.page}\n${normSentence(row.original)}`, row);
+  if (!dropIsReviewed(row, pinned)) failures.push("pinned drop was treated as unpinned");
+  const hip =
+    "For Labrador Retrievers, the inputs that matter most are a large frame, a heavy shedding coat, and breed-level risk for hip dysplasia and elbow dysplasia.";
+  const hipDrop = {
+    page: "guides/labrador-retriever-health-issues.html",
+    original: hip,
+    drop: true,
+    reason: "wrong",
+  };
+  if (numericValues(hip).size) failures.push("fixture hip sentence unexpectedly had numbers");
+  if (screeningDropOriginal(hip)) failures.push("fixture treated the hip sentence as a screening template");
+  if (dropRowAccepted(hipDrop)) failures.push("drop of an accurate sentence with no numbers did not fail");
+  if (!dropRowAccepted(row)) failures.push("screening-template drop was rejected");
+  const movedDrop = { ...row, page: "guides/labrador-retriever-apartment-living.html" };
+  if (dropRowAccepted(movedDrop)) failures.push("screening drop moved to another page did not fail");
+  if (DROP_PAIRS.size !== MAX_DROPS) failures.push("pinned drop list is not the listed count");
+  const listed = Array.from({ length: MAX_DROPS }, () => row);
+  if (!dropRosterWithinCap(listed)) failures.push("drop cap rejected the listed count");
+  if (dropRosterWithinCap([...listed, row])) failures.push("drop over the listed cap did not fail");
+  const life = {
+    page: "guides/labrador-retriever-health-issues.html",
+    original: LAB_LIFE_FROM,
+    replacement: LAB_LIFE_TO,
+    correct: true,
+    reason: "AKC lists the Labrador Retriever lifespan as 11-13 years.",
+  };
+  if (!labLifespanCorrection(life)) failures.push("Labrador 10-13 to 11-13 correction was rejected");
+  if (labLifespanCorrection({ ...life, page: "guides/adopt-a-akita.html" })) {
+    failures.push("lifespan correction on adopt-a-akita did not fail");
+  }
+  if (labLifespanCorrection({ correct: true, original: hip, replacement: LAB_LIFE_TO })) {
+    failures.push("lifespan correction accepted a sentence with no numbers");
+  }
+  if (labLifespanCorrection({ correct: true, original: "55-80 lbs", replacement: "50-70 lbs" })) {
+    failures.push("lifespan correction accepted an unrelated weight change");
+  }
+  if (labLifespanCorrection({ correct: true, original: LAB_LIFE_FROM, replacement: "9-12 yrs" })) {
+    failures.push("lifespan correction accepted a different span");
+  }
+  if (
+    labLifespanCorrection({
+      correct: true,
+      original: "Weighing around 55-80 lbs and lifespan of 10-13 yrs",
+      replacement: "Weighing around 55-80 lbs and lifespan of 11-13 yrs",
+    })
+  ) {
+    failures.push("lifespan correction accepted a rewritten sentence");
+  }
+  const unpinned = new Map();
+  if (correctionIsReviewed(life, unpinned)) failures.push("unpinned lifespan correction did not fail");
+  unpinned.set(`${life.page}\n${normSentence(life.original)}`, life);
+  if (!correctionIsReviewed(life, unpinned)) failures.push("pinned lifespan correction was treated as unpinned");
+  if (!correctionRosterWithinCap(Array.from({ length: MAX_CORRECTIONS }, () => life))) {
+    failures.push("lifespan correction cap rejected the listed count");
+  }
+  if (correctionRosterWithinCap(Array.from({ length: MAX_CORRECTIONS + 1 }, () => life))) {
+    failures.push("lifespan correction over the listed cap did not fail");
+  }
+  return failures;
+}
+
+const dropFixture = dropFixtures();
+if (dropFixture.length) {
+  console.error(`preservation drop fixtures failed (${dropFixture.length})`);
+  for (const line of dropFixture) console.error(line);
+  process.exit(1);
+}
+console.error("preservation drop fixtures ok (unpinned drop, non-numeric fact, lifespan correction, pinned pages)");
 
 const { out, missing } = pairs();
 if (!out.length) {

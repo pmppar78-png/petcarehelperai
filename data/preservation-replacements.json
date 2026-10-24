@@ -6,39 +6,577 @@
     "reason": "Tic restored so preservation would keep the sentence. The following sentence still says the site cannot examine, diagnose, or treat."
   },
   {
-    "page": "guides/australian-shepherd-vs-miniature-american-shepherd.html",
-    "original": "Australian Shepherd vs Miniature American Shepherd: Breed Comparison the decision between and Miniature American Shepherd comes down to your daily schedule, living space, and experience level",
-    "replacement": "fits a tighter floor plan",
-    "reason": "The origin sentence leaves the Australian Shepherd name blank. The new sentence names both shepherds."
+    "page": "guides/labrador-retriever-health-issues.html",
+    "original": "Common health problems in Labrador Retrievers including hip dysplasia, elbow dysplasia, obesity.",
+    "replacement": "Labradors are prone to hip and elbow dysplasia, so keeping them lean is one of the most useful things an owner can do.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
   },
   {
-    "page": "guides/bernese-mountain-dog-vs-st-bernard.html",
-    "original": "Bernard: Breed Comparison the decision between and St Bernard comes down to your daily schedule, living space, and experience level",
-    "replacement": "drools through a still larger body",
-    "reason": "The origin sentence is split on the St. abbreviation and leaves the Bernese name blank."
+    "page": "guides/labrador-retriever-health-issues.html",
+    "original": "Labrador Retrievers are predisposed to several health conditions including hip dysplasia, elbow dysplasia, obesity.",
+    "replacement": "Labradors are prone to hip and elbow dysplasia, so keeping them lean is one of the most useful things an owner can do.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
   },
   {
-    "page": "guides/french-bulldog-vs-pug.html",
-    "original": "French Bulldog vs Pug: Breed Comparison the decision between and Pug comes down to your daily schedule, living space, and experience level",
-    "replacement": "deeper facial folds to check",
-    "reason": "Pug is too short to mask, so the blank-name sentence was unique. The new sentence names both dogs."
+    "page": "guides/labrador-retriever-health-issues.html",
+    "original": "The Labrador Retriever's reputation in the sporting group reflects generations of purposeful breeding, resulting in a large dog with predictable but nuanced care requirements.",
+    "replacement": "Weighing 55-80 lbs, with a lifespan of 11-13 yrs, a Labrador Retriever still wants a job when the walk is over.",
+    "reason": "Weight and lifespan stay. The cup and the lean-hip line are said once elsewhere."
   },
   {
-    "page": "guides/great-dane-vs-english-mastiff.html",
-    "original": "Great Dane vs English Mastiff: Breed Comparison the decision between and English Mastiff comes down to your daily schedule, living space, and experience level",
-    "replacement": "looser skin and more drool",
-    "reason": "English Mastiff does not mask as a breed name, so the blank-name sentence was unique."
+    "page": "guides/labrador-retriever-temperament.html",
+    "original": "Labrador Retrievers bring a large build, a heavy shedding pattern, and breed-specific health risk around hip dysplasia and elbow dysplasia — each of those shifts routine care in a different direction.",
+    "replacement": "A Labrador wants a person nearby, and an empty afternoon is when the shoes disappear.",
+    "reason": "Template stub removed. The temperament page now says the dog wants company, without a disease list."
   },
   {
-    "page": "guides/pug-vs-boston-terrier.html",
-    "original": "Pug vs Boston Terrier: Breed Comparison the decision between and Boston Terrier comes down to your daily schedule, living space, and experience level",
-    "replacement": "brain inflammation called NME",
-    "reason": "Pug is too short to mask, so the blank-name sentence was unique. The new sentence names both dogs."
+    "page": "guides/labrador-retriever-grooming-guide.html",
+    "original": "Practical Labrador Retrievers care is shaped by three things: large size, heavy shedding, and a known predisposition to hip dysplasia and elbow dysplasia.",
+    "replacement": "Feel the ribs while you rake the double coat: extra fat under the hand is the cue to shrink the cup, because that fat worsens hip dysplasia along with elbow dysplasia.",
+    "reason": "Fat under the hand and the cup are one cue, said once."
   },
   {
-    "page": "guides/wet-vs-dry-cat-food-comparison.html",
-    "original": "Wet vs Dry Cat Food: Which Is Better the decision between and Dry Cat Food Comparison comes down to your daily schedule, living space, and experience level",
-    "replacement": "Label reading is the split between wet cat food",
-    "reason": "The origin sentence drops the left subject and calls the right side Dry Cat Food Comparison."
+    "page": "guides/how-big-do-labrador-retrievers-get.html",
+    "original": "Labrador Retrievers are a large breed, reaching 55-80 lbs at full maturity.",
+    "replacement": "A male stands 22.5-24.5 in and weighs 65-80 lb. A female stands 21.5-23.5 in and weighs 55-70 lb.",
+    "reason": "The combined 55 through 80 line repeated the sex-specific weights. Those weights stay in the FAQ."
+  },
+  {
+    "page": "guides/beagle-health-issues.html",
+    "original": "Common health problems in Beagles including epilepsy, hypothyroidism, cherry eye.",
+    "replacement": "Beagles commonly develop epilepsy, hypothyroidism, and cherry eye, and their long drop ears also collect wax and moisture.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+  },
+  {
+    "page": "guides/beagle-health-issues.html",
+    "original": "Beagles are predisposed to several health conditions including epilepsy, hypothyroidism, cherry eye.",
+    "replacement": "Beagles commonly develop epilepsy, hypothyroidism, and cherry eye, and their long drop ears also collect wax and moisture.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+  },
+  {
+    "page": "guides/beagle-health-issues.html",
+    "original": "Practical Beagles care is shaped by three things: medium size, moderate shedding, and a known predisposition to epilepsy and hypothyroidism.",
+    "replacement": "Beagles commonly develop epilepsy, hypothyroidism, and cherry eye, and their long drop ears also collect wax and moisture.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+  },
+  {
+    "page": "guides/how-big-do-beagles-get.html",
+    "original": "Beagles are a medium breed, reaching 20-30 lbs at full maturity.",
+    "replacement": "AKC lists the 13-inch Beagle under 20 pounds and the 15-inch Beagle from 20 to 30 pounds.",
+    "reason": "The 15-inch weight is stated once, in the FAQ, which also keeps 13, 15, 20, and 30."
+  },
+  {
+    "page": "guides/french-bulldog-health-issues.html",
+    "original": "Common health problems in French Bulldogs including brachycephalic syndrome, spinal disorders, allergies.",
+    "replacement": "French Bulldogs commonly have breathing problems from their flat faces, spinal disc disease is also more common in the breed, and skin allergies are frequent.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+  },
+  {
+    "page": "guides/french-bulldog-health-issues.html",
+    "original": "French Bulldogs are predisposed to several health conditions including brachycephalic syndrome, spinal disorders, allergies.",
+    "replacement": "French Bulldogs commonly have breathing problems from their flat faces, spinal disc disease is also more common in the breed, and skin allergies are frequent.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+  },
+  {
+    "page": "guides/french-bulldog-health-issues.html",
+    "original": "French Bulldogs sit in the small-size category, shed at a moderate level, and carry documented risk for brachycephalic syndrome and spinal disorders — those three factors drive most of the daily-care decisions.",
+    "replacement": "French Bulldogs commonly have breathing problems from their flat faces, spinal disc disease is also more common in the breed, and skin allergies are frequent.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+  },
+  {
+    "page": "guides/french-bulldog-grooming-guide.html",
+    "original": "French Bulldogs bring a small build, a moderate shedding pattern, and breed-specific health risk around brachycephalic syndrome and spinal disorders — each of those shifts routine care in a different direction.",
+    "replacement": "Dry the facial folds and the tail pocket after meals, because moisture and debris in those creases lead to skin-fold dermatitis.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+  },
+  {
+    "page": "guides/how-big-do-french-bulldogs-get.html",
+    "original": "French Bulldogs sit in the small-size category, shed at a moderate level, and carry documented risk for brachycephalic syndrome and spinal disorders — those three factors drive most of the daily-care decisions.",
+    "replacement": "The adult weight published by AKC stays under 28 lb, with lighter adults near 16 lb.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+  },
+  {
+    "page": "guides/how-big-do-french-bulldogs-get.html",
+    "original": "French Bulldogs are a small breed, reaching 16-28 lbs at full maturity.",
+    "replacement": "The adult weight published by AKC stays under 28 lb, with lighter adults near 16 lb.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+  },
+  {
+    "page": "guides/golden-retriever-health-issues.html",
+    "original": "Common health problems in Golden Retrievers including cancer, hip dysplasia, heart disease.",
+    "replacement": "Cancer, hip dysplasia, and heart disease occur often enough in Golden Retrievers that the visit plan has to include them.",
+    "reason": "Lump and cough stay in the FAQ answer only."
+  },
+  {
+    "page": "guides/golden-retriever-health-issues.html",
+    "original": "Golden Retrievers are predisposed to several health conditions including cancer, hip dysplasia, heart disease.",
+    "replacement": "Cancer, hip dysplasia, and heart disease occur often enough in Golden Retrievers that the visit plan has to include them.",
+    "reason": "Lump and cough stay in the FAQ answer only."
+  },
+  {
+    "page": "guides/golden-retriever-health-issues.html",
+    "original": "Golden Retrievers sit in the large-size category, shed at a heavy level, and carry documented risk for cancer and hip dysplasia — those three factors drive most of the daily-care decisions.",
+    "replacement": "Cancer, hip dysplasia, and heart disease occur often enough in Golden Retrievers that the visit plan has to include them.",
+    "reason": "Lump and cough stay in the FAQ answer only."
+  },
+  {
+    "page": "guides/golden-retriever-grooming-guide.html",
+    "original": "Practical Golden Retrievers care is shaped by three things: large size, heavy shedding, and a known predisposition to cancer and hip dysplasia.",
+    "replacement": "Mats hide behind the ears of this feathered coat, and brushing is a chance to feel for lumps from cancer and for stiffness from hip dysplasia.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+  },
+  {
+    "page": "guides/how-big-do-golden-retrievers-get.html",
+    "original": "Golden Retrievers are a large breed, reaching 55-75 lbs at full maturity.",
+    "replacement": "A female weighs 55 to 65 lb. A male weighs 65 to 75 lb.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+  },
+  {
+    "page": "guides/beagle-temperament.html",
+    "original": "The care profile for Beagles is anchored by a medium build, moderate coat shedding, and breed-associated risk for epilepsy and hypothyroidism.",
+    "replacement": "A Beagle will leave a recall behind when a scent is stronger than the person calling.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+  },
+  {
+    "page": "guides/beagle-grooming-guide.html",
+    "original": "The care profile for Beagles is anchored by a medium build, moderate coat shedding, and breed-associated risk for epilepsy and hypothyroidism.",
+    "replacement": "Moisture under the long leather is what turns a Beagle's ears sour after a bath.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+  },
+  {
+    "page": "guides/french-bulldog-temperament.html",
+    "original": "Care for French Bulldogs has to account for a small frame, a moderate shedding profile, and breed-linked risk around brachycephalic syndrome and spinal disorders.",
+    "replacement": "A French Bulldog is a companion with a brachycephalic airway and a busy indoor personality. Heat and a long walk show a tight airway before a quiet day at home does. Allergies and spinal malformations are common.",
+    "reason": "Heat and the spinal risk stay in the FAQ answer, said once."
+  },
+  {
+    "page": "guides/how-big-do-beagles-get.html",
+    "original": "Care for Beagles has to account for a medium frame, a moderate shedding profile, and breed-linked risk around epilepsy and hypothyroidism.",
+    "replacement": "AKC lists the 13-inch Beagle under 20 pounds and the 15-inch Beagle from 20 to 30 pounds.",
+    "reason": "The 15-inch weight is stated once, in the FAQ, which also keeps 13, 15, 20, and 30."
+  },
+  {
+    "page": "guides/how-big-do-golden-retrievers-get.html",
+    "original": "Plan Golden Retrievers care around a large body size, heavy shedding, and the breed's documented predisposition toward cancer and hip dysplasia.",
+    "replacement": "A female weighs 55 to 65 lb. A male weighs 65 to 75 lb.",
+    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+  },
+  {
+    "page": "guides/how-big-do-labrador-retrievers-get.html",
+    "original": "Plan Labrador Retrievers care around a large body size, heavy shedding, and the breed's documented predisposition toward hip dysplasia and elbow dysplasia.",
+    "replacement": "A male stands 22.5-24.5 in and weighs 65-80 lb. A female stands 21.5-23.5 in and weighs 55-70 lb.",
+    "reason": "The combined 55 through 80 line repeated the sex-specific weights. Those weights stay in the FAQ."
+  },
+  {
+    "page": "guides/beagle-health-issues.html",
+    "original": "Beagles should receive breed-specific screening for epilepsy starting at 3-5 years of age or earlier if symptoms appear",
+    "drop": true,
+    "reason": "false screening schedule"
+  },
+  {
+    "page": "guides/beagle-grooming-guide.html",
+    "original": "Beagles should receive breed-specific screening for epilepsy starting at 3-5 years of age or earlier if symptoms appear",
+    "drop": true,
+    "reason": "false screening schedule"
+  },
+  {
+    "page": "guides/beagle-temperament.html",
+    "original": "Beagles should receive breed-specific screening for epilepsy starting at 3-5 years of age or earlier if symptoms appear",
+    "drop": true,
+    "reason": "false screening schedule"
+  },
+  {
+    "page": "guides/how-big-do-beagles-get.html",
+    "original": "Beagles should receive breed-specific screening for epilepsy starting at 3-5 years of age or earlier if symptoms appear",
+    "drop": true,
+    "reason": "false screening schedule"
+  },
+  {
+    "page": "guides/french-bulldog-health-issues.html",
+    "original": "French Bulldogs should receive breed-specific screening for brachycephalic syndrome starting at 3-5 years of age or earlier if symptoms appear",
+    "drop": true,
+    "reason": "false screening schedule"
+  },
+  {
+    "page": "guides/french-bulldog-grooming-guide.html",
+    "original": "French Bulldogs should receive breed-specific screening for brachycephalic syndrome starting at 3-5 years of age or earlier if symptoms appear",
+    "drop": true,
+    "reason": "false screening schedule"
+  },
+  {
+    "page": "guides/french-bulldog-temperament.html",
+    "original": "French Bulldogs should receive breed-specific screening for brachycephalic syndrome starting at 3-5 years of age or earlier if symptoms appear",
+    "drop": true,
+    "reason": "false screening schedule"
+  },
+  {
+    "page": "guides/how-big-do-french-bulldogs-get.html",
+    "original": "French Bulldogs should receive breed-specific screening for brachycephalic syndrome starting at 3-5 years of age or earlier if symptoms appear",
+    "drop": true,
+    "reason": "false screening schedule"
+  },
+  {
+    "page": "guides/golden-retriever-health-issues.html",
+    "original": "Golden Retrievers should receive breed-specific screening for cancer starting at 1-2 years of age, as large breeds develop structural issues early",
+    "drop": true,
+    "reason": "false screening schedule"
+  },
+  {
+    "page": "guides/golden-retriever-grooming-guide.html",
+    "original": "Golden Retrievers should receive breed-specific screening for cancer starting at 1-2 years of age, as large breeds develop structural issues early",
+    "drop": true,
+    "reason": "false screening schedule"
+  },
+  {
+    "page": "guides/golden-retriever-temperament.html",
+    "original": "Golden Retrievers should receive breed-specific screening for cancer starting at 1-2 years of age, as large breeds develop structural issues early",
+    "drop": true,
+    "reason": "false screening schedule"
+  },
+  {
+    "page": "guides/how-big-do-golden-retrievers-get.html",
+    "original": "Golden Retrievers should receive breed-specific screening for cancer starting at 1-2 years of age, as large breeds develop structural issues early",
+    "drop": true,
+    "reason": "false screening schedule"
+  },
+  {
+    "page": "guides/labrador-retriever-health-issues.html",
+    "original": "Labrador Retrievers should receive breed-specific screening for hip dysplasia starting at 1-2 years of age, as large breeds develop structural issues early",
+    "replacement": "The Orthopedic Foundation for Animals accepts a final hip radiograph at 2 years of age, meaning 24 months or later, while a film at 1 year stays preliminary and PennHIP can start at 16 weeks.",
+    "reason": "Main's screening-age sentence removed. The replacement is on the page and keeps the original numbers without stating that false schedule."
+  },
+  {
+    "page": "guides/labrador-retriever-grooming-guide.html",
+    "original": "Labrador Retrievers should receive breed-specific screening for hip dysplasia starting at 1-2 years of age, as large breeds develop structural issues early",
+    "drop": true,
+    "reason": "false screening schedule"
+  },
+  {
+    "page": "guides/labrador-retriever-temperament.html",
+    "original": "Labrador Retrievers should receive breed-specific screening for hip dysplasia starting at 1-2 years of age, as large breeds develop structural issues early",
+    "drop": true,
+    "reason": "false screening schedule"
+  },
+  {
+    "page": "guides/how-big-do-labrador-retrievers-get.html",
+    "original": "Labrador Retrievers should receive breed-specific screening for hip dysplasia starting at 1-2 years of age, as large breeds develop structural issues early",
+    "reason": "false screening schedule",
+    "drop": true
+  },
+  {
+    "page": "guides/labrador-retriever-grooming-guide.html",
+    "original": "Labrador Retrievers have heavy shedding and require daily brushing brushing.",
+    "replacement": "Feel the ribs while you rake the double coat: extra fat under the hand is the cue to shrink the cup, because that fat worsens hip dysplasia along with elbow dysplasia.",
+    "reason": "Fat under the hand and the cup are one cue, said once."
+  },
+  {
+    "page": "guides/golden-retriever-grooming-guide.html",
+    "original": "Golden Retrievers have heavy shedding and require daily brushing brushing.",
+    "replacement": "Mats hide behind the ears of this feathered coat, and brushing is a chance to feel for lumps from cancer and for stiffness from hip dysplasia.",
+    "reason": "Doubled word removed. The page still names the heavy coat and the diseases in plain sentences."
+  },
+  {
+    "page": "guides/golden-retriever-temperament.html",
+    "original": "The friendly temperament does not cancel the cancer risk or hip dysplasia.",
+    "replacement": "The friendly temperament still needs a clear end to the retrieve.",
+    "reason": "Punch line removed. The page keeps the retrieve, without assigning cancer to the temperament."
+  },
+  {
+    "page": "guides/golden-retriever-temperament.html",
+    "original": "A Golden that is never given an off switch becomes a permanent puppy in a large body.",
+    "replacement": "A Golden that never learns to settle stays busy in a large body.",
+    "reason": "Figure of speech removed. The page says the same thing in plain words."
+  },
+  {
+    "page": "guides/how-big-do-beagles-get.html",
+    "original": "Understanding How Big Do Beagles Get?",
+    "replacement": "AKC lists the 13-inch Beagle under 20 pounds and the 15-inch Beagle from 20 to 30 pounds.",
+    "reason": "Broken title fragment removed. A plain sentence on the page covers the size question."
+  },
+  {
+    "page": "guides/beagle-health-issues.html",
+    "original": "What are the most important considerations for beagle?",
+    "replacement": "Which Beagle problems should you write down between visits?",
+    "reason": "The FAQ heading now uses the breed plural, and the structured data uses the same question."
+  },
+  {
+    "page": "guides/labrador-retriever-health-issues.html",
+    "original": "10-13 yrs",
+    "replacement": "11-13 yrs",
+    "correct": true,
+    "reason": "AKC lists the Labrador Retriever lifespan as 11-13 years. The card and intro no longer say 10-13."
+  },
+  {
+    "page": "guides/labrador-retriever-grooming-guide.html",
+    "original": "10-13 yrs",
+    "replacement": "11-13 yrs",
+    "correct": true,
+    "reason": "AKC lists the Labrador Retriever lifespan as 11-13 years. The card and intro no longer say 10-13."
+  },
+  {
+    "page": "guides/labrador-retriever-temperament.html",
+    "original": "10-13 yrs",
+    "replacement": "11-13 yrs",
+    "correct": true,
+    "reason": "AKC lists the Labrador Retriever lifespan as 11-13 years. The card and intro no longer say 10-13."
+  },
+  {
+    "page": "guides/how-big-do-labrador-retrievers-get.html",
+    "original": "10-13 yrs",
+    "replacement": "11-13 yrs",
+    "correct": true,
+    "reason": "AKC lists the Labrador Retriever lifespan as 11-13 years. The card and intro no longer say 10-13."
+  },
+  {
+    "page": "guides/how-big-do-beagles-get.html",
+    "original": "What are the most important considerations for how big do beagles get?",
+    "replacement": "What do the 13-inch and 15-inch Beagle varieties weigh?",
+    "reason": "The old heading dropped the page title into the question. The new heading asks the size question in plain words."
+  },
+  {
+    "page": "guides/how-big-do-french-bulldogs-get.html",
+    "original": "What are the most important considerations for how big do french bulldogs get?",
+    "replacement": "What height and weight cap apply to an adult French Bulldog?",
+    "reason": "The old heading dropped the page title into the question. The new heading asks the size question in plain words."
+  },
+  {
+    "page": "guides/how-big-do-golden-retrievers-get.html",
+    "original": "What are the most important considerations for how big do golden retrievers get?",
+    "replacement": "What scale reading fits a female Golden Retriever, and what fits a male?",
+    "reason": "The old heading dropped the page title into the question. The new heading asks the size question in plain words."
+  },
+  {
+    "page": "guides/how-big-do-labrador-retrievers-get.html",
+    "original": "What are the most important considerations for how big do labrador retrievers get?",
+    "replacement": "How tall and heavy is a full-grown Labrador Retriever?",
+    "reason": "The old heading dropped the page title into the question. The new heading asks for height and weight."
+  },
+  {
+    "page": "guides/french-bulldog-health-issues.html",
+    "original": "What are the most important considerations for french bulldog?",
+    "replacement": "Which airway grades and spine problems belong on a French Bulldog visit?",
+    "reason": "The old heading used a lowercase breed name with no article. The new heading names the health questions."
+  },
+  {
+    "page": "guides/golden-retriever-health-issues.html",
+    "original": "What are the most important considerations for golden retriever?",
+    "replacement": "What should you bring if a Golden Retriever has a lump or a cough?",
+    "reason": "The old heading used a lowercase breed name with no article. The new heading names the warnings to bring."
+  },
+  {
+    "page": "guides/labrador-retriever-health-issues.html",
+    "original": "What are the most important considerations for labrador retriever?",
+    "replacement": "Which hip and elbow records belong with a Labrador Retriever puppy?",
+    "reason": "The old heading used a lowercase breed name with no article. The new heading names the records to request."
+  },
+  {
+    "page": "guides/beagle-grooming-guide.html",
+    "original": "Beagles have moderate shedding and require 2–3 times per week brushing",
+    "replacement": "VCA says to brush a Beagle weekly to remove loose hair, and AKC numbers the short-coat passes 1, 2, and 3: against the hair, with the hair, then a repeat.",
+    "reason": "VCA says brush weekly. The numbered short-coat passes keep the original digits without a 2–3 times a week schedule."
+  },
+  {
+    "page": "guides/beagle-grooming-guide.html",
+    "original": "Regular grooming sessions keep your Beagle's coat healthy and help you bond with your dog",
+    "replacement": "The long ear leather and the skin between the toes. Field dirt collects in both, so check them whenever the back is brushed.",
+    "reason": "Ear leather and toe webs are named once, in the FAQ."
+  },
+  {
+    "page": "guides/beagle-grooming-guide.html",
+    "original": "The Beagle's reputation in the hound group reflects generations of purposeful breeding, resulting in a medium dog with predictable but nuanced care requirements",
+    "replacement": "The long ear leather and the skin between the toes. Field dirt collects in both, so check them whenever the back is brushed.",
+    "reason": "Ear leather and toe webs are named once, in the FAQ."
+  },
+  {
+    "page": "guides/beagle-grooming-guide.html",
+    "original": "Health Predisposition Summary: Beagles show higher-than-average incidence of epilepsy, hypothyroidism, cherry eye based on breed health database data",
+    "replacement": "The long ear leather and the skin between the toes. Field dirt collects in both, so check them whenever the back is brushed.",
+    "reason": "Ear leather and toe webs are named once, in the FAQ."
+  },
+  {
+    "page": "guides/french-bulldog-grooming-guide.html",
+    "original": "Regular grooming sessions keep your French Bulldog's coat healthy and help you bond with your dog",
+    "replacement": "Wrinkles, the tail pocket, and a short smooth jacket are the grooming jobs on this page.",
+    "reason": "The bonding slogan was replaced with the fold-and-rinse work this coat actually needs."
+  },
+  {
+    "page": "guides/french-bulldog-grooming-guide.html",
+    "original": "The French Bulldog's reputation in the non-sporting group reflects generations of purposeful breeding, resulting in a small dog with predictable but nuanced care requirements",
+    "replacement": "Wrinkles, the tail pocket, and a short smooth jacket are the grooming jobs on this page.",
+    "reason": "The group-reputation filler was replaced with the fold care the sections cover."
+  },
+  {
+    "page": "guides/french-bulldog-grooming-guide.html",
+    "original": "Outcomes track closely to how well the owner pays attention to the individual animal rather than the breed stereotype",
+    "replacement": "Wrinkles, the tail pocket, and a short smooth jacket are the grooming jobs on this page.",
+    "reason": "The stereotype line was replaced with the fold-and-rinse work on this page."
+  },
+  {
+    "page": "guides/french-bulldog-health-issues.html",
+    "original": "Health Awareness: French Bulldogs show elevated breed-level risk for brachycephalic syndrome, spinal disorders, allergies",
+    "replacement": "French Bulldogs commonly have breathing problems from their flat faces, spinal disc disease is also more common in the breed, and skin allergies are frequent.",
+    "reason": "The label sentence dropped the word and. The page now names the airway, the spine, and the skin in one sentence."
+  },
+  {
+    "page": "guides/french-bulldog-temperament.html",
+    "original": "Health Predisposition Summary: French Bulldogs show higher-than-average incidence of brachycephalic syndrome, spinal disorders, allergies based on breed health database data",
+    "replacement": "Heat and a long walk show a tight airway before a quiet day at home does.",
+    "reason": "The database summary was replaced with how heat and a long walk show the airway limit."
+  },
+  {
+    "page": "guides/golden-retriever-temperament.html",
+    "original": "Health Awareness: Golden Retrievers carry genetic predispositions to cancer, hip dysplasia, heart disease",
+    "replacement": "A Golden Retriever wants the retrieve, and the day goes better when that game stays cheerful.",
+    "reason": "The clear end stays in the FAQ answer only."
+  },
+  {
+    "page": "guides/how-big-do-labrador-retrievers-get.html",
+    "original": "Understanding your Labrador Retriever's instinctual drives makes enrichment more effective",
+    "replacement": "A Labrador Retriever was bred to carry things, so a bumper in the yard gives the mouth a job.",
+    "reason": "The instinct slogan was replaced with the carrying job this retriever still wants."
+  },
+  {
+    "page": "guides/labrador-retriever-health-issues.html",
+    "original": "For Labrador Retrievers, the inputs that matter most are a large frame, a heavy shedding coat, and breed-level risk for hip dysplasia and elbow dysplasia",
+    "replacement": "The heavy chest and the retrieving mouth are the two things that change an ordinary week: measure the cup, and dry the ears after a swim.",
+    "reason": "The inputs slogan was replaced with the chest and the mouth, which are what change the week."
+  },
+  {
+    "page": "guides/beagle-grooming-guide.html",
+    "original": "What are the most important considerations for beagle grooming health and comfort?",
+    "replacement": "Which Beagle coat spots get skipped if you only brush the back?",
+    "reason": "The grooming FAQ now asks which coat spots get skipped, which is what the answer describes."
+  },
+  {
+    "page": "guides/beagle-temperament.html",
+    "original": "What are the most important considerations for beagle temperament?",
+    "replacement": "What should you plan for when a Beagle lives by its nose?",
+    "reason": "The temperament FAQ now asks what to plan for around the nose, which is what the answer describes."
+  },
+  {
+    "page": "guides/french-bulldog-grooming-guide.html",
+    "original": "What are the most important considerations for french bulldog grooming health and comfort?",
+    "replacement": "How do you take loose hair off a French Bulldog?",
+    "reason": "The grooming FAQ now asks how loose hair comes off, which is what the answer describes."
+  },
+  {
+    "page": "guides/french-bulldog-temperament.html",
+    "original": "What are the most important considerations for french bulldog temperament?",
+    "replacement": "How do heat and the airway shape a French Bulldog's day?",
+    "reason": "The temperament FAQ now asks how heat and the airway shape the day, which is what the answer describes."
+  },
+  {
+    "page": "guides/golden-retriever-grooming-guide.html",
+    "original": "What are the most important considerations for golden retriever grooming health and comfort?",
+    "replacement": "Where do mats hide in a Golden Retriever coat?",
+    "reason": "The grooming FAQ now asks where mats hide, which is what the answer describes."
+  },
+  {
+    "page": "guides/golden-retriever-temperament.html",
+    "original": "What are the most important considerations for golden retriever temperament?",
+    "replacement": "Why does a Golden Retriever retrieve need a clear end?",
+    "reason": "The temperament FAQ now asks why the retrieve needs a clear end, which is what the answer describes."
+  },
+  {
+    "page": "guides/labrador-retriever-grooming-guide.html",
+    "original": "What are the most important considerations for labrador retriever grooming health and comfort?",
+    "replacement": "How should a Labrador Retriever's ears be dried after swimming?",
+    "reason": "The grooming FAQ now asks how to dry the ears after swimming, which is what the answer describes."
+  },
+  {
+    "page": "guides/labrador-retriever-temperament.html",
+    "original": "What are the most important considerations for labrador retriever temperament?",
+    "replacement": "What should you expect from a young Labrador Retriever's mouth and joints?",
+    "reason": "The temperament FAQ now asks what to expect from the mouth and the joints, which is what the answer describes."
+  },
+  {
+    "page": "guides/how-big-do-french-bulldogs-get.html",
+    "original": "The adult issues are the airway and the spine, and both carry extra fat badly.",
+    "replacement": "The adult issues are the airway and the spine, and extra weight makes both work harder.",
+    "reason": "Extra fat does not sit on the airway and the spine. Extra weight makes those structures work harder."
+  },
+  {
+    "page": "guides/how-big-do-french-bulldogs-get.html",
+    "original": "French Bulldogs are 16 to 28 pounds and reach that weight early.",
+    "replacement": "The adult weight published by AKC stays under 28 lb, with lighter adults near 16 lb.",
+    "reason": "The 16 to 28 pound range was already in the cap sentence. This row keeps those numbers there and drops the repeat."
+  },
+  {
+    "page": "guides/how-big-do-labrador-retrievers-get.html",
+    "original": "Labradors are 55 to 80 pounds and famous for clearing the bowl.",
+    "replacement": "A male stands 22.5-24.5 in and weighs 65-80 lb. A female stands 21.5-23.5 in and weighs 55-70 lb.",
+    "reason": "The combined 55 through 80 line repeated the sex-specific weights. Those weights stay in the FAQ."
+  },
+  {
+    "page": "guides/french-bulldog-grooming-guide.html",
+    "original": "French Bulldogs have moderate shedding and require 2–3 times per week brushing",
+    "replacement": "VCA rates French Bulldog grooming requirements at 2 out of 5 and shedding at 3 out of 5, and the coat needs brushing about once a week.",
+    "reason": "VCA says brushing about once a week, and rates grooming 2 out of 5 and shedding 3 out of 5."
+  },
+  {
+    "page": "guides/how-big-do-french-bulldogs-get.html",
+    "original": "Keep the ribs feelable",
+    "replacement": "Measure at the withers, the highest point of the shoulder, with the dog standing square and the tape perpendicular to the floor.",
+    "reason": "The rib sentence was one of three repeats. Height is measured once, at the withers."
+  },
+  {
+    "page": "guides/how-big-do-french-bulldogs-get.html",
+    "original": "Fit a harness to the adult chest",
+    "replacement": "Measure at the withers, the highest point of the shoulder, with the dog standing square and the tape perpendicular to the floor.",
+    "reason": "The harness sentence was one of three repeats. Height is measured once, at the withers."
+  },
+  {
+    "page": "guides/how-big-do-golden-retrievers-get.html",
+    "original": "Golden Retrievers are commonly 55 to 75 pounds and will eat past a healthy stop",
+    "replacement": "A female weighs 55 to 65 lb. A male weighs 65 to 75 lb.",
+    "reason": "The combined 55 to 75 pound line repeated the sex-specific weights. Those weights stay in the male and female sentences."
+  },
+  {
+    "page": "guides/how-big-do-labrador-retrievers-get.html",
+    "original": "Most are near adult height by 14 months and can get heavier after that if the cup stays at a puppy level",
+    "replacement": "Most of the height is in by 12 months, and most are near adult height by 14 months and can get heavier through 18 to 24 months if the cup stays at a puppy level.",
+    "reason": "Height by 12 months and near adult height by 14 months are one timeline, not two competing claims."
+  },
+  {
+    "page": "guides/french-bulldog-health-issues.html",
+    "original": "Veterinary assessment using the BOAS grading scale (Grade 0-III) helps determine whether surgical intervention such as nares widening or soft palate resection may improve quality of life",
+    "replacement": "Name the BOAS grade, which runs from Grade 0 to Grade III, and mention hemivertebrae or disc pain.",
+    "reason": "Grade 0 to Grade III is named once, in the FAQ. The box no longer repeats the scale."
+  },
+  {
+    "page": "guides/beagle-temperament.html",
+    "original": "A walk that is only heel-and-sit leaves the nose unemployed, and an unemployed beagle bays",
+    "replacement": "A walk that is only heel-and-sit leaves the nose unemployed, and an unemployed beagle looks for trouble.",
+    "reason": "Baying when bored is said once, in the FAQ."
+  },
+  {
+    "page": "guides/beagle-temperament.html",
+    "original": "A squirrel, a rabbit, or a dropped sandwich ends the recall until the nose is done",
+    "replacement": "A Beagle will leave a recall behind when a scent is stronger than the person calling.",
+    "reason": "Leaving a recall for a scent stays in the opening sentence only."
+  },
+  {
+    "page": "guides/beagle-temperament.html",
+    "original": "They are usually friendly and they are also vocal, and a bored beagle bays",
+    "replacement": "They are usually friendly.",
+    "reason": "Baying when bored is said once, in the FAQ."
+  },
+  {
+    "page": "guides/french-bulldog-temperament.html",
+    "original": "A French Bulldog is a companion with a brachycephalic airway, a busy indoor personality, and a low tolerance for heat",
+    "replacement": "A French Bulldog is a companion with a brachycephalic airway and a busy indoor personality. Heat and a long walk show a tight airway before a quiet day at home does. Allergies and spinal malformations are common.",
+    "reason": "Heat is named once, in this FAQ answer."
+  },
+  {
+    "page": "guides/french-bulldog-temperament.html",
+    "original": "The snore, the skin folds, and the inability to cool itself are the temperament's medical shadow",
+    "replacement": "A French Bulldog is a companion with a brachycephalic airway and a busy indoor personality. Heat and a long walk show a tight airway before a quiet day at home does. Allergies and spinal malformations are common.",
+    "reason": "The FAQ answer now matches the heat question without a second heat line."
+  },
+  {
+    "page": "guides/labrador-retriever-temperament.html",
+    "original": "A Lab that collapses after ordinary play needs a veterinary workup",
+    "replacement": "A Lab that collapses after intense play needs a veterinary workup.",
+    "reason": "Exercise-induced collapse follows intense play, which is what the health page describes."
   }
 ]
