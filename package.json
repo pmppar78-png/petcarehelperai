@@ -4,8 +4,9 @@
   "description": "AI Pet Medical & Vet Help Finder",
   "type": "module",
   "scripts": {
-    "check:prose": "node engines/check-prose.mjs && node engines/check-prose-cross.mjs && node engines/check-care-lines.mjs && node engines/check-fragments.mjs && node engines/check-slots.mjs && node engines/check-tics.mjs && node engines/check-faq.mjs && node engines/check-structure.mjs",
+    "check:prose": "node engines/check-prose.mjs && node engines/check-prose-cross.mjs && node engines/check-care-lines.mjs && node engines/check-fragments.mjs && node engines/check-slots.mjs && node engines/check-tics.mjs && node engines/check-faq.mjs && node engines/check-structure.mjs && node engines/check-frames.mjs",
     "check:structure": "node engines/check-structure.mjs",
+    "check:frames": "node engines/check-frames.mjs",
     "check:slots": "node engines/check-slots.mjs",
     "check:tics": "node engines/check-tics.mjs",
     "check:faq": "node engines/check-faq.mjs",
