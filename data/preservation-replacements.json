@@ -20,8 +20,8 @@
   {
     "page": "guides/labrador-retriever-health-issues.html",
     "original": "The Labrador Retriever's reputation in the sporting group reflects generations of purposeful breeding, resulting in a large dog with predictable but nuanced care requirements.",
-    "replacement": "Weighing 55-80 lbs, with a lifespan of 11-13 yrs, a Labrador Retriever needs to stay lean to protect its hips, and the food cup should be measured across those years.",
-    "reason": "Empty sporting-group filler removed. The page keeps the weight and the 11-13 yr lifespan in one plain sentence about the hips and the food cup."
+    "replacement": "Weighing 55-80 lbs, with a lifespan of 11-13 yrs, a Labrador Retriever still wants a job when the walk is over.",
+    "reason": "Weight and lifespan stay. The cup and the lean-hip line are said once elsewhere."
   },
   {
     "page": "guides/labrador-retriever-temperament.html",
@@ -32,14 +32,14 @@
   {
     "page": "guides/labrador-retriever-grooming-guide.html",
     "original": "Practical Labrador Retrievers care is shaped by three things: large size, heavy shedding, and a known predisposition to hip dysplasia and elbow dysplasia.",
-    "replacement": "Feel the ribs while you rake the double coat, since extra fat worsens hip dysplasia along with elbow dysplasia.",
-    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+    "replacement": "Feel the ribs while you rake the double coat: extra fat under the hand is the cue to shrink the cup, because that fat worsens hip dysplasia along with elbow dysplasia.",
+    "reason": "Fat under the hand and the cup are one cue, said once."
   },
   {
     "page": "guides/how-big-do-labrador-retrievers-get.html",
     "original": "Labrador Retrievers are a large breed, reaching 55-80 lbs at full maturity.",
-    "replacement": "Full-grown Labradors run 55 through 80 lb, and staying lean matters if hip dysplasia or elbow dysplasia appears.",
-    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+    "replacement": "A male stands 22.5-24.5 in and weighs 65-80 lb. A female stands 21.5-23.5 in and weighs 55-70 lb.",
+    "reason": "The combined 55 through 80 line repeated the sex-specific weights. Those weights stay in the FAQ."
   },
   {
     "page": "guides/beagle-health-issues.html",
@@ -62,8 +62,8 @@
   {
     "page": "guides/how-big-do-beagles-get.html",
     "original": "Beagles are a medium breed, reaching 20-30 lbs at full maturity.",
-    "replacement": "The 15-inch Beagles weigh 20 to 30 pounds and shed a moderate coat.",
-    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+    "replacement": "AKC lists the 13-inch Beagle under 20 pounds and the 15-inch Beagle from 20 to 30 pounds.",
+    "reason": "The 15-inch weight is stated once, in the FAQ, which also keeps 13, 15, 20, and 30."
   },
   {
     "page": "guides/french-bulldog-health-issues.html",
@@ -104,20 +104,20 @@
   {
     "page": "guides/golden-retriever-health-issues.html",
     "original": "Common health problems in Golden Retrievers including cancer, hip dysplasia, heart disease.",
-    "replacement": "Cancer, hip dysplasia, and heart disease occur often enough in Golden Retrievers that a new lump, a limp, or a cough should be seen.",
-    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+    "replacement": "Cancer, hip dysplasia, and heart disease occur often enough in Golden Retrievers that the visit plan has to include them.",
+    "reason": "Lump and cough stay in the FAQ answer only."
   },
   {
     "page": "guides/golden-retriever-health-issues.html",
     "original": "Golden Retrievers are predisposed to several health conditions including cancer, hip dysplasia, heart disease.",
-    "replacement": "Cancer, hip dysplasia, and heart disease occur often enough in Golden Retrievers that a new lump, a limp, or a cough should be seen.",
-    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+    "replacement": "Cancer, hip dysplasia, and heart disease occur often enough in Golden Retrievers that the visit plan has to include them.",
+    "reason": "Lump and cough stay in the FAQ answer only."
   },
   {
     "page": "guides/golden-retriever-health-issues.html",
     "original": "Golden Retrievers sit in the large-size category, shed at a heavy level, and carry documented risk for cancer and hip dysplasia — those three factors drive most of the daily-care decisions.",
-    "replacement": "Cancer, hip dysplasia, and heart disease occur often enough in Golden Retrievers that a new lump, a limp, or a cough should be seen.",
-    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+    "replacement": "Cancer, hip dysplasia, and heart disease occur often enough in Golden Retrievers that the visit plan has to include them.",
+    "reason": "Lump and cough stay in the FAQ answer only."
   },
   {
     "page": "guides/golden-retriever-grooming-guide.html",
@@ -146,14 +146,14 @@
   {
     "page": "guides/french-bulldog-temperament.html",
     "original": "Care for French Bulldogs has to account for a small frame, a moderate shedding profile, and breed-linked risk around brachycephalic syndrome and spinal disorders.",
-    "replacement": "Short play sessions suit a French Bulldog whose brachycephalic syndrome leaves little cooling reserve and whose spinal disorders punish hard landings.",
-    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+    "replacement": "A French Bulldog is a companion with a brachycephalic airway and a busy indoor personality. Heat and a long walk show a tight airway before a quiet day at home does. Allergies and spinal malformations are common.",
+    "reason": "Heat and the spinal risk stay in the FAQ answer, said once."
   },
   {
     "page": "guides/how-big-do-beagles-get.html",
     "original": "Care for Beagles has to account for a medium frame, a moderate shedding profile, and breed-linked risk around epilepsy and hypothyroidism.",
-    "replacement": "The 15-inch Beagles weigh 20 to 30 pounds and shed a moderate coat.",
-    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+    "replacement": "AKC lists the 13-inch Beagle under 20 pounds and the 15-inch Beagle from 20 to 30 pounds.",
+    "reason": "The 15-inch weight is stated once, in the FAQ, which also keeps 13, 15, 20, and 30."
   },
   {
     "page": "guides/how-big-do-golden-retrievers-get.html",
@@ -164,8 +164,8 @@
   {
     "page": "guides/how-big-do-labrador-retrievers-get.html",
     "original": "Plan Labrador Retrievers care around a large body size, heavy shedding, and the breed's documented predisposition toward hip dysplasia and elbow dysplasia.",
-    "replacement": "Full-grown Labradors run 55 through 80 lb, and staying lean matters if hip dysplasia or elbow dysplasia appears.",
-    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+    "replacement": "A male stands 22.5-24.5 in and weighs 65-80 lb. A female stands 21.5-23.5 in and weighs 55-70 lb.",
+    "reason": "The combined 55 through 80 line repeated the sex-specific weights. Those weights stay in the FAQ."
   },
   {
     "page": "guides/beagle-health-issues.html",
@@ -266,8 +266,8 @@
   {
     "page": "guides/labrador-retriever-grooming-guide.html",
     "original": "Labrador Retrievers have heavy shedding and require daily brushing brushing.",
-    "replacement": "Feel the ribs while you rake the double coat, since extra fat worsens hip dysplasia along with elbow dysplasia.",
-    "reason": "Doubled word removed. The page still names the heavy coat and the joints in plain sentences."
+    "replacement": "Feel the ribs while you rake the double coat: extra fat under the hand is the cue to shrink the cup, because that fat worsens hip dysplasia along with elbow dysplasia.",
+    "reason": "Fat under the hand and the cup are one cue, said once."
   },
   {
     "page": "guides/golden-retriever-grooming-guide.html",
@@ -372,26 +372,26 @@
   {
     "page": "guides/beagle-grooming-guide.html",
     "original": "Beagles have moderate shedding and require 2–3 times per week brushing",
-    "replacement": "Brush a Beagle's short coat 2–3 times a week, and check the long ears in the same session.",
-    "reason": "The brushing line was missing a verb phrase. The schedule now says how often the coat is brushed."
+    "replacement": "VCA says to brush a Beagle weekly to remove loose hair, and AKC numbers the short-coat passes 1, 2, and 3: against the hair, with the hair, then a repeat.",
+    "reason": "VCA says brush weekly. The numbered short-coat passes keep the original digits without a 2–3 times a week schedule."
   },
   {
     "page": "guides/beagle-grooming-guide.html",
     "original": "Regular grooming sessions keep your Beagle's coat healthy and help you bond with your dog",
-    "replacement": "Dirt from a field edge sits in the webs and under the long leather, so those two spots get a look every time the brush comes out.",
-    "reason": "The bonding slogan was replaced with the spots a Beagle brush actually has to reach."
+    "replacement": "The long ear leather and the skin between the toes. Field dirt collects in both, so check them whenever the back is brushed.",
+    "reason": "Ear leather and toe webs are named once, in the FAQ."
   },
   {
     "page": "guides/beagle-grooming-guide.html",
     "original": "The Beagle's reputation in the hound group reflects generations of purposeful breeding, resulting in a medium dog with predictable but nuanced care requirements",
-    "replacement": "Dirt from a field edge sits in the webs and under the long leather, so those two spots get a look every time the brush comes out.",
-    "reason": "The hound-group filler was replaced with the field dirt a Beagle brings back in the feet and ears."
+    "replacement": "The long ear leather and the skin between the toes. Field dirt collects in both, so check them whenever the back is brushed.",
+    "reason": "Ear leather and toe webs are named once, in the FAQ."
   },
   {
     "page": "guides/beagle-grooming-guide.html",
     "original": "Health Predisposition Summary: Beagles show higher-than-average incidence of epilepsy, hypothyroidism, cherry eye based on breed health database data",
-    "replacement": "Dirt from a field edge sits in the webs and under the long leather, so those two spots get a look every time the brush comes out.",
-    "reason": "The database-summary box was replaced with the grooming check that catches a dirty ear or a pink gland."
+    "replacement": "The long ear leather and the skin between the toes. Field dirt collects in both, so check them whenever the back is brushed.",
+    "reason": "Ear leather and toe webs are named once, in the FAQ."
   },
   {
     "page": "guides/french-bulldog-grooming-guide.html",
@@ -426,8 +426,8 @@
   {
     "page": "guides/golden-retriever-temperament.html",
     "original": "Health Awareness: Golden Retrievers carry genetic predispositions to cancer, hip dysplasia, heart disease",
-    "replacement": "A Golden Retriever wants the retrieve, and the day goes better when that game has a clear end.",
-    "reason": "The predisposition label was replaced with the retrieve the temperament page is about. The disease list stays in the note above it."
+    "replacement": "A Golden Retriever wants the retrieve, and the day goes better when that game stays cheerful.",
+    "reason": "The clear end stays in the FAQ answer only."
   },
   {
     "page": "guides/how-big-do-labrador-retrievers-get.html",
@@ -504,14 +504,14 @@
   {
     "page": "guides/how-big-do-labrador-retrievers-get.html",
     "original": "Labradors are 55 to 80 pounds and famous for clearing the bowl.",
-    "replacement": "Full-grown Labradors run 55 through 80 lb, and staying lean matters if hip dysplasia or elbow dysplasia appears.",
-    "reason": "The 55 to 80 pound range was already in the lean-weight sentence. This row keeps those numbers there and drops the repeat."
+    "replacement": "A male stands 22.5-24.5 in and weighs 65-80 lb. A female stands 21.5-23.5 in and weighs 55-70 lb.",
+    "reason": "The combined 55 through 80 line repeated the sex-specific weights. Those weights stay in the FAQ."
   },
   {
     "page": "guides/french-bulldog-grooming-guide.html",
     "original": "French Bulldogs have moderate shedding and require 2–3 times per week brushing",
-    "replacement": "French Bulldogs shed moderately and need brushing 2–3 times a week.",
-    "reason": "The origin cadence was ungrammatical. Moderate shedding and brushing 2–3 times a week stay in the mitt paragraph."
+    "replacement": "VCA rates French Bulldog grooming requirements at 2 out of 5 and shedding at 3 out of 5, and the coat needs brushing about once a week.",
+    "reason": "VCA says brushing about once a week, and rates grooming 2 out of 5 and shedding 3 out of 5."
   },
   {
     "page": "guides/how-big-do-french-bulldogs-get.html",
@@ -534,7 +534,49 @@
   {
     "page": "guides/how-big-do-labrador-retrievers-get.html",
     "original": "Most are near adult height by 14 months and can get heavier after that if the cup stays at a puppy level",
-    "replacement": "Most of the height is in by 12 months, and most are near adult height by 14 months and can get heavier after that if the cup stays at a puppy level.",
+    "replacement": "Most of the height is in by 12 months, and most are near adult height by 14 months and can get heavier through 18 to 24 months if the cup stays at a puppy level.",
     "reason": "Height by 12 months and near adult height by 14 months are one timeline, not two competing claims."
+  },
+  {
+    "page": "guides/french-bulldog-health-issues.html",
+    "original": "Veterinary assessment using the BOAS grading scale (Grade 0-III) helps determine whether surgical intervention such as nares widening or soft palate resection may improve quality of life",
+    "replacement": "Name the BOAS grade, which runs from Grade 0 to Grade III, and mention hemivertebrae or disc pain.",
+    "reason": "Grade 0 to Grade III is named once, in the FAQ. The box no longer repeats the scale."
+  },
+  {
+    "page": "guides/beagle-temperament.html",
+    "original": "A walk that is only heel-and-sit leaves the nose unemployed, and an unemployed beagle bays",
+    "replacement": "A walk that is only heel-and-sit leaves the nose unemployed, and an unemployed beagle looks for trouble.",
+    "reason": "Baying when bored is said once, in the FAQ."
+  },
+  {
+    "page": "guides/beagle-temperament.html",
+    "original": "A squirrel, a rabbit, or a dropped sandwich ends the recall until the nose is done",
+    "replacement": "A Beagle will leave a recall behind when a scent is stronger than the person calling.",
+    "reason": "Leaving a recall for a scent stays in the opening sentence only."
+  },
+  {
+    "page": "guides/beagle-temperament.html",
+    "original": "They are usually friendly and they are also vocal, and a bored beagle bays",
+    "replacement": "They are usually friendly.",
+    "reason": "Baying when bored is said once, in the FAQ."
+  },
+  {
+    "page": "guides/french-bulldog-temperament.html",
+    "original": "A French Bulldog is a companion with a brachycephalic airway, a busy indoor personality, and a low tolerance for heat",
+    "replacement": "A French Bulldog is a companion with a brachycephalic airway and a busy indoor personality. Heat and a long walk show a tight airway before a quiet day at home does. Allergies and spinal malformations are common.",
+    "reason": "Heat is named once, in this FAQ answer."
+  },
+  {
+    "page": "guides/french-bulldog-temperament.html",
+    "original": "The snore, the skin folds, and the inability to cool itself are the temperament's medical shadow",
+    "replacement": "A French Bulldog is a companion with a brachycephalic airway and a busy indoor personality. Heat and a long walk show a tight airway before a quiet day at home does. Allergies and spinal malformations are common.",
+    "reason": "The FAQ answer now matches the heat question without a second heat line."
+  },
+  {
+    "page": "guides/labrador-retriever-temperament.html",
+    "original": "A Lab that collapses after ordinary play needs a veterinary workup",
+    "replacement": "A Lab that collapses after intense play needs a veterinary workup.",
+    "reason": "Exercise-induced collapse follows intense play, which is what the health page describes."
   }
 ]

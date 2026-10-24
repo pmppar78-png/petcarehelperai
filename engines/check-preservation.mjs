@@ -34,13 +34,15 @@
  * because small ages such as 1, 2, 3, and 5 show up in tables and
  * other facts. Text is NFKC-normalized and the number words one
  * through twenty-four are read as digits before that comparison.
- * On a drop, any new sentence that says "screen" (any form) together
- * with an age in years or months fails even when those digits were
- * not in the dropped sentence. Two sentences are exempt, and only
- * as an exact match on one page: "Brush a Beagle's short coat 2–3
- * times a week, and check the long ears in the same session." on
- * guides/beagle-grooming-guide.html, and "French Bulldogs shed
- * moderately and need brushing 2–3 times a week." on
+ * On a drop, any new sentence that says screen, test, check,
+ * evaluate, x-ray, or radiograph (any form) together with an age
+ * fails even when those digits were not in the dropped sentence.
+ * Ages include years/months and the abbreviations yr/yrs/mo/mos,
+ * a hyphenated -month or -year, an ordinal with birthday, and
+ * "a year" or "a year old". Two sentences are exempt, and only as
+ * an exact match on one page: the VCA weekly Beagle brushing
+ * sentence on guides/beagle-grooming-guide.html, and the VCA weekly
+ * French Bulldog brushing sentence on
  * guides/french-bulldog-grooming-guide.html. A near-miss, or either
  * sentence on another page, still fails. Moving a listed
  * sentence onto another page fails. Sentences without numbers cannot
@@ -94,7 +96,7 @@ import path from "path";
 import { assertChrome, assertWhyQuestions, runChromeFixtures } from "./chrome-main.mjs";
 import { hrefSatisfied, resolveOriginBase } from "./origin-base.mjs";
 
-const REPLACEMENTS_SHA256 = "76280be2582373df10f12d79733847bd0aca49632d9437709ba72796061aaef1";
+const REPLACEMENTS_SHA256 = "3cce15364101ace73ad269c4b3c6b15f76edc541edd771b517c0b15b50ea4c30";
 const MAX_DROPS = 15;
 const MAX_CORRECTIONS = 4;
 const LAB_LIFE_FROM = "10-13 yrs";
@@ -103,10 +105,10 @@ const SCREENING_DROP =
   /^(?:Beagles|French Bulldogs|Golden Retrievers|Labrador Retrievers) should receive breed-specific screening for .+ starting at \d+-\d+ years of age/;
 const BEAGLE_BRUSH_PAGE = "guides/beagle-grooming-guide.html";
 const BEAGLE_BRUSH_SENTENCE =
-  "Brush a Beagle's short coat 2–3 times a week, and check the long ears in the same session.";
+  "VCA says to brush a Beagle weekly to remove loose hair, and AKC numbers the short-coat passes 1, 2, and 3: against the hair, with the hair, then a repeat.";
 const FRENCH_BRUSH_PAGE = "guides/french-bulldog-grooming-guide.html";
 const FRENCH_BRUSH_SENTENCE =
-  "French Bulldogs shed moderately and need brushing 2–3 times a week.";
+  "VCA rates French Bulldog grooming requirements at 2 out of 5 and shedding at 3 out of 5, and the coat needs brushing about once a week.";
 const NUMBER_WORDS = [
   ["twenty-four", "24"],
   ["twenty-three", "23"],
@@ -912,12 +914,25 @@ function foldNumericWords(text) {
   return folded;
 }
 
+const SCREEN_WORD =
+  /\b(?:screen\w*|test\w*|check\w*|evaluat\w*|x-rays?|radiographs?|radiography)\b/i;
+const ORDINAL_AGE =
+  /\b(?:first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth|eleventh|twelfth)\b[\s\S]{0,80}\bbirthdays?\b/i;
+const AGE_UNIT = "(?:years?|yrs?|months?|mos|mo)";
+const AGE_RANGE_SEP =
+  "(?:\\s*(?:-|–|—|to|through|or)\\s*|\\s*-\\s*(?:to|through|or)\\s*-\\s*)";
+const AGE_PATTERN = new RegExp(
+  `\\b(?:\\d+(?:\\.\\d+)?${AGE_RANGE_SEP}\\d+(?:\\.\\d+)?|\\d+(?:\\.\\d+)?)\\s*-?\\s*${AGE_UNIT}(?:\\s*-?\\s*old)?\\b|\\b\\d+(?:\\.\\d+)?-(?:year|month|yr|mo)s?(?:-old)?\\b`,
+  "i",
+);
+
 function hasScreenAge(sentence) {
   const folded = foldNumericWords(sentence);
-  if (!/\bscreen/i.test(folded)) return false;
-  return /\b\d+(?:\.\d+)?(?:\s*(?:-|–|—|to|through|or)\s*\d+(?:\.\d+)?)?\s*(?:years?|months?)\b/i.test(
-    folded,
-  );
+  if (!SCREEN_WORD.test(folded)) return false;
+  if (AGE_PATTERN.test(folded)) return true;
+  if (ORDINAL_AGE.test(sentence)) return true;
+  if (/\ba year(?:\s+old)?\b/i.test(folded)) return true;
+  return false;
 }
 
 export function newTextCarriesNumbers(original, originHtml, currentHtml, page) {
@@ -1791,7 +1806,7 @@ function dropFixtures() {
   if (newTextCarriesNumbers(screening, origin, brushing, BEAGLE_BRUSH_PAGE)) {
     failures.push("pinned Beagle brushing sentence was treated as the screening ages");
   }
-  const nearMiss = `<article><p>Brush a Beagle's short coat 2-3 times a week, and check the long ears in the same session.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
+  const nearMiss = `<article><p>VCA says to brush a Beagle weekly to remove loose hair, and AKC numbers the short-coat passes 1, 2, and 3: against the hair, with the hair, then once more.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
   if (!newTextCarriesNumbers(screening, origin, nearMiss, BEAGLE_BRUSH_PAGE)) {
     failures.push("near-miss brushing sentence was exempt");
   }
@@ -1803,7 +1818,7 @@ function dropFixtures() {
   if (newTextCarriesNumbers(FRENCH_SCREEN, frenchOrigin, frenchBrush, FRENCH_BRUSH_PAGE)) {
     failures.push("pinned French brushing sentence was treated as the screening ages");
   }
-  const frenchNear = `<article><p>French Bulldogs shed moderately and need brushing 2-3 times a week.</p><p>Check the folds at 3 months and again at 5.</p></article>`;
+  const frenchNear = `<article><p>VCA rates French Bulldog grooming requirements at 2 out of 5 and shedding at 3 out of 5, and the coat needs brushing about once each week.</p><p>Check the folds at 3 months and again at 5.</p></article>`;
   if (!newTextCarriesNumbers(FRENCH_SCREEN, frenchOrigin, frenchNear, FRENCH_BRUSH_PAGE)) {
     failures.push("near-miss French brushing sentence was exempt");
   }
@@ -1880,6 +1895,54 @@ function dropFixtures() {
       screening,
       origin,
       `<article><p>Beagles should be screened for epilepsy starting at ３-５ years of age.</p><p>Puppy visits are every 3-4 weeks.</p></article>`,
+    ],
+    [
+      "guides/golden-retriever-health-issues.html",
+      GOLDEN_SCREEN,
+      `<article><p>${GOLDEN_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Golden Retrievers should be screened for cancer starting at 12-24 mos of age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/golden-retriever-health-issues.html",
+      GOLDEN_SCREEN,
+      `<article><p>${GOLDEN_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Golden Retrievers should be screened for cancer from a 12-month-old age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/labrador-retriever-temperament.html",
+      LAB_SCREEN,
+      `<article><p>${LAB_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Labrador Retrievers should be screened for hip dysplasia between the first and second birthdays.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/labrador-retriever-temperament.html",
+      LAB_SCREEN,
+      `<article><p>${LAB_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Labrador Retrievers should be screened for hip dysplasia at a year old.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/beagle-health-issues.html",
+      screening,
+      origin,
+      `<article><p>Beagles should be screened for epilepsy from the third to the fifth birthday.</p><p>Puppy visits are every 3-4 weeks.</p></article>`,
+    ],
+    [
+      "guides/golden-retriever-health-issues.html",
+      GOLDEN_SCREEN,
+      `<article><p>${GOLDEN_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Golden Retrievers should be checked for cancer starting at 12 to 24 months of age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/golden-retriever-health-issues.html",
+      GOLDEN_SCREEN,
+      `<article><p>${GOLDEN_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Golden Retrievers should be tested for cancer starting at 12 to 24 months of age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/beagle-health-issues.html",
+      screening,
+      origin,
+      `<article><p>Beagles should be tested for epilepsy at 36 to 60 months.</p><p>Puppy visits are every 3-4 weeks.</p></article>`,
     ],
   ];
   for (const [page, dropped, originHtml, currentHtml] of attacks) {
