@@ -7,10 +7,11 @@
  * (four or more words) or any three-, four-, or five-word window that still
  * contains a content word. Function-word skeletons are counted too: "while a
  * name", "while an name", "a name while a name" (and the a/an variants), and
- * "define/defines a/an name". A sentence may start with a lowercase word.
- * Article is read first, then main, then body. An html document with none of
- * those is an error. A fragment with none of them is read whole, so the prose
- * is not dropped.
+ * "define/defines a/an name". A sentence-final ", and <np> is the <noun>"
+ * is counted on its own and fails above ten pages. A sentence may start with
+ * a lowercase word. Article is read first, then main, then body. An html
+ * document with none of those is an error. A fragment with none of them is
+ * read whole, so the prose is not dropped.
  *
  * Only sentences that are not already on that page's origin/main copy are
  * counted. A missing origin/main baseline is a hard error.
@@ -25,6 +26,8 @@ import { originFile, resolveOriginBase } from "./origin-base.mjs";
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 4;
 const WIDTHS = [3, 4, 5];
+const CLOSER_LIMIT = 10;
+const STOCK_CLOSER = /,\s+and\s+(?:[A-Za-z0-9'’-]+\s+)+is\s+the\s+[A-Za-z0-9'’-]+(?:\s+[A-Za-z0-9'’-]+)*$/i;
 
 function walkHtml(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -171,7 +174,7 @@ export function framesOf(norm) {
   return frames;
 }
 
-export function changedNorms(currentHtml, originHtml) {
+export function changedSentences(currentHtml, originHtml) {
   const origin = new Set(sentencesOf(originHtml).map(normalize));
   const out = [];
   const seen = new Set();
@@ -179,9 +182,27 @@ export function changedNorms(currentHtml, originHtml) {
     const key = normalize(sentence);
     if (key.split(" ").length < MIN_WORDS || origin.has(key) || seen.has(key)) continue;
     seen.add(key);
-    out.push(key);
+    out.push(sentence);
   }
   return out;
+}
+
+export function changedNorms(currentHtml, originHtml) {
+  return changedSentences(currentHtml, originHtml).map(normalize);
+}
+
+export function isStockCloser(sentence) {
+  const key = sentence.replace(/[.!?]+$/, "").replace(/\s+/g, " ").trim();
+  return STOCK_CLOSER.test(key);
+}
+
+export function stockCloserProblems(pages, limit = CLOSER_LIMIT) {
+  const files = [];
+  for (const page of pages) {
+    if ((page.sentences || []).some(isStockCloser)) files.push(page.rel);
+  }
+  if (files.length > limit) return [{ frame: ", and <np> is the <noun>", files }];
+  return [];
 }
 
 export function frameProblems(pages) {
@@ -314,6 +335,36 @@ function fixtureFailures() {
   if (frameProblems(asPages(chooseSentences.slice(0, 3), "fixture-choose3")).length) {
     failures.push("fixture three so-choose sentences failed");
   }
+  const closerNouns = [
+    "constant",
+    "issue",
+    "skill",
+    "worry",
+    "problem",
+    "habit",
+    "task",
+    "chore",
+    "focus",
+    "limit",
+    "pattern",
+  ];
+  const closerSentences = closerNouns.map(
+    (noun, index) => `Crew ${index} brushes the dog, and coat care is the ${noun}.`,
+  );
+  const asCloser = (list) =>
+    list.map((sentence, index) => ({ rel: `fixture-closer-${index}.html`, sentences: [sentence] }));
+  if (!stockCloserProblems(asCloser(closerSentences)).length) {
+    failures.push("fixture stock closer on 11 pages did not fail");
+  }
+  if (stockCloserProblems(asCloser(closerSentences.slice(0, 10))).length) {
+    failures.push("fixture ten stock closers failed");
+  }
+  if (isStockCloser("Owners brush weekly and shedding is the constant.")) {
+    failures.push("fixture closer matched without the comma");
+  }
+  if (!isStockCloser("Owners brush weekly, and shedding is the constant.")) {
+    failures.push("fixture closer missed a sentence-final and-np-is-the-noun");
+  }
   return failures;
 }
 
@@ -326,7 +377,7 @@ function main() {
     process.exit(1);
   }
   console.log(
-    "frame fixtures ok (shared slot, three pages, distinct sentences, origin exempt, lowercase start, body without article, function-word frame, so choose a name)",
+    "frame fixtures ok (shared slot, three pages, distinct sentences, origin exempt, lowercase start, body without article, function-word frame, so choose a name, stock closer)",
   );
 
   const pages = [];
@@ -343,12 +394,14 @@ function main() {
       bare.push(`${rel}: no article, main, or body`);
       continue;
     }
-    const norms = changedNorms(html, originHtml);
-    if (norms.length) pages.push({ rel, norms });
+    const sentences = changedSentences(html, originHtml);
+    const norms = sentences.map(normalize);
+    if (norms.length) pages.push({ rel, norms, sentences });
   }
 
   const problems = frameProblems(pages);
-  if (problems.length || bare.length) {
+  const closers = stockCloserProblems(pages);
+  if (problems.length || bare.length || closers.length) {
     if (bare.length) {
       console.error(`frame check failed (${bare.length} pages with no article, main, or body)`);
       for (const line of bare.slice(0, 20)) console.error(line);
@@ -359,6 +412,11 @@ function main() {
         console.error(`${item.files.length} pages: ${item.frame}`);
         console.error(`  e.g. ${item.files.slice(0, 4).join(", ")}`);
       }
+    }
+    if (closers.length) {
+      const item = closers[0];
+      console.error(`stock closer check failed (${item.files.length} pages: ${item.frame})`);
+      console.error(`  e.g. ${item.files.slice(0, 6).join(", ")}`);
     }
     process.exit(1);
   }
