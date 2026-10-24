@@ -23,12 +23,18 @@
  * data/preservation-replacements.json passes only when its reviewed
  * replacement is on the page and carries the same numbers. The original
  * wording does not have to remain. An inaccurate fact can instead be
- * dropped with {"page","original","drop":true,"reason"}. The reason
- * has to say the fact was wrong, for example "false screening schedule".
- * A drop is valid only when the page's new text does not carry the
- * original numbers. Numbers that appear only in that dropped sentence
- * are not required on the page. An unpinned drop, or a drop of a fact
- * the new text still states, fails.
+ * dropped with {"page","original","drop":true,"reason"}. A drop is
+ * allowed only when the original matches main's breed-screening
+ * template ("should receive breed-specific screening for … starting
+ * at N-N years"), the reason says the fact was wrong, and the page's
+ * new text does not carry the original numbers. Sentences without
+ * numbers cannot be dropped. The file may hold at most the listed
+ * number of drops. Numbers that appear only in a dropped sentence
+ * are not required on the page. An unpinned drop fails.
+ * A Labrador lifespan card or intro may use a number-correction row,
+ * {"correct":true,"original":"10-13 yrs","replacement":"11-14 yrs"}.
+ * That is the only allowed correction. The old span must leave the
+ * page and the new span must appear. Other number swaps fail.
  *
  * Replacements are compared with each other as well. Each replacement is
  * split on period, question mark, exclamation mark, and semicolon. After
@@ -69,7 +75,13 @@ import path from "path";
 import { assertChrome, assertWhyQuestions, runChromeFixtures } from "./chrome-main.mjs";
 import { hrefSatisfied, resolveOriginBase } from "./origin-base.mjs";
 
-const REPLACEMENTS_SHA256 = "bf5dbfc856f4b7014d38192ed603beacdad4236216be5a6be9cd7e0aa0207196";
+const REPLACEMENTS_SHA256 = "643d298c9dfa1ae719516aeb143b601a498d701ac61b93afcf1fa86132f05e40";
+const MAX_DROPS = 15;
+const MAX_CORRECTIONS = 4;
+const LAB_LIFE_FROM = "10-13 yrs";
+const LAB_LIFE_TO = "11-14 yrs";
+const SCREENING_DROP =
+  /^(?:Beagles|French Bulldogs|Golden Retrievers|Labrador Retrievers) should receive breed-specific screening for .+ starting at \d+-\d+ years of age/;
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 4;
@@ -678,6 +690,46 @@ function inaccurateReason(reason) {
   return typeof reason === "string" && /\b(?:false|inaccurate|incorrect|wrong)\b/i.test(reason);
 }
 
+export function screeningDropOriginal(original) {
+  const text = String(original || "").replace(/\s+/g, " ").trim();
+  return SCREENING_DROP.test(text) && numericValues(text).size > 0;
+}
+
+export function dropRowAccepted(row) {
+  if (!row || row.drop !== true) return false;
+  if (row.replacement !== undefined || row.correct === true) return false;
+  if (!inaccurateReason(row.reason)) return false;
+  if (!screeningDropOriginal(row.original)) return false;
+  return true;
+}
+
+export function dropRosterWithinCap(rows, cap = MAX_DROPS) {
+  if (!Array.isArray(rows)) return false;
+  const drops = rows.filter((row) => row && row.drop === true);
+  if (drops.length > cap) return false;
+  return drops.every((row) => dropRowAccepted(row));
+}
+
+export function labLifespanCorrection(row) {
+  if (!row || row.correct !== true || row.drop === true) return false;
+  const original = String(row.original || "").replace(/\s+/g, " ").trim();
+  const replacement = String(row.replacement || "").replace(/\s+/g, " ").trim();
+  return original === LAB_LIFE_FROM && replacement === LAB_LIFE_TO && numericValues(original).size > 0;
+}
+
+export function correctionRosterWithinCap(rows, cap = MAX_CORRECTIONS) {
+  if (!Array.isArray(rows)) return false;
+  const corrections = rows.filter((row) => row && row.correct === true);
+  if (corrections.length > cap) return false;
+  return corrections.every((row) => labLifespanCorrection(row));
+}
+
+export function correctionIsReviewed(row, reviewed) {
+  if (!labLifespanCorrection(row)) return false;
+  const key = `${row.page}\n${normSentence(row.original)}`;
+  return reviewed instanceof Map ? reviewed.has(key) : false;
+}
+
 function loadReplacementRows(raw) {
   const rows = JSON.parse(raw.toString("utf8"));
   if (!Array.isArray(rows) || !rows.length) {
@@ -703,16 +755,20 @@ function loadReplacementRows(raw) {
       process.exit(1);
     }
     if (row.drop === true) {
-      if (row.replacement !== undefined) {
-        console.error(`preservation drop cannot also name a replacement (${row.page})`);
-        process.exit(1);
-      }
-      if (!inaccurateReason(row.reason)) {
-        console.error(`preservation drop reason does not say the fact was wrong (${row.page})`);
+      if (!dropRowAccepted(row)) {
+        console.error(`preservation drop is not the screening-age template (${row.page})`);
         process.exit(1);
       }
     } else if (row.drop !== undefined) {
       console.error(`preservation drop must be true (${row.page})`);
+      process.exit(1);
+    } else if (row.correct === true) {
+      if (!labLifespanCorrection(row)) {
+        console.error(`preservation number correction must change Labrador 10-13 yrs to 11-14 yrs (${row.page})`);
+        process.exit(1);
+      }
+    } else if (row.correct !== undefined) {
+      console.error(`preservation number correction must be true (${row.page})`);
       process.exit(1);
     } else if (!row.replacement || typeof row.replacement !== "string" || !row.replacement.trim()) {
       console.error(`preservation replacement missing replacement (${row.page})`);
@@ -724,6 +780,15 @@ function loadReplacementRows(raw) {
       process.exit(1);
     }
     map.set(key, row);
+  }
+  const listed = [...map.values()];
+  if (!dropRosterWithinCap(listed)) {
+    console.error(`preservation drops exceed the listed cap of ${MAX_DROPS} or include a non-screening sentence`);
+    process.exit(1);
+  }
+  if (!correctionRosterWithinCap(listed)) {
+    console.error(`preservation number corrections exceed the listed cap of ${MAX_CORRECTIONS}`);
+    process.exit(1);
   }
   return map;
 }
@@ -777,6 +842,12 @@ function sentenceCovered(sentence, visibleLower, currentSentences, rel) {
     const needle = row.original.toLowerCase().replace(/\s+/g, " ").trim();
     return !visibleLower.includes(needle);
   }
+  if (row.correct === true) {
+    if (!labLifespanCorrection(row)) return false;
+    const replacement = row.replacement.toLowerCase().replace(/\s+/g, " ").trim();
+    const oldSpan = row.original.toLowerCase().replace(/\s+/g, " ").trim();
+    return visibleLower.includes(replacement) && !visibleLower.includes(oldSpan);
+  }
   if (!sameFacts(sentence, row.replacement)) return false;
   const replacement = row.replacement.toLowerCase().replace(/\s+/g, " ").trim();
   return visibleLower.includes(replacement);
@@ -797,6 +868,32 @@ function droppedNumberExemptions(originHtml, rel) {
       if (!remain.has(num)) exempt.add(num);
     }
   }
+  return exempt;
+}
+
+function correctedNumberExemptions(originHtml, rel) {
+  const rows = [...REPLACEMENTS.values()].filter(
+    (row) => row.page === rel && labLifespanCorrection(row),
+  );
+  if (!rows.length) return new Set();
+  let rest = visibleText(originHtml).toLowerCase().replace(/\s+/g, " ");
+  for (const row of rows) {
+    const needle = row.original.toLowerCase().replace(/\s+/g, " ").trim();
+    rest = rest.split(needle).join(" ");
+  }
+  const remain = numericValues(rest);
+  const exempt = new Set();
+  for (const row of rows) {
+    for (const num of numericValues(row.original)) {
+      if (!remain.has(num)) exempt.add(num);
+    }
+  }
+  return exempt;
+}
+
+function numberExemptions(originHtml, rel) {
+  const exempt = droppedNumberExemptions(originHtml, rel);
+  for (const num of correctedNumberExemptions(originHtml, rel)) exempt.add(num);
   return exempt;
 }
 
@@ -833,7 +930,7 @@ function maskedGrams(norm, width, contentOnly) {
 function assertReplacementVariety() {
   const items = [];
   for (const row of REPLACEMENTS.values()) {
-    if (row.drop === true) continue;
+    if (row.drop === true || row.correct === true) continue;
     for (const sentence of replacementPieces(row.replacement)) {
       const key = normalize(sentence);
       items.push({
@@ -895,11 +992,31 @@ function assertReplacements(pagePairs) {
       continue;
     }
     const originHtml = fs.readFileSync(pair.origin, "utf8");
+    if (row.correct === true) {
+      const currentHtml = fs.readFileSync(pair.current, "utf8");
+      const originLower = visibleText(originHtml).toLowerCase().replace(/\s+/g, " ");
+      const currentLower = visibleText(currentHtml).toLowerCase().replace(/\s+/g, " ");
+      const oldSpan = row.original.toLowerCase();
+      const nextSpan = row.replacement.toLowerCase();
+      if (!labLifespanCorrection(row)) {
+        problems.push(`${row.page}: number correction is outside the Labrador 10-13 to 11-14 span`);
+      }
+      if (!originLower.includes(oldSpan)) {
+        problems.push(`${row.page}: corrected lifespan is not on origin/main`);
+      }
+      if (!currentLower.includes(nextSpan) || currentLower.includes(oldSpan)) {
+        problems.push(`${row.page}: Labrador lifespan was not corrected to 11-14 yrs`);
+      }
+      continue;
+    }
     const found = sentencesOf(originHtml).some(
       (sentence) => normSentence(sentence) === normSentence(row.original),
     );
     if (!found) problems.push(`${row.page}: original sentence is not on origin/main`);
     if (row.drop === true) {
+      if (!dropRowAccepted(row)) {
+        problems.push(`${row.page}: drop is not the screening-age template`);
+      }
       const currentHtml = fs.readFileSync(pair.current, "utf8");
       const currentLower = visibleText(currentHtml).toLowerCase().replace(/\s+/g, " ");
       const needle = row.original.toLowerCase().replace(/\s+/g, " ").trim();
@@ -937,7 +1054,7 @@ function analyze(index, pair, live) {
   }
   const originNums = numericValues(originVisible);
   const currentNums = numericValues(currentVisible);
-  const exemptNums = droppedNumberExemptions(originHtml, pair.rel);
+  const exemptNums = numberExemptions(originHtml, pair.rel);
   const missingNums = [...originNums].filter((num) => !currentNums.has(num) && !exemptNums.has(num));
   const originHrefs = [...new Set(hrefsIn(regionHtml(originHtml)))];
   const currentHrefs = new Set(hrefsIn(currentHtml));
@@ -1259,7 +1376,7 @@ function patchProse(index, html, originHtml, rel, live) {
     if (placed.has(lower) || sentenceCovered(sentence, pageText, currentSentences, rel)) continue;
     if (notRequired(index, sentence, rel, live)) continue;
     const row = replacementRow(rel, sentence);
-    if (row && row.drop === true) continue;
+    if (row && (row.drop === true || row.correct === true)) continue;
     if (row && !sameFacts(sentence, row.replacement)) continue;
     placed.add(lower);
     const body = row
@@ -1300,7 +1417,7 @@ function appendHrefs(index, html, originHtml, rel, live) {
 }
 
 function appendFigures(html, originHtml, rel) {
-  const exempt = rel ? droppedNumberExemptions(originHtml, rel) : new Set();
+  const exempt = rel ? numberExemptions(originHtml, rel) : new Set();
   const missing = [...numericValues(visibleText(originHtml))].filter(
     (num) => !numericValues(visibleText(html)).has(num) && !exempt.has(num),
   );
@@ -1555,6 +1672,57 @@ function dropFixtures() {
   if (dropIsReviewed(row, pinned)) failures.push("unpinned drop did not fail");
   pinned.set(`${row.page}\n${normSentence(row.original)}`, row);
   if (!dropIsReviewed(row, pinned)) failures.push("pinned drop was treated as unpinned");
+  const hip =
+    "For Labrador Retrievers, the inputs that matter most are a large frame, a heavy shedding coat, and breed-level risk for hip dysplasia and elbow dysplasia.";
+  const hipDrop = {
+    page: "guides/labrador-retriever-health-issues.html",
+    original: hip,
+    drop: true,
+    reason: "wrong",
+  };
+  if (numericValues(hip).size) failures.push("fixture hip sentence unexpectedly had numbers");
+  if (screeningDropOriginal(hip)) failures.push("fixture treated the hip sentence as a screening template");
+  if (dropRowAccepted(hipDrop)) failures.push("drop of an accurate sentence with no numbers did not fail");
+  if (!dropRowAccepted(row)) failures.push("screening-template drop was rejected");
+  const listed = Array.from({ length: MAX_DROPS }, () => row);
+  if (!dropRosterWithinCap(listed)) failures.push("drop cap rejected the listed count");
+  if (dropRosterWithinCap([...listed, row])) failures.push("drop over the listed cap did not fail");
+  const life = {
+    page: "guides/labrador-retriever-health-issues.html",
+    original: LAB_LIFE_FROM,
+    replacement: LAB_LIFE_TO,
+    correct: true,
+    reason: "AKC lists the Labrador Retriever lifespan as 11-14 years.",
+  };
+  if (!labLifespanCorrection(life)) failures.push("Labrador 10-13 to 11-14 correction was rejected");
+  if (labLifespanCorrection({ correct: true, original: hip, replacement: LAB_LIFE_TO })) {
+    failures.push("lifespan correction accepted a sentence with no numbers");
+  }
+  if (labLifespanCorrection({ correct: true, original: "55-80 lbs", replacement: "50-70 lbs" })) {
+    failures.push("lifespan correction accepted an unrelated weight change");
+  }
+  if (labLifespanCorrection({ correct: true, original: LAB_LIFE_FROM, replacement: "9-12 yrs" })) {
+    failures.push("lifespan correction accepted a different span");
+  }
+  if (
+    labLifespanCorrection({
+      correct: true,
+      original: "Weighing around 55-80 lbs and lifespan of 10-13 yrs",
+      replacement: "Weighing around 55-80 lbs and lifespan of 11-14 yrs",
+    })
+  ) {
+    failures.push("lifespan correction accepted a rewritten sentence");
+  }
+  const unpinned = new Map();
+  if (correctionIsReviewed(life, unpinned)) failures.push("unpinned lifespan correction did not fail");
+  unpinned.set(`${life.page}\n${normSentence(life.original)}`, life);
+  if (!correctionIsReviewed(life, unpinned)) failures.push("pinned lifespan correction was treated as unpinned");
+  if (!correctionRosterWithinCap(Array.from({ length: MAX_CORRECTIONS }, () => life))) {
+    failures.push("lifespan correction cap rejected the listed count");
+  }
+  if (correctionRosterWithinCap(Array.from({ length: MAX_CORRECTIONS + 1 }, () => life))) {
+    failures.push("lifespan correction over the listed cap did not fail");
+  }
   return failures;
 }
 
@@ -1564,7 +1732,7 @@ if (dropFixture.length) {
   for (const line of dropFixture) console.error(line);
   process.exit(1);
 }
-console.error("preservation drop fixtures ok (unpinned drop, accurate fact)");
+console.error("preservation drop fixtures ok (unpinned drop, non-numeric fact, lifespan correction)");
 
 const { out, missing } = pairs();
 if (!out.length) {

@@ -10,8 +10,8 @@
  * speaking as a vet or vet tech, as a vet or vet tech, the patient,
  * here at the clinic, yours truly, personally, and having measured,
  * treated, or seen. Also speaking from experience, this vet has seen,
- * the author has, years in practice, and the apostrophe-less forms
- * Ive and Im.
+ * the author has, years in practice, your correspondent, the clinic
+ * team here, and the apostrophe-less forms Ive and Im.
  * Article is read first, then main, then body. Guides, breeds, and the
  * other content directories are scanned. Sentences already on that page's
  * origin/main copy are exempt. Legal notices are not body text. A missing
@@ -29,7 +29,7 @@ const SKIP = new Set(["node_modules", ".git", "engines", "test-results", "audit"
 const PRONOUN =
   /\b(?:i|i'd|i'll|i'm|i've|ive|im|me|my|mine|myself|we|we're|we've|our|ours|ourselves|us|let's|let’s)\b/i;
 const PERSONA =
-  /\b(?:this writer|this author|in (?:this|our) (?:practice|clinic)|speaking as a vet(?: tech)?|as a vet(?: tech)?|the patient|here at the clinic|yours truly|personally|having (?:measured|treated|seen)|speaking from experience|this vet has seen|the author has|years in practice)\b/i;
+  /\b(?:this writer|this author|in (?:this|our) (?:practice|clinic)|speaking as a vet(?: tech)?|as a vet(?: tech)?|the patient|here at the clinic|yours truly|personally|having (?:measured|treated|seen)|speaking from experience|this vet has seen|the author has|years in practice|your correspondent|the clinic team here)\b/i;
 const EXPERIENCE =
   /\b(?:i|we|my|our|myself|ourselves)\b[^.!?]{0,80}\b(?:kept|keep|weighed|weigh|treated|treat|measured|measure|carried|carry|watched|watch|lived|live|shared|share)\b|\b(?:kept|weighed|treated|measured|carried|watched)\b[^.!?]{0,40}\b(?:i|me|my|we|our|myself|ourselves)\b/i;
 
@@ -139,6 +139,8 @@ function fixtureFailures() {
     ["years-practice", "Over twenty years in practice, the hips were scored the same way."],
     ["ive", "Ive weighed the puppy before breakfast."],
     ["im", "Im the one who measured the hips that morning."],
+    ["correspondent", "Your correspondent has weighed Labs on that scale."],
+    ["clinic-team", "The clinic team here has treated that ear twice."],
     ["short", "I weighed him."],
   ];
   for (const [label, sentence] of bad) {
@@ -190,7 +192,7 @@ function main() {
     for (const line of fixture) console.error(line);
     process.exit(1);
   }
-  console.log("first-person fixtures ok (pronouns, persona, clinic voice, experience, Ive/Im, short sentence, body fallback, content dirs)");
+  console.log("first-person fixtures ok (pronouns, persona, clinic voice, experience, Ive/Im, correspondent, short sentence, body fallback, content dirs)");
   const BASE = resolveOriginBase({ root: ROOT });
   const problems = [];
   let pages = 0;

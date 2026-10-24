@@ -20,8 +20,8 @@
   {
     "page": "guides/labrador-retriever-temperament.html",
     "original": "Labrador Retrievers bring a large build, a heavy shedding pattern, and breed-specific health risk around hip dysplasia and elbow dysplasia — each of those shifts routine care in a different direction.",
-    "replacement": "A Labrador sheds a heavy undercoat and is also subject to hip dysplasia, elbow dysplasia, and weight gain.",
-    "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
+    "replacement": "A Labrador wants a person nearby, and an empty afternoon is when the shoes disappear.",
+    "reason": "Template stub removed. The temperament page now says the dog wants company, without a disease list."
   },
   {
     "page": "guides/labrador-retriever-grooming-guide.html",
@@ -254,8 +254,8 @@
   {
     "page": "guides/how-big-do-labrador-retrievers-get.html",
     "original": "Labrador Retrievers should receive breed-specific screening for hip dysplasia starting at 1-2 years of age, as large breeds develop structural issues early",
-    "replacement": "Height is mostly set by 1 year, while chest and thigh often keep filling until 2 years.",
-    "reason": "Main's screening-age sentence removed. The replacement is on the page and keeps the original numbers without stating that false schedule."
+    "reason": "false screening schedule",
+    "drop": true
   },
   {
     "page": "guides/labrador-retriever-grooming-guide.html",
@@ -272,8 +272,8 @@
   {
     "page": "guides/golden-retriever-temperament.html",
     "original": "The friendly temperament does not cancel the cancer risk or hip dysplasia.",
-    "replacement": "The friendly temperament still comes with a cancer risk and with hip dysplasia.",
-    "reason": "Punch line removed. The page states the cancer risk and hip dysplasia in plain words."
+    "replacement": "The friendly temperament still needs a clear end to the retrieve.",
+    "reason": "Punch line removed. The page keeps the retrieve, without assigning cancer to the temperament."
   },
   {
     "page": "guides/golden-retriever-temperament.html",
@@ -292,5 +292,33 @@
     "original": "What are the most important considerations for beagle?",
     "replacement": "What are the most important considerations for Beagles?",
     "reason": "The FAQ heading now uses the breed plural, and the structured data uses the same question."
+  },
+  {
+    "page": "guides/labrador-retriever-health-issues.html",
+    "original": "10-13 yrs",
+    "replacement": "11-14 yrs",
+    "correct": true,
+    "reason": "AKC lists the Labrador Retriever lifespan as 11-14 years. The card and intro no longer say 10-13."
+  },
+  {
+    "page": "guides/labrador-retriever-grooming-guide.html",
+    "original": "10-13 yrs",
+    "replacement": "11-14 yrs",
+    "correct": true,
+    "reason": "AKC lists the Labrador Retriever lifespan as 11-14 years. The card and intro no longer say 10-13."
+  },
+  {
+    "page": "guides/labrador-retriever-temperament.html",
+    "original": "10-13 yrs",
+    "replacement": "11-14 yrs",
+    "correct": true,
+    "reason": "AKC lists the Labrador Retriever lifespan as 11-14 years. The card and intro no longer say 10-13."
+  },
+  {
+    "page": "guides/how-big-do-labrador-retrievers-get.html",
+    "original": "10-13 yrs",
+    "replacement": "11-14 yrs",
+    "correct": true,
+    "reason": "AKC lists the Labrador Retriever lifespan as 11-14 years. The card and intro no longer say 10-13."
   }
 ]
