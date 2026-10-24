@@ -24,17 +24,23 @@
  * replacement is on the page and carries the same numbers. The original
  * wording does not have to remain. An inaccurate fact can instead be
  * dropped with {"page","original","drop":true,"reason"}. A drop is
- * allowed only when the original matches main's breed-screening
- * template ("should receive breed-specific screening for … starting
- * at N-N years"), the reason says the fact was wrong, and the page's
- * new text does not carry the original numbers. Sentences without
- * numbers cannot be dropped. The file may hold at most the listed
- * number of drops. Numbers that appear only in a dropped sentence
- * are not required on the page. An unpinned drop fails.
+ * allowed only for one of the 15 pinned page-and-sentence pairs:
+ * the breed-screening template ("should receive breed-specific
+ * screening for … starting at N-N years") on the Beagle, French
+ * Bulldog, Golden Retriever, and Labrador guide that already lists
+ * it. The reason must say the fact was wrong, and the page's new
+ * text must not carry the original numbers. Moving a listed sentence
+ * onto another page fails. Sentences without numbers cannot be
+ * dropped. The file may hold at most the listed number of drops.
+ * Numbers that appear only in a dropped sentence are not required
+ * on the page. An unpinned drop fails.
  * A Labrador lifespan card or intro may use a number-correction row,
- * {"correct":true,"original":"10-13 yrs","replacement":"11-14 yrs"}.
- * That is the only allowed correction. The old span must leave the
- * page and the new span must appear. Other number swaps fail.
+ * {"correct":true,"original":"10-13 yrs","replacement":"11-14 yrs"},
+ * and only on the four Labrador guides (health, grooming,
+ * temperament, and how-big). That is the only allowed correction.
+ * The old span must leave the page and the new span must appear.
+ * The same row on any other page, including adopt-a-akita, fails.
+ * Other number swaps fail.
  *
  * Replacements are compared with each other as well. Each replacement is
  * split on period, question mark, exclamation mark, and semicolon. After
@@ -75,13 +81,46 @@ import path from "path";
 import { assertChrome, assertWhyQuestions, runChromeFixtures } from "./chrome-main.mjs";
 import { hrefSatisfied, resolveOriginBase } from "./origin-base.mjs";
 
-const REPLACEMENTS_SHA256 = "643d298c9dfa1ae719516aeb143b601a498d701ac61b93afcf1fa86132f05e40";
+const REPLACEMENTS_SHA256 = "384e0324e30e7c29c6356231dea45f09ae3b85d63a6ecfba40514cd4789003f5";
 const MAX_DROPS = 15;
 const MAX_CORRECTIONS = 4;
 const LAB_LIFE_FROM = "10-13 yrs";
 const LAB_LIFE_TO = "11-14 yrs";
 const SCREENING_DROP =
   /^(?:Beagles|French Bulldogs|Golden Retrievers|Labrador Retrievers) should receive breed-specific screening for .+ starting at \d+-\d+ years of age/;
+const LAB_LIFE_PAGES = new Set([
+  "guides/labrador-retriever-health-issues.html",
+  "guides/labrador-retriever-grooming-guide.html",
+  "guides/labrador-retriever-temperament.html",
+  "guides/how-big-do-labrador-retrievers-get.html",
+]);
+const BEAGLE_SCREEN =
+  "Beagles should receive breed-specific screening for epilepsy starting at 3-5 years of age or earlier if symptoms appear";
+const FRENCH_SCREEN =
+  "French Bulldogs should receive breed-specific screening for brachycephalic syndrome starting at 3-5 years of age or earlier if symptoms appear";
+const GOLDEN_SCREEN =
+  "Golden Retrievers should receive breed-specific screening for cancer starting at 1-2 years of age, as large breeds develop structural issues early";
+const LAB_SCREEN =
+  "Labrador Retrievers should receive breed-specific screening for hip dysplasia starting at 1-2 years of age, as large breeds develop structural issues early";
+const DROP_PAIRS = new Set(
+  [
+    ["guides/beagle-health-issues.html", BEAGLE_SCREEN],
+    ["guides/beagle-grooming-guide.html", BEAGLE_SCREEN],
+    ["guides/beagle-temperament.html", BEAGLE_SCREEN],
+    ["guides/how-big-do-beagles-get.html", BEAGLE_SCREEN],
+    ["guides/french-bulldog-health-issues.html", FRENCH_SCREEN],
+    ["guides/french-bulldog-grooming-guide.html", FRENCH_SCREEN],
+    ["guides/french-bulldog-temperament.html", FRENCH_SCREEN],
+    ["guides/how-big-do-french-bulldogs-get.html", FRENCH_SCREEN],
+    ["guides/golden-retriever-health-issues.html", GOLDEN_SCREEN],
+    ["guides/golden-retriever-grooming-guide.html", GOLDEN_SCREEN],
+    ["guides/golden-retriever-temperament.html", GOLDEN_SCREEN],
+    ["guides/how-big-do-golden-retrievers-get.html", GOLDEN_SCREEN],
+    ["guides/labrador-retriever-grooming-guide.html", LAB_SCREEN],
+    ["guides/labrador-retriever-temperament.html", LAB_SCREEN],
+    ["guides/how-big-do-labrador-retrievers-get.html", LAB_SCREEN],
+  ].map(([page, original]) => `${page}\n${normSentence(original)}`),
+);
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 4;
@@ -700,6 +739,8 @@ export function dropRowAccepted(row) {
   if (row.replacement !== undefined || row.correct === true) return false;
   if (!inaccurateReason(row.reason)) return false;
   if (!screeningDropOriginal(row.original)) return false;
+  const key = `${row.page}\n${normSentence(String(row.original || ""))}`;
+  if (!DROP_PAIRS.has(key)) return false;
   return true;
 }
 
@@ -712,6 +753,7 @@ export function dropRosterWithinCap(rows, cap = MAX_DROPS) {
 
 export function labLifespanCorrection(row) {
   if (!row || row.correct !== true || row.drop === true) return false;
+  if (!LAB_LIFE_PAGES.has(row.page)) return false;
   const original = String(row.original || "").replace(/\s+/g, " ").trim();
   const replacement = String(row.replacement || "").replace(/\s+/g, " ").trim();
   return original === LAB_LIFE_FROM && replacement === LAB_LIFE_TO && numericValues(original).size > 0;
@@ -756,7 +798,7 @@ function loadReplacementRows(raw) {
     }
     if (row.drop === true) {
       if (!dropRowAccepted(row)) {
-        console.error(`preservation drop is not the screening-age template (${row.page})`);
+        console.error(`preservation drop is not a pinned screening page-and-sentence pair (${row.page})`);
         process.exit(1);
       }
     } else if (row.drop !== undefined) {
@@ -1684,6 +1726,9 @@ function dropFixtures() {
   if (screeningDropOriginal(hip)) failures.push("fixture treated the hip sentence as a screening template");
   if (dropRowAccepted(hipDrop)) failures.push("drop of an accurate sentence with no numbers did not fail");
   if (!dropRowAccepted(row)) failures.push("screening-template drop was rejected");
+  const movedDrop = { ...row, page: "guides/labrador-retriever-apartment-living.html" };
+  if (dropRowAccepted(movedDrop)) failures.push("screening drop moved to another page did not fail");
+  if (DROP_PAIRS.size !== MAX_DROPS) failures.push("pinned drop list is not the listed count");
   const listed = Array.from({ length: MAX_DROPS }, () => row);
   if (!dropRosterWithinCap(listed)) failures.push("drop cap rejected the listed count");
   if (dropRosterWithinCap([...listed, row])) failures.push("drop over the listed cap did not fail");
@@ -1695,6 +1740,9 @@ function dropFixtures() {
     reason: "AKC lists the Labrador Retriever lifespan as 11-14 years.",
   };
   if (!labLifespanCorrection(life)) failures.push("Labrador 10-13 to 11-14 correction was rejected");
+  if (labLifespanCorrection({ ...life, page: "guides/adopt-a-akita.html" })) {
+    failures.push("lifespan correction on adopt-a-akita did not fail");
+  }
   if (labLifespanCorrection({ correct: true, original: hip, replacement: LAB_LIFE_TO })) {
     failures.push("lifespan correction accepted a sentence with no numbers");
   }
@@ -1732,7 +1780,7 @@ if (dropFixture.length) {
   for (const line of dropFixture) console.error(line);
   process.exit(1);
 }
-console.error("preservation drop fixtures ok (unpinned drop, non-numeric fact, lifespan correction)");
+console.error("preservation drop fixtures ok (unpinned drop, non-numeric fact, lifespan correction, pinned pages)");
 
 const { out, missing } = pairs();
 if (!out.length) {

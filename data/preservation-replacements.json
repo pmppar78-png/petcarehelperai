@@ -18,6 +18,12 @@
     "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
   },
   {
+    "page": "guides/labrador-retriever-health-issues.html",
+    "original": "The Labrador Retriever's reputation in the sporting group reflects generations of purposeful breeding, resulting in a large dog with predictable but nuanced care requirements.",
+    "replacement": "Weighing 55-80 lbs, with a lifespan of 11-14 yrs, a Labrador Retriever needs the hips kept lean and the food cup measured across those years.",
+    "reason": "Empty sporting-group filler removed. The page keeps the weight and the 11-14 yr lifespan in one plain sentence about the hips and the food cup."
+  },
+  {
     "page": "guides/labrador-retriever-temperament.html",
     "original": "Labrador Retrievers bring a large build, a heavy shedding pattern, and breed-specific health risk around hip dysplasia and elbow dysplasia — each of those shifts routine care in a different direction.",
     "replacement": "A Labrador wants a person nearby, and an empty afternoon is when the shoes disappear.",
