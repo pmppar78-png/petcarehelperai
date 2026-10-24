@@ -4,41 +4,5 @@
     "original": "This is a reference site, not a veterinary practice",
     "replacement": "This site helps owners prepare questions. Examination, diagnosis, and treatment happen at a veterinary practice.",
     "reason": "Tic restored so preservation would keep the sentence. The following sentence still says the site cannot examine, diagnose, or treat."
-  },
-  {
-    "page": "guides/australian-shepherd-vs-miniature-american-shepherd.html",
-    "original": "Australian Shepherd vs Miniature American Shepherd: Breed Comparison the decision between and Miniature American Shepherd comes down to your daily schedule, living space, and experience level",
-    "replacement": "fits a tighter floor plan",
-    "reason": "The origin sentence leaves the Australian Shepherd name blank. The new sentence names both shepherds."
-  },
-  {
-    "page": "guides/bernese-mountain-dog-vs-st-bernard.html",
-    "original": "Bernard: Breed Comparison the decision between and St Bernard comes down to your daily schedule, living space, and experience level",
-    "replacement": "drools through a still larger body",
-    "reason": "The origin sentence is split on the St. abbreviation and leaves the Bernese name blank."
-  },
-  {
-    "page": "guides/french-bulldog-vs-pug.html",
-    "original": "French Bulldog vs Pug: Breed Comparison the decision between and Pug comes down to your daily schedule, living space, and experience level",
-    "replacement": "deeper facial folds to check",
-    "reason": "Pug is too short to mask, so the blank-name sentence was unique. The new sentence names both dogs."
-  },
-  {
-    "page": "guides/great-dane-vs-english-mastiff.html",
-    "original": "Great Dane vs English Mastiff: Breed Comparison the decision between and English Mastiff comes down to your daily schedule, living space, and experience level",
-    "replacement": "looser skin and more drool",
-    "reason": "English Mastiff does not mask as a breed name, so the blank-name sentence was unique."
-  },
-  {
-    "page": "guides/pug-vs-boston-terrier.html",
-    "original": "Pug vs Boston Terrier: Breed Comparison the decision between and Boston Terrier comes down to your daily schedule, living space, and experience level",
-    "replacement": "brain inflammation called NME",
-    "reason": "Pug is too short to mask, so the blank-name sentence was unique. The new sentence names both dogs."
-  },
-  {
-    "page": "guides/wet-vs-dry-cat-food-comparison.html",
-    "original": "Wet vs Dry Cat Food: Which Is Better the decision between and Dry Cat Food Comparison comes down to your daily schedule, living space, and experience level",
-    "replacement": "Label reading is the split between wet cat food",
-    "reason": "The origin sentence drops the left subject and calls the right side Dry Cat Food Comparison."
   }
 ]
