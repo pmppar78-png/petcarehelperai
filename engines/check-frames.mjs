@@ -4,13 +4,13 @@
  *
  * Breed and city names become "name" and digits become "#", using the same
  * masking as the cross-page prose check. A frame is the full masked sentence
- * (four or more words) or any five-word window that still contains a content
- * word. Function-word skeletons are counted too: "while a name", "while an
- * name", "a name while a name" (and the a/an variants), and "define/defines
- * a/an name". A sentence may start with a lowercase word. Article is read
- * first, then main, then body. An html document with none of those is an
- * error. A fragment with none of them is read whole, so the prose is not
- * dropped.
+ * (four or more words) or any three-, four-, or five-word window that still
+ * contains a content word. Function-word skeletons are counted too: "while a
+ * name", "while an name", "a name while a name" (and the a/an variants), and
+ * "define/defines a/an name". A sentence may start with a lowercase word.
+ * Article is read first, then main, then body. An html document with none of
+ * those is an error. A fragment with none of them is read whole, so the prose
+ * is not dropped.
  *
  * Only sentences that are not already on that page's origin/main copy are
  * counted. A missing origin/main baseline is a hard error.
@@ -24,7 +24,7 @@ import { originFile, resolveOriginBase } from "./origin-base.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 4;
-const FRAME = 5;
+const WIDTHS = [3, 4, 5];
 
 function walkHtml(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -159,9 +159,10 @@ export function framesOf(norm) {
   const words = norm.split(" ").filter(Boolean);
   const frames = [];
   if (words.length >= MIN_WORDS) frames.push(norm);
-  if (words.length >= FRAME) {
-    for (let i = 0; i <= words.length - FRAME; i++) {
-      const slice = words.slice(i, i + FRAME);
+  for (const width of WIDTHS) {
+    if (words.length < width) continue;
+    for (let i = 0; i <= words.length - width; i++) {
+      const slice = words.slice(i, i + width);
       if (!slice.some((word) => word !== "#" && word !== "name" && !FUNCTION_WORDS.has(word))) continue;
       frames.push(slice.join(" "));
     }
@@ -240,6 +241,12 @@ function fixtureFailures() {
     "Brush a Vizsla while a Whippet naps on the couch.",
     "Walk a Siberian Husky while a Great Dane rests near the sofa.",
   ];
+  const chooseSentences = [
+    "Owners so choose a Collie for the herding day.",
+    "Families so choose a Poodle for the clipper plan.",
+    "Handlers so choose a Boxer for the athletic week.",
+    "Clinics so choose a Vizsla for the velcro habit.",
+  ];
   const empty = "<article></article>";
   const asPages = (list, prefix, wrap = page) =>
     list.map((sentence, index) => ({
@@ -300,6 +307,13 @@ function fixtureFailures() {
   if (frameProblems(asPages(pairedSentences.slice(0, 3), "fixture-paired3")).length) {
     failures.push("fixture three a-name-while-a-name sentences failed");
   }
+  const chooseFour = frameProblems(asPages(chooseSentences, "fixture-choose"));
+  if (!chooseFour.some((item) => item.frame === "so choose a name" || item.frame === "choose a name")) {
+    failures.push("fixture so choose a name did not fail");
+  }
+  if (frameProblems(asPages(chooseSentences.slice(0, 3), "fixture-choose3")).length) {
+    failures.push("fixture three so-choose sentences failed");
+  }
   return failures;
 }
 
@@ -312,7 +326,7 @@ function main() {
     process.exit(1);
   }
   console.log(
-    "frame fixtures ok (shared slot, three pages, distinct sentences, origin exempt, lowercase start, body without article, function-word frame)",
+    "frame fixtures ok (shared slot, three pages, distinct sentences, origin exempt, lowercase start, body without article, function-word frame, so choose a name)",
   );
 
   const pages = [];
