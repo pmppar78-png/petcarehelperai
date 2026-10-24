@@ -1,13 +1,17 @@
 #!/usr/bin/env node
 /**
- * Fails when new guide body text claims first-person experience.
+ * Fails when new body text claims first-person experience or a clinic persona.
  *
  * A health page may cite a registry or a textbook. It may not say the
- * author kept, weighed, treated, measured, carried, or watched the
- * patient. Pronouns I, me, my, mine, we, our, ours, and us count, including
- * the experience verbs kept, weighed, treated, and measured. Sentences
- * already on that page's origin/main copy are exempt. Legal notices are
- * not body text. A missing origin/main baseline is a hard error.
+ * author kept, weighed, treated, measured, carried, or watched a patient.
+ * Pronouns are matched without a minimum sentence length: I, i, me, my,
+ * mine, myself, we, our, ours, ourselves, us, and let's. Persona phrases
+ * count too: this writer, this author, in this or our practice or clinic,
+ * speaking as a vet or vet tech, as a vet or vet tech, and the patient.
+ * Article is read first, then main, then body. Guides, breeds, and the
+ * other content directories are scanned. Sentences already on that page's
+ * origin/main copy are exempt. Legal notices are not body text. A missing
+ * origin/main baseline is a hard error.
  *
  * Usage: node engines/check-first-person.mjs
  */
@@ -17,17 +21,33 @@ import { fileURLToPath } from "node:url";
 import { originFile, resolveOriginBase } from "./origin-base.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+const SKIP = new Set(["node_modules", ".git", "engines", "test-results", "audit"]);
 const PRONOUN =
-  /\b(?:I|I'd|I'll|I'm|I've|[Mm]e|[Mm]y|[Mm]ine|[Ww]e(?:'re|'ve)?|[Oo]urs?|[Uu]s)\b/;
+  /\b(?:i|i'd|i'll|i'm|i've|me|my|mine|myself|we|we're|we've|our|ours|ourselves|us|let's|let’s)\b/i;
+const PERSONA =
+  /\b(?:this writer|this author|in (?:this|our) (?:practice|clinic)|speaking as a vet(?: tech)?|as a vet(?: tech)?|the patient)\b/i;
 const EXPERIENCE =
-  /\b(?:I|we|my|our)\b[^.!?]{0,80}\b(?:kept|keep|weighed|weigh|treated|treat|measured|measure|carried|carry|watched|watch|lived|live|shared|share)\b|\b(?:kept|weighed|treated|measured|carried|watched)\b[^.!?]{0,40}\b(?:I|me|my|we|our)\b/i;
+  /\b(?:i|we|my|our|myself|ourselves)\b[^.!?]{0,80}\b(?:kept|keep|weighed|weigh|treated|treat|measured|measure|carried|carry|watched|watch|lived|live|shared|share)\b|\b(?:kept|weighed|treated|measured|carried|watched)\b[^.!?]{0,40}\b(?:i|me|my|we|our|myself|ourselves)\b/i;
 
-function walkGuides(dir, out = []) {
-  if (!fs.existsSync(dir)) return out;
-  for (const name of fs.readdirSync(dir)) {
-    if (name.endsWith(".html")) out.push(path.join(dir, name));
+export function contentFiles(root) {
+  const out = [];
+  const stack = [root];
+  while (stack.length) {
+    const dir = stack.pop();
+    let entries = [];
+    try {
+      entries = fs.readdirSync(dir, { withFileTypes: true });
+    } catch {
+      continue;
+    }
+    for (const entry of entries) {
+      if (SKIP.has(entry.name)) continue;
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) stack.push(full);
+      else if (entry.name.endsWith(".html")) out.push(full);
+    }
   }
-  return out;
+  return out.sort();
 }
 
 function decode(text) {
@@ -41,13 +61,19 @@ function decode(text) {
     .replace(/&[a-z]+;/gi, " ");
 }
 
-function article(html) {
-  const match = html.match(/<article\b[\s\S]*?<\/article>/i) || html.match(/<main\b[\s\S]*?<\/main>/i);
-  return match ? match[0] : "";
+export function readableRegion(html) {
+  const article = html.match(/<article\b[\s\S]*?<\/article>/i);
+  const main = html.match(/<main\b[\s\S]*?<\/main>/i);
+  const body = html.match(/<body\b[\s\S]*?<\/body>/i);
+  if (article) return article[0];
+  if (main) return main[0];
+  if (body) return body[0];
+  if (/<html\b/i.test(html)) return "";
+  return html;
 }
 
 function bodyText(html) {
-  let text = article(html);
+  let text = readableRegion(html);
   text = text.replace(
     /<(p|div|aside|section)\b[^>]*\bclass\s*=\s*(["'])[^"']*\b(?:affiliate-disclosure|medical-disclaimer)\b[^"']*\2[^>]*>[\s\S]*?<\/\1>/gi,
     " ",
@@ -62,14 +88,14 @@ export function sentencesOf(html) {
   const kept = [];
   for (const part of text.split(/(?<=[.!?])\s+/)) {
     const key = part.replace(/^[^A-Za-z]+/, "").replace(/[.!?]+$/, "").replace(/\s+/g, " ").trim();
-    if (!key || key.split(/\s+/).length < 4) continue;
+    if (!key || !/[A-Za-z]/.test(key)) continue;
     kept.push(key);
   }
   return kept;
 }
 
 export function firstPersonHit(sentence) {
-  return PRONOUN.test(sentence) || EXPERIENCE.test(sentence);
+  return PRONOUN.test(sentence) || PERSONA.test(sentence) || EXPERIENCE.test(sentence);
 }
 
 export function newFirstPerson(currentHtml, originHtml) {
@@ -85,19 +111,29 @@ export function newFirstPerson(currentHtml, originHtml) {
 function fixtureFailures() {
   const failures = [];
   const bad = [
-    "The Beagles I have kept still bay at a rabbit in the yard today.",
-    "I weighed the puppy on the clinic scale Tuesday morning.",
-    "We treated the ear and measured the fever twice that night.",
-    "My notes from last spring still list the hip scores.",
-    "Nearly all the dogs I have weighed were near their adult pounds.",
+    ["kept", "The Beagles I have kept still bay at a rabbit in the yard today."],
+    ["weighed", "I weighed the puppy on the clinic scale Tuesday morning."],
+    ["treated", "We treated the ear and measured the fever twice that night."],
+    ["my", "My notes from last spring still list the hip scores."],
+    ["myself", "Myself, the scale read high before breakfast."],
+    ["lets", "Let's weigh the puppy before the walk."],
+    ["lowercase-i", "i think the ears look dirty this morning."],
+    ["ourselves", "Ourselves included, every dog in the ward was weighed."],
+    ["writer", "This writer has measured adult dogs for years."],
+    ["practice", "The dogs seen in this practice were mostly seniors."],
+    ["vet-tech", "Speaking as a vet tech, the ears were already infected."],
+    ["patient", "The patient was lifted for a closer look at the hips."],
+    ["short", "I weighed him."],
   ];
-  for (const sentence of bad) {
-    if (!firstPersonHit(sentence)) failures.push(`fixture missed experience claim: ${sentence}`);
+  for (const [label, sentence] of bad) {
+    if (!firstPersonHit(sentence)) failures.push(`fixture missed ${label}: ${sentence}`);
   }
   const good = [
     "AKC lists males at 24-27 in.",
     "Hip dysplasia, elbow dysplasia, and obesity belong on the screening list.",
     "The registry year line reads 11 to 14.",
+    "Be patient with a puppy who mouths sleeves.",
+    "Ask a veterinarian before the next vaccine visit.",
   ];
   for (const sentence of good) {
     if (firstPersonHit(sentence)) failures.push(`fixture flagged neutral copy: ${sentence}`);
@@ -109,6 +145,23 @@ function fixtureFailures() {
   if (!newFirstPerson(fresh, "<article><p>Older copy stays here for the clinic visit.</p></article>").length) {
     failures.push("fixture new experience claim did not fail");
   }
+  const short = `<article><p>I weighed him.</p></article>`;
+  if (!newFirstPerson(short, "<article><p>Older copy stays here.</p></article>").length) {
+    failures.push("fixture short sentence was skipped");
+  }
+  const bodyOnly = `<html><body><p>I have weighed puppies on that scale.</p></body></html>`;
+  if (!sentencesOf(bodyOnly).length) failures.push("fixture body fallback found no sentence");
+  if (!newFirstPerson(bodyOnly, "<html><body><p>Older copy stays here.</p></body></html>").length) {
+    failures.push("fixture body-only page was not scanned");
+  }
+  const outside = `<html><body><article><p>AKC lists males at 24-27 in.</p></article><p>I weighed him.</p></body></html>`;
+  if (newFirstPerson(outside, "<article><p>Different origin copy lives here.</p></article>").length) {
+    failures.push("fixture text outside article was scanned");
+  }
+  const files = contentFiles(ROOT).map((file) => file.split(path.sep).join("/"));
+  if (!files.some((file) => file.includes("/breeds/"))) failures.push("fixture walker missed breeds/");
+  if (!files.some((file) => file.includes("/guides/hero/"))) failures.push("fixture walker missed guides/hero/");
+  if (!files.some((file) => /\/guides\/[^/]+\.html$/.test(file))) failures.push("fixture walker missed guides/");
   return failures;
 }
 
@@ -119,11 +172,11 @@ function main() {
     for (const line of fixture) console.error(line);
     process.exit(1);
   }
-  console.log("first-person fixtures ok (experience claim, neutral sentence, origin exempt)");
+  console.log("first-person fixtures ok (pronouns, persona, short sentence, body fallback, content dirs)");
   const BASE = resolveOriginBase({ root: ROOT });
   const problems = [];
   let pages = 0;
-  for (const file of walkGuides(path.join(ROOT, "guides"))) {
+  for (const file of contentFiles(ROOT)) {
     const rel = path.relative(ROOT, file).split(path.sep).join("/");
     const originRel = originFile(BASE, rel);
     const originPath = path.join(BASE, originRel);
@@ -137,7 +190,7 @@ function main() {
     for (const line of problems.slice(0, 40)) console.error(line);
     process.exit(1);
   }
-  console.log(`first-person check ok (${pages} guides)`);
+  console.log(`first-person check ok (${pages} html files)`);
 }
 
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
