@@ -7,7 +7,9 @@
  * Pronouns are matched without a minimum sentence length: I, i, me, my,
  * mine, myself, we, our, ours, ourselves, us, and let's. Persona phrases
  * count too: this writer, this author, in this or our practice or clinic,
- * speaking as a vet or vet tech, as a vet or vet tech, and the patient.
+ * speaking as a vet or vet tech, as a vet or vet tech, the patient,
+ * here at the clinic, yours truly, personally, and having measured,
+ * treated, or seen.
  * Article is read first, then main, then body. Guides, breeds, and the
  * other content directories are scanned. Sentences already on that page's
  * origin/main copy are exempt. Legal notices are not body text. A missing
@@ -25,7 +27,7 @@ const SKIP = new Set(["node_modules", ".git", "engines", "test-results", "audit"
 const PRONOUN =
   /\b(?:i|i'd|i'll|i'm|i've|me|my|mine|myself|we|we're|we've|our|ours|ourselves|us|let's|let’s)\b/i;
 const PERSONA =
-  /\b(?:this writer|this author|in (?:this|our) (?:practice|clinic)|speaking as a vet(?: tech)?|as a vet(?: tech)?|the patient)\b/i;
+  /\b(?:this writer|this author|in (?:this|our) (?:practice|clinic)|speaking as a vet(?: tech)?|as a vet(?: tech)?|the patient|here at the clinic|yours truly|personally|having (?:measured|treated|seen))\b/i;
 const EXPERIENCE =
   /\b(?:i|we|my|our|myself|ourselves)\b[^.!?]{0,80}\b(?:kept|keep|weighed|weigh|treated|treat|measured|measure|carried|carry|watched|watch|lived|live|shared|share)\b|\b(?:kept|weighed|treated|measured|carried|watched)\b[^.!?]{0,40}\b(?:i|me|my|we|our|myself|ourselves)\b/i;
 
@@ -123,6 +125,12 @@ function fixtureFailures() {
     ["practice", "The dogs seen in this practice were mostly seniors."],
     ["vet-tech", "Speaking as a vet tech, the ears were already infected."],
     ["patient", "The patient was lifted for a closer look at the hips."],
+    ["clinic", "Here at the clinic the patients wait on the bench."],
+    ["yours", "Yours truly weighed the puppy before breakfast."],
+    ["personally", "Personally, the ears looked infected that morning."],
+    ["having-measured", "Having measured dozens of Labs, the hip scores were often disappointing."],
+    ["having-treated", "Having treated the ear overnight, the swelling was down by morning."],
+    ["having-seen", "Having seen the seizure, the timing was written down."],
     ["short", "I weighed him."],
   ];
   for (const [label, sentence] of bad) {
@@ -172,7 +180,7 @@ function main() {
     for (const line of fixture) console.error(line);
     process.exit(1);
   }
-  console.log("first-person fixtures ok (pronouns, persona, short sentence, body fallback, content dirs)");
+  console.log("first-person fixtures ok (pronouns, persona, clinic voice, short sentence, body fallback, content dirs)");
   const BASE = resolveOriginBase({ root: ROOT });
   const problems = [];
   let pages = 0;
