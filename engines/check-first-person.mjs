@@ -7,7 +7,8 @@
  * Pronouns are matched without a minimum sentence length: I, i, me, my,
  * mine, myself, we, our, ours, ourselves, us, and let's. Persona phrases
  * count too: this writer, this author, in this or our practice or clinic,
- * speaking as a vet or vet tech, as a vet or vet tech, the patient,
+ * speaking as a groomer, trainer, vet, or vet tech, as a groomer,
+ * trainer, vet, or vet tech, the patient,
  * here at the clinic, yours truly, personally, and having measured,
  * treated, or seen. Also speaking from experience, this vet has seen,
  * the author has, years in practice, your correspondent, the clinic
@@ -41,7 +42,7 @@ const SKIP = new Set(["node_modules", ".git", "engines", "test-results", "audit"
 const PRONOUN =
   /\b(?:i|i'd|i'll|i'm|i've|ive|im|me|my|mine|myself|we|we're|we've|our|ours|ourselves|us|let's|let’s)\b/i;
 const PERSONA =
-  /\b(?:this writer|this author|in (?:this|our) (?:practice|clinic)|speaking as a vet(?: tech)?|as a vet(?: tech)?|the patient|here at the clinic|yours truly|personally|having (?:measured|treated|seen)|speaking from experience|this vet has seen|the author has|years in practice|your correspondent|the clinic team here|the staff at this practice|this reviewer|take it from a groomer|the present author|(?:this|our) (?:clinic|practice|hospital|vet|groomer)|folks at this|the undersigned|humble writer|grooming table|at the (?:practice|clinic|hospital)|vet who has seen|speaking for the practice)\b/i;
+  /\b(?:this writer|this author|in (?:this|our) (?:practice|clinic)|speaking as a (?:groomer|trainer|vet(?: tech)?)|as a (?:groomer|trainer|vet(?: tech)?)|the patient|here at the clinic|yours truly|personally|having (?:measured|treated|seen)|speaking from experience|this vet has seen|the author has|years in practice|your correspondent|the clinic team here|the staff at this practice|this reviewer|take it from a groomer|the present author|(?:this|our) (?:clinic|practice|hospital|vet|groomer)|folks at this|the undersigned|humble writer|grooming table|at the (?:practice|clinic|hospital)|vet who has seen|speaking for the practice)\b/i;
 const EXPERIENCE =
   /\b(?:i|we|my|our|myself|ourselves)\b[^.!?]{0,80}\b(?:kept|keep|weighed|weigh|treated|treat|measured|measure|carried|carry|watched|watch|lived|live|shared|share)\b|\b(?:kept|weighed|treated|measured|carried|watched)\b[^.!?]{0,40}\b(?:i|me|my|we|our|myself|ourselves)\b/i;
 const ANECDOTE =
@@ -140,6 +141,9 @@ function fixtureFailures() {
     ["writer", "This writer has measured adult dogs for years."],
     ["practice", "The dogs seen in this practice were mostly seniors."],
     ["vet-tech", "Speaking as a vet tech, the ears were already infected."],
+    ["groomer-opener", "Speaking as a groomer, clippers ruin this coat."],
+    ["trainer-opener", "Speaking as a trainer, the sit stayed sloppy."],
+    ["as-groomer", "As a groomer, clippers ruin this coat."],
     ["patient", "The patient was lifted for a closer look at the hips."],
     ["clinic", "Here at the clinic the patients wait on the bench."],
     ["yours", "Yours truly weighed the puppy before breakfast."],

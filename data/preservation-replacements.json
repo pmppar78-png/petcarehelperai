@@ -38,7 +38,7 @@
   {
     "page": "guides/how-big-do-labrador-retrievers-get.html",
     "original": "Labrador Retrievers are a large breed, reaching 55-80 lbs at full maturity.",
-    "replacement": "Full-grown Labradors run from 55 lb to 80 lb, and staying lean matters if hip dysplasia or elbow dysplasia appears.",
+    "replacement": "Full-grown Labradors run 55 through 80 lb, and staying lean matters if hip dysplasia or elbow dysplasia appears.",
     "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
   },
   {
@@ -86,19 +86,19 @@
   {
     "page": "guides/french-bulldog-grooming-guide.html",
     "original": "French Bulldogs bring a small build, a moderate shedding pattern, and breed-specific health risk around brachycephalic syndrome and spinal disorders — each of those shifts routine care in a different direction.",
-    "replacement": "Dry the facial folds and the tail pocket after meals so those creases stay dry.",
+    "replacement": "Dry the facial folds and the tail pocket after meals, because moisture and debris in those creases lead to skin-fold dermatitis.",
     "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
   },
   {
     "page": "guides/how-big-do-french-bulldogs-get.html",
     "original": "French Bulldogs sit in the small-size category, shed at a moderate level, and carry documented risk for brachycephalic syndrome and spinal disorders — those three factors drive most of the daily-care decisions.",
-    "replacement": "Adult French Bulldogs weigh 16 lb at the light end and 28 lb at the cap.",
+    "replacement": "The adult weight published by AKC stays under 28 lb, with lighter adults near 16 lb.",
     "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
   },
   {
     "page": "guides/how-big-do-french-bulldogs-get.html",
     "original": "French Bulldogs are a small breed, reaching 16-28 lbs at full maturity.",
-    "replacement": "Adult French Bulldogs weigh 16 lb at the light end and 28 lb at the cap.",
+    "replacement": "The adult weight published by AKC stays under 28 lb, with lighter adults near 16 lb.",
     "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
   },
   {
@@ -128,7 +128,7 @@
   {
     "page": "guides/how-big-do-golden-retrievers-get.html",
     "original": "Golden Retrievers are a large breed, reaching 55-75 lbs at full maturity.",
-    "replacement": "Females are 55-65 lb. Males are 65-75 lb.",
+    "replacement": "A female weighs 55 to 65 lb. A male weighs 65 to 75 lb.",
     "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
   },
   {
@@ -158,13 +158,13 @@
   {
     "page": "guides/how-big-do-golden-retrievers-get.html",
     "original": "Plan Golden Retrievers care around a large body size, heavy shedding, and the breed's documented predisposition toward cancer and hip dysplasia.",
-    "replacement": "Females are 55-65 lb. Males are 65-75 lb.",
+    "replacement": "A female weighs 55 to 65 lb. A male weighs 65 to 75 lb.",
     "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
   },
   {
     "page": "guides/how-big-do-labrador-retrievers-get.html",
     "original": "Plan Labrador Retrievers care around a large body size, heavy shedding, and the breed's documented predisposition toward hip dysplasia and elbow dysplasia.",
-    "replacement": "Full-grown Labradors run from 55 lb to 80 lb, and staying lean matters if hip dysplasia or elbow dysplasia appears.",
+    "replacement": "Full-grown Labradors run 55 through 80 lb, and staying lean matters if hip dysplasia or elbow dysplasia appears.",
     "reason": "Template stub removed. One plain sentence on the page now names the diseases, size, or shedding that the original listed."
   },
   {
@@ -498,13 +498,43 @@
   {
     "page": "guides/how-big-do-french-bulldogs-get.html",
     "original": "French Bulldogs are 16 to 28 pounds and reach that weight early.",
-    "replacement": "Adult French Bulldogs weigh 16 lb at the light end and 28 lb at the cap.",
+    "replacement": "The adult weight published by AKC stays under 28 lb, with lighter adults near 16 lb.",
     "reason": "The 16 to 28 pound range was already in the cap sentence. This row keeps those numbers there and drops the repeat."
   },
   {
     "page": "guides/how-big-do-labrador-retrievers-get.html",
     "original": "Labradors are 55 to 80 pounds and famous for clearing the bowl.",
-    "replacement": "Full-grown Labradors run from 55 lb to 80 lb, and staying lean matters if hip dysplasia or elbow dysplasia appears.",
+    "replacement": "Full-grown Labradors run 55 through 80 lb, and staying lean matters if hip dysplasia or elbow dysplasia appears.",
     "reason": "The 55 to 80 pound range was already in the lean-weight sentence. This row keeps those numbers there and drops the repeat."
+  },
+  {
+    "page": "guides/french-bulldog-grooming-guide.html",
+    "original": "French Bulldogs have moderate shedding and require 2–3 times per week brushing",
+    "replacement": "French Bulldogs shed moderately and need brushing 2–3 times a week.",
+    "reason": "The origin cadence was ungrammatical. Moderate shedding and brushing 2–3 times a week stay in the mitt paragraph."
+  },
+  {
+    "page": "guides/how-big-do-french-bulldogs-get.html",
+    "original": "Keep the ribs feelable",
+    "replacement": "Measure at the withers, the highest point of the shoulder, with the dog standing square and the tape perpendicular to the floor.",
+    "reason": "The rib sentence was one of three repeats. Height is measured once, at the withers."
+  },
+  {
+    "page": "guides/how-big-do-french-bulldogs-get.html",
+    "original": "Fit a harness to the adult chest",
+    "replacement": "Measure at the withers, the highest point of the shoulder, with the dog standing square and the tape perpendicular to the floor.",
+    "reason": "The harness sentence was one of three repeats. Height is measured once, at the withers."
+  },
+  {
+    "page": "guides/how-big-do-golden-retrievers-get.html",
+    "original": "Golden Retrievers are commonly 55 to 75 pounds and will eat past a healthy stop",
+    "replacement": "A female weighs 55 to 65 lb. A male weighs 65 to 75 lb.",
+    "reason": "The combined 55 to 75 pound line repeated the sex-specific weights. Those weights stay in the male and female sentences."
+  },
+  {
+    "page": "guides/how-big-do-labrador-retrievers-get.html",
+    "original": "Most are near adult height by 14 months and can get heavier after that if the cup stays at a puppy level",
+    "replacement": "Most of the height is in by 12 months, and most are near adult height by 14 months and can get heavier after that if the cup stays at a puppy level.",
+    "reason": "Height by 12 months and near adult height by 14 months are one timeline, not two competing claims."
   }
 ]

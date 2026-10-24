@@ -32,10 +32,17 @@
  * must not carry a digit from that dropped sentence. A digit the
  * origin page also states elsewhere still fails in a new sentence,
  * because small ages such as 1, 2, 3, and 5 show up in tables and
- * other facts. The one exception is the exact sentence "Brush a
- * Beagle's short coat 2–3 times a week, and check the long ears in
- * the same session." on guides/beagle-grooming-guide.html. A
- * near-miss, or that sentence on another page, still fails. Moving a listed
+ * other facts. Text is NFKC-normalized and the number words one
+ * through twenty-four are read as digits before that comparison.
+ * On a drop, any new sentence that says "screen" (any form) together
+ * with an age in years or months fails even when those digits were
+ * not in the dropped sentence. Two sentences are exempt, and only
+ * as an exact match on one page: "Brush a Beagle's short coat 2–3
+ * times a week, and check the long ears in the same session." on
+ * guides/beagle-grooming-guide.html, and "French Bulldogs shed
+ * moderately and need brushing 2–3 times a week." on
+ * guides/french-bulldog-grooming-guide.html. A near-miss, or either
+ * sentence on another page, still fails. Moving a listed
  * sentence onto another page fails. Sentences without numbers cannot
  * be dropped. The file may hold at most the listed number of drops.
  * Numbers that appear only in a dropped sentence are not required
@@ -87,7 +94,7 @@ import path from "path";
 import { assertChrome, assertWhyQuestions, runChromeFixtures } from "./chrome-main.mjs";
 import { hrefSatisfied, resolveOriginBase } from "./origin-base.mjs";
 
-const REPLACEMENTS_SHA256 = "e7de17e29f736ef6707195aa66ed252e6e11925bfcab25137a7accc349cfc893";
+const REPLACEMENTS_SHA256 = "76280be2582373df10f12d79733847bd0aca49632d9437709ba72796061aaef1";
 const MAX_DROPS = 15;
 const MAX_CORRECTIONS = 4;
 const LAB_LIFE_FROM = "10-13 yrs";
@@ -97,6 +104,35 @@ const SCREENING_DROP =
 const BEAGLE_BRUSH_PAGE = "guides/beagle-grooming-guide.html";
 const BEAGLE_BRUSH_SENTENCE =
   "Brush a Beagle's short coat 2–3 times a week, and check the long ears in the same session.";
+const FRENCH_BRUSH_PAGE = "guides/french-bulldog-grooming-guide.html";
+const FRENCH_BRUSH_SENTENCE =
+  "French Bulldogs shed moderately and need brushing 2–3 times a week.";
+const NUMBER_WORDS = [
+  ["twenty-four", "24"],
+  ["twenty-three", "23"],
+  ["twenty-two", "22"],
+  ["twenty-one", "21"],
+  ["twenty", "20"],
+  ["nineteen", "19"],
+  ["eighteen", "18"],
+  ["seventeen", "17"],
+  ["sixteen", "16"],
+  ["fifteen", "15"],
+  ["fourteen", "14"],
+  ["thirteen", "13"],
+  ["twelve", "12"],
+  ["eleven", "11"],
+  ["ten", "10"],
+  ["nine", "9"],
+  ["eight", "8"],
+  ["seven", "7"],
+  ["six", "6"],
+  ["five", "5"],
+  ["four", "4"],
+  ["three", "3"],
+  ["two", "2"],
+  ["one", "1"],
+];
 const LAB_LIFE_PAGES = new Set([
   "guides/labrador-retriever-health-issues.html",
   "guides/labrador-retriever-grooming-guide.html",
@@ -868,15 +904,34 @@ function sameFacts(original, replacement) {
   return [...numericValues(original)].every((num) => have.has(num));
 }
 
+function foldNumericWords(text) {
+  let folded = String(text).normalize("NFKC");
+  for (const [word, digit] of NUMBER_WORDS) {
+    folded = folded.replace(new RegExp(`\\b${word}\\b`, "gi"), digit);
+  }
+  return folded;
+}
+
+function hasScreenAge(sentence) {
+  const folded = foldNumericWords(sentence);
+  if (!/\bscreen/i.test(folded)) return false;
+  return /\b\d+(?:\.\d+)?(?:\s*(?:-|–|—|to|through|or)\s*\d+(?:\.\d+)?)?\s*(?:years?|months?)\b/i.test(
+    folded,
+  );
+}
+
 export function newTextCarriesNumbers(original, originHtml, currentHtml, page) {
-  const old = numericValues(original);
+  const old = numericValues(foldNumericWords(original));
   if (!old.size) return false;
   const originKeys = new Set(sentencesOf(originHtml).map(normSentence));
-  const allowed = page === BEAGLE_BRUSH_PAGE ? normSentence(BEAGLE_BRUSH_SENTENCE) : "";
+  const allowed = new Set();
+  if (page === BEAGLE_BRUSH_PAGE) allowed.add(normSentence(BEAGLE_BRUSH_SENTENCE));
+  if (page === FRENCH_BRUSH_PAGE) allowed.add(normSentence(FRENCH_BRUSH_SENTENCE));
   for (const sentence of sentencesOf(currentHtml)) {
     const key = normSentence(sentence);
-    if (originKeys.has(key) || (allowed && key === allowed)) continue;
-    const have = numericValues(sentence);
+    if (originKeys.has(key) || allowed.has(key)) continue;
+    if (hasScreenAge(sentence)) return true;
+    const have = numericValues(foldNumericWords(sentence));
     for (const num of old) if (have.has(num)) return true;
   }
   return false;
@@ -1011,6 +1066,17 @@ function assertReplacementVariety() {
         problems.push(
           `${a.page} and ${b.page} replacements are near-duplicates (${sim.toFixed(2)})`,
         );
+        continue;
+      }
+      const brushPair = new Set([
+        normSentence(BEAGLE_BRUSH_SENTENCE),
+        normSentence(FRENCH_BRUSH_SENTENCE),
+      ]);
+      if (
+        brushPair.has(normSentence(a.sentence)) &&
+        brushPair.has(normSentence(b.sentence)) &&
+        normSentence(a.sentence) !== normSentence(b.sentence)
+      ) {
         continue;
       }
       for (const gram of a.grams4) {
@@ -1732,6 +1798,24 @@ function dropFixtures() {
   if (!newTextCarriesNumbers(screening, origin, brushing, "guides/beagle-health-issues.html")) {
     failures.push("Beagle brushing sentence was exempt on another page");
   }
+  const frenchOrigin = `<article><p>${FRENCH_SCREEN}.</p><p>Check the folds at 3 months and again at 5.</p></article>`;
+  const frenchBrush = `<article><p>${FRENCH_BRUSH_SENTENCE}</p><p>Check the folds at 3 months and again at 5.</p></article>`;
+  if (newTextCarriesNumbers(FRENCH_SCREEN, frenchOrigin, frenchBrush, FRENCH_BRUSH_PAGE)) {
+    failures.push("pinned French brushing sentence was treated as the screening ages");
+  }
+  const frenchNear = `<article><p>French Bulldogs shed moderately and need brushing 2-3 times a week.</p><p>Check the folds at 3 months and again at 5.</p></article>`;
+  if (!newTextCarriesNumbers(FRENCH_SCREEN, frenchOrigin, frenchNear, FRENCH_BRUSH_PAGE)) {
+    failures.push("near-miss French brushing sentence was exempt");
+  }
+  if (!newTextCarriesNumbers(FRENCH_SCREEN, frenchOrigin, frenchBrush, "guides/french-bulldog-health-issues.html")) {
+    failures.push("French brushing sentence was exempt on another page");
+  }
+  const gradeLine =
+    "The Kennel Club and the University of Cambridge grade brachycephalic obstructive airway syndrome from about 12 months, before breeding.";
+  const graded = `<article><p>${gradeLine}</p><p>Check the folds at 3 months and again at 5.</p></article>`;
+  if (newTextCarriesNumbers(FRENCH_SCREEN, frenchOrigin, graded, "guides/french-bulldog-health-issues.html")) {
+    failures.push("BOAS grade sentence was treated as a screening age");
+  }
   const onlyFive = `<article><p>Start the screening when the hound turns 5.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
   if (!newTextCarriesNumbers(screening, origin, onlyFive)) {
     failures.push("a new sentence with a dropped digit did not fail");
@@ -1772,6 +1856,30 @@ function dropFixtures() {
       FRENCH_SCREEN,
       `<article><p>${FRENCH_SCREEN}.</p><p>Check the folds at 3 months and again at 5.</p></article>`,
       `<article><p>French Bulldogs should be screened for brachycephalic syndrome at 3 years.</p><p>Check the folds at 3 months and again at 5.</p></article>`,
+    ],
+    [
+      "guides/labrador-retriever-temperament.html",
+      LAB_SCREEN,
+      `<article><p>${LAB_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Labrador Retrievers should be screened for hip dysplasia at one to two years of age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/golden-retriever-health-issues.html",
+      GOLDEN_SCREEN,
+      `<article><p>${GOLDEN_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Golden Retrievers should be screened for cancer starting at 12 to 24 months of age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/beagle-health-issues.html",
+      screening,
+      origin,
+      `<article><p>Beagles should be screened for epilepsy starting at three to five years of age.</p><p>Puppy visits are every 3-4 weeks.</p></article>`,
+    ],
+    [
+      "guides/beagle-grooming-guide.html",
+      screening,
+      origin,
+      `<article><p>Beagles should be screened for epilepsy starting at ３-５ years of age.</p><p>Puppy visits are every 3-4 weeks.</p></article>`,
     ],
   ];
   for (const [page, dropped, originHtml, currentHtml] of attacks) {
