@@ -215,6 +215,7 @@ function fieldTokens(origin, current, label, problems) {
 
 function expectedHeading(head, rows) {
   for (const row of rows) {
+    if (row.drop === true || !row.replacement) continue;
     if (norm(row.original) === norm(head.text)) return row.replacement;
   }
   return head.text;

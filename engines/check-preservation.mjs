@@ -22,7 +22,13 @@
  * present. A flawed origin sentence listed in
  * data/preservation-replacements.json passes only when its reviewed
  * replacement is on the page and carries the same numbers. The original
- * wording does not have to remain.
+ * wording does not have to remain. An inaccurate fact can instead be
+ * dropped with {"page","original","drop":true,"reason"}. The reason
+ * has to say the fact was wrong, for example "false screening schedule".
+ * A drop is valid only when the page's new text does not carry the
+ * original numbers. Numbers that appear only in that dropped sentence
+ * are not required on the page. An unpinned drop, or a drop of a fact
+ * the new text still states, fails.
  *
  * Replacements are compared with each other as well. Each replacement is
  * split on period, question mark, exclamation mark, and semicolon. After
@@ -63,7 +69,7 @@ import path from "path";
 import { assertChrome, assertWhyQuestions, runChromeFixtures } from "./chrome-main.mjs";
 import { hrefSatisfied, resolveOriginBase } from "./origin-base.mjs";
 
-const REPLACEMENTS_SHA256 = "34d888d3472d58e19ec005034a074950887f0f6be5d9af886a4039224c7d4387";
+const REPLACEMENTS_SHA256 = "bf5dbfc856f4b7014d38192ed603beacdad4236216be5a6be9cd7e0aa0207196";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const MIN_WORDS = 4;
@@ -668,16 +674,11 @@ function normSentence(text) {
   return text.toLowerCase().replace(/[.!?]+$/g, "").replace(/\s+/g, " ").trim();
 }
 
-function loadReplacements() {
-  const file = path.join(ROOT, "data/preservation-replacements.json");
-  const raw = fs.readFileSync(file);
-  const digest = crypto.createHash("sha256").update(raw).digest("hex");
-  if (digest !== REPLACEMENTS_SHA256) {
-    console.error("preservation replacements changed without review");
-    console.error(`sha256 ${digest}`);
-    console.error(`pin    ${REPLACEMENTS_SHA256}`);
-    process.exit(1);
-  }
+function inaccurateReason(reason) {
+  return typeof reason === "string" && /\b(?:false|inaccurate|incorrect|wrong)\b/i.test(reason);
+}
+
+function loadReplacementRows(raw) {
   const rows = JSON.parse(raw.toString("utf8"));
   if (!Array.isArray(rows) || !rows.length) {
     console.error("preservation replacements must be a non-empty array");
@@ -685,14 +686,36 @@ function loadReplacements() {
   }
   const map = new Map();
   for (const row of rows) {
-    for (const field of ["page", "original", "replacement", "reason"]) {
-      if (!row[field] || typeof row[field] !== "string" || !row[field].trim()) {
-        console.error(`preservation replacement missing ${field}`);
-        process.exit(1);
-      }
+    if (!row.page || typeof row.page !== "string" || !row.page.trim()) {
+      console.error("preservation replacement missing page");
+      process.exit(1);
+    }
+    if (!row.original || typeof row.original !== "string" || !row.original.trim()) {
+      console.error(`preservation replacement missing original (${row.page})`);
+      process.exit(1);
+    }
+    if (!row.reason || typeof row.reason !== "string" || !row.reason.trim()) {
+      console.error(`preservation replacement missing reason (${row.page})`);
+      process.exit(1);
     }
     if (row.kind !== undefined) {
       console.error(`preservation replacement rows cannot exempt headings (${row.page})`);
+      process.exit(1);
+    }
+    if (row.drop === true) {
+      if (row.replacement !== undefined) {
+        console.error(`preservation drop cannot also name a replacement (${row.page})`);
+        process.exit(1);
+      }
+      if (!inaccurateReason(row.reason)) {
+        console.error(`preservation drop reason does not say the fact was wrong (${row.page})`);
+        process.exit(1);
+      }
+    } else if (row.drop !== undefined) {
+      console.error(`preservation drop must be true (${row.page})`);
+      process.exit(1);
+    } else if (!row.replacement || typeof row.replacement !== "string" || !row.replacement.trim()) {
+      console.error(`preservation replacement missing replacement (${row.page})`);
       process.exit(1);
     }
     const key = `${row.page}\n${normSentence(row.original)}`;
@@ -703,6 +726,19 @@ function loadReplacements() {
     map.set(key, row);
   }
   return map;
+}
+
+function loadReplacements() {
+  const file = path.join(ROOT, "data/preservation-replacements.json");
+  const raw = fs.readFileSync(file);
+  const digest = crypto.createHash("sha256").update(raw).digest("hex");
+  if (digest !== REPLACEMENTS_SHA256) {
+    console.error("preservation replacements changed without review");
+    console.error(`sha256 ${digest}`);
+    console.error(`pin    ${REPLACEMENTS_SHA256}`);
+    process.exit(1);
+  }
+  return loadReplacementRows(raw);
 }
 
 const REPLACEMENTS = loadReplacements();
@@ -716,12 +752,52 @@ function sameFacts(original, replacement) {
   return [...numericValues(original)].every((num) => have.has(num));
 }
 
+export function newTextCarriesNumbers(original, originHtml, currentHtml) {
+  const old = numericValues(original);
+  if (!old.size) return false;
+  const originKeys = new Set(sentencesOf(originHtml).map(normSentence));
+  for (const sentence of sentencesOf(currentHtml)) {
+    if (originKeys.has(normSentence(sentence))) continue;
+    const have = numericValues(sentence);
+    for (const num of old) if (have.has(num)) return true;
+  }
+  return false;
+}
+
+export function dropIsReviewed(row, reviewed) {
+  if (!row || row.drop !== true) return false;
+  const key = `${row.page}\n${normSentence(row.original)}`;
+  return reviewed instanceof Map ? reviewed.has(key) : false;
+}
+
 function sentenceCovered(sentence, visibleLower, currentSentences, rel) {
   const row = replacementRow(rel, sentence);
   if (!row) return sentencePresent(sentence, visibleLower, currentSentences);
+  if (row.drop === true) {
+    const needle = row.original.toLowerCase().replace(/\s+/g, " ").trim();
+    return !visibleLower.includes(needle);
+  }
   if (!sameFacts(sentence, row.replacement)) return false;
   const replacement = row.replacement.toLowerCase().replace(/\s+/g, " ").trim();
   return visibleLower.includes(replacement);
+}
+
+function droppedNumberExemptions(originHtml, rel) {
+  const drops = [...REPLACEMENTS.values()].filter((row) => row.page === rel && row.drop === true);
+  if (!drops.length) return new Set();
+  let rest = visibleText(originHtml).toLowerCase().replace(/\s+/g, " ");
+  for (const row of drops) {
+    const needle = row.original.toLowerCase().replace(/\s+/g, " ").trim();
+    rest = rest.split(needle).join(" ");
+  }
+  const remain = numericValues(rest);
+  const exempt = new Set();
+  for (const row of drops) {
+    for (const num of numericValues(row.original)) {
+      if (!remain.has(num)) exempt.add(num);
+    }
+  }
+  return exempt;
 }
 
 const FUNCTION_WORDS = new Set(
@@ -757,6 +833,7 @@ function maskedGrams(norm, width, contentOnly) {
 function assertReplacementVariety() {
   const items = [];
   for (const row of REPLACEMENTS.values()) {
+    if (row.drop === true) continue;
     for (const sentence of replacementPieces(row.replacement)) {
       const key = normalize(sentence);
       items.push({
@@ -822,6 +899,19 @@ function assertReplacements(pagePairs) {
       (sentence) => normSentence(sentence) === normSentence(row.original),
     );
     if (!found) problems.push(`${row.page}: original sentence is not on origin/main`);
+    if (row.drop === true) {
+      const currentHtml = fs.readFileSync(pair.current, "utf8");
+      const currentLower = visibleText(currentHtml).toLowerCase().replace(/\s+/g, " ");
+      const needle = row.original.toLowerCase().replace(/\s+/g, " ").trim();
+      if (currentLower.includes(needle)) {
+        problems.push(`${row.page}: dropped sentence is still on the page`);
+      }
+      if (newTextCarriesNumbers(row.original, originHtml, currentHtml)) {
+        problems.push(
+          `${row.page}: drop keeps old numbers in new text (${[...numericValues(row.original)].join(", ")})`,
+        );
+      }
+    }
   }
   if (problems.length) {
     console.error("preservation replacements do not match origin sentences");
@@ -847,7 +937,8 @@ function analyze(index, pair, live) {
   }
   const originNums = numericValues(originVisible);
   const currentNums = numericValues(currentVisible);
-  const missingNums = [...originNums].filter((num) => !currentNums.has(num));
+  const exemptNums = droppedNumberExemptions(originHtml, pair.rel);
+  const missingNums = [...originNums].filter((num) => !currentNums.has(num) && !exemptNums.has(num));
   const originHrefs = [...new Set(hrefsIn(regionHtml(originHtml)))];
   const currentHrefs = new Set(hrefsIn(currentHtml));
   const missingHrefs = originHrefs.filter((href) => !hrefSatisfied(href, currentHrefs));
@@ -1168,6 +1259,7 @@ function patchProse(index, html, originHtml, rel, live) {
     if (placed.has(lower) || sentenceCovered(sentence, pageText, currentSentences, rel)) continue;
     if (notRequired(index, sentence, rel, live)) continue;
     const row = replacementRow(rel, sentence);
+    if (row && row.drop === true) continue;
     if (row && !sameFacts(sentence, row.replacement)) continue;
     placed.add(lower);
     const body = row
@@ -1207,8 +1299,11 @@ function appendHrefs(index, html, originHtml, rel, live) {
   return { html: insertBeforeClose(html, block), added: anchors.length };
 }
 
-function appendFigures(html, originHtml) {
-  const missing = [...numericValues(visibleText(originHtml))].filter((num) => !numericValues(visibleText(html)).has(num));
+function appendFigures(html, originHtml, rel) {
+  const exempt = rel ? droppedNumberExemptions(originHtml, rel) : new Set();
+  const missing = [...numericValues(visibleText(originHtml))].filter(
+    (num) => !numericValues(visibleText(html)).has(num) && !exempt.has(num),
+  );
   if (!missing.length) return { html, added: 0 };
   const phrases = phrasesFor(visibleText(originHtml), missing);
   if (!phrases.length) return { html, added: 0 };
@@ -1346,7 +1441,7 @@ function fixAll(index, pagePairs) {
     html = prose.html;
     const hrefs = appendHrefs(index, html, originHtml, pair.rel, live);
     html = hrefs.html;
-    const figures = appendFigures(html, originHtml);
+    const figures = appendFigures(html, originHtml, pair.rel);
     html = figures.html;
     html = dedupeTrailing(html);
     html = syncFaq(html);
@@ -1432,6 +1527,44 @@ function report(pagePairs, missingPages, index, live) {
   }
   return { stats, samples };
 }
+
+function dropFixtures() {
+  const failures = [];
+  const screening =
+    "Beagles should receive breed-specific screening for epilepsy starting at 3-5 years of age or earlier if symptoms appear";
+  const origin = `<article><p>${screening}.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
+  const stillThere = `<article><p>Come back when the hound turns 3, and again when the hound turns 5.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
+  const clean = `<article><p>No screening test exists for epilepsy in this breed.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
+  const row = {
+    page: "guides/beagle-grooming-guide.html",
+    original: screening,
+    drop: true,
+    reason: "false screening schedule",
+  };
+  if (!inaccurateReason(row.reason)) failures.push("fixture rejected a false-schedule reason");
+  if (inaccurateReason("accurate lifespan kept on the card")) {
+    failures.push("fixture accepted a drop of an accurate fact");
+  }
+  if (!newTextCarriesNumbers(screening, origin, stillThere)) {
+    failures.push("drop of an accurate fact did not fail");
+  }
+  if (newTextCarriesNumbers(screening, origin, clean)) {
+    failures.push("valid drop was rejected because an origin table still had a digit");
+  }
+  const pinned = new Map();
+  if (dropIsReviewed(row, pinned)) failures.push("unpinned drop did not fail");
+  pinned.set(`${row.page}\n${normSentence(row.original)}`, row);
+  if (!dropIsReviewed(row, pinned)) failures.push("pinned drop was treated as unpinned");
+  return failures;
+}
+
+const dropFixture = dropFixtures();
+if (dropFixture.length) {
+  console.error(`preservation drop fixtures failed (${dropFixture.length})`);
+  for (const line of dropFixture) console.error(line);
+  process.exit(1);
+}
+console.error("preservation drop fixtures ok (unpinned drop, accurate fact)");
 
 const { out, missing } = pairs();
 if (!out.length) {

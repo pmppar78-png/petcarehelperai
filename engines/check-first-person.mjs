@@ -9,7 +9,9 @@
  * count too: this writer, this author, in this or our practice or clinic,
  * speaking as a vet or vet tech, as a vet or vet tech, the patient,
  * here at the clinic, yours truly, personally, and having measured,
- * treated, or seen.
+ * treated, or seen. Also speaking from experience, this vet has seen,
+ * the author has, years in practice, and the apostrophe-less forms
+ * Ive and Im.
  * Article is read first, then main, then body. Guides, breeds, and the
  * other content directories are scanned. Sentences already on that page's
  * origin/main copy are exempt. Legal notices are not body text. A missing
@@ -25,9 +27,9 @@ import { originFile, resolveOriginBase } from "./origin-base.mjs";
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const SKIP = new Set(["node_modules", ".git", "engines", "test-results", "audit"]);
 const PRONOUN =
-  /\b(?:i|i'd|i'll|i'm|i've|me|my|mine|myself|we|we're|we've|our|ours|ourselves|us|let's|let’s)\b/i;
+  /\b(?:i|i'd|i'll|i'm|i've|ive|im|me|my|mine|myself|we|we're|we've|our|ours|ourselves|us|let's|let’s)\b/i;
 const PERSONA =
-  /\b(?:this writer|this author|in (?:this|our) (?:practice|clinic)|speaking as a vet(?: tech)?|as a vet(?: tech)?|the patient|here at the clinic|yours truly|personally|having (?:measured|treated|seen))\b/i;
+  /\b(?:this writer|this author|in (?:this|our) (?:practice|clinic)|speaking as a vet(?: tech)?|as a vet(?: tech)?|the patient|here at the clinic|yours truly|personally|having (?:measured|treated|seen)|speaking from experience|this vet has seen|the author has|years in practice)\b/i;
 const EXPERIENCE =
   /\b(?:i|we|my|our|myself|ourselves)\b[^.!?]{0,80}\b(?:kept|keep|weighed|weigh|treated|treat|measured|measure|carried|carry|watched|watch|lived|live|shared|share)\b|\b(?:kept|weighed|treated|measured|carried|watched)\b[^.!?]{0,40}\b(?:i|me|my|we|our|myself|ourselves)\b/i;
 
@@ -131,6 +133,12 @@ function fixtureFailures() {
     ["having-measured", "Having measured dozens of Labs, the hip scores were often disappointing."],
     ["having-treated", "Having treated the ear overnight, the swelling was down by morning."],
     ["having-seen", "Having seen the seizure, the timing was written down."],
+    ["experience", "Speaking from experience, the ears were already red that morning."],
+    ["this-vet", "This vet has seen that seizure pattern in young hounds."],
+    ["author-has", "The author has raised Beagles and still loses them to a scent."],
+    ["years-practice", "Over twenty years in practice, the hips were scored the same way."],
+    ["ive", "Ive weighed the puppy before breakfast."],
+    ["im", "Im the one who measured the hips that morning."],
     ["short", "I weighed him."],
   ];
   for (const [label, sentence] of bad) {
@@ -142,6 +150,8 @@ function fixtureFailures() {
     "The registry year line reads 11 to 14.",
     "Be patient with a puppy who mouths sleeves.",
     "Ask a veterinarian before the next vaccine visit.",
+    "The author of the textbook lists the hip scores.",
+    "AKC lists a span of 10 to 12 years.",
   ];
   for (const sentence of good) {
     if (firstPersonHit(sentence)) failures.push(`fixture flagged neutral copy: ${sentence}`);
@@ -180,7 +190,7 @@ function main() {
     for (const line of fixture) console.error(line);
     process.exit(1);
   }
-  console.log("first-person fixtures ok (pronouns, persona, clinic voice, short sentence, body fallback, content dirs)");
+  console.log("first-person fixtures ok (pronouns, persona, clinic voice, experience, Ive/Im, short sentence, body fallback, content dirs)");
   const BASE = resolveOriginBase({ root: ROOT });
   const problems = [];
   let pages = 0;
