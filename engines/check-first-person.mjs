@@ -17,7 +17,11 @@
  * clinic, practice, hospital, vet, or groomer; folks at this;
  * the undersigned; a humble writer; the grooming table; at the
  * practice, clinic, or hospital; a vet who has seen; and
- * speaking for the practice.
+ * speaking for the practice. Anecdote patterns match a client,
+ * a receptionist, the front desk, a breeder friend, on the table,
+ * came in, through the door, the tech, years of grooming,
+ * a hundred times, seen it, this spring or this morning, and
+ * last week, in any surrounding wording.
  * Article is read first, then main, then body. Guides, breeds, and the
  * other content directories are scanned. Sentences already on that page's
  * origin/main copy are exempt. Legal notices are not body text. A missing
@@ -38,6 +42,8 @@ const PERSONA =
   /\b(?:this writer|this author|in (?:this|our) (?:practice|clinic)|speaking as a vet(?: tech)?|as a vet(?: tech)?|the patient|here at the clinic|yours truly|personally|having (?:measured|treated|seen)|speaking from experience|this vet has seen|the author has|years in practice|your correspondent|the clinic team here|the staff at this practice|this reviewer|take it from a groomer|the present author|(?:this|our) (?:clinic|practice|hospital|vet|groomer)|folks at this|the undersigned|humble writer|grooming table|at the (?:practice|clinic|hospital)|vet who has seen|speaking for the practice)\b/i;
 const EXPERIENCE =
   /\b(?:i|we|my|our|myself|ourselves)\b[^.!?]{0,80}\b(?:kept|keep|weighed|weigh|treated|treat|measured|measure|carried|carry|watched|watch|lived|live|shared|share)\b|\b(?:kept|weighed|treated|measured|carried|watched)\b[^.!?]{0,40}\b(?:i|me|my|we|our|myself|ourselves)\b/i;
+const ANECDOTE =
+  /\b(?:clients?|client's|receptionist|front desk|breeder friend|on the table|came in|come through the door|through the door|tech on duty|(?:the|our) tech|years of grooming|a hundred times|seen it|this (?:spring|morning)|last week)\b/i;
 
 export function contentFiles(root) {
   const out = [];
@@ -105,7 +111,7 @@ export function sentencesOf(html) {
 }
 
 export function firstPersonHit(sentence) {
-  return PRONOUN.test(sentence) || PERSONA.test(sentence) || EXPERIENCE.test(sentence);
+  return PRONOUN.test(sentence) || PERSONA.test(sentence) || EXPERIENCE.test(sentence) || ANECDOTE.test(sentence);
 }
 
 export function newFirstPerson(currentHtml, originHtml) {
@@ -163,6 +169,14 @@ function fixtureFailures() {
     ["humble", "Your humble writer weighed the puppy on Tuesday."],
     ["back-when", "Back when this vet trained, the hips were scored by hand."],
     ["our-groomer", "Our groomer weighed the puppy before the bath."],
+    ["receptionist", "The receptionist at the front desk weighs every pup."],
+    ["years-grooming", "In twenty years of grooming, the ears came first."],
+    ["client-came", "A client's Beagle came in Tuesday with a sour ear."],
+    ["through-door", "Most Labs that come through the door are overweight."],
+    ["on-table", "Every Golden on the table this spring had mats."],
+    ["tech-duty", "The tech on duty this morning weighed the Lab."],
+    ["breeder-friend", "A longtime breeder friend swears by the comb."],
+    ["seen-hundred", "Seen it a hundred times: wet ears turn sour."],
     ["short", "I weighed him."],
   ];
   for (const [label, sentence] of bad) {
@@ -177,6 +191,10 @@ function fixtureFailures() {
     "Ask your vet before the next vaccine visit.",
     "The author of the textbook lists the hip scores.",
     "AKC lists a span of 10 to 12 years.",
+    "In this case the ribs should stay easy to feel.",
+    "The coat comes in over the first year.",
+    "Set the bowl on the counter before the walk.",
+    "Ask your vet which grade applies.",
   ];
   for (const sentence of good) {
     if (firstPersonHit(sentence)) failures.push(`fixture flagged neutral copy: ${sentence}`);
@@ -215,7 +233,7 @@ function main() {
     for (const line of fixture) console.error(line);
     process.exit(1);
   }
-  console.log("first-person fixtures ok (pronouns, persona, clinic voice, experience, Ive/Im, correspondent, staff, reviewer, groomer, present author, undersigned, folks, humble writer, short sentence, body fallback, content dirs)");
+  console.log("first-person fixtures ok (pronouns, persona, clinic voice, anecdotes, experience, Ive/Im, correspondent, staff, reviewer, groomer, present author, undersigned, folks, humble writer, short sentence, body fallback, content dirs)");
   const BASE = resolveOriginBase({ root: ROOT });
   const problems = [];
   let pages = 0;

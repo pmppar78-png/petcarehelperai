@@ -29,9 +29,13 @@
  * screening for … starting at N-N years") on the Beagle, French
  * Bulldog, Golden Retriever, and Labrador guide that already lists
  * it. The reason must say the fact was wrong, and the page's new
- * text must not carry the original numbers. Moving a listed sentence
- * onto another page fails. Sentences without numbers cannot be
- * dropped. The file may hold at most the listed number of drops.
+ * text must not carry a number that appeared only in that dropped
+ * sentence. A digit the origin page still states elsewhere, such as
+ * the 3 in a puppy-visit interval, may appear in a different fact
+ * such as brushing 2-3 times a week. Restating the screening ages
+ * (both 3 and 5, or the exclusive 5) still fails. Moving a listed
+ * sentence onto another page fails. Sentences without numbers cannot
+ * be dropped. The file may hold at most the listed number of drops.
  * Numbers that appear only in a dropped sentence are not required
  * on the page. An unpinned drop fails.
  * A Labrador lifespan card or intro may use a number-correction row,
@@ -81,7 +85,7 @@ import path from "path";
 import { assertChrome, assertWhyQuestions, runChromeFixtures } from "./chrome-main.mjs";
 import { hrefSatisfied, resolveOriginBase } from "./origin-base.mjs";
 
-const REPLACEMENTS_SHA256 = "c3fcc529a458ab521987bf1c25977e8be8fb9353b58b1d41cb796ba011dd356e";
+const REPLACEMENTS_SHA256 = "cbe69ba0e280186c15515ccb6cbd2298c09e2e147dab6f9c8e4b0ab1bbf965b5";
 const MAX_DROPS = 15;
 const MAX_CORRECTIONS = 4;
 const LAB_LIFE_FROM = "10-13 yrs";
@@ -862,11 +866,17 @@ function sameFacts(original, replacement) {
 export function newTextCarriesNumbers(original, originHtml, currentHtml) {
   const old = numericValues(original);
   if (!old.size) return false;
+  let rest = visibleText(originHtml).toLowerCase().replace(/\s+/g, " ");
+  const needle = String(original).toLowerCase().replace(/\s+/g, " ").trim();
+  if (needle) rest = rest.split(needle).join(" ");
+  const remain = numericValues(rest);
+  const exclusive = new Set([...old].filter((num) => !remain.has(num)));
+  if (!exclusive.size) return false;
   const originKeys = new Set(sentencesOf(originHtml).map(normSentence));
   for (const sentence of sentencesOf(currentHtml)) {
     if (originKeys.has(normSentence(sentence))) continue;
     const have = numericValues(sentence);
-    for (const num of old) if (have.has(num)) return true;
+    for (const num of exclusive) if (have.has(num)) return true;
   }
   return false;
 }
@@ -1709,6 +1719,14 @@ function dropFixtures() {
   }
   if (newTextCarriesNumbers(screening, origin, clean)) {
     failures.push("valid drop was rejected because an origin table still had a digit");
+  }
+  const brushing = `<article><p>Brush a Beagle's short coat 2-3 times a week, and check the long ears in the same session.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
+  if (newTextCarriesNumbers(screening, origin, brushing)) {
+    failures.push("brushing cadence 2-3 was treated as the 3-5 screening ages");
+  }
+  const onlyFive = `<article><p>Start the screening when the hound turns 5.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
+  if (!newTextCarriesNumbers(screening, origin, onlyFive)) {
+    failures.push("a new sentence with the exclusive screening digit 5 did not fail");
   }
   const pinned = new Map();
   if (dropIsReviewed(row, pinned)) failures.push("unpinned drop did not fail");
