@@ -28,18 +28,20 @@
  * the breed-screening template ("should receive breed-specific
  * screening for … starting at N-N years") on the Beagle, French
  * Bulldog, Golden Retriever, and Labrador guide that already lists
- * it. The reason must say the fact was wrong, and the page's new
- * text must not carry a number that appeared only in that dropped
- * sentence. A digit the origin page still states elsewhere, such as
- * the 3 in a puppy-visit interval, may appear in a different fact
- * such as brushing 2-3 times a week. Restating the screening ages
- * (both 3 and 5, or the exclusive 5) still fails. Moving a listed
+ * it. The reason must say the fact was wrong, and any new sentence
+ * must not carry a digit from that dropped sentence. A digit the
+ * origin page also states elsewhere still fails in a new sentence,
+ * because small ages such as 1, 2, 3, and 5 show up in tables and
+ * other facts. The one exception is the exact sentence "Brush a
+ * Beagle's short coat 2–3 times a week, and check the long ears in
+ * the same session." on guides/beagle-grooming-guide.html. A
+ * near-miss, or that sentence on another page, still fails. Moving a listed
  * sentence onto another page fails. Sentences without numbers cannot
  * be dropped. The file may hold at most the listed number of drops.
  * Numbers that appear only in a dropped sentence are not required
  * on the page. An unpinned drop fails.
  * A Labrador lifespan card or intro may use a number-correction row,
- * {"correct":true,"original":"10-13 yrs","replacement":"11-14 yrs"},
+ * {"correct":true,"original":"10-13 yrs","replacement":"11-13 yrs"},
  * and only on the four Labrador guides (health, grooming,
  * temperament, and how-big). That is the only allowed correction.
  * The old span must leave the page and the new span must appear.
@@ -85,13 +87,16 @@ import path from "path";
 import { assertChrome, assertWhyQuestions, runChromeFixtures } from "./chrome-main.mjs";
 import { hrefSatisfied, resolveOriginBase } from "./origin-base.mjs";
 
-const REPLACEMENTS_SHA256 = "cbe69ba0e280186c15515ccb6cbd2298c09e2e147dab6f9c8e4b0ab1bbf965b5";
+const REPLACEMENTS_SHA256 = "e7de17e29f736ef6707195aa66ed252e6e11925bfcab25137a7accc349cfc893";
 const MAX_DROPS = 15;
 const MAX_CORRECTIONS = 4;
 const LAB_LIFE_FROM = "10-13 yrs";
-const LAB_LIFE_TO = "11-14 yrs";
+const LAB_LIFE_TO = "11-13 yrs";
 const SCREENING_DROP =
   /^(?:Beagles|French Bulldogs|Golden Retrievers|Labrador Retrievers) should receive breed-specific screening for .+ starting at \d+-\d+ years of age/;
+const BEAGLE_BRUSH_PAGE = "guides/beagle-grooming-guide.html";
+const BEAGLE_BRUSH_SENTENCE =
+  "Brush a Beagle's short coat 2–3 times a week, and check the long ears in the same session.";
 const LAB_LIFE_PAGES = new Set([
   "guides/labrador-retriever-health-issues.html",
   "guides/labrador-retriever-grooming-guide.html",
@@ -810,7 +815,7 @@ function loadReplacementRows(raw) {
       process.exit(1);
     } else if (row.correct === true) {
       if (!labLifespanCorrection(row)) {
-        console.error(`preservation number correction must change Labrador 10-13 yrs to 11-14 yrs (${row.page})`);
+        console.error(`preservation number correction must change Labrador 10-13 yrs to 11-13 yrs (${row.page})`);
         process.exit(1);
       }
     } else if (row.correct !== undefined) {
@@ -863,20 +868,16 @@ function sameFacts(original, replacement) {
   return [...numericValues(original)].every((num) => have.has(num));
 }
 
-export function newTextCarriesNumbers(original, originHtml, currentHtml) {
+export function newTextCarriesNumbers(original, originHtml, currentHtml, page) {
   const old = numericValues(original);
   if (!old.size) return false;
-  let rest = visibleText(originHtml).toLowerCase().replace(/\s+/g, " ");
-  const needle = String(original).toLowerCase().replace(/\s+/g, " ").trim();
-  if (needle) rest = rest.split(needle).join(" ");
-  const remain = numericValues(rest);
-  const exclusive = new Set([...old].filter((num) => !remain.has(num)));
-  if (!exclusive.size) return false;
   const originKeys = new Set(sentencesOf(originHtml).map(normSentence));
+  const allowed = page === BEAGLE_BRUSH_PAGE ? normSentence(BEAGLE_BRUSH_SENTENCE) : "";
   for (const sentence of sentencesOf(currentHtml)) {
-    if (originKeys.has(normSentence(sentence))) continue;
+    const key = normSentence(sentence);
+    if (originKeys.has(key) || (allowed && key === allowed)) continue;
     const have = numericValues(sentence);
-    for (const num of exclusive) if (have.has(num)) return true;
+    for (const num of old) if (have.has(num)) return true;
   }
   return false;
 }
@@ -1051,13 +1052,13 @@ function assertReplacements(pagePairs) {
       const oldSpan = row.original.toLowerCase();
       const nextSpan = row.replacement.toLowerCase();
       if (!labLifespanCorrection(row)) {
-        problems.push(`${row.page}: number correction is outside the Labrador 10-13 to 11-14 span`);
+        problems.push(`${row.page}: number correction is outside the Labrador 10-13 to 11-13 span`);
       }
       if (!originLower.includes(oldSpan)) {
         problems.push(`${row.page}: corrected lifespan is not on origin/main`);
       }
       if (!currentLower.includes(nextSpan) || currentLower.includes(oldSpan)) {
-        problems.push(`${row.page}: Labrador lifespan was not corrected to 11-14 yrs`);
+        problems.push(`${row.page}: Labrador lifespan was not corrected to 11-13 yrs`);
       }
       continue;
     }
@@ -1075,7 +1076,7 @@ function assertReplacements(pagePairs) {
       if (currentLower.includes(needle)) {
         problems.push(`${row.page}: dropped sentence is still on the page`);
       }
-      if (newTextCarriesNumbers(row.original, originHtml, currentHtml)) {
+      if (newTextCarriesNumbers(row.original, originHtml, currentHtml, row.page)) {
         problems.push(
           `${row.page}: drop keeps old numbers in new text (${[...numericValues(row.original)].join(", ")})`,
         );
@@ -1720,13 +1721,63 @@ function dropFixtures() {
   if (newTextCarriesNumbers(screening, origin, clean)) {
     failures.push("valid drop was rejected because an origin table still had a digit");
   }
-  const brushing = `<article><p>Brush a Beagle's short coat 2-3 times a week, and check the long ears in the same session.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
-  if (newTextCarriesNumbers(screening, origin, brushing)) {
-    failures.push("brushing cadence 2-3 was treated as the 3-5 screening ages");
+  const brushing = `<article><p>${BEAGLE_BRUSH_SENTENCE}</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
+  if (newTextCarriesNumbers(screening, origin, brushing, BEAGLE_BRUSH_PAGE)) {
+    failures.push("pinned Beagle brushing sentence was treated as the screening ages");
+  }
+  const nearMiss = `<article><p>Brush a Beagle's short coat 2-3 times a week, and check the long ears in the same session.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
+  if (!newTextCarriesNumbers(screening, origin, nearMiss, BEAGLE_BRUSH_PAGE)) {
+    failures.push("near-miss brushing sentence was exempt");
+  }
+  if (!newTextCarriesNumbers(screening, origin, brushing, "guides/beagle-health-issues.html")) {
+    failures.push("Beagle brushing sentence was exempt on another page");
   }
   const onlyFive = `<article><p>Start the screening when the hound turns 5.</p><p>Puppy visits are every 3-4 weeks.</p></article>`;
   if (!newTextCarriesNumbers(screening, origin, onlyFive)) {
-    failures.push("a new sentence with the exclusive screening digit 5 did not fail");
+    failures.push("a new sentence with a dropped digit did not fail");
+  }
+  const attacks = [
+    [
+      "guides/labrador-retriever-temperament.html",
+      LAB_SCREEN,
+      `<article><p>${LAB_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Labrador Retrievers should be screened for hip dysplasia at 1-2 years of age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/golden-retriever-health-issues.html",
+      GOLDEN_SCREEN,
+      `<article><p>${GOLDEN_SCREEN}.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+      `<article><p>Golden Retrievers should be screened for cancer starting at 1-2 years of age.</p><p>Puppy visits start at 1 year and again at 2.</p></article>`,
+    ],
+    [
+      "guides/beagle-health-issues.html",
+      screening,
+      origin,
+      `<article><p>Beagles should be screened for epilepsy starting at 3-5 years of age.</p><p>Puppy visits are every 3-4 weeks.</p></article>`,
+    ],
+    [
+      "guides/beagle-grooming-guide.html",
+      screening,
+      origin,
+      `<article><p>Beagles should be screened for epilepsy starting at 3-5 years of age.</p><p>Puppy visits are every 3-4 weeks.</p></article>`,
+    ],
+    [
+      "guides/french-bulldog-health-issues.html",
+      FRENCH_SCREEN,
+      `<article><p>${FRENCH_SCREEN}.</p><p>Check the folds at 3 months and again at 5.</p></article>`,
+      `<article><p>French Bulldogs should be screened for brachycephalic syndrome at 3 years.</p><p>Check the folds at 3 months and again at 5.</p></article>`,
+    ],
+    [
+      "guides/how-big-do-french-bulldogs-get.html",
+      FRENCH_SCREEN,
+      `<article><p>${FRENCH_SCREEN}.</p><p>Check the folds at 3 months and again at 5.</p></article>`,
+      `<article><p>French Bulldogs should be screened for brachycephalic syndrome at 3 years.</p><p>Check the folds at 3 months and again at 5.</p></article>`,
+    ],
+  ];
+  for (const [page, dropped, originHtml, currentHtml] of attacks) {
+    if (!newTextCarriesNumbers(dropped, originHtml, currentHtml, page)) {
+      failures.push(`screening restatement did not fail (${page})`);
+    }
   }
   const pinned = new Map();
   if (dropIsReviewed(row, pinned)) failures.push("unpinned drop did not fail");
@@ -1755,9 +1806,9 @@ function dropFixtures() {
     original: LAB_LIFE_FROM,
     replacement: LAB_LIFE_TO,
     correct: true,
-    reason: "AKC lists the Labrador Retriever lifespan as 11-14 years.",
+    reason: "AKC lists the Labrador Retriever lifespan as 11-13 years.",
   };
-  if (!labLifespanCorrection(life)) failures.push("Labrador 10-13 to 11-14 correction was rejected");
+  if (!labLifespanCorrection(life)) failures.push("Labrador 10-13 to 11-13 correction was rejected");
   if (labLifespanCorrection({ ...life, page: "guides/adopt-a-akita.html" })) {
     failures.push("lifespan correction on adopt-a-akita did not fail");
   }
@@ -1774,7 +1825,7 @@ function dropFixtures() {
     labLifespanCorrection({
       correct: true,
       original: "Weighing around 55-80 lbs and lifespan of 10-13 yrs",
-      replacement: "Weighing around 55-80 lbs and lifespan of 11-14 yrs",
+      replacement: "Weighing around 55-80 lbs and lifespan of 11-13 yrs",
     })
   ) {
     failures.push("lifespan correction accepted a rewritten sentence");

@@ -20,8 +20,8 @@
   {
     "page": "guides/labrador-retriever-health-issues.html",
     "original": "The Labrador Retriever's reputation in the sporting group reflects generations of purposeful breeding, resulting in a large dog with predictable but nuanced care requirements.",
-    "replacement": "Weighing 55-80 lbs, with a lifespan of 11-14 yrs, a Labrador Retriever needs to stay lean to protect its hips, and the food cup should be measured across those years.",
-    "reason": "Empty sporting-group filler removed. The page keeps the weight and the 11-14 yr lifespan in one plain sentence about the hips and the food cup."
+    "replacement": "Weighing 55-80 lbs, with a lifespan of 11-13 yrs, a Labrador Retriever needs to stay lean to protect its hips, and the food cup should be measured across those years.",
+    "reason": "Empty sporting-group filler removed. The page keeps the weight and the 11-13 yr lifespan in one plain sentence about the hips and the food cup."
   },
   {
     "page": "guides/labrador-retriever-temperament.html",
@@ -302,30 +302,30 @@
   {
     "page": "guides/labrador-retriever-health-issues.html",
     "original": "10-13 yrs",
-    "replacement": "11-14 yrs",
+    "replacement": "11-13 yrs",
     "correct": true,
-    "reason": "AKC lists the Labrador Retriever lifespan as 11-14 years. The card and intro no longer say 10-13."
+    "reason": "AKC lists the Labrador Retriever lifespan as 11-13 years. The card and intro no longer say 10-13."
   },
   {
     "page": "guides/labrador-retriever-grooming-guide.html",
     "original": "10-13 yrs",
-    "replacement": "11-14 yrs",
+    "replacement": "11-13 yrs",
     "correct": true,
-    "reason": "AKC lists the Labrador Retriever lifespan as 11-14 years. The card and intro no longer say 10-13."
+    "reason": "AKC lists the Labrador Retriever lifespan as 11-13 years. The card and intro no longer say 10-13."
   },
   {
     "page": "guides/labrador-retriever-temperament.html",
     "original": "10-13 yrs",
-    "replacement": "11-14 yrs",
+    "replacement": "11-13 yrs",
     "correct": true,
-    "reason": "AKC lists the Labrador Retriever lifespan as 11-14 years. The card and intro no longer say 10-13."
+    "reason": "AKC lists the Labrador Retriever lifespan as 11-13 years. The card and intro no longer say 10-13."
   },
   {
     "page": "guides/how-big-do-labrador-retrievers-get.html",
     "original": "10-13 yrs",
-    "replacement": "11-14 yrs",
+    "replacement": "11-13 yrs",
     "correct": true,
-    "reason": "AKC lists the Labrador Retriever lifespan as 11-14 years. The card and intro no longer say 10-13."
+    "reason": "AKC lists the Labrador Retriever lifespan as 11-13 years. The card and intro no longer say 10-13."
   },
   {
     "page": "guides/how-big-do-beagles-get.html",
@@ -348,8 +348,8 @@
   {
     "page": "guides/how-big-do-labrador-retrievers-get.html",
     "original": "What are the most important considerations for how big do labrador retrievers get?",
-    "replacement": "What chest and weight should a full-grown Labrador Retriever show?",
-    "reason": "The old heading dropped the page title into the question. The new heading asks the size question in plain words."
+    "replacement": "How tall and heavy is a full-grown Labrador Retriever?",
+    "reason": "The old heading dropped the page title into the question. The new heading asks for height and weight."
   },
   {
     "page": "guides/french-bulldog-health-issues.html",
@@ -392,12 +392,6 @@
     "original": "Health Predisposition Summary: Beagles show higher-than-average incidence of epilepsy, hypothyroidism, cherry eye based on breed health database data",
     "replacement": "Dirt from a field edge sits in the webs and under the long leather, so those two spots get a look every time the brush comes out.",
     "reason": "The database-summary box was replaced with the grooming check that catches a dirty ear or a pink gland."
-  },
-  {
-    "page": "guides/french-bulldog-grooming-guide.html",
-    "original": "French Bulldogs have moderate shedding and require 2–3 times per week brushing",
-    "replacement": "Pass a rubber mitt over the French Bulldog on 2–3 days each week.",
-    "reason": "The brushing line did not match fold care. The page now says how often the folds are wiped."
   },
   {
     "page": "guides/french-bulldog-grooming-guide.html",
@@ -486,8 +480,8 @@
   {
     "page": "guides/labrador-retriever-grooming-guide.html",
     "original": "What are the most important considerations for labrador retriever grooming health and comfort?",
-    "replacement": "Which Labrador Retriever test results belong in the file?",
-    "reason": "The grooming FAQ now asks which test results belong in the file, which is what the answer describes."
+    "replacement": "How should a Labrador Retriever's ears be dried after swimming?",
+    "reason": "The grooming FAQ now asks how to dry the ears after swimming, which is what the answer describes."
   },
   {
     "page": "guides/labrador-retriever-temperament.html",
@@ -500,5 +494,17 @@
     "original": "The adult issues are the airway and the spine, and both carry extra fat badly.",
     "replacement": "The adult issues are the airway and the spine, and extra weight makes both work harder.",
     "reason": "Extra fat does not sit on the airway and the spine. Extra weight makes those structures work harder."
+  },
+  {
+    "page": "guides/how-big-do-french-bulldogs-get.html",
+    "original": "French Bulldogs are 16 to 28 pounds and reach that weight early.",
+    "replacement": "Adult French Bulldogs weigh 16 lb at the light end and 28 lb at the cap.",
+    "reason": "The 16 to 28 pound range was already in the cap sentence. This row keeps those numbers there and drops the repeat."
+  },
+  {
+    "page": "guides/how-big-do-labrador-retrievers-get.html",
+    "original": "Labradors are 55 to 80 pounds and famous for clearing the bowl.",
+    "replacement": "Full-grown Labradors run from 55 lb to 80 lb, and staying lean matters if hip dysplasia or elbow dysplasia appears.",
+    "reason": "The 55 to 80 pound range was already in the lean-weight sentence. This row keeps those numbers there and drops the repeat."
   }
 ]

@@ -17,11 +17,13 @@
  * clinic, practice, hospital, vet, or groomer; folks at this;
  * the undersigned; a humble writer; the grooming table; at the
  * practice, clinic, or hospital; a vet who has seen; and
- * speaking for the practice. Anecdote patterns match a client,
- * a receptionist, the front desk, a breeder friend, on the table,
- * came in, through the door, the tech, years of grooming,
- * a hundred times, seen it, this spring or this morning, and
- * last week, in any surrounding wording.
+ * speaking for the practice. Anecdote patterns match a client or
+ * customer, a receptionist, the front desk, a breeder friend,
+ * "on the table this", came in or walked in with a weekday,
+ * through the door, the tech, years of grooming, a hundred times,
+ * this spring or this morning, and last week. Ordinary lines such
+ * as food left on the table, a coat that came in thick, and
+ * "seen it before" do not match.
  * Article is read first, then main, then body. Guides, breeds, and the
  * other content directories are scanned. Sentences already on that page's
  * origin/main copy are exempt. Legal notices are not body text. A missing
@@ -43,7 +45,7 @@ const PERSONA =
 const EXPERIENCE =
   /\b(?:i|we|my|our|myself|ourselves)\b[^.!?]{0,80}\b(?:kept|keep|weighed|weigh|treated|treat|measured|measure|carried|carry|watched|watch|lived|live|shared|share)\b|\b(?:kept|weighed|treated|measured|carried|watched)\b[^.!?]{0,40}\b(?:i|me|my|we|our|myself|ourselves)\b/i;
 const ANECDOTE =
-  /\b(?:clients?|client's|receptionist|front desk|breeder friend|on the table|came in|come through the door|through the door|tech on duty|(?:the|our) tech|years of grooming|a hundred times|seen it|this (?:spring|morning)|last week)\b/i;
+  /\b(?:clients?|client's|customers?|customer's|receptionist|front desk|breeder friend|on the table this|came in (?:on )?(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)|walked in (?:on )?(?:last )?(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)|come through the door|through the door|tech on duty|(?:the|our) tech|years of grooming|a hundred times|this (?:spring|morning)|last week)\b/i;
 
 export function contentFiles(root) {
   const out = [];
@@ -177,6 +179,7 @@ function fixtureFailures() {
     ["tech-duty", "The tech on duty this morning weighed the Lab."],
     ["breeder-friend", "A longtime breeder friend swears by the comb."],
     ["seen-hundred", "Seen it a hundred times: wet ears turn sour."],
+    ["customer-walked", "A customer's Lab walked in last Thursday limping."],
     ["short", "I weighed him."],
   ];
   for (const [label, sentence] of bad) {
@@ -195,6 +198,9 @@ function fixtureFailures() {
     "The coat comes in over the first year.",
     "Set the bowl on the counter before the walk.",
     "Ask your vet which grade applies.",
+    "Food left on the table invites a Labrador raid.",
+    "The coat came in thick by the first winter.",
+    "Ask your vet if you have seen it before.",
   ];
   for (const sentence of good) {
     if (firstPersonHit(sentence)) failures.push(`fixture flagged neutral copy: ${sentence}`);

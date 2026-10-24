@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 /**
  * Fails when a page has more empty H2 sections or empty health-note
- * boxes than its origin/main copy.
+ * boxes than its origin/main copy. A page whose HTML differs from
+ * origin/main also fails when a transparency notice box is empty.
+ * Pages that still match origin/main may keep an empty notice box.
  *
  * An H2 section is empty when the text before the next H2 has fewer than
- * four alphabetic words. A breed-health-note box is empty on the same
- * test. Writing real copy, or leaving a section that was already empty
- * on main, both pass. A missing origin/main baseline is a hard error.
+ * four alphabetic words. A breed-health-note box and a transparency
+ * box are empty on the same test. Writing real copy, or leaving a
+ * section that was already empty on an unchanged page, both pass.
+ * A missing origin/main baseline is a hard error.
  *
  * Usage: node engines/check-empty-sections.mjs
  */
@@ -71,6 +74,18 @@ export function emptyNoteCount(html) {
   return notes.filter((note) => alphaWords(note).length < 4).length;
 }
 
+export function emptyTransparencyCount(html) {
+  const notes =
+    html.match(/<section\b[^>]*\bclass\s*=\s*["'][^"']*\btransparency\b[^"']*["'][^>]*>[\s\S]*?<\/section>/gi) ||
+    [];
+  return notes.filter((note) => alphaWords(note).length < 4).length;
+}
+
+export function changedPageHasEmptyNotice(currentHtml, originHtml) {
+  if (currentHtml === originHtml) return false;
+  return emptyTransparencyCount(currentHtml) > 0;
+}
+
 export function emptyBeyond(currentHtml, originHtml) {
   return {
     sections: emptyH2Count(currentHtml) - emptyH2Count(originHtml),
@@ -95,6 +110,16 @@ function fixtureFailures() {
     `<article><h2>Care</h2><p>Real words live in this section today and name hip dysplasia.</p><h2>Cost</h2></article>`,
   );
   if (filled.sections > 0) failures.push("fixture filled section failed");
+  const emptyNotice = `<main><article><p>Real words live in this section today.</p></article><section class="transparency">\n      \n    </section></main>`;
+  const filledNotice = `<main><article><p>Real words live in this section today.</p></article><section class="transparency"><p><strong>Important context:</strong> Online guidance can't diagnose your pet. If something seems wrong, see your veterinarian.</p></section></main>`;
+  const other = `<main><article><p>Older copy lives on the origin page.</p></article><section class="transparency"></section></main>`;
+  if (!changedPageHasEmptyNotice(emptyNotice, other)) failures.push("fixture empty notice on a changed page did not fail");
+  if (changedPageHasEmptyNotice(filledNotice, emptyNotice)) failures.push("fixture filled notice on a changed page failed");
+  if (changedPageHasEmptyNotice(emptyNotice, emptyNotice)) failures.push("fixture identical empty notice failed");
+  const noBox = `<article><p>Real words live in this section today and name the hips.</p></article>`;
+  if (changedPageHasEmptyNotice(noBox, `<article><p>Older copy lives here.</p></article>`)) {
+    failures.push("fixture page without a notice box failed");
+  }
   return failures;
 }
 
@@ -105,7 +130,7 @@ function main() {
     for (const line of fixture) console.error(line);
     process.exit(1);
   }
-  console.log("empty-section fixtures ok (extra H2, empty note, matching page, filled section)");
+  console.log("empty-section fixtures ok (extra H2, empty note, matching page, filled section, notice box)");
   const BASE = resolveOriginBase({ root: ROOT });
   const problems = [];
   let pages = 0;
@@ -115,9 +140,14 @@ function main() {
     const originPath = path.join(BASE, originRel);
     if (!fs.existsSync(originPath)) continue;
     pages += 1;
-    const delta = emptyBeyond(fs.readFileSync(file, "utf8"), fs.readFileSync(originPath, "utf8"));
+    const current = fs.readFileSync(file, "utf8");
+    const origin = fs.readFileSync(originPath, "utf8");
+    const delta = emptyBeyond(current, origin);
     if (delta.sections > 0) problems.push(`${rel}: ${delta.sections} empty H2 section(s) beyond main`);
     if (delta.notes > 0) problems.push(`${rel}: ${delta.notes} empty health-note box(es) beyond main`);
+    if (changedPageHasEmptyNotice(current, origin)) {
+      problems.push(`${rel}: empty notice box on a page this change touches`);
+    }
   }
   if (problems.length) {
     console.error(`empty-section check failed (${problems.length})`);
