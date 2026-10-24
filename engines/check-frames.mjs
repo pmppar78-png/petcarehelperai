@@ -4,10 +4,13 @@
  *
  * Breed and city names become "name" and digits become "#", using the same
  * masking as the cross-page prose check. A frame is the full masked sentence
- * (four or more words) or any five-word window of it that still contains a
- * content word. Function words, "name", and "#" do not count as content, so
- * a shared "while a name is the" does not fail. Windows such as
- * "at # # pounds and" do.
+ * (four or more words) or any five-word window that still contains a content
+ * word. Function-word skeletons are counted too: "while a name", "while an
+ * name", "a name while a name" (and the a/an variants), and "define/defines
+ * a/an name". A sentence may start with a lowercase word. Article is read
+ * first, then main, then body. An html document with none of those is an
+ * error. A fragment with none of them is read whole, so the prose is not
+ * dropped.
  *
  * Only sentences that are not already on that page's origin/main copy are
  * counted. A missing origin/main baseline is a hard error.
@@ -16,10 +19,10 @@
  */
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "node:url";
 import { originFile, resolveOriginBase } from "./origin-base.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
-const BASE = resolveOriginBase({ root: ROOT });
 const MIN_WORDS = 4;
 const FRAME = 5;
 
@@ -79,15 +82,20 @@ function stripLegalNotices(html) {
   );
 }
 
-function regionText(html) {
+export function readableRegion(html) {
   const article = html.match(/<article[\s\S]*?<\/article>/i);
   const main = html.match(/<main[\s\S]*?<\/main>/i);
-  return stripLegalNotices((article || main || ["", ""])[0]);
+  const body = html.match(/<body[\s\S]*?<\/body>/i);
+  if (article) return stripLegalNotices(article[0]);
+  if (main) return stripLegalNotices(main[0]);
+  if (body) return stripLegalNotices(body[0]);
+  if (/<html\b/i.test(html)) return null;
+  return stripLegalNotices(html);
 }
 
-function sentencesOf(html) {
-  const region = regionText(html);
-  if (!region) return [];
+export function sentencesOf(html) {
+  const region = readableRegion(html);
+  if (region == null) return [];
   let text = region
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
@@ -97,14 +105,14 @@ function sentencesOf(html) {
   const kept = [];
   for (const part of text.split(/(?<=[.!?])\s+/)) {
     const key = part.replace(/^[^A-Za-z]+/, "").replace(/[.!?]+$/, "").replace(/\s+/g, " ").trim();
-    if (!/^[A-Z]/.test(key)) continue;
+    if (!key || !/[A-Za-z]/.test(key)) continue;
     if (key.split(/\s+/).length < MIN_WORDS) continue;
     kept.push(key);
   }
   return kept;
 }
 
-function normalize(sentence) {
+export function normalize(sentence) {
   const words = sentence.toLowerCase().match(/[a-z0-9']+/g) || [];
   const out = [];
   for (let i = 0; i < words.length; ) {
@@ -128,16 +136,37 @@ function normalize(sentence) {
   return out.join(" ");
 }
 
-function framesOf(norm) {
+function functionFrames(words) {
+  const frames = [];
+  for (let i = 0; i < words.length; i++) {
+    const a = words[i];
+    const b = words[i + 1];
+    const c = words[i + 2];
+    const d = words[i + 3];
+    const e = words[i + 4];
+    if (a === "while" && (b === "a" || b === "an") && c === "name") frames.push(`while ${b} name`);
+    if ((a === "define" || a === "defines") && (b === "a" || b === "an") && c === "name") {
+      frames.push(`${a} ${b} name`);
+    }
+    if ((a === "a" || a === "an") && b === "name" && c === "while" && (d === "a" || d === "an") && e === "name") {
+      frames.push(`${a} name while ${d} name`);
+    }
+  }
+  return frames;
+}
+
+export function framesOf(norm) {
   const words = norm.split(" ").filter(Boolean);
   const frames = [];
   if (words.length >= MIN_WORDS) frames.push(norm);
-  if (words.length < FRAME) return frames;
-  for (let i = 0; i <= words.length - FRAME; i++) {
-    const slice = words.slice(i, i + FRAME);
-    if (!slice.some((word) => word !== "#" && word !== "name" && !FUNCTION_WORDS.has(word))) continue;
-    frames.push(slice.join(" "));
+  if (words.length >= FRAME) {
+    for (let i = 0; i <= words.length - FRAME; i++) {
+      const slice = words.slice(i, i + FRAME);
+      if (!slice.some((word) => word !== "#" && word !== "name" && !FUNCTION_WORDS.has(word))) continue;
+      frames.push(slice.join(" "));
+    }
   }
+  frames.push(...functionFrames(words));
   return frames;
 }
 
@@ -192,23 +221,41 @@ function fixtureFailures() {
     "Night patrol with barking is the livestock guardian habit.",
     "Daily face cleaning keeps short nose folds dry after meals.",
   ];
+  const lower = "and the coat upkeep sets the weekly bill at 10-20 pounds and 8-10 years, hip screening named.";
+  const whileSentences = [
+    "Owners like a quiet yard while a Collie watches the gate.",
+    "Kids play outside while a Beagle follows the scent.",
+    "Rain stays out while a Poodle shakes on the porch.",
+    "Dinner waits inside while a Boxer guards the bowl.",
+  ];
+  const defineSentences = [
+    "Handlers define a Collie through herding drive outdoors.",
+    "Trainers define a Poodle through clipper dates at home.",
+    "Owners define a Boxer through annual heart checks.",
+    "Clinics define a Vizsla through the velcro habit indoors.",
+  ];
+  const pairedSentences = [
+    "Choose a Collie while a Beagle stays home for the morning.",
+    "Feed a Poodle while a Boxer waits outside the kitchen.",
+    "Brush a Vizsla while a Whippet naps on the couch.",
+    "Walk a Siberian Husky while a Great Dane rests near the sofa.",
+  ];
   const empty = "<article></article>";
-  const slotPages = (list) =>
+  const asPages = (list, prefix, wrap = page) =>
     list.map((sentence, index) => ({
-      rel: `fixture-slot-${index}.html`,
-      norms: changedNorms(page(sentence), empty),
+      rel: `${prefix}-${index}.html`,
+      norms: changedNorms(wrap(sentence), wrap("")),
     }));
   const failures = [];
-  const four = frameProblems(slotPages(slots));
+  const four = frameProblems(asPages(slots, "fixture-slot"));
   if (!four.length) failures.push("fixture four shared slot sentences did not fail");
   if (!four.some((item) => /pounds|screening/.test(item.frame))) {
     failures.push("fixture shared slot did not fail on the weight or screening frame");
   }
-  if (frameProblems(slotPages(slots.slice(0, 3))).length) failures.push("fixture three shared slot sentences failed");
-  const distinctPages = distinct.map((sentence, index) => ({
-    rel: `fixture-distinct-${index}.html`,
-    norms: changedNorms(page(sentence), empty),
-  }));
+  if (frameProblems(asPages(slots.slice(0, 3), "fixture-slot3")).length) {
+    failures.push("fixture three shared slot sentences failed");
+  }
+  const distinctPages = asPages(distinct, "fixture-distinct");
   if (distinctPages.some((item) => !item.norms.length)) failures.push("fixture distinct sentence was not read");
   if (frameProblems(distinctPages).length) failures.push("fixture four distinct sentences failed");
   const exempt = slots.map((sentence, index) => ({
@@ -217,36 +264,92 @@ function fixtureFailures() {
   }));
   if (exempt.some((item) => item.norms.length)) failures.push("fixture origin sentence was treated as new");
   if (frameProblems(exempt).length) failures.push("fixture origin sentences failed");
+
+  const lowerPages = asPages([lower, lower, lower, lower], "fixture-lower");
+  if (lowerPages.some((item) => !item.norms.length)) failures.push("fixture lowercase sentence was skipped");
+  if (!frameProblems(lowerPages).length) failures.push("fixture lowercase-start bypass did not fail");
+  if (frameProblems(asPages([lower, lower, lower], "fixture-lower3")).length) {
+    failures.push("fixture three lowercase sentences failed");
+  }
+
+  const bodyWrap = (sentence) => `<body><p>${sentence}</p></body>`;
+  const bodyPages = asPages([lower, lower, lower, lower], "fixture-body", bodyWrap);
+  if (bodyPages.some((item) => !item.norms.length)) failures.push("fixture body page sentence was not read");
+  if (!frameProblems(bodyPages).length) failures.push("fixture page with no article tag did not fail");
+  const noBody = `<html><head><title>Loose</title></head><p>${lower}</p></html>`;
+  if (readableRegion(noBody) !== null) failures.push("fixture html without article, main, or body was read");
+
+  const whileFour = frameProblems(asPages(whileSentences, "fixture-while"));
+  if (!whileFour.some((item) => item.frame === "while a name")) {
+    failures.push("fixture function-word frame while a name did not fail");
+  }
+  if (frameProblems(asPages(whileSentences.slice(0, 3), "fixture-while3")).length) {
+    failures.push("fixture three while-a-name sentences failed");
+  }
+  const defineFour = frameProblems(asPages(defineSentences, "fixture-define"));
+  if (!defineFour.some((item) => item.frame === "define a name")) {
+    failures.push("fixture define a name did not fail");
+  }
+  if (frameProblems(asPages(defineSentences.slice(0, 3), "fixture-define3")).length) {
+    failures.push("fixture three define-a-name sentences failed");
+  }
+  const pairedFour = frameProblems(asPages(pairedSentences, "fixture-paired"));
+  if (!pairedFour.some((item) => item.frame === "a name while a name")) {
+    failures.push("fixture a name while a name did not fail");
+  }
+  if (frameProblems(asPages(pairedSentences.slice(0, 3), "fixture-paired3")).length) {
+    failures.push("fixture three a-name-while-a-name sentences failed");
+  }
   return failures;
 }
 
-const fixture = fixtureFailures();
-if (fixture.length) {
-  console.error(`frame fixtures failed (${fixture.length})`);
-  for (const line of fixture) console.error(line);
-  process.exit(1);
-}
-console.log("frame fixtures ok (shared slot, three pages, distinct sentences, origin exempt)");
-
-const pages = [];
-let htmlFiles = 0;
-for (const file of walkHtml(ROOT)) {
-  const rel = path.relative(ROOT, file).split(path.sep).join("/");
-  const originRel = originFile(BASE, rel);
-  const originPath = path.join(BASE, originRel);
-  const originHtml = fs.existsSync(originPath) ? fs.readFileSync(originPath, "utf8") : "";
-  htmlFiles += 1;
-  const norms = changedNorms(fs.readFileSync(file, "utf8"), originHtml);
-  if (norms.length) pages.push({ rel, norms });
-}
-
-const problems = frameProblems(pages);
-if (problems.length) {
-  console.error(`frame check failed (${problems.length} frames)`);
-  for (const item of problems.slice(0, 40)) {
-    console.error(`${item.files.length} pages: ${item.frame}`);
-    console.error(`  e.g. ${item.files.slice(0, 4).join(", ")}`);
+function main() {
+  const BASE = resolveOriginBase({ root: ROOT });
+  const fixture = fixtureFailures();
+  if (fixture.length) {
+    console.error(`frame fixtures failed (${fixture.length})`);
+    for (const line of fixture) console.error(line);
+    process.exit(1);
   }
-  process.exit(1);
+  console.log(
+    "frame fixtures ok (shared slot, three pages, distinct sentences, origin exempt, lowercase start, body without article, function-word frame)",
+  );
+
+  const pages = [];
+  const bare = [];
+  let htmlFiles = 0;
+  for (const file of walkHtml(ROOT)) {
+    const rel = path.relative(ROOT, file).split(path.sep).join("/");
+    const originRel = originFile(BASE, rel);
+    const originPath = path.join(BASE, originRel);
+    const originHtml = fs.existsSync(originPath) ? fs.readFileSync(originPath, "utf8") : "";
+    const html = fs.readFileSync(file, "utf8");
+    htmlFiles += 1;
+    if (readableRegion(html) == null) {
+      bare.push(`${rel}: no article, main, or body`);
+      continue;
+    }
+    const norms = changedNorms(html, originHtml);
+    if (norms.length) pages.push({ rel, norms });
+  }
+
+  const problems = frameProblems(pages);
+  if (problems.length || bare.length) {
+    if (bare.length) {
+      console.error(`frame check failed (${bare.length} pages with no article, main, or body)`);
+      for (const line of bare.slice(0, 20)) console.error(line);
+    }
+    if (problems.length) {
+      console.error(`frame check failed (${problems.length} frames)`);
+      for (const item of problems.slice(0, 40)) {
+        console.error(`${item.files.length} pages: ${item.frame}`);
+        console.error(`  e.g. ${item.files.slice(0, 4).join(", ")}`);
+      }
+    }
+    process.exit(1);
+  }
+  console.log(`frame check ok (${htmlFiles} html files)`);
 }
-console.log(`frame check ok (${htmlFiles} html files)`);
+
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (isMain) main();
